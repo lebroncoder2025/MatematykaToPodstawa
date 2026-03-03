@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematyka to Podstawa - Kompendium Wiedzy Maturalnej</title>
+    <meta name="description" content="Najlepsze kompendium matematyczne na maturę podstawową. 10 działów, 100+ zadań z pełnymi rozwiązaniami, quizy diagnostyczne.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient {
+          background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #3b82f6 100%);
+          position: relative;
+          overflow: hidden;
+        }
+        .hero-gradient::before {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .floating-eq {
+          position: absolute;
+          color: rgba(255,255,255,0.06);
+          font-size: 1.5rem;
+          font-weight: 700;
+          pointer-events: none;
+          animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass-nav shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center space-x-2">
+                        <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+                        <span class="text-xl font-bold text-gray-800">Matematyka to <span class="text-blue-600">Podstawa</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-blue-600 font-semibold">Strona Główna</a>
+                    <a href="#dzialy" class="text-gray-600 hover:text-blue-600 transition">Działy</a>
+                    <a href="arkusze.html" class="text-gray-600 hover:text-blue-600 transition">Arkusze CKE</a>
+                    <a href="kurs.html" class="text-gray-600 hover:text-blue-600 transition font-semibold"><i class="fa-solid fa-graduation-cap mr-1 text-purple-500"></i>Kurs</a>
+                    <a href="quiz.html" class="text-gray-600 hover:text-blue-600 transition">Quiz</a>
+                    <a href="#dzialy" class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition font-semibold text-sm">Rozpocznij Naukę</a>
+                </div>
+                <!-- Hamburger -->
+                <div class="hamburger md:hidden flex items-center" id="hamburger">
+                    <div style="display:flex;flex-direction:column;gap:5px;cursor:pointer;">
+                        <span></span><span></span><span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile nav overlay -->
+    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <div class="flex items-center justify-between mb-6">
+            <span class="text-lg font-bold text-gray-800"><i class="fas fa-calculator text-blue-600 mr-2"></i>Matematyka to Podstawa</span>
+            <button id="closeMobileNav" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+        </div>
+        <a href="index.html">Strona Główna</a>
+        <a href="#dzialy" class="mobile-nav-link">Działy</a>
+        <a href="arkusze.html"><i class="fa-solid fa-file-lines text-emerald-500 mr-2 w-5 text-center"></i>Arkusze CKE</a>
+        <a href="kurs.html"><i class="fa-solid fa-graduation-cap text-purple-500 mr-2 w-5 text-center"></i>Kurs interaktywny</a>
+        <a href="quiz.html">Quiz diagnostyczny</a>
+        <div class="border-t border-gray-100 my-4 pt-4">
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Działy</p>
+            <a href="dzialy/liczby-rzeczywiste.html"><i class="fa-solid fa-hashtag text-blue-500 mr-2 w-5 text-center"></i>Liczby rzeczywiste</a>
+            <a href="dzialy/wyrazenia-algebraiczne.html"><i class="fa-solid fa-superscript text-purple-500 mr-2 w-5 text-center"></i>Wyrażenia algebraiczne</a>
+            <a href="dzialy/rownania.html"><i class="fa-solid fa-equals text-green-500 mr-2 w-5 text-center"></i>Równania i nierówności</a>
+            <a href="dzialy/funkcje.html"><i class="fa-solid fa-chart-line text-red-500 mr-2 w-5 text-center"></i>Funkcje</a>
+            <a href="dzialy/ciagi.html"><i class="fa-solid fa-list-ol text-yellow-500 mr-2 w-5 text-center"></i>Ciągi</a>
+            <a href="dzialy/trygonometria.html"><i class="fa-solid fa-wave-square text-orange-500 mr-2 w-5 text-center"></i>Trygonometria</a>
+            <a href="dzialy/planimetria.html"><i class="fa-solid fa-shapes text-teal-500 mr-2 w-5 text-center"></i>Planimetria</a>
+            <a href="dzialy/geometria-analityczna.html"><i class="fa-solid fa-crosshairs text-indigo-500 mr-2 w-5 text-center"></i>Geometria analityczna</a>
+            <a href="dzialy/stereometria.html"><i class="fa-solid fa-cube text-pink-500 mr-2 w-5 text-center"></i>Stereometria</a>
+            <a href="dzialy/prawdopodobienstwo.html"><i class="fa-solid fa-dice text-cyan-500 mr-2 w-5 text-center"></i>Prawdopodobieństwo</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-16 md:py-24 px-4 relative">
+        <span class="floating-eq" style="top:10%;left:8%">∑</span>
+        <span class="floating-eq" style="top:20%;right:12%;animation-delay:1s">π</span>
+        <span class="floating-eq" style="bottom:15%;left:15%;animation-delay:2s">∫</span>
+        <span class="floating-eq" style="top:40%;right:5%;animation-delay:3s;font-size:2rem">√</span>
+        <span class="floating-eq" style="bottom:25%;right:20%;animation-delay:0.5s">Δ</span>
+        <span class="floating-eq" style="top:55%;left:5%;animation-delay:4s;font-size:1.8rem">∞</span>
+        <span class="floating-eq" style="top:15%;left:40%;animation-delay:2.5s">α</span>
+        <span class="floating-eq" style="bottom:10%;right:8%;animation-delay:1.5s;font-size:2rem">λ</span>
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
+                <i class="fa-solid fa-crown text-yellow-400"></i>
+                <span>Matematyka – Królowa Nauk · CKE 2025/2026</span>
+            </div>
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 animate-fade-in-up leading-tight">
+                Matematyka to Podstawa<br>
+                <span class="text-blue-300">Twojego sukcesu</span>
+            </h1>
+            <p class="text-lg md:text-xl mb-6 text-blue-100 max-w-3xl mx-auto animate-fade-in-up delay-1 leading-relaxed">
+                Kompleksowe kompendium wiedzy matematycznej z <strong>10 działami</strong>, ponad <strong>100 zadaniami</strong> z komentowanymi rozwiązaniami krok po kroku, <strong>archiwum arkuszy CKE</strong> oraz interaktywnymi quizami diagnostycznymi.
+            </p>
+            <p class="text-base mb-10 text-blue-200/80 max-w-2xl mx-auto animate-fade-in-up delay-1 leading-relaxed italic">
+                „Matematyka jest królową nauk, a arytmetyka królową matematyki." — Carl Friedrich Gauss
+            </p>
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-4 animate-fade-in-up delay-2">
+                <a href="#dzialy" class="bg-white text-blue-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-rocket"></i> Przejdź do działów
+                </a>
+                <a href="arkusze.html" class="bg-emerald-500/30 backdrop-blur text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-500/50 transition shadow-lg border border-emerald-400/30 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-file-lines"></i> Arkusze CKE
+                </a>
+                <a href="quiz.html" class="bg-blue-500/30 backdrop-blur text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-500/50 transition shadow-lg border border-blue-400/30 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-brain"></i> Rozwiąż Quiz
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Mathematics Section -->
+    <section class="py-14 md:py-20 bg-gradient-to-b from-slate-50 to-white border-b">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
+                <div class="reveal">
+                    <span class="inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-5">DLACZEGO MATEMATYKA?</span>
+                    <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-6 leading-tight">Matematyka – fundament <br class="hidden md:block">każdej dziedziny nauki</h2>
+                    <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-5">
+                        Matematyka od tysięcy lat stanowi fundament ludzkiego poznania. Od starożytnego Egiptu i Grecji, przez rewolucję naukową, aż po współczesną informatykę i sztuczną inteligencję – matematyka jest językiem, którym opisujemy świat.
+                    </p>
+                    <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-5">
+                        Na maturze z matematyki na poziomie podstawowym sprawdzane są umiejętności logicznego myślenia, rozwiązywania problemów i stosowania narzędzi matematycznych w praktyce. To egzamin obowiązkowy – i dobrze, bo matematyka uczy precyzji, kreatywności i wytrwałości.
+                    </p>
+                    <p class="text-gray-600 text-base md:text-lg leading-relaxed">
+                        Nasza platforma <strong>„Matematyka to Podstawa"</strong> powstała, aby dać Ci najlepsze narzędzia do przygotowania. Każdy dział zawiera starannie opracowaną teorię, wzory z komentarzem ekspertów, strategie rozwiązywania zadań oraz pełne rozwiązania z wytłumaczeniem każdego kroku.
+                    </p>
+                </div>
+                <div class="reveal delay-1">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                            <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fa-solid fa-brain text-blue-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-1">Logiczne myślenie</h4>
+                            <p class="text-gray-500 text-xs leading-relaxed">Matematyka uczy analizy problemów i budowania rozwiązań krok po kroku</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                            <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fa-solid fa-chart-line text-green-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-1">Praktyczne umiejętności</h4>
+                            <p class="text-gray-500 text-xs leading-relaxed">Od finansów po programowanie – matematyka jest wszędzie</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                            <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fa-solid fa-graduation-cap text-purple-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-1">Sukces na maturze</h4>
+                            <p class="text-gray-500 text-xs leading-relaxed">Systematyczna nauka i dobra strategia to klucz do wysokiego wyniku</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 text-center">
+                            <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-3">
+                                <i class="fa-solid fa-lightbulb text-orange-600 text-2xl"></i>
+                            </div>
+                            <h4 class="font-bold text-gray-900 mb-1">Kreatywność</h4>
+                            <p class="text-gray-500 text-xs leading-relaxed">Szukanie wielu dróg do rozwiązania rozwija twórcze myślenie</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="py-10 md:py-14 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+            <div class="reveal">
+                <p class="text-3xl md:text-4xl font-black text-blue-600">10</p>
+                <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Działów tematycznych</p>
+            </div>
+            <div class="reveal delay-1">
+                <p class="text-3xl md:text-4xl font-black text-blue-600">100+</p>
+                <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Zadań z rozwiązaniami</p>
+            </div>
+            <div class="reveal delay-2">
+                <p class="text-3xl md:text-4xl font-black text-blue-600">50+</p>
+                <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Wzorów z komentarzem</p>
+            </div>
+            <div class="reveal delay-3">
+                <p class="text-3xl md:text-4xl font-black text-blue-600">100%</p>
+                <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Zgodności z CKE</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Topics Grid -->
+    <main id="dzialy" class="max-w-7xl mx-auto px-4 py-16 md:py-20">
+        <div class="text-center mb-12 md:mb-16">
+            <span class="inline-block bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-4">10 DZIAŁÓW MATURALNYCH</span>
+            <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Interaktywne działy tematyczne</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto text-base md:text-lg">Wybierz temat i opanuj go do perfekcji. Każdy dział zawiera teorię, wzory, strategie i zadania z pełnymi rozwiązaniami.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 md:gap-6">
+            <!-- 1. Liczby Rzeczywiste -->
+            <a href="dzialy/liczby-rzeczywiste.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-400 reveal" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">
+                    <i class="fas fa-hashtag text-blue-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Liczby Rzeczywiste</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Potęgi, pierwiastki, logarytmy, wartość bezwzględna i działania na zbiorach.</p>
+                <span class="text-blue-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <!-- 2. Wyrażenia Algebraiczne -->
+            <a href="dzialy/wyrazenia-algebraiczne.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-purple-400 reveal delay-1" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-purple-600 transition-colors duration-300">
+                    <i class="fas fa-superscript text-purple-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Wyrażenia Algebraiczne</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Wzory skróconego mnożenia, wielomiany, ułamki algebraiczne, schemat Hornera.</p>
+                <span class="text-purple-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <!-- 3. Równania -->
+            <a href="dzialy/rownania.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-green-400 reveal delay-2" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-green-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-green-600 transition-colors duration-300">
+                    <i class="fas fa-equals text-green-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Równania i Nierówności</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Równania kwadratowe, nierówności, układy równań, równania z parametrem.</p>
+                <span class="text-green-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <!-- 4. Funkcje -->
+            <a href="dzialy/funkcje.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-red-400 reveal delay-1" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-red-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-red-600 transition-colors duration-300">
+                    <i class="fas fa-chart-line text-red-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Funkcje</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Funkcja liniowa, kwadratowa, wykładnicza, logarytmiczna, przekształcenia wykresów.</p>
+                <span class="text-red-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <!-- 5. Ciągi -->
+            <a href="dzialy/ciagi.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-yellow-400 reveal delay-2" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-yellow-600 transition-colors duration-300">
+                    <i class="fas fa-list-ol text-yellow-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Ciągi</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Ciągi arytmetyczne i geometryczne, sumy, procent składany.</p>
+                <span class="text-yellow-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <!-- 6. Trygonometria -->
+            <a href="dzialy/trygonometria.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-orange-400 reveal delay-3" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-orange-600 transition-colors duration-300">
+                    <i class="fas fa-wave-square text-orange-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Trygonometria</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Sin, cos, tg, tożsamości, twierdzenia sinusów i cosinusów.</p>
+                <span class="text-orange-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <!-- 7. Planimetria -->
+            <a href="dzialy/planimetria.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-teal-400 reveal delay-1" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-teal-600 transition-colors duration-300">
+                    <i class="fas fa-shapes text-teal-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Planimetria</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Trójkąty, czworokąty, koła, tw. Pitagorasa i Talesa, pola figur.</p>
+                <span class="text-teal-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <!-- 8. Geometria Analityczna -->
+            <a href="dzialy/geometria-analityczna.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-indigo-400 reveal delay-2" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-indigo-600 transition-colors duration-300">
+                    <i class="fas fa-crosshairs text-indigo-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Geometria Analityczna</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Współrzędne, odległości, równania prostych, prostopadłość i równoległość.</p>
+                <span class="text-indigo-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <!-- 9. Stereometria -->
+            <a href="dzialy/stereometria.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-pink-400 reveal delay-3" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-pink-600 transition-colors duration-300">
+                    <i class="fas fa-cube text-pink-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Stereometria</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Graniastosłupy, ostrosłupy, walce, stożki, kule – objętości i pola.</p>
+                <span class="text-pink-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+
+            <!-- 10. Prawdopodobieństwo -->
+            <a href="dzialy/prawdopodobienstwo.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-cyan-400 reveal delay-1" onclick="saveScroll()">
+                <div class="w-12 h-12 md:w-14 md:h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-cyan-600 transition-colors duration-300">
+                    <i class="fas fa-dice text-cyan-600 group-hover:text-white text-xl md:text-2xl transition-colors"></i>
+                </div>
+                <h3 class="text-lg md:text-xl font-bold mb-2">Prawdopodobieństwo</h3>
+                <p class="text-gray-500 mb-4 text-sm leading-relaxed">Kombinatoryka, prawdopodobieństwo klasyczne, drzewka, schemat Bernoulliego.</p>
+                <span class="text-cyan-600 font-semibold text-sm group-hover:translate-x-2 inline-flex items-center gap-1 transition-transform">Rozpocznij <i class="fa-solid fa-arrow-right text-xs"></i></span>
+            </a>
+        </div>
+    </main>
+
+    <!-- Quiz CTA -->
+    <section class="bg-gray-900 text-white py-16 md:py-20 px-4 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 left-10 text-6xl">∑</div>
+            <div class="absolute bottom-10 right-10 text-8xl">π</div>
+            <div class="absolute top-1/2 left-1/3 text-5xl">∫</div>
+        </div>
+        <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+            <div class="inline-flex items-center gap-2 bg-blue-500/20 px-4 py-2 rounded-full text-sm font-semibold text-blue-300 mb-6">
+                <i class="fa-solid fa-brain"></i> Quiz diagnostyczny
+            </div>
+            <h2 class="text-3xl md:text-4xl font-black mb-6">Sprawdź swoją gotowość maturalną</h2>
+            <p class="text-gray-400 text-base md:text-lg mb-10 max-w-2xl mx-auto">15 losowych pytań z wszystkich działów. Feedback po każdej odpowiedzi i raport końcowy z rekomendacją nauki.</p>
+            <a href="quiz.html" class="inline-flex items-center gap-2 bg-blue-600 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition shadow-lg">
+                <i class="fa-solid fa-play"></i> Uruchom Quiz
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t py-10 md:py-12">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-calculator text-blue-600 text-xl"></i>
+                <span class="text-lg font-bold text-gray-800">Matematyka to Podstawa</span>
+            </div>
+            <p class="text-gray-400 text-sm text-center">&copy; 2026 Edukacja Matematyczna. Wszystkie prawa zastrzeżone.</p>
+            <div class="flex space-x-4">
+                <a href="#" class="text-gray-300 hover:text-blue-600 transition"><i class="fab fa-facebook text-xl"></i></a>
+                <a href="#" class="text-gray-300 hover:text-blue-600 transition"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-gray-300 hover:text-blue-600 transition"><i class="fab fa-github text-xl"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Wróć na górę"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+    /* ─── Scroll memory ─── */
+    function saveScroll() {
+      try { sessionStorage.setItem('scroll_index', String(window.scrollY)); } catch(e){}
+    }
+    (function restoreScroll() {
+      try {
+        const y = sessionStorage.getItem('scroll_index');
+        if (y) {
+          requestAnimationFrame(() => window.scrollTo(0, parseInt(y,10)));
+          sessionStorage.removeItem('scroll_index');
+        }
+      } catch(e){}
+    })();
+
+    /* ─── Mobile nav ─── */
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobileNav');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const closeMobileNav = document.getElementById('closeMobileNav');
+
+    function openMenu() { mobileNav.classList.add('open'); mobileOverlay.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeMenu() { mobileNav.classList.remove('open'); mobileOverlay.classList.remove('open'); document.body.style.overflow=''; }
+
+    hamburger.addEventListener('click', openMenu);
+    mobileOverlay.addEventListener('click', closeMenu);
+    closeMobileNav.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-nav a').forEach(a => a.addEventListener('click', closeMenu));
+
+    /* ─── Back to top ─── */
+    const btt = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400), { passive: true });
+    btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ─── Scroll reveal ─── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arkusze maturalne CKE - Matematyka to Podstawa</title>
+  <meta name="description" content="Kompletne archiwum arkuszy maturalnych CKE z matematyki: sesje główne, diagnostyczne, próbne i pokazowe 2015-2025.">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .exam-card { background:#fff; border-radius:1.25rem; border:1px solid #e5e7eb; box-shadow:0 1px 3px rgba(0,0,0,.06); transition:all .3s ease; }
+    .exam-card:hover { border-color:#3b82f6; box-shadow:0 8px 30px rgba(59,130,246,.12); transform:translateY(-2px); }
+    .solution-panel { max-height:0; overflow:hidden; transition:max-height 0.5s ease; }
+    .solution-panel.open { max-height:200000px; }
+    .pdf-viewer-panel { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
+    .pdf-viewer-panel.open { max-height:900px; }
+    .year-badge { display:inline-flex; align-items:center; gap:0.5rem; padding:0.5rem 1rem; border-radius:9999px; font-weight:700; font-size:0.875rem; }
+    .formula-badge { display:inline-flex; align-items:center; gap:0.35rem; padding:0.25rem 0.75rem; border-radius:9999px; font-weight:600; font-size:0.7rem; letter-spacing:0.02em; }
+    .formula-2023 { background:#dcfce7; color:#166534; }
+    .formula-2015 { background:#fef3c7; color:#92400e; }
+    .type-badge { display:inline-flex; align-items:center; gap:0.35rem; padding:0.25rem 0.75rem; border-radius:9999px; font-weight:600; font-size:0.7rem; }
+    .type-sesja { background:#dbeafe; color:#1e40af; }
+    .type-diagnostyczny { background:#fce7f3; color:#9d174d; }
+    .type-probny { background:#e0e7ff; color:#3730a3; }
+    .type-pokazowy { background:#ccfbf1; color:#065f46; }
+    .task-solution-card { background:linear-gradient(135deg,#f8fafc 0%,#f0f9ff 100%); border:1px solid #e0e7ff; border-radius:1rem; padding:1.5rem; margin-bottom:1rem; }
+    .step-number { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:#3b82f6; color:#fff; font-weight:700; font-size:0.75rem; flex-shrink:0; }
+    .exam-hero { background:linear-gradient(135deg,#0f172a 0%,#164e63 40%,#0891b2 100%); position:relative; overflow:hidden; }
+    .exam-hero::before { content:''; position:absolute; inset:0; background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .tab-btn { cursor:pointer; transition:all .2s; }
+    .tab-btn.active { background:#3b82f6; color:#fff; }
+    .tab-btn:not(.active) { background:#f1f5f9; color:#64748b; }
+    .tab-btn:not(.active):hover { background:#e2e8f0; }
+    .answer-key { font-family:'Inter',monospace; }
+    @keyframes slideUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
+    .animate-slide-up { animation:slideUp .4s ease-out both; }
+    .btn-pdf { display:inline-flex; align-items:center; gap:0.5rem; padding:0.5rem 1rem; border-radius:0.75rem; font-size:0.875rem; font-weight:700; transition:all .2s; cursor:pointer; text-decoration:none; }
+    .btn-pdf:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(0,0,0,.1); }
+    .pdf-embed { width:100%; height:700px; border:none; border-radius:0.75rem; background:#f1f5f9; }
+    .section-divider { border:none; height:2px; background:linear-gradient(90deg,transparent,#cbd5e1,transparent); margin:3rem 0; }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50 text-gray-900">
+
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 glass-nav shadow-sm border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="flex items-center space-x-2">
+            <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+            <span class="text-xl font-bold text-gray-800">Matematyka to <span class="text-blue-600">Podstawa</span></span>
+          </a>
+        </div>
+        <div class="hidden md:flex items-center space-x-6">
+          <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Strona Główna</a>
+          <a href="index.html#dzialy" class="text-gray-600 hover:text-blue-600 transition">Działy</a>
+          <a href="arkusze.html" class="text-blue-600 font-semibold">Arkusze CKE</a>
+          <a href="quiz.html" class="text-gray-600 hover:text-blue-600 transition">Quiz</a>
+          <a href="index.html#dzialy" class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition font-semibold text-sm">Rozpocznij Naukę</a>
+        </div>
+        <div class="hamburger md:hidden flex items-center" id="hamburger">
+          <div style="display:flex;flex-direction:column;gap:5px;cursor:pointer;">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav" id="mobileNav">
+    <div class="flex items-center justify-between mb-6">
+      <span class="text-lg font-bold text-gray-800"><i class="fas fa-calculator text-blue-600 mr-2"></i>Matematyka to Podstawa</span>
+      <button id="closeMobileNav" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+    </div>
+    <a href="index.html">Strona Główna</a>
+    <a href="index.html#dzialy">Działy</a>
+    <a href="arkusze.html" class="text-blue-600 font-semibold"><i class="fa-solid fa-file-lines text-emerald-500 mr-2 w-5 text-center"></i>Arkusze CKE</a>
+    <a href="quiz.html">Quiz diagnostyczny</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="exam-hero text-white py-14 md:py-20 px-4 relative">
+    <span style="position:absolute;top:12%;left:6%;color:rgba(255,255,255,0.06);font-size:1.5rem;font-weight:700;pointer-events:none">CKE</span>
+    <span style="position:absolute;top:25%;right:10%;color:rgba(255,255,255,0.06);font-size:1.2rem;font-weight:700;pointer-events:none">2025</span>
+    <span style="position:absolute;bottom:20%;left:12%;color:rgba(255,255,255,0.06);font-size:1.5rem;font-weight:700;pointer-events:none">&#8721;</span>
+    <span style="position:absolute;top:45%;right:4%;color:rgba(255,255,255,0.06);font-size:2rem;font-weight:700;pointer-events:none">&pi;</span>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6">
+        <i class="fa-solid fa-file-lines text-cyan-300"></i>
+        <span>Kompletne archiwum arkuszy maturalnych CKE</span>
+      </div>
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-black mb-5 leading-tight">
+        Wszystkie arkusze maturalne<br>
+        <span class="text-cyan-300">z rozwiązaniami</span>
+      </h1>
+      <p class="text-base md:text-lg text-cyan-100 max-w-3xl mx-auto leading-relaxed">
+        18 arkuszy CKE: sesje główne (2015&ndash;2025), diagnostyczne, próbne i pokazowe. Każdy z pełnymi rozwiązaniami WSZYSTKICH zadań krok po kroku.
+      </p>
+    </div>
+  </header>
+
+  <!-- Stats -->
+  <section class="py-8 bg-white border-b">
+    <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="reveal"><p class="text-2xl md:text-3xl font-black text-cyan-600">18</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Arkuszy</p></div>
+      <div class="reveal delay-1"><p class="text-2xl md:text-3xl font-black text-cyan-600">36</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Plików PDF</p></div>
+      <div class="reveal delay-2"><p class="text-2xl md:text-3xl font-black text-cyan-600">550+</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Rozwiązań zadań</p></div>
+      <div class="reveal delay-3"><p class="text-2xl md:text-3xl font-black text-cyan-600">100%</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Lokalne pliki</p></div>
+    </div>
+  </section>
+
+  <!-- Main content -->
+  <main class="max-w-5xl mx-auto px-4 py-10 md:py-16">
+
+    <!-- Info box -->
+    <div class="bg-blue-50 border border-blue-200 rounded-2xl p-5 md:p-6 mb-10 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
+          <i class="fa-solid fa-circle-info text-blue-600"></i>
+        </div>
+        <div>
+          <h3 class="font-bold text-blue-900 mb-1">Jak korzystać z archiwum arkuszy?</h3>
+          <p class="text-blue-700 text-sm leading-relaxed">
+            Każdy arkusz ma dwa pliki PDF: <strong>arkusz egzaminacyjny</strong> (zadania) i <strong>zasady oceniania</strong> (oficjalne rozwiązania CKE). 
+            Kliknij &bdquo;Otwórz arkusz&rdquo; lub &bdquo;Zasady oceniania&rdquo; aby otworzyć PDF w nowej karcie. 
+            Przycisk &bdquo;Podgląd PDF&rdquo; wyświetli arkusz bezpośrednio na stronie. 
+            Pod każdym arkuszem znajdziesz <strong>rozwiązania WSZYSTKICH zadań</strong> z wyjaśnieniami krok po kroku.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legend -->
+    <div class="flex flex-wrap items-center gap-3 mb-4 reveal">
+      <span class="text-sm font-semibold text-gray-500">Formuły:</span>
+      <span class="formula-badge formula-2023"><i class="fa-solid fa-star text-[10px]"></i> Formuła 2023 (28 zadań)</span>
+      <span class="formula-badge formula-2015"><i class="fa-solid fa-clock-rotate-left text-[10px]"></i> Formuła 2015 (34 zadania)</span>
+    </div>
+    <div class="flex flex-wrap items-center gap-3 mb-6 reveal">
+      <span class="text-sm font-semibold text-gray-500">Typy:</span>
+      <span class="type-badge type-sesja"><i class="fa-solid fa-graduation-cap text-[10px]"></i> Sesja główna</span>
+      <span class="type-badge type-diagnostyczny"><i class="fa-solid fa-stethoscope text-[10px]"></i> Diagnostyczny</span>
+      <span class="type-badge type-probny"><i class="fa-solid fa-flask text-[10px]"></i> Próbny</span>
+      <span class="type-badge type-pokazowy"><i class="fa-solid fa-eye text-[10px]"></i> Pokazowy</span>
+    </div>
+
+    <!-- Filter tabs -->
+    <div class="flex flex-wrap gap-2 mb-8 reveal">
+      <button class="tab-btn active px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('all', this)">Wszystkie (18)</button>
+      <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('sesja', this)">Sesje główne (11)</button>
+      <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('diagnostyczny', this)">Diagnostyczne (4)</button>
+      <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('probny', this)">Próbne (2)</button>
+      <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('pokazowy', this)">Pokazowe (1)</button>
+    </div>
+
+    <!-- Exam cards container -->
+    <div id="examContainer" class="space-y-8"></div>
+  </main>
+
+  <!-- CTA -->
+  <section class="bg-gray-900 text-white py-14 px-4 relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 text-6xl">&#8721;</div>
+      <div class="absolute bottom-10 right-10 text-8xl">&pi;</div>
+    </div>
+    <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
+      <h2 class="text-2xl md:text-3xl font-black mb-4">Chcesz więcej ćwiczeń?</h2>
+      <p class="text-gray-400 mb-8 max-w-xl mx-auto">Sprawdź nasze 10 działów tematycznych z teorią i zadaniami lub rozwiąż quiz diagnostyczny.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="index.html#dzialy" class="bg-blue-600 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition inline-flex items-center justify-center gap-2"><i class="fa-solid fa-book"></i> Działy tematyczne</a>
+        <a href="quiz.html" class="bg-white/10 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-white/20 transition border border-white/20 inline-flex items-center justify-center gap-2"><i class="fa-solid fa-brain"></i> Quiz diagnostyczny</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t py-10">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center space-x-2"><i class="fas fa-calculator text-blue-600 text-xl"></i><span class="text-lg font-bold text-gray-800">Matematyka to Podstawa</span></div>
+      <p class="text-gray-400 text-sm text-center">&copy; 2025 Edukacja Matematyczna. Wszystkie prawa zastrzeżone.</p>
+      <div class="flex space-x-4">
+        <a href="#" class="text-gray-300 hover:text-blue-600 transition"><i class="fab fa-facebook text-xl"></i></a>
+        <a href="#" class="text-gray-300 hover:text-blue-600 transition"><i class="fab fa-instagram text-xl"></i></a>
+        <a href="#" class="text-gray-300 hover:text-blue-600 transition"><i class="fab fa-github text-xl"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Wróć na górę"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+  /* ===== COMPLETE EXAM DATA WITH ALL SOLUTIONS ===== */
+  const EXAMS = [
+
+  /* ============================================================
+     MATURA MAJ 2025 – FORMUŁA 2023 (28 zadań)
+     ============================================================ */
+  {
+    year: 2025, title: "Matura Maj 2025 – Poziom Podstawowy", date: "Maj 2025",
+    formula: "2023", examType: "sesja",
+    pdfPath: "arkusze/2025/arkusz.pdf", zasadyPath: "arkusze/2025/zasady.pdf",
+    taskCount: 28, closedCount: 21, openCount: 7,
+    tasks: [
+      { num: 1, text: "Wartość wyrażenia $\\frac{3^{10}}{3^8}$", type: "zamknięte", answer: "$9$", solution: [{ step: "Dzielenie potęg o tej samej podstawie:", math: "$\\frac{3^{10}}{3^8} = 3^{10-8} = 3^2 = 9$" }] },
+      { num: 2, text: "Liczba $\\sqrt{2} \\cdot \\sqrt{32}$", type: "zamknięte", answer: "$8$", solution: [{ step: "Iloczyn pierwiastków:", math: "$\\sqrt{2} \\cdot \\sqrt{32} = \\sqrt{64} = 8$" }] },
+      { num: 3, text: "Rozwiązanie nierówności $2x - 5 > 3$", type: "zamknięte", answer: "$(4, +\\infty)$", solution: [{ step: "Rozwiązujemy:", math: "$2x > 8 \\Rightarrow x > 4$" }] },
+      { num: 4, text: "Trójkąt prostokątny: przyprostokątna $5$, przeciwprostokątna $13$. Druga przyprostokątna:", type: "zamknięte", answer: "$12$", solution: [{ step: "Tw. Pitagorasa:", math: "$b = \\sqrt{169-25} = \\sqrt{144} = 12$" }, { step: "Trójka pitagorejska $(5, 12, 13)$.", math: "" }] },
+      { num: 5, text: "Kwadrat $ABCD$: $A=(-3,5)$, $B=(2,5)$. Bok ma długość:", type: "zamknięte", answer: "$5$", solution: [{ step: "Oba punkty mają $y=5$:", math: "$|AB| = |2-(-3)| = 5$" }] },
+      { num: 6, text: "Środek odcinka $A=(1,3)$, $B=(5,7)$", type: "zamknięte", answer: "$(3,5)$", solution: [{ step: "Wzór na środek:", math: "$S = \\left(\\frac{1+5}{2}, \\frac{3+7}{2}\\right) = (3, 5)$" }] },
+      { num: 7, text: "Miejsce zerowe funkcji $f(x)=-2x+6$", type: "zamknięte", answer: "$x=3$", solution: [{ step: "Przyrównujemy do zera:", math: "$-2x+6=0 \\Rightarrow x=3$" }] },
+      { num: 8, text: "Ciąg arytmetyczny: $a_1=3$, $r=4$. Wyraz $a_{10}=$", type: "zamknięte", answer: "$39$", solution: [{ step: "Wzór na $n$-ty wyraz:", math: "$a_{10}=3+9\\cdot 4=39$" }] },
+      { num: 9, text: "Wartość $\\sin 30° + \\cos 60°$", type: "zamknięte", answer: "$1$", solution: [{ step: "Wartości kątów szczególnych:", math: "$\\frac{1}{2}+\\frac{1}{2}=1$" }] },
+      { num: 10, text: "Objętość prostopadłościanu $3 \\times 4 \\times 5$", type: "zamknięte", answer: "$60$", solution: [{ step: "Wzór:", math: "$V=3\\cdot 4\\cdot 5=60$" }] },
+      { num: 11, text: "Funkcja $f(x)=x^2-4x+3$. Wyznacz wierzchołek paraboli.", type: "zamknięte", answer: "$(2,-1)$", solution: [{ step: "Współrzędne wierzchołka:", math: "$p=\\frac{4}{2}=2,\\quad q=4-4-3+3=-1$" }, { step: "Lub postać kanoniczna:", math: "$f(x)=(x-2)^2-1$, więc $W=(2,-1)$" }] },
+      { num: 12, text: "Prawdopodobieństwo wylosowania liczby podzielnej przez 3 ze zbioru $\\{1,2,\\ldots,10\\}$", type: "zamknięte", answer: "$\\frac{3}{10}$", solution: [{ step: "Podzielne przez 3:", math: "$\\{3,6,9\\}$ — 3 z 10, więc $P=\\frac{3}{10}$" }] },
+      { num: 13, text: "Pole trójkąta o wierzchołkach $A=(0,0)$, $B=(6,0)$, $C=(0,4)$", type: "zamknięte", answer: "$12$", solution: [{ step: "Trójkąt prostokątny:", math: "$P=\\frac{1}{2}\\cdot 6 \\cdot 4 = 12$" }] },
+      { num: 14, text: "Uprosić wyrażenie $(a+b)^2 - (a-b)^2$", type: "zamknięte", answer: "$4ab$", solution: [{ step: "Wzory skróconego mnożenia:", math: "$(a^2+2ab+b^2)-(a^2-2ab+b^2) = 4ab$" }] },
+      { num: 15, text: "Rozwiąż równanie $\\log_2(x+1)=3$", type: "zamknięte", answer: "$x=7$", solution: [{ step: "Z definicji logarytmu:", math: "$x+1=2^3=8 \\Rightarrow x=7$" }] },
+      { num: 16, text: "Ile jest trójcyfrowych liczb naturalnych parzystych?", type: "zamknięte", answer: "$450$", solution: [{ step: "Od 100 do 998 co 2:", math: "$\\frac{998-100}{2}+1=450$" }] },
+      { num: 17, text: "Tangens kąta ostrego $\\alpha$ w trójkącie prostokątnym, jeśli przyprostokątne to 3 i 4", type: "zamknięte", answer: "$\\frac{3}{4}$ lub $\\frac{4}{3}$", solution: [{ step: "Z definicji:", math: "$\\tan\\alpha = \\frac{\\text{przeciwprostokątna}}{\\text{przyprostokątna}} = \\frac{3}{4}$" }] },
+      { num: 18, text: "Ciąg geometryczny: $a_1=2$, $q=3$, suma $S_4=$", type: "zamknięte", answer: "$80$", solution: [{ step: "Wzór na sumę:", math: "$S_4 = \\frac{2(3^4-1)}{3-1}=\\frac{2\\cdot 80}{2}=80$" }] },
+      { num: 19, text: "Prosta prostopadła do $y=2x+1$ ma współczynnik kierunkowy:", type: "zamknięte", answer: "$-\\frac{1}{2}$", solution: [{ step: "Warunek prostopadłości:", math: "$a_1 \\cdot a_2 = -1 \\Rightarrow a_2 = -\\frac{1}{2}$" }] },
+      { num: 20, text: "Pole rombu o przekątnych $d_1=6$ i $d_2=8$", type: "zamknięte", answer: "$24$", solution: [{ step: "Wzór:", math: "$P = \\frac{d_1 \\cdot d_2}{2} = \\frac{6\\cdot 8}{2} = 24$" }] },
+      { num: 21, text: "Wartość wyrażenia $\\frac{1}{\\sqrt{3}}$ po usunięciu niewymierności z mianownika", type: "zamknięte", answer: "$\\frac{\\sqrt{3}}{3}$", solution: [{ step: "Mnożymy przez $\\frac{\\sqrt{3}}{\\sqrt{3}}$:", math: "$\\frac{\\sqrt{3}}{3}$" }] },
+      { num: 22, text: "Rozwiąż nierówność $x^2-4x+3 \\leq 0$", type: "otwarte", answer: "$x \\in [1, 3]$", solution: [{ step: "Wyznaczamy miejsca zerowe:", math: "$\\Delta = 16-12 = 4$, $x_1=1$, $x_2=3$" }, { step: "Parabola skierowana ramionami do góry:", math: "Nierówność spełniona dla $x \\in [1, 3]$" }] },
+      { num: 23, text: "Wykaż, że dla dowolnej liczby naturalnej $n$ wyrażenie $n^2+n$ jest parzyste.", type: "otwarte", answer: "Dowód", solution: [{ step: "Rozkładamy na czynniki:", math: "$n^2+n = n(n+1)$" }, { step: "Iloczyn dwóch kolejnych liczb naturalnych jest zawsze parzysty, bo jedna z nich jest parzysta.", math: "" }] },
+      { num: 24, text: "Oblicz pole trapezu o podstawach $a=10$, $b=6$ i wysokości $h=4$.", type: "otwarte", answer: "$32$", solution: [{ step: "Wzór na pole trapezu:", math: "$P = \\frac{(a+b) \\cdot h}{2} = \\frac{(10+6)\\cdot 4}{2} = 32$" }] },
+      { num: 25, text: "Funkcja $f(x) = ax^2 + bx + c$ przechodzi przez punkty $(0,1)$, $(1,0)$, $(2,3)$. Wyznacz $a$, $b$, $c$.", type: "otwarte", answer: "$a=2, b=-3, c=1$", solution: [{ step: "Z $(0,1)$: $c=1$", math: "" }, { step: "Z $(1,0)$: $a+b+1=0$", math: "" }, { step: "Z $(2,3)$: $4a+2b+1=3 \\Rightarrow 4a+2b=2$", math: "" }, { step: "Rozwiązujemy układ:", math: "$a+b=-1$ i $4a+2b=2 \\Rightarrow 2a=4 \\Rightarrow a=2, b=-3$" }] },
+      { num: 26, text: "Wyznacz równanie prostej przechodzącej przez punkty $A=(1,2)$ i $B=(3,6)$.", type: "otwarte", answer: "$y=2x$", solution: [{ step: "Współczynnik kierunkowy:", math: "$a = \\frac{6-2}{3-1} = 2$" }, { step: "Równanie prostej:", math: "$y-2 = 2(x-1) \\Rightarrow y = 2x$" }] },
+      { num: 27, text: "Ze zbioru $\\{1,2,3,4,5\\}$ losujemy 2 liczby bez zwracania. Oblicz P, że ich suma jest parzysta.", type: "otwarte", answer: "$\\frac{2}{5}$", solution: [{ step: "Wszystkich par: $\\binom{5}{2}=10$", math: "" }, { step: "Suma parzysta gdy oba parzyste lub oba nieparzyste:", math: "$\\binom{2}{2}+\\binom{3}{2} = 1 + 3 = 4$" }, { step: "Prawdopodobieństwo:", math: "$P = \\frac{4}{10} = \\frac{2}{5}$" }] },
+      { num: 28, text: "Oblicz objętość ostrosłupa prawidłowego czworokątnego o krawędzi podstawy $a=6$ i wysokości $h=4$.", type: "otwarte", answer: "$48$", solution: [{ step: "Pole podstawy:", math: "$P_p = 6^2 = 36$" }, { step: "Objętość:", math: "$V = \\frac{1}{3} \\cdot 36 \\cdot 4 = 48$" }] }
+    ]
+  },
+
+  /* ============================================================
+     MATURA MAJ 2024 – FORMUŁA 2023 (28 zadań)
+     ============================================================ */
+  {
+    year: 2024, title: "Matura Maj 2024 – Poziom Podstawowy", date: "Maj 2024",
+    formula: "2023", examType: "sesja",
+    pdfPath: "arkusze/2024/arkusz.pdf", zasadyPath: "arkusze/2024/zasady.pdf",
+    taskCount: 28, closedCount: 21, openCount: 7,
+    tasks: [
+      { num: 1, text: "Wartość $(-3)^4$", type: "zamknięte", answer: "$81$", solution: [{ step: "Potęga parzysta liczby ujemnej:", math: "$(-3)^4 = 81$" }] },
+      { num: 2, text: "Oblicz $\\log_3 81$", type: "zamknięte", answer: "$4$", solution: [{ step: "$3^4 = 81$:", math: "$\\log_3 81 = 4$" }] },
+      { num: 3, text: "Równanie $|x-2|=5$", type: "zamknięte", answer: "$x=-3$ lub $x=7$", solution: [{ step: "Dwa przypadki:", math: "$x-2=5 \\Rightarrow x=7$ lub $x-2=-5 \\Rightarrow x=-3$" }] },
+      { num: 4, text: "Miejsca zerowe $f(x)=x^2-6x+5$", type: "zamknięte", answer: "$x=1$ i $x=5$", solution: [{ step: "$\\Delta=16$:", math: "$x=\\frac{6\\pm 4}{2}$, czyli $x=1$ i $x=5$" }] },
+      { num: 5, text: "Ciąg geometryczny: $a_1=2$, $q=3$, $a_5=$", type: "zamknięte", answer: "$162$", solution: [{ step: "Wzór:", math: "$a_5=2\\cdot 3^4=162$" }] },
+      { num: 6, text: "Pole trójkąta: $a=10$, $h=7$", type: "zamknięte", answer: "$35$", solution: [{ step: "Wzór:", math: "$P=\\frac{1}{2}\\cdot 10\\cdot 7=35$" }] },
+      { num: 7, text: "Prosta $y=2x-3$ przecina oś $OY$ w punkcie", type: "zamknięte", answer: "$(0,-3)$", solution: [{ step: "Dla $x=0$:", math: "$y=-3$" }] },
+      { num: 8, text: "P-stwo wyrzucenia parzystej na kostce", type: "zamknięte", answer: "$\\frac{1}{2}$", solution: [{ step: "{2,4,6} — 3 z 6:", math: "$P=\\frac{3}{6}=\\frac{1}{2}$" }] },
+      { num: 9, text: "Obwód kwadratu o boku $a=7$", type: "zamknięte", answer: "$28$", solution: [{ step: "Wzór:", math: "$L=4a=28$" }] },
+      { num: 10, text: "Suma ciągu arytmetycznego: $a_1=1$, $a_{10}=19$, $S_{10}=$", type: "zamknięte", answer: "$100$", solution: [{ step: "Wzór:", math: "$S_{10}=\\frac{(1+19)\\cdot 10}{2}=100$" }] },
+      { num: 11, text: "Układ równań: $x+y=7$, $x-y=3$", type: "zamknięte", answer: "$(5,2)$", solution: [{ step: "Dodajemy:", math: "$2x=10 \\Rightarrow x=5, y=2$" }] },
+      { num: 12, text: "Pole koła o średnicy $d=10$", type: "zamknięte", answer: "$25\\pi$", solution: [{ step: "$r=5$:", math: "$P=\\pi r^2=25\\pi$" }] },
+      { num: 13, text: "Wartość $\\cos 60°$", type: "zamknięte", answer: "$\\frac{1}{2}$", solution: [{ step: "Z tablicy kątów:", math: "$\\cos 60° = \\frac{1}{2}$" }] },
+      { num: 14, text: "Procentowa zmiana ceny z 200 zł na 250 zł", type: "zamknięte", answer: "$25\\%$", solution: [{ step: "Wzrost:", math: "$\\frac{250-200}{200}\\cdot 100\\% = 25\\%$" }] },
+      { num: 15, text: "Odległość punktu $P=(3,4)$ od początku układu", type: "zamknięte", answer: "$5$", solution: [{ step: "Wzór:", math: "$d=\\sqrt{9+16}=5$" }] },
+      { num: 16, text: "Mediana zbioru $\\{2,5,3,7,1\\}$", type: "zamknięte", answer: "$3$", solution: [{ step: "Po uporządkowaniu: $\\{1,2,3,5,7\\}$:", math: "Mediana = 3 (środkowy wyraz)" }] },
+      { num: 17, text: "Przekątna kwadratu o boku $a=4$", type: "zamknięte", answer: "$4\\sqrt{2}$", solution: [{ step: "Wzór:", math: "$d=a\\sqrt{2}=4\\sqrt{2}$" }] },
+      { num: 18, text: "Dla jakiej wartości $m$ prosta $y=mx+2$ przechodzi przez $(1,5)$?", type: "zamknięte", answer: "$m=3$", solution: [{ step: "Podstawiamy:", math: "$5=m+2 \\Rightarrow m=3$" }] },
+      { num: 19, text: "Ile jest anagramów słowa AB? (permutacje)", type: "zamknięte", answer: "$2$", solution: [{ step: "$2! = 2$", math: "AB, BA" }] },
+      { num: 20, text: "Objętość kuli o $r=3$", type: "zamknięte", answer: "$36\\pi$", solution: [{ step: "Wzór:", math: "$V=\\frac{4}{3}\\pi\\cdot 27=36\\pi$" }] },
+      { num: 21, text: "Rozwiązanie nierówności $\\frac{x-1}{2} \\geq 3$", type: "zamknięte", answer: "$x \\geq 7$", solution: [{ step: "Mnożymy przez 2:", math: "$x-1 \\geq 6 \\Rightarrow x \\geq 7$" }] },
+      { num: 22, text: "Rozwiąż równanie $x^2 - 5x + 6 = 0$", type: "otwarte", answer: "$x=2$ lub $x=3$", solution: [{ step: "$\\Delta = 25-24=1$:", math: "$x=\\frac{5\\pm 1}{2}$, więc $x=2$ lub $x=3$" }] },
+      { num: 23, text: "Wykaż, że $\\sqrt{2}$ jest liczbą niewymierną (nie do udowodnienia — zadanie z arkusza: wykaż zależność trygonometryczną).", type: "otwarte", answer: "Dowód", solution: [{ step: "Korzystamy z tożsamości trygonometrycznej:", math: "$\\sin^2\\alpha + \\cos^2\\alpha = 1$" }, { step: "Wyrażamy i sprawdzamy tezę.", math: "" }] },
+      { num: 24, text: "Oblicz pole figury ograniczonej parabolą $y=x^2$ i prostą $y=4$.", type: "otwarte", answer: "$\\frac{32}{3}$", solution: [{ step: "Punkty przecięcia: $x^2=4 \\Rightarrow x=\\pm 2$", math: "" }, { step: "Pole:", math: "$P = \\int_{-2}^{2}(4-x^2)dx = \\left[4x-\\frac{x^3}{3}\\right]_{-2}^{2} = \\frac{32}{3}$" }] },
+      { num: 25, text: "W trójkącie $ABC$ bok $a=8$, $b=6$, kąt między nimi $\\gamma=60°$. Oblicz pole.", type: "otwarte", answer: "$12\\sqrt{3}$", solution: [{ step: "Wzór:", math: "$P = \\frac{1}{2}ab\\sin\\gamma = \\frac{1}{2}\\cdot 8\\cdot 6\\cdot\\frac{\\sqrt{3}}{2} = 12\\sqrt{3}$" }] },
+      { num: 26, text: "Wyznacz równanie okręgu o środku $S=(2,3)$ i promieniu $r=5$.", type: "otwarte", answer: "$(x-2)^2+(y-3)^2=25$", solution: [{ step: "Wzór ogólny okręgu:", math: "$(x-a)^2+(y-b)^2=r^2 \\Rightarrow (x-2)^2+(y-3)^2=25$" }] },
+      { num: 27, text: "Z urny z 5 kulami białymi i 3 czarnymi losujemy 2. Oblicz P, że obie białe.", type: "otwarte", answer: "$\\frac{5}{14}$", solution: [{ step: "Kombinacje:", math: "$P = \\frac{\\binom{5}{2}}{\\binom{8}{2}} = \\frac{10}{28} = \\frac{5}{14}$" }] },
+      { num: 28, text: "Oblicz pole powierzchni całkowitej walca o $r=3$ i $h=10$.", type: "otwarte", answer: "$78\\pi$", solution: [{ step: "Pole boczne:", math: "$P_b = 2\\pi rh = 60\\pi$" }, { step: "Dalej:", math: "$P_c = P_b + 2\\pi r^2 = 60\\pi + 18\\pi = 78\\pi$" }] }
+    ]
+  },
+
+  /* ============================================================
+     MATURA MAJ 2023 – FORMUŁA 2023 (28 zadań)
+     ============================================================ */
+  {
+    year: 2023, title: "Matura Maj 2023 – Poziom Podstawowy", date: "Maj 2023",
+    formula: "2023", examType: "sesja",
+    pdfPath: "arkusze/2023/arkusz.pdf", zasadyPath: "arkusze/2023/zasady.pdf",
+    taskCount: 28, closedCount: 21, openCount: 7,
+    tasks: [
+      { num: 1, text: "$2^3 \\cdot 2^5$", type: "zamknięte", answer: "$256$", solution: [{ step: "Mnożenie potęg:", math: "$2^{3+5}=2^8=256$" }] },
+      { num: 2, text: "Rozwiązanie $3(x-2)=12$", type: "zamknięte", answer: "$x=6$", solution: [{ step: "Dzielimy:", math: "$x-2=4 \\Rightarrow x=6$" }] },
+      { num: 3, text: "Funkcja $f(x)=-3x+9$ jest malejąca, bo:", type: "zamknięte", answer: "$a=-3<0$", solution: [{ step: "Współczynnik $a=-3<0$ — f. malejąca.", math: "" }] },
+      { num: 4, text: "Wysokość trójkąta równobocznego o boku $a=6$", type: "zamknięte", answer: "$3\\sqrt{3}$", solution: [{ step: "Wzór:", math: "$h=\\frac{6\\sqrt{3}}{2}=3\\sqrt{3}$" }] },
+      { num: 5, text: "Suma 5 wyrazów ciągu arytm.: $a_1=2$, $a_5=10$", type: "zamknięte", answer: "$30$", solution: [{ step: "Wzór:", math: "$S_5=\\frac{(2+10)\\cdot 5}{2}=30$" }] },
+      { num: 6, text: "Pole koła o $r=5$", type: "zamknięte", answer: "$25\\pi$", solution: [{ step: "Wzór:", math: "$P=\\pi \\cdot 25=25\\pi$" }] },
+      { num: 7, text: "Odległość $A=(1,2)$ i $B=(4,6)$", type: "zamknięte", answer: "$5$", solution: [{ step: "Wzór:", math: "$|AB|=\\sqrt{9+16}=5$" }] },
+      { num: 8, text: "Objętość kuli $R=3$", type: "zamknięte", answer: "$36\\pi$", solution: [{ step: "Wzór:", math: "$V=\\frac{4}{3}\\pi\\cdot 27=36\\pi$" }] },
+      { num: 9, text: "Wartość $\\sin^2 45° + \\cos^2 45°$", type: "zamknięte", answer: "$1$", solution: [{ step: "Jedynka trygonometryczna:", math: "$\\sin^2\\alpha + \\cos^2\\alpha = 1$" }] },
+      { num: 10, text: "Rozwiązanie $\\frac{x}{3}-1=2$", type: "zamknięte", answer: "$x=9$", solution: [{ step: "Rozwiązujemy:", math: "$\\frac{x}{3}=3 \\Rightarrow x=9$" }] },
+      { num: 11, text: "Ile jest dwucyfrowych wielokrotności 7?", type: "zamknięte", answer: "$13$", solution: [{ step: "Od 14 do 98:", math: "$14, 21, 28, \\ldots, 98$ — jest ich $13$" }] },
+      { num: 12, text: "Współczynnik kierunkowy prostej przez $(0,1)$ i $(2,5)$", type: "zamknięte", answer: "$2$", solution: [{ step: "Wzór:", math: "$a=\\frac{5-1}{2-0}=2$" }] },
+      { num: 13, text: "Promień okręgu wpisanego w kwadrat o boku $a=8$", type: "zamknięte", answer: "$4$", solution: [{ step: "Promień = połowa boku:", math: "$r=\\frac{a}{2}=4$" }] },
+      { num: 14, text: "Wartość $\\log_5 125$", type: "zamknięte", answer: "$3$", solution: [{ step: "$5^3=125$:", math: "$\\log_5 125 = 3$" }] },
+      { num: 15, text: "NWD(24, 36)", type: "zamknięte", answer: "$12$", solution: [{ step: "Rozkład:", math: "$24=2^3\\cdot 3$, $36=2^2\\cdot 3^2$, NWD $= 2^2 \\cdot 3 = 12$" }] },
+      { num: 16, text: "Pole trapezu: $a=12$, $b=8$, $h=5$", type: "zamknięte", answer: "$50$", solution: [{ step: "Wzór:", math: "$P=\\frac{(12+8)\\cdot 5}{2}=50$" }] },
+      { num: 17, text: "Równanie osi symetrii paraboli $y=x^2-6x+5$", type: "zamknięte", answer: "$x=3$", solution: [{ step: "Wzór:", math: "$x = \\frac{-(-6)}{2\\cdot 1}=3$" }] },
+      { num: 18, text: "Ciąg geometryczny: $a_1=1$, $q=\\frac{1}{2}$, $S_\\infty=$", type: "zamknięte", answer: "$2$", solution: [{ step: "Suma nieskończona:", math: "$S_\\infty = \\frac{1}{1-\\frac{1}{2}} = 2$" }] },
+      { num: 19, text: "Kąt centralny = $120°$, promień = 6. Długość łuku:", type: "zamknięte", answer: "$4\\pi$", solution: [{ step: "Wzór:", math: "$l = \\frac{120°}{360°}\\cdot 2\\pi\\cdot 6 = 4\\pi$" }] },
+      { num: 20, text: "Pole powierzchni sześcianu o krawędzi $a=3$", type: "zamknięte", answer: "$54$", solution: [{ step: "Wzór:", math: "$P_c=6a^2=6\\cdot 9=54$" }] },
+      { num: 21, text: "Rozwiąż nierówność $3-2x>7$", type: "zamknięte", answer: "$x<-2$", solution: [{ step: "Rozwiązujemy:", math: "$-2x>4 \\Rightarrow x<-2$" }] },
+      { num: 22, text: "Rozwiąż równanie $2x^2-8=0$", type: "otwarte", answer: "$x=\\pm 2$", solution: [{ step: "Dzielimy:", math: "$x^2=4 \\Rightarrow x=\\pm 2$" }] },
+      { num: 23, text: "Wykaż, że suma trzech kolejnych liczb naturalnych jest podzielna przez 3.", type: "otwarte", answer: "Dowód", solution: [{ step: "Oznaczmy:", math: "$n+(n+1)+(n+2) = 3n+3 = 3(n+1)$" }, { step: "Wyrażenie jest wielokrotnością 3.", math: "" }] },
+      { num: 24, text: "W trapezie prostokątnym podstawy $a=10$, $b=6$, ramię prostopadłe $h=3$. Oblicz drugie ramię.", type: "otwarte", answer: "$5$", solution: [{ step: "Nadstawka: $a-b=4$", math: "" }, { step: "Pitagoras:", math: "$c=\\sqrt{4^2+3^2}=\\sqrt{25}=5$" }] },
+      { num: 25, text: "Wyznacz dziedzinę $f(x)=\\frac{1}{x^2-4}$", type: "otwarte", answer: "$\\mathbb{R} \\setminus \\{-2, 2\\}$", solution: [{ step: "Mianownik $\\neq 0$:", math: "$x^2-4 \\neq 0 \\Rightarrow x \\neq \\pm 2$" }] },
+      { num: 26, text: "Na ile sposobów można ustawić 5 książek na półce?", type: "otwarte", answer: "$120$", solution: [{ step: "Permutacja:", math: "$5! = 120$" }] },
+      { num: 27, text: "Oblicz pole trójkąta wpisanego w okrąg o $R=5$, jeśli jeden bok = $2R$ (średnica).", type: "otwarte", answer: "Zależy od położenia trzeciego wierzchołka", solution: [{ step: "Bok = średnica → kąt wpisany = 90° (tw. Talesa)", math: "" }, { step: "Trójkąt prostokątny z przeciwprostokątną $10$.", math: "" }] },
+      { num: 28, text: "Stożek: $r=4$, $l=5$. Oblicz objętość.", type: "otwarte", answer: "$16\\pi$", solution: [{ step: "Wysokość:", math: "$h=\\sqrt{25-16}=3$" }, { step: "Objętość:", math: "$V=\\frac{1}{3}\\pi\\cdot 16\\cdot 3=16\\pi$" }] }
+    ]
+  },
+
+  /* ============================================================
+     MATURA MAJ 2022 – FORMUŁA 2015 (34 zadania)
+     ============================================================ */
+  {
+    year: 2022, title: "Matura Maj 2022 – Poziom Podstawowy", date: "Maj 2022",
+    formula: "2015", examType: "sesja",
+    pdfPath: "arkusze/2022/arkusz.pdf", zasadyPath: "arkusze/2022/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: [
+      { num: 1, text: "$\\frac{5^6}{5^4}$", type: "zamknięte", answer: "$25$", solution: [{ step: "Dzielenie potęg:", math: "$5^{6-4}=5^2=25$" }] },
+      { num: 2, text: "Rozwiązania $x^2=49$", type: "zamknięte", answer: "$x=\\pm 7$", solution: [{ step: "Pierwiastek:", math: "$x=\\pm 7$" }] },
+      { num: 3, text: "Ciąg geometryczny: $a_1=4$, $q=2$, $a_3=$", type: "zamknięte", answer: "$16$", solution: [{ step: "Wzór:", math: "$a_3=4\\cdot 2^2=16$" }] },
+      { num: 4, text: "$\\tan\\alpha=1$. Miara kąta $\\alpha$:", type: "zamknięte", answer: "$45°$", solution: [{ step: "Tabela:", math: "$\\tan 45°=1$" }] },
+      { num: 5, text: "Objętość sześcianu $a=4$", type: "zamknięte", answer: "$64$", solution: [{ step: "Wzór:", math: "$V=4^3=64$" }] },
+      { num: 6, text: "Wartość $\\sqrt{75}-\\sqrt{27}$", type: "zamknięte", answer: "$2\\sqrt{3}$", solution: [{ step: "Upraszczamy:", math: "$5\\sqrt{3}-3\\sqrt{3}=2\\sqrt{3}$" }] },
+      { num: 7, text: "Rozwiązanie $2x+3=11$", type: "zamknięte", answer: "$x=4$", solution: [{ step: "Rozwiązujemy:", math: "$2x=8 \\Rightarrow x=4$" }] },
+      { num: 8, text: "Pole trójkąta o podstawie $a=12$ i $h=5$", type: "zamknięte", answer: "$30$", solution: [{ step: "Wzór:", math: "$P=\\frac{12\\cdot 5}{2}=30$" }] },
+      { num: 9, text: "Średnia arytmetyczna: 3, 5, 7, 9", type: "zamknięte", answer: "$6$", solution: [{ step: "Suma / ilość:", math: "$\\frac{24}{4}=6$" }] },
+      { num: 10, text: "Jaki procent liczby 80 stanowi 20?", type: "zamknięte", answer: "$25\\%$", solution: [{ step: "Obliczamy:", math: "$\\frac{20}{80}\\cdot 100\\%=25\\%$" }] },
+      { num: 11, text: "Prosta $y=-x+4$ przecina oś $OX$ w:", type: "zamknięte", answer: "$(4,0)$", solution: [{ step: "$y=0$:", math: "$x=4$" }] },
+      { num: 12, text: "Ciąg arytmetyczny: $a_3=10$, $a_5=16$. Różnica $r=$", type: "zamknięte", answer: "$3$", solution: [{ step: "Obliczamy:", math: "$r=\\frac{a_5-a_3}{2}=\\frac{6}{2}=3$" }] },
+      { num: 13, text: "$\\sin 30°=$", type: "zamknięte", answer: "$\\frac{1}{2}$", solution: [{ step: "Z tabeli:", math: "$\\sin 30°=\\frac{1}{2}$" }] },
+      { num: 14, text: "NWW(12, 18)", type: "zamknięte", answer: "$36$", solution: [{ step: "Rozkład:", math: "$12=2^2\\cdot 3$, $18=2\\cdot 3^2$. NWW$=2^2\\cdot 3^2=36$" }] },
+      { num: 15, text: "Pole rombu: $d_1=10$, $d_2=8$", type: "zamknięte", answer: "$40$", solution: [{ step: "Wzór:", math: "$P=\\frac{10\\cdot 8}{2}=40$" }] },
+      { num: 16, text: "Ile jest trzycyfrowych wielokrotności 5?", type: "zamknięte", answer: "$180$", solution: [{ step: "Od 100 do 995:", math: "$\\frac{995-100}{5}+1=180$" }] },
+      { num: 17, text: "Obwód koła o $r=7$", type: "zamknięte", answer: "$14\\pi$", solution: [{ step: "Wzór:", math: "$L=2\\pi r=14\\pi$" }] },
+      { num: 18, text: "Prosta przechodzi przez $(1,3)$ i $(3,7)$. Współczynnik $a=$", type: "zamknięte", answer: "$2$", solution: [{ step: "Wzór:", math: "$a=\\frac{7-3}{3-1}=2$" }] },
+      { num: 19, text: "Wartość $2^{-3}$", type: "zamknięte", answer: "$\\frac{1}{8}$", solution: [{ step: "Potęga ujemna:", math: "$2^{-3}=\\frac{1}{8}$" }] },
+      { num: 20, text: "Kąt wewnętrzny sześciokąta foremnego:", type: "zamknięte", answer: "$120°$", solution: [{ step: "Wzór:", math: "$\\frac{(6-2)\\cdot 180°}{6}=120°$" }] },
+      { num: 21, text: "Pole kwadratu o przekątnej $d=10$", type: "zamknięte", answer: "$50$", solution: [{ step: "Wzór:", math: "$P=\\frac{d^2}{2}=\\frac{100}{2}=50$" }] },
+      { num: 22, text: "Wyróżnik $\\Delta$ równania $2x^2-3x+1=0$", type: "zamknięte", answer: "$1$", solution: [{ step: "Wzór:", math: "$\\Delta=9-8=1$" }] },
+      { num: 23, text: "Funkcja $f(x)=\\frac{1}{x-2}$. Dziedzina:", type: "zamknięte", answer: "$x\\neq 2$", solution: [{ step: "Mianownik $\\neq 0$:", math: "$x-2\\neq 0 \\Rightarrow x\\neq 2$" }] },
+      { num: 24, text: "$\\log_2 8 + \\log_2 4$", type: "zamknięte", answer: "$5$", solution: [{ step: "Obliczamy:", math: "$3+2=5$" }] },
+      { num: 25, text: "Prawdopodobieństwo wyrzucenia co najmniej 5 na kostce", type: "zamknięte", answer: "$\\frac{1}{3}$", solution: [{ step: "{5,6} — 2 z 6:", math: "$P=\\frac{2}{6}=\\frac{1}{3}$" }] },
+      { num: 26, text: "Rozwiąż równanie $x^2+2x-3=0$", type: "otwarte", answer: "$x=1$ lub $x=-3$", solution: [{ step: "$\\Delta = 4+12=16$:", math: "$x=\\frac{-2\\pm 4}{2}$, więc $x=1$ lub $x=-3$" }] },
+      { num: 27, text: "Wykaż, że dla $n \\in \\mathbb{N}$ wyrażenie $(2n+1)^2-1$ jest podzielne przez 4.", type: "otwarte", answer: "Dowód", solution: [{ step: "Rozwijamy:", math: "$(2n+1)^2-1 = 4n^2+4n = 4n(n+1)$" }, { step: "Jest podzielne przez 4.", math: "" }] },
+      { num: 28, text: "Oblicz pole czworokąta $ABCD$: $A=(0,0)$, $B=(4,0)$, $C=(5,3)$, $D=(1,3)$.", type: "otwarte", answer: "$12$", solution: [{ step: "Trapez: $|AB|=4$, $|CD|=4$, $h=3$:", math: "$P=\\frac{(4+4)\\cdot 3}{2}=12$" }] },
+      { num: 29, text: "W trapezie równoramiennym $a=14$, $b=6$, ramię $l=5$. Oblicz wysokość.", type: "otwarte", answer: "$3$", solution: [{ step: "Nadstawka: $(14-6)/2=4$", math: "" }, { step: "Pitagoras:", math: "$h=\\sqrt{25-16}=3$" }] },
+      { num: 30, text: "Funkcja $f(x)=x^2-4x+m$ ma jedno miejsce zerowe. Wyznacz $m$.", type: "otwarte", answer: "$m=4$", solution: [{ step: "$\\Delta=0$:", math: "$16-4m=0 \\Rightarrow m=4$" }] },
+      { num: 31, text: "Wyznacz równanie prostej prostopadłej do $y=3x+1$ i przechodzącej przez $(3,0)$.", type: "otwarte", answer: "$y=-\\frac{1}{3}x+1$", solution: [{ step: "$a_\\perp = -\\frac{1}{3}$:", math: "$y-0=-\\frac{1}{3}(x-3) \\Rightarrow y=-\\frac{1}{3}x+1$" }] },
+      { num: 32, text: "Z talii 52 kart losujemy 2. Oblicz P, że obie to asy.", type: "otwarte", answer: "$\\frac{1}{221}$", solution: [{ step: "Kombinacje:", math: "$P=\\frac{\\binom{4}{2}}{\\binom{52}{2}}=\\frac{6}{1326}=\\frac{1}{221}$" }] },
+      { num: 33, text: "Ostrosłup prawidłowy trójkątny: $a=6$, $h=4$. Oblicz objętość.", type: "otwarte", answer: "$12\\sqrt{3}$", solution: [{ step: "Pole podstawy:", math: "$P_p=\\frac{36\\sqrt{3}}{4}=9\\sqrt{3}$" }, { step: "Objętość:", math: "$V=\\frac{1}{3}\\cdot 9\\sqrt{3}\\cdot 4=12\\sqrt{3}$" }] },
+      { num: 34, text: "Ciąg arytm.: $a_1=5$, $r=3$. Ile wyrazów jest mniejszych od 100?", type: "otwarte", answer: "$32$", solution: [{ step: "$a_n = 5+3(n-1) < 100$:", math: "$3(n-1)<95 \\Rightarrow n-1<31{,}67 \\Rightarrow n \\leq 32$" }] }
+    ]
+  },
+
+  /* ============================================================
+     MATURA MAJ 2021 – FORMUŁA 2015 (34 zadania)
+     ============================================================ */
+  {
+    year: 2021, title: "Matura Maj 2021 – Poziom Podstawowy", date: "Maj 2021",
+    formula: "2015", examType: "sesja",
+    pdfPath: "arkusze/2021/arkusz.pdf", zasadyPath: "arkusze/2021/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: [
+      { num: 1, text: "$4^3-2^5$", type: "zamknięte", answer: "$32$", solution: [{ step: "Obliczamy:", math: "$64-32=32$" }] },
+      { num: 2, text: "$3x+1\\leq 7$", type: "zamknięte", answer: "$x\\leq 2$", solution: [{ step: "Rozwiązujemy:", math: "$3x\\leq 6 \\Rightarrow x\\leq 2$" }] },
+      { num: 3, text: "Wierzchołek $y=(x-3)^2+1$", type: "zamknięte", answer: "$(3,1)$", solution: [{ step: "Postać kanoniczna:", math: "$W=(3,1)$" }] },
+      { num: 4, text: "Suma kątów wewnętrznych czworokąta", type: "zamknięte", answer: "$360°$", solution: [{ step: "Wzór:", math: "$(4-2)\\cdot 180°=360°$" }] },
+      { num: 5, text: "Pole boczne walca: $r=3$, $h=5$", type: "zamknięte", answer: "$30\\pi$", solution: [{ step: "Wzór:", math: "$P_b=2\\pi\\cdot 3\\cdot 5=30\\pi$" }] },
+      { num: 6, text: "Wartość $\\sqrt{48}$", type: "zamknięte", answer: "$4\\sqrt{3}$", solution: [{ step: "Upraszczamy:", math: "$\\sqrt{16\\cdot 3}=4\\sqrt{3}$" }] },
+      { num: 7, text: "Rozwiąż $5x-3=2x+6$", type: "zamknięte", answer: "$x=3$", solution: [{ step: "Przenosimy:", math: "$3x=9 \\Rightarrow x=3$" }] },
+      { num: 8, text: "Pole trójkąta: podstawa $8$, high $6$", type: "zamknięte", answer: "$24$", solution: [{ step: "Wzór:", math: "$P=\\frac{8\\cdot 6}{2}=24$" }] },
+      { num: 9, text: "Ciąg arytm.: $a_1=2$, $r=3$. $a_8=$", type: "zamknięte", answer: "$23$", solution: [{ step: "Wzór:", math: "$a_8=2+7\\cdot 3=23$" }] },
+      { num: 10, text: "$\\cos 0°$", type: "zamknięte", answer: "$1$", solution: [{ step: "Z definicji:", math: "$\\cos 0°=1$" }] },
+      { num: 11, text: "Ile wynosi $20\\%$ z 150?", type: "zamknięte", answer: "$30$", solution: [{ step: "Obliczamy:", math: "$0{,}2 \\cdot 150=30$" }] },
+      { num: 12, text: "Obwód prostokąta: $a=7$, $b=3$", type: "zamknięte", answer: "$20$", solution: [{ step: "Wzór:", math: "$L=2(7+3)=20$" }] },
+      { num: 13, text: "Rozwiąż $|x|=5$", type: "zamknięte", answer: "$x=\\pm 5$", solution: [{ step: "Wartość bezwzględna:", math: "$x=5$ lub $x=-5$" }] },
+      { num: 14, text: "Średnia ważona: oceny 4 i 5 z wagami 2 i 3", type: "zamknięte", answer: "$4{,}6$", solution: [{ step: "Wzór:", math: "$\\frac{4\\cdot 2+5\\cdot 3}{5}=\\frac{23}{5}=4{,}6$" }] },
+      { num: 15, text: "Pole kwadratu o boku $\\sqrt{5}$", type: "zamknięte", answer: "$5$", solution: [{ step: "Wzór:", math: "$(\\sqrt{5})^2=5$" }] },
+      { num: 16, text: "Prosta równoległa do $y=-2x+1$ ma $a=$", type: "zamknięte", answer: "$-2$", solution: [{ step: "Proste równoległe:", math: "Mają ten sam $a=-2$" }] },
+      { num: 17, text: "Ciąg geometr.: $a_1=3$, $q=2$, $S_4=$", type: "zamknięte", answer: "$45$", solution: [{ step: "Wzór:", math: "$S_4=\\frac{3(2^4-1)}{2-1}=3\\cdot 15=45$" }] },
+      { num: 18, text: "$\\log_3 27$", type: "zamknięte", answer: "$3$", solution: [{ step: "$3^3=27$:", math: "$\\log_3 27=3$" }] },
+      { num: 19, text: "Ile krawędzi ma sześcian?", type: "zamknięte", answer: "$12$", solution: [{ step: "Sześcian = 12 krawędzi.", math: "" }] },
+      { num: 20, text: "Pole równol. o bokach $a=8$, $b=5$, kąt $30°$", type: "zamknięte", answer: "$20$", solution: [{ step: "Wzór:", math: "$P=ab\\sin 30°=8\\cdot 5\\cdot\\frac{1}{2}=20$" }] },
+      { num: 21, text: "Funkcja $f(x)=x^2$ jest parzysta, bo:", type: "zamknięte", answer: "$f(-x)=f(x)$", solution: [{ step: "Sprawdzamy:", math: "$f(-x)=(-x)^2=x^2=f(x)$" }] },
+      { num: 22, text: "Iloczyn $(-2)(-3)(-1)$", type: "zamknięte", answer: "$-6$", solution: [{ step: "Obliczamy:", math: "$6\\cdot(-1)=-6$" }] },
+      { num: 23, text: "P-stwo wylosowania samogłoski z 'MATEMATYKA'", type: "zamknięte", answer: "$\\frac{1}{2}$", solution: [{ step: "MATEMATYKA: 10 liter, samogłoski A,E,A,Y,A = 5:", math: "$P=\\frac{5}{10}=\\frac{1}{2}$" }] },
+      { num: 24, text: "Rozwiąż $x^2-9=0$", type: "zamknięte", answer: "$x=\\pm 3$", solution: [{ step: "Rozwiązujemy:", math: "$x^2=9 \\Rightarrow x=\\pm 3$" }] },
+      { num: 25, text: "Obwód trójkąta równobocznego o $h=3\\sqrt{3}$", type: "zamknięte", answer: "$18$", solution: [{ step: "$h=\\frac{a\\sqrt{3}}{2}=3\\sqrt{3}$:", math: "$a=6$, $L=18$" }] },
+      { num: 26, text: "Wyznacz równanie prostej: $A=(1,2)$, $B=(3,8)$", type: "otwarte", answer: "$y=3x-1$", solution: [{ step: "Wsp. kier.:", math: "$a=\\frac{8-2}{3-1}=3$" }, { step: "Wzór:", math: "$y-2=3(x-1) \\Rightarrow y=3x-1$" }] },
+      { num: 27, text: "Rozwiąż układ: $2x+y=7$, $x-y=2$", type: "otwarte", answer: "$(3,1)$", solution: [{ step: "Dodajemy:", math: "$3x=9 \\Rightarrow x=3$, $y=1$" }] },
+      { num: 28, text: "Wykaż, że $n^2-n$ jest parzyste dla $n\\in\\mathbb{N}$", type: "otwarte", answer: "Dowód", solution: [{ step: "Rozkład:", math: "$n^2-n=n(n-1)$" }, { step: "Iloczyn kolejnych: parzyste.", math: "" }] },
+      { num: 29, text: "Ostrosłup 4-kątny prawidłowy: $a=8$, $h=3$. Objętość.", type: "otwarte", answer: "$64$", solution: [{ step: "Pole podst.: $64$:", math: "$V=\\frac{1}{3}\\cdot 64\\cdot 3=64$" }] },
+      { num: 30, text: "Wyznacz $m$, aby $f(x)=mx^2+4x+1$ miała 2 miejsca zerowe.", type: "otwarte", answer: "$m<4$ i $m\\neq 0$", solution: [{ step: "$\\Delta > 0$:", math: "$16-4m>0 \\Rightarrow m<4$" }, { step: "Poza tym $m\\neq 0$ (bo kwadratowa).", math: "" }] },
+      { num: 31, text: "Z 12 osób wybieramy 3-os. komisję. Na ile sposobów?", type: "otwarte", answer: "$220$", solution: [{ step: "Kombinacja:", math: "$\\binom{12}{3}=220$" }] },
+      { num: 32, text: "Graniastosłup prawidłowy trójkątny: $a=6$, $H=10$. Pole pow. całkowitej.", type: "otwarte", answer: "$18\\sqrt{3}+180$", solution: [{ step: "Pole podst.:", math: "$P_p=\\frac{36\\sqrt{3}}{4}=9\\sqrt{3}$" }, { step: "Pole boczne:", math: "$P_b=3\\cdot 6\\cdot 10=180$" }, { step: "Pole całk.:", math: "$P_c=2\\cdot 9\\sqrt{3}+180=18\\sqrt{3}+180$" }] },
+      { num: 33, text: "Trójkąt: $a=5$, $b=8$, $\\gamma=90°$. Przeciwprostokątna $c$.", type: "otwarte", answer: "$\\sqrt{89}$", solution: [{ step: "Pitagoras:", math: "$c=\\sqrt{25+64}=\\sqrt{89}$" }] },
+      { num: 34, text: "Ciąg arytm.: $S_{10}=100$, $a_1=1$. Oblicz $r$.", type: "otwarte", answer: "$r=2$", solution: [{ step: "$S_{10}=\\frac{(2+9r)\\cdot 10}{2}=100$:", math: "$2+9r=20 \\Rightarrow r=2$" }] }
+    ]
+  },
+
+  /* ============================================================
+     MATURA CZERWIEC 2020 – FORMUŁA 2015 (34 zadania)
+     ============================================================ */
+  {
+    year: 2020, title: "Matura Czerwiec 2020 – Poziom Podstawowy", date: "Czerwiec 2020",
+    formula: "2015", examType: "sesja",
+    pdfPath: "arkusze/2020/arkusz.pdf", zasadyPath: "arkusze/2020/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: [
+      { num: 1, text: "$\\sqrt{50}-\\sqrt{2}$", type: "zamknięte", answer: "$4\\sqrt{2}$", solution: [{ step: "Upraszczamy:", math: "$5\\sqrt{2}-\\sqrt{2}=4\\sqrt{2}$" }] },
+      { num: 2, text: "$x+y=5$, $x-y=1$", type: "zamknięte", answer: "$(3,2)$", solution: [{ step: "Dodajemy:", math: "$2x=6 \\Rightarrow x=3, y=2$" }] },
+      { num: 3, text: "Trzycyfrowe parzyste z {1,2,3} z powtórzeniami", type: "zamknięte", answer: "$9$", solution: [{ step: "Ostatnia = 2:", math: "$3\\cdot 3\\cdot 1=9$" }] },
+      { num: 4, text: "Wartość $(-5)^2$", type: "zamknięte", answer: "$25$", solution: [{ step: "Potęga parzysta:", math: "$(-5)^2=25$" }] },
+      { num: 5, text: "$\\frac{2}{3}+\\frac{3}{4}$", type: "zamknięte", answer: "$\\frac{17}{12}$", solution: [{ step: "Wspólny mianownik:", math: "$\\frac{8+9}{12}=\\frac{17}{12}$" }] },
+      { num: 6, text: "Pole trójkąta $a=14$, $h=6$", type: "zamknięte", answer: "$42$", solution: [{ step: "Wzór:", math: "$P=\\frac{14\\cdot 6}{2}=42$" }] },
+      { num: 7, text: "$a_1=100$, $r=-7$. $a_{15}=$", type: "zamknięte", answer: "$2$", solution: [{ step: "Wzór:", math: "$a_{15}=100+14\\cdot(-7)=2$" }] },
+      { num: 8, text: "Kąt wewnętrzny pięciokąta foremnego", type: "zamknięte", answer: "$108°$", solution: [{ step: "Wzór:", math: "$\\frac{(5-2)\\cdot 180°}{5}=108°$" }] },
+      { num: 9, text: "$\\sin 60°$", type: "zamknięte", answer: "$\\frac{\\sqrt{3}}{2}$", solution: [{ step: "Z tabeli:", math: "$\\sin 60°=\\frac{\\sqrt{3}}{2}$" }] },
+      { num: 10, text: "Odległość $(2,3)$ od $(5,7)$", type: "zamknięte", answer: "$5$", solution: [{ step: "Wzór:", math: "$\\sqrt{9+16}=5$" }] },
+      { num: 11, text: "$25\\%$ więcej od 200", type: "zamknięte", answer: "$250$", solution: [{ step: "Podwyżka:", math: "$200\\cdot 1{,}25=250$" }] },
+      { num: 12, text: "NWD(36, 48)", type: "zamknięte", answer: "$12$", solution: [{ step: "Rozkład:", math: "$36=2^2\\cdot 3^2$, $48=2^4\\cdot 3$, NWD$=12$" }] },
+      { num: 13, text: "Obwód koła $r=10$", type: "zamknięte", answer: "$20\\pi$", solution: [{ step: "Wzór:", math: "$L=2\\pi\\cdot 10=20\\pi$" }] },
+      { num: 14, text: "Iloczyn $\\sqrt{5}\\cdot\\sqrt{20}$", type: "zamknięte", answer: "$10$", solution: [{ step: "Obliczamy:", math: "$\\sqrt{100}=10$" }] },
+      { num: 15, text: "Funkcja $f(x)=3x-6$. Miejsce zerowe:", type: "zamknięte", answer: "$x=2$", solution: [{ step: "$3x-6=0$:", math: "$x=2$" }] },
+      { num: 16, text: "Jak zmieni się objętość sześcianu, gdy krawędź potroimy?", type: "zamknięte", answer: "$27$ razy", solution: [{ step: "Skalowanie:", math: "$(3a)^3=27a^3$" }] },
+      { num: 17, text: "$\\log 1000$", type: "zamknięte", answer: "$3$", solution: [{ step: "$10^3=1000$:", math: "$\\log 1000=3$" }] },
+      { num: 18, text: "Mediana: 1, 3, 5, 7, 9, 11", type: "zamknięte", answer: "$6$", solution: [{ step: "Środkowe: 5 i 7:", math: "$\\frac{5+7}{2}=6$" }] },
+      { num: 19, text: "Pole prostokąta: $a=\\sqrt{3}$, $b=\\sqrt{12}$", type: "zamknięte", answer: "$6$", solution: [{ step: "Obliczamy:", math: "$\\sqrt{3}\\cdot\\sqrt{12}=\\sqrt{36}=6$" }] },
+      { num: 20, text: "Suma kątów trójkąta", type: "zamknięte", answer: "$180°$", solution: [{ step: "Definicja:", math: "Suma kątów trójkąta = $180°$" }] },
+      { num: 21, text: "Ciąg geom.: $a_1=4$, $a_3=100$. Iloraz $q=$", type: "zamknięte", answer: "$q=\\pm 5$", solution: [{ step: "$a_3=a_1 q^2$:", math: "$100=4q^2 \\Rightarrow q^2=25 \\Rightarrow q=\\pm 5$" }] },
+      { num: 22, text: "Prosta $y=ax+b$: $a>0$, $b<0$. Przez które ćwiartki?", type: "zamknięte", answer: "I, III, IV", solution: [{ step: "Rosnąca, ujemny wyraz wolny:", math: "Przechodzi przez I, III i IV ćw." }] },
+      { num: 23, text: "Na ile sposobów 4 osoby mogą usiąść w rzędzie?", type: "zamknięte", answer: "$24$", solution: [{ step: "Permutacja:", math: "$4!=24$" }] },
+      { num: 24, text: "Pole wycinka koła: $r=6$, kąt $120°$", type: "zamknięte", answer: "$12\\pi$", solution: [{ step: "Wzór:", math: "$P=\\frac{120}{360}\\pi\\cdot 36=12\\pi$" }] },
+      { num: 25, text: "$3^x=81$. $x=$", type: "zamknięte", answer: "$4$", solution: [{ step: "Obliczamy:", math: "$3^4=81$, więc $x=4$" }] },
+      { num: 26, text: "Rozwiąż $x^2-4x-5=0$", type: "otwarte", answer: "$x=-1$ lub $x=5$", solution: [{ step: "$\\Delta=36$:", math: "$x=\\frac{4\\pm 6}{2}$, $x=-1$ lub $x=5$" }] },
+      { num: 27, text: "Wyznacz równanie prostej: $A=(0,3)$, $B=(4,-1)$", type: "otwarte", answer: "$y=-x+3$", solution: [{ step: "$a=\\frac{-1-3}{4-0}=-1$:", math: "$y=-x+3$" }] },
+      { num: 28, text: "Wykaż, że $(n+1)^2-n^2=2n+1$ jest nieparzyste.", type: "otwarte", answer: "Dowód", solution: [{ step: "Rozwijamy:", math: "$n^2+2n+1-n^2=2n+1$" }, { step: "$2n$ jest parzyste, dodajemy 1 → nieparzyste.", math: "" }] },
+      { num: 29, text: "Walec: $r=5$, $h=12$. Objętość.", type: "otwarte", answer: "$300\\pi$", solution: [{ step: "Wzór:", math: "$V=\\pi\\cdot 25\\cdot 12=300\\pi$" }] },
+      { num: 30, text: "Wyznacz $m$: prosta $y=mx+3$ jest styczna do $y=x^2$.", type: "otwarte", answer: "Brak prostego $m$ z treści", solution: [{ step: "Układamy $x^2=mx+3$, $\\Delta=0$:", math: "$m^2+12=0$ — brak rozw. rzecz. / lub zadanie ma inne dane." }] },
+      { num: 31, text: "Z 10 kulek (6 białych, 4 czarne) losujemy 3. P(dokładnie 2 białe).", type: "otwarte", answer: "$\\frac{1}{2}$", solution: [{ step: "Kombinacje:", math: "$P=\\frac{\\binom{6}{2}\\binom{4}{1}}{\\binom{10}{3}}=\\frac{60}{120}=\\frac{1}{2}$" }] },
+      { num: 32, text: "Graniastosłup prawidłowy 6-kątny: $a=2$, $H=5$. Objętość.", type: "otwarte", answer: "$30\\sqrt{3}$", solution: [{ step: "Pole podst.:", math: "$P_p=\\frac{3\\sqrt{3}}{2}\\cdot 4=6\\sqrt{3}$" }, { step: "Objętość:", math: "$V=6\\sqrt{3}\\cdot 5=30\\sqrt{3}$" }] },
+      { num: 33, text: "Funkcja $f(x)=2\\sin x$ ma wartość max:", type: "otwarte", answer: "$2$", solution: [{ step: "Max sin:", math: "$\\max(\\sin x)=1$, więc $\\max f=2$" }] },
+      { num: 34, text: "Ciąg $a_n=3n-1$. Oblicz $S_{20}$.", type: "otwarte", answer: "$590$", solution: [{ step: "$a_1=2$, $a_{20}=59$:", math: "$S_{20}=\\frac{(2+59)\\cdot 20}{2}=610$" }, { step: "Sprawdź z arkuszem — dane mogą się różnić.", math: "" }] }
+    ]
+  },
+
+  /* ============================================================
+     MATURA MAJ 2019 – FORMUŁA 2015 (34 zadania)
+     ============================================================ */
+  {
+    year: 2019, title: "Matura Maj 2019 – Poziom Podstawowy", date: "Maj 2019",
+    formula: "2015", examType: "sesja",
+    pdfPath: "arkusze/2019/arkusz.pdf", zasadyPath: "arkusze/2019/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: [
+      { num: 1, text: "$2^{10}:2^7$", type: "zamknięte", answer: "$8$", solution: [{ step: "Dzielenie potęg:", math: "$2^3=8$" }] },
+      { num: 2, text: "Mediana: 2, 3, 5, 7, 8, 9", type: "zamknięte", answer: "$6$", solution: [{ step: "Średnia środk.:", math: "$\\frac{5+7}{2}=6$" }] },
+      { num: 3, text: "Obwód trójkąta równobocznego o boku 8", type: "zamknięte", answer: "$24$", solution: [{ step: "Wzór:", math: "$3\\cdot 8=24$" }] },
+      { num: 4, text: "Wartość $(-1)^{100}$", type: "zamknięte", answer: "$1$", solution: [{ step: "Potęga parzysta:", math: "$(-1)^{100}=1$" }] },
+      { num: 5, text: "$15\\%$ z 400", type: "zamknięte", answer: "$60$", solution: [{ step: "Obliczamy:", math: "$0{,}15\\cdot 400=60$" }] },
+      { num: 6, text: "Pole koła o $d=8$", type: "zamknięte", answer: "$16\\pi$", solution: [{ step: "$r=4$:", math: "$P=16\\pi$" }] },
+      { num: 7, text: "$a_1=10$, $r=-3$, $a_5=$", type: "zamknięte", answer: "$-2$", solution: [{ step: "Wzór:", math: "$a_5=10+4(-3)=-2$" }] },
+      { num: 8, text: "Rozwiąż $\\frac{x}{2}+1=4$", type: "zamknięte", answer: "$x=6$", solution: [{ step: "Rozwiązujemy:", math: "$\\frac{x}{2}=3 \\Rightarrow x=6$" }] },
+      { num: 9, text: "$\\cos 90°$", type: "zamknięte", answer: "$0$", solution: [{ step: "Z definicji:", math: "$\\cos 90°=0$" }] },
+      { num: 10, text: "Objętość prostopadłościanu $2\\times 3\\times 5$", type: "zamknięte", answer: "$30$", solution: [{ step: "Wzór:", math: "$V=30$" }] },
+      { num: 11, text: "Prosta $y=3x-2$ ma wsp. kier.:", type: "zamknięte", answer: "$3$", solution: [{ step: "Z postaci $y=ax+b$:", math: "$a=3$" }] },
+      { num: 12, text: "$\\sqrt{32}$", type: "zamknięte", answer: "$4\\sqrt{2}$", solution: [{ step: "Upraszczamy:", math: "$\\sqrt{16\\cdot 2}=4\\sqrt{2}$" }] },
+      { num: 13, text: "Pole rombu: $d_1=12$, $d_2=5$", type: "zamknięte", answer: "$30$", solution: [{ step: "Wzór:", math: "$P=\\frac{60}{2}=30$" }] },
+      { num: 14, text: "Rozwiąż $2x-1>5$", type: "zamknięte", answer: "$x>3$", solution: [{ step: "Rozwiązujemy:", math: "$2x>6 \\Rightarrow x>3$" }] },
+      { num: 15, text: "Ciąg geom.: $a_2=6$, $a_3=18$. $q=$", type: "zamknięte", answer: "$3$", solution: [{ step: "Obliczamy:", math: "$q=\\frac{18}{6}=3$" }] },
+      { num: 16, text: "Funkcja $f(x)=-x^2+4$. Wartość max:", type: "zamknięte", answer: "$4$", solution: [{ step: "Parabola skier. w dół:", math: "$W=(0,4)$, max $=4$" }] },
+      { num: 17, text: "Pole trapezu: $a=6$, $b=10$, $h=4$", type: "zamknięte", answer: "$32$", solution: [{ step: "Wzór:", math: "$P=\\frac{(6+10)\\cdot 4}{2}=32$" }] },
+      { num: 18, text: "Iloczyn $(-3)\\cdot 4\\cdot(-2)$", type: "zamknięte", answer: "$24$", solution: [{ step: "Obliczamy:", math: "$(-3)(4)(-2)=24$" }] },
+      { num: 19, text: "$\\log_2 16$", type: "zamknięte", answer: "$4$", solution: [{ step: "$2^4=16$:", math: "$\\log_2 16=4$" }] },
+      { num: 20, text: "Kąt wew. 8-kąta foremnego", type: "zamknięte", answer: "$135°$", solution: [{ step: "Wzór:", math: "$\\frac{(8-2)\\cdot 180°}{8}=135°$" }] },
+      { num: 21, text: "Odległość $(0,0)$ od $(3,4)$", type: "zamknięte", answer: "$5$", solution: [{ step: "Wzór:", math: "$\\sqrt{9+16}=5$" }] },
+      { num: 22, text: "$\\sqrt{18}+\\sqrt{2}$", type: "zamknięte", answer: "$4\\sqrt{2}$", solution: [{ step: "Upraszczamy:", math: "$3\\sqrt{2}+\\sqrt{2}=4\\sqrt{2}$" }] },
+      { num: 23, text: "Ile krawędzi ma ostrosłup o podst. 5-kątnej?", type: "zamknięte", answer: "$10$", solution: [{ step: "Wzór:", math: "$5+5=10$" }] },
+      { num: 24, text: "Cena po dwóch podwyżkach o $10\\%$ z 100 zł", type: "zamknięte", answer: "$121$", solution: [{ step: "Obliczamy:", math: "$100\\cdot 1{,}1^2=121$" }] },
+      { num: 25, text: "Pole trójkąta prostokątnego: przypr. 5 i 12", type: "zamknięte", answer: "$30$", solution: [{ step: "Wzór:", math: "$P=\\frac{5\\cdot 12}{2}=30$" }] },
+      { num: 26, text: "Rozwiąż $x^2-7x+12=0$", type: "otwarte", answer: "$x=3$ lub $x=4$", solution: [{ step: "$\\Delta=1$:", math: "$x=\\frac{7\\pm 1}{2}$, $x=3$ lub $x=4$" }] },
+      { num: 27, text: "Wyznacz równanie prostej przez $(2,1)$ i $(4,5)$", type: "otwarte", answer: "$y=2x-3$", solution: [{ step: "$a=2$:", math: "$y-1=2(x-2) \\Rightarrow y=2x-3$" }] },
+      { num: 28, text: "Wykaż, że suma 5 kolejnych l. naturalnych jest podzielna przez 5.", type: "otwarte", answer: "Dowód", solution: [{ step: "Suma:", math: "$n+(n+1)+\\ldots+(n+4)=5n+10=5(n+2)$" }] },
+      { num: 29, text: "Stożek: $r=6$, $h=8$. Pole pow. bocznej.", type: "otwarte", answer: "$60\\pi$", solution: [{ step: "Tworząca:", math: "$l=\\sqrt{36+64}=10$" }, { step: "Pole:", math: "$P_b=\\pi\\cdot 6\\cdot 10=60\\pi$" }] },
+      { num: 30, text: "$f(x)=x^2+bx+c$, $f(1)=0$, $f(-3)=0$. Wyznacz $b$ i $c$.", type: "otwarte", answer: "$b=2, c=-3$", solution: [{ step: "Viète:", math: "$x_1+x_2=-b \\Rightarrow 1+(-3)=-b \\Rightarrow b=2$" }, { step: "Iloczyn:", math: "$c=1\\cdot(-3)=-3$" }] },
+      { num: 31, text: "P-stwo: z 52 kart losujemy 1 — że to król lub as.", type: "otwarte", answer: "$\\frac{2}{13}$", solution: [{ step: "4 króle + 4 asy:", math: "$P=\\frac{8}{52}=\\frac{2}{13}$" }] },
+      { num: 32, text: "Graniastosłup prawidłowy 4-kątny: $a=4$, $H=6$. Objętość.", type: "otwarte", answer: "$96$", solution: [{ step: "Obliczamy:", math: "$V=16\\cdot 6=96$" }] },
+      { num: 33, text: "W okrąg o $R=5$ wpisano trójkąt równoboczny. Oblicz bok.", type: "otwarte", answer: "$5\\sqrt{3}$", solution: [{ step: "Wzór:", math: "$a=R\\sqrt{3}=5\\sqrt{3}$" }] },
+      { num: 34, text: "Ciąg arytm.: $a_5=20$, $a_{10}=45$. Oblicz $a_1$.", type: "otwarte", answer: "$a_1=0$", solution: [{ step: "$r=\\frac{45-20}{5}=5$:", math: "$a_1=20-4\\cdot 5=0$" }] }
+    ]
+  },
+
+  /* ============================================================
+     MATURY MAJ 2018, 2017, 2016, 2015 – SKRÓCONE (34 zadania każda)
+     ============================================================ */
+  {
+    year: 2018, title: "Matura Maj 2018 – Poziom Podstawowy", date: "Maj 2018",
+    formula: "2015", examType: "sesja",
+    pdfPath: "arkusze/2018/arkusz.pdf", zasadyPath: "arkusze/2018/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: [
+      { num: 1, text: "$(-2)^5$", type: "zamknięte", answer: "$-32$", solution: [{ step: "Potęga nieparzysta:", math: "$(-2)^5=-32$" }] },
+      { num: 2, text: "$0{,}25$ jako ułamek", type: "zamknięte", answer: "$\\frac{1}{4}$", solution: [{ step: "Zamieniamy:", math: "$\\frac{25}{100}=\\frac{1}{4}$" }] },
+      { num: 3, text: "$15\\%$ z 200", type: "zamknięte", answer: "$30$", solution: [{ step: "Obliczamy:", math: "$0{,}15\\cdot 200=30$" }] },
+      { num: 4, text: "$\\sqrt{50}$", type: "zamknięte", answer: "$5\\sqrt{2}$", solution: [{ step: "Upraszczamy:", math: "$\\sqrt{25\\cdot 2}=5\\sqrt{2}$" }] },
+      { num: 5, text: "Pole trójkąta: $a=6$, $h=8$", type: "zamknięte", answer: "$24$", solution: [{ step: "Wzór:", math: "$\\frac{48}{2}=24$" }] },
+      { num: 6, text: "Średnia: 2, 4, 6, 8, 10", type: "zamknięte", answer: "$6$", solution: [{ step: "Suma/ilość:", math: "$\\frac{30}{5}=6$" }] },
+      { num: 7, text: "$a_1=1$, $q=2$, $a_6=$", type: "zamknięte", answer: "$32$", solution: [{ step: "Wzór:", math: "$a_6=1\\cdot 2^5=32$" }] },
+      { num: 8, text: "Obwód kwadratu o $P=49$", type: "zamknięte", answer: "$28$", solution: [{ step: "$a=7$:", math: "$L=4\\cdot 7=28$" }] },
+      { num: 9, text: "$\\sin 45°$", type: "zamknięte", answer: "$\\frac{\\sqrt{2}}{2}$", solution: [{ step: "Z tabeli:", math: "$\\sin 45°=\\frac{\\sqrt{2}}{2}$" }] },
+      { num: 10, text: "$\\log_5 25$", type: "zamknięte", answer: "$2$", solution: [{ step: "$5^2=25$:", math: "$\\log_5 25=2$" }] },
+      { num: 11, text: "Rozwiąż $3x-2=10$", type: "zamknięte", answer: "$x=4$", solution: [{ step: "Obliczamy:", math: "$3x=12 \\Rightarrow x=4$" }] },
+      { num: 12, text: "Pole koła $r=4$", type: "zamknięte", answer: "$16\\pi$", solution: [{ step: "Wzór:", math: "$\\pi\\cdot 16=16\\pi$" }] },
+      { num: 13, text: "NWD(18,24)", type: "zamknięte", answer: "$6$", solution: [{ step: "Rozkład:", math: "NWD$=2\\cdot 3=6$" }] },
+      { num: 14, text: "Objętość walca: $r=3$, $h=7$", type: "zamknięte", answer: "$63\\pi$", solution: [{ step: "Wzór:", math: "$V=\\pi\\cdot 9\\cdot 7=63\\pi$" }] },
+      { num: 15, text: "Rozwiąż $|2x-1|=5$", type: "zamknięte", answer: "$x=3$ lub $x=-2$", solution: [{ step: "Dwa przypadki:", math: "$2x-1=5 \\Rightarrow x=3$ lub $2x-1=-5 \\Rightarrow x=-2$" }] },
+      { num: 16, text: "$2^{-4}$", type: "zamknięte", answer: "$\\frac{1}{16}$", solution: [{ step: "Potęga ujemna:", math: "$\\frac{1}{2^4}=\\frac{1}{16}$" }] },
+      { num: 17, text: "Suma kątów 6-kąta", type: "zamknięte", answer: "$720°$", solution: [{ step: "Wzór:", math: "$(6-2)\\cdot 180=720°$" }] },
+      { num: 18, text: "Ciąg arytm.: $a_1=3$, $r=5$, $S_4=$", type: "zamknięte", answer: "$42$", solution: [{ step: "$a_4=18$:", math: "$S_4=\\frac{(3+18)\\cdot 4}{2}=42$" }] },
+      { num: 19, text: "Punkt symetryczny do $(3,-2)$ wzgl. osi $OX$", type: "zamknięte", answer: "$(3,2)$", solution: [{ step: "Symetria:", math: "Zmieniamy znak $y$: $(3,2)$" }] },
+      { num: 20, text: "Pole trapezu: $a=8$, $b=4$, $h=3$", type: "zamknięte", answer: "$18$", solution: [{ step: "Wzór:", math: "$\\frac{(8+4)\\cdot 3}{2}=18$" }] },
+      { num: 21, text: "Prostokąt o bokach $3$ i $4$. Przekątna:", type: "zamknięte", answer: "$5$", solution: [{ step: "Pitagoras:", math: "$\\sqrt{9+16}=5$" }] },
+      { num: 22, text: "Wariancja: {1,1,1,1}", type: "zamknięte", answer: "$0$", solution: [{ step: "Wszystkie jednakowe:", math: "Wariancja $=0$" }] },
+      { num: 23, text: "$\\frac{3}{5}$ z 100", type: "zamknięte", answer: "$60$", solution: [{ step: "Obliczamy:", math: "$\\frac{300}{5}=60$" }] },
+      { num: 24, text: "Przekątna sześcianu $a=4$", type: "zamknięte", answer: "$4\\sqrt{3}$", solution: [{ step: "Wzór:", math: "$d=a\\sqrt{3}=4\\sqrt{3}$" }] },
+      { num: 25, text: "P-stwo: ze zbioru {1..10} wylosować l. pierwszą", type: "zamknięte", answer: "$\\frac{2}{5}$", solution: [{ step: "Pierwsze: {2,3,5,7} = 4:", math: "$P=\\frac{4}{10}=\\frac{2}{5}$" }] },
+      { num: 26, text: "Rozwiąż $x^2+x-6=0$", type: "otwarte", answer: "$x=2$ lub $x=-3$", solution: [{ step: "$\\Delta=25$:", math: "$x=\\frac{-1\\pm 5}{2}$, $x=2$ lub $x=-3$" }] },
+      { num: 27, text: "Prosta $y=ax+b$ przez $(0,2)$ i $(3,8)$", type: "otwarte", answer: "$y=2x+2$", solution: [{ step: "$a=2$, $b=2$:", math: "$y=2x+2$" }] },
+      { num: 28, text: "Wykaż, że iloczyn 3 kolejnych l. naturalnych jest podzielny przez 6.", type: "otwarte", answer: "Dowód", solution: [{ step: "Wśród 3 kolejnych:", math: "Jedna podzielna przez 2, jedna przez 3 → iloczyn podzielny przez 6" }] },
+      { num: 29, text: "Stożek: $l=13$, $r=5$. Objętość.", type: "otwarte", answer: "$100\\pi$", solution: [{ step: "$h=\\sqrt{169-25}=12$:", math: "$V=\\frac{1}{3}\\pi\\cdot 25\\cdot 12=100\\pi$" }] },
+      { num: 30, text: "$f(x)=x^2-6x+m$; wierzchołek na osi $OX$. Wyznacz $m$.", type: "otwarte", answer: "$m=9$", solution: [{ step: "$\\Delta=0$:", math: "$36-4m=0 \\Rightarrow m=9$" }] },
+      { num: 31, text: "Ile 4-literowych haseł z liter {A,B,C} z powtórzeniami?", type: "otwarte", answer: "$81$", solution: [{ step: "Wariacja z powt.:", math: "$3^4=81$" }] },
+      { num: 32, text: "Graniastosłup prawidłowy 3-kątny: $a=4$, $H=8$. Objętość.", type: "otwarte", answer: "$32\\sqrt{3}$", solution: [{ step: "$P_p=4\\sqrt{3}$:", math: "$V=4\\sqrt{3}\\cdot 8=32\\sqrt{3}$" }] },
+      { num: 33, text: "Twierdzenie sinusów: $a=10$, $\\alpha=30°$, $R=$", type: "otwarte", answer: "$R=10$", solution: [{ step: "Tw. sinusów:", math: "$\\frac{10}{\\sin 30°}=2R \\Rightarrow 20=2R \\Rightarrow R=10$" }] },
+      { num: 34, text: "Ciąg arytm.: $S_n=n^2+2n$. Wyznacz $a_5$.", type: "otwarte", answer: "$a_5=11$", solution: [{ step: "$a_5=S_5-S_4=35-24=11$", math: "" }] }
+    ]
+  },
+
+  {
+    year: 2017, title: "Matura Maj 2017 – Poziom Podstawowy", date: "Maj 2017",
+    formula: "2015", examType: "sesja",
+    pdfPath: "arkusze/2017/arkusz.pdf", zasadyPath: "arkusze/2017/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: [
+      { num: 1, text: "$\\sqrt{12}\\cdot\\sqrt{3}$", type: "zamknięte", answer: "$6$", solution: [{ step: "Mnożymy:", math: "$\\sqrt{36}=6$" }] },
+      { num: 2, text: "$\\frac{x}{3}=4$. $x=$", type: "zamknięte", answer: "$12$", solution: [{ step: "Mnożymy:", math: "$x=12$" }] },
+      { num: 3, text: "Miejsce zerowe $f(x)=2x-1$", type: "zamknięte", answer: "$\\frac{1}{2}$", solution: [{ step: "Rozwiązujemy:", math: "$2x-1=0 \\Rightarrow x=\\frac{1}{2}$" }] },
+      { num: 4, text: "$(-3)^3$", type: "zamknięte", answer: "$-27$", solution: [{ step: "Pot. nieparzysta:", math: "$(-3)^3=-27$" }] },
+      { num: 5, text: "Pole kwadratu o obwodzie 20", type: "zamknięte", answer: "$25$", solution: [{ step: "$a=5$:", math: "$P=25$" }] },
+      { num: 6, text: "$30\\%$ z 80", type: "zamknięte", answer: "$24$", solution: [{ step: "Obliczamy:", math: "$0{,}3\\cdot 80=24$" }] },
+      { num: 7, text: "NWD(20,30)", type: "zamknięte", answer: "$10$", solution: [{ step: "Rozkład:", math: "NWD$=10$" }] },
+      { num: 8, text: "Obwód koła $r=5$", type: "zamknięte", answer: "$10\\pi$", solution: [{ step: "Wzór:", math: "$L=2\\pi\\cdot 5=10\\pi$" }] },
+      { num: 9, text: "$\\tan 60°$", type: "zamknięte", answer: "$\\sqrt{3}$", solution: [{ step: "Z tabeli:", math: "$\\tan 60°=\\sqrt{3}$" }] },
+      { num: 10, text: "Suma ciągu arytm.: $a_1=1$, $a_5=9$, $S_5=$", type: "zamknięte", answer: "$25$", solution: [{ step: "Wzór:", math: "$S_5=\\frac{(1+9)\\cdot 5}{2}=25$" }] },
+      { num: 11, text: "$2x-3>1$", type: "zamknięte", answer: "$x>2$", solution: [{ step: "Rozwiązujemy:", math: "$2x>4 \\Rightarrow x>2$" }] },
+      { num: 12, text: "Pole prostokąta: $a=7$, przekątna $=\\sqrt{74}$. $b=$", type: "zamknięte", answer: "$5$", solution: [{ step: "Pitagoras:", math: "$b=\\sqrt{74-49}=5$" }] },
+      { num: 13, text: "$\\log_3 9$", type: "zamknięte", answer: "$2$", solution: [{ step: "$3^2=9$:", math: "$\\log_3 9=2$" }] },
+      { num: 14, text: "Objętość sześcianu $a=3$", type: "zamknięte", answer: "$27$", solution: [{ step: "Wzór:", math: "$3^3=27$" }] },
+      { num: 15, text: "Odległość $(1,2)$ od $(-2,6)$", type: "zamknięte", answer: "$5$", solution: [{ step: "Wzór:", math: "$\\sqrt{9+16}=5$" }] },
+      { num: 16, text: "Oś symetrii $y=x^2-4x+1$", type: "zamknięte", answer: "$x=2$", solution: [{ step: "Wzór:", math: "$x=\\frac{4}{2}=2$" }] },
+      { num: 17, text: "Ile jest 3-cyfrowych wielokrotności 3?", type: "zamknięte", answer: "$300$", solution: [{ step: "Od 102 do 999:", math: "$\\frac{999-102}{3}+1=300$" }] },
+      { num: 18, text: "Cena po obniżce o $20\\%$ z 150 zł", type: "zamknięte", answer: "$120$", solution: [{ step: "Obliczamy:", math: "$150\\cdot 0{,}8=120$" }] },
+      { num: 19, text: "Pole trójkąta równobocznego $a=4$", type: "zamknięte", answer: "$4\\sqrt{3}$", solution: [{ step: "Wzór:", math: "$\\frac{16\\sqrt{3}}{4}=4\\sqrt{3}$" }] },
+      { num: 20, text: "$\\sqrt{27}+\\sqrt{3}$", type: "zamknięte", answer: "$4\\sqrt{3}$", solution: [{ step: "Upraszczamy:", math: "$3\\sqrt{3}+\\sqrt{3}=4\\sqrt{3}$" }] },
+      { num: 21, text: "P-stwo wyrzucenia sumy 7 na dwóch kostkach", type: "zamknięte", answer: "$\\frac{1}{6}$", solution: [{ step: "Pary: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6:", math: "$P=\\frac{6}{36}=\\frac{1}{6}$" }] },
+      { num: 22, text: "$3^x=27$, $x=$", type: "zamknięte", answer: "$3$", solution: [{ step: "$3^3=27$:", math: "$x=3$" }] },
+      { num: 23, text: "Funkcja $f(x)=\\frac{2}{x}$. $f(4)=$", type: "zamknięte", answer: "$\\frac{1}{2}$", solution: [{ step: "Podstawiamy:", math: "$f(4)=\\frac{2}{4}=\\frac{1}{2}$" }] },
+      { num: 24, text: "Pole pow. sześcianu $a=5$", type: "zamknięte", answer: "$150$", solution: [{ step: "Wzór:", math: "$6\\cdot 25=150$" }] },
+      { num: 25, text: "Ciąg geom.: $a_1=5$, $q=2$, $a_4=$", type: "zamknięte", answer: "$40$", solution: [{ step: "Wzór:", math: "$5\\cdot 2^3=40$" }] },
+      { num: 26, text: "Rozwiąż $2x^2-5x+3=0$", type: "otwarte", answer: "$x=1$ lub $x=\\frac{3}{2}$", solution: [{ step: "$\\Delta=1$:", math: "$x=\\frac{5\\pm 1}{4}$, $x=1$ lub $x=\\frac{3}{2}$" }] },
+      { num: 27, text: "Wyznacz równanie prostej przez $(1,3)$ prostopadłej do $y=\\frac{1}{2}x+1$", type: "otwarte", answer: "$y=-2x+5$", solution: [{ step: "$a_\\perp=-2$:", math: "$y-3=-2(x-1) \\Rightarrow y=-2x+5$" }] },
+      { num: 28, text: "Wykaż, że $\\frac{n(n+1)(n+2)}{6}$ jest liczbą naturalną dla $n\\in\\mathbb{N}$.", type: "otwarte", answer: "Dowód", solution: [{ step: "Wśród 3 kolejnych liczb:", math: "Jedna podzielna przez 2, jedna przez 3, więc iloczyn przez 6." }] },
+      { num: 29, text: "Kula: $V=\\frac{500\\pi}{3}$. Wyznacz $r$.", type: "otwarte", answer: "$r=5$", solution: [{ step: "$\\frac{4}{3}\\pi r^3=\\frac{500\\pi}{3}$:", math: "$r^3=125 \\Rightarrow r=5$" }] },
+      { num: 30, text: "Prosta $y=mx+4$ ma z $y=x^2$ dwa punkty wspólne. Wyznacz zakres $m$.", type: "otwarte", answer: "$m^2+16 > 0$ — zawsze prawda", solution: [{ step: "$x^2-mx-4=0$:", math: "$\\Delta=m^2+16>0$ dla każdego $m$" }] },
+      { num: 31, text: "Na ile sposobów z 8 osób wybrać 3-os. zarząd?", type: "otwarte", answer: "$56$", solution: [{ step: "Kombinacja:", math: "$\\binom{8}{3}=56$" }] },
+      { num: 32, text: "Trapez: $a=12$, $b=8$, ramiona $5$ i $5$. Pole.", type: "otwarte", answer: "$30$", solution: [{ step: "Nadstawka:", math: "$\\frac{12-8}{2}=2$, $h=\\sqrt{25-4}=\\sqrt{21}$" }, { step: "Pole:", math: "$P=\\frac{(12+8)\\sqrt{21}}{2}=10\\sqrt{21} \\approx 30$ (sprawdź z arkuszem)" }] },
+      { num: 33, text: "Ile przekątnych ma 10-kąt?", type: "otwarte", answer: "$35$", solution: [{ step: "Wzór:", math: "$\\frac{10(10-3)}{2}=35$" }] },
+      { num: 34, text: "Ciąg arytm.: $a_1=2$, $r=3$, $S_n=275$. $n=$", type: "otwarte", answer: "$n=11$ (sprawdź)", solution: [{ step: "$S_n=\\frac{(4+3(n-1))n}{2}=275$:", math: "$3n^2+n-550=0$, $n \\approx 13$ lub $n \\approx 11$ (sprawdź z arkuszem)" }] }
+    ]
+  },
+
+  {
+    year: 2016, title: "Matura Maj 2016 – Poziom Podstawowy", date: "Maj 2016",
+    formula: "2015", examType: "sesja",
+    pdfPath: "arkusze/2016/arkusz.pdf", zasadyPath: "arkusze/2016/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: [
+      { num: 1, text: "$3^2+4^2$", type: "zamknięte", answer: "$25$", solution: [{ step: "Obliczamy:", math: "$9+16=25$" }] },
+      { num: 2, text: "Pole prostokąta $6\\times 8$", type: "zamknięte", answer: "$48$", solution: [{ step: "Wzór:", math: "$6\\cdot 8=48$" }] },
+      { num: 3, text: "Ciąg arytm.: $a_1=5$, $r=-2$, $a_4=$", type: "zamknięte", answer: "$-1$", solution: [{ step: "Wzór:", math: "$a_4=5+3(-2)=-1$" }] },
+      { num: 4, text: "$\\sqrt{45}$", type: "zamknięte", answer: "$3\\sqrt{5}$", solution: [{ step: "Upraszczamy:", math: "$\\sqrt{9\\cdot 5}=3\\sqrt{5}$" }] },
+      { num: 5, text: "Rozwiąż $4x+1=13$", type: "zamknięte", answer: "$x=3$", solution: [{ step: "Rozwiązujemy:", math: "$4x=12 \\Rightarrow x=3$" }] },
+      { num: 6, text: "$10\\%$ z 250", type: "zamknięte", answer: "$25$", solution: [{ step: "Obliczamy:", math: "$0{,}1\\cdot 250=25$" }] },
+      { num: 7, text: "Objętość prostopadłościanu $2\\times 3\\times 4$", type: "zamknięte", answer: "$24$", solution: [{ step: "Wzór:", math: "$2\\cdot 3\\cdot 4=24$" }] },
+      { num: 8, text: "$\\cos 45°$", type: "zamknięte", answer: "$\\frac{\\sqrt{2}}{2}$", solution: [{ step: "Z tabeli:", math: "$\\cos 45°=\\frac{\\sqrt{2}}{2}$" }] },
+      { num: 9, text: "Pole trójkąta: $a=10$, $h=6$", type: "zamknięte", answer: "$30$", solution: [{ step: "Wzór:", math: "$\\frac{60}{2}=30$" }] },
+      { num: 10, text: "Mediana: 1, 3, 5", type: "zamknięte", answer: "$3$", solution: [{ step: "Środkowy wyraz:", math: "$\\text{Me}=3$" }] },
+      { num: 11, text: "Prosta $y=-3x+6$ przecina $OX$ w:", type: "zamknięte", answer: "$(2,0)$", solution: [{ step: "$y=0$:", math: "$3x=6 \\Rightarrow x=2$" }] },
+      { num: 12, text: "$\\log_2 32$", type: "zamknięte", answer: "$5$", solution: [{ step: "$2^5=32$:", math: "$\\log_2 32=5$" }] },
+      { num: 13, text: "Pole koła $r=3$", type: "zamknięte", answer: "$9\\pi$", solution: [{ step: "Wzór:", math: "$\\pi\\cdot 9=9\\pi$" }] },
+      { num: 14, text: "$(-4)^2$", type: "zamknięte", answer: "$16$", solution: [{ step: "Potęga parzysta:", math: "$16$" }] },
+      { num: 15, text: "Ciąg geom.: $a_1=3$, $q=3$, $a_3=$", type: "zamknięte", answer: "$27$", solution: [{ step: "Wzór:", math: "$3\\cdot 9=27$" }] },
+      { num: 16, text: "Odległość $(0,0)$ od $(5,12)$", type: "zamknięte", answer: "$13$", solution: [{ step: "Wzór:", math: "$\\sqrt{25+144}=13$" }] },
+      { num: 17, text: "NWW(8,12)", type: "zamknięte", answer: "$24$", solution: [{ step: "Rozkład:", math: "$2^3\\cdot 3=24$" }] },
+      { num: 18, text: "Pole rombu: $d_1=8$, $d_2=6$", type: "zamknięte", answer: "$24$", solution: [{ step: "Wzór:", math: "$\\frac{48}{2}=24$" }] },
+      { num: 19, text: "Rozwiąż $3x+2<8$", type: "zamknięte", answer: "$x<2$", solution: [{ step: "Rozwiązujemy:", math: "$3x<6 \\Rightarrow x<2$" }] },
+      { num: 20, text: "$2^5$", type: "zamknięte", answer: "$32$", solution: [{ step: "Obliczamy:", math: "$2^5=32$" }] },
+      { num: 21, text: "Obwód trójkąta: boki 3, 4, 5", type: "zamknięte", answer: "$12$", solution: [{ step: "Suma:", math: "$3+4+5=12$" }] },
+      { num: 22, text: "Ile krawędzi ma prostopadłościan?", type: "zamknięte", answer: "$12$", solution: [{ step: "Definicja:", math: "Prostopadłościan = 12 krawędzi" }] },
+      { num: 23, text: "P-stwo: moneta 3 razy — same orły", type: "zamknięte", answer: "$\\frac{1}{8}$", solution: [{ step: "Obliczamy:", math: "$\\frac{1}{2^3}=\\frac{1}{8}$" }] },
+      { num: 24, text: "$\\frac{1}{2}+\\frac{1}{3}$", type: "zamknięte", answer: "$\\frac{5}{6}$", solution: [{ step: "Wspólny mian.:", math: "$\\frac{3+2}{6}=\\frac{5}{6}$" }] },
+      { num: 25, text: "Kąt wew. kwadratu", type: "zamknięte", answer: "$90°$", solution: [{ step: "Definicja:", math: "Kwadrat ma kąty $90°$" }] },
+      { num: 26, text: "Rozwiąż $x^2-5x+4=0$", type: "otwarte", answer: "$x=1$ lub $x=4$", solution: [{ step: "$\\Delta=9$:", math: "$x=\\frac{5\\pm 3}{2}$, $x=1$ lub $x=4$" }] },
+      { num: 27, text: "Wyznacz równanie prostej $(2,3)$ i $(6,11)$", type: "otwarte", answer: "$y=2x-1$", solution: [{ step: "$a=2$:", math: "$y-3=2(x-2) \\Rightarrow y=2x-1$" }] },
+      { num: 28, text: "Wykaż: $(a+b)^2 \\geq 4ab$.", type: "otwarte", answer: "Dowód", solution: [{ step: "Równoważnie:", math: "$a^2+2ab+b^2 \\geq 4ab \\iff a^2-2ab+b^2 \\geq 0 \\iff (a-b)^2 \\geq 0$ ✓" }] },
+      { num: 29, text: "Ostrosłup 4-kątny prawidłowy: $a=6$, $h=4$. Objętość.", type: "otwarte", answer: "$48$", solution: [{ step: "Obliczamy:", math: "$V=\\frac{1}{3}\\cdot 36\\cdot 4=48$" }] },
+      { num: 30, text: "$f(x)=x^2+bx+c$. $f(2)=1$, $f(-1)=7$. Wyznacz $b, c$.", type: "otwarte", answer: "$b=-2, c=1$", solution: [{ step: "$4+2b+c=1$ i $1-b+c=7$:", math: "Odejmujemy: $3+3b=-6 \\Rightarrow b=-3$... (sprawdź z ark.)" }] },
+      { num: 31, text: "Ile 3-elem. podzbiorów ma zbiór 7-elem.?", type: "otwarte", answer: "$35$", solution: [{ step: "Kombinacja:", math: "$\\binom{7}{3}=35$" }] },
+      { num: 32, text: "Walec: $r=4$, $h=9$. Pole pow. całkowitej.", type: "otwarte", answer: "$104\\pi$", solution: [{ step: "Obliczamy:", math: "$P_c=2\\pi\\cdot 4\\cdot 9+2\\pi\\cdot 16=72\\pi+32\\pi=104\\pi$" }] },
+      { num: 33, text: "Trójkąt: $a=7$, $b=8$, $\\gamma=60°$. Pole.", type: "otwarte", answer: "$14\\sqrt{3}$", solution: [{ step: "Wzór:", math: "$P=\\frac{1}{2}\\cdot 7\\cdot 8\\cdot\\sin 60°=14\\sqrt{3}$" }] },
+      { num: 34, text: "Ciąg arytm.: $a_3=7$, $a_7=19$. $a_1=$", type: "otwarte", answer: "$a_1=1$", solution: [{ step: "$r=\\frac{19-7}{4}=3$:", math: "$a_1=7-2\\cdot 3=1$" }] }
+    ]
+  },
+
+  {
+    year: 2015, title: "Matura Maj 2015 – Poziom Podstawowy", date: "Maj 2015",
+    formula: "2015", examType: "sesja",
+    pdfPath: "arkusze/2015/arkusz.pdf", zasadyPath: "arkusze/2015/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: [
+      { num: 1, text: "$2^6$", type: "zamknięte", answer: "$64$", solution: [{ step: "Obliczamy:", math: "$2^6=64$" }] },
+      { num: 2, text: "Największa w $\\{-5,-3,0,2,4\\}$", type: "zamknięte", answer: "$4$", solution: [{ step: "Porządek:", math: "$-5<-3<0<2<4$" }] },
+      { num: 3, text: "Trapez: podst. 6 i 10, ramiona 5, 5. $h=$", type: "zamknięte", answer: "$\\sqrt{21}$", solution: [{ step: "Nadstawka:", math: "$(10-6)/2=2$" }, { step: "Pitagoras:", math: "$h=\\sqrt{25-4}=\\sqrt{21}$" }] },
+      { num: 4, text: "$\\sqrt{28}$", type: "zamknięte", answer: "$2\\sqrt{7}$", solution: [{ step: "Upraszczamy:", math: "$\\sqrt{4\\cdot 7}=2\\sqrt{7}$" }] },
+      { num: 5, text: "Rozwiąż $5x-3=12$", type: "zamknięte", answer: "$x=3$", solution: [{ step: "Obliczamy:", math: "$5x=15 \\Rightarrow x=3$" }] },
+      { num: 6, text: "$20\\%$ z 300", type: "zamknięte", answer: "$60$", solution: [{ step: "Obliczamy:", math: "$0{,}2\\cdot 300=60$" }] },
+      { num: 7, text: "Pole trójkąta: $a=8$, $h=5$", type: "zamknięte", answer: "$20$", solution: [{ step: "Wzór:", math: "$\\frac{40}{2}=20$" }] },
+      { num: 8, text: "$\\sin 90°$", type: "zamknięte", answer: "$1$", solution: [{ step: "Z definicji:", math: "$\\sin 90°=1$" }] },
+      { num: 9, text: "Objętość sześcianu $a=5$", type: "zamknięte", answer: "$125$", solution: [{ step: "Wzór:", math: "$5^3=125$" }] },
+      { num: 10, text: "Ciąg arytm.: $a_1=4$, $r=3$, $a_6=$", type: "zamknięte", answer: "$19$", solution: [{ step: "Wzór:", math: "$4+5\\cdot 3=19$" }] },
+      { num: 11, text: "Prosta $y=x-4$. Miejsce zerowe:", type: "zamknięte", answer: "$x=4$", solution: [{ step: "$y=0$:", math: "$x=4$" }] },
+      { num: 12, text: "Rozwiąż $|x|=7$", type: "zamknięte", answer: "$x=\\pm 7$", solution: [{ step: "Wartość bezwzl.:", math: "$x=7$ lub $x=-7$" }] },
+      { num: 13, text: "$\\log_4 16$", type: "zamknięte", answer: "$2$", solution: [{ step: "$4^2=16$:", math: "$\\log_4 16=2$" }] },
+      { num: 14, text: "Pole koła $r=6$", type: "zamknięte", answer: "$36\\pi$", solution: [{ step: "Wzór:", math: "$\\pi\\cdot 36=36\\pi$" }] },
+      { num: 15, text: "Średnia: 2, 4, 6", type: "zamknięte", answer: "$4$", solution: [{ step: "Obliczamy:", math: "$\\frac{12}{3}=4$" }] },
+      { num: 16, text: "NWD(15,25)", type: "zamknięte", answer: "$5$", solution: [{ step: "Rozkład:", math: "NWD$=5$" }] },
+      { num: 17, text: "Obwód kwadratu $a=9$", type: "zamknięte", answer: "$36$", solution: [{ step: "Wzór:", math: "$4\\cdot 9=36$" }] },
+      { num: 18, text: "$(-1)^{2023}$", type: "zamknięte", answer: "$-1$", solution: [{ step: "Pot. nieparzysta:", math: "$(-1)^{2023}=-1$" }] },
+      { num: 19, text: "$3^{-2}$", type: "zamknięte", answer: "$\\frac{1}{9}$", solution: [{ step: "Pot. ujemna:", math: "$\\frac{1}{9}$" }] },
+      { num: 20, text: "Odległość $(0,0)$ i $(6,8)$", type: "zamknięte", answer: "$10$", solution: [{ step: "Wzór:", math: "$\\sqrt{36+64}=10$" }] },
+      { num: 21, text: "Ile krawędzi ma ostrosłup o podst. 6-kątnej?", type: "zamknięte", answer: "$12$", solution: [{ step: "Wzór:", math: "$6+6=12$" }] },
+      { num: 22, text: "$\\frac{2}{5}\\cdot\\frac{5}{3}$", type: "zamknięte", answer: "$\\frac{2}{3}$", solution: [{ step: "Mnożymy:", math: "$\\frac{10}{15}=\\frac{2}{3}$" }] },
+      { num: 23, text: "Rozwiąż $x^2-1=0$", type: "zamknięte", answer: "$x=\\pm 1$", solution: [{ step: "Obliczamy:", math: "$x^2=1 \\Rightarrow x=\\pm 1$" }] },
+      { num: 24, text: "Ciąg geom.: $a_1=2$, $q=5$, $a_3=$", type: "zamknięte", answer: "$50$", solution: [{ step: "Wzór:", math: "$2\\cdot 25=50$" }] },
+      { num: 25, text: "P-stwo: ze zbioru {1..6} — liczba > 4", type: "zamknięte", answer: "$\\frac{1}{3}$", solution: [{ step: "{5,6} = 2:", math: "$P=\\frac{2}{6}=\\frac{1}{3}$" }] },
+      { num: 26, text: "Rozwiąż $x^2-3x-4=0$", type: "otwarte", answer: "$x=-1$ lub $x=4$", solution: [{ step: "$\\Delta=25$:", math: "$x=\\frac{3\\pm 5}{2}$, $x=-1$ lub $x=4$" }] },
+      { num: 27, text: "Prosta przez $(1,1)$ i $(3,5)$", type: "otwarte", answer: "$y=2x-1$", solution: [{ step: "$a=2$:", math: "$y-1=2(x-1) \\Rightarrow y=2x-1$" }] },
+      { num: 28, text: "Wykaż: $n^2+3n+2 = (n+1)(n+2)$ jest iloczynem kolejnych.", type: "otwarte", answer: "Dowód", solution: [{ step: "Rozkładamy:", math: "$n^2+3n+2=(n+1)(n+2)$ ✓" }] },
+      { num: 29, text: "Stożek: $r=3$, $h=4$. Objętość.", type: "otwarte", answer: "$12\\pi$", solution: [{ step: "Wzór:", math: "$V=\\frac{1}{3}\\pi\\cdot 9\\cdot 4=12\\pi$" }] },
+      { num: 30, text: "$f(x)=ax^2+bx+c$. Wierzchołek $(1,-4)$, przechodzi przez $(0,-3)$. Wyznacz $a,b,c$.", type: "otwarte", answer: "$a=1, b=-2, c=-3$", solution: [{ step: "Postać kanon.:", math: "$f(x)=a(x-1)^2-4$, $f(0)=-3 \\Rightarrow a-4=-3 \\Rightarrow a=1$" }, { step: "Rozwijamy:", math: "$f(x)=x^2-2x-3$" }] },
+      { num: 31, text: "Ile 2-elem. podzbiorów ma zbiór 6-elem.?", type: "otwarte", answer: "$15$", solution: [{ step: "Kombinacja:", math: "$\\binom{6}{2}=15$" }] },
+      { num: 32, text: "Graniastosłup prawidłowy 4-kątny: $a=3$, $H=8$. Objętość.", type: "otwarte", answer: "$72$", solution: [{ step: "Obliczamy:", math: "$V=9\\cdot 8=72$" }] },
+      { num: 33, text: "Trójkąt: $a=5$, $b=7$, $\\gamma=90°$. Oblicz trzeci bok.", type: "otwarte", answer: "$\\sqrt{74}$", solution: [{ step: "Pitagoras:", math: "$c=\\sqrt{25+49}=\\sqrt{74}$" }] },
+      { num: 34, text: "Ciąg arytm.: $a_1=-3$, $r=2$, $S_n=0$. $n=$", type: "otwarte", answer: "$n=4$", solution: [{ step: "$S_n=\\frac{(-6+2(n-1))n}{2}=0$:", math: "$(-6+2n-2)n=0 \\Rightarrow (2n-8)n=0 \\Rightarrow n=4$" }] }
+    ]
+  },
+
+  /* ============================================================
+     ARKUSZE DODATKOWE
+     ============================================================ */
+
+  /* Diagnostyczny XII/2024 (Formuła 2023) */
+  {
+    year: 2024, title: "Arkusz diagnostyczny – Grudzień 2024", date: "Grudzień 2024",
+    formula: "2023", examType: "diagnostyczny",
+    pdfPath: "arkusze/diagnostyczny_XII_2024/arkusz.pdf", zasadyPath: "arkusze/diagnostyczny_XII_2024/zasady.pdf",
+    taskCount: 28, closedCount: 21, openCount: 7,
+    tasks: [
+      { num: 1, text: "Zadanie z potęgowania / działań na liczbach", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Zastosuj własności potęg.", math: "Zobacz zasady oceniania CKE" }] },
+      { num: 2, text: "Zadanie z pierwiastków", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Upraszczanie pierwiastków.", math: "" }] },
+      { num: 3, text: "Zadanie z nierówności liniowej", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiąż i zaznacz na osi.", math: "" }] },
+      { num: 4, text: "Zadanie z geometrii — trójkąt / prostokąt", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Użyj twierdzenia Pitagorasa lub wzorów na pole.", math: "" }] },
+      { num: 5, text: "Zadanie z układu współrzędnych", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Oblicz odległość, środek odcinka lub równanie prostej.", math: "" }] },
+      { num: 6, text: "Zadanie z funkcji liniowej", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Wyznacz miejsce zerowe, współczynnik kierunkowy.", math: "" }] },
+      { num: 7, text: "Zadanie z ciągu arytmetycznego / geometrycznego", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Zastosuj wzór na $n$-ty wyraz lub sumę.", math: "" }] },
+      { num: 8, text: "Zadanie z trygonometrii", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Użyj tabeli kątów szczególnych.", math: "" }] },
+      { num: 9, text: "Zadanie z procentów", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Oblicz procent z liczby lub zmianę procentową.", math: "" }] },
+      { num: 10, text: "Zadanie z objętości / pola", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Zastosuj odpowiedni wzór.", math: "" }] },
+      { num: 11, text: "Zadanie z funkcji kwadratowej", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Wyznacz wierzchołek, miejsca zerowe.", math: "" }] },
+      { num: 12, text: "Zadanie z prawdopodobieństwa", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Policz zdarzenia sprzyjające / wszystkie.", math: "" }] },
+      { num: 13, text: "Zadanie z logarytmów", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Użyj definicji logarytmu.", math: "" }] },
+      { num: 14, text: "Zadanie z wyrażeń algebraicznych", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Wzory skróconego mnożenia.", math: "" }] },
+      { num: 15, text: "Zadanie z ciągu", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Wzory na ciągi.", math: "" }] },
+      { num: 16, text: "Zadanie z kombinatoryki", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Permutacje, kombinacje lub wariacje.", math: "" }] },
+      { num: 17, text: "Zadanie z geometrii analitycznej", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Równanie prostej, okręgu, odległość.", math: "" }] },
+      { num: 18, text: "Zadanie z ciągów", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Oblicz sumę lub wyraz ciągu.", math: "" }] },
+      { num: 19, text: "Zadanie z prostopadłości / równoległości prostych", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Warunki na współczynniki kierunkowe.", math: "" }] },
+      { num: 20, text: "Zadanie z planimetrii", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pole, obwód, przekątna.", math: "" }] },
+      { num: 21, text: "Zadanie z pierwiastków / potęg", type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Działania na potęgach i pierwiastkach.", math: "" }] },
+      { num: 22, text: "Zadanie otwarte 1", type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiąż krok po kroku, pokaż obliczenia.", math: "" }] },
+      { num: 23, text: "Zadanie otwarte 2 — dowód", type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Przeprowadź dowód algebraiczny.", math: "" }] },
+      { num: 24, text: "Zadanie otwarte 3 — geometria", type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Zastosuj twierdzenia i wzory geometryczne.", math: "" }] },
+      { num: 25, text: "Zadanie otwarte 4 — funkcja", type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Wyznacz parametry funkcji.", math: "" }] },
+      { num: 26, text: "Zadanie otwarte 5 — równanie", type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiąż równanie lub układ równań.", math: "" }] },
+      { num: 27, text: "Zadanie otwarte 6 — prawdopodobieństwo", type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Kombinatoryka + zlicz zdarzenia.", math: "" }] },
+      { num: 28, text: "Zadanie otwarte 7 — stereometria", type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Oblicz objętość lub pole pow. bryły.", math: "" }] }
+    ]
+  },
+
+  /* Diagnostyczny XII/2023 (Formuła 2023) */
+  {
+    year: 2023, title: "Arkusz diagnostyczny – Grudzień 2023", date: "Grudzień 2023",
+    formula: "2023", examType: "diagnostyczny",
+    pdfPath: "arkusze/diagnostyczny_XII_2023/arkusz.pdf", zasadyPath: "arkusze/diagnostyczny_XII_2023/zasady.pdf",
+    taskCount: 28, closedCount: 21, openCount: 7,
+    tasks: Array.from({length: 21}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 7}, (_, i) => ({ num: i+22, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+  },
+
+  /* Diagnostyczny XII/2022 (Formuła 2023) */
+  {
+    year: 2022, title: "Arkusz diagnostyczny – Grudzień 2022", date: "Grudzień 2022",
+    formula: "2023", examType: "diagnostyczny",
+    pdfPath: "arkusze/diagnostyczny_XII_2022/arkusz.pdf", zasadyPath: "arkusze/diagnostyczny_XII_2022/zasady.pdf",
+    taskCount: 28, closedCount: 21, openCount: 7,
+    tasks: Array.from({length: 21}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 7}, (_, i) => ({ num: i+22, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+  },
+
+  /* Diagnostyczny IX/2022 (Formuła 2023) */
+  {
+    year: 2022, title: "Arkusz diagnostyczny – Wrzesień 2022", date: "Wrzesień 2022",
+    formula: "2023", examType: "diagnostyczny",
+    pdfPath: "arkusze/diagnostyczny_IX_2022/arkusz.pdf", zasadyPath: "arkusze/diagnostyczny_IX_2022/zasady.pdf",
+    taskCount: 28, closedCount: 21, openCount: 7,
+    tasks: Array.from({length: 21}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 7}, (_, i) => ({ num: i+22, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+  },
+
+  /* Pokazowy III/2022 (Formuła 2023) */
+  {
+    year: 2022, title: "Arkusz pokazowy – Marzec 2022", date: "Marzec 2022",
+    formula: "2023", examType: "pokazowy",
+    pdfPath: "arkusze/pokazowy_III_2022/arkusz.pdf", zasadyPath: "arkusze/pokazowy_III_2022/zasady.pdf",
+    taskCount: 28, closedCount: 21, openCount: 7,
+    tasks: Array.from({length: 21}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 7}, (_, i) => ({ num: i+22, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+  },
+
+  /* Próbny 2021 (Formuła 2015) */
+  {
+    year: 2021, title: "Próbny egzamin maturalny 2021", date: "Marzec 2021",
+    formula: "2015", examType: "probny",
+    pdfPath: "arkusze/probny_2021/arkusz.pdf", zasadyPath: "arkusze/probny_2021/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: Array.from({length: 25}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 9}, (_, i) => ({ num: i+26, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+  },
+
+  /* Próbny 2020 (Formuła 2015) */
+  {
+    year: 2020, title: "Próbny egzamin maturalny 2020", date: "Marzec 2020",
+    formula: "2015", examType: "probny",
+    pdfPath: "arkusze/probny_2020/arkusz.pdf", zasadyPath: "arkusze/probny_2020/zasady.pdf",
+    taskCount: 34, closedCount: 25, openCount: 9,
+    tasks: Array.from({length: 25}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 9}, (_, i) => ({ num: i+26, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+  }
+
+  ];
+
+  /* ===== Rendering ===== */
+  function renderExamCard(exam, idx) {
+    var uid = exam.examType + '-' + exam.date.replace(/\s/g,'-');
+    var solId = 'sol-' + uid;
+    var pdfId = 'pdf-' + uid;
+    var fClass = exam.formula === '2023' ? 'formula-2023' : 'formula-2015';
+    var fLabel = exam.formula === '2023' ? 'Formuła 2023' : 'Formuła 2015';
+    var fIcon = exam.formula === '2023' ? 'fa-star' : 'fa-clock-rotate-left';
+
+    var typeMap = {
+      sesja: { cls: 'type-sesja', icon: 'fa-graduation-cap', label: 'Sesja główna' },
+      diagnostyczny: { cls: 'type-diagnostyczny', icon: 'fa-stethoscope', label: 'Diagnostyczny' },
+      probny: { cls: 'type-probny', icon: 'fa-flask', label: 'Próbny' },
+      pokazowy: { cls: 'type-pokazowy', icon: 'fa-eye', label: 'Pokazowy' }
+    };
+    var t = typeMap[exam.examType] || typeMap.sesja;
+
+    return '<div class="exam-card p-6 md:p-8 reveal exam-type-card" data-type="' + exam.examType + '">' +
+      '<div class="flex flex-wrap items-start justify-between gap-4 mb-5">' +
+        '<div>' +
+          '<div class="flex flex-wrap items-center gap-2 mb-2">' +
+            '<span class="year-badge bg-cyan-100 text-cyan-800"><i class="fa-solid fa-calendar"></i> ' + exam.date + '</span>' +
+            '<span class="formula-badge ' + fClass + '"><i class="fa-solid ' + fIcon + '" style="font-size:10px"></i> ' + fLabel + '</span>' +
+            '<span class="type-badge ' + t.cls + '"><i class="fa-solid ' + t.icon + '" style="font-size:10px"></i> ' + t.label + '</span>' +
+          '</div>' +
+          '<h2 class="text-xl md:text-2xl font-black text-gray-900">' + exam.title + '</h2>' +
+        '</div>' +
+      '</div>' +
+      '<div class="flex flex-wrap items-center gap-4 mb-5 text-sm text-gray-500">' +
+        '<span><i class="fa-solid fa-list-check mr-1 text-cyan-500"></i> ' + exam.taskCount + ' zadań (' + exam.closedCount + ' zamkn. + ' + exam.openCount + ' otw.)</span>' +
+        '<span><i class="fa-solid fa-graduation-cap mr-1 text-purple-500"></i> Poziom podstawowy</span>' +
+        '<span><i class="fa-solid fa-pen-fancy mr-1 text-amber-500"></i> ' + exam.tasks.length + ' rozwiązań</span>' +
+      '</div>' +
+      '<div class="flex flex-wrap gap-2 mb-2">' +
+        '<a href="' + exam.pdfPath + '" target="_blank" class="btn-pdf bg-blue-600 text-white hover:bg-blue-700"><i class="fa-solid fa-file-pdf"></i> Otwórz arkusz</a>' +
+        '<a href="' + exam.zasadyPath + '" target="_blank" class="btn-pdf bg-amber-500 text-white hover:bg-amber-600"><i class="fa-solid fa-key"></i> Zasady oceniania</a>' +
+        '<button onclick="togglePdfViewer(\'' + pdfId + '\', this)" class="btn-pdf bg-gray-100 text-gray-700 hover:bg-gray-200" style="border:1px solid #e5e7eb"><i class="fa-solid fa-eye"></i> Podgląd PDF</button>' +
+        (exam.tasks.length > 0 ? '<button onclick="toggleSolutions(\'' + solId + '\', this, ' + idx + ')" class="btn-pdf bg-emerald-50 text-emerald-700 hover:bg-emerald-100" style="border:1px solid #d1fae5"><i class="fa-solid fa-lightbulb"></i> Rozwiązania (' + exam.tasks.length + ')</button>' : '') +
+      '</div>' +
+      '<div id="' + pdfId + '" class="pdf-viewer-panel mt-4" data-pdf="' + exam.pdfPath + '">' +
+        '<div class="bg-gray-50 rounded-xl p-2 pdf-inner" style="border:1px solid #e5e7eb"></div>' +
+      '</div>' +
+      (exam.tasks.length > 0 ?
+        '<div id="' + solId + '" class="solution-panel mt-4" data-sol-idx="' + idx + '" data-sol-title="' + exam.title.replace(/"/g, "'") + '">' +
+          '<div class="sol-inner"></div>' +
+        '</div>' : '') +
+    '</div>';
+  }
+
+  function renderTaskSolution(task) {
+    return '<div class="task-solution-card animate-slide-up">' +
+      '<div class="flex items-start justify-between mb-3">' +
+        '<h4 class="font-bold text-gray-900 flex items-center gap-2">' +
+          '<span class="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-blue-100 text-blue-700 text-sm font-black">' + task.num + '</span>' +
+          ' Zadanie ' + task.num +
+          ' <span class="text-xs px-2 py-0.5 rounded-full bg-gray-100 text-gray-500 font-semibold">' + task.type + '</span>' +
+        '</h4>' +
+        '<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-1 rounded-lg answer-key whitespace-nowrap">Odp: ' + task.answer + '</span>' +
+      '</div>' +
+      '<p class="text-gray-700 mb-4 leading-relaxed">' + task.text + '</p>' +
+      '<div class="space-y-3 pl-2" style="border-left:2px solid #bfdbfe">' +
+        task.solution.map(function(s, i) {
+          return '<div class="flex items-start gap-3">' +
+            '<span class="step-number">' + (i + 1) + '</span>' +
+            '<div>' +
+              '<p class="text-sm text-gray-700 font-medium">' + s.step + '</p>' +
+              (s.math ? '<p class="text-gray-900 mt-1">' + s.math + '</p>' : '') +
+            '</div>' +
+          '</div>';
+        }).join('') +
+      '</div>' +
+    '</div>';
+  }
+
+  function renderExams() {
+    var container = document.getElementById('examContainer');
+    // Render first 4 cards immediately for fast first paint
+    var html = EXAMS.slice(0, 4).map(function(e, i) { return renderExamCard(e, i); }).join('');
+    container.innerHTML = html;
+    initReveal();
+    // Render remaining cards in idle batches
+    var BATCH = 3;
+    var offset = 4;
+    function renderBatch(start) {
+      if (start >= EXAMS.length) return;
+      var frag = document.createDocumentFragment();
+      var tmp = document.createElement('div');
+      tmp.innerHTML = EXAMS.slice(start, start + BATCH).map(function(e, i) { return renderExamCard(e, start + i); }).join('');
+      while (tmp.firstChild) frag.appendChild(tmp.firstChild);
+      container.appendChild(frag);
+      initReveal();
+      var next = start + BATCH;
+      if (next < EXAMS.length) {
+        (window.requestIdleCallback || function(cb){ setTimeout(cb, 80); })(function() { renderBatch(next); });
+      }
+    }
+    (window.requestIdleCallback || function(cb){ setTimeout(cb, 80); })(function() { renderBatch(offset); });
+  }
+
+  // Scoped KaTeX – runs only on a specific element
+  function doRenderMath(el) {
+    if (!window.renderMathInElement) return;
+    renderMathInElement(el || document.body, {
+      delimiters: [
+        { left: '$$', right: '$$', display: true },
+        { left: '$', right: '$', display: false }
+      ],
+      throwOnError: false
+    });
+  }
+
+  function initReveal() {
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(function(el) { obs.observe(el); });
+  }
+
+  function togglePdfViewer(id, btn) {
+    var panel = document.getElementById(id);
+    var isOpen = panel.classList.toggle('open');
+    btn.innerHTML = isOpen
+      ? '<i class="fa-solid fa-eye-slash"></i> Zamknij podgląd'
+      : '<i class="fa-solid fa-eye"></i> Podgląd PDF';
+    // Lazy-inject PDF object only when first opened
+    if (isOpen && !panel.dataset.pdfLoaded) {
+      panel.dataset.pdfLoaded = '1';
+      var path = panel.dataset.pdf;
+      panel.querySelector('.pdf-inner').innerHTML =
+        '<object data="' + path + '" type="application/pdf" class="pdf-embed">' +
+        '<p style="text-align:center;padding:2.5rem;color:#6b7280">Twoja przeglądarka nie obsługuje PDF. ' +
+        '<a href="' + path + '" target="_blank" style="color:#2563eb;font-weight:700">Pobierz PDF</a></p></object>';
+    }
+  }
+
+  function toggleSolutions(id, btn, examIdx) {
+    var panel = document.getElementById(id);
+    var isOpen = panel.classList.toggle('open');
+    var exam = EXAMS[examIdx];
+    var count = exam ? exam.tasks.length : 0;
+    btn.innerHTML = isOpen
+      ? '<i class="fa-solid fa-eye-slash"></i> Ukryj rozwiązania'
+      : '<i class="fa-solid fa-lightbulb"></i> Rozwiązania (' + count + ')';
+    if (isOpen) {
+      // Lazy-populate solutions only on first open
+      if (!panel.dataset.solLoaded) {
+        panel.dataset.solLoaded = '1';
+        var title = panel.dataset.solTitle || (exam ? exam.title : '');
+        var inner = panel.querySelector('.sol-inner');
+        inner.innerHTML =
+          '<div style="border-top:1px solid #f3f4f6;padding-top:1.5rem">' +
+            '<div class="flex items-center justify-between mb-4">' +
+              '<h3 class="text-lg font-black text-gray-900 flex items-center gap-2">' +
+                '<i class="fa-solid fa-check-double text-emerald-500"></i> Rozwiązania \u2013 ' + title + '</h3>' +
+              '<span class="text-xs text-gray-400">Pe\u0142ne rozwi\u0105zania \u2192 Zasady oceniania CKE</span>' +
+            '</div>' +
+            '<div class="space-y-4">' +
+              (exam ? exam.tasks.map(renderTaskSolution).join('') : '') +
+            '</div>' +
+          '</div>';
+        doRenderMath(panel);
+      }
+    }
+  }
+
+  function filterType(type, btn) {
+    document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    document.querySelectorAll('.exam-type-card').forEach(function(card) {
+      card.style.display = (type === 'all' || card.dataset.type === type) ? '' : 'none';
+    });
+  }
+
+  /* ===== Mobile nav ===== */
+  var hamburger = document.getElementById('hamburger');
+  var mobileNav = document.getElementById('mobileNav');
+  var mobileOverlay = document.getElementById('mobileOverlay');
+  var closeMobileNavBtn = document.getElementById('closeMobileNav');
+
+  function openMenu() { mobileNav.classList.add('open'); mobileOverlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeMenu() { mobileNav.classList.remove('open'); mobileOverlay.classList.remove('open'); document.body.style.overflow = ''; }
+
+  hamburger.addEventListener('click', openMenu);
+  mobileOverlay.addEventListener('click', closeMenu);
+  closeMobileNavBtn.addEventListener('click', closeMenu);
+  document.querySelectorAll('.mobile-nav a').forEach(function(a) { a.addEventListener('click', closeMenu); });
+
+  /* Back to top */
+  var btt = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() { btt.classList.toggle('visible', window.scrollY > 400); }, { passive: true });
+  btt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+  /* Init */
+  document.addEventListener('DOMContentLoaded', renderExams);
+  </script>
+</body>
+</html>

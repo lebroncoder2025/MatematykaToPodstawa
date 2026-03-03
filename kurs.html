@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kurs Maturalny – Matematyka to Podstawa</title>
+  <meta name="description" content="Interaktywny kurs matematyki maturalnej – teoria, ćwiczenia, brudnopis cyfrowy, weryfikacja odpowiedzi. 10 działów, 100+ zadań."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body{font-family:'Inter',sans-serif;background:#f8fafc;}
+    /* ---- Progress bar ---- */
+    #globalBar{height:4px;background:linear-gradient(90deg,#06b6d4,#3b82f6,#8b5cf6);transition:width .6s ease;border-radius:0 2px 2px 0;}
+    /* ---- Module cards ---- */
+    .mod-card{border-radius:1.5rem;border:1.5px solid #e2e8f0;background:#fff;transition:all .3s;cursor:pointer;overflow:hidden;}
+    .mod-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);border-color:#3b82f6;}
+    .mod-card.done{border-color:#10b981;background:linear-gradient(135deg,#ecfdf5,#f0fdf4);}
+    .mod-card.active{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.2);}
+    .mod-progress{height:6px;border-radius:3px;background:#e2e8f0;overflow:hidden;}
+    .mod-progress-bar{height:100%;border-radius:3px;background:linear-gradient(90deg,#3b82f6,#06b6d4);transition:width .8s ease;}
+    /* ---- Lesson shell ---- */
+    #lessonShell{display:none;position:fixed;inset:0;z-index:100;background:#0f172a;overflow-y:auto;}
+    /* ---- Theory card ---- */
+    .theory-card{background:linear-gradient(135deg,#1e293b,#0f172a);border:1px solid #334155;border-radius:1.5rem;padding:2.5rem;color:#f1f5f9;}
+    .theory-card h2{font-size:1.5rem;font-weight:900;margin-bottom:1.2rem;color:#fff;}
+    .theory-block{background:#0f172a;border-left:3px solid #3b82f6;padding:1rem 1.25rem;border-radius:0 .75rem .75rem 0;margin:.75rem 0;font-size:1.05rem;}
+    .theory-formula{background:#0a0f1e;border:1px solid #334155;border-radius:.75rem;padding:1rem 1.5rem;text-align:center;font-size:1.15rem;color:#93c5fd;margin:1rem 0;}
+    .theory-example{background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.25);border-radius:.75rem;padding:1rem 1.25rem;margin:.5rem 0;}
+    /* ---- Question card ---- */
+    .q-card{background:#1e293b;border:1px solid #334155;border-radius:1.5rem;padding:2rem;}
+    .answer-btn{width:100%;text-align:left;padding:.875rem 1.25rem;border-radius:.875rem;border:1.5px solid #334155;background:#0f172a;color:#f1f5f9;cursor:pointer;transition:all .2s;font-size:1rem;display:flex;align-items:center;gap:.75rem;}
+    .answer-btn:hover:not(:disabled){border-color:#3b82f6;background:#1e3a5f;transform:translateX(4px);}
+    .answer-btn.correct{border-color:#10b981;background:rgba(16,185,129,.15);color:#6ee7b7;}
+    .answer-btn.wrong{border-color:#ef4444;background:rgba(239,68,68,.1);color:#fca5a5;}
+    .answer-btn.reveal{border-color:#f59e0b;background:rgba(245,158,11,.1);color:#fcd34d;}
+    .answer-btn:disabled{opacity:.7;cursor:not-allowed;}
+    .letter-badge{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;font-weight:800;font-size:.8rem;background:#1e3a5f;color:#60a5fa;flex-shrink:0;}
+    .answer-btn.correct .letter-badge{background:#065f46;color:#6ee7b7;}
+    .answer-btn.wrong .letter-badge{background:#7f1d1d;color:#fca5a5;}
+    /* ---- Canvas scratchpad ---- */
+    #scratchWrap{background:#fff;border-radius:1rem;overflow:hidden;border:2px solid #334155;position:relative;}
+    #scratch{cursor:crosshair;display:block;touch-action:none;}
+    .tool-btn{padding:.4rem .8rem;border-radius:.5rem;font-size:.8rem;font-weight:700;border:1.5px solid;cursor:pointer;transition:all .15s;}
+    .tool-btn.active{box-shadow:0 0 0 2px #3b82f6;}
+    /* ---- XP bar ---- */
+    #xpBar{height:8px;border-radius:4px;background:linear-gradient(90deg,#f59e0b,#f97316);transition:width .5s cubic-bezier(.34,1.56,.64,1);}
+    /* ---- Stars ---- */
+    .star{color:#fbbf24;font-size:1.5rem;display:inline-block;transition:transform .3s cubic-bezier(.34,1.56,.64,1);}
+    .star.earned{transform:scale(1.3);}
+    /* ---- Confetti ---- */
+    .confetti-piece{position:fixed;width:10px;height:10px;border-radius:2px;animation:confettiFall 3s linear forwards;pointer-events:none;z-index:9999;}
+    @keyframes confettiFall{0%{transform:translateY(-100vh) rotate(0);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+    /* ---- Steps ---- */
+    .step-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;transition:all .3s;}
+    .step-dot.done{background:#10b981;}
+    .step-dot.active{background:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.3);}
+    .step-dot.todo{background:#334155;}
+    /* ---- Explanation ---- */
+    .explanation{background:linear-gradient(135deg,rgba(16,185,129,.08),rgba(6,182,212,.08));border:1px solid rgba(16,185,129,.25);border-radius:1rem;padding:1.25rem;color:#d1fae5;margin-top:1rem;}
+    /* ---- Nav ---- */
+    .glass-nav{background:rgba(255,255,255,.9);backdrop-filter:blur(12px);}
+    /* Responsive canvas */
+    @media(max-width:640px){#scratch{height:200px!important;}}
+    /* Fade animations */
+    .fade-in{animation:fadeIn .45s ease both;}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+    .slide-right{animation:slideRight .35s ease both;}
+    @keyframes slideRight{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}
+    /* Module badge colors */
+    .badge-0{background:#dbeafe;color:#1e40af}
+    .badge-1{background:#fce7f3;color:#9d174d}
+    .badge-2{background:#dcfce7;color:#166534}
+    .badge-3{background:#fef3c7;color:#92400e}
+    .badge-4{background:#f3e8ff;color:#6b21a8}
+    .badge-5{background:#ecfdf5;color:#065f46}
+    .badge-6{background:#fff7ed;color:#9a3412}
+    .badge-7{background:#e0e7ff;color:#3730a3}
+    .badge-8{background:#fdf2f8;color:#831843}
+    .badge-9{background:#f0fdf4;color:#14532d}
+    .hero-bg{background:linear-gradient(135deg,#0f172a 0%,#1e3a5f 50%,#0891b2 100%);position:relative;overflow:hidden;}
+    .hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,rgba(59,130,246,.15) 0%,transparent 70%);}
+  </style>
+</head>
+<body class="min-h-screen">
+
+<!-- Global progress bar -->
+<div class="fixed top-0 left-0 right-0 z-50 bg-gray-900" style="height:4px">
+  <div id="globalBar" style="width:0%"></div>
+</div>
+
+<!-- Navigation -->
+<nav class="sticky top-1 z-40 glass-nav shadow-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+      <span class="text-xl font-bold text-gray-800">Matematyka to <span class="text-blue-600">Podstawa</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="text-gray-600 hover:text-blue-600 transition text-sm font-medium">Strona główna</a>
+      <a href="index.html#dzialy" class="text-gray-600 hover:text-blue-600 transition text-sm font-medium">Działy</a>
+      <a href="arkusze.html" class="text-gray-600 hover:text-blue-600 transition text-sm font-medium">Arkusze CKE</a>
+      <a href="kurs.html" class="text-blue-600 font-bold text-sm">Kurs</a>
+      <a href="quiz.html" class="text-gray-600 hover:text-blue-600 transition text-sm font-medium">Quiz</a>
+    </div>
+    <!-- XP counter in nav -->
+    <div class="flex items-center gap-3">
+      <div class="hidden sm:flex items-center gap-2 bg-amber-50 px-3 py-1.5 rounded-full border border-amber-200">
+        <i class="fa-solid fa-bolt text-amber-500 text-sm"></i>
+        <span id="navXP" class="text-amber-700 font-black text-sm">0 XP</span>
+      </div>
+      <div class="hidden sm:flex items-center gap-2 bg-orange-50 px-3 py-1.5 rounded-full border border-orange-200">
+        <i class="fa-solid fa-fire text-orange-500 text-sm"></i>
+        <span id="navStreak" class="text-orange-700 font-black text-sm">0</span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN PAGE (module overview) -->
+<div id="mainPage">
+  <!-- Hero -->
+  <section class="hero-bg py-16 md:py-24 px-4 text-white relative">
+    <div class="absolute inset-0 opacity-5 select-none pointer-events-none" style="font-size:6rem;line-height:1.1;overflow:hidden;padding:1rem">∑ π √ ∫ ≥ ∞ Δ ∂ θ λ</div>
+    <div class="max-w-5xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-white/20">
+        <i class="fa-solid fa-graduation-cap text-cyan-300"></i>
+        Pełny interaktywny kurs maturalny
+      </div>
+      <h1 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+        Naucz się matematyki<br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-blue-400">krok po kroku</span>
+      </h1>
+      <p class="text-cyan-100 text-lg md:text-xl max-w-3xl mx-auto mb-8 leading-relaxed">
+        10 działów &bull; teoria z przykładami &bull; zadania MCQ &bull; cyfrowy brudnopis &bull; natychmiastowa weryfikacja &bull; system XP i postępów
+      </p>
+      <!-- Stats row -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+        <div class="bg-white/10 rounded-2xl p-4 border border-white/15">
+          <p class="text-3xl font-black text-cyan-300">10</p>
+          <p class="text-xs text-cyan-200 mt-1 font-semibold uppercase tracking-wider">Działów</p>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-4 border border-white/15">
+          <p class="text-3xl font-black text-cyan-300">60+</p>
+          <p class="text-xs text-cyan-200 mt-1 font-semibold uppercase tracking-wider">Slajdów teorii</p>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-4 border border-white/15">
+          <p class="text-3xl font-black text-cyan-300">50+</p>
+          <p class="text-xs text-cyan-200 mt-1 font-semibold uppercase tracking-wider">Zadań MCQ</p>
+        </div>
+        <div class="bg-white/10 rounded-2xl p-4 border border-white/15">
+          <p class="text-3xl font-black text-cyan-300">∞</p>
+          <p class="text-xs text-cyan-200 mt-1 font-semibold uppercase tracking-wider">Powtórek</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress summary -->
+  <section class="bg-white border-b py-5 px-4">
+    <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-4">
+        <div class="bg-amber-50 border border-amber-200 rounded-2xl px-5 py-3 flex items-center gap-3">
+          <i class="fa-solid fa-bolt text-amber-500 text-xl"></i>
+          <div><p class="font-black text-amber-700 text-xl" id="totalXP">0</p><p class="text-amber-500 text-xs font-semibold">punktów XP</p></div>
+        </div>
+        <div class="bg-orange-50 border border-orange-200 rounded-2xl px-5 py-3 flex items-center gap-3">
+          <i class="fa-solid fa-fire text-orange-500 text-xl"></i>
+          <div><p class="font-black text-orange-700 text-xl" id="totalStreak">0</p><p class="text-orange-500 text-xs font-semibold">seria popr.</p></div>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-200 rounded-2xl px-5 py-3 flex items-center gap-3">
+          <i class="fa-solid fa-check-double text-emerald-500 text-xl"></i>
+          <div><p class="font-black text-emerald-700 text-xl" id="totalDone">0/10</p><p class="text-emerald-500 text-xs font-semibold">ukończ.</p></div>
+        </div>
+      </div>
+      <button onclick="resetProgress()" class="text-xs text-gray-400 hover:text-red-500 flex items-center gap-1.5 transition">
+        <i class="fa-solid fa-rotate-left"></i> Resetuj postęp
+      </button>
+    </div>
+  </section>
+
+  <!-- Modules grid -->
+  <section class="max-w-5xl mx-auto px-4 py-12">
+    <h2 class="text-2xl font-black text-gray-900 mb-2">Wybierz dział do nauki</h2>
+    <p class="text-gray-500 mb-8 text-sm">Każdy dział zawiera teorię z przykładami, zadania MCQ z brudnopisem i pełnymi objaśnieniami.</p>
+    <div id="modulesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+  </section>
+</div>
+
+<!-- ============================================================
+     LESSON SHELL (fullscreen course view)
+     ============================================================ -->
+<div id="lessonShell">
+  <!-- Top lesson bar -->
+  <div class="sticky top-0 z-10 bg-slate-900 border-b border-slate-700">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-center gap-3">
+      <button onclick="closeLesson()" class="text-slate-400 hover:text-white transition flex-shrink-0">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+      <div class="flex-1 min-w-0">
+        <p id="lessonModTitle" class="text-white font-bold text-sm truncate"></p>
+        <div class="flex gap-1.5 mt-1.5" id="stepDots"></div>
+      </div>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <div class="flex items-center gap-1.5 bg-amber-500/20 px-3 py-1 rounded-full">
+          <i class="fa-solid fa-bolt text-amber-400 text-xs"></i>
+          <span id="lessonXP" class="text-amber-300 font-black text-sm">0 XP</span>
+        </div>
+        <div class="bg-slate-800 rounded-full px-3 py-1 text-xs text-slate-300 font-semibold" id="stepCounter">1/1</div>
+      </div>
+    </div>
+    <!-- XP progress within lesson -->
+    <div class="bg-slate-800" style="height:3px">
+      <div id="lessonXPBar" style="height:100%;background:linear-gradient(90deg,#f59e0b,#f97316);width:0%;transition:width .4s ease;border-radius:0 2px 2px 0;"></div>
+    </div>
+  </div>
+
+  <!-- Lesson content -->
+  <div class="max-w-3xl mx-auto px-4 py-8" id="lessonContent"></div>
+
+  <!-- Lesson nav -->
+  <div class="sticky bottom-0 bg-slate-900 border-t border-slate-700 py-4 px-4">
+    <div class="max-w-3xl mx-auto flex items-center justify-between gap-3">
+      <button id="btnPrev" onclick="lessonPrev()" class="flex items-center gap-2 text-slate-400 hover:text-white transition font-semibold text-sm px-4 py-2 rounded-xl hover:bg-slate-800">
+        <i class="fa-solid fa-arrow-left"></i> Wstecz
+      </button>
+      <div class="flex gap-1" id="miniDots"></div>
+      <button id="btnNext" onclick="lessonNext()" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white transition font-bold text-sm px-6 py-2.5 rounded-xl">
+        Dalej <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     COURSE DATA
+     ============================================================ -->
+<script>
+/* =====================================================
+   COURSE CONTENT
+   Each module has:
+   - meta: icon, color, title, description
+   - steps: array of {type: 'theory'|'question', ...}
+   ===================================================== */
+const COURSE = [
+/* ================================================ MODULE 0 */
+{
+  meta: { icon: 'fa-hashtag', color: '#3b82f6', title: 'Liczby rzeczywiste', desc: 'Potęgi, pierwiastki, logarytmy, wartość bezwzględna, działania na zbiorach.', badge: 0 },
+  steps: [
+    {
+      type: 'theory', title: 'Potęgi i ich własności',
+      items: [
+        { kind: 'rule', text: 'Potęga $a^n$ to iloczyn liczby $a$ przez siebie $n$ razy. Obowiązują cztery podstawowe prawa:' },
+        { kind: 'formulas', items: ['$a^m \\cdot a^n = a^{m+n}$', '$\\dfrac{a^m}{a^n} = a^{m-n}$', '$(a^m)^n = a^{m\\cdot n}$', '$a^0 = 1 \\;(a\\neq 0)$', '$a^{-n} = \\dfrac{1}{a^n}$'] },
+        { kind: 'example', label: 'Przykład', text: '$2^3 \\cdot 2^4 = 2^7 = 128,\\quad \\dfrac{5^6}{5^4}=5^2=25$' },
+        { kind: 'tip', text: 'Potęga liczby ujemnej jest: ujemna gdy wykładnik jest nieparzysty, dodatnia gdy parzysty.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Pierwiastki i logarytmy',
+      items: [
+        { kind: 'rule', text: '$\\sqrt[n]{a}$ to liczba $x\\geq 0$ taka, że $x^n = a$. Logarytm: $\\log_a b = c \\Leftrightarrow a^c = b$.' },
+        { kind: 'formulas', items: ['$\\sqrt{a}\\cdot\\sqrt{b}=\\sqrt{ab}$', '$\\log_a(xy)=\\log_a x + \\log_a y$', '$\\log_a(x^k)=k\\log_a x$', '$\\log_a a = 1,\\quad \\log_a 1=0$'] },
+        { kind: 'example', label: 'Przykład', text: '$\\sqrt{12}=2\\sqrt{3},\\quad \\log_2 32 = 5$, bo $2^5=32$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Ile wynosi $\\dfrac{3^7}{3^5}$?',
+      answers: ['$243$','$9$','$3$','$27$'], correct: 1,
+      explanation: '$\\dfrac{3^7}{3^5}=3^{7-5}=3^2=9$. Przy dzieleniu potęg o tej samej podstawie odejmujemy wykładniki.'
+    },
+    {
+      type: 'question', text: 'Wartość wyrażenia $\\log_4 64$ wynosi:',
+      answers: ['$2$','$3$','$4$','$16$'], correct: 1,
+      explanation: '$\\log_4 64 = 3$, bo $4^3 = 64$. Z definicji logarytmu: jeśli $a^c=b$, to $\\log_a b = c$.'
+    },
+    {
+      type: 'question', text: 'Które zdanie jest prawdziwe dla $a>0, a\\neq 1$?',
+      answers: ['$a^0 = 0$','$a^{-1}=\\frac{1}{a}$','$\\log_a 0 = 1$','$a^{1/2} = a^2$'], correct: 1,
+      explanation: '$a^{-1}=\\frac{1}{a}$ wynika wprost z definicji potęgi o wykładniku ujemnym. Pozostałe zdania są fałszywe: $a^0=1$, $\\log_a 0$ nie istnieje, $a^{1/2}=\\sqrt{a}$.'
+    }
+  ]
+},
+/* ================================================ MODULE 1 */
+{
+  meta: { icon: 'fa-x', color: '#ec4899', title: 'Wyrażenia algebraiczne', desc: 'Wzory skróconego mnożenia, faktoryzacja, NWD, NWW, wielomiany.', badge: 1 },
+  steps: [
+    {
+      type: 'theory', title: 'Wzory skróconego mnożenia',
+      items: [
+        { kind: 'rule', text: 'Trzy kluczowe wzory, których musisz używać w obie strony (rozwijanie i faktoryzacja):' },
+        { kind: 'formulas', items: ['$(a+b)^2 = a^2+2ab+b^2$','$(a-b)^2 = a^2-2ab+b^2$','$(a+b)(a-b) = a^2-b^2$'] },
+        { kind: 'example', label: 'Rozwijanie', text: '$(x+3)^2 = x^2+6x+9$' },
+        { kind: 'example', label: 'Faktoryzacja', text: '$x^2-25 = (x-5)(x+5)$' },
+        { kind: 'tip', text: 'Różnica kwadratów jest najczęściej używana do upraszczania ułamków algebraicznych.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Wielomiany i dzielenie',
+      items: [
+        { kind: 'rule', text: 'Wielomian stopnia $n$: $W(x) = a_n x^n + \\ldots + a_1 x + a_0,\\;a_n\\neq 0$.' },
+        { kind: 'rule', text: 'Twierdzenie Bezouta: $W(a) = 0 \\Leftrightarrow (x-a)$ dzieli $W(x)$.' },
+        { kind: 'example', label: 'Przykład', text: '$W(x) = x^2 - 3x + 2$. $W(1)=0$, więc $(x-1)$ jest dzielnikiem. Faktoring: $(x-1)(x-2)$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Wynik $(2x+3)^2 - (2x-3)^2$ to:',
+      answers: ['$24x$','$8x^2+9$','$24$','$0$'], correct: 0,
+      explanation: '$(2x+3)^2=(4x^2+12x+9)$, $(2x-3)^2=(4x^2-12x+9)$. Różnica: $24x$. Szybciej: $(a+b)^2-(a-b)^2=4ab=4\\cdot 2x\\cdot 3=24x$.'
+    },
+    {
+      type: 'question', text: 'Wyraz wolny w $W(x)=x^3-4x^2+3x-7$ wynosi:',
+      answers: ['$1$','$3$','$-4$','$-7$'], correct: 3,
+      explanation: 'Wyraz wolny to $a_0$, czyli wartość wielomianu dla $x=0$: $W(0)=-7$.'
+    },
+    {
+      type: 'question', text: '$x^2 - 16$ jest równe:',
+      answers: ['$(x-4)^2$','$(x+4)(x-4)$','$(x-8)^2$','$(x+8)(x-8)$'], correct: 1,
+      explanation: '$x^2-16 = x^2-4^2 = (x+4)(x-4)$. Jest to różnica kwadratów: $a^2-b^2=(a+b)(a-b)$.'
+    }
+  ]
+},
+/* ================================================ MODULE 2 */
+{
+  meta: { icon: 'fa-equals', color: '#10b981', title: 'Równania i nierówności', desc: 'Równania liniowe, kwadratowe, układy równań, nierówności z wartością bezwzględną.', badge: 2 },
+  steps: [
+    {
+      type: 'theory', title: 'Równania kwadratowe',
+      items: [
+        { kind: 'rule', text: 'Równanie kwadratowe: $ax^2+bx+c=0,\\; a\\neq 0$. Rozwiązanie:' },
+        { kind: 'formulas', items: ['$\\Delta = b^2-4ac$','$x_{1,2} = \\dfrac{-b\\pm\\sqrt{\\Delta}}{2a}$','$\\Delta>0$: dwa rozwiązania','$\\Delta=0$: jedno (podwójne) rozwiązanie','$\\Delta<0$: brak rozwiązań rzeczywistych'] },
+        { kind: 'example', label: 'Przykład', text: '$2x^2-5x+3=0$. $\\Delta=25-24=1$. $x=\\frac{5\\pm 1}{4}$, więc $x_1=\\frac{3}{2},\\;x_2=1$.' },
+        { kind: 'tip', text: 'Wzory Viète\'a: $x_1+x_2=-\\frac{b}{a},\\quad x_1\\cdot x_2=\\frac{c}{a}$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Nierówności i wartość bezwzględna',
+      items: [
+        { kind: 'rule', text: 'Przy mnożeniu / dzieleniu nierówności przez liczbę ujemną kierunek nierówności się odwraca!' },
+        { kind: 'formulas', items: ['$|x|<a \\Leftrightarrow -a<x<a$','$|x|>a \\Leftrightarrow x<-a \\text{ lub } x>a$','$|x|=a \\Leftrightarrow x=a \\text{ lub } x=-a$'] },
+        { kind: 'example', label: 'Przykład', text: '$|2x-1|<5 \\Rightarrow -5<2x-1<5 \\Rightarrow -2<x<3$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Wyróżnik równania $3x^2-12=0$ wynosi:',
+      answers: ['$144$','$0$','$12$','$-12$'], correct: 0,
+      explanation: '$a=3,b=0,c=-12$. $\\Delta=0^2-4\\cdot 3\\cdot(-12)=144$. Mamy dwa rozwiązania: $x=\\pm 2$.'
+    },
+    {
+      type: 'question', text: 'Rozwiązaniem nierówności $-3x+6>0$ jest:',
+      answers: ['$x>2$','$x<2$','$x>-2$','$x<-2$'], correct: 1,
+      explanation: '$-3x>-6$. Dzielimy przez $-3$ i zmieniamy kierunek: $x<2$.'
+    },
+    {
+      type: 'question', text: 'Suma rozwiązań równania $x^2-7x+10=0$ (wzór Viète\'a):',
+      answers: ['$10$','$7$','$-7$','$-10$'], correct: 1,
+      explanation: 'Wzór Viète\'a: $x_1+x_2=-\\frac{b}{a}=-\\frac{-7}{1}=7$. Sprawdzenie: $x_1=2,x_2=5,\\;2+5=7$.'
+    }
+  ]
+},
+/* ================================================ MODULE 3 */
+{
+  meta: { icon: 'fa-chart-line', color: '#f59e0b', title: 'Funkcje', desc: 'Dziedzina, zbiór wartości, monotoniczność, symetria, przekształcenia wykresów.', badge: 3 },
+  steps: [
+    {
+      type: 'theory', title: 'Podstawowe pojęcia o funkcjach',
+      items: [
+        { kind: 'rule', text: 'Funkcja przypisuje każdemu elementowi dziedziny $D_f$ dokładnie jeden element zbioru wartości $Z_f$.' },
+        { kind: 'formulas', items: ['Dziedzina: wartości $x$, dla których $f(x)$ istnieje','Zbiór wartości: wszystkie możliwe $f(x)$','Funkcja parzysta: $f(-x)=f(x)$ (symetria wzgl. osi $OY$)','Funkcja nieparzysta: $f(-x)=-f(x)$ (symetria wzgl. punktu $O$)'] },
+        { kind: 'example', label: 'Dziedzina $f(x)=\\frac{1}{x-2}$', text: 'Mianownik $\\neq 0$: $x-2\\neq 0 \\Rightarrow x\\neq 2$. $D_f = \\mathbb{R}\\setminus\\{2\\}$.' },
+        { kind: 'tip', text: 'Dziedzina pierwiastka: $f(x)=\\sqrt{g(x)}$ — szukamy $g(x)\\geq 0$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Przekształcenia wykresów',
+      items: [
+        { kind: 'rule', text: 'Znajomość przekształceń pozwala szybko szkicować wykresy.' },
+        { kind: 'formulas', items: ['$f(x)+c$: przesunięcie o $c$ w górę','$f(x-c)$: przesunięcie o $c$ w prawo','$-f(x)$: odbicie wzgl. osi $OX$','$f(-x)$: odbicie wzgl. osi $OY$','$|f(x)|$: ujemne wartości "odwracamy" do góry'] },
+        { kind: 'example', label: 'Przykład', text: 'Wykres $y=(x-2)^2+1$ to parabola $y=x^2$ przesunięta o 2 w prawo i 1 do góry.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Dziedzina funkcji $f(x)=\\sqrt{3-x}$ to:',
+      answers: ['$[3,+\\infty)$','$(-\\infty,3]$','$\\mathbb{R}$','$(3,+\\infty)$'], correct: 1,
+      explanation: 'Potrzebujemy $3-x\\geq 0 \\Rightarrow x\\leq 3$. Dziedzina: $(-\\infty,3]$.'
+    },
+    {
+      type: 'question', text: 'Funkcja $f(x)=x^3$ jest:',
+      answers: ['Parzysta','Rosnąca i parzysta','Nieparzysta','Stała'], correct: 2,
+      explanation: '$f(-x)=(-x)^3=-x^3=-f(x)$, więc $f$ jest nieparzysta (symetria środkowa). Dodatkowo $f$ jest rosnąca na $\\mathbb{R}$.'
+    },
+    {
+      type: 'question', text: 'Przesunięcie wykresu $y=x^2$ o 3 w lewo i 2 w dół to:',
+      answers: ['$y=(x+3)^2-2$','$y=(x-3)^2+2$','$y=(x+3)^2+2$','$y=(x-3)^2-2$'], correct: 0,
+      explanation: 'Przesunięcie o 3 w lewo: $x\\to x+3$. Przesunięcie o 2 w dół: $-2$. Wynik: $y=(x+3)^2-2$.'
+    }
+  ]
+},
+/* ================================================ MODULE 4 */
+{
+  meta: { icon: 'fa-bezier-curve', color: '#8b5cf6', title: 'Funkcja kwadratowa', desc: 'Parabola, wierzchołek, miejsca zerowe, postaci funkcji kwadratowej.', badge: 4 },
+  steps: [
+    {
+      type: 'theory', title: 'Trzy postaci funkcji kwadratowej',
+      items: [
+        { kind: 'rule', text: 'Funkcja kwadratowa $f(x)=ax^2+bx+c$ ($a\\neq 0$) może być zapisana w trzech postaciach:' },
+        { kind: 'formulas', items: ['Ogólna: $f(x)=ax^2+bx+c$','Kanoniczna: $f(x)=a(x-p)^2+q$ gdzie $p=-\\frac{b}{2a},\\;q=f(p)=-\\frac{\\Delta}{4a}$','Iloczynowa (gdy $\\Delta>0$): $f(x)=a(x-x_1)(x-x_2)$'] },
+        { kind: 'example', label: 'Przykład', text: '$f(x)=x^2-4x+3$. $p=2,q=-1$. Postać kan.: $(x-2)^2-1$. Postać ilocz.: $(x-1)(x-3)$.' },
+        { kind: 'tip', text: 'Parabola skierowana: w górę gdy $a>0$, w dół gdy $a<0$. Wierzchołek to minimum/maksimum.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Liczba miejsc zerowych',
+      items: [
+        { kind: 'formulas', items: ['$\\Delta > 0$: dwa miejsca zerowe $x_1,x_2$','$\\Delta = 0$: jedno m. zerowe (podwójne) $x_0=-\\frac{b}{2a}$','$\\Delta < 0$: brak miejsc zerowych'] },
+        { kind: 'example', label: 'Wyznacz $m$, aby $x^2+2x+m=0$ miało dwa rozw.', text: '$\\Delta=4-4m>0 \\Rightarrow m<1$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Wierzchołek paraboli $y=2x^2-8x+5$ to:',
+      answers: ['$(2,-3)$','$(-2,-3)$','$(4,5)$','$(2,5)$'], correct: 0,
+      explanation: '$p=-\\frac{-8}{2\\cdot 2}=2$. $q=2\\cdot 4-8\\cdot 2+5=8-16+5=-3$. Wierzchołek: $(2,-3)$.'
+    },
+    {
+      type: 'question', text: 'Parabola $y=-x^2+3x-4$ ma:',
+      answers: ['Dwa miejsca zerowe','Jedno miejsce zerowe','Brak miejsc zerowych','Nieskończenie wiele miejsc zerowych'], correct: 2,
+      explanation: '$\\Delta=9-16=-7<0$. Brak miejsc zerowych. Parabola skierowana w dół ($a=-1<0$), maximum jest poniżej osi $OX$.'
+    },
+    {
+      type: 'question', text: 'Zapis $f(x)=3(x-1)(x+5)$ to postać:',
+      answers: ['Ogólna','Kanoniczna','Iloczynowa','Wartości maksymalnej'], correct: 2,
+      explanation: 'Postać iloczynowa: $f(x)=a(x-x_1)(x-x_2)$, tutaj $a=3,x_1=1,x_2=-5$. Można odczytać miejsca zerowe: $x=1$ i $x=-5$.'
+    }
+  ]
+},
+/* ================================================ MODULE 5 */
+{
+  meta: { icon: 'fa-infinity', color: '#06b6d4', title: 'Ciągi', desc: 'Ciąg arytmetyczny i geometryczny, sumy, warunki, monotoniczność.', badge: 5 },
+  steps: [
+    {
+      type: 'theory', title: 'Ciąg arytmetyczny',
+      items: [
+        { kind: 'rule', text: 'Ciąg arytmetyczny ma stałą różnicę $r = a_{n+1}-a_n$ między kolejnymi wyrazami.' },
+        { kind: 'formulas', items: ['$a_n = a_1 + (n-1)r$','$S_n = \\dfrac{(a_1+a_n)\\cdot n}{2}$','$S_n = \\dfrac{n(2a_1+(n-1)r)}{2}$'] },
+        { kind: 'example', label: 'Przykład', text: '$a_1=3, r=4$. $a_{10}=3+9\\cdot 4=39$. $S_{10}=\\frac{(3+39)\\cdot 10}{2}=210$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Ciąg geometryczny',
+      items: [
+        { kind: 'rule', text: 'Ciąg geometryczny ma stały iloraz $q = \\frac{a_{n+1}}{a_n}$ między kolejnymi wyrazami.' },
+        { kind: 'formulas', items: ['$a_n = a_1 \\cdot q^{n-1}$','$S_n = a_1\\cdot\\dfrac{q^n-1}{q-1}\\;(q\\neq 1)$','$S_\\infty = \\dfrac{a_1}{1-q}\\;(|q|<1)$'] },
+        { kind: 'example', label: 'Przykład', text: '$a_1=2, q=3$. $a_5=2\\cdot 3^4=162$. $S_4=2\\cdot\\frac{81-1}{2}=80$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'W ciągu arytmetycznym $a_1=5, r=-2$. $a_7$ wynosi:',
+      answers: ['$-9$','$-7$','$17$','$7$'], correct: 1,
+      explanation: '$a_7=5+(7-1)(-2)=5-12=-7$. Sprawdzenie: $5,3,1,-1,-3,-5,-7\\checkmark$'
+    },
+    {
+      type: 'question', text: 'Suma 10 wyrazów ciągu arytm.: $a_1=1, a_{10}=19$:',
+      answers: ['$190$','$100$','$90$','$200$'], correct: 1,
+      explanation: '$S_{10}=\\frac{(1+19)\\cdot 10}{2}=\\frac{200}{2}=100$.'
+    },
+    {
+      type: 'question', text: 'Ciąg geometryczny: $a_1=4, q=\\frac{1}{2}$. Suma nieskończona:',
+      answers: ['$2$','$4$','$8$','$\\infty$'], correct: 2,
+      explanation: '$|q|=\\frac{1}{2}<1$, więc suma nieskończona istnieje. $S_\\infty=\\frac{4}{1-\\frac{1}{2}}=\\frac{4}{\\frac{1}{2}}=8$.'
+    }
+  ]
+},
+/* ================================================ MODULE 6 */
+{
+  meta: { icon: 'fa-circle', color: '#f97316', title: 'Trygonometria', desc: 'Sinus, cosinus, tangens, kąty, wzory trygonometryczne, twierdzenia.', badge: 6 },
+  steps: [
+    {
+      type: 'theory', title: 'Definicje i kąty szczególne',
+      items: [
+        { kind: 'rule', text: 'Dla kąta ostrego $\\alpha$ w trójkącie prostokątnym:' },
+        { kind: 'formulas', items: ['$\\sin\\alpha = \\dfrac{\\text{przeciwp.}}{\\text{przeciwprosk.}}$', '$\\cos\\alpha = \\dfrac{\\text{przylegl.}}{\\text{przeciwprosk.}}$', '$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha} = \\dfrac{\\text{przeciwp.}}{\\text{przylegl.}}$'] },
+        { kind: 'example', label: 'Tabela kątów szczególnych', text: '| $\\alpha$ | $30°$ | $45°$ | $60°$ | $90°$ |\n|---|---|---|---|---|\n| $\\sin$ | $\\frac{1}{2}$ | $\\frac{\\sqrt{2}}{2}$ | $\\frac{\\sqrt{3}}{2}$ | $1$ |\n| $\\cos$ | $\\frac{\\sqrt{3}}{2}$ | $\\frac{\\sqrt{2}}{2}$ | $\\frac{1}{2}$ | $0$ |' },
+        { kind: 'tip', text: 'Jedynka trygonometryczna: $\\sin^2\\alpha + \\cos^2\\alpha = 1$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Twierdzenie sinusów i cosinusów',
+      items: [
+        { kind: 'formulas', items: ['Tw. sinusów: $\\dfrac{a}{\\sin\\alpha}=\\dfrac{b}{\\sin\\beta}=\\dfrac{c}{\\sin\\gamma}=2R$','Tw. cosinusów: $c^2=a^2+b^2-2ab\\cos\\gamma$','Pole trójkąta: $P=\\dfrac{1}{2}ab\\sin\\gamma$'] },
+        { kind: 'example', label: 'Przykład', text: 'Trójkąt: $a=7,b=8,\\gamma=60°$. $P=\\frac{1}{2}\\cdot 7\\cdot 8\\cdot\\frac{\\sqrt{3}}{2}=14\\sqrt{3}$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Wartość $\\sin^2 30° + \\cos^2 30°$:',
+      answers: ['$\\frac{1}{2}$','$\\frac{3}{4}$','$1$','$\\frac{5}{4}$'], correct: 2,
+      explanation: 'Jedynka trygonometryczna: $\\sin^2\\alpha+\\cos^2\\alpha=1$ dla każdego $\\alpha$. Odpowiedź to zawsze $1$.'
+    },
+    {
+      type: 'question', text: 'W trójkącie prostokątnym: przeciwprostokątna $=10$, przyprostokątna $=6$. $\\sin\\alpha=$',
+      answers: ['$\\frac{3}{5}$','$\\frac{4}{5}$','$\\frac{3}{4}$','$\\frac{6}{10}$'], correct: 0,
+      explanation: '$\\sin\\alpha=\\frac{\\text{przeciw.}}{\\text{przeciwprosk.}}=\\frac{6}{10}=\\frac{3}{5}$. Odpowiedź A jest równoważna $\\frac{6}{10}$ (uproszczona).'
+    },
+    {
+      type: 'question', text: 'Pole trójkąta o bokach $a=6, b=8$ i kącie między nimi $30°$:',
+      answers: ['$24\\sqrt{3}$','$12$','$24$','$12\\sqrt{3}$'], correct: 1,
+      explanation: '$P=\\frac{1}{2}ab\\sin\\gamma=\\frac{1}{2}\\cdot 6\\cdot 8\\cdot\\sin 30°=24\\cdot\\frac{1}{2}=12$.'
+    }
+  ]
+},
+/* ================================================ MODULE 7 */
+{
+  meta: { icon: 'fa-shapes', color: '#6366f1', title: 'Planimetria', desc: 'Pola i obwody: trójkąt, czworokąty, koło. Twierdzenie Pitagorasa, okrąg.', badge: 7 },
+  steps: [
+    {
+      type: 'theory', title: 'Pola i obwody – kluczowe wzory',
+      items: [
+        { kind: 'formulas', items: ['Trójkąt: $P=\\frac{1}{2}ah$, $P=\\frac{abc}{4R}$','Trapez: $P=\\frac{(a+b)h}{2}$','Romb: $P=\\frac{d_1 d_2}{2}$','Koło: $P=\\pi r^2$, $L=2\\pi r$','Pierścień: $P=\\pi(R^2-r^2)$'] },
+        { kind: 'rule', text: 'Twierdzenie Pitagorasa: $a^2+b^2=c^2$, gdzie $c$ to przeciwprostokątna.' },
+        { kind: 'example', label: 'Trójkąt równoboczny $a=6$', text: '$h=\\frac{a\\sqrt{3}}{2}=3\\sqrt{3}$, $P=\\frac{36\\sqrt{3}}{4}=9\\sqrt{3}$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Okrąg wpisany i opisany',
+      items: [
+        { kind: 'formulas', items: ['Okrąg opisany na trójkącie: $R=\\frac{abc}{4P}$','Okrąg wpisany w trójkąt: $r=\\frac{P}{s}$, gdzie $s=\\frac{a+b+c}{2}$','Trójkąt prostokątny: $R=\\frac{c}{2}$ (c — przeciwprosk.)'] },
+        { kind: 'example', label: 'Przykład', text: 'Trójkąt prostokątny $3,4,5$: $R=\\frac{5}{2}=2{,}5$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Pole trapezu o podstawach $a=10, b=6$ i wysokości $h=4$:',
+      answers: ['$32$','$40$','$24$','$64$'], correct: 0,
+      explanation: '$P=\\frac{(10+6)\\cdot 4}{2}=\\frac{64}{2}=32$.'
+    },
+    {
+      type: 'question', text: 'Przekątna kwadratu o polu $P=50$:',
+      answers: ['$5\\sqrt{2}$','$10$','$25$','$5$'], correct: 1,
+      explanation: '$P=a^2=50 \\Rightarrow a=5\\sqrt{2}$. Przekątna: $d=a\\sqrt{2}=5\\sqrt{2}\\cdot\\sqrt{2}=10$.'
+    },
+    {
+      type: 'question', text: 'Wycinek koła o $r=6$, kąt środkowy $120°$. Pole:',
+      answers: ['$12\\pi$','$24\\pi$','$4\\pi$','$6\\pi$'], correct: 0,
+      explanation: '$P=\\frac{120°}{360°}\\pi r^2=\\frac{1}{3}\\cdot\\pi\\cdot 36=12\\pi$.'
+    }
+  ]
+},
+/* ================================================ MODULE 8 */
+{
+  meta: { icon: 'fa-cube', color: '#db2777', title: 'Stereometria', desc: 'Graniastosłupy, ostrosłupy, walec, stożek, kula – objętości i pola.', badge: 8 },
+  steps: [
+    {
+      type: 'theory', title: 'Bry obrotowe',
+      items: [
+        { kind: 'formulas', items: ['Walec: $V=\\pi r^2 h$, $P_c=2\\pi r h+2\\pi r^2$','Stożek: $V=\\frac{1}{3}\\pi r^2 h$, $P_b=\\pi r l$, $l=\\sqrt{r^2+h^2}$','Kula: $V=\\frac{4}{3}\\pi r^3$, $P=4\\pi r^2$'] },
+        { kind: 'example', label: 'Walec: $r=3, h=10$', text: '$V=9\\pi\\cdot 10=90\\pi$,\\quad $P_c=60\\pi+18\\pi=78\\pi$.' },
+        { kind: 'example', label: 'Stożek: $r=4, h=3$', text: '$l=\\sqrt{16+9}=5$. $V=\\frac{1}{3}\\pi\\cdot 16\\cdot 3=16\\pi$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Ostrosłupy i graniastosłupy',
+      items: [
+        { kind: 'formulas', items: ['Graniastosłup prosty: $V=P_p\\cdot H$','Ostrosłup: $V=\\frac{1}{3}P_p\\cdot H$','Sześcian ($a$): $V=a^3$, $P_c=6a^2$, przekątna $=a\\sqrt{3}$','Graniastosłup prawidłowy 3-kątny: $P_p=\\frac{a^2\\sqrt{3}}{4}$'] },
+        { kind: 'example', label: 'Przykład', text: 'Ostrosłup 4-kątny prawidłowy $a=6,H=4$: $V=\\frac{1}{3}\\cdot 36\\cdot 4=48$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Objętość stożka o $r=6, h=4$:',
+      answers: ['$48\\pi$','$144\\pi$','$72\\pi$','$36\\pi$'], correct: 0,
+      explanation: '$V=\\frac{1}{3}\\pi r^2 h=\\frac{1}{3}\\pi\\cdot 36\\cdot 4=48\\pi$.'
+    },
+    {
+      type: 'question', text: 'Kula o $r=3$. Pole powierzchni:',
+      answers: ['$9\\pi$','$36\\pi$','$12\\pi$','$27\\pi$'], correct: 1,
+      explanation: '$P=4\\pi r^2=4\\pi\\cdot 9=36\\pi$.'
+    },
+    {
+      type: 'question', text: 'Przekątna sześcianu o krawędzi $a=4$:',
+      answers: ['$4\\sqrt{2}$','$4\\sqrt{3}$','$8$','$4$'], correct: 1,
+      explanation: 'Przekątna sześcianu: $d=a\\sqrt{3}=4\\sqrt{3}$. (Przekątna ściany to $a\\sqrt{2}$, a sześcianu to $a\\sqrt{3}$.)'
+    }
+  ]
+},
+/* ================================================ MODULE 9 */
+{
+  meta: { icon: 'fa-chart-bar', color: '#14b8a6', title: 'Statystyka i Prawdopodobieństwo', desc: 'Kombinatoryka, prawdopodobieństwo, średnia, mediana, odchylenie standardowe.', badge: 9 },
+  steps: [
+    {
+      type: 'theory', title: 'Kombinatoryka',
+      items: [
+        { kind: 'rule', text: 'Trzy podstawowe pojęcia kombinatoryczne:' },
+        { kind: 'formulas', items: ['Permutacja: $P_n=n!$ (kolejność ważna, bez powtórzeń)','Kombinacja: $\\binom{n}{k}=\\frac{n!}{k!(n-k)!}$ (wybór, kolejność nieważna)','Wariacja: $V_n^k=\\frac{n!}{(n-k)!}$ (kolejność ważna, bez powtórzeń)'] },
+        { kind: 'example', label: 'Przykład', text: 'Na ile sposobów wybrać 3-os. komisję z 8 osób? $\\binom{8}{3}=56$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Prawdopodobieństwo i statystyka',
+      items: [
+        { kind: 'formulas', items: ['$P(A)=\\frac{|A|}{|\\Omega|}$ (prawdopodobieństwo klasyczne)','$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$','Średnia: $\\bar{x}=\\frac{x_1+\\ldots+x_n}{n}$','Mediana: środkowy wyraz uporzadkowanego ciągu'] },
+        { kind: 'example', label: 'Przykład', text: 'Kostka 6-ścienna: $P(>4)=P(\\{5,6\\})=\\frac{2}{6}=\\frac{1}{3}$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Na ile sposobów można ustawić 5 osób w rzędzie?',
+      answers: ['$25$','$120$','$10$','$60$'], correct: 1,
+      explanation: '$P_5=5!=5\\cdot 4\\cdot 3\\cdot 2\\cdot 1=120$. Permutacja: każdą z 5 osób stawiamy kolejno, kurczą się możliwości.'
+    },
+    {
+      type: 'question', text: 'Ze zbioru $\\{1,2,3,4,5,6\\}$ losujemy 1 element. $P$(liczba pierwsza):',
+      answers: ['$\\frac{1}{2}$','$\\frac{1}{3}$','$\\frac{2}{3}$','$\\frac{1}{6}$'], correct: 0,
+      explanation: 'Liczby pierwsze w zbiorze: $\\{2,3,5\\}$ — 3 elementy. $P=\\frac{3}{6}=\\frac{1}{2}$.'
+    },
+    {
+      type: 'question', text: 'Mediana zbioru $\\{3,1,9,7,5\\}$:',
+      answers: ['$5$','$3$','$7$','$4{,}4$'], correct: 0,
+      explanation: 'Porządkujemy: $\\{1,3,5,7,9\\}$. Mediana = środkowy wyraz = $5$.'
+    }
+  ]
+}
+];
+
+/* =====================================================
+   STATE
+   ===================================================== */
+var state = {
+  xp: 0, streak: 0, modProgress: {},
+  load() {
+    try { var s=JSON.parse(localStorage.getItem('kurs_state')||'{}'); if(s.xp)this.xp=s.xp; if(s.streak)this.streak=s.streak; if(s.modProgress)this.modProgress=s.modProgress; } catch(e){}
+  },
+  save() { localStorage.setItem('kurs_state', JSON.stringify({xp:this.xp,streak:this.streak,modProgress:this.modProgress})); }
+};
+
+var lesson = { modIdx: 0, stepIdx: 0, answered: false, sessionXP: 0, sessionStreak: 0 };
+
+/* =====================================================
+   INIT
+   ===================================================== */
+function init() {
+  state.load();
+  buildModules();
+  updateGlobalStats();
+}
+
+function buildModules() {
+  var grid = document.getElementById('modulesGrid');
+  grid.innerHTML = COURSE.map(function(mod, i) {
+    var prog = state.modProgress[i] || { done: 0, total: mod.steps.length };
+    var pct = Math.round((prog.done / mod.steps.length) * 100);
+    var isDone = pct >= 100;
+    return '<div class="mod-card' + (isDone?' done':'') + ' p-6" onclick="startLesson('+i+')">' +
+      '<div class="flex items-start justify-between mb-3">' +
+        '<div class="w-12 h-12 rounded-2xl flex items-center justify-center text-xl" style="background:' + hexToRgba(mod.meta.color,.12) + ';color:' + mod.meta.color + '">' +
+          '<i class="fa-solid ' + mod.meta.icon + '"></i>' +
+        '</div>' +
+        (isDone ? '<span class="text-emerald-500 text-xl"><i class="fa-solid fa-circle-check"></i></span>' : '<span class="text-gray-300 bg-gray-50 rounded-full px-2 py-0.5 text-xs font-bold">'+pct+'%</span>') +
+      '</div>' +
+      '<h3 class="font-black text-gray-900 text-lg mb-1">' + mod.meta.title + '</h3>' +
+      '<p class="text-gray-500 text-sm mb-4 leading-relaxed">' + mod.meta.desc + '</p>' +
+      '<div class="flex items-center justify-between mb-2">' +
+        '<span class="text-xs text-gray-500">' + prog.done + ' / ' + mod.steps.length + ' kroków</span>' +
+        '<div class="flex gap-1">' + renderStars(pct) + '</div>' +
+      '</div>' +
+      '<div class="mod-progress"><div class="mod-progress-bar" style="width:'+pct+'%;background:linear-gradient(90deg,'+mod.meta.color+','+adjustColor(mod.meta.color)+')"></div></div>' +
+      '<div class="mt-3 flex items-center gap-2">' +
+        '<span class="text-xs font-semibold px-2 py-0.5 rounded-full badge-'+mod.meta.badge+'">' + mod.meta.title + '</span>' +
+        '<span class="text-xs text-gray-400">' + mod.steps.filter(function(s){return s.type==='theory'}).length + ' slajdy teorii &bull; ' + mod.steps.filter(function(s){return s.type==='question'}).length + ' zadania</span>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
+function renderStars(pct) {
+  var filled = pct >= 100 ? 3 : pct >= 50 ? 2 : pct > 0 ? 1 : 0;
+  var html = '';
+  for (var i = 0; i < 3; i++) {
+    html += '<i class="fa-' + (i < filled ? 'solid' : 'regular') + ' fa-star text-xs ' + (i < filled ? 'text-amber-400' : 'text-gray-300') + '"></i>';
+  }
+  return html;
+}
+
+function hexToRgba(hex, a) {
+  var r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
+  return 'rgba('+r+','+g+','+b+','+a+')';
+}
+function adjustColor(hex) {
+  // lighten slightly
+  var r=Math.min(255,parseInt(hex.slice(1,3),16)+40);
+  var g=Math.min(255,parseInt(hex.slice(3,5),16)+40);
+  var b=Math.min(255,parseInt(hex.slice(5,7),16)+40);
+  return '#'+[r,g,b].map(function(x){return x.toString(16).padStart(2,'0')}).join('');
+}
+
+/* =====================================================
+   LESSON
+   ===================================================== */
+function startLesson(modIdx) {
+  lesson.modIdx = modIdx;
+  lesson.stepIdx = 0;
+  lesson.sessionXP = 0;
+  lesson.sessionStreak = 0;
+  document.getElementById('mainPage').style.display = 'none';
+  var shell = document.getElementById('lessonShell');
+  shell.style.display = 'block';
+  shell.scrollTop = 0;
+  document.getElementById('lessonModTitle').textContent = COURSE[modIdx].meta.title;
+  renderStep();
+}
+
+function closeLesson() {
+  document.getElementById('lessonShell').style.display = 'none';
+  document.getElementById('mainPage').style.display = 'block';
+  buildModules();
+  updateGlobalStats();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderStep() {
+  var mod = COURSE[lesson.modIdx];
+  var step = mod.steps[lesson.stepIdx];
+  var total = mod.steps.length;
+  lesson.answered = false;
+
+  // Step counter
+  document.getElementById('stepCounter').textContent = (lesson.stepIdx+1)+'/'+total;
+  document.getElementById('lessonXP').textContent = lesson.sessionXP + ' XP';
+  document.getElementById('lessonXPBar').style.width = Math.round((lesson.sessionXP / (mod.steps.length * 20)) * 100) + '%';
+
+  // Step dots
+  var dots = '';
+  var mini = '';
+  for (var i = 0; i < total; i++) {
+    var cls = i < lesson.stepIdx ? 'done' : i === lesson.stepIdx ? 'active' : 'todo';
+    dots += '<div class="step-dot ' + cls + '"></div>';
+    mini += '<div style="width:6px;height:6px;border-radius:50%;background:' + (i <= lesson.stepIdx ? '#3b82f6' : '#334155') + ';transition:background .3s"></div>';
+  }
+  document.getElementById('stepDots').innerHTML = dots;
+  document.getElementById('miniDots').innerHTML = mini;
+
+  // Prev/Next buttons
+  document.getElementById('btnPrev').style.visibility = lesson.stepIdx > 0 ? 'visible' : 'hidden';
+  var nextBtn = document.getElementById('btnNext');
+  if (lesson.stepIdx === total - 1) {
+    nextBtn.innerHTML = '<i class="fa-solid fa-flag-checkered"></i> Zakończ dział';
+    nextBtn.className = 'flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white transition font-bold text-sm px-6 py-2.5 rounded-xl';
+  } else {
+    nextBtn.innerHTML = 'Dalej <i class="fa-solid fa-arrow-right"></i>';
+    nextBtn.className = 'flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white transition font-bold text-sm px-6 py-2.5 rounded-xl';
+  }
+
+  // Render content
+  var html = '';
+  if (step.type === 'theory') {
+    html = renderTheory(step);
+  } else {
+    html = renderQuestion(step);
+  }
+  var content = document.getElementById('lessonContent');
+  content.innerHTML = html;
+  content.className = 'max-w-3xl mx-auto px-4 py-8 fade-in';
+
+  // KaTeX + canvas init
+  if (window.renderMathInElement) renderMathInElement(content, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError:false });
+  if (step.type === 'question') initCanvas();
+
+  // Scroll to top of lesson
+  document.getElementById('lessonShell').scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderTheory(step) {
+  var html = '<div class="theory-card fade-in">' +
+    '<div class="flex items-center gap-3 mb-6">' +
+      '<div class="w-10 h-10 bg-blue-500/20 rounded-xl flex items-center justify-center text-blue-400"><i class="fa-solid fa-book-open"></i></div>' +
+      '<div><p class="text-xs text-blue-400 font-semibold uppercase tracking-wider">Teoria</p><h2>' + step.title + '</h2></div>' +
+    '</div>';
+  step.items.forEach(function(item) {
+    if (item.kind === 'rule') {
+      html += '<div class="theory-block"><p class="text-slate-200">' + item.text + '</p></div>';
+    } else if (item.kind === 'formulas') {
+      html += '<div class="theory-formula">' + item.items.map(function(f){ return '<div style="padding:.3rem 0">' + f + '</div>'; }).join('') + '</div>';
+    } else if (item.kind === 'example') {
+      html += '<div class="theory-example"><p class="text-cyan-300 text-xs font-bold uppercase mb-2"><i class="fa-solid fa-lightbulb mr-1"></i>' + item.label + '</p><p class="text-slate-200">' + item.text + '</p></div>';
+    } else if (item.kind === 'tip') {
+      html += '<div style="background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);border-radius:.75rem;padding:1rem;margin:.5rem 0"><p class="text-amber-300 text-sm"><i class="fa-solid fa-star mr-1.5 text-amber-400"></i>' + item.text + '</p></div>';
+    }
+  });
+  html += '</div>';
+  return html;
+}
+
+function renderQuestion(step) {
+  var letters = ['A','B','C','D'];
+  var html = '<div class="space-y-6 fade-in">' +
+    // Question header
+    '<div class="q-card">' +
+      '<div class="flex items-center gap-3 mb-5">' +
+        '<div class="w-10 h-10 bg-purple-500/20 rounded-xl flex items-center justify-center text-purple-400 flex-shrink-0"><i class="fa-solid fa-question"></i></div>' +
+        '<div><p class="text-xs text-purple-400 font-semibold uppercase tracking-wider">Zadanie zamknięte</p><p class="text-xs text-slate-400">Wybierz jedną odpowiedź</p></div>' +
+      '</div>' +
+      '<p class="text-slate-100 text-lg font-semibold leading-relaxed mb-6">' + step.text + '</p>' +
+      '<div class="space-y-3" id="answersContainer">' +
+        step.answers.map(function(ans, i) {
+          return '<button class="answer-btn" onclick="selectAnswer('+i+','+step.correct+')" id="ans-'+i+'">' +
+            '<span class="letter-badge">' + letters[i] + '</span>' +
+            '<span>' + ans + '</span>' +
+          '</button>';
+        }).join('') +
+      '</div>' +
+      '<div id="explanation" style="display:none" class="explanation mt-4"></div>' +
+    '</div>' +
+    // Scratchpad
+    '<div>' +
+      '<div class="flex items-center justify-between mb-3">' +
+        '<div class="flex items-center gap-2">' +
+          '<i class="fa-solid fa-pen text-slate-400 text-sm"></i>' +
+          '<span class="text-slate-300 text-sm font-semibold">Brudnopis cyfrowy</span>' +
+        '</div>' +
+        '<div class="flex items-center gap-2">' +
+          '<button class="tool-btn active" id="toolPen" style="background:#1e3a8a;color:#93c5fd;border-color:#3b82f6" onclick="setTool(\'pen\')"><i class="fa-solid fa-pen"></i> Rysuj</button>' +
+          '<button class="tool-btn" id="toolEraser" style="background:#1c1917;color:#d6d3d1;border-color:#44403c" onclick="setTool(\'eraser\')"><i class="fa-solid fa-eraser"></i> Gumka</button>' +
+          '<div style="height:24px;width:1px;background:#334155"></div>' +
+          '<button class="tool-btn" style="background:#1c1917;color:#94a3b8;border-color:#475569" onclick="clearCanvas()"><i class="fa-solid fa-trash"></i></button>' +
+        '</div>' +
+      '</div>' +
+      // Color palette
+      '<div class="flex gap-2 mb-3">' +
+        ['#f1f5f9','#60a5fa','#34d399','#fbbf24','#f87171','#c084fc'].map(function(c) {
+          return '<button onclick="setColor(\''+c+'\')" style="width:24px;height:24px;border-radius:50%;background:'+c+';border:2px solid #1e293b;cursor:pointer" id="color-'+c.replace('#','')+'"></button>';
+        }).join('') +
+        '<!-- size -->' +
+        '<div style="height:24px;width:1px;background:#334155;margin:0 4px"></div>' +
+        '<button onclick="setSize(3)" class="tool-btn" style="background:#0f172a;color:#94a3b8;border-color:#334155;font-size:.65rem">S</button>' +
+        '<button onclick="setSize(6)" class="tool-btn" style="background:#0f172a;color:#94a3b8;border-color:#334155;font-size:.65rem">M</button>' +
+        '<button onclick="setSize(12)" class="tool-btn" style="background:#0f172a;color:#94a3b8;border-color:#334155;font-size:.65rem">L</button>' +
+      '</div>' +
+      '<div id="scratchWrap">' +
+        '<canvas id="scratch" width="800" height="280" style="width:100%;height:280px"></canvas>' +
+      '</div>' +
+    '</div>' +
+  '</div>';
+  return html;
+}
+
+/* =====================================================
+   ANSWER SELECTION
+   ===================================================== */
+function selectAnswer(chosen, correct) {
+  if (lesson.answered) return;
+  lesson.answered = true;
+  var letters = ['A','B','C','D'];
+  var buttons = document.querySelectorAll('.answer-btn');
+  var step = COURSE[lesson.modIdx].steps[lesson.stepIdx];
+
+  buttons.forEach(function(btn, i) {
+    btn.disabled = true;
+    if (i === correct) btn.classList.add('correct');
+    else if (i === chosen) btn.classList.add('wrong');
+  });
+
+  var isCorrect = chosen === correct;
+  var xpEarned = isCorrect ? 20 : 5;
+  lesson.sessionXP += xpEarned;
+  state.xp += xpEarned;
+
+  if (isCorrect) {
+    lesson.sessionStreak++;
+    state.streak++;
+    showXPPopup('+'+xpEarned+' XP', '#10b981');
+    playSound('correct');
+  } else {
+    state.streak = 0;
+    lesson.sessionStreak = 0;
+    showXPPopup('+'+xpEarned+' XP', '#f59e0b');
+    // Reveal correct
+    document.getElementById('ans-' + correct).classList.add('reveal');
+    playSound('wrong');
+  }
+
+  // Show explanation
+  var expEl = document.getElementById('explanation');
+  expEl.style.display = 'block';
+  expEl.innerHTML = '<div class="flex items-start gap-3"><div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ' +
+    (isCorrect ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-400') + '"><i class="fa-solid ' + (isCorrect ? 'fa-check' : 'fa-circle-info') + ' text-sm"></i></div>' +
+    '<div><p class="font-bold text-sm mb-1 ' + (isCorrect ? 'text-emerald-300' : 'text-amber-300') + '">' + (isCorrect ? 'Świetnie! Poprawna odpowiedź!' : 'Niepoprawnie – poprawna odpowiedź: ' + letters[correct]) + '</p>' +
+    '<p class="text-slate-300 text-sm leading-relaxed">' + step.explanation + '</p></div></div>';
+
+  if (window.renderMathInElement) renderMathInElement(expEl, { delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError:false });
+
+  // Update lesson XP bar
+  document.getElementById('lessonXP').textContent = lesson.sessionXP + ' XP';
+  document.getElementById('lessonXPBar').style.width = Math.min(100, Math.round((lesson.sessionXP / (COURSE[lesson.modIdx].steps.length * 20)) * 100)) + '%';
+
+  state.save();
+  updateGlobalStats();
+}
+
+function showXPPopup(text, color) {
+  var el = document.createElement('div');
+  el.textContent = text;
+  el.style.cssText = 'position:fixed;top:30%;left:50%;transform:translateX(-50%);background:' + color + ';color:#fff;padding:.5rem 1.5rem;border-radius:9999px;font-weight:900;font-size:1.1rem;z-index:999;pointer-events:none;animation:xpPop .8s ease-out forwards';
+  var style = document.createElement('style');
+  style.textContent = '@keyframes xpPop{0%{opacity:0;transform:translateX(-50%) scale(.7) translateY(0)}20%{opacity:1;transform:translateX(-50%) scale(1.1) translateY(-10px)}80%{opacity:1}100%{opacity:0;transform:translateX(-50%) scale(.9) translateY(-40px)}}';
+  document.head.appendChild(style);
+  document.body.appendChild(el);
+  setTimeout(function(){ el.remove(); style.remove(); }, 900);
+}
+
+function playSound(type) {
+  try {
+    var ctx = new (window.AudioContext || window.webkitAudioContext)();
+    var osc = ctx.createOscillator();
+    var gain = ctx.createGain();
+    osc.connect(gain); gain.connect(ctx.destination);
+    if (type === 'correct') {
+      osc.frequency.setValueAtTime(523, ctx.currentTime);
+      osc.frequency.setValueAtTime(659, ctx.currentTime + 0.1);
+      osc.frequency.setValueAtTime(784, ctx.currentTime + 0.2);
+    } else {
+      osc.frequency.setValueAtTime(300, ctx.currentTime);
+      osc.frequency.setValueAtTime(240, ctx.currentTime + 0.15);
+    }
+    gain.gain.setValueAtTime(0.15, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+    osc.start(ctx.currentTime); osc.stop(ctx.currentTime + 0.4);
+  } catch(e) {}
+}
+
+/* =====================================================
+   LESSON NAVIGATION
+   ===================================================== */
+function lessonNext() {
+  var mod = COURSE[lesson.modIdx];
+  var step = mod.steps[lesson.stepIdx];
+
+  // Save progress
+  var prog = state.modProgress[lesson.modIdx] || { done: 0, total: mod.steps.length };
+  if (lesson.stepIdx + 1 > prog.done) prog.done = lesson.stepIdx + 1;
+  state.modProgress[lesson.modIdx] = prog;
+  state.save();
+
+  if (lesson.stepIdx >= mod.steps.length - 1) {
+    // Module complete
+    finishModule();
+  } else {
+    if (step.type === 'question' && !lesson.answered) {
+      // Require answer before advancing
+      var btns = document.querySelectorAll('.answer-btn');
+      btns.forEach(function(b){ b.style.animation='shake .3s ease'; setTimeout(function(){ b.style.animation=''; },300); });
+      return;
+    }
+    lesson.stepIdx++;
+    renderStep();
+  }
+}
+
+function lessonPrev() {
+  if (lesson.stepIdx > 0) { lesson.stepIdx--; renderStep(); }
+}
+
+function finishModule() {
+  var mod = COURSE[lesson.modIdx];
+  state.modProgress[lesson.modIdx] = { done: mod.steps.length, total: mod.steps.length };
+  state.save();
+
+  // Check if all modules done
+  var allDone = COURSE.every(function(m, i) {
+    var p = state.modProgress[i];
+    return p && p.done >= m.steps.length;
+  });
+
+  var content = document.getElementById('lessonContent');
+  content.innerHTML = '<div class="text-center py-12 fade-in">' +
+    '<div class="text-7xl mb-6">' + (allDone ? '🏆' : '🎉') + '</div>' +
+    '<h2 class="text-3xl font-black text-white mb-3">Dział ukończony!</h2>' +
+    '<p class="text-slate-300 mb-2 text-lg">' + mod.meta.title + '</p>' +
+    '<div class="flex justify-center gap-2 text-3xl mb-8">' +
+      '<i class="fa-solid fa-star text-amber-400"></i>' +
+      '<i class="fa-solid fa-star text-amber-400"></i>' +
+      '<i class="fa-solid fa-star text-amber-400"></i>' +
+    '</div>' +
+    '<div class="bg-white/5 border border-white/10 rounded-2xl p-6 max-w-xs mx-auto mb-8">' +
+      '<div class="flex justify-around">' +
+        '<div><p class="text-2xl font-black text-amber-300">+'+lesson.sessionXP+'</p><p class="text-slate-400 text-xs">XP</p></div>' +
+        '<div><p class="text-2xl font-black text-cyan-300">'+lesson.sessionStreak+'</p><p class="text-slate-400 text-xs">poprawnych</p></div>' +
+        '<div><p class="text-2xl font-black text-emerald-300">100%</p><p class="text-slate-400 text-xs">postęp</p></div>' +
+      '</div>' +
+    '</div>' +
+    (allDone ? '<p class="text-cyan-300 font-bold mb-8 text-xl">🏆 Ukończyłeś CAŁY kurs! Jesteś mistrzem matematyki!</p>' : '') +
+    '<div class="flex flex-col sm:flex-row gap-3 justify-center">' +
+      '<button onclick="closeLesson()" class="px-8 py-3 bg-white/10 text-white rounded-xl font-bold hover:bg-white/20 transition border border-white/20">Wróć do działów</button>' +
+      (lesson.modIdx < COURSE.length - 1 ? '<button onclick="startLesson('+(lesson.modIdx+1)+')" class="px-8 py-3 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition">Następny dział <i class="fa-solid fa-arrow-right ml-1"></i></button>' : '') +
+    '</div>' +
+  '</div>';
+
+  document.getElementById('btnNext').style.display = 'none';
+  document.getElementById('btnPrev').style.display = 'none';
+
+  if (allDone) launchConfetti();
+  updateGlobalStats();
+}
+
+/* =====================================================
+   SCRATCHPAD
+   ===================================================== */
+var canvasState = { drawing: false, tool: 'pen', color: '#f1f5f9', size: 4, lastX: 0, lastY: 0 };
+
+function initCanvas() {
+  setTimeout(function() {
+    var canvas = document.getElementById('scratch');
+    if (!canvas) return;
+    var ctx = canvas.getContext('2d');
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#0f172a';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    drawCanvasGrid(ctx, canvas);
+
+    function getPos(e) {
+      var rect = canvas.getBoundingClientRect();
+      var scaleX = canvas.width / rect.width;
+      var scaleY = canvas.height / rect.height;
+      var src = e.touches ? e.touches[0] : e;
+      return { x: (src.clientX - rect.left) * scaleX, y: (src.clientY - rect.top) * scaleY };
+    }
+    function start(e) {
+      e.preventDefault();
+      canvasState.drawing = true;
+      var p = getPos(e); canvasState.lastX = p.x; canvasState.lastY = p.y;
+    }
+    function draw(e) {
+      if (!canvasState.drawing) return;
+      e.preventDefault();
+      var p = getPos(e);
+      ctx.beginPath();
+      if (canvasState.tool === 'eraser') {
+        ctx.strokeStyle = '#0f172a'; ctx.lineWidth = canvasState.size * 4;
+      } else {
+        ctx.strokeStyle = canvasState.color; ctx.lineWidth = canvasState.size;
+      }
+      ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+      ctx.moveTo(canvasState.lastX, canvasState.lastY);
+      ctx.lineTo(p.x, p.y);
+      ctx.stroke();
+      canvasState.lastX = p.x; canvasState.lastY = p.y;
+    }
+    function end() { canvasState.drawing = false; }
+
+    canvas.addEventListener('mousedown', start);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', end);
+    canvas.addEventListener('mouseleave', end);
+    canvas.addEventListener('touchstart', start, {passive:false});
+    canvas.addEventListener('touchmove', draw, {passive:false});
+    canvas.addEventListener('touchend', end);
+  }, 100);
+}
+
+function drawCanvasGrid(ctx, canvas) {
+  ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+  ctx.lineWidth = 1;
+  for (var x = 0; x < canvas.width; x += 30) {
+    ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke();
+  }
+  for (var y = 0; y < canvas.height; y += 30) {
+    ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke();
+  }
+}
+
+function setTool(t) {
+  canvasState.tool = t;
+  document.getElementById('toolPen').classList.toggle('active', t === 'pen');
+  document.getElementById('toolEraser').classList.toggle('active', t === 'eraser');
+}
+
+function setColor(c) {
+  canvasState.color = c;
+  // Highlight selected
+  document.querySelectorAll('[id^="color-"]').forEach(function(el){ el.style.borderColor = '#1e293b'; el.style.transform = ''; });
+  var el = document.getElementById('color-' + c.replace('#',''));
+  if (el) { el.style.borderColor = '#fff'; el.style.transform = 'scale(1.2)'; }
+}
+
+function setSize(s) { canvasState.size = s; }
+
+function clearCanvas() {
+  var canvas = document.getElementById('scratch');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.fillStyle = '#0f172a';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  drawCanvasGrid(ctx, canvas);
+}
+
+/* =====================================================
+   GLOBAL STATS & MISC
+   ===================================================== */
+function updateGlobalStats() {
+  document.getElementById('totalXP').textContent = state.xp;
+  document.getElementById('totalStreak').textContent = state.streak;
+  document.getElementById('navXP').textContent = state.xp + ' XP';
+  document.getElementById('navStreak').textContent = state.streak;
+
+  var done = COURSE.filter(function(m, i) {
+    var p = state.modProgress[i];
+    return p && p.done >= m.steps.length;
+  }).length;
+  document.getElementById('totalDone').textContent = done + '/10';
+
+  var totalSteps = COURSE.reduce(function(s, m){ return s + m.steps.length; }, 0);
+  var doneSteps = COURSE.reduce(function(s, m, i){ return s + Math.min(m.steps.length, (state.modProgress[i]||{done:0}).done); }, 0);
+  var globalPct = Math.round((doneSteps / totalSteps) * 100);
+  document.getElementById('globalBar').style.width = globalPct + '%';
+}
+
+function resetProgress() {
+  if (!confirm('Zresetować cały postęp kursu? Tej operacji nie można cofnąć.')) return;
+  state.xp = 0; state.streak = 0; state.modProgress = {};
+  state.save();
+  buildModules();
+  updateGlobalStats();
+}
+
+function launchConfetti() {
+  var colors = ['#f59e0b','#3b82f6','#10b981','#ec4899','#8b5cf6','#06b6d4'];
+  for (var i = 0; i < 120; i++) {
+    (function(i) {
+      setTimeout(function() {
+        var el = document.createElement('div');
+        el.className = 'confetti-piece';
+        el.style.left = Math.random() * 100 + 'vw';
+        el.style.background = colors[Math.floor(Math.random() * colors.length)];
+        el.style.animationDuration = (2 + Math.random() * 2) + 's';
+        el.style.animationDelay = (Math.random() * 1) + 's';
+        el.style.width = (6 + Math.random() * 10) + 'px';
+        el.style.height = el.style.width;
+        document.body.appendChild(el);
+        setTimeout(function(){ el.remove(); }, 4000);
+      }, i * 20);
+    })(i);
+  }
+}
+
+/* =====================================================
+   RUN
+   ===================================================== */
+document.addEventListener('DOMContentLoaded', function() {
+  init();
+  // Shake animation
+  var style = document.createElement('style');
+  style.textContent = '@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}';
+  document.head.appendChild(style);
+});
+</script>
+</body>
+</html>
