@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wzory Maturalne – Ściągawka | Matematyka to Podstawa</title>
+  <meta name="description" content="Kompletny zbiór wzorów matematycznych na maturę podstawową. Algebra, trygonometria, geometria, ciągi, kombinatoryka. Wersja do druku."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body{font-family:'Inter',sans-serif;background:#f8fafc;}
+    .section-card{background:#fff;border-radius:1.5rem;border:1.5px solid #e2e8f0;overflow:hidden;margin-bottom:1.5rem;}
+    .section-header{padding:1.25rem 1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;border-bottom:1.5px solid transparent;transition:background .2s;}
+    .section-header:hover{background:#f8fafc;}
+    .section-header.open{border-bottom-color:#e2e8f0;}
+    .section-body{display:none;padding:1rem 1.5rem 1.5rem;}
+    .section-body.show{display:block;}
+    .formula-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:.875rem;}
+    .formula-card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:1rem;padding:1rem;position:relative;transition:all .2s;}
+    .formula-card:hover{border-color:#3b82f6;background:#eff6ff;box-shadow:0 4px 14px rgba(59,130,246,.1);}
+    .formula-card .formula-label{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:#64748b;margin-bottom:.5rem;}
+    .formula-card .formula-math{font-size:1.05rem;color:#0f172a;text-align:center;padding:.25rem 0;}
+    .formula-card .copy-btn{position:absolute;top:.5rem;right:.5rem;background:none;border:none;cursor:pointer;color:#94a3b8;font-size:.75rem;padding:.25rem .4rem;border-radius:.375rem;transition:all .15s;}
+    .formula-card .copy-btn:hover{color:#3b82f6;background:#dbeafe;}
+    .formula-card .copied{color:#10b981!important;}
+    .filter-chip{padding:.375rem 1rem;border-radius:9999px;font-size:.8rem;font-weight:700;border:1.5px solid #e2e8f0;cursor:pointer;transition:all .2s;background:#fff;color:#64748b;white-space:nowrap;}
+    .filter-chip.active{background:#0f172a;border-color:#0f172a;color:#fff;}
+    .filter-chip:hover:not(.active){background:#f1f5f9;}
+    .hero-wzory{background:linear-gradient(135deg,#0f172a,#1e3a5f);padding:3rem 1rem;color:#fff;position:relative;overflow:hidden;}
+    .hero-wzory::after{content:'∮ ∑ ∫ π √ ∞ ∂ Δ θ λ';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:3rem;color:rgba(255,255,255,.03);letter-spacing:1rem;pointer-events:none;}
+    .search-wrap input{border:1.5px solid #e2e8f0;border-radius:1rem;padding:.625rem 1rem .625rem 2.75rem;width:100%;outline:none;transition:all .2s;font-size:.95rem;}
+    .search-wrap input:focus{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.12);}
+    .formula-card.hidden-formula{display:none;}
+    @media print {
+      nav,header.hero-wzory,.filter-bar,.search-wrap,.copy-btn,.print-btn,footer,a[href]:after{display:none!important;}
+      .section-body{display:block!important;}
+      .section-card{break-inside:avoid;border:1px solid #e2e8f0;border-radius:.5rem;}
+      .section-header{cursor:default;}
+      body{background:#fff!important;}
+      .formula-card{background:#fff!important;border:1px solid #ccc!important;}
+      .formula-grid{grid-template-columns:repeat(3,1fr)!important;}
+      page{margin:1.5cm;}
+    }
+    .s0{color:#3b82f6;} .s1{color:#ec4899;} .s2{color:#10b981;} .s3{color:#f59e0b;}
+    .s4{color:#8b5cf6;} .s5{color:#06b6d4;} .s6{color:#f97316;} .s7{color:#6366f1;}
+    .s8{color:#db2777;} .s9{color:#14b8a6;}
+    .sb0{background:#dbeafe;} .sb1{background:#fce7f3;} .sb2{background:#dcfce7;} .sb3{background:#fef3c7;}
+    .sb4{background:#f3e8ff;} .sb5{background:#ecfdf5;} .sb6{background:#fff7ed;} .sb7{background:#e0e7ff;}
+    .sb8{background:#fdf2f8;} .sb9{background:#f0fdf4;}
+  </style>
+</head>
+<body>
+
+<!-- Nav -->
+<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+      <span class="text-xl font-bold text-gray-800">Matematyka to <span class="text-blue-600">Podstawa</span></span>
+    </a>
+    <div class="hidden md:flex items-center gap-5 text-sm font-medium">
+      <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Strona główna</a>
+      <a href="kurs.html" class="text-gray-600 hover:text-blue-600 transition"><i class="fa-solid fa-graduation-cap mr-1 text-purple-500"></i>Kurs</a>
+      <a href="zadania.html" class="text-gray-600 hover:text-blue-600 transition"><i class="fa-solid fa-pen-to-square mr-1 text-emerald-500"></i>Zadania</a>
+      <a href="wzory.html" class="text-blue-600 font-bold"><i class="fa-solid fa-square-root-variable mr-1"></i>Wzory</a>
+      <a href="arkusze.html" class="text-gray-600 hover:text-blue-600 transition">Arkusze CKE</a>
+      <a href="quiz.html" class="text-gray-600 hover:text-blue-600 transition">Quiz</a>
+    </div>
+    <button onclick="window.print()" class="print-btn hidden md:inline-flex items-center gap-2 border border-gray-200 text-gray-600 hover:text-blue-600 hover:border-blue-400 px-4 py-2 rounded-xl text-sm font-semibold transition">
+      <i class="fa-solid fa-print"></i> Drukuj
+    </button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero-wzory">
+  <div class="max-w-4xl mx-auto text-center relative z-10">
+    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-5">
+      <i class="fa-solid fa-square-root-variable text-cyan-300"></i>
+      Kompletna ściągawka maturalna
+    </div>
+    <h1 class="text-3xl md:text-5xl font-black mb-4 leading-tight">Wszystkie wzory w jednym miejscu</h1>
+    <p class="text-slate-300 text-base md:text-lg mb-8 max-w-2xl mx-auto">9 działów · ponad 80 wzorów · wersja do druku · kliknij, aby skopiować</p>
+    <div class="flex justify-center gap-4 flex-wrap">
+      <button onclick="window.print()" class="print-btn inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition shadow-lg">
+        <i class="fa-solid fa-print"></i> Drukuj / Zapisz PDF
+      </button>
+      <button onclick="expandAll()" class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/20 transition">
+        <i class="fa-solid fa-expand"></i> Rozwiń wszystkie
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Filter + Search bar -->
+<div class="filter-bar bg-white border-b sticky top-16 z-40 py-3 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+      <div class="search-wrap relative flex-shrink-0 w-full sm:w-72">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+        <input type="text" id="searchInput" placeholder="Szukaj wzoru..." oninput="searchFormulas(this.value)"/>
+      </div>
+      <div class="flex gap-2 flex-wrap">
+        <button class="filter-chip active" data-section="all" onclick="filterSection(this)">Wszystkie</button>
+        <button class="filter-chip" data-section="algebra" onclick="filterSection(this)">Algebra</button>
+        <button class="filter-chip" data-section="rownania" onclick="filterSection(this)">Równania</button>
+        <button class="filter-chip" data-section="funkcje" onclick="filterSection(this)">Funkcje</button>
+        <button class="filter-chip" data-section="tryg" onclick="filterSection(this)">Trygonometria</button>
+        <button class="filter-chip" data-section="ciagi" onclick="filterSection(this)">Ciągi</button>
+        <button class="filter-chip" data-section="geo2d" onclick="filterSection(this)">Planimetria</button>
+        <button class="filter-chip" data-section="geo3d" onclick="filterSection(this)">Stereometria</button>
+        <button class="filter-chip" data-section="analityczna" onclick="filterSection(this)">Analityczna</button>
+        <button class="filter-chip" data-section="kombina" onclick="filterSection(this)">Kombinatoryka</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main content -->
+<main class="max-w-7xl mx-auto px-4 py-10">
+
+<!-- ═══════ SECTION: ALGEBRA ═══════ -->
+<div class="section-card" id="sec-algebra">
+  <div class="section-header open" onclick="toggleSection('algebra')">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 sb0 rounded-xl flex items-center justify-center text-lg s0 font-black">A</div>
+      <div>
+        <h2 class="font-black text-gray-900 text-lg">Algebra</h2>
+        <p class="text-gray-400 text-xs">Potęgi · Pierwiastki · Logarytmy · Wzory skróconego mnożenia</p>
+      </div>
+    </div>
+    <i class="fa-solid fa-chevron-down s0 text-sm chevron-algebra transition-transform"></i>
+  </div>
+  <div class="section-body show" id="body-algebra">
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Wzory skróconego mnożenia</h3>
+    <div class="formula-grid mb-5">
+      <div class="formula-card" data-label="kwadrat sumy" data-math="(a+b)^2=a^2+2ab+b^2">
+        <p class="formula-label">Kwadrat sumy</p>
+        <div class="formula-math">$(a+b)^2 = a^2 + 2ab + b^2$</div>
+        <button class="copy-btn" onclick="copyFormula(this,'(a+b)^2=a^2+2ab+b^2')"><i class="fa-regular fa-copy"></i></button>
+      </div>
+      <div class="formula-card" data-label="kwadrat różnicy" data-math="(a-b)^2=a^2-2ab+b^2">
+        <p class="formula-label">Kwadrat różnicy</p>
+        <div class="formula-math">$(a-b)^2 = a^2 - 2ab + b^2$</div>
+        <button class="copy-btn" onclick="copyFormula(this,'(a-b)^2=a^2-2ab+b^2')"><i class="fa-regular fa-copy"></i></button>
+      </div>
+      <div class="formula-card" data-label="różnica kwadratów" data-math="a^2-b^2=(a-b)(a+b)">
+        <p class="formula-label">Różnica kwadratów</p>
+        <div class="formula-math">$a^2 - b^2 = (a-b)(a+b)$</div>
+        <button class="copy-btn" onclick="copyFormula(this,'a^2-b^2=(a-b)(a+b)')"><i class="fa-regular fa-copy"></i></button>
+      </div>
+      <div class="formula-card" data-label="sześcian sumy" data-math="(a+b)^3=a^3+3a^2b+3ab^2+b^3">
+        <p class="formula-label">Sześcian sumy</p>
+        <div class="formula-math">$(a+b)^3 = a^3+3a^2b+3ab^2+b^3$</div>
+        <button class="copy-btn" onclick="copyFormula(this,'(a+b)^3=a^3+3a^2b+3ab^2+b^3')"><i class="fa-regular fa-copy"></i></button>
+      </div>
+      <div class="formula-card" data-label="suma sześcianów" data-math="a^3+b^3=(a+b)(a^2-ab+b^2)">
+        <p class="formula-label">Suma sześcianów</p>
+        <div class="formula-math">$a^3+b^3 = (a+b)(a^2-ab+b^2)$</div>
+        <button class="copy-btn" onclick="copyFormula(this,'a^3+b^3=(a+b)(a^2-ab+b^2)')"><i class="fa-regular fa-copy"></i></button>
+      </div>
+      <div class="formula-card" data-label="różnica sześcianów" data-math="a^3-b^3=(a-b)(a^2+ab+b^2)">
+        <p class="formula-label">Różnica sześcianów</p>
+        <div class="formula-math">$a^3-b^3 = (a-b)(a^2+ab+b^2)$</div>
+        <button class="copy-btn" onclick="copyFormula(this,'a^3-b^3=(a-b)(a^2+ab+b^2)')"><i class="fa-regular fa-copy"></i></button>
+      </div>
+    </div>
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Potęgi</h3>
+    <div class="formula-grid mb-5">
+      <div class="formula-card" data-label="mnożenie potęg" data-math="a^m*a^n=a^{m+n}"><p class="formula-label">Mnożenie</p><div class="formula-math">$a^m \cdot a^n = a^{m+n}$</div><button class="copy-btn" onclick="copyFormula(this,'a^m*a^n=a^{m+n}')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="dzielenie potęg" data-math="a^m/a^n=a^{m-n}"><p class="formula-label">Dzielenie</p><div class="formula-math">$\dfrac{a^m}{a^n} = a^{m-n}$</div><button class="copy-btn" onclick="copyFormula(this,'a^m/a^n=a^{m-n}')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="potęga potęgi" data-math="(a^m)^n=a^{mn}"><p class="formula-label">Potęga potęgi</p><div class="formula-math">$(a^m)^n = a^{m \cdot n}$</div><button class="copy-btn" onclick="copyFormula(this,'(a^m)^n=a^{mn}')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="potęga zera" data-math="a^0=1"><p class="formula-label">Potęga zerowa</p><div class="formula-math">$a^0 = 1 \quad(a\neq 0)$</div><button class="copy-btn" onclick="copyFormula(this,'a^0=1')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="potęga ujemna" data-math="a^{-n}=1/a^n"><p class="formula-label">Wykładnik ujemny</p><div class="formula-math">$a^{-n} = \dfrac{1}{a^n}$</div><button class="copy-btn" onclick="copyFormula(this,'a^{-n}=1/a^n')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="pierwiastek jako potęga" data-math="sqrt[n]{a}=a^{1/n}"><p class="formula-label">Pierwiastek = potęga</p><div class="formula-math">$\sqrt[n]{a} = a^{1/n}$</div><button class="copy-btn" onclick="copyFormula(this,'sqrt[n]{a}=a^{1/n}')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Logarytmy</h3>
+    <div class="formula-grid">
+      <div class="formula-card" data-label="definicja logarytmu" data-math="log_a b=c <=> a^c=b"><p class="formula-label">Definicja</p><div class="formula-math">$\log_a b = c \Leftrightarrow a^c = b$</div><button class="copy-btn" onclick="copyFormula(this,'log_a b=c <=> a^c=b')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="logarytm iloczynu" data-math="log(xy)=log x+log y"><p class="formula-label">Iloczyn</p><div class="formula-math">$\log_a(x\cdot y) = \log_a x + \log_a y$</div><button class="copy-btn" onclick="copyFormula(this,'log(xy)=log x+log y')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="logarytm ilorazu" data-math="log(x/y)=log x - log y"><p class="formula-label">Iloraz</p><div class="formula-math">$\log_a\frac{x}{y} = \log_a x - \log_a y$</div><button class="copy-btn" onclick="copyFormula(this,'log(x/y)=log x - log y')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="logarytm potęgi" data-math="log(x^k)=k*log x"><p class="formula-label">Potęga</p><div class="formula-math">$\log_a x^k = k \cdot \log_a x$</div><button class="copy-btn" onclick="copyFormula(this,'log(x^k)=k*log x')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="log z jedynką i podstawą" data-math="log_a 1=0, log_a a=1"><p class="formula-label">Wartości spec.</p><div class="formula-math">$\log_a 1 = 0, \quad \log_a a = 1$</div><button class="copy-btn" onclick="copyFormula(this,'log_a 1=0, log_a a=1')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="zmiana podstawy" data-math="log_a b=log b/log a"><p class="formula-label">Zmiana podstawy</p><div class="formula-math">$\log_a b = \dfrac{\lg b}{\lg a}$</div><button class="copy-btn" onclick="copyFormula(this,'log_a b=log b/log a')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION: RÓWNANIA ═══════ -->
+<div class="section-card" id="sec-rownania">
+  <div class="section-header open" onclick="toggleSection('rownania')">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 sb2 rounded-xl flex items-center justify-center text-lg s2 font-black">=</div>
+      <div><h2 class="font-black text-gray-900 text-lg">Równania i Nierówności</h2>
+      <p class="text-gray-400 text-xs">Równanie kwadratowe · Wzory Viète'a · Układy równań</p></div>
+    </div>
+    <i class="fa-solid fa-chevron-down s2 text-sm chevron-rownania transition-transform"></i>
+  </div>
+  <div class="section-body show" id="body-rownania">
+    <div class="formula-grid">
+      <div class="formula-card" data-label="wzór na pierwiastki" data-math="x=(−b±√Δ)/(2a)"><p class="formula-label">Wzór kwadratowy</p><div class="formula-math">$x_{1,2} = \dfrac{-b \pm \sqrt{\Delta}}{2a}$</div><button class="copy-btn" onclick="copyFormula(this,'x=(-b±√Δ)/(2a)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="wyróżnik delta" data-math="Δ=b²−4ac"><p class="formula-label">Wyróżnik $\Delta$</p><div class="formula-math">$\Delta = b^2 - 4ac$</div><button class="copy-btn" onclick="copyFormula(this,'Δ=b²−4ac')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="viete suma" data-math="x1+x2=-b/a"><p class="formula-label">Viète – suma</p><div class="formula-math">$x_1 + x_2 = -\dfrac{b}{a}$</div><button class="copy-btn" onclick="copyFormula(this,'x1+x2=-b/a')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="viete iloczyn" data-math="x1*x2=c/a"><p class="formula-label">Viète – iloczyn</p><div class="formula-math">$x_1 \cdot x_2 = \dfrac{c}{a}$</div><button class="copy-btn" onclick="copyFormula(this,'x1*x2=c/a')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="wartość bezwzględna mniejsza" data-math="|x|<a => -a<x<a"><p class="formula-label">$|x| < a$</p><div class="formula-math">$|x| < a \Leftrightarrow -a < x < a$</div><button class="copy-btn" onclick="copyFormula(this,'|x|<a => -a<x<a')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="wartość bezwzględna większa" data-math="|x|>a => x<-a lub x>a"><p class="formula-label">$|x| > a$</p><div class="formula-math">$|x| > a \Leftrightarrow x < -a \text{ lub } x > a$</div><button class="copy-btn" onclick="copyFormula(this,'|x|>a => x<-a lub x>a')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION: FUNKCJE ═══════ -->
+<div class="section-card" id="sec-funkcje">
+  <div class="section-header open" onclick="toggleSection('funkcje')">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 sb3 rounded-xl flex items-center justify-center text-lg s3 font-black">f</div>
+      <div><h2 class="font-black text-gray-900 text-lg">Funkcje</h2>
+      <p class="text-gray-400 text-xs">Funkcja kwadratowa · Liniowa · Wykładnicza · Logarytmiczna</p></div>
+    </div>
+    <i class="fa-solid fa-chevron-down s3 text-sm chevron-funkcje transition-transform"></i>
+  </div>
+  <div class="section-body show" id="body-funkcje">
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Funkcja kwadratowa</h3>
+    <div class="formula-grid mb-5">
+      <div class="formula-card" data-label="wierzchołek paraboli p" data-math="p=-b/(2a)"><p class="formula-label">Wierzchołek – $p$</p><div class="formula-math">$p = -\dfrac{b}{2a}$</div><button class="copy-btn" onclick="copyFormula(this,'p=-b/(2a)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="wierzchołek paraboli q" data-math="q=-Δ/(4a)"><p class="formula-label">Wierzchołek – $q$</p><div class="formula-math">$q = -\dfrac{\Delta}{4a} = f(p)$</div><button class="copy-btn" onclick="copyFormula(this,'q=-Δ/(4a)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="postać kanoniczna" data-math="f(x)=a(x-p)^2+q"><p class="formula-label">Postać kanoniczna</p><div class="formula-math">$f(x) = a(x-p)^2 + q$</div><button class="copy-btn" onclick="copyFormula(this,'f(x)=a(x-p)^2+q')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="postać iloczynowa" data-math="f(x)=a(x-x1)(x-x2)"><p class="formula-label">Postać iloczynowa</p><div class="formula-math">$f(x) = a(x-x_1)(x-x_2)$</div><button class="copy-btn" onclick="copyFormula(this,'f(x)=a(x-x1)(x-x2)')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Przekształcenia wykresów</h3>
+    <div class="formula-grid">
+      <div class="formula-card" data-label="przesunięcie w górę" data-math="f(x)+c: góra o c"><p class="formula-label">Przesunięcie w górę</p><div class="formula-math">$y = f(x) + c \;\uparrow c$</div><button class="copy-btn" onclick="copyFormula(this,'f(x)+c')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="przesunięcie w prawo" data-math="f(x-c): prawo o c"><p class="formula-label">Przesunięcie w prawo</p><div class="formula-math">$y = f(x-c) \;\rightarrow c$</div><button class="copy-btn" onclick="copyFormula(this,'f(x-c)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="symetria do osi ox" data-math="-f(x): odbicie OX"><p class="formula-label">Odbicie wzgl. OX</p><div class="formula-math">$y = -f(x)$</div><button class="copy-btn" onclick="copyFormula(this,'-f(x)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="symetria do osi oy" data-math="f(-x): odbicie OY"><p class="formula-label">Odbicie wzgl. OY</p><div class="formula-math">$y = f(-x)$</div><button class="copy-btn" onclick="copyFormula(this,'f(-x)')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION: TRYGONOMETRIA ═══════ -->
+<div class="section-card" id="sec-tryg">
+  <div class="section-header open" onclick="toggleSection('tryg')">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 sb6 rounded-xl flex items-center justify-center text-lg s6 font-black">∠</div>
+      <div><h2 class="font-black text-gray-900 text-lg">Trygonometria</h2>
+      <p class="text-gray-400 text-xs">Sinus · Cosinus · Tangens · Jedynka trygon. · Kąty szcz. · Twierdzenia</p></div>
+    </div>
+    <i class="fa-solid fa-chevron-down s6 text-sm chevron-tryg transition-transform"></i>
+  </div>
+  <div class="section-body show" id="body-tryg">
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Definicje i tożsamości</h3>
+    <div class="formula-grid mb-5">
+      <div class="formula-card" data-label="jedynka trygonometryczna" data-math="sin²α+cos²α=1"><p class="formula-label">Jedynka trygon.</p><div class="formula-math">$\sin^2\alpha + \cos^2\alpha = 1$</div><button class="copy-btn" onclick="copyFormula(this,'sin²+cos²=1')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="tangens" data-math="tgα=sinα/cosα"><p class="formula-label">Tangens</p><div class="formula-math">$\tan\alpha = \dfrac{\sin\alpha}{\cos\alpha}$</div><button class="copy-btn" onclick="copyFormula(this,'tgα=sinα/cosα')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="sinus kąta uzupełniającego" data-math="sin(90-α)=cosα"><p class="formula-label">Kąt uzupełniający</p><div class="formula-math">$\sin(90°-\alpha) = \cos\alpha$</div><button class="copy-btn" onclick="copyFormula(this,'sin(90°-α)=cosα')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="sinus kąta suplementarnego" data-math="sin(180-α)=sinα"><p class="formula-label">Kąt suplementarny</p><div class="formula-math">$\sin(180°-\alpha) = \sin\alpha$</div><button class="copy-btn" onclick="copyFormula(this,'sin(180°-α)=sinα')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Kąty szczególne</h3>
+    <div class="overflow-x-auto mb-5">
+      <table class="w-full text-center text-sm border-collapse rounded-xl overflow-hidden">
+        <thead><tr class="bg-orange-50"><th class="py-2 px-4 border border-orange-100 font-bold text-orange-700">$\alpha$</th><th class="py-2 px-4 border border-orange-100 font-bold text-orange-700">$0°$</th><th class="py-2 px-4 border border-orange-100 font-bold text-orange-700">$30°$</th><th class="py-2 px-4 border border-orange-100 font-bold text-orange-700">$45°$</th><th class="py-2 px-4 border border-orange-100 font-bold text-orange-700">$60°$</th><th class="py-2 px-4 border border-orange-100 font-bold text-orange-700">$90°$</th></tr></thead>
+        <tbody>
+          <tr class="bg-white"><td class="py-2 px-4 border border-gray-100 font-bold text-blue-700">$\sin$</td><td class="py-2 px-4 border border-gray-100">$0$</td><td class="py-2 px-4 border border-gray-100">$\frac{1}{2}$</td><td class="py-2 px-4 border border-gray-100">$\frac{\sqrt{2}}{2}$</td><td class="py-2 px-4 border border-gray-100">$\frac{\sqrt{3}}{2}$</td><td class="py-2 px-4 border border-gray-100">$1$</td></tr>
+          <tr class="bg-gray-50"><td class="py-2 px-4 border border-gray-100 font-bold text-emerald-700">$\cos$</td><td class="py-2 px-4 border border-gray-100">$1$</td><td class="py-2 px-4 border border-gray-100">$\frac{\sqrt{3}}{2}$</td><td class="py-2 px-4 border border-gray-100">$\frac{\sqrt{2}}{2}$</td><td class="py-2 px-4 border border-gray-100">$\frac{1}{2}$</td><td class="py-2 px-4 border border-gray-100">$0$</td></tr>
+          <tr class="bg-white"><td class="py-2 px-4 border border-gray-100 font-bold text-purple-700">$\tan$</td><td class="py-2 px-4 border border-gray-100">$0$</td><td class="py-2 px-4 border border-gray-100">$\frac{1}{\sqrt{3}}$</td><td class="py-2 px-4 border border-gray-100">$1$</td><td class="py-2 px-4 border border-gray-100">$\sqrt{3}$</td><td class="py-2 px-4 border border-gray-100">$\text{—}$</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Twierdzenia i pole</h3>
+    <div class="formula-grid">
+      <div class="formula-card" data-label="twierdzenie sinusów" data-math="a/sinA=b/sinB=c/sinC=2R"><p class="formula-label">Twierdzenie sinusów</p><div class="formula-math">$\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$</div><button class="copy-btn" onclick="copyFormula(this,'a/sinA=2R')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="twierdzenie cosinusów" data-math="c²=a²+b²-2ab·cosC"><p class="formula-label">Twierdzenie cosinusów</p><div class="formula-math">$c^2 = a^2+b^2-2ab\cos C$</div><button class="copy-btn" onclick="copyFormula(this,'c²=a²+b²-2ab·cosC')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="pole trójkąta z sinusem" data-math="P=½ab·sinC"><p class="formula-label">Pole trójkąta</p><div class="formula-math">$P = \dfrac{1}{2}ab\sin C$</div><button class="copy-btn" onclick="copyFormula(this,'P=½ab·sinC')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION: CIĄGI ═══════ -->
+<div class="section-card" id="sec-ciagi">
+  <div class="section-header open" onclick="toggleSection('ciagi')">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 sb5 rounded-xl flex items-center justify-center text-lg s5 font-black">∑</div>
+      <div><h2 class="font-black text-gray-900 text-lg">Ciągi</h2>
+      <p class="text-gray-400 text-xs">Arytmetyczny · Geometryczny · Sumy · Suma nieskończona · Procent</p></div>
+    </div>
+    <i class="fa-solid fa-chevron-down s5 text-sm chevron-ciagi transition-transform"></i>
+  </div>
+  <div class="section-body show" id="body-ciagi">
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Ciąg arytmetyczny (różnica $r$)</h3>
+    <div class="formula-grid mb-5">
+      <div class="formula-card" data-label="n-ty wyraz arytm." data-math="an=a1+(n-1)r"><p class="formula-label">$n$-ty wyraz</p><div class="formula-math">$a_n = a_1 + (n-1)r$</div><button class="copy-btn" onclick="copyFormula(this,'an=a1+(n-1)r')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="suma arytm wzór 1" data-math="Sn=n(a1+an)/2"><p class="formula-label">Suma $S_n$ (wersja I)</p><div class="formula-math">$S_n = \dfrac{n(a_1+a_n)}{2}$</div><button class="copy-btn" onclick="copyFormula(this,'Sn=n(a1+an)/2')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="suma arytm wzór 2" data-math="Sn=n(2a1+(n-1)r)/2"><p class="formula-label">Suma $S_n$ (wersja II)</p><div class="formula-math">$S_n = \dfrac{n(2a_1+(n-1)r)}{2}$</div><button class="copy-btn" onclick="copyFormula(this,'Sn=n(2a1+(n-1)r)/2')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Ciąg geometryczny (iloraz $q$)</h3>
+    <div class="formula-grid">
+      <div class="formula-card" data-label="n-ty wyraz geom." data-math="an=a1*q^(n-1)"><p class="formula-label">$n$-ty wyraz</p><div class="formula-math">$a_n = a_1 \cdot q^{n-1}$</div><button class="copy-btn" onclick="copyFormula(this,'an=a1*q^(n-1)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="suma geom." data-math="Sn=a1*(q^n-1)/(q-1)"><p class="formula-label">Suma $S_n$</p><div class="formula-math">$S_n = a_1 \cdot \dfrac{q^n-1}{q-1}\;(q\neq 1)$</div><button class="copy-btn" onclick="copyFormula(this,'Sn=a1*(q^n-1)/(q-1)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="suma nieskończona" data-math="S∞=a1/(1-q) dla |q|<1"><p class="formula-label">Suma $S_\infty$</p><div class="formula-math">$S_\infty = \dfrac{a_1}{1-q}\;\;(|q|<1)$</div><button class="copy-btn" onclick="copyFormula(this,'S∞=a1/(1-q)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="procent składany" data-math="Kn=K0*(1+p/100)^n"><p class="formula-label">Procent składany</p><div class="formula-math">$K_n = K_0\cdot\left(1+\dfrac{p}{100}\right)^n$</div><button class="copy-btn" onclick="copyFormula(this,'Kn=K0*(1+p/100)^n')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION: PLANIMETRIA ═══════ -->
+<div class="section-card" id="sec-geo2d">
+  <div class="section-header open" onclick="toggleSection('geo2d')">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 sb7 rounded-xl flex items-center justify-center text-lg s7 font-black">△</div>
+      <div><h2 class="font-black text-gray-900 text-lg">Planimetria</h2>
+      <p class="text-gray-400 text-xs">Pola figur · Obwody · Twierdzenia · Okrąg · Koło</p></div>
+    </div>
+    <i class="fa-solid fa-chevron-down s7 text-sm chevron-geo2d transition-transform"></i>
+  </div>
+  <div class="section-body show" id="body-geo2d">
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Pola figur</h3>
+    <div class="formula-grid mb-5">
+      <div class="formula-card" data-label="pole trójkąta" data-math="P=ah/2"><p class="formula-label">Trójkąt</p><div class="formula-math">$P = \dfrac{ah}{2}$</div><button class="copy-btn" onclick="copyFormula(this,'P=ah/2')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="trójkąt równoboczny" data-math="P=a²√3/4"><p class="formula-label">Trójkąt równoboczny</p><div class="formula-math">$P = \dfrac{a^2\sqrt{3}}{4}$</div><button class="copy-btn" onclick="copyFormula(this,'P=a²√3/4')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="pole trapezu" data-math="P=(a+b)h/2"><p class="formula-label">Trapez</p><div class="formula-math">$P = \dfrac{(a+b)h}{2}$</div><button class="copy-btn" onclick="copyFormula(this,'P=(a+b)h/2')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="pole rombu" data-math="P=d1*d2/2"><p class="formula-label">Romb</p><div class="formula-math">$P = \dfrac{d_1 \cdot d_2}{2}$</div><button class="copy-btn" onclick="copyFormula(this,'P=d1*d2/2')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="pole koła" data-math="P=πr²"><p class="formula-label">Koło</p><div class="formula-math">$P = \pi r^2$</div><button class="copy-btn" onclick="copyFormula(this,'P=πr²')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="obwód koła" data-math="L=2πr"><p class="formula-label">Obwód koła</p><div class="formula-math">$L = 2\pi r$</div><button class="copy-btn" onclick="copyFormula(this,'L=2πr')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="wycinek koła" data-math="P_wyc=α/360·πr²"><p class="formula-label">Wycinek koła</p><div class="formula-math">$P = \dfrac{\alpha°}{360°}\pi r^2$</div><button class="copy-btn" onclick="copyFormula(this,'α/360·πr²')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="łuk okręgu" data-math="l=α/360·2πr"><p class="formula-label">Długość łuku</p><div class="formula-math">$l = \dfrac{\alpha°}{360°} \cdot 2\pi r$</div><button class="copy-btn" onclick="copyFormula(this,'l=α/360·2πr')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Twierdzenia i okrąg</h3>
+    <div class="formula-grid">
+      <div class="formula-card" data-label="twierdzenie pitagorasa" data-math="a²+b²=c²"><p class="formula-label">Twierdzenie Pitagorasa</p><div class="formula-math">$a^2 + b^2 = c^2$</div><button class="copy-btn" onclick="copyFormula(this,'a²+b²=c²')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="okrąg opisany na trójkącie" data-math="R=abc/(4P)"><p class="formula-label">Okrąg opisany $R$</p><div class="formula-math">$R = \dfrac{abc}{4P}$</div><button class="copy-btn" onclick="copyFormula(this,'R=abc/(4P)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="okrąg wpisany w trójkąt" data-math="r=P/s, s=(a+b+c)/2"><p class="formula-label">Okrąg wpisany $r$</p><div class="formula-math">$r = \dfrac{P}{s},\;\;s = \dfrac{a+b+c}{2}$</div><button class="copy-btn" onclick="copyFormula(this,'r=P/s, s=(a+b+c)/2')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION: STEREOMETRIA ═══════ -->
+<div class="section-card" id="sec-geo3d">
+  <div class="section-header open" onclick="toggleSection('geo3d')">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 sb8 rounded-xl flex items-center justify-center text-lg s8 font-black">▲</div>
+      <div><h2 class="font-black text-gray-900 text-lg">Stereometria</h2>
+      <p class="text-gray-400 text-xs">Bryły obrotowe · Wielościany · Objętości i pola powierzchni</p></div>
+    </div>
+    <i class="fa-solid fa-chevron-down s8 text-sm chevron-geo3d transition-transform"></i>
+  </div>
+  <div class="section-body show" id="body-geo3d">
+    <div class="formula-grid">
+      <div class="formula-card" data-label="objętość walca" data-math="V=πr²h"><p class="formula-label">Walec $V$</p><div class="formula-math">$V = \pi r^2 h$</div><button class="copy-btn" onclick="copyFormula(this,'V=πr²h')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="pole powierzchni walca" data-math="Pc=2πrh+2πr²"><p class="formula-label">Walec $P_c$</p><div class="formula-math">$P_c = 2\pi r h + 2\pi r^2$</div><button class="copy-btn" onclick="copyFormula(this,'Pc=2πrh+2πr²')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="objętość stożka" data-math="V=πr²h/3"><p class="formula-label">Stożek $V$</p><div class="formula-math">$V = \dfrac{1}{3}\pi r^2 h$</div><button class="copy-btn" onclick="copyFormula(this,'V=πr²h/3')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="pole boczne stożka" data-math="Pb=πrl"><p class="formula-label">Stożek $P_b$</p><div class="formula-math">$P_b = \pi r l,\quad l = \sqrt{r^2+h^2}$</div><button class="copy-btn" onclick="copyFormula(this,'Pb=πrl, l=√(r²+h²)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="objętość kuli" data-math="V=4πr³/3"><p class="formula-label">Kula $V$</p><div class="formula-math">$V = \dfrac{4}{3}\pi r^3$</div><button class="copy-btn" onclick="copyFormula(this,'V=4πr³/3')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="pole powierzchni kuli" data-math="P=4πr²"><p class="formula-label">Kula $P$</p><div class="formula-math">$P = 4\pi r^2$</div><button class="copy-btn" onclick="copyFormula(this,'P=4πr²')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="objętość graniastosłupa" data-math="V=Pp*H"><p class="formula-label">Graniastosłup $V$</p><div class="formula-math">$V = P_p \cdot H$</div><button class="copy-btn" onclick="copyFormula(this,'V=Pp*H')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="objętość ostrosłupa" data-math="V=Pp*H/3"><p class="formula-label">Ostrosłup $V$</p><div class="formula-math">$V = \dfrac{1}{3}P_p \cdot H$</div><button class="copy-btn" onclick="copyFormula(this,'V=Pp*H/3')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="przekątna sześcianu" data-math="d=a√3"><p class="formula-label">Przekątna sześcianu</p><div class="formula-math">$d = a\sqrt{3}$</div><button class="copy-btn" onclick="copyFormula(this,'d=a√3')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="przekątna prostopadłościanu" data-math="d=√(a²+b²+c²)"><p class="formula-label">Przekątna proston.</p><div class="formula-math">$d = \sqrt{a^2+b^2+c^2}$</div><button class="copy-btn" onclick="copyFormula(this,'d=√(a²+b²+c²)')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION: GEOMETRIA ANALITYCZNA ═══════ -->
+<div class="section-card" id="sec-analityczna">
+  <div class="section-header open" onclick="toggleSection('analityczna')">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 sb1 rounded-xl flex items-center justify-center text-lg s1 font-black">xy</div>
+      <div><h2 class="font-black text-gray-900 text-lg">Geometria Analityczna</h2>
+      <p class="text-gray-400 text-xs">Odległość · Środek · Prosta · Koło · Prostopadłość · Równoległość</p></div>
+    </div>
+    <i class="fa-solid fa-chevron-down s1 text-sm chevron-analityczna transition-transform"></i>
+  </div>
+  <div class="section-body show" id="body-analityczna">
+    <div class="formula-grid">
+      <div class="formula-card" data-label="odległość między punktami" data-math="|AB|=√((x2-x1)²+(y2-y1)²)"><p class="formula-label">Odległość $|AB|$</p><div class="formula-math">$|AB| = \sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$</div><button class="copy-btn" onclick="copyFormula(this,'|AB|=√((x2-x1)²+(y2-y1)²)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="środek odcinka" data-math="S=((x1+x2)/2, (y1+y2)/2)"><p class="formula-label">Środek odcinka</p><div class="formula-math">$S = \left(\dfrac{x_1+x_2}{2},\;\dfrac{y_1+y_2}{2}\right)$</div><button class="copy-btn" onclick="copyFormula(this,'S=((x1+x2)/2,(y1+y2)/2)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="równanie prostej" data-math="y=ax+b"><p class="formula-label">Równanie prostej</p><div class="formula-math">$y = ax + b$</div><button class="copy-btn" onclick="copyFormula(this,'y=ax+b')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="warunek prostopadłości" data-math="a1*a2=-1"><p class="formula-label">Prostopadłość</p><div class="formula-math">$a_1 \cdot a_2 = -1$</div><button class="copy-btn" onclick="copyFormula(this,'a1*a2=-1')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="warunek równoległości" data-math="a1=a2"><p class="formula-label">Równoległość</p><div class="formula-math">$a_1 = a_2$</div><button class="copy-btn" onclick="copyFormula(this,'a1=a2')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="odległość punkt-prosta" data-math="d=|Ax0+By0+C|/√(A²+B²)"><p class="formula-label">Punkt → Prosta</p><div class="formula-math">$d = \dfrac{|Ax_0+By_0+C|}{\sqrt{A^2+B^2}}$</div><button class="copy-btn" onclick="copyFormula(this,'d=|Ax+By+C|/√(A²+B²)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="równanie koła" data-math="(x-a)²+(y-b)²=r²"><p class="formula-label">Równanie koła</p><div class="formula-math">$(x-a)^2+(y-b)^2=r^2$</div><button class="copy-btn" onclick="copyFormula(this,'(x-a)²+(y-b)²=r²')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ SECTION: KOMBINATORYKA ═══════ -->
+<div class="section-card" id="sec-kombina">
+  <div class="section-header open" onclick="toggleSection('kombina')">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 sb9 rounded-xl flex items-center justify-center text-lg s9 font-black">C</div>
+      <div><h2 class="font-black text-gray-900 text-lg">Kombinatoryka i Prawdopodobieństwo</h2>
+      <p class="text-gray-400 text-xs">Silnia · Permutacje · Wariacje · Kombinacje · Prawdopodobieństwo</p></div>
+    </div>
+    <i class="fa-solid fa-chevron-down s9 text-sm chevron-kombina transition-transform"></i>
+  </div>
+  <div class="section-body show" id="body-kombina">
+    <div class="formula-grid">
+      <div class="formula-card" data-label="silnia" data-math="n!=1*2*3*...*n"><p class="formula-label">Silnia</p><div class="formula-math">$n! = 1\cdot 2\cdot 3\cdots n$</div><button class="copy-btn" onclick="copyFormula(this,'n!=1*2*...*n')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="permutacja" data-math="Pn=n!"><p class="formula-label">Permutacja</p><div class="formula-math">$P_n = n!$</div><button class="copy-btn" onclick="copyFormula(this,'Pn=n!')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="kombinacja" data-math="C(n,k)=n!/(k!(n-k)!)"><p class="formula-label">Kombinacja $\binom{n}{k}$</p><div class="formula-math">$\binom{n}{k} = \dfrac{n!}{k!(n-k)!}$</div><button class="copy-btn" onclick="copyFormula(this,'C(n,k)=n!/(k!(n-k)!)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="wariacja" data-math="V(n,k)=n!/(n-k)!"><p class="formula-label">Wariacja</p><div class="formula-math">$V_n^k = \dfrac{n!}{(n-k)!}$</div><button class="copy-btn" onclick="copyFormula(this,'V=n!/(n-k)!')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="prawdopodobieństwo klasyczne" data-math="P(A)=|A|/|Ω|"><p class="formula-label">Prawdop. klasyczne</p><div class="formula-math">$P(A) = \dfrac{|A|}{|\Omega|}$</div><button class="copy-btn" onclick="copyFormula(this,'P(A)=|A|/|Ω|')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="suma zdarzeń" data-math="P(A∪B)=P(A)+P(B)-P(A∩B)"><p class="formula-label">Suma zdarzeń</p><div class="formula-math">$P(A\cup B)=P(A)+P(B)-P(A\cap B)$</div><button class="copy-btn" onclick="copyFormula(this,'P(A∪B)=P(A)+P(B)-P(A∩B)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="zdarzenie przeciwne" data-math="P(A')=1-P(A)"><p class="formula-label">Zdarzenie przeciwne</p><div class="formula-math">$P(\bar{A}) = 1 - P(A)$</div><button class="copy-btn" onclick="copyFormula(this,'P(A\')=1-P(A)')"><i class="fa-regular fa-copy"></i></button></div>
+      <div class="formula-card" data-label="schemat bernoullie'go" data-math="P(k)=C(n,k)*p^k*(1-p)^(n-k)"><p class="formula-label">Schemat Bernoulliego</p><div class="formula-math">$P(k) = \binom{n}{k}p^k(1-p)^{n-k}$</div><button class="copy-btn" onclick="copyFormula(this,'P(k)=C(n,k)*p^k*(1-p)^(n-k)')"><i class="fa-regular fa-copy"></i></button></div>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-white border-t py-8">
+  <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+    <a href="index.html" class="flex items-center gap-2 font-bold text-gray-800">
+      <i class="fas fa-calculator text-blue-600"></i> Matematyka to Podstawa
+    </a>
+    <div class="flex flex-wrap gap-4 text-gray-500">
+      <a href="kurs.html" class="hover:text-blue-600 transition">Kurs</a>
+      <a href="zadania.html" class="hover:text-blue-600 transition">Zadania</a>
+      <a href="arkusze.html" class="hover:text-blue-600 transition">Arkusze CKE</a>
+      <a href="quiz.html" class="hover:text-blue-600 transition">Quiz</a>
+    </div>
+    <p class="text-gray-400">&copy; 2026 Edukacja Matematyczna</p>
+  </div>
+</footer>
+
+<script>
+function toggleSection(id) {
+  var body = document.getElementById('body-' + id);
+  var header = body.previousElementSibling;
+  var chevron = document.querySelector('.chevron-' + id);
+  var isOpen = body.classList.contains('show');
+  body.classList.toggle('show', !isOpen);
+  header.classList.toggle('open', !isOpen);
+  if (chevron) chevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+}
+
+function expandAll() {
+  document.querySelectorAll('.section-body').forEach(function(b){
+    b.classList.add('show');
+    b.previousElementSibling.classList.add('open');
+  });
+  document.querySelectorAll('[class*="chevron-"]').forEach(function(c){ c.style.transform = 'rotate(180deg)'; });
+}
+
+function filterSection(btn) {
+  document.querySelectorAll('.filter-chip').forEach(function(b){ b.classList.remove('active'); });
+  btn.classList.add('active');
+  var sec = btn.dataset.section;
+  document.querySelectorAll('.section-card').forEach(function(card){
+    if (sec === 'all') { card.style.display = ''; }
+    else { card.style.display = card.id === 'sec-' + sec ? '' : 'none'; }
+  });
+  if (sec !== 'all') {
+    var target = document.getElementById('sec-' + sec);
+    if (target) {
+      var body = target.querySelector('.section-body');
+      if (body) body.classList.add('show');
+    }
+  }
+}
+
+function searchFormulas(q) {
+  q = q.toLowerCase().trim();
+  document.querySelectorAll('.formula-card').forEach(function(card) {
+    if (!q) { card.classList.remove('hidden-formula'); return; }
+    var label = (card.dataset.label || '').toLowerCase();
+    var math = (card.dataset.math || '').toLowerCase();
+    card.classList.toggle('hidden-formula', !label.includes(q) && !math.includes(q));
+  });
+  // Show all sections when searching
+  if (q) {
+    document.querySelectorAll('.section-card').forEach(function(c){ c.style.display = ''; });
+    document.querySelectorAll('.section-body').forEach(function(b){ b.classList.add('show'); });
+    document.querySelectorAll('.filter-chip').forEach(function(b){ b.classList.remove('active'); });
+    document.querySelector('[data-section="all"]').classList.add('active');
+  }
+}
+
+function copyFormula(btn, text) {
+  navigator.clipboard.writeText(text).then(function() {
+    var icon = btn.querySelector('i');
+    icon.className = 'fa-solid fa-check copied';
+    btn.classList.add('copied');
+    setTimeout(function(){ icon.className = 'fa-regular fa-copy'; btn.classList.remove('copied'); }, 1500);
+  }).catch(function() {
+    // Fallback
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.renderMathInElement) {
+    renderMathInElement(document.body, {
+      delimiters: [{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}],
+      throwOnError: false
+    });
+  }
+});
+</script>
+</body>
+</html>

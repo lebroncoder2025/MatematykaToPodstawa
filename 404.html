@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 – Strona nie istnieje | Matematyka to Podstawa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+    body{font-family:'Inter',sans-serif;background:#0f172a;color:#f8fafc;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;}
+    .glow{text-shadow:0 0 80px rgba(59,130,246,.5),0 0 40px rgba(59,130,246,.3);}
+    .floaters span{position:absolute;font-size:1.5rem;opacity:.06;animation:float linear infinite;pointer-events:none;}
+    @keyframes float{from{transform:translateY(100vh) rotate(0deg);}to{transform:translateY(-120vh) rotate(360deg);}}
+  </style>
+</head>
+<body>
+  <!-- Floating math symbols background -->
+  <div class="floaters" aria-hidden="true" id="floaters"></div>
+
+  <div class="relative z-10 text-center px-6 max-w-xl">
+    <div class="text-8xl md:text-9xl font-black text-blue-500 glow mb-2">404</div>
+    <p class="text-3xl font-black mb-2 text-white">Strona nie istnieje</p>
+    <p class="text-slate-400 mb-2 text-base">Ups! Szukana podstrona wylądowała poza dziedziną funkcji.</p>
+    <p class="text-slate-500 text-sm mb-8">Sprawdź adres URL lub wróć do strony głównej.</p>
+
+    <div class="bg-slate-800/60 border border-slate-700 rounded-2xl p-5 mb-8 inline-block text-left backdrop-blur">
+      <p class="text-xs text-slate-400 uppercase font-bold tracking-widest mb-3">Gdzie chcesz przejść?</p>
+      <div class="grid grid-cols-2 gap-2 text-sm">
+        <a href="index.html"    class="flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-4 py-2.5 rounded-xl font-bold transition"><i class="fa-solid fa-house w-4"></i> Strona główna</a>
+        <a href="kurs.html"     class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2.5 rounded-xl font-bold transition"><i class="fa-solid fa-graduation-cap w-4 text-purple-400"></i> Kurs</a>
+        <a href="zadania.html"  class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2.5 rounded-xl font-bold transition"><i class="fa-solid fa-pen-to-square w-4 text-emerald-400"></i> Zadania</a>
+        <a href="wzory.html"    class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2.5 rounded-xl font-bold transition"><i class="fa-solid fa-square-root-variable w-4 text-cyan-400"></i> Wzory</a>
+        <a href="arkusze.html"  class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2.5 rounded-xl font-bold transition"><i class="fa-solid fa-file-pdf w-4 text-red-400"></i> Arkusze CKE</a>
+        <a href="quiz.html"     class="flex items-center gap-2 bg-slate-700 hover:bg-slate-600 text-white px-4 py-2.5 rounded-xl font-bold transition"><i class="fa-solid fa-circle-question w-4 text-yellow-400"></i> Quiz</a>
+      </div>
+    </div>
+
+    <p class="text-slate-600 text-xs">$f(x) = 404 \Rightarrow x \notin \text{domena}$</p>
+  </div>
+
+<script>
+var symbols = ['∑','∫','π','√','∞','∂','Δ','θ','λ','α','β','γ','φ','ω','ε','μ','σ','ρ','∇','⊕'];
+var container = document.getElementById('floaters');
+for(var i=0;i<30;i++){
+  var s=document.createElement('span');
+  s.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  s.style.left=Math.random()*100+'vw';
+  s.style.animationDuration=(8+Math.random()*16)+'s';
+  s.style.animationDelay=(-Math.random()*20)+'s';
+  s.style.fontSize=(1+Math.random()*2.5)+'rem';
+  container.appendChild(s);
+}
+document.addEventListener('DOMContentLoaded',function(){
+  if(window.renderMathInElement)renderMathInElement(document.body,{delimiters:[{left:'$',right:'$',display:false}],throwOnError:false});
+});
+</script>
+</body>
+</html>
