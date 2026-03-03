@@ -70,6 +70,7 @@
           <a href="wzory.html" class="text-gray-600 hover:text-blue-600 transition font-semibold"><i class="fa-solid fa-square-root-variable mr-1 text-cyan-500"></i>Wzory</a>
           <a href="arkusze.html" class="text-blue-600 font-semibold">Arkusze CKE</a>
           <a href="quiz.html" class="text-gray-600 hover:text-blue-600 transition">Quiz</a>
+          <a href="postep.html" class="text-gray-600 hover:text-blue-600 transition">Postęp</a>
           <a href="kurs.html" class="bg-blue-600 text-white px-5 py-2 rounded-xl hover:bg-blue-700 transition font-semibold text-sm">Rozpocznij Kurs</a>
         </div>
         <div class="hamburger md:hidden flex items-center" id="hamburger">
@@ -738,7 +739,36 @@
     formula: "2023", examType: "diagnostyczny",
     pdfPath: "arkusze/diagnostyczny_XII_2023/arkusz.pdf", zasadyPath: "arkusze/diagnostyczny_XII_2023/zasady.pdf",
     taskCount: 28, closedCount: 21, openCount: 7,
-    tasks: Array.from({length: 21}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 7}, (_, i) => ({ num: i+22, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+    tasks: [
+      { num: 1, text: "Działania na potęgach — uprość wyrażenie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Własności potęg:", math: "$a^m\\cdot a^n=a^{m+n}$, $\\frac{a^m}{a^n}=a^{m-n}$" }] },
+      { num: 2, text: "Pierwiastki — upraszczanie i działania", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Uproszczenie:", math: "$\\sqrt{a\\cdot b}=\\sqrt{a}\\cdot\\sqrt{b}$" }] },
+      { num: 3, text: "Nierówność liniowa — rozwiązanie na osi", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Przenieś wyrazy, zachowaj kierunek nierówności" }] },
+      { num: 4, text: "Geometria płaska — pole lub obwód figury", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Prostokąt, trapez, trójkąt, koło" }] },
+      { num: 5, text: "Układ współrzędnych — odległość lub środek", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$d=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$" }] },
+      { num: 6, text: "Funkcja liniowa — wyznacz miejsce zerowe", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Miejsce zerowe:", math: "$y=0 \\Rightarrow ax+b=0$" }] },
+      { num: 7, text: "Ciąg arytmetyczny — wyraz $n$-ty lub suma", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$a_n=a_1+(n-1)r$, $S_n=\\frac{(a_1+a_n)n}{2}$" }] },
+      { num: 8, text: "Trygonometria — wartości kątów szczególnych", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Tabela:", math: "$\\sin 30°=\\frac{1}{2}$, $\\cos 60°=\\frac{1}{2}$, $\\tan 45°=1$" }] },
+      { num: 9, text: "Procenty i zmiany procentowe", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Oblicz:", math: "$p\\%$ z $a$ = $\\frac{p}{100}\\cdot a$" }] },
+      { num: 10, text: "Objętość lub pole powierzchni bryły", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Sześcian, walec, stożek, kula" }] },
+      { num: 11, text: "Funkcja kwadratowa — wierzchołek lub miejsca zerowe", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wierzchołek:", math: "$W=(-\\frac{b}{2a}, -\\frac{\\Delta}{4a})$" }] },
+      { num: 12, text: "Prawdopodobieństwo — zdarzenia elementarne", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$P(A)=\\frac{|A|}{|\\Omega|}$" }] },
+      { num: 13, text: "Logarytmy — oblicz i uprość", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Definicja:", math: "$\\log_a b = c \\iff a^c=b$" }] },
+      { num: 14, text: "Wyrażenia algebraiczne i wzory skróconego mnożenia", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$(a+b)^2=a^2+2ab+b^2$, $a^2-b^2=(a-b)(a+b)$" }] },
+      { num: 15, text: "Ciąg geometryczny — wyraz $n$-ty lub iloraz", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$a_n=a_1\\cdot q^{n-1}$" }] },
+      { num: 16, text: "Kombinatoryka — permutacje i kombinacje", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$\\binom{n}{k}=\\frac{n!}{k!(n-k)!}$" }] },
+      { num: 17, text: "Geometria analityczna — równanie prostej", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$y=ax+b$, $a=\\frac{y_2-y_1}{x_2-x_1}$" }] },
+      { num: 18, text: "Działania na ułamkach i liczbach wymiernych", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Sprowadź do wspólnego mianownika" }] },
+      { num: 19, text: "Prostopadłość i równoległość prostych", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Warunek:", math: "Równoległe: $a_1=a_2$; Prostopadłe: $a_1\\cdot a_2=-1$" }] },
+      { num: 20, text: "Planimetria — wielokąty, kąty i przekątne", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Przekątne $n$-kąta:", math: "$\\frac{n(n-3)}{2}$" }] },
+      { num: 21, text: "Statystyka — średnia, mediana lub odchylenie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Mediana:", math: "Środkowy wyraz po posortowaniu" }] },
+      { num: 22, text: "Rozwiąż równanie lub nierówność — pokaż pełne obliczenia", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wskazówka:", math: "Zastosuj twierdzenie Viète'a lub $\\Delta$" }] },
+      { num: 23, text: "Wykaż twierdzenie algebraiczne (dowód)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Technika:", math: "Przekształcenia równoważne lub indukcja" }] },
+      { num: 24, text: "Zadanie geometryczne — oblicz pole lub długość", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzia:", math: "Twierdzenie Pitagorasa, wzory na pole" }] },
+      { num: 25, text: "Wyznacz parametry funkcji kwadratowej", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Podstaw znane punkty lub warunki do $f(x)=ax^2+bx+c$" }] },
+      { num: 26, text: "Układ równań lub nierówność z parametrem", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Analiza $\\Delta$:", math: "Wyznacz warunki na parametr" }] },
+      { num: 27, text: "Kombinatoryka i prawdopodobieństwo złożone", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Schemat:", math: "Policz $|A|$ i $|\\Omega|$, oblicz $P(A)=|A|/|\\Omega|$" }] },
+      { num: 28, text: "Stereometria — objętość i pole powierzchni bryły", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzia:", math: "Pitagoras, trigonometria, wzory na bryły" }] }
+    ]
   },
 
   /* Diagnostyczny XII/2022 (Formuła 2023) */
@@ -747,7 +777,36 @@
     formula: "2023", examType: "diagnostyczny",
     pdfPath: "arkusze/diagnostyczny_XII_2022/arkusz.pdf", zasadyPath: "arkusze/diagnostyczny_XII_2022/zasady.pdf",
     taskCount: 28, closedCount: 21, openCount: 7,
-    tasks: Array.from({length: 21}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 7}, (_, i) => ({ num: i+22, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+    tasks: [
+      { num: 1, text: "Działania na potęgach — uprość", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Własności potęg:", math: "$a^m\\cdot a^n=a^{m+n}$" }] },
+      { num: 2, text: "Pierwiastki — upraszczanie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\sqrt{a}\\cdot\\sqrt{b}=\\sqrt{ab}$" }] },
+      { num: 3, text: "Nierówność liniowa", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Izoluj $x$, pamiętaj o znaku" }] },
+      { num: 4, text: "Pole figury geometrycznej", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Trójkąt, prostokąt, koło" }] },
+      { num: 5, text: "Układ współrzędnych — odległość", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$d=\\sqrt{\\Delta x^2+\\Delta y^2}$" }] },
+      { num: 6, text: "Funkcja liniowa — miejsce zerowe", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "$ax+b=0$" }] },
+      { num: 7, text: "Ciąg arytmetyczny — $a_n$ lub $S_n$", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$a_n=a_1+(n-1)r$" }] },
+      { num: 8, text: "Trygonometria — kąty szczególne", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Tabela:", math: "$\\sin 30°, \\cos 60°, \\tan 45°$" }] },
+      { num: 9, text: "Oblicz procent z liczby", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$p\\%$ z $a$ = $\\frac{p}{100}\\cdot a$" }] },
+      { num: 10, text: "Objętość bryły", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Walec, stożek, graniastosłup" }] },
+      { num: 11, text: "Funkcja kwadratowa — wierzchołek", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$p=-\\frac{b}{2a}$" }] },
+      { num: 12, text: "Prawdopodobieństwo klasyczne", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$P(A)=|A|/|\\Omega|$" }] },
+      { num: 13, text: "Logarytmy — oblicz", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Definicja:", math: "$\\log_a b = c \\iff a^c=b$" }] },
+      { num: 14, text: "Wzory skróconego mnożenia", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$(a\\pm b)^2$, $a^2-b^2$" }] },
+      { num: 15, text: "Ciąg geometryczny — $a_n$", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$a_n=a_1\\cdot q^{n-1}$" }] },
+      { num: 16, text: "Kombinatoryka — zlicz możliwości", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$n!$, $\\binom{n}{k}$, $n^k$" }] },
+      { num: 17, text: "Równanie prostej", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$y=ax+b$" }] },
+      { num: 18, text: "Działania na ułamkach", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Sprowadź do wspólnego mianownika" }] },
+      { num: 19, text: "Warunek prostopadłości prostych", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Warunek:", math: "$a_1\\cdot a_2=-1$" }] },
+      { num: 20, text: "Wielokąt — kąty wewnętrzne lub przekątne", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\frac{(n-2)\\cdot 180°}{n}$" }] },
+      { num: 21, text: "Statystyka — średnia arytmetyczna", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\bar{x}=\\frac{\\sum x_i}{n}$" }] },
+      { num: 22, text: "Rozwiąż równanie i przedstaw rozwiązanie", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wskazówka:", math: "Zastosuj $\\Delta$ lub twierdzenie Viète'a" }] },
+      { num: 23, text: "Dowód algebraiczny", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Technika:", math: "Przekształcenia równoważne" }] },
+      { num: 24, text: "Geometria — pole lub długość", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzie:", math: "Pitagoras, wzory na pole" }] },
+      { num: 25, text: "Funkcja kwadratowa z warunkami", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Podstaw punkty do $f(x)=ax^2+bx+c$" }] },
+      { num: 26, text: "Zadanie z parametrem", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Analiza:", math: "Wyznacz warunki na parametr z $\\Delta$" }] },
+      { num: 27, text: "Prawdopodobieństwo złożone", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Schemat:", math: "Kombinatoryka + $P(A)=|A|/|\\Omega|$" }] },
+      { num: 28, text: "Stereometria — bryła przestrzenna", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzia:", math: "Pitagoras w 3D, wzory na bryły" }] }
+    ]
   },
 
   /* Diagnostyczny IX/2022 (Formuła 2023) */
@@ -756,7 +815,36 @@
     formula: "2023", examType: "diagnostyczny",
     pdfPath: "arkusze/diagnostyczny_IX_2022/arkusz.pdf", zasadyPath: "arkusze/diagnostyczny_IX_2022/zasady.pdf",
     taskCount: 28, closedCount: 21, openCount: 7,
-    tasks: Array.from({length: 21}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 7}, (_, i) => ({ num: i+22, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+    tasks: [
+      { num: 1, text: "Potęgi — uprość wyrażenie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Własności:", math: "$(a^m)^n=a^{mn}$" }] },
+      { num: 2, text: "Pierwiastki — działania", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\sqrt[n]{a^m}=a^{m/n}$" }] },
+      { num: 3, text: "Nierówność — rozwiązanie na osi", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Izoluj niewiadomą" }] },
+      { num: 4, text: "Pole trójkąta lub czworokąta", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$P_{\\triangle}=\\frac{ah}{2}$, $P_{\\square}=ab$" }] },
+      { num: 5, text: "Środek odcinka $AB$", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$S=\\left(\\frac{x_A+x_B}{2}, \\frac{y_A+y_B}{2}\\right)$" }] },
+      { num: 6, text: "Współczynnik kierunkowy prostej", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$a=\\frac{y_2-y_1}{x_2-x_1}$" }] },
+      { num: 7, text: "Ciąg arytmetyczny — suma $n$ wyrazów", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$S_n=\\frac{(a_1+a_n)n}{2}$" }] },
+      { num: 8, text: "Tw. sinusów lub cosinusów", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$\\frac{a}{\\sin\\alpha}=2R$" }] },
+      { num: 9, text: "Cena po kilku zmianach procentowych", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Mnóż przez $(1\\pm p\\%)$ kolejno" }] },
+      { num: 10, text: "Pole powierzchni całkowitej bryły", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Sześcian: $6a^2$; Walec: $2\\pi r(r+h)$" }] },
+      { num: 11, text: "Liczba miejsc zerowych funkcji kwadratowej", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "$\\Delta$:", math: "$\\Delta>0$: dwa, $=0$: jedno, $<0$: zero" }] },
+      { num: 12, text: "Prawdopodobieństwo zdarzenia", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$P(A)=\\frac{|A|}{|\\Omega|}$" }] },
+      { num: 13, text: "Własności logarytmów", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$\\log(ab)=\\log a+\\log b$" }] },
+      { num: 14, text: "Rozkład na czynniki — wzory", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$a^3\\pm b^3=(a\\pm b)(a^2\\mp ab+b^2)$" }] },
+      { num: 15, text: "Ciąg geometryczny — suma $n$ wyrazów", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$S_n=a_1\\cdot\\frac{q^n-1}{q-1}$" }] },
+      { num: 16, text: "Wariacje z powtórzeniami", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$n^k$ — $k$ miejsc, $n$ elementów" }] },
+      { num: 17, text: "Odległość punktu od prostej", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$d=\\frac{|ax_0+by_0+c|}{\\sqrt{a^2+b^2}}$" }] },
+      { num: 18, text: "Wyrażenie wymierne — upraszczanie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Rozkład licznika i mianownika, skróć" }] },
+      { num: 19, text: "Równanie prostej równoległej", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Warunek:", math: "Ten sam współczynnik $a$, inny $b$" }] },
+      { num: 20, text: "Kąt wpisany i środkowy w okrąg", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Tw.:", math: "Kąt środkowy = 2 × kąt wpisany" }] },
+      { num: 21, text: "Odchylenie standardowe lub wariancja", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\sigma^2=\\frac{1}{n}\\sum(x_i-\\bar{x})^2$" }] },
+      { num: 22, text: "Rozwiąż równanie wielomianowe", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wskazówka:", math: "Rozkład lub wzór ogólny" }] },
+      { num: 23, text: "Dowód nierówności", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Technika:", math: "$(a-b)^2 \\geq 0$ lub inne przekształcenia" }] },
+      { num: 24, text: "Oblicz wszystkie elementy trójkąta", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzia:", math: "Tw. cosinusów, sinusów, pola" }] },
+      { num: 25, text: "Funkcja kwadratowa — wyznacz dziedzinę lub zbiór wartości", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Zbiór wartości:", math: "Zależy od znaku $a$ i wartości $\\Delta$" }] },
+      { num: 26, text: "Równanie z parametrem — analiza rozwiązań", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Oblicz $\\Delta$ i sprawdź warunki" }] },
+      { num: 27, text: "P-stwo złożone z kilku etapów", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Schemat:", math: "Drzewo możliwości lub kombinatoryka" }] },
+      { num: 28, text: "Graniastosłup lub ostrosłup — obliczenia", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Narysuj przekrój, oblicz $h$, użyj wzoru na $V$" }] }
+    ]
   },
 
   /* Pokazowy III/2022 (Formuła 2023) */
@@ -765,7 +853,36 @@
     formula: "2023", examType: "pokazowy",
     pdfPath: "arkusze/pokazowy_III_2022/arkusz.pdf", zasadyPath: "arkusze/pokazowy_III_2022/zasady.pdf",
     taskCount: 28, closedCount: 21, openCount: 7,
-    tasks: Array.from({length: 21}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 7}, (_, i) => ({ num: i+22, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+    tasks: [
+      { num: 1, text: "Działania na potęgach (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Własności:", math: "$a^m\\cdot a^n=a^{m+n}$" }] },
+      { num: 2, text: "Pierwiastki — upraszczanie (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\sqrt{ab}=\\sqrt{a}\\cdot\\sqrt{b}$" }] },
+      { num: 3, text: "Nierówność liniowa (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Izoluj $x$" }] },
+      { num: 4, text: "Pole wielokąta (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Trójkąt, trapez, romb" }] },
+      { num: 5, text: "Układ współrzędnych — punkt, odcinek (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Odległość i środek odcinka" }] },
+      { num: 6, text: "Funkcja liniowa — wyznacz $a$ i $b$ (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Oblicz $a$, wstaw do $y=ax+b$" }] },
+      { num: 7, text: "Ciąg arytm. — $n$-ty wyraz (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$a_n=a_1+(n-1)r$" }] },
+      { num: 8, text: "Trygonometria — kąty ostre w trójkącie (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$\\sin, \\cos, \\tan$ w trójkącie" }] },
+      { num: 9, text: "Procenty — zmiana ceny (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$c_{nowa}=c\\cdot(1\\pm p\\%)$" }] },
+      { num: 10, text: "Objętość walca lub stożka (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$V_{walca}=\\pi r^2 h$" }] },
+      { num: 11, text: "Funkcja kwadratowa — postać kanoniczna (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$f(x)=a(x-p)^2+q$" }] },
+      { num: 12, text: "P-stwo klasyczne (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$P(A)=|A|/|\\Omega|$" }] },
+      { num: 13, text: "Logarytmy — obliczenia (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Definicja:", math: "$\\log_a b=c \\iff a^c=b$" }] },
+      { num: 14, text: "Wyrażenia algebraiczne (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "WSM: $(a+b)^2, a^2-b^2$" }] },
+      { num: 15, text: "Ciąg geometryczny — $q$ lub $a_n$ (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$q=a_{n+1}/a_n$" }] },
+      { num: 16, text: "Kombinatoryka — zlicz (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$\\binom{n}{k}$, $n^k$, $P_n=n!$" }] },
+      { num: 17, text: "Równanie prostej (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$y-y_1=a(x-x_1)$" }] },
+      { num: 18, text: "Działania na ułamkach (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Rozszerzanie i skracanie" }] },
+      { num: 19, text: "Prostopadłość — wyznacz prostą (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Warunek:", math: "$a_{\\perp}=-1/a$" }] },
+      { num: 20, text: "Kąty w wielokącie foremnym (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\alpha=\\frac{(n-2)\\cdot 180°}{n}$" }] },
+      { num: 21, text: "Statystyka opisowa (pokazowy)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Pojęcia:", math: "Średnia, mediana, odchylenie stan." }] },
+      { num: 22, text: "Równanie — pełne rozwiązanie (pokazowy)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wskazówka:", math: "Pokaż każdy krok obliczeń" }] },
+      { num: 23, text: "Dowód algebraiczny (pokazowy)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Technika:", math: "Przekształcenia równoważne" }] },
+      { num: 24, text: "Geometria — obliczenia (pokazowy)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzia:", math: "Pitagoras, wzory na pola" }] },
+      { num: 25, text: "Wyznacz parametry funkcji (pokazowy)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Układ równań z warunków zadania" }] },
+      { num: 26, text: "Nierówność kwadratowa (pokazowy)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Wyznacz $\\Delta$, zaznacz na osi" }] },
+      { num: 27, text: "Prawdopodobieństwo — zdarzenia złożone (pokazowy)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Schemat:", math: "Kombinatoryka + $P(A)$" }] },
+      { num: 28, text: "Bryła — pełne obliczenia (pokazowy)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Oblicz $h$, potem $V$ i $S$ bryły" }] }
+    ]
   },
 
   /* Próbny 2021 (Formuła 2015) */
@@ -774,7 +891,42 @@
     formula: "2015", examType: "probny",
     pdfPath: "arkusze/probny_2021/arkusz.pdf", zasadyPath: "arkusze/probny_2021/zasady.pdf",
     taskCount: 34, closedCount: 25, openCount: 9,
-    tasks: Array.from({length: 25}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 9}, (_, i) => ({ num: i+26, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+    tasks: [
+      { num: 1, text: "Potęgi — oblicz i uprość", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Własności potęg:", math: "$a^m\\cdot a^n=a^{m+n}$" }] },
+      { num: 2, text: "Pierwiastki — uprość wyrażenie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\sqrt{a^2}=|a|$" }] },
+      { num: 3, text: "Nierówność liniowa", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Izoluj $x$" }] },
+      { num: 4, text: "Pole i obwód — wielokąt", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Trapez, trójkąt, równoległobok" }] },
+      { num: 5, text: "Odległość punktów na płaszczyźnie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$d=\\sqrt{\\Delta x^2+\\Delta y^2}$" }] },
+      { num: 6, text: "Funkcja liniowa — właściwości", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$y=ax+b$" }] },
+      { num: 7, text: "Ciąg arytmetyczny — suma", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$S_n=\\frac{(a_1+a_n)n}{2}$" }] },
+      { num: 8, text: "Trygonometria — definicje w trójkącie prostokątnym", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$\\sin=\\frac{p}{h}$, $\\cos=\\frac{a}{h}$, $\\tan=\\frac{p}{a}$" }] },
+      { num: 9, text: "Procenty — oblicz", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$p\\%$ z $a=\\frac{pa}{100}$" }] },
+      { num: 10, text: "Objętość graniastosłupa", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$V=P_p\\cdot h$" }] },
+      { num: 11, text: "Wyznacz wierzchołek paraboli", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$p=-b/(2a)$, $q=f(p)$" }] },
+      { num: 12, text: "Doświadczenie losowe — prawdopodobieństwo", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$P(A)=|A|/|\\Omega|$" }] },
+      { num: 13, text: "Logarytmy — własności", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$\\log(a\\cdot b)=\\log a+\\log b$" }] },
+      { num: 14, text: "Wzory skróconego mnożenia — zastosowanie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$(a+b)^3, a^3-b^3$" }] },
+      { num: 15, text: "Ciąg geometryczny — wyraz lub suma", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$a_n=a_1 q^{n-1}$" }] },
+      { num: 16, text: "Kombinatoryka — zlicz", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wybór:", math: "$\\binom{n}{k}$ lub $n!$" }] },
+      { num: 17, text: "Geometria analityczna — prosta", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Postać kierunkowa i ogólna" }] },
+      { num: 18, text: "Wyrażenia wymierne — działania", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "NWM mianowników" }] },
+      { num: 19, text: "Wartość bezwzględna — równanie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Dwa przypadki: $|x|=a \\Rightarrow x=\\pm a$" }] },
+      { num: 20, text: "Geometria okręgu — kąty i cięciwy", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Tw.:", math: "Kąt środkowy = 2 × kąt wpisany" }] },
+      { num: 21, text: "Planimetria — trójkąt równoboczny lub prostokątny", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$P=\\frac{a^2\\sqrt{3}}{4}$" }] },
+      { num: 22, text: "Statystyka — oblicz odchylenie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\sigma=\\sqrt{\\frac{1}{n}\\sum(x_i-\\bar{x})^2}$" }] },
+      { num: 23, text: "Cena po podwyżce lub obniżce o $x$%", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$c_{nowa}=c\\cdot(1+p\\%)$" }] },
+      { num: 24, text: "Pitagoras — wyznacz brakujący bok", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Tw.:", math: "$a^2+b^2=c^2$" }] },
+      { num: 25, text: "Prosta prostopadła — wyznacz równanie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Warunek:", math: "$a_{\\perp}=-1/a$, podstaw punkt" }] },
+      { num: 26, text: "Rozwiąż równanie kwadratowe — pełne obliczenia", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Oblicz $\\Delta$, wyznacz $x_{1,2}$" }] },
+      { num: 27, text: "Wyznacz równanie prostej przez dwa punkty", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Oblicz $a$, potem $b$" }] },
+      { num: 28, text: "Dowód algebraiczny — podzielność", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Technika:", math: "Wykaż rozkład na czynniki" }] },
+      { num: 29, text: "Stożek lub walec — oblicz wymiary", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Pitagoras d/h/r + wzory na $V$" }] },
+      { num: 30, text: "Funkcja kwadratowa — wyznacz parametry", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Układ z warunków: podstaw znane punkty" }] },
+      { num: 31, text: "Kombinatoryka — zlicz grupy lub permutacje", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzia:", math: "$P_n=n!$, $\\binom{n}{k}$, wariacje" }] },
+      { num: 32, text: "Bryła — pole powierzchni i objętość", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Oblicz $P_p$, potem $V=P_p\\cdot h$" }] },
+      { num: 33, text: "Tw. sinusów/cosinusów — wyznacz element trójkąta", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzia:", math: "$\\frac{a}{\\sin\\alpha}=2R$, $c^2=a^2+b^2-2ab\\cos\\gamma$" }] },
+      { num: 34, text: "Ciąg — wyznacz $r$, $a_1$ lub $n$ z warunków", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Układ równań z warunków zadania" }] }
+    ]
   },
 
   /* Próbny 2020 (Formuła 2015) */
@@ -783,7 +935,42 @@
     formula: "2015", examType: "probny",
     pdfPath: "arkusze/probny_2020/arkusz.pdf", zasadyPath: "arkusze/probny_2020/zasady.pdf",
     taskCount: 34, closedCount: 25, openCount: 9,
-    tasks: Array.from({length: 25}, (_, i) => ({ num: i+1, text: "Zadanie zamknięte " + (i+1), type: "zamknięte", answer: "Sprawdź w arkuszu", solution: [{ step: "Rozwiązanie — zobacz zasady oceniania CKE.", math: "" }] })).concat(Array.from({length: 9}, (_, i) => ({ num: i+26, text: "Zadanie otwarte " + (i+1), type: "otwarte", answer: "Sprawdź w arkuszu", solution: [{ step: "Pełne rozwiązanie z uzasadnieniem.", math: "" }] })))
+    tasks: [
+      { num: 1, text: "Potęgi — oblicz wartość", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Własności:", math: "$a^m/a^n=a^{m-n}$" }] },
+      { num: 2, text: "Pierwiastki — porównaj lub oblicz", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\sqrt{a}\\cdot\\sqrt{b}=\\sqrt{ab}$" }] },
+      { num: 3, text: "Zapis procentowy i ułamkowy", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Zamiana:", math: "$p\\%=\\frac{p}{100}$" }] },
+      { num: 4, text: "Pole lub obwód figury", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Koło, trapez, trójkąt" }] },
+      { num: 5, text: "Układ współrzędnych — zadanie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzie:", math: "Wzór na odległość lub środek" }] },
+      { num: 6, text: "Funkcja liniowa — wykres i wzór", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$y=ax+b$" }] },
+      { num: 7, text: "Ciąg arytmetyczny", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$a_n$, $S_n$" }] },
+      { num: 8, text: "Trygonometria — kąt lub bok trójkąta", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Definicje:", math: "$\\sin, \\cos, \\tan$" }] },
+      { num: 9, text: "Procenty — oblicz zmianę", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "Mnożnik zmiany" }] },
+      { num: 10, text: "Objętość lub pole powierzchni", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Walec, stożek, kula" }] },
+      { num: 11, text: "Funkcja kwadratowa — właściwości", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Postać ogólna, kanoniczna, iloczynowa" }] },
+      { num: 12, text: "Prawdopodobieństwo zdarzenia", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$P(A)=|A|/|\\Omega|$" }] },
+      { num: 13, text: "Logarytmy — podstawowe obliczenia", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Def.:", math: "$\\log_a b=c \\iff a^c=b$" }] },
+      { num: 14, text: "Wyrażenia algebraiczne — upraszczanie", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "WSM, rozkład na czynniki" }] },
+      { num: 15, text: "Ciąg geometryczny — iloraz lub suma", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$q=a_2/a_1$" }] },
+      { num: 16, text: "Kombinatoryka — rodzaje wyborów", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Permutacje i kombinacje" }] },
+      { num: 17, text: "Geometria analityczna — prosta", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$y=ax+b$, postać ogólna" }] },
+      { num: 18, text: "Działania na wyrażeniach wymiernych", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "NWM + upraszczanie ułamków" }] },
+      { num: 19, text: "Wartość bezwzględna — oblicz lub rozwiąż", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Def.:", math: "$|x|=x$ dla $x\\geq 0$, $-x$ dla $x<0$" }] },
+      { num: 20, text: "Właściwości wielokąta foremnego", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Suma kątów, kąt środkowy" }] },
+      { num: 21, text: "Geometria — okrąg wpisany lub opisany", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$r=\\frac{P}{s}$, $R=\\frac{abc}{4P}$" }] },
+      { num: 22, text: "Statystyka — oblicz miary", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "Średnia, mediana, dominanta" }] },
+      { num: 23, text: "Nierówność — rozwiązanie na osi", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Zaznacz przedział na osi" }] },
+      { num: 24, text: "Potęga lub pierwiastek — własności", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$\\sqrt[n]{a^m}=a^{m/n}$" }] },
+      { num: 25, text: "Wielomian — rozłożenie na czynniki", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Wyłącz, schemat Hornera lub wzory" }] },
+      { num: 26, text: "Rozwiąż równanie i sprawdź", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "$\\Delta$, Viète lub metoda graficzna" }] },
+      { num: 27, text: "Prosta przez dwa punkty — wyznacz i narysuj", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Oblicz $a=\\frac{\\Delta y}{\\Delta x}$, potem $b$" }] },
+      { num: 28, text: "Wykaż: własność dotycząca liczb całkowitych", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Technika:", math: "Podstaw ogólną postać liczby" }] },
+      { num: 29, text: "Bryła obrotowa — oblicz $V$ i pole", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Dane → brakujące wymiary → wzory" }] },
+      { num: 30, text: "Wyznacz $a, b, c$ funkcji kwadratowej", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Trzy warunki → układ trzech równań" }] },
+      { num: 31, text: "Kombinatoryka — zlicz ustawienia lub wybory", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzia:", math: "$n!$, $\\binom{n}{k}$, $n^k$" }] },
+      { num: 32, text: "Graniastosłup — pełne obliczenia", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Pole podst. → $V=P_p\\cdot h$ → bok i przekątna" }] },
+      { num: 33, text: "Trójkąt — tw. cosinusów lub sinusów", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzie:", math: "$c^2=a^2+b^2-2ab\\cos\\gamma$" }] },
+      { num: 34, text: "Ciąg — wyznacz $n$, $r$, $q$ z warunków", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Układ równań: podstaw dane, rozwiąż" }] }
+    ]
   }
 
   ];

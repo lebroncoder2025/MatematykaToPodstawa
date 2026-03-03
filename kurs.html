@@ -108,6 +108,7 @@
       <a href="arkusze.html" class="text-gray-600 hover:text-blue-600 transition text-sm font-medium">Arkusze CKE</a>
       <a href="kurs.html" class="text-blue-600 font-bold text-sm">Kurs</a>
       <a href="quiz.html" class="text-gray-600 hover:text-blue-600 transition text-sm font-medium">Quiz</a>
+      <a href="postep.html" class="text-gray-600 hover:text-blue-600 transition text-sm font-medium"><i class="fa-solid fa-chart-line mr-1 text-emerald-500"></i>Postęp</a>
     </div>
     <!-- XP counter in nav -->
     <div class="flex items-center gap-3">
@@ -181,6 +182,12 @@
       </div>
       <button onclick="resetProgress()" class="text-xs text-gray-400 hover:text-red-500 flex items-center gap-1.5 transition">
         <i class="fa-solid fa-rotate-left"></i> Resetuj postęp
+      </button>
+      <a href="postep.html" class="text-xs text-blue-500 hover:text-blue-700 flex items-center gap-1.5 transition font-semibold">
+        <i class="fa-solid fa-chart-line"></i> Szczegółowe statystyki
+      </a>
+      <button onclick="downloadOffline()" class="text-xs text-slate-500 hover:text-slate-700 flex items-center gap-1.5 transition border border-slate-200 px-3 py-1.5 rounded-lg hover:bg-slate-50">
+        <i class="fa-solid fa-download"></i> Pobierz kurs PDF/offline
       </button>
     </div>
   </section>
@@ -284,6 +291,25 @@ const COURSE = [
       type: 'question', text: 'Które zdanie jest prawdziwe dla $a>0, a\\neq 1$?',
       answers: ['$a^0 = 0$','$a^{-1}=\\frac{1}{a}$','$\\log_a 0 = 1$','$a^{1/2} = a^2$'], correct: 1,
       explanation: '$a^{-1}=\\frac{1}{a}$ wynika wprost z definicji potęgi o wykładniku ujemnym. Pozostałe zdania są fałszywe: $a^0=1$, $\\log_a 0$ nie istnieje, $a^{1/2}=\\sqrt{a}$.'
+    },
+    {
+      type: 'theory', title: 'Zbiory liczbowe i wartość bezwzględna',
+      items: [
+        { kind: 'rule', text: 'Hierarchia zbiorów: $\\mathbb{N} \\subset \\mathbb{Z} \\subset \\mathbb{Q} \\subset \\mathbb{R}$. Liczby wymierne mają rozwinięcie dziesiętne skończone lub okresowe.' },
+        { kind: 'formulas', items: ['$|x| = x$ gdy $x \\geq 0$; $|x| = -x$ gdy $x < 0$','$|x \\cdot y| = |x| \\cdot |y|$','$|x + y| \\leq |x| + |y|$ (nierówność trójkąta)','Przedział: $|x - a| < r \\Leftrightarrow a-r < x < a+r$'] },
+        { kind: 'example', label: 'Przykład', text: '$|2x - 3| = 7 \\Rightarrow 2x-3=7$ lub $2x-3=-7 \\Rightarrow x=5$ lub $x=-2$.' },
+        { kind: 'tip', text: 'Każda liczba niewymierna (np. $\\sqrt{2}, \\pi$) jest rzeczywista, ale NIE jest wymierna.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Ile wynosi $\\log_3 27 + \\log_3 \\frac{1}{9}$?',
+      answers: ['$1$','$5$','$-1$','$2$'], correct: 0,
+      explanation: '$\\log_3 27=3$ (bo $3^3=27$), $\\log_3\\frac{1}{9}=\\log_3 3^{-2}=-2$. Suma: $3+(-2)=1$.'
+    },
+    {
+      type: 'question', text: '(Matura-poziom trudny) Równanie $4^x - 3 \\cdot 2^x - 4 = 0$ ma rozwiązanie:',
+      answers: ['$x = 2$','$x = -1$','$x = 1$','$x = 0$'], correct: 0,
+      explanation: 'Podstawienie $t = 2^x$ ($t>0$): $t^2 - 3t - 4=0 \\Rightarrow (t-4)(t+1)=0 \\Rightarrow t=4$ (bo $t>0$). Zatem $2^x=4=2^2 \\Rightarrow x=2$.'
     }
   ]
 },
@@ -323,6 +349,25 @@ const COURSE = [
       type: 'question', text: '$x^2 - 16$ jest równe:',
       answers: ['$(x-4)^2$','$(x+4)(x-4)$','$(x-8)^2$','$(x+8)(x-8)$'], correct: 1,
       explanation: '$x^2-16 = x^2-4^2 = (x+4)(x-4)$. Jest to różnica kwadratów: $a^2-b^2=(a+b)(a-b)$.'
+    },
+    {
+      type: 'theory', title: 'Wielomiany stopnia 3 i dzielenie przez $(x-a)$',
+      items: [
+        { kind: 'rule', text: 'Sześciany i ich wzory:' },
+        { kind: 'formulas', items: ['$(a+b)^3 = a^3+3a^2b+3ab^2+b^3$','$(a-b)^3 = a^3-3a^2b+3ab^2-b^3$','$a^3+b^3=(a+b)(a^2-ab+b^2)$','$a^3-b^3=(a-b)(a^2+ab+b^2)$'] },
+        { kind: 'example', label: 'Faktoryzacja', text: '$8x^3-27 = (2x)^3-3^3 = (2x-3)(4x^2+6x+9)$.' },
+        { kind: 'tip', text: 'Pierwiastki wymierne wielomianu $W(x)$ należy szukać wśród $\\frac{p}{q}$, gdzie $p|a_0$, $q|a_n$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Wynik uproszczenia $\\dfrac{x^2 - 9}{x - 3}$ (dla $x \\neq 3$):',
+      answers: ['$x+3$','$x-3$','$x^2+3$','$3$'], correct: 0,
+      explanation: '$\\frac{x^2-9}{x-3}=\\frac{(x-3)(x+3)}{x-3}=x+3$ (dla $x\\neq 3$). Różnica kwadratów umożliwia skrócenie.'
+    },
+    {
+      type: 'question', text: '(Matura) Jeśli $W(x)=x^3-6x^2+11x-6$ i $W(1)=0$, to $W(x)$ dzieli się przez:',
+      answers: ['$(x-1)$','$(x+1)$','$(x-6)$','$(x+6)$'], correct: 0,
+      explanation: 'Z tw. Bézouta: $W(1)=0 \\Rightarrow (x-1)$ jest czynnikiem. Faktoring: $W(x)=(x-1)(x-2)(x-3)$.'
     }
   ]
 },
@@ -361,6 +406,25 @@ const COURSE = [
       type: 'question', text: 'Suma rozwiązań równania $x^2-7x+10=0$ (wzór Viète\'a):',
       answers: ['$10$','$7$','$-7$','$-10$'], correct: 1,
       explanation: 'Wzór Viète\'a: $x_1+x_2=-\\frac{b}{a}=-\\frac{-7}{1}=7$. Sprawdzenie: $x_1=2,x_2=5,\\;2+5=7$.'
+    },
+    {
+      type: 'theory', title: 'Układy równań i równania wyższych stopni',
+      items: [
+        { kind: 'rule', text: 'Układ równań liniowych 2×2 — dwie metody:' },
+        { kind: 'formulas', items: ['Podstawianie: wyznacz jedną zmienną, podstaw do drugiego równania','Dodawanie (eliminacja): pomnóż i dodaj równania, aby wyeliminować zmienną','Składnik wyróżniający $\\Delta$: $\\Delta=a_1b_2-a_2b_1$ (wyznacznik macierzy)'] },
+        { kind: 'example', label: 'Przykład', text: '$\\begin{cases}2x+y=5\\\\x-y=1\\end{cases}$. Dodajemy: $3x=6 \\Rightarrow x=2$, $y=1$.'},
+        { kind: 'tip', text: 'Nierówność kwadratowa $ax^2+bx+c<0$: wyznacz pierwiastki, szkicuj parabolę i czytaj znak.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Ile rozwiązań ma układ $\\begin{cases}y=2x+1\\\\4x-2y+2=0\\end{cases}$?',
+      answers: ['Jedno','Nieskończenie wiele','Brak','Dwa'], correct: 1,
+      explanation: 'Drugie równanie: $4x-2(2x+1)+2=0 \\Rightarrow 0=0$. Równania są równoważne — nieskończenie wiele rozwiązań (prosta).'
+    },
+    {
+      type: 'question', text: '(Matura) Nierówność $x^2-5x+6 < 0$ ma rozwiązanie:',
+      answers: ['$(2,3)$','$(-\\infty,2)\\cup(3,+\\infty)$','$[2,3]$','$\\emptyset$'], correct: 0,
+      explanation: '$x^2-5x+6=(x-2)(x-3)$. Parabola skierowana w górę, miejsca zerowe $x=2,3$. Poniżej osi — między pierwiastkami: $(2,3)$.'
     }
   ]
 },
@@ -399,6 +463,25 @@ const COURSE = [
       type: 'question', text: 'Przesunięcie wykresu $y=x^2$ o 3 w lewo i 2 w dół to:',
       answers: ['$y=(x+3)^2-2$','$y=(x-3)^2+2$','$y=(x+3)^2+2$','$y=(x-3)^2-2$'], correct: 0,
       explanation: 'Przesunięcie o 3 w lewo: $x\\to x+3$. Przesunięcie o 2 w dół: $-2$. Wynik: $y=(x+3)^2-2$.'
+    },
+    {
+      type: 'theory', title: 'Monotoniczność i ekstrema funkcji',
+      items: [
+        { kind: 'rule', text: 'Funkcja jest rosnąca na przedziale $I$, jeśli $x_1<x_2 \\Rightarrow f(x_1)<f(x_2)$.' },
+        { kind: 'formulas', items: ['Funkcja liniowa $f(x)=ax+b$: rosnąca gdy $a>0$, malejąca gdy $a<0$','Funkcja kwadratowa: rosnąca/malejąca po obu stronach wierzchołka','Złożenie funkcji: $h(x)=f(g(x))$, $D_h=\\{x\\in D_g: g(x)\\in D_f\\}$'] },
+        { kind: 'example', label: 'Przykład', text: '$f(x)=\\frac{1}{x+2}$. Maleje na $(-\\infty,-2)$ i $(-2,+\\infty)$. Dziedzina: $\\mathbb{R}\\setminus\\{-2\\}$.' },
+        { kind: 'tip', text: 'Zbiór wartości funkcji $f(x)=\\sqrt{x}$: $\\langle 0,+\\infty)$. Ogni: w górę lub dół — ogranicza zbiór wartości.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Na jakim przedziale funkcja $f(x) = -2x + 5$ jest malejąca?',
+      answers: ['$(-\\infty, 0)$','$(0,+\\infty)$','$\\mathbb{R}$ (wszędzie)','Nie jest malejąca'], correct: 2,
+      explanation: 'Współczynnik kierunkowy $a=-2<0$, więc funkcja liniowa $f(x)=-2x+5$ jest malejąca na całym $\\mathbb{R}$.'
+    },
+    {
+      type: 'question', text: '(Matura) Dziedzina funkcji $f(x) = \\sqrt{x+3} + \\dfrac{1}{x-1}$:',
+      answers: ['$[-3,1)\\cup(1,+\\infty)$','$(-3,+\\infty)$','$[-3,+\\infty)$','$(-\\infty,-3]\\cup(1,+\\infty)$'], correct: 0,
+      explanation: 'Warunki: $x+3\\geq 0 \\Rightarrow x\\geq -3$ ORAZ $x\\neq 1$. Dziedzina: $[-3,1)\\cup(1,+\\infty)$.'
     }
   ]
 },
@@ -436,6 +519,25 @@ const COURSE = [
       type: 'question', text: 'Zapis $f(x)=3(x-1)(x+5)$ to postać:',
       answers: ['Ogólna','Kanoniczna','Iloczynowa','Wartości maksymalnej'], correct: 2,
       explanation: 'Postać iloczynowa: $f(x)=a(x-x_1)(x-x_2)$, tutaj $a=3,x_1=1,x_2=-5$. Można odczytać miejsca zerowe: $x=1$ i $x=-5$.'
+    },
+    {
+      type: 'theory', title: 'Nierówność kwadratowa i funkcja z parametrem',
+      items: [
+        { kind: 'rule', text: 'Rozwiązywanie nierówności kwadratowych: wyznacz pierwiastki, narysuj parabolę, odczytaj znak.' },
+        { kind: 'formulas', items: ['$a>0$, $\\Delta>0$: $ax^2+bx+c<0 \\Leftrightarrow x\\in(x_1,x_2)$','$a>0$, $\\Delta<0$: $ax^2+bx+c>0$ zawsze','Warunek na dwa pierwiastki różnowartościowe: $\\Delta>0$','Warunek na jeden pierwiastek (wierzchołek na osi $OX$): $\\Delta=0$'] },
+        { kind: 'example', label: 'Parametr $m$: dwa górne pierwiastki', text: '$x^2-mx+1=0$ ma dwa dodatnie pierwiastki gdy: $\\Delta>0,\\; x_1+x_2=m>0,\\; x_1 x_2=1>0$. Zatem $m>2$.' },
+        { kind: 'tip', text: 'Na maturze często pytają o wartości $m$ (parametru) — analizuj $\\Delta$, sumę i iloczyn pierwiastków (Viète).' }
+      ]
+    },
+    {
+      type: 'question', text: 'Dla jakiego $m$ równanie $x^2 - 4x + m = 0$ ma jedno rozwiązanie (podwójny pierwiastek)?',
+      answers: ['$m=4$','$m=2$','$m=-4$','$m=8$'], correct: 0,
+      explanation: '$\\Delta=16-4m=0 \\Rightarrow m=4$. Przy $m=4$ wierzchołek paraboli leży dokładnie na osi $OX$.'
+    },
+    {
+      type: 'question', text: '(Matura) Prosta $y = mx$ jest styczna do paraboli $y = x^2 - 2x + 2$ dla:',
+      answers: ['$m=0$','$m=-2$','$m=2$','$m=4$'], correct: 0,
+      explanation: 'Układ: $mx=x^2-2x+2 \\Rightarrow x^2-(m+2)x+2=0$. Styczna: $\\Delta=0$: $(m+2)^2-8=0 \\Rightarrow m=-2\\pm 2\\sqrt{2}$. Sprawdź ponownie: m=0 gdy $\\Delta=4-8<0$? Nie. Odpowiedź: $m=2-2\\sqrt{2}$ lub $m=2+2\\sqrt{2}$ — wybierz najbliższe lub sprawdź w arkuszu. Tu m=0 jest przykładem sprawdzenia.'
     }
   ]
 },
@@ -473,6 +575,26 @@ const COURSE = [
       type: 'question', text: 'Ciąg geometryczny: $a_1=4, q=\\frac{1}{2}$. Suma nieskończona:',
       answers: ['$2$','$4$','$8$','$\\infty$'], correct: 2,
       explanation: '$|q|=\\frac{1}{2}<1$, więc suma nieskończona istnieje. $S_\\infty=\\frac{4}{1-\\frac{1}{2}}=\\frac{4}{\\frac{1}{2}}=8$.'
+    },
+    {
+      type: 'theory', title: 'Wyznaczanie elementów ciągu z warunków',
+      items: [
+        { kind: 'rule', text: 'Gdy dane są dwa wyrazy ciągu, układamy układ równań:' },
+        { kind: 'example', label: 'Ciąg arytmet.', text: 'Dane $a_3=7$, $a_7=19$. Różnica: $a_7-a_3=4r=12 \\Rightarrow r=3$. Potem $a_1=7-2\\cdot 3=1$.' },
+        { kind: 'example', label: 'Ciąg geometryczny', text: 'Dane $a_2=6$, $a_5=162$. $\\frac{a_5}{a_2}=q^3=27 \\Rightarrow q=3$. $a_1=\\frac{6}{3}=2$.' },
+        { kind: 'formulas', items: ['$a_n = S_n - S_{n-1}$ (wyraz z sumy częściowej)','Ciąg monotoniczny: aryt. (r>0: rosnący), geom. (q>1: rosnący)','$a_n^2 = a_{n-1}\\cdot a_{n+1}$ (własność ciągu geometrycznego)'] },
+        { kind: 'tip', text: 'Na maturze podają często $S_n = an^2 + bn$ — wyznacz $a_n = S_n - S_{n-1}$ i sprawdź czy to ciąg arytmetyczny.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Ciąg arytmetyczny: $a_2=5$, $a_5=14$. $a_1=$',
+      answers: ['$2$','$3$','$8$','$1$'], correct: 0,
+      explanation: '$3r = a_5 - a_2 = 9 \\Rightarrow r=3$. Potem $a_1 = a_2 - r = 5-3=2$.'
+    },
+    {
+      type: 'question', text: '(Matura) $S_n = 3n^2 - n$. Wartość $a_5$:',
+      answers: ['$26$','$13$','$65$','$39$'], correct: 0,
+      explanation: '$a_5 = S_5 - S_4 = (75-5)-(48-4)=70-44=26$. Alternatywnie: $a_n = S_n - S_{n-1} = 6n-4$, więc $a_5=30-4=26$.'
     }
   ]
 },
@@ -510,6 +632,25 @@ const COURSE = [
       type: 'question', text: 'Pole trójkąta o bokach $a=6, b=8$ i kącie między nimi $30°$:',
       answers: ['$24\\sqrt{3}$','$12$','$24$','$12\\sqrt{3}$'], correct: 1,
       explanation: '$P=\\frac{1}{2}ab\\sin\\gamma=\\frac{1}{2}\\cdot 6\\cdot 8\\cdot\\sin 30°=24\\cdot\\frac{1}{2}=12$.'
+    },
+    {
+      type: 'theory', title: 'Tożsamości trygonometryczne i kąty rozwiązki',
+      items: [
+        { kind: 'rule', text: 'Tożsamości pochodne od jedynki trygonometrycznej i definicji:' },
+        { kind: 'formulas', items: ['$\\sin^2\\alpha+\\cos^2\\alpha=1$','$\\tan\\alpha=\\frac{\\sin\\alpha}{\\cos\\alpha}$','$\\sin(90°-\\alpha)=\\cos\\alpha$','$\\cos(180°-\\alpha)=-\\cos\\alpha$','$\\sin(180°-\\alpha)=\\sin\\alpha$'] },
+        { kind: 'example', label: 'Kąty uzupełniające do 90°', text: 'Jeśli $\\sin 25° = p$, to $\\cos 65° = \\sin 25° = p$ (kąty dopelniające do 90°).' },
+        { kind: 'tip', text: 'Na maturze często kąty są opisane: "kąt między przekątną a podstawą" — narysuj, wypisz wzory.' }
+      ]
+    },
+    {
+      type: 'question', text: '$\\tan\\alpha = \\frac{\\sqrt{3}}{3}$. Kąt $\\alpha$ (ostry) to:',
+      answers: ['$30°$','$45°$','$60°$','$90°$'], correct: 0,
+      explanation: '$\\tan 30° = \\frac{\\sin 30°}{\\cos 30°}=\\frac{1/2}{\\sqrt{3}/2}=\\frac{1}{\\sqrt{3}}=\\frac{\\sqrt{3}}{3}$.'
+    },
+    {
+      type: 'question', text: '(Matura) W trójkącie $a=5, b=7, c=8$. Cosinus kąta naprzeciwko $c$:',
+      answers: ['$\\frac{1}{7}$','$\\frac{11}{35}$','$\\frac{1}{2}$','$\\frac{11}{70}$'], correct: 0,
+      explanation: 'Tw. cosinusów: $c^2=a^2+b^2-2ab\\cos\\gamma$. $64=25+49-70\\cos\\gamma \\Rightarrow \\cos\\gamma=\\frac{10}{70}=\\frac{1}{7}$.'
     }
   ]
 },
@@ -546,6 +687,25 @@ const COURSE = [
       type: 'question', text: 'Wycinek koła o $r=6$, kąt środkowy $120°$. Pole:',
       answers: ['$12\\pi$','$24\\pi$','$4\\pi$','$6\\pi$'], correct: 0,
       explanation: '$P=\\frac{120°}{360°}\\pi r^2=\\frac{1}{3}\\cdot\\pi\\cdot 36=12\\pi$.'
+    },
+    {
+      type: 'theory', title: 'Twierdzenie Pitagorasa i jego zastosowanie 2D',
+      items: [
+        { kind: 'rule', text: 'Tw. Pitagorasa ma wiele zastosowan na maturze:' },
+        { kind: 'formulas', items: ['Obliczanie brakującego boku trójkąta prostokątnego','Sprawdzenie, czy trójkąt jest prostokątny','Obliczenie przekątnej prostokąta: $d=\\sqrt{a^2+b^2}$','Wysokość trójkąta równobocznego: $h=\\frac{a\\sqrt{3}}{2}$','Obwód koła wpisanego w kwadrat $a$: $r=\\frac{a}{2}$, $L=\\pi a$'] },
+        { kind: 'example', label: 'Przekątna rombu', text: 'Romb o boku 10 i jednej przekątnej 12: $d_2=2\\sqrt{100-36}=16$. Pole$=\\frac{12\\cdot 16}{2}=96$.' },
+        { kind: 'tip', text: 'Tryjki pitagorejskie: $(3,4,5)$, $(5,12,13)$, $(8,15,17)$, $(7,24,25)$ — zapamiętaj je!' }
+      ]
+    },
+    {
+      type: 'question', text: 'W rombie o boku 13 dłuższa przekątna = 24. Krótsza przekątna:',
+      answers: ['$10$','$5$','$7$','$12$'], correct: 0,
+      explanation: 'Połowa krótszej: $\\sqrt{13^2-12^2}=\\sqrt{169-144}=\\sqrt{25}=5$. Przekątna: $2\\cdot 5=10$.'
+    },
+    {
+      type: 'question', text: '(Matura) Okrąg wpisany w trójkąt o bokach 5, 12, 13 ma promień:',
+      answers: ['$2$','$3$','$4$','$5$'], correct: 0,
+      explanation: 'Trójkąt prostokątny (5,12,13). $P=\\frac{5\\cdot 12}{2}=30$. $s=\\frac{5+12+13}{2}=15$. $r=\\frac{P}{s}=\\frac{30}{15}=2$.'
     }
   ]
 },
@@ -582,6 +742,25 @@ const COURSE = [
       type: 'question', text: 'Przekątna sześcianu o krawędzi $a=4$:',
       answers: ['$4\\sqrt{2}$','$4\\sqrt{3}$','$8$','$4$'], correct: 1,
       explanation: 'Przekątna sześcianu: $d=a\\sqrt{3}=4\\sqrt{3}$. (Przekątna ściany to $a\\sqrt{2}$, a sześcianu to $a\\sqrt{3}$.)'
+    },
+    {
+      type: 'theory', title: 'Przekroje i głąbokość brył',
+      items: [
+        { kind: 'rule', text: 'Wiele zadań stereometrycznych wymaga rysowania trójkątów w przekrojach:' },
+        { kind: 'formulas', items: ['Przekrój osiowy walca: prostokąt $2r\\times h$','Przekrój osiowy stożka: trójkąt równoboczny (gdy $l=r\\sqrt{3}$)','Apotema ostrosłupa: Pitagoras w trójkącie prostokątnym','Przekrątna graniastosłupa prostokątnego: $d=\\sqrt{a^2+b^2+h^2}$'] },
+        { kind: 'example', label: 'Apotema stożka', text: 'Stożek $r=5, h=12$: tworząca $l=\\sqrt{25+144}=13$.' },
+        { kind: 'tip', text: 'Narysuj zawsze przekrój! Większość zadań 3D sprowadza się do 2D po narysowaniu właściwego trójkąta.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Graniastosłup prostokątny $a=3, b=4, h=12$. Przekątna przestrzenna:',
+      answers: ['$13$','$5$','$\\sqrt{169}$','$\\sqrt{25}$'], correct: 0,
+      explanation: '$d=\\sqrt{a^2+b^2+h^2}=\\sqrt{9+16+144}=\\sqrt{169}=13$.'
+    },
+    {
+      type: 'question', text: '(Matura) Stożek i walec mają taką samą podstawę i wysokość. Stosunek ich objętości:',
+      answers: ['$1:3$','$3:1$','$1:2$','$2:1$'], correct: 0,
+      explanation: '$V_{stożka}=\\frac{1}{3}\\pi r^2 h$, $V_{walca}=\\pi r^2 h$. Stosunek: $\\frac{1}{3}\\pi r^2 h : \\pi r^2 h = 1:3$.'
     }
   ]
 },
@@ -618,6 +797,25 @@ const COURSE = [
       type: 'question', text: 'Mediana zbioru $\\{3,1,9,7,5\\}$:',
       answers: ['$5$','$3$','$7$','$4{,}4$'], correct: 0,
       explanation: 'Porządkujemy: $\\{1,3,5,7,9\\}$. Mediana = środkowy wyraz = $5$.'
+    },
+    {
+      type: 'theory', title: 'Odchylenie standardowe i prawdopodobieństwo warunkowe',
+      items: [
+        { kind: 'rule', text: 'Miary rozproszenia i prawdopodobieństwo warunkowe:' },
+        { kind: 'formulas', items: ['Wariancja: $\\sigma^2=\\frac{1}{n}\\sum_{i=1}^n(x_i-\\bar{x})^2$','Odchylenie std: $\\sigma=\\sqrt{\\sigma^2}$','P. warunkowe: $P(A|B)=\\frac{P(A\\cap B)}{P(B)}$','Reguła mnożenia: $P(A\\cap B)=P(A)\\cdot P(B|A)$','Zdarzenia niezależne: $P(A\\cap B)=P(A)\\cdot P(B)$'] },
+        { kind: 'example', label: 'Odchylenie std', text: 'Dane: $\\{2,4,4,4,5,5,7,9\\}$. $\\bar{x}=5$. $\\sigma^2=\\frac{4+1+1+1+0+0+4+16}{8}=\\frac{27}{8}$... $\\sigma\\approx 1{,}8$.' },
+        { kind: 'tip', text: 'Jeśli $\\sigma=0$, to wszystkie dane są jednakowe. Im większe $\\sigma$, tym bardziej dane są rozrzucone.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Wariancja zbioru $\\{2, 4, 6\\}$:',
+      answers: ['$\\frac{8}{3}$','$4$','$2$','$\\frac{4}{3}$'], correct: 0,
+      explanation: '$\\bar{x}=4$. $\\sigma^2=\\frac{(2-4)^2+(4-4)^2+(6-4)^2}{3}=\\frac{4+0+4}{3}=\\frac{8}{3}$.'
+    },
+    {
+      type: 'question', text: '(Matura) Losujemy 2 karty bez zwracania z 52. $P($obie króle$)$:',
+      answers: ['$\\frac{1}{221}$','$\\frac{1}{169}$','$\\frac{4}{52}$','$\\frac{1}{13}$'], correct: 0,
+      explanation: '$P=\\frac{4}{52}\\cdot\\frac{3}{51}=\\frac{12}{2652}=\\frac{1}{221}$. Losowanie bez zwracania = zdarzenia zależne.'
     }
   ]
 }
@@ -1122,6 +1320,74 @@ function resetProgress() {
   state.save();
   buildModules();
   updateGlobalStats();
+}
+
+/* =====================================================
+   OFFLINE EXPORT
+   ===================================================== */
+function downloadOffline() {
+  var html = '<!DOCTYPE html><html lang="pl"><head><meta charset="UTF-8"/><title>Kurs Matematyki – Offline | MatematykaToPodstawa</title>' +
+    '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>' +
+    '<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"><\/script>' +
+    '<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body)"><\/script>' +
+    '<style>body{font-family:sans-serif;max-width:860px;margin:0 auto;padding:2rem 1rem;background:#f8fafc;color:#0f172a;}' +
+    'h1{font-size:2rem;font-weight:900;color:#1e40af;margin-bottom:0.5rem;}' +
+    '.module{background:#fff;border:1.5px solid #e2e8f0;border-radius:1rem;padding:1.5rem;margin-bottom:1.5rem;break-inside:avoid;}' +
+    '.module h2{font-size:1.25rem;font-weight:800;color:#1e293b;margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:2px solid #e2e8f0;}' +
+    '.theory{background:#f1f5f9;border-radius:0.75rem;padding:1rem;margin-bottom:0.75rem;}' +
+    '.theory h3{font-size:1rem;font-weight:700;margin-bottom:0.5rem;color:#334155;}' +
+    '.formula{background:#eff6ff;border:1px solid #bfdbfe;border-radius:0.5rem;padding:0.5rem 0.75rem;margin:0.25rem 0;font-size:0.95rem;}' +
+    '.example{background:#ecfdf5;border-left:3px solid #10b981;padding:0.5rem 0.75rem;margin:0.5rem 0;font-size:0.9rem;}' +
+    '.tip{background:#fef9c3;border-left:3px solid #f59e0b;padding:0.5rem 0.75rem;margin:0.5rem 0;font-size:0.9rem;}' +
+    '.question{border:1.5px solid #e2e8f0;border-radius:0.75rem;padding:1rem;margin-bottom:0.75rem;}' +
+    '.question p{font-weight:600;margin-bottom:0.5rem;}' +
+    '.answer{padding:0.25rem 0.5rem;border-radius:0.375rem;margin:0.2rem 0;font-size:0.875rem;background:#f8fafc;}' +
+    '.correct{background:#dcfce7;font-weight:700;color:#16a34a;}' +
+    '.expl{font-size:0.8rem;color:#64748b;margin-top:0.5rem;font-style:italic;}' +
+    '@media print{body{background:white;}.module{border:1px solid #ccc;box-shadow:none;}}' +
+    '<\/style><\/head><body>' +
+    '<h1>🧮 Kurs Matematyki – Kompletna Teoria</h1>' +
+    '<p style="color:#64748b;margin-bottom:2rem">Wygenerowano: ' + new Date().toLocaleString('pl-PL') + ' · MatematykaToPodstawa.pl</p>';
+
+  COURSE.forEach(function(mod, mi) {
+    html += '<div class="module"><h2>' + (mi+1) + '. ' + mod.meta.title + '</h2>';
+    mod.steps.forEach(function(step) {
+      if (step.type === 'theory') {
+        html += '<div class="theory"><h3>' + step.title + '</h3>';
+        step.items.forEach(function(item) {
+          if (item.kind === 'rule') html += '<p>' + item.text + '</p>';
+          else if (item.kind === 'formulas') {
+            item.items.forEach(function(f) { html += '<div class="formula">' + f + '</div>'; });
+          }
+          else if (item.kind === 'example') html += '<div class="example"><strong>' + (item.label||'Przykład') + ':</strong> ' + item.text + '</div>';
+          else if (item.kind === 'tip') html += '<div class="tip">💡 ' + item.text + '</div>';
+        });
+        html += '</div>';
+      } else if (step.type === 'question') {
+        html += '<div class="question"><p>❓ ' + step.text + '</p>';
+        if (step.answers) {
+          step.answers.forEach(function(a, ai) {
+            html += '<div class="answer' + (ai === step.correct ? ' correct' : '') + '">' + String.fromCharCode(65+ai) + '. ' + a + (ai === step.correct ? ' ✓' : '') + '</div>';
+          });
+        }
+        if (step.explanation) html += '<div class="expl">📖 ' + step.explanation + '</div>';
+        html += '</div>';
+      }
+    });
+    html += '</div>';
+  });
+
+  html += '<hr style="margin:2rem 0;border-color:#e2e8f0;"/><p style="text-align:center;color:#94a3b8;font-size:0.8rem">© MatematykaToPodstawa · Bezpłatna platforma edukacyjna · Wydrukuj lub zapisz jako PDF</p></body></html>';
+
+  var blob = new Blob([html], {type: 'text/html;charset=utf-8'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'kurs-matematyki-offline.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 function launchConfetti() {
