@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
@@ -143,9 +143,12 @@
           <p class="text-blue-700 text-sm leading-relaxed">
             Każdy arkusz ma dwa pliki PDF: <strong>arkusz egzaminacyjny</strong> (zadania) i <strong>zasady oceniania</strong> (oficjalne rozwiązania CKE). 
             Kliknij &bdquo;Otwórz arkusz&rdquo; lub &bdquo;Zasady oceniania&rdquo; aby otworzyć PDF w nowej karcie. 
-            Przycisk &bdquo;Podgląd PDF&rdquo; wyświetli arkusz bezpośrednio na stronie. 
-            Pod każdym arkuszem znajdziesz <strong>rozwiązania WSZYSTKICH zadań</strong> z wyjaśnieniami krok po kroku.
+            Pod każdym arkuszem znajdziesz wskazówki i rozwiązania pomocnicze dla każdego zadania.
           </p>
+          <div class="mt-3 p-3 bg-yellow-50 border border-yellow-300 rounded-xl text-yellow-800 text-xs">
+            <i class="fa-solid fa-triangle-exclamation mr-1"></i>
+            <strong>Ważne:</strong> Opisy zadań na tej stronie to <strong>tematy/wskazówki tematyczne</strong> odzwierciedlające typ zadań — <strong>NIE są to dosłowne treści zadań CKE</strong>. Aby zobaczyć oryginalne treści zadań i oficjalne rozwiązania, pobierz arkusze z oficjalnej strony CKE: <a href="https://cke.gov.pl/egzamin-maturalny/egzamin-w-nowej-formule/arkusze/" target="_blank" class="underline font-bold">cke.gov.pl (formuła 2023)</a> · <a href="https://cke.gov.pl/egzamin-maturalny/egzamin-w-starej-formule/arkusze/" target="_blank" class="underline font-bold">cke.gov.pl (formuła 2015)</a>
+          </div>
         </div>
       </div>
     </div>
@@ -153,8 +156,8 @@
     <!-- Legend -->
     <div class="flex flex-wrap items-center gap-3 mb-4 reveal">
       <span class="text-sm font-semibold text-gray-500">Formuły:</span>
-      <span class="formula-badge formula-2023"><i class="fa-solid fa-star text-[10px]"></i> Formuła 2023 (28 zadań)</span>
-      <span class="formula-badge formula-2015"><i class="fa-solid fa-clock-rotate-left text-[10px]"></i> Formuła 2015 (34 zadania)</span>
+      <span class="formula-badge formula-2023"><i class="fa-solid fa-star text-[10px]"></i> Formuła 2023 (31 zadań: 24 zamkn. + 7 otw.)</span>
+      <span class="formula-badge formula-2015"><i class="fa-solid fa-clock-rotate-left text-[10px]"></i> Formuła 2015 (34 zadania: 25 zamkn. + 9 otw.)</span>
     </div>
     <div class="flex flex-wrap items-center gap-3 mb-6 reveal">
       <span class="text-sm font-semibold text-gray-500">Typy:</span>
@@ -213,13 +216,13 @@
   const EXAMS = [
 
   /* ============================================================
-     MATURA MAJ 2025 – FORMUŁA 2023 (28 zadań)
+     MATURA MAJ 2025 – FORMUŁA 2023 (31 zadań)
      ============================================================ */
   {
     year: 2025, title: "Matura Maj 2025 – Poziom Podstawowy", date: "Maj 2025",
     formula: "2023", examType: "sesja",
     pdfPath: "arkusze/2025/arkusz.pdf", zasadyPath: "arkusze/2025/zasady.pdf",
-    taskCount: 28, closedCount: 21, openCount: 7,
+    taskCount: 31, closedCount: 24, openCount: 7,
     tasks: [
       { num: 1, text: "Wartość wyrażenia $\\frac{3^{10}}{3^8}$", type: "zamknięte", answer: "$9$", solution: [{ step: "Dzielenie potęg o tej samej podstawie:", math: "$\\frac{3^{10}}{3^8} = 3^{10-8} = 3^2 = 9$" }] },
       { num: 2, text: "Liczba $\\sqrt{2} \\cdot \\sqrt{32}$", type: "zamknięte", answer: "$8$", solution: [{ step: "Iloczyn pierwiastków:", math: "$\\sqrt{2} \\cdot \\sqrt{32} = \\sqrt{64} = 8$" }] },
@@ -242,24 +245,27 @@
       { num: 19, text: "Prosta prostopadła do $y=2x+1$ ma współczynnik kierunkowy:", type: "zamknięte", answer: "$-\\frac{1}{2}$", solution: [{ step: "Warunek prostopadłości:", math: "$a_1 \\cdot a_2 = -1 \\Rightarrow a_2 = -\\frac{1}{2}$" }] },
       { num: 20, text: "Pole rombu o przekątnych $d_1=6$ i $d_2=8$", type: "zamknięte", answer: "$24$", solution: [{ step: "Wzór:", math: "$P = \\frac{d_1 \\cdot d_2}{2} = \\frac{6\\cdot 8}{2} = 24$" }] },
       { num: 21, text: "Wartość wyrażenia $\\frac{1}{\\sqrt{3}}$ po usunięciu niewymierności z mianownika", type: "zamknięte", answer: "$\\frac{\\sqrt{3}}{3}$", solution: [{ step: "Mnożymy przez $\\frac{\\sqrt{3}}{\\sqrt{3}}$:", math: "$\\frac{\\sqrt{3}}{3}$" }] },
-      { num: 22, text: "Rozwiąż nierówność $x^2-4x+3 \\leq 0$", type: "otwarte", answer: "$x \\in [1, 3]$", solution: [{ step: "Wyznaczamy miejsca zerowe:", math: "$\\Delta = 16-12 = 4$, $x_1=1$, $x_2=3$" }, { step: "Parabola skierowana ramionami do góry:", math: "Nierówność spełniona dla $x \\in [1, 3]$" }] },
-      { num: 23, text: "Wykaż, że dla dowolnej liczby naturalnej $n$ wyrażenie $n^2+n$ jest parzyste.", type: "otwarte", answer: "Dowód", solution: [{ step: "Rozkładamy na czynniki:", math: "$n^2+n = n(n+1)$" }, { step: "Iloczyn dwóch kolejnych liczb naturalnych jest zawsze parzysty, bo jedna z nich jest parzysta.", math: "" }] },
-      { num: 24, text: "Oblicz pole trapezu o podstawach $a=10$, $b=6$ i wysokości $h=4$.", type: "otwarte", answer: "$32$", solution: [{ step: "Wzór na pole trapezu:", math: "$P = \\frac{(a+b) \\cdot h}{2} = \\frac{(10+6)\\cdot 4}{2} = 32$" }] },
-      { num: 25, text: "Funkcja $f(x) = ax^2 + bx + c$ przechodzi przez punkty $(0,1)$, $(1,0)$, $(2,3)$. Wyznacz $a$, $b$, $c$.", type: "otwarte", answer: "$a=2, b=-3, c=1$", solution: [{ step: "Z $(0,1)$: $c=1$", math: "" }, { step: "Z $(1,0)$: $a+b+1=0$", math: "" }, { step: "Z $(2,3)$: $4a+2b+1=3 \\Rightarrow 4a+2b=2$", math: "" }, { step: "Rozwiązujemy układ:", math: "$a+b=-1$ i $4a+2b=2 \\Rightarrow 2a=4 \\Rightarrow a=2, b=-3$" }] },
-      { num: 26, text: "Wyznacz równanie prostej przechodzącej przez punkty $A=(1,2)$ i $B=(3,6)$.", type: "otwarte", answer: "$y=2x$", solution: [{ step: "Współczynnik kierunkowy:", math: "$a = \\frac{6-2}{3-1} = 2$" }, { step: "Równanie prostej:", math: "$y-2 = 2(x-1) \\Rightarrow y = 2x$" }] },
-      { num: 27, text: "Ze zbioru $\\{1,2,3,4,5\\}$ losujemy 2 liczby bez zwracania. Oblicz P, że ich suma jest parzysta.", type: "otwarte", answer: "$\\frac{2}{5}$", solution: [{ step: "Wszystkich par: $\\binom{5}{2}=10$", math: "" }, { step: "Suma parzysta gdy oba parzyste lub oba nieparzyste:", math: "$\\binom{2}{2}+\\binom{3}{2} = 1 + 3 = 4$" }, { step: "Prawdopodobieństwo:", math: "$P = \\frac{4}{10} = \\frac{2}{5}$" }] },
-      { num: 28, text: "Oblicz objętość ostrosłupa prawidłowego czworokątnego o krawędzi podstawy $a=6$ i wysokości $h=4$.", type: "otwarte", answer: "$48$", solution: [{ step: "Pole podstawy:", math: "$P_p = 6^2 = 36$" }, { step: "Objętość:", math: "$V = \\frac{1}{3} \\cdot 36 \\cdot 4 = 48$" }] }
+      { num: 22, text: "Prosta $y=-\frac{1}{3}x+4$ przecina oś $OX$ w punkcie:", type: "zamknięte", answer: "$(12,0)$", solution: [{ step: "$y=0$:", math: "$x=12$" }] },
+      { num: 23, text: "Ciąg geometryczny: $a_1=5$, $q=2$, $a_6=$", type: "zamknięte", answer: "$160$", solution: [{ step: "Wzór:", math: "$a_6=5\cdot 2^5=160$" }] },
+      { num: 24, text: "Na ile sposobów można ułożyć 4 różne litery?", type: "zamknięte", answer: "$24$", solution: [{ step: "Permutacja:", math: "$4!=24$" }] },
+      { num: 25, text: "Rozwiąż nierówność $x^2-4x+3 \\leq 0$", type: "otwarte", answer: "$x \\in [1, 3]$", solution: [{ step: "Wyznaczamy miejsca zerowe:", math: "$\\Delta = 16-12 = 4$, $x_1=1$, $x_2=3$" }, { step: "Parabola skierowana ramionami do góry:", math: "Nierówność spełniona dla $x \\in [1, 3]$" }] },
+      { num: 26, text: "Wykaż, że dla dowolnej liczby naturalnej $n$ wyrażenie $n^2+n$ jest parzyste.", type: "otwarte", answer: "Dowód", solution: [{ step: "Rozkładamy na czynniki:", math: "$n^2+n = n(n+1)$" }, { step: "Iloczyn dwóch kolejnych liczb naturalnych jest zawsze parzysty, bo jedna z nich jest parzysta.", math: "" }] },
+      { num: 27, text: "Oblicz pole trapezu o podstawach $a=10$, $b=6$ i wysokości $h=4$.", type: "otwarte", answer: "$32$", solution: [{ step: "Wzór na pole trapezu:", math: "$P = \\frac{(a+b) \\cdot h}{2} = \\frac{(10+6)\\cdot 4}{2} = 32$" }] },
+      { num: 28, text: "Funkcja $f(x) = ax^2 + bx + c$ przechodzi przez punkty $(0,1)$, $(1,0)$, $(2,3)$. Wyznacz $a$, $b$, $c$.", type: "otwarte", answer: "$a=2, b=-3, c=1$", solution: [{ step: "Z $(0,1)$: $c=1$", math: "" }, { step: "Z $(1,0)$: $a+b+1=0$", math: "" }, { step: "Z $(2,3)$: $4a+2b+1=3 \\Rightarrow 4a+2b=2$", math: "" }, { step: "Rozwiązujemy układ:", math: "$a+b=-1$ i $4a+2b=2 \\Rightarrow 2a=4 \\Rightarrow a=2, b=-3$" }] },
+      { num: 29, text: "Wyznacz równanie prostej przechodzącej przez punkty $A=(1,2)$ i $B=(3,6)$.", type: "otwarte", answer: "$y=2x$", solution: [{ step: "Współczynnik kierunkowy:", math: "$a = \\frac{6-2}{3-1} = 2$" }, { step: "Równanie prostej:", math: "$y-2 = 2(x-1) \\Rightarrow y = 2x$" }] },
+      { num: 30, text: "Ze zbioru $\\{1,2,3,4,5\\}$ losujemy 2 liczby bez zwracania. Oblicz P, że ich suma jest parzysta.", type: "otwarte", answer: "$\\frac{2}{5}$", solution: [{ step: "Wszystkich par: $\\binom{5}{2}=10$", math: "" }, { step: "Suma parzysta gdy oba parzyste lub oba nieparzyste:", math: "$\\binom{2}{2}+\\binom{3}{2} = 1 + 3 = 4$" }, { step: "Prawdopodobieństwo:", math: "$P = \\frac{4}{10} = \\frac{2}{5}$" }] },
+      { num: 31, text: "Oblicz objętość ostrosłupa prawidłowego czworokątnego o krawędzi podstawy $a=6$ i wysokości $h=4$.", type: "otwarte", answer: "$48$", solution: [{ step: "Pole podstawy:", math: "$P_p = 6^2 = 36$" }, { step: "Objętość:", math: "$V = \\frac{1}{3} \\cdot 36 \\cdot 4 = 48$" }] }
     ]
   },
 
   /* ============================================================
-     MATURA MAJ 2024 – FORMUŁA 2023 (28 zadań)
+     MATURA MAJ 2024 – FORMUŁA 2023 (31 zadań)
      ============================================================ */
   {
     year: 2024, title: "Matura Maj 2024 – Poziom Podstawowy", date: "Maj 2024",
     formula: "2023", examType: "sesja",
     pdfPath: "arkusze/2024/arkusz.pdf", zasadyPath: "arkusze/2024/zasady.pdf",
-    taskCount: 28, closedCount: 21, openCount: 7,
+    taskCount: 31, closedCount: 24, openCount: 7,
     tasks: [
       { num: 1, text: "Wartość $(-3)^4$", type: "zamknięte", answer: "$81$", solution: [{ step: "Potęga parzysta liczby ujemnej:", math: "$(-3)^4 = 81$" }] },
       { num: 2, text: "Oblicz $\\log_3 81$", type: "zamknięte", answer: "$4$", solution: [{ step: "$3^4 = 81$:", math: "$\\log_3 81 = 4$" }] },
@@ -282,24 +288,27 @@
       { num: 19, text: "Ile jest anagramów słowa AB? (permutacje)", type: "zamknięte", answer: "$2$", solution: [{ step: "$2! = 2$", math: "AB, BA" }] },
       { num: 20, text: "Objętość kuli o $r=3$", type: "zamknięte", answer: "$36\\pi$", solution: [{ step: "Wzór:", math: "$V=\\frac{4}{3}\\pi\\cdot 27=36\\pi$" }] },
       { num: 21, text: "Rozwiązanie nierówności $\\frac{x-1}{2} \\geq 3$", type: "zamknięte", answer: "$x \\geq 7$", solution: [{ step: "Mnożymy przez 2:", math: "$x-1 \\geq 6 \\Rightarrow x \\geq 7$" }] },
-      { num: 22, text: "Rozwiąż równanie $x^2 - 5x + 6 = 0$", type: "otwarte", answer: "$x=2$ lub $x=3$", solution: [{ step: "$\\Delta = 25-24=1$:", math: "$x=\\frac{5\\pm 1}{2}$, więc $x=2$ lub $x=3$" }] },
-      { num: 23, text: "Wykaż, że $\\sqrt{2}$ jest liczbą niewymierną (nie do udowodnienia — zadanie z arkusza: wykaż zależność trygonometryczną).", type: "otwarte", answer: "Dowód", solution: [{ step: "Korzystamy z tożsamości trygonometrycznej:", math: "$\\sin^2\\alpha + \\cos^2\\alpha = 1$" }, { step: "Wyrażamy i sprawdzamy tezę.", math: "" }] },
-      { num: 24, text: "Oblicz pole figury ograniczonej parabolą $y=x^2$ i prostą $y=4$.", type: "otwarte", answer: "$\\frac{32}{3}$", solution: [{ step: "Punkty przecięcia: $x^2=4 \\Rightarrow x=\\pm 2$", math: "" }, { step: "Pole:", math: "$P = \\int_{-2}^{2}(4-x^2)dx = \\left[4x-\\frac{x^3}{3}\\right]_{-2}^{2} = \\frac{32}{3}$" }] },
-      { num: 25, text: "W trójkącie $ABC$ bok $a=8$, $b=6$, kąt między nimi $\\gamma=60°$. Oblicz pole.", type: "otwarte", answer: "$12\\sqrt{3}$", solution: [{ step: "Wzór:", math: "$P = \\frac{1}{2}ab\\sin\\gamma = \\frac{1}{2}\\cdot 8\\cdot 6\\cdot\\frac{\\sqrt{3}}{2} = 12\\sqrt{3}$" }] },
-      { num: 26, text: "Wyznacz równanie okręgu o środku $S=(2,3)$ i promieniu $r=5$.", type: "otwarte", answer: "$(x-2)^2+(y-3)^2=25$", solution: [{ step: "Wzór ogólny okręgu:", math: "$(x-a)^2+(y-b)^2=r^2 \\Rightarrow (x-2)^2+(y-3)^2=25$" }] },
-      { num: 27, text: "Z urny z 5 kulami białymi i 3 czarnymi losujemy 2. Oblicz P, że obie białe.", type: "otwarte", answer: "$\\frac{5}{14}$", solution: [{ step: "Kombinacje:", math: "$P = \\frac{\\binom{5}{2}}{\\binom{8}{2}} = \\frac{10}{28} = \\frac{5}{14}$" }] },
-      { num: 28, text: "Oblicz pole powierzchni całkowitej walca o $r=3$ i $h=10$.", type: "otwarte", answer: "$78\\pi$", solution: [{ step: "Pole boczne:", math: "$P_b = 2\\pi rh = 60\\pi$" }, { step: "Dalej:", math: "$P_c = P_b + 2\\pi r^2 = 60\\pi + 18\\pi = 78\\pi$" }] }
+      { num: 22, text: "Przekątna prostokąta o bokach $5$ i $12$:", type: "zamknięte", answer: "$13$", solution: [{ step: "Pitagoras:", math: "$d=\sqrt{25+144}=13$" }] },
+      { num: 23, text: "Ciąg arytmetyczny: $a_1=3$, $r=4$. $a_6=$", type: "zamknięte", answer: "$23$", solution: [{ step: "Wzór:", math: "$a_6=3+5\cdot 4=23$" }] },
+      { num: 24, text: "Na ile sposobów można wybrać 2 osoby z 6?", type: "zamknięte", answer: "$15$", solution: [{ step: "Kombinacja:", math: "\binom{6}{2}=15" }] },
+      { num: 25, text: "Rozwiąż równanie $x^2 - 5x + 6 = 0$", type: "otwarte", answer: "$x=2$ lub $x=3$", solution: [{ step: "$\\Delta = 25-24=1$:", math: "$x=\\frac{5\\pm 1}{2}$, więc $x=2$ lub $x=3$" }] },
+      { num: 26, text: "Wykaż, że $\\sqrt{2}$ jest liczbą niewymierną (nie do udowodnienia — zadanie z arkusza: wykaż zależność trygonometryczną).", type: "otwarte", answer: "Dowód", solution: [{ step: "Korzystamy z tożsamości trygonometrycznej:", math: "$\\sin^2\\alpha + \\cos^2\\alpha = 1$" }, { step: "Wyrażamy i sprawdzamy tezę.", math: "" }] },
+      { num: 27, text: "Oblicz pole figury ograniczonej parabolą $y=x^2$ i prostą $y=4$.", type: "otwarte", answer: "$\\frac{32}{3}$", solution: [{ step: "Punkty przecięcia: $x^2=4 \\Rightarrow x=\\pm 2$", math: "" }, { step: "Pole:", math: "$P = \\int_{-2}^{2}(4-x^2)dx = \\left[4x-\\frac{x^3}{3}\\right]_{-2}^{2} = \\frac{32}{3}$" }] },
+      { num: 28, text: "W trójkącie $ABC$ bok $a=8$, $b=6$, kąt między nimi $\\gamma=60°$. Oblicz pole.", type: "otwarte", answer: "$12\\sqrt{3}$", solution: [{ step: "Wzór:", math: "$P = \\frac{1}{2}ab\\sin\\gamma = \\frac{1}{2}\\cdot 8\\cdot 6\\cdot\\frac{\\sqrt{3}}{2} = 12\\sqrt{3}$" }] },
+      { num: 29, text: "Wyznacz równanie okręgu o środku $S=(2,3)$ i promieniu $r=5$.", type: "otwarte", answer: "$(x-2)^2+(y-3)^2=25$", solution: [{ step: "Wzór ogólny okręgu:", math: "$(x-a)^2+(y-b)^2=r^2 \\Rightarrow (x-2)^2+(y-3)^2=25$" }] },
+      { num: 30, text: "Z urny z 5 kulami białymi i 3 czarnymi losujemy 2. Oblicz P, że obie białe.", type: "otwarte", answer: "$\\frac{5}{14}$", solution: [{ step: "Kombinacje:", math: "$P = \\frac{\\binom{5}{2}}{\\binom{8}{2}} = \\frac{10}{28} = \\frac{5}{14}$" }] },
+      { num: 31, text: "Oblicz pole powierzchni całkowitej walca o $r=3$ i $h=10$.", type: "otwarte", answer: "$78\\pi$", solution: [{ step: "Pole boczne:", math: "$P_b = 2\\pi rh = 60\\pi$" }, { step: "Dalej:", math: "$P_c = P_b + 2\\pi r^2 = 60\\pi + 18\\pi = 78\\pi$" }] }
     ]
   },
 
   /* ============================================================
-     MATURA MAJ 2023 – FORMUŁA 2023 (28 zadań)
+     MATURA MAJ 2023 – FORMUŁA 2023 (31 zadań)
      ============================================================ */
   {
     year: 2023, title: "Matura Maj 2023 – Poziom Podstawowy", date: "Maj 2023",
     formula: "2023", examType: "sesja",
     pdfPath: "arkusze/2023/arkusz.pdf", zasadyPath: "arkusze/2023/zasady.pdf",
-    taskCount: 28, closedCount: 21, openCount: 7,
+    taskCount: 31, closedCount: 24, openCount: 7,
     tasks: [
       { num: 1, text: "$2^3 \\cdot 2^5$", type: "zamknięte", answer: "$256$", solution: [{ step: "Mnożenie potęg:", math: "$2^{3+5}=2^8=256$" }] },
       { num: 2, text: "Rozwiązanie $3(x-2)=12$", type: "zamknięte", answer: "$x=6$", solution: [{ step: "Dzielimy:", math: "$x-2=4 \\Rightarrow x=6$" }] },
@@ -322,13 +331,16 @@
       { num: 19, text: "Kąt centralny = $120°$, promień = 6. Długość łuku:", type: "zamknięte", answer: "$4\\pi$", solution: [{ step: "Wzór:", math: "$l = \\frac{120°}{360°}\\cdot 2\\pi\\cdot 6 = 4\\pi$" }] },
       { num: 20, text: "Pole powierzchni sześcianu o krawędzi $a=3$", type: "zamknięte", answer: "$54$", solution: [{ step: "Wzór:", math: "$P_c=6a^2=6\\cdot 9=54$" }] },
       { num: 21, text: "Rozwiąż nierówność $3-2x>7$", type: "zamknięte", answer: "$x<-2$", solution: [{ step: "Rozwiązujemy:", math: "$-2x>4 \\Rightarrow x<-2$" }] },
-      { num: 22, text: "Rozwiąż równanie $2x^2-8=0$", type: "otwarte", answer: "$x=\\pm 2$", solution: [{ step: "Dzielimy:", math: "$x^2=4 \\Rightarrow x=\\pm 2$" }] },
-      { num: 23, text: "Wykaż, że suma trzech kolejnych liczb naturalnych jest podzielna przez 3.", type: "otwarte", answer: "Dowód", solution: [{ step: "Oznaczmy:", math: "$n+(n+1)+(n+2) = 3n+3 = 3(n+1)$" }, { step: "Wyrażenie jest wielokrotnością 3.", math: "" }] },
-      { num: 24, text: "W trapezie prostokątnym podstawy $a=10$, $b=6$, ramię prostopadłe $h=3$. Oblicz drugie ramię.", type: "otwarte", answer: "$5$", solution: [{ step: "Nadstawka: $a-b=4$", math: "" }, { step: "Pitagoras:", math: "$c=\\sqrt{4^2+3^2}=\\sqrt{25}=5$" }] },
-      { num: 25, text: "Wyznacz dziedzinę $f(x)=\\frac{1}{x^2-4}$", type: "otwarte", answer: "$\\mathbb{R} \\setminus \\{-2, 2\\}$", solution: [{ step: "Mianownik $\\neq 0$:", math: "$x^2-4 \\neq 0 \\Rightarrow x \\neq \\pm 2$" }] },
-      { num: 26, text: "Na ile sposobów można ustawić 5 książek na półce?", type: "otwarte", answer: "$120$", solution: [{ step: "Permutacja:", math: "$5! = 120$" }] },
-      { num: 27, text: "Oblicz pole trójkąta wpisanego w okrąg o $R=5$, jeśli jeden bok = $2R$ (średnica).", type: "otwarte", answer: "Zależy od położenia trzeciego wierzchołka", solution: [{ step: "Bok = średnica → kąt wpisany = 90° (tw. Talesa)", math: "" }, { step: "Trójkąt prostokątny z przeciwprostokątną $10$.", math: "" }] },
-      { num: 28, text: "Stożek: $r=4$, $l=5$. Oblicz objętość.", type: "otwarte", answer: "$16\\pi$", solution: [{ step: "Wysokość:", math: "$h=\\sqrt{25-16}=3$" }, { step: "Objętość:", math: "$V=\\frac{1}{3}\\pi\\cdot 16\\cdot 3=16\\pi$" }] }
+      { num: 22, text: "Wartość $\\log_4 64$:", type: "zamknięte", answer: "$3$", solution: [{ step: "$4^3=64$:", math: "$\\log_4 64=3$" }] },
+      { num: 23, text: "Prawdopodobieństwo wylosowania asa z talii 52 kart:", type: "zamknięte", answer: "$\\frac{1}{13}$", solution: [{ step: "4 asy ze 52 kart:", math: "$P=\\frac{4}{52}=\\frac{1}{13}$" }] },
+      { num: 24, text: "Ciąg geometryczny: $a_2=6$, $a_4=54$. Iloraz $q=$", type: "zamknięte", answer: "$q=3$", solution: [{ step: "$a_4=a_2\\cdot q^2$:", math: "$54=6q^2 \\Rightarrow q=3$" }] },
+      { num: 25, text: "Rozwiąż równanie $2x^2-8=0$", type: "otwarte", answer: "$x=\\pm 2$", solution: [{ step: "Dzielimy:", math: "$x^2=4 \\Rightarrow x=\\pm 2$" }] },
+      { num: 26, text: "Wykaż, że suma trzech kolejnych liczb naturalnych jest podzielna przez 3.", type: "otwarte", answer: "Dowód", solution: [{ step: "Oznaczmy:", math: "$n+(n+1)+(n+2) = 3n+3 = 3(n+1)$" }, { step: "Wyrażenie jest wielokrotnością 3.", math: "" }] },
+      { num: 27, text: "W trapezie prostokątnym podstawy $a=10$, $b=6$, ramię prostopadłe $h=3$. Oblicz drugie ramię.", type: "otwarte", answer: "$5$", solution: [{ step: "Nadstawka: $a-b=4$", math: "" }, { step: "Pitagoras:", math: "$c=\\sqrt{4^2+3^2}=\\sqrt{25}=5$" }] },
+      { num: 28, text: "Wyznacz dziedzinę $f(x)=\\frac{1}{x^2-4}$", type: "otwarte", answer: "$\\mathbb{R} \\setminus \\{-2, 2\\}$", solution: [{ step: "Mianownik $\\neq 0$:", math: "$x^2-4 \\neq 0 \\Rightarrow x \\neq \\pm 2$" }] },
+      { num: 29, text: "Na ile sposobów można ustawić 5 książek na półce?", type: "otwarte", answer: "$120$", solution: [{ step: "Permutacja:", math: "$5! = 120$" }] },
+      { num: 30, text: "Oblicz pole trójkąta wpisanego w okrąg o $R=5$, jeśli jeden bok = $2R$ (średnica).", type: "otwarte", answer: "Zależy od położenia trzeciego wierzchołka", solution: [{ step: "Bok = średnica → kąt wpisany = 90° (tw. Talesa)", math: "" }, { step: "Trójkąt prostokątny z przeciwprostokątną $10$.", math: "" }] },
+      { num: 31, text: "Stożek: $r=4$, $l=5$. Oblicz objętość.", type: "otwarte", answer: "$16\\pi$", solution: [{ step: "Wysokość:", math: "$h=\\sqrt{25-16}=3$" }, { step: "Objętość:", math: "$V=\\frac{1}{3}\\pi\\cdot 16\\cdot 3=16\\pi$" }] }
     ]
   },
 
