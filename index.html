@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/styles.css">
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
+  <script src="assets/fontsize.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
     <style>
@@ -113,6 +114,17 @@
             <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fade-in">
                 <i class="fa-solid fa-crown text-yellow-400"></i>
                 <span>Matematyka – Królowa Nauk · Bezpłatna platforma edukacyjna</span>
+            </div>
+            <!-- Returning user greeting (shown by JS if progress exists) -->
+            <div id="returningGreeting" class="hidden mb-5">
+              <div class="inline-flex items-center gap-3 bg-emerald-500/20 border border-emerald-400/30 backdrop-blur-sm px-5 py-2.5 rounded-2xl">
+                <i class="fa-solid fa-hand-wave text-yellow-300 text-lg"></i>
+                <div class="text-left">
+                  <p class="text-white font-bold text-sm" id="greetingText">Witaj z powrotem!</p>
+                  <p class="text-emerald-200 text-xs" id="greetingSubtext">Kontynuuj naukę</p>
+                </div>
+                <a href="kurs.html" class="ml-2 text-xs font-bold bg-white/20 hover:bg-white/30 text-white px-3 py-1.5 rounded-xl transition">Kontynuuj →</a>
+              </div>
             </div>
             <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 animate-fade-in-up leading-tight">
                 Matematyka to Podstawa<br>
@@ -599,6 +611,31 @@
         if(window.renderMathInElement&&card){window.renderMathInElement(card,{delimiters:[{left:'$',right:'$',display:false},{left:'$$',right:'$$',display:true}]});}
         else{setTimeout(tryRender,120);}
       })();
+    })();
+    </script>
+
+    <script>
+    // Personalized returning-user greeting
+    (function() {
+      try {
+        var ks = JSON.parse(localStorage.getItem('kurs_state') || '{}');
+        var qs = JSON.parse(localStorage.getItem('quiz_state') || '{}');
+        var xp = ks.xp || 0;
+        var quizTotal = qs.total || 0;
+        if (xp > 0 || quizTotal > 0) {
+          var greet = document.getElementById('returningGreeting');
+          var text = document.getElementById('greetingText');
+          var sub = document.getElementById('greetingSubtext');
+          if (xp > 0) {
+            text.textContent = 'Witaj z powrotem!';
+            sub.textContent = 'Masz ' + xp + ' XP — kontynuuj kurs i zdobywaj więcej!';
+          } else {
+            text.textContent = 'Rozwiązałeś już ' + quizTotal + ' pytań!';
+            sub.textContent = 'Zrób kurs, żeby naprawdę opanować materiał.';
+          }
+          greet.classList.remove('hidden');
+        }
+      } catch(e) {}
     })();
     </script>
 </body>

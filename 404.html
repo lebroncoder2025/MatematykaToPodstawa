@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="assets/styles.css"/>
+  <script src="assets/dark-mode.js"></script>
+  <script src="assets/notepad.js"></script>
+  <script src="assets/fontsize.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
     body{font-family:'Inter',sans-serif;background:#0f172a;color:#f8fafc;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;}
@@ -40,6 +44,12 @@
     </div>
 
     <p class="text-slate-600 text-xs">$f(x) = 404 \Rightarrow x \notin \text{domena}$</p>
+
+    <!-- Random math fact -->
+    <div class="mt-5 bg-slate-800/50 border border-slate-700/60 rounded-xl px-5 py-3 text-left max-w-xs mx-auto">
+      <p class="text-[10px] text-slate-500 uppercase font-bold tracking-widest mb-1">Ciekawostka matematyczna</p>
+      <p class="text-slate-300 text-sm italic" id="mathFact"></p>
+    </div>
   </div>
 
 <script>
@@ -54,6 +64,21 @@ for(var i=0;i<30;i++){
   s.style.fontSize=(1+Math.random()*2.5)+'rem';
   container.appendChild(s);
 }
+
+var facts = [
+  'Liczba π ma nieskończenie wiele cyfr dziesiętnych i nigdy się nie powtarza.',
+  'Złoty podział φ ≈ 1,618 pojawia się w naturze: w spiralach muszli i liściach roślin.',
+  'Liczba pierwsza 2 jest jedyną parzystą liczbą pierwszą.',
+  'W trójkącie Pascala ukryte są ciągi Fibonacciego.',
+  '0,999... = 1. Naprawdę. To matematycznie udowodniony fakt.',
+  'Jeśli złożysz kartkę papieru 42 razy, jej grubość przekroczy odległość do Księżyca.',
+  'Liczba 1 jest zarazem kwadratem, sześcianem i każdą potęgą samej siebie.',
+  'Istnieje nieskończenie wiele liczb pierwszych bliźniaczych – przynajmniej tak zakładamy (hipoteza).',
+  'Suma wszystkich liczb naturalnych 1+2+3+... "wynosi" -1/12 w sensie regularyzacji Ramanujana.',
+  'Każda liczba naturalna ma skończoną liczbę dzielników, ale liczba dzielników może być dowolnie duża.'
+];
+document.getElementById('mathFact').textContent = facts[Math.floor(Math.random() * facts.length)];
+
 document.addEventListener('DOMContentLoaded',function(){
   if(window.renderMathInElement)renderMathInElement(document.body,{delimiters:[{left:'$',right:'$',display:false}],throwOnError:false});
 });

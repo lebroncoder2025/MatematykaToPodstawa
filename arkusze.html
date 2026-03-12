@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/styles.css" />
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
+  <script src="assets/fontsize.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <style>
@@ -64,6 +65,12 @@
     .exam-stopwatch-toggle { position:fixed; bottom:1.25rem; left:1.25rem; z-index:50; background:#fff; border:1.5px solid #e2e8f0; border-radius:.875rem; box-shadow:0 4px 16px rgba(0,0,0,.1); padding:.5rem .9rem; font-size:.75rem; font-weight:800; color:#475569; cursor:pointer; transition:all .2s; display:flex; align-items:center; gap:.5rem; }
     .exam-stopwatch-toggle:hover { border-color:#3b82f6; color:#2563eb; }
     @media (max-width:640px) { .exam-stopwatch { left:.75rem; bottom:4rem; min-width:155px; } .exam-stopwatch-toggle { left:.75rem; bottom:.75rem; } }
+    /* Exam completion */
+    .exam-done-btn { display:inline-flex;align-items:center;gap:.4rem;padding:.42rem .8rem;border:1.5px solid #e5e7eb;border-radius:.65rem;font-size:.75rem;font-weight:800;color:#475569;background:#fff;cursor:pointer;transition:all .2s; }
+    .exam-done-btn:hover { border-color:#22c55e;color:#16a34a; }
+    .exam-done-btn.done { background:#dcfce7;border-color:#22c55e;color:#166534; }
+    .exam-card.is-done { border-color:#bbf7d0;background:linear-gradient(to right,#f0fdf4,#fff); }
+    .exams-done-badge { display:inline-flex;align-items:center;gap:.4rem;padding:.35rem .8rem;border-radius:.75rem;background:#dcfce7;color:#166534;font-size:.78rem;font-weight:800;border:1px solid #bbf7d0;transition:all .3s; }
   </style>
 </head>
 <body class="min-h-screen bg-gray-50 text-gray-900">
@@ -184,12 +191,16 @@
     </div>
 
     <!-- Filter tabs -->
-    <div class="flex flex-wrap gap-2 mb-8 reveal">
+    <div class="flex flex-wrap gap-2 mb-4 reveal">
       <button class="tab-btn active px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('all', this)">Wszystkie (18)</button>
       <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('sesja', this)">Sesje główne (11)</button>
       <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('diagnostyczny', this)">Diagnostyczne (4)</button>
       <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('probny', this)">Próbne (2)</button>
       <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('pokazowy', this)">Pokazowe (1)</button>
+    </div>
+    <div class="flex items-center gap-3 mb-8 reveal">
+      <span class="exams-done-badge" id="examsDoneBadge"><i class="fa-solid fa-check-circle"></i> Ukończone: <span id="examsDoneCount">0</span> / 18</span>
+      <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('done', this)" id="filterDoneBtn">Tylko ukończone</button>
     </div>
 
     <!-- Exam cards container -->
@@ -1029,13 +1040,14 @@
     };
     var t = typeMap[exam.examType] || typeMap.sesja;
 
-    return '<div class="exam-card p-6 md:p-8 reveal exam-type-card" data-type="' + exam.examType + '">' +
+    return '<div class="exam-card p-6 md:p-8 reveal exam-type-card' + (isDoneExam(uid) ? ' is-done' : '') + '" data-type="' + exam.examType + '" data-uid="' + uid + '">' +
       '<div class="flex flex-wrap items-start justify-between gap-4 mb-5">' +
         '<div>' +
           '<div class="flex flex-wrap items-center gap-2 mb-2">' +
             '<span class="year-badge bg-cyan-100 text-cyan-800"><i class="fa-solid fa-calendar"></i> ' + exam.date + '</span>' +
             '<span class="formula-badge ' + fClass + '"><i class="fa-solid ' + fIcon + '" style="font-size:10px"></i> ' + fLabel + '</span>' +
             '<span class="type-badge ' + t.cls + '"><i class="fa-solid ' + t.icon + '" style="font-size:10px"></i> ' + t.label + '</span>' +
+            (isDoneExam(uid) ? '<span class="text-xs font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded-full"><i class="fa-solid fa-check mr-1"></i>Ukończone</span>' : '') +
           '</div>' +
           '<h2 class="text-xl md:text-2xl font-black text-gray-900">' + exam.title + '</h2>' +
         '</div>' +
@@ -1050,6 +1062,7 @@
         '<a href="' + exam.zasadyPath + '" target="_blank" class="btn-pdf bg-amber-500 text-white hover:bg-amber-600"><i class="fa-solid fa-key"></i> Zasady oceniania</a>' +
         '<button onclick="togglePdfViewer(\'' + pdfId + '\', this)" class="btn-pdf bg-gray-100 text-gray-700 hover:bg-gray-200" style="border:1px solid #e5e7eb"><i class="fa-solid fa-eye"></i> Podgląd PDF</button>' +
         (exam.tasks.length > 0 ? '<button onclick="toggleSolutions(\'' + solId + '\', this, ' + idx + ')" class="btn-pdf bg-emerald-50 text-emerald-700 hover:bg-emerald-100" style="border:1px solid #d1fae5"><i class="fa-solid fa-lightbulb"></i> Rozwiązania (' + exam.tasks.length + ')</button>' : '') +
+        '<button onclick="toggleDoneExam(\'' + uid + '\', this)" class="exam-done-btn' + (isDoneExam(uid) ? ' done' : '') + '">' + (isDoneExam(uid) ? '<i class="fa-solid fa-check-circle"></i> Ukończone' : '<i class="fa-regular fa-circle-check"></i> Oznacz jako ukończone') + '</button>' +
       '</div>' +
       '<div id="' + pdfId + '" class="pdf-viewer-panel mt-4" data-pdf="' + exam.pdfPath + '">' +
         '<div class="bg-gray-50 rounded-xl p-2 pdf-inner" style="border:1px solid #e5e7eb"></div>' +
@@ -1194,8 +1207,51 @@
     document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
     btn.classList.add('active');
     document.querySelectorAll('.exam-type-card').forEach(function(card) {
-      card.style.display = (type === 'all' || card.dataset.type === type) ? '' : 'none';
+      var show = type === 'all' || card.dataset.type === type || (type === 'done' && card.classList.contains('is-done'));
+      card.style.display = show ? '' : 'none';
     });
+  }
+
+  /* ===== Exam completion tracking ===== */
+  var _doneExams = (function() {
+    try { return new Set(JSON.parse(localStorage.getItem('arkusze-done') || '[]')); } catch(e) { return new Set(); }
+  })();
+
+  function saveDoneExams() {
+    try { localStorage.setItem('arkusze-done', JSON.stringify([..._doneExams])); } catch(e) {}
+  }
+
+  function isDoneExam(uid) { return _doneExams.has(uid); }
+
+  function toggleDoneExam(uid, btn) {
+    var card = btn.closest('.exam-type-card');
+    if (_doneExams.has(uid)) {
+      _doneExams.delete(uid);
+      btn.className = 'exam-done-btn';
+      btn.innerHTML = '<i class="fa-regular fa-circle-check"></i> Oznacz jako ukończone';
+      if (card) {
+        card.classList.remove('is-done');
+        // Remove "Ukończone" badge if present
+        card.querySelectorAll('.text-green-700.bg-green-100').forEach(function(el) { el.remove(); });
+      }
+    } else {
+      _doneExams.add(uid);
+      btn.className = 'exam-done-btn done';
+      btn.innerHTML = '<i class="fa-solid fa-check-circle"></i> Ukończone';
+      if (card) {
+        card.classList.add('is-done');
+        // Add "Ukończone" badge after type badges
+        var badges = card.querySelector('.flex.flex-wrap.items-center.gap-2.mb-2');
+        if (badges && !badges.querySelector('.text-green-700')) {
+          var badge = document.createElement('span');
+          badge.className = 'text-xs font-bold text-green-700 bg-green-100 px-2 py-0.5 rounded-full';
+          badge.innerHTML = '<i class="fa-solid fa-check mr-1"></i>Ukończone';
+          badges.appendChild(badge);
+        }
+      }
+    }
+    saveDoneExams();
+    document.getElementById('examsDoneCount').textContent = _doneExams.size;
   }
 
   /* ===== Mobile nav ===== */
@@ -1218,7 +1274,10 @@
   btt.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
   /* Init */
-  document.addEventListener('DOMContentLoaded', renderExams);
+  document.addEventListener('DOMContentLoaded', function() {
+    renderExams();
+    document.getElementById('examsDoneCount').textContent = _doneExams.size;
+  });
   </script>
 
   <!-- Load exam data from JSON files to ensure proper encoding -->

@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/styles.css" />
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
+  <script src="assets/fontsize.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <style>
@@ -75,11 +76,11 @@
 
       <div class="grid sm:grid-cols-3 gap-4 mb-8">
         <div class="bg-blue-50 rounded-xl p-4 text-center">
-          <p class="text-2xl font-black text-blue-600">15</p>
+          <p class="text-2xl font-black text-blue-600" id="statQCount">15</p>
           <p class="text-xs text-gray-500 font-semibold uppercase">Pytań</p>
         </div>
         <div class="bg-purple-50 rounded-xl p-4 text-center">
-          <p class="text-2xl font-black text-purple-600">10</p>
+          <p class="text-2xl font-black text-purple-600" id="statTCount">10</p>
           <p class="text-xs text-gray-500 font-semibold uppercase">Działów</p>
         </div>
         <div class="bg-green-50 rounded-xl p-4 text-center">
@@ -92,6 +93,12 @@
         <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Pytania zamknięte jednokrotnego wyboru</div>
         <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Feedback merytoryczny po każdym pytaniu</div>
         <div class="flex items-center gap-3"><i class="fa-solid fa-circle-check text-green-500"></i> Raport końcowy z rekomendacją działów do powtórki</div>
+      </div>
+
+      <!-- Topic filter -->
+      <div class="mb-8">
+        <p class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3 text-center">Filtruj pytania według działu (opcjonalnie):</p>
+        <div class="flex flex-wrap gap-2 justify-center" id="topicFilterBox"></div>
       </div>
 
       <div class="text-center">
@@ -203,6 +210,32 @@
     let answered = false;
     let userChoices = [];
     const topicStat = {};
+    let selectedTopic = null; // null = all topics
+
+    // Build topic filter buttons
+    const allTopics = [...new Set(pool.map(q => q.topic))];
+    const filterBox = document.getElementById('topicFilterBox');
+    function renderFilterBtns() {
+      filterBox.innerHTML = '';
+      // "Wszystkie" button
+      const allBtn = document.createElement('button');
+      allBtn.className = `px-3 py-1.5 rounded-full text-xs font-bold border transition ${selectedTopic === null ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-400 hover:text-blue-600'}`;
+      allBtn.textContent = 'Wszystkie działy';
+      allBtn.onclick = () => { selectedTopic = null; renderFilterBtns(); };
+      filterBox.appendChild(allBtn);
+      allTopics.forEach(topic => {
+        const btn = document.createElement('button');
+        btn.className = `px-3 py-1.5 rounded-full text-xs font-bold border transition ${selectedTopic === topic ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-400 hover:text-blue-600'}`;
+        btn.textContent = topic;
+        btn.onclick = () => { selectedTopic = topic; renderFilterBtns(); };
+        filterBox.appendChild(btn);
+      });
+      // Update stat counters
+      const src = selectedTopic ? pool.filter(q => q.topic === selectedTopic) : pool;
+      document.getElementById('statQCount').textContent = Math.min(15, src.length);
+      document.getElementById('statTCount').textContent = selectedTopic ? '1' : allTopics.length;
+    }
+    renderFilterBtns();
 
     const startCard = document.getElementById('startCard');
     const quizCard = document.getElementById('quizCard');
@@ -253,7 +286,9 @@
     }
 
     function beginQuiz() {
-      test = shuffle(pool).slice(0, 15);
+      const src = selectedTopic ? pool.filter(q => q.topic === selectedTopic) : pool;
+      const n = Math.min(15, src.length);
+      test = shuffle(src).slice(0, n);
       index = 0;
       score = 0;
       answered = false;

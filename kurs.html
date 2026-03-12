@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/styles.css"/>
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
+  <script src="assets/fontsize.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <style>
@@ -184,6 +185,21 @@
 
   <!-- Progress summary -->
   <section class="bg-white border-b py-5 px-4">
+    <!-- Resume card (shown when last position is saved) -->
+    <div id="resumeCard" class="hidden max-w-5xl mx-auto mb-4 bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 rounded-2xl px-5 py-4 flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-indigo-100 rounded-xl flex items-center justify-center">
+          <i class="fa-solid fa-bookmark text-indigo-600"></i>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-indigo-500 uppercase tracking-wider">Kontynuuj naukę</p>
+          <p class="font-bold text-gray-900 text-sm" id="resumeLabel">Wróć do ostatniego miejsca</p>
+        </div>
+      </div>
+      <button id="resumeBtn" onclick="resumeLesson()" class="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-5 py-2.5 rounded-xl transition text-sm shadow-lg shadow-indigo-200">
+        <i class="fa-solid fa-play"></i> Kontynuuj
+      </button>
+    </div>
     <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-between gap-4">
       <div class="flex items-center gap-4">
         <div class="bg-amber-50 border border-amber-200 rounded-2xl px-5 py-3 flex items-center gap-3">
@@ -890,6 +906,7 @@ function buildModules() {
       '</div>' +
     '</div>';
   }).join('');
+  updateResumeCard();
 }
 
 function renderStars(pct) {
@@ -927,6 +944,40 @@ function startLesson(modIdx) {
   shell.scrollTop = 0;
   document.getElementById('lessonModTitle').textContent = COURSE[modIdx].meta.title;
   renderStep();
+}
+
+function resumeLesson() {
+  try {
+    var pos = JSON.parse(localStorage.getItem('kurs_last_position') || 'null');
+    if (pos && pos.modIdx >= 0) {
+      lesson.modIdx = pos.modIdx;
+      lesson.stepIdx = pos.stepIdx || 0;
+      lesson.sessionXP = 0;
+      lesson.sessionStreak = 0;
+      document.getElementById('mainPage').style.display = 'none';
+      var shell = document.getElementById('lessonShell');
+      shell.style.display = 'block';
+      shell.scrollTop = 0;
+      document.getElementById('lessonModTitle').textContent = COURSE[lesson.modIdx].meta.title;
+      renderStep();
+    }
+  } catch(e) {}
+}
+
+function updateResumeCard() {
+  try {
+    var pos = JSON.parse(localStorage.getItem('kurs_last_position') || 'null');
+    var card = document.getElementById('resumeCard');
+    var label = document.getElementById('resumeLabel');
+    if (pos && pos.modIdx >= 0 && card) {
+      var mod = COURSE[pos.modIdx];
+      var total = mod ? mod.steps.length : 0;
+      label.textContent = mod ? (mod.meta.title + ' — krok ' + (pos.stepIdx + 1) + '/' + total) : 'Wróć do ostatniego miejsca';
+      card.classList.remove('hidden');
+    } else if (card) {
+      card.classList.add('hidden');
+    }
+  } catch(e) {}
 }
 
 function closeLesson() {
@@ -987,6 +1038,9 @@ function renderStep() {
 
   // Scroll to top of lesson
   document.getElementById('lessonShell').scrollTo({top:0,behavior:'smooth'});
+
+  // Save resume position
+  try { localStorage.setItem('kurs_last_position', JSON.stringify({modIdx: lesson.modIdx, stepIdx: lesson.stepIdx})); } catch(e) {}
 }
 
 function renderTheory(step) {
