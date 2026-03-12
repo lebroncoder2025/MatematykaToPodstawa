@@ -274,6 +274,20 @@
       </div>
     </section>
 
+    <!-- Polecane dla ciebie (shown by JS when user has history) -->
+    <section id="recommendSection" class="hidden py-10 md:py-14 bg-white border-b">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-6 reveal">
+          <span class="inline-block bg-blue-50 border border-blue-200 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-3">
+            <i class="fa-solid fa-sparkles mr-1"></i> SPERSONALIZOWANE
+          </span>
+          <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-1">Polecane dla ciebie</h2>
+          <p class="text-gray-400 text-sm">Na podstawie twoich wyników i postępu</p>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-4 reveal delay-1" id="recommendCards"></div>
+      </div>
+    </section>
+
     <!-- Platform Features -->
     <section class="py-14 md:py-20 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4">
@@ -635,6 +649,59 @@
           }
           greet.classList.remove('hidden');
         }
+      } catch(e) {}
+    })();
+
+    // Polecane dla ciebie
+    (function() {
+      try {
+        var qs = JSON.parse(localStorage.getItem('quiz_state') || '{}');
+        var hist = JSON.parse(localStorage.getItem('quiz_history') || '[]');
+        var ks = JSON.parse(localStorage.getItem('kurs_state') || '{}');
+        var xp = ks.xp || 0;
+        var quizCount = qs.total || 0;
+        if (quizCount === 0 && xp === 0) return; // No history yet
+
+        var recs = [];
+        var quizPct = quizCount > 0 ? Math.round(((qs.correct || 0) / quizCount) * 100) : null;
+
+        // Based on quiz performance
+        if (quizPct !== null && quizPct < 60) {
+          recs.push({ icon: 'fa-book-open', color: 'blue', title: 'Powtórz teorię', desc: 'Twój wynik quizu wskazuje na luki w teorii. Przejrzyj działy.', href: 'kurs.html', cta: 'Przejdź do kursu' });
+        }
+        if (quizPct !== null && quizPct >= 60 && quizPct < 80) {
+          recs.push({ icon: 'fa-pen-to-square', color: 'green', title: 'Ćwicz zadania', desc: 'Masz dobre podstawy! Rozwiąż więcej zadań, żeby utrwalić materiał.', href: 'zadania.html', cta: 'Zadania z rozwiązaniami' });
+        }
+        if (quizPct !== null && quizPct >= 80) {
+          recs.push({ icon: 'fa-file-lines', color: 'cyan', title: 'Spróbuj arkuszy CKE', desc: 'Świetny wynik! Czas na prawdziwe arkusze maturalne CKE.', href: 'arkusze.html', cta: 'Otwórz archiwum' });
+        }
+        // Based on course XP
+        if (xp > 0 && xp < 200) {
+          recs.push({ icon: 'fa-graduation-cap', color: 'purple', title: 'Kontynuuj kurs', desc: 'Masz ' + xp + ' XP. Nie zatrzymuj się — każdy ukończony dział zbliża do matury!', href: 'kurs.html', cta: 'Wróć do kursu' });
+        }
+        // Always recommend wzory if they haven't been encouraged yet
+        if (hist.length > 0 && recs.length < 3) {
+          recs.push({ icon: 'fa-square-root-variable', color: 'amber', title: 'Sprawdź wzory maturalne', desc: '80+ wzorów ze wszystkich działów. Tryb fiszek pomoże Ci je zapamiętać.', href: 'wzory.html', cta: 'Otwórz wzory' });
+        }
+
+        recs = recs.slice(0, 3);
+        if (recs.length === 0) return;
+
+        var colorMap = { blue: ['#eff6ff','#1d4ed8','#dbeafe'], green: ['#f0fdf4','#166534','#dcfce7'], cyan: ['#ecfeff','#155e75','#cffafe'], purple: ['#faf5ff','#6b21a8','#f3e8ff'], amber: ['#fffbeb','#92400e','#fef3c7'] };
+
+        document.getElementById('recommendCards').innerHTML = recs.map(function(r) {
+          var c = colorMap[r.color] || colorMap.blue;
+          return '<a href="' + r.href + '" class="block rounded-2xl p-5 border hover:shadow-md transition reveal" style="background:' + c[0] + ';border-color:' + c[2] + '">' +
+            '<div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:' + c[2] + '">' +
+              '<i class="fa-solid ' + r.icon + '" style="color:' + c[1] + '"></i>' +
+            '</div>' +
+            '<h3 class="font-bold text-gray-900 mb-1 text-base">' + r.title + '</h3>' +
+            '<p class="text-gray-600 text-sm leading-relaxed mb-3">' + r.desc + '</p>' +
+            '<span class="font-bold text-sm flex items-center gap-1" style="color:' + c[1] + '">' + r.cta + ' <i class="fa-solid fa-arrow-right text-xs"></i></span>' +
+          '</a>';
+        }).join('');
+
+        document.getElementById('recommendSection').classList.remove('hidden');
       } catch(e) {}
     })();
     </script>

@@ -55,6 +55,11 @@
     .sb0{background:#dbeafe;} .sb1{background:#fce7f3;} .sb2{background:#dcfce7;} .sb3{background:#fef3c7;}
     .sb4{background:#f3e8ff;} .sb5{background:#ecfdf5;} .sb6{background:#fff7ed;} .sb7{background:#e0e7ff;}
     .sb8{background:#fdf2f8;} .sb9{background:#f0fdf4;}
+    /* Favorites */
+    .fav-btn{position:absolute;top:.45rem;right:2.6rem;background:none;border:none;cursor:pointer;color:#d1d5db;font-size:.8rem;padding:.2rem .25rem;line-height:1;transition:color .15s;}
+    .fav-btn:hover,.fav-btn.fav-active{color:#f59e0b;}
+    .formula-card.fav-card{border-color:#fcd34d;}
+    .formula-card.fav-card{background:#fffbeb;}
     /* Flashcard mode */
     #flashOverlay{position:fixed;inset:0;background:rgba(15,23,42,.97);z-index:9999;display:none;flex-direction:column;align-items:center;justify-content:center;padding:1rem;}
     #flashOverlay.open{display:flex;}
@@ -133,6 +138,7 @@
         <button class="filter-chip" data-section="geo3d" onclick="filterSection(this)">Stereometria</button>
         <button class="filter-chip" data-section="analityczna" onclick="filterSection(this)">Analityczna</button>
         <button class="filter-chip" data-section="kombina" onclick="filterSection(this)">Kombinatoryka</button>
+        <button class="filter-chip" data-section="ulubione" onclick="filterSection(this)" id="ulubioneChip" style="display:none"><i class="fa-solid fa-star text-yellow-500 mr-1"></i>Ulubione (<span id="ulubioneCount">0</span>)</button>
       </div>
     </div>
   </div>
@@ -468,6 +474,17 @@ function filterSection(btn) {
   document.querySelectorAll('.filter-chip').forEach(function(b){ b.classList.remove('active'); });
   btn.classList.add('active');
   var sec = btn.dataset.section;
+  if (sec === 'ulubione') {
+    document.querySelectorAll('.section-card').forEach(function(c){ c.style.display = ''; });
+    document.querySelectorAll('.section-body').forEach(function(b){ b.classList.add('show'); });
+    document.querySelectorAll('.formula-card').forEach(function(card){
+      var label = card.getAttribute('data-label') || '';
+      card.classList.toggle('hidden-formula', !_favFormulas.has(label));
+    });
+    return;
+  }
+  // Clear hidden-formula in case favorites filter was active before
+  document.querySelectorAll('.formula-card').forEach(function(c){ c.classList.remove('hidden-formula'); });
   document.querySelectorAll('.section-card').forEach(function(card){
     if (sec === 'all') { card.style.display = ''; }
     else { card.style.display = card.id === 'sec-' + sec ? '' : 'none'; }
@@ -480,6 +497,58 @@ function filterSection(btn) {
     }
   }
 }
+
+/* ===== Ulubione wzory ===== */
+var _favFormulas = (function(){
+  try { return new Set(JSON.parse(localStorage.getItem('mtp-wzory-favorites') || '[]')); } catch(e) { return new Set(); }
+})();
+
+function _saveFavFormulas(){
+  try { localStorage.setItem('mtp-wzory-favorites', JSON.stringify([..._favFormulas])); } catch(e) {}
+}
+
+function _updateUlubioneChip(){
+  var chip = document.getElementById('ulubioneChip');
+  var count = document.getElementById('ulubioneCount');
+  if (!chip || !count) return;
+  count.textContent = _favFormulas.size;
+  chip.style.display = _favFormulas.size > 0 ? '' : 'none';
+}
+
+function toggleFavFormula(label, btn){
+  if (_favFormulas.has(label)){
+    _favFormulas.delete(label);
+    btn.classList.remove('fav-active');
+    btn.title = 'Dodaj do ulubionych';
+    btn.querySelector('i').className = 'fa-regular fa-star';
+    btn.closest('.formula-card').classList.remove('fav-card');
+  } else {
+    _favFormulas.add(label);
+    btn.classList.add('fav-active');
+    btn.title = 'Usuń z ulubionych';
+    btn.querySelector('i').className = 'fa-solid fa-star';
+    btn.closest('.formula-card').classList.add('fav-card');
+  }
+  _saveFavFormulas();
+  _updateUlubioneChip();
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.formula-card').forEach(function(card){
+    var label = card.getAttribute('data-label');
+    if (!label) return;
+    var isFav = _favFormulas.has(label);
+    var btn = document.createElement('button');
+    btn.className = 'fav-btn' + (isFav ? ' fav-active' : '');
+    btn.title = isFav ? 'Usuń z ulubionych' : 'Dodaj do ulubionych';
+    btn.innerHTML = '<i class="' + (isFav ? 'fa-solid' : 'fa-regular') + ' fa-star"></i>';
+    btn.onclick = function(e){ e.stopPropagation(); toggleFavFormula(label, btn); };
+    card.style.position = 'relative';
+    card.appendChild(btn);
+    if (isFav) card.classList.add('fav-card');
+  });
+  _updateUlubioneChip();
+});
 
 function searchFormulas(q) {
   q = q.toLowerCase().trim();

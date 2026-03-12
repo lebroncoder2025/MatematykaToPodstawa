@@ -175,6 +175,9 @@
         <a href="index.html" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-3 rounded-xl transition inline-flex items-center justify-center gap-2 text-center">
           <i class="fa-solid fa-book"></i> Wróć do kompendium
         </a>
+        <button id="shareBtn" onclick="shareResult()" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold px-5 py-3 rounded-xl transition inline-flex items-center justify-center gap-2">
+          <i class="fa-solid fa-share-nodes"></i> Udostępnij
+        </button>
       </div>
     </section>
   </main>
@@ -484,6 +487,43 @@
         });
         renderMath(document.getElementById('missedList'));
       }
+    }
+
+    function shareResult() {
+      const percent = Math.round((score / test.length) * 100);
+      const emoji = percent >= 85 ? '🏆' : percent >= 70 ? '💪' : percent >= 50 ? '📚' : '💡';
+      const topicStr = selectedTopic ? ' [Dział: ' + selectedTopic + ']' : '';
+      const text = emoji + ' Quiz diagnostyczny – Matematyka do matury' + topicStr + '\n' +
+        'Wynik: ' + score + '/' + test.length + ' (' + percent + '%)\n' +
+        'Data: ' + new Date().toLocaleDateString('pl-PL') + '\n\n' +
+        '📖 Ucz się na: https://matematykatopodstawa.pl';
+
+      const btn = document.getElementById('shareBtn');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(function() {
+          btn.innerHTML = '<i class="fa-solid fa-check text-green-600"></i> Skopiowano!';
+          setTimeout(function() { btn.innerHTML = '<i class="fa-solid fa-share-nodes"></i> Udostępnij'; }, 2500);
+        }).catch(function() {
+          fallbackCopy(text, btn);
+        });
+      } else {
+        fallbackCopy(text, btn);
+      }
+    }
+
+    function fallbackCopy(text, btn) {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      try {
+        document.execCommand('copy');
+        btn.innerHTML = '<i class="fa-solid fa-check text-green-600"></i> Skopiowano!';
+        setTimeout(function() { btn.innerHTML = '<i class="fa-solid fa-share-nodes"></i> Udostępnij'; }, 2500);
+      } catch(e) {}
+      document.body.removeChild(ta);
     }
 
     document.getElementById('startBtn').addEventListener('click', beginQuiz);
