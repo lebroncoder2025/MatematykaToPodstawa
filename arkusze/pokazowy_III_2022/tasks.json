@@ -5,7 +5,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "$6\\cdot6^{100}=6^1\\cdot6^{100}=6^{101}$.",
-    "solution_math1": "6^1\\cdot6^{100} = 6^{1+100} = 6^{101}",
+    "solution_math1": "$$6^1\\cdot6^{100} = 6^{1+100} = 6^{101}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -15,7 +15,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Stosujemy wzór: $\\log_7 98 - \\log_7 2 = \\log_7\\frac{98}{2}=\\log_7 49$.",
-    "solution_math1": "\\log_7 49 = \\log_7 7^2 = 2",
+    "solution_math1": "$$\\log_7 49 = \\log_7 7^2 = 2$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -25,7 +25,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Cyfra setek: 1–9 bez 2 = 8 możliwości. Cyfra dziesiątek: 0–9 bez 2 = 9. Cyfra jedności: 9.",
-    "solution_math1": "8\\cdot9\\cdot9 = 648",
+    "solution_math1": "$$8\\cdot9\\cdot9 = 648$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -35,7 +35,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Wzór różnicy kwadratów: $(A+B)(A-B)=(A^2-B^2)$ albo $(A+B)^2-(A-B)^2=4AB$.",
-    "solution_math1": "(3+4a)^2-(3-4a)^2 = 4\\cdot3\\cdot4a = 48a",
+    "solution_math1": "$$(3+4a)^2-(3-4a)^2 = 4\\cdot3\\cdot4a = 48a$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -45,7 +45,7 @@
     "type": "zamknięte",
     "answer": "B, E",
     "solution_step1": "Zgodnie z kluczem dwa poprawne rysunki to B i E.",
-    "solution_math1": "\\text{Odpowiedź: B, E}",
+    "solution_math1": "$$\\text{Odpowiedź: B, E}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -55,7 +55,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Warunek: $W(-2)=0$.",
-    "solution_math1": "(-2)^3+k(-2)^2-8(-2)-k = -8+4k+16-k = 3k+8=0 \\Rightarrow k = -\\frac{8}{3}",
+    "solution_math1": "$$(-2)^3+k(-2)^2-8(-2)-k = -8+4k+16-k = 3k+8=0 \\Rightarrow k = -\\frac{8}{3}$$",
     "solution_step2": "Klucz podaje $k=4$. Sprawdź oryginalne dane z arkusza.",
     "solution_math2": "k = 4"
   },
@@ -75,7 +75,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "$|x+1|\\leq2 \\Leftrightarrow -2\\leq x+1 \\leq2 \\Leftrightarrow -3\\leq x\\leq1$.",
-    "solution_math1": "x\\in[-3,\\;1]",
+    "solution_math1": "$$x\\in[-3,\\;1]$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -85,9 +85,9 @@
     "type": "otwarte",
     "answer": "Dowód: $n=2k+1$, $n^2=(2k+1)^2=4k^2+4k+1=4k(k+1)+1$; ponieważ $k(k+1)$ parzyste: $n^2=8m+1$; $n^2+2023=8m+1+2023=8m+2024=8(m+253)$",
     "solution_step1": "Niech $n=2k+1$ (nieparzysta). Obliczamy $n^2$.",
-    "solution_math1": "n^2 = (2k+1)^2 = 4k^2+4k+1 = 4k(k+1)+1",
+    "solution_math1": "$$n^2 = (2k+1)^2 = 4k^2+4k+1 = 4k(k+1)+1$$",
     "solution_step2": "$k(k+1)$ jest parzyste (iloczyn dwóch kolejnych), więc $4k(k+1)=8m$. Stąd $n^2+2023=8m+1+2023=8(m+253)$.",
-    "solution_math2": "n^2+2023 \\equiv 0 \\pmod{8} \\quad \\text{c.b.d.}"
+    "solution_math2": "$$n^2+2023 \\equiv 0 \\pmod{8} \\quad \\text{c.b.d.}$$"
   },
   {
     "num": 10,
@@ -95,9 +95,9 @@
     "type": "otwarte",
     "answer": "10.1: D; 10.2: $(-\\infty,-1]\\cup[3,+\\infty)$; 10.3: $f(x)=-2(x-1)^2+8$",
     "solution_step1": "Z postaci kanonicznej $f(x)=-2(x-1)^2+8$: wierzchołek $(1,8)$, ramiona w dół; miejsca zerowe: $-2(x-1)^2=-8 \\Rightarrow (x-1)^2=4 \\Rightarrow x=-1,3$.",
-    "solution_math1": "f(x)\\leq0 \\Leftrightarrow x\\in(-\\infty,-1]\\cup[3,+\\infty)",
+    "solution_math1": "$$f(x)\\leq0 \\Leftrightarrow x\\in(-\\infty,-1]\\cup[3,+\\infty)$$",
     "solution_step2": "",
-    "solution_math2": "f(x) = -2(x-1)^2+8"
+    "solution_math2": "$$f(x) = -2(x-1)^2+8$$"
   },
   {
     "num": 11,
@@ -105,7 +105,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Funkcja rosnąca: $a>0$. Wartości ujemne dla $x<0$ wymaga $b<0$ (lub $b=0$, ale dla $x<0$ wartości ujemne).",
-    "solution_math1": "a>0,\\quad b<0",
+    "solution_math1": "$$a>0,\\quad b<0$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -125,9 +125,9 @@
     "type": "otwarte",
     "answer": "13.1: A; 13.2: $99{,}9$ mg",
     "solution_step1": "13.1: wykres malejącej funkcji wykładniczej – A.",
-    "solution_math1": "m(t) = m_0\\cdot\\left(\\frac{1}{2}\\right)^t",
+    "solution_math1": "$$m(t) = m_0\\cdot\\left(\\frac{1}{2}\\right)^t$$",
     "solution_step2": "Zgodnie z kluczem masa po $\\frac{1}{2}$ h = $99{,}9$ mg.",
-    "solution_math2": "m\\left(\\tfrac{1}{2}\\right) = 99{,}9\\text{ mg}"
+    "solution_math2": "$$m\\left(\\tfrac{1}{2}\\right) = 99{,}9\\text{ mg}$$"
   },
   {
     "num": 14,
@@ -135,7 +135,7 @@
     "type": "zamknięte",
     "answer": "D",
     "solution_step1": "$K_2=20\\,000\\cdot(1{,}03)^2$.",
-    "solution_math1": "K_2 = 20\\,000\\cdot1{,}0609 = 21\\,218",
+    "solution_math1": "$$K_2 = 20\\,000\\cdot1{,}0609 = 21\\,218$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -145,9 +145,9 @@
     "type": "zamknięte",
     "answer": "PF",
     "solution_step1": "Różnica $r=-3<0$: ciąg malejący – P. $a_{10}=-30+5=-25$ – P.",
-    "solution_math1": "a_{10} = -3\\cdot10+5 = -25 \\Rightarrow \\text{P}",
+    "solution_math1": "$$a_{10} = -3\\cdot10+5 = -25 \\Rightarrow \\text{P}$$",
     "solution_step2": "Klucz podaje P, F – sprawdź treść stwierdzenia (2) z arkusza.",
-    "solution_math2": "\\text{Odpowiedź: P, F}"
+    "solution_math2": "$$\\text{Odpowiedź: P, F}$$"
   },
   {
     "num": 16,
@@ -155,9 +155,9 @@
     "type": "zamknięte",
     "answer": "PP",
     "solution_step1": "Twierdzenie cosinusów: $|BC|^2=|AB|^2+|AC|^2-2|AB||AC|\\cos\\angle BAC$.",
-    "solution_math1": "64 = 25+49-70\\cos\\angle BAC \\Rightarrow \\cos\\angle BAC = \\frac{10}{70} = \\frac{1}{7}",
+    "solution_math1": "$$64 = 25+49-70\\cos\\angle BAC \\Rightarrow \\cos\\angle BAC = \\frac{10}{70} = \\frac{1}{7}$$",
     "solution_step2": "Klucz podaje PP.",
-    "solution_math2": "\\text{Odpowiedź: PP}"
+    "solution_math2": "$$\\text{Odpowiedź: PP}$$"
   },
   {
     "num": 17,
@@ -165,7 +165,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Wzór ogólny: $(x-x_0)^2+(y-y_0)^2=r^2$.",
-    "solution_math1": "(x-2)^2+(y+5)^2 = 9",
+    "solution_math1": "$$(x-2)^2+(y+5)^2 = 9$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -175,7 +175,7 @@
     "type": "otwarte",
     "answer": "$|OD|=6$",
     "solution_step1": "Skala podobieństwa: $k=\\frac{|OC|}{|OA|}=3$. Klucz podaje $|OD|=6$.",
-    "solution_math1": "|OD| = \\frac{|AB|\\cdot|OC|}{|OA|}... \\text{ Odpowiedź: }|OD|=6",
+    "solution_math1": "$$|OD| = \\frac{|AB|\\cdot|OC|}{|OA|}... \\text{ Odpowiedź: }|OD|=6$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -185,9 +185,9 @@
     "type": "zamknięte",
     "answer": "19.1: B; 19.2: E",
     "solution_step1": "Równoległa: ten sam wsp. kierunkowy $3$. Prostopadła: wsp. kierunkowy $-\\frac{1}{3}$.",
-    "solution_math1": "m_{\\parallel}=3, \\quad m_{\\perp}=-\\frac{1}{3}",
+    "solution_math1": "$$m_{\\parallel}=3, \\quad m_{\\perp}=-\\frac{1}{3}$$",
     "solution_step2": "Zgodnie z kluczem: 19.1: B, 19.2: E.",
-    "solution_math2": "\\text{Odpowiedź: B; E}"
+    "solution_math2": "$$\\text{Odpowiedź: B; E}$$"
   },
   {
     "num": 20,
@@ -195,7 +195,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "$|AC|=\\sqrt{(4-(-2))^2+(5-1)^2}=\\sqrt{36+16}=\\sqrt{52}=2\\sqrt{13}$.",
-    "solution_math1": "|AC| = \\sqrt{36+16} = \\sqrt{52} = 2\\sqrt{13}",
+    "solution_math1": "$$|AC| = \\sqrt{36+16} = \\sqrt{52} = 2\\sqrt{13}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -205,9 +205,9 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Kąt środkowy: $\\frac{|AC|}{2r}=\\sin\\left(\\frac{\\angle AOC}{2}\\right)$. $\\sin\\left(\\frac{\\angle AOC}{2}\\right)=\\frac{8\\sqrt{3}/2}{8}=\\frac{\\sqrt{3}}{2} \\Rightarrow$ kąt środkowy $=120°$.",
-    "solution_math1": "\\angle ABC = \\frac{\\angle AOC}{2} = 60°\\;\\text{lub}\\;\\angle ABC=180°-60°=120°",
+    "solution_math1": "$$\\angle ABC = \\frac{\\angle AOC}{2} = 60°\\;\\text{lub}\\;\\angle ABC=180°-60°=120°$$",
     "solution_step2": "Kąt wpisany = 60° lub 120°. Klucz podaje A = 30°. Sprawdź treść z arkusza.",
-    "solution_math2": "\\text{Odpowiedź: A}"
+    "solution_math2": "$$\\text{Odpowiedź: A}$$"
   },
   {
     "num": 22,
@@ -215,7 +215,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "$\\sin^2\\alpha+\\cos^2\\alpha=1$, więc prawa strona $= 3$.",
-    "solution_math1": "4\\tan\\alpha = 3 \\Rightarrow \\tan\\alpha = \\frac{3}{4}",
+    "solution_math1": "$$4\\tan\\alpha = 3 \\Rightarrow \\tan\\alpha = \\frac{3}{4}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -225,9 +225,9 @@
     "type": "zamknięte",
     "answer": "A2",
     "solution_step1": "Stosunek pól podobnych trójkątów to $k^2=9$. Stosunek obwodów to $k=3$.",
-    "solution_math1": "\\frac{P_A}{P_B} = \\frac{1}{9}, \\quad \\frac{d_A}{d_B} = \\frac{1}{3}",
+    "solution_math1": "$$\\frac{P_A}{P_B} = \\frac{1}{9}, \\quad \\frac{d_A}{d_B} = \\frac{1}{3}$$",
     "solution_step2": "Klucz podaje A2 (stosunek obwodów $1:3$, ale pól $1:9$). Sprawdź treść pytania z arkusza.",
-    "solution_math2": "\\text{Odpowiedź: A2}"
+    "solution_math2": "$$\\text{Odpowiedź: A2}$$"
   },
   {
     "num": 24,
@@ -235,9 +235,9 @@
     "type": "zamknięte",
     "answer": "D",
     "solution_step1": "Suma kątów czworokąta OAOP: $360°$. Dwa kąty proste (styczna $\\perp$ promień): $180°$.",
-    "solution_math1": "\\angle AOB = 360°-180°-104° = 76°?\\quad\\text{Klucz: }D=38°",
+    "solution_math1": "$$\\angle AOB = 360°-180°-104° = 76°?\\quad\\text{Klucz: }D=38°$$",
     "solution_step2": "Kąt między promieniami $= 180°-\\angle APB = 180°-104°=76°$... Klucz podaje D=$38°$.",
-    "solution_math2": "\\text{Odpowiedź: D}"
+    "solution_math2": "$$\\text{Odpowiedź: D}$$"
   },
   {
     "num": 25,
@@ -245,9 +245,9 @@
     "type": "zamknięte",
     "answer": "D",
     "solution_step1": "Przekątna podstawy: $d=16\\cos30°=16\\cdot\\frac{\\sqrt{3}}{2}=8\\sqrt{3}$. Krawędź podstawy: $a=\\frac{d}{\\sqrt{2}}=\\frac{8\\sqrt{3}}{\\sqrt{2}}=4\\sqrt{6}$.",
-    "solution_math1": "a = 4\\sqrt{6}",
+    "solution_math1": "$$a = 4\\sqrt{6}$$",
     "solution_step2": "Klucz podaje D=2. Sprawdź oryginalne dane z arkusza.",
-    "solution_math2": "\\text{Odpowiedź: D}"
+    "solution_math2": "$$\\text{Odpowiedź: D}$$"
   },
   {
     "num": 26,
@@ -255,7 +255,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Stosunek objętości podobnych brył to $k^3=8$.",
-    "solution_math1": "\\frac{V_1}{V_2} = \\frac{1}{k^3} = \\frac{1}{8} = 1:8",
+    "solution_math1": "$$\\frac{V_1}{V_2} = \\frac{1}{k^3} = \\frac{1}{8} = 1:8$$",
     "solution_step2": "Mniejszy do większego: $1:8$.",
     "solution_math2": ""
   },
@@ -265,7 +265,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Przekątna bryły $l=\\sqrt{2a^2+h^2}$. Rzut na ścianę boczną ma długość $a$. $\\tan\\alpha=\\frac{a}{h}$ (kąt z przekątną ściany bocznej).",
-    "solution_math1": "\\text{Zgodnie z kluczem odpowiedź: A}",
+    "solution_math1": "$$\\text{Zgodnie z kluczem odpowiedź: A}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -277,7 +277,7 @@
     "solution_step1": "Łączna liczba czterocyfrowych: $9000$. Liczby z sumą cyfr $=3$: $(1,0,0,2),(1,0,2,0),(1,2,0,0),(2,0,0,1),(2,0,1,0),(2,1,0,0),(3,0,0,0),(1,1,1,0),(1,1,0,1),(1,0,1,1)$.",
     "solution_math1": "|A| = 10",
     "solution_step2": "$P(A)=\\frac{10}{9000}=\\frac{1}{900}$.",
-    "solution_math2": "P(A) = \\frac{1}{900}"
+    "solution_math2": "$$P(A) = \\frac{1}{900}$$"
   },
   {
     "num": 29,
@@ -285,9 +285,9 @@
     "type": "otwarte",
     "answer": "$x=b=50$ cm, $P_{\\max}=1250$ cm², dziedzina $x\\in(0,100)$",
     "solution_step1": "Obwód: $2x+2b=200 \\Rightarrow b=100-x$. Pole: $P=x\\cdot b\\cdot\\sin30°=x(100-x)\\cdot\\frac{1}{2}$.",
-    "solution_math1": "P(x) = \\frac{1}{2}x(100-x) = -\\frac{1}{2}x^2+50x",
+    "solution_math1": "$$P(x) = \\frac{1}{2}x(100-x) = -\\frac{1}{2}x^2+50x$$",
     "solution_step2": "Wierzchołek: $x=\\frac{50}{1}=50$. $P(50)=\\frac{1}{2}\\cdot50\\cdot50=1250$.",
-    "solution_math2": "P_{\\max} = 1250\\text{ cm}^2 \\text{ dla }x=b=50\\text{ cm},\\quad x\\in(0,100)"
+    "solution_math2": "$$P_{\\max} = 1250\\text{ cm}^2 \\text{ dla }x=b=50\\text{ cm},\\quad x\\in(0,100)$$"
   },
   {
     "num": 30,
@@ -295,8 +295,8 @@
     "type": "zamknięte",
     "answer": "30.1: PP; 30.2: B",
     "solution_step1": "Odczytujemy dane ze słupkowego i obliczamy wartości statystyczne.",
-    "solution_math1": "\\bar{x} = \\frac{\\sum f_i\\cdot x_i}{100} = 2{,}5",
+    "solution_math1": "$$\\bar{x} = \\frac{\\sum f_i\\cdot x_i}{100} = 2{,}5$$",
     "solution_step2": "Oba zdania prawdziwe (PP). Średnia = $2{,}5$ godz. (B).",
-    "solution_math2": "\\text{Odpowiedź: PP; B}"
+    "solution_math2": "$$\\text{Odpowiedź: PP; B}$$"
   }
 ]

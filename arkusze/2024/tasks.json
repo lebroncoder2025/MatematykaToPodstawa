@@ -5,9 +5,9 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Rozkładamy nierówność z wartością bezwzględną na dwa przypadki.",
-    "solution_math1": "x - 1 \\leq -3 \\quad \\text{lub} \\quad x - 1 \\geq 3",
+    "solution_math1": "$$x - 1 \\leq -3 \\quad \\text{lub} \\quad x - 1 \\geq 3$$",
     "solution_step2": "Wyznaczamy zbiór rozwiązań.",
-    "solution_math2": "x \\leq -2 \\quad \\text{lub} \\quad x \\geq 4"
+    "solution_math2": "$$x \\leq -2 \\quad \\text{lub} \\quad x \\geq 4$$"
   },
   {
     "num": 2,
@@ -15,9 +15,9 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Zapisujemy obie potęgi jako potęgi liczby 2.",
-    "solution_math1": "\\left(\\frac{1}{16}\\right)^{8} \\cdot 8^{16} = \\left(2^{-4}\\right)^{8} \\cdot \\left(2^{3}\\right)^{16} = 2^{-32} \\cdot 2^{48}",
+    "solution_math1": "$$\\left(\\frac{1}{16}\\right)^{8} \\cdot 8^{16} = \\left(2^{-4}\\right)^{8} \\cdot \\left(2^{3}\\right)^{16} = 2^{-32} \\cdot 2^{48}$$",
     "solution_step2": "Używamy prawa dodawania wykładników.",
-    "solution_math2": "2^{-32+48} = 2^{16}"
+    "solution_math2": "$$2^{-32+48} = 2^{16}$$"
   },
   {
     "num": 3,
@@ -25,9 +25,9 @@
     "type": "otwarte",
     "answer": "Reszta z dzielenia przez 3 wynosi 2 (dowód algebraiczny)",
     "solution_step1": "Rozwijamy kwadraty i grupujemy wyrazy według podzielności przez 3.",
-    "solution_math1": "n^{2} + (n+1)^{2} + (n+2)^{2} = n^{2} + n^{2}+2n+1 + n^{2}+4n+4 = 3n^{2}+6n+5",
+    "solution_math1": "$$n^{2} + (n+1)^{2} + (n+2)^{2} = n^{2} + n^{2}+2n+1 + n^{2}+4n+4 = 3n^{2}+6n+5$$",
     "solution_step2": "Wyodrębniamy wielokrotność liczby 3.",
-    "solution_math2": "3n^{2}+6n+5 = 3(n^{2}+2n+1)+2 = 3(n+1)^{2}+2"
+    "solution_math2": "$$3n^{2}+6n+5 = 3(n^{2}+2n+1)+2 = 3(n+1)^{2}+2$$"
   },
   {
     "num": 4,
@@ -35,7 +35,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Zapisujemy $\\sqrt{3} = 3^{1/2}$ i $9 = 3^{2}$, a następnie korzystamy ze wzoru na zmianę podstawy.",
-    "solution_math1": "\\log_{3^{1/2}} 3^{2} = \\frac{2}{1/2} = 4",
+    "solution_math1": "$$\\log_{3^{1/2}} 3^{2} = \\frac{2}{1/2} = 4$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -45,7 +45,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Stosujemy wzory skróconego mnożenia $(p+q)^2 - (p-q)^2 = 4pq$, gdzie $p=2a$, $q=b$.",
-    "solution_math1": "(2a+b)^{2} - (2a-b)^{2} = 4 \\cdot 2a \\cdot b = 8ab",
+    "solution_math1": "$$(2a+b)^{2} - (2a-b)^{2} = 4 \\cdot 2a \\cdot b = 8ab$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -55,9 +55,9 @@
     "type": "zamknięte",
     "answer": "D",
     "solution_step1": "Przenosimy wyrazy z $x$ na jedną stronę.",
-    "solution_math1": "1 < \\frac{3}{2}x - \\frac{2}{3}x = \\frac{9x - 4x}{6} = \\frac{5x}{6}",
+    "solution_math1": "$$1 < \\frac{3}{2}x - \\frac{2}{3}x = \\frac{9x - 4x}{6} = \\frac{5x}{6}$$",
     "solution_step2": "Wyznaczamy $x$.",
-    "solution_math2": "x > \\frac{6}{5}"
+    "solution_math2": "$$x > \\frac{6}{5}$$"
   },
   {
     "num": 7,
@@ -65,7 +65,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Ułamek jest równy zero, gdy licznik jest równy zero i mianownik jest różny od zera.",
-    "solution_math1": "x + 1 = 0 \\Rightarrow x = -1; \\quad (x+2)(x-3) \\neq 0 \\Rightarrow x \\neq -2,\\ x \\neq 3",
+    "solution_math1": "$$x + 1 = 0 \\Rightarrow x = -1; \\quad (x+2)(x-3) \\neq 0 \\Rightarrow x \\neq -2,\\ x \\neq 3$$",
     "solution_step2": "Sprawdzamy: $x=-1$ nie zeruje mianownika, więc jest jedynym rozwiązaniem.",
     "solution_math2": "x = -1"
   },
@@ -75,9 +75,9 @@
     "type": "zamknięte",
     "answer": "PF",
     "solution_step1": "Sprawdzamy stwierdzenie (1): $F(x)\\cdot G(x) = 3x(x^2+2x+3) = 3x^3+6x^2+9x = W(x)$ – prawda. Stwierdzenie (2): $W(-1) = 3(-1)^3+6(-1)^2+9(-1) = -3+6-9 = -6 \\neq 0$ – fałsz.",
-    "solution_math1": "F(x)\\cdot G(x) = 3x^{3}+6x^{2}+9x = W(x) \\Rightarrow \\text{P}",
+    "solution_math1": "$$F(x)\\cdot G(x) = 3x^{3}+6x^{2}+9x = W(x) \\Rightarrow \\text{P}$$",
     "solution_step2": "",
-    "solution_math2": "W(-1) = -3+6-9 = -6 \\neq 0 \\Rightarrow \\text{F}"
+    "solution_math2": "$$W(-1) = -3+6-9 = -6 \\neq 0 \\Rightarrow \\text{F}$$"
   },
   {
     "num": 9,
@@ -85,9 +85,9 @@
     "type": "otwarte",
     "answer": "$x = -\\sqrt{3}$, $x = \\sqrt{3}$, $x = 2$",
     "solution_step1": "Grupujemy wyrazy i wyłączamy wspólny czynnik.",
-    "solution_math1": "x^{2}(x-2) - 3(x-2) = 0 \\Rightarrow (x-2)(x^{2}-3) = 0",
+    "solution_math1": "$$x^{2}(x-2) - 3(x-2) = 0 \\Rightarrow (x-2)(x^{2}-3) = 0$$",
     "solution_step2": "Rozwiązujemy każdy czynnik.",
-    "solution_math2": "x - 2 = 0 \\Rightarrow x = 2; \\quad x^{2} - 3 = 0 \\Rightarrow x = \\pm\\sqrt{3}"
+    "solution_math2": "$$x - 2 = 0 \\Rightarrow x = 2; \\quad x^{2} - 3 = 0 \\Rightarrow x = \\pm\\sqrt{3}$$"
   },
   {
     "num": 10,
@@ -95,7 +95,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Po roku w pierwszym sadzie pozostało $0{,}95x$ drzew, a w drugim $0{,}9y$. Warunek: $0{,}9y = 0{,}6 \\cdot 0{,}95x$.",
-    "solution_math1": "\\begin{cases} x + y = 1960 \\\\ 0{,}6 \\cdot 0{,}95x = 0{,}9y \\end{cases}",
+    "solution_math1": "$$\\begin{cases} x + y = 1960 \\\\ 0{,}6 \\cdot 0{,}95x = 0{,}9y \\end{cases}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -105,9 +105,9 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Dwie proste są równoległe, gdy mają jednakowe współczynniki kierunkowe $a$ i różne wyrazy wolne $b$.",
-    "solution_math1": "a_1 = a_2 \\Rightarrow \\text{obie proste mają ten sam współczynnik kierunkowy}",
+    "solution_math1": "$$a_1 = a_2 \\Rightarrow \\text{obie proste mają ten sam współczynnik kierunkowy}$$",
     "solution_step2": "Tylko odpowiedź A i C mają jednakowe współczynniki kierunkowe. Z rysunku odczytujemy nachylenie jako $-\\frac{3}{2}$, co odpowiada odpowiedzi A.",
-    "solution_math2": "y = -\\tfrac{3}{2}x+3 \\quad \\text{i} \\quad y = -\\tfrac{3}{2}x-1"
+    "solution_math2": "$$y = -\\tfrac{3}{2}x+3 \\quad \\text{i} \\quad y = -\\tfrac{3}{2}x-1$$"
   },
   {
     "num": 12,
@@ -115,7 +115,7 @@
     "type": "zamknięte",
     "answer": "D",
     "solution_step1": "Funkcja liniowa jest malejąca, gdy współczynnik kierunkowy jest ujemny.",
-    "solution_math1": "-2k + 3 < 0 \\Rightarrow -2k < -3 \\Rightarrow k > \\frac{3}{2}",
+    "solution_math1": "$$-2k + 3 < 0 \\Rightarrow -2k < -3 \\Rightarrow k > \\frac{3}{2}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -125,7 +125,7 @@
     "type": "zamknięte",
     "answer": "D",
     "solution_step1": "Wyznaczamy miejsce zerowe $f$: $3x+6=0 \\Rightarrow x=-2$.",
-    "solution_math1": "g(-2) = 0 \\Rightarrow a \\cdot (-2) + 7 = 0 \\Rightarrow a = \\frac{7}{2}",
+    "solution_math1": "$$g(-2) = 0 \\Rightarrow a \\cdot (-2) + 7 = 0 \\Rightarrow a = \\frac{7}{2}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -135,9 +135,9 @@
     "type": "zamknięte",
     "answer": "(14.1) $[-2,\\ 4]$; (14.2) B; (14.3) A; (14.4) g → A, h → E",
     "solution_step1": "Z wykresu odczytujemy: miejsca zerowe $f$ to $x=-2$ oraz $x=4$, wierzchołek w $(1, 9)$, parabola skierowana ramionami w dół.",
-    "solution_math1": "f(x) = -(x-1)^{2} + 9",
+    "solution_math1": "$$f(x) = -(x-1)^{2} + 9$$",
     "solution_step2": "Oś symetrii to $x=1$. $f(-4) = -(−5)^2+9 = -16$; symetrycznie $f(6) = -(5)^2+9 = -16$. Przesunięcie $g(x) = f(x+3)$ w lewo o 3: wierzchołek w $(-2, 9)$. Odbicie $h(x)=f(-x)$: wierzchołek w $(-1, 9)$.",
-    "solution_math2": "f(-4) = f(6) \\Rightarrow \\text{(14.3) A}; \\quad g\\text{ → rysunek A},\\ h\\text{ → rysunek E}"
+    "solution_math2": "$$f(-4) = f(6) \\Rightarrow \\text{(14.3) A}; \\quad g\\text{ → rysunek A},\\ h\\text{ → rysunek E}$$"
   },
   {
     "num": 15,
@@ -145,9 +145,9 @@
     "type": "zamknięte",
     "answer": "PF",
     "solution_step1": "Obliczamy $a_1 = (-1)^1 \\cdot (1-5) = (-1)(-4) = 4$ oraz $a_3 = (-1)^3 \\cdot (3-5) = (-1)(-2) = 2$.",
-    "solution_math1": "a_1 = 4 = 2 \\cdot 2 = 2 \\cdot a_3 \\Rightarrow \\text{stwierdzenie (1): P}",
+    "solution_math1": "$$a_1 = 4 = 2 \\cdot 2 = 2 \\cdot a_3 \\Rightarrow \\text{stwierdzenie (1): P}$$",
     "solution_step2": "Sprawdzamy stwierdzenie (2): $a_5 = (-1)^5 \\cdot (5-5) = 0$, co nie jest dodatnie.",
-    "solution_math2": "a_5 = 0 \\Rightarrow \\text{stwierdzenie (2): F}"
+    "solution_math2": "$$a_5 = 0 \\Rightarrow \\text{stwierdzenie (2): F}$$"
   },
   {
     "num": 16,
@@ -155,9 +155,9 @@
     "type": "zamknięte",
     "answer": "B2",
     "solution_step1": "Iloraz ciągu geometrycznego: $q = \\frac{6}{12} = \\frac{1}{2}$. Trzeci wyraz: $2m-1 = 6 \\cdot \\frac{1}{2} = 3$.",
-    "solution_math1": "2m - 1 = 3 \\Rightarrow m = 2",
+    "solution_math1": "$$2m - 1 = 3 \\Rightarrow m = 2$$",
     "solution_step2": "Ciąg $(12, 6, 3)$ ma iloraz $\\frac{1}{2} < 1$, więc jest malejący.",
-    "solution_math2": "q = \\frac{1}{2} < 1 \\Rightarrow \\text{ciąg malejący}"
+    "solution_math2": "$$q = \\frac{1}{2} < 1 \\Rightarrow \\text{ciąg malejący}$$"
   },
   {
     "num": 17,
@@ -165,9 +165,9 @@
     "type": "otwarte",
     "answer": "$r = -2$",
     "solution_step1": "Zapisujemy układ równań używając wzorów na $n$-ty wyraz i sumę ciągu arytmetycznego.",
-    "solution_math1": "\\begin{cases} a_1 + 2r = -1 \\\\ \\dfrac{2a_1 + 14r}{2} \\cdot 15 = -165 \\end{cases} \\Rightarrow \\begin{cases} a_1 + 2r = -1 \\\\ a_1 + 7r = -11 \\end{cases}",
+    "solution_math1": "$$\\begin{cases} a_1 + 2r = -1 \\\\ \\dfrac{2a_1 + 14r}{2} \\cdot 15 = -165 \\end{cases} \\Rightarrow \\begin{cases} a_1 + 2r = -1 \\\\ a_1 + 7r = -11 \\end{cases}$$",
     "solution_step2": "Odejmujemy równania stronami.",
-    "solution_math2": "5r = -10 \\Rightarrow r = -2"
+    "solution_math2": "$$5r = -10 \\Rightarrow r = -2$$"
   },
   {
     "num": 18,
@@ -175,9 +175,9 @@
     "type": "zamknięte",
     "answer": "B, F",
     "solution_step1": "Dla $90° < \\alpha < 180°$ (II ćwiartka): $\\sin\\alpha > 0$, $\\cos\\alpha < 0$.",
-    "solution_math1": "\\sin\\alpha \\cdot \\cos\\alpha = (+)(-)< 0 \\Rightarrow \\text{B: prawda}",
+    "solution_math1": "$$\\sin\\alpha \\cdot \\cos\\alpha = (+)(-)< 0 \\Rightarrow \\text{B: prawda}$$",
     "solution_step2": "Ze wzoru $\\operatorname{tg}\\alpha = \\frac{\\sin\\alpha}{\\cos\\alpha} = -3$ wynika $\\sin\\alpha = -3\\cos\\alpha$.",
-    "solution_math2": "\\sin\\alpha = -3\\cos\\alpha \\Rightarrow \\text{F: prawda}"
+    "solution_math2": "$$\\sin\\alpha = -3\\cos\\alpha \\Rightarrow \\text{F: prawda}$$"
   },
   {
     "num": 19,
@@ -185,9 +185,9 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Wyłączamy $\\sin 20°$ przed nawias.",
-    "solution_math1": "\\sin^{3}20^{\\circ} + \\cos^{2}20^{\\circ}\\cdot\\sin 20^{\\circ} = \\sin 20^{\\circ}(\\sin^{2}20^{\\circ} + \\cos^{2}20^{\\circ})",
+    "solution_math1": "$$\\sin^{3}20^{\\circ} + \\cos^{2}20^{\\circ}\\cdot\\sin 20^{\\circ} = \\sin 20^{\\circ}(\\sin^{2}20^{\\circ} + \\cos^{2}20^{\\circ})$$",
     "solution_step2": "Korzystamy z jedynki trygonometrycznej.",
-    "solution_math2": "= \\sin 20^{\\circ} \\cdot 1 = \\sin 20^{\\circ}"
+    "solution_math2": "$$= \\sin 20^{\\circ} \\cdot 1 = \\sin 20^{\\circ}$$"
   },
   {
     "num": 20,
@@ -195,9 +195,9 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Korzystamy z twierdzenia o dwusiecznej kąta w trójkącie: dwusieczna kąta $M$ dzieli bok $KL$ w stosunku boków przyległych.",
-    "solution_math1": "\\frac{|KN|}{|NL|} = \\frac{|KM|}{|LM|} \\Rightarrow \\frac{c}{d} = \\frac{a}{b}",
+    "solution_math1": "$$\\frac{|KN|}{|NL|} = \\frac{|KM|}{|LM|} \\Rightarrow \\frac{c}{d} = \\frac{a}{b}$$",
     "solution_step2": "Stąd $a \\cdot d = b \\cdot c$.",
-    "solution_math2": "a \\cdot d = b \\cdot c"
+    "solution_math2": "$$a \\cdot d = b \\cdot c$$"
   },
   {
     "num": 21,
@@ -205,7 +205,7 @@
     "type": "zamknięte",
     "answer": "D",
     "solution_step1": "Używamy wzoru na pole równoległoboku: $P = a \\cdot b \\cdot \\sin\\alpha$.",
-    "solution_math1": "P = 3 \\cdot 4 \\cdot \\sin 120^{\\circ} = 12 \\cdot \\frac{\\sqrt{3}}{2} = 6\\sqrt{3}",
+    "solution_math1": "$$P = 3 \\cdot 4 \\cdot \\sin 120^{\\circ} = 12 \\cdot \\frac{\\sqrt{3}}{2} = 6\\sqrt{3}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -215,9 +215,9 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Kąt środkowy $BSC$ jest dwa razy większy od wpisanego $BAC$ opartych na tym samym łuku $BC$.",
-    "solution_math1": "\\angle BSC = 2 \\cdot \\angle BAC = 2 \\cdot 42^{\\circ} = 84^{\\circ}",
+    "solution_math1": "$$\\angle BSC = 2 \\cdot \\angle BAC = 2 \\cdot 42^{\\circ} = 84^{\\circ}$$",
     "solution_step2": "Trójkąt $BSA$ jest równoramienny ($SA = SB$ – promienie). Wyznaczamy kąt $BAS$.",
-    "solution_math2": "\\angle BAS = \\frac{180^{\\circ} - 84^{\\circ}}{2} = 48^{\\circ}"
+    "solution_math2": "$$\\angle BAS = \\frac{180^{\\circ} - 84^{\\circ}}{2} = 48^{\\circ}$$"
   },
   {
     "num": 23,
@@ -225,7 +225,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Dwie proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$.",
-    "solution_math1": "(m+1) \\cdot (-2) = -1 \\Rightarrow m+1 = \\frac{1}{2} \\Rightarrow m = -\\frac{1}{2}",
+    "solution_math1": "$$(m+1) \\cdot (-2) = -1 \\Rightarrow m+1 = \\frac{1}{2} \\Rightarrow m = -\\frac{1}{2}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -235,9 +235,9 @@
     "type": "otwarte",
     "answer": "$|BC| = 2\\sqrt{13}$",
     "solution_step1": "Punkt $P$ jest środkiem przekątnej $AC$. Ze wzoru na środek odcinka wyznaczamy współrzędne $C$.",
-    "solution_math1": "\\frac{-2 + x_C}{2} = 6 \\Rightarrow x_C = 14; \\quad \\frac{6 + y_C}{2} = 7 \\Rightarrow y_C = 8 \\Rightarrow C = (14, 8)",
+    "solution_math1": "$$\\frac{-2 + x_C}{2} = 6 \\Rightarrow x_C = 14; \\quad \\frac{6 + y_C}{2} = 7 \\Rightarrow y_C = 8 \\Rightarrow C = (14, 8)$$",
     "solution_step2": "Obliczamy długość boku $BC$.",
-    "solution_math2": "|BC| = \\sqrt{(14-10)^{2} + (8-2)^{2}} = \\sqrt{16+36} = \\sqrt{52} = 2\\sqrt{13}"
+    "solution_math2": "$$|BC| = \\sqrt{(14-10)^{2} + (8-2)^{2}} = \\sqrt{16+36} = \\sqrt{52} = 2\\sqrt{13}$$"
   },
   {
     "num": 25,
@@ -245,9 +245,9 @@
     "type": "zamknięte",
     "answer": "(25.1) C; (25.2) D",
     "solution_step1": "Pole podstawy prawidłowego sześciokąta foremnego: $P_{podst} = 15\\sqrt{3} = \\frac{3\\sqrt{3}}{2}a^{2}$, stąd $a^{2} = 10$, $a = \\sqrt{10}$. Pole jednej ściany bocznej: $P_{bok} = a \\cdot h = \\sqrt{10} \\cdot 6 = 6\\sqrt{10}$.",
-    "solution_math1": "a = \\sqrt{10}, \\quad P_{\\text{bok}} = 6\\sqrt{10}",
+    "solution_math1": "$$a = \\sqrt{10}, \\quad P_{\\text{bok}} = 6\\sqrt{10}$$",
     "solution_step2": "Najdłuższa przekątna łączy przeciwległe wierzchołki podstawy i przechodzi przez środek graniastosłupa. Jej rzut na podstawę ma długość $2a = 2\\sqrt{10}$, wysokość $h=6$. Kąt nachylenia jest zaznaczony na rysunku D.",
-    "solution_math2": "\\tan\\alpha = \\frac{h}{2a} = \\frac{6}{2\\sqrt{10}} = \\frac{3}{\\sqrt{10}}"
+    "solution_math2": "$$\\tan\\alpha = \\frac{h}{2a} = \\frac{6}{2\\sqrt{10}} = \\frac{3}{\\sqrt{10}}$$"
   },
   {
     "num": 26,
@@ -255,9 +255,9 @@
     "type": "otwarte",
     "answer": "$4$",
     "solution_step1": "Wyznaczamy stosunek objętości i stąd stosunek liniowy podobieństwa.",
-    "solution_math1": "\\frac{V_{F_2}}{V_{F_1}} = \\frac{512}{64} = 8 = k^{3} \\Rightarrow k = 2",
+    "solution_math1": "$$\\frac{V_{F_2}}{V_{F_1}} = \\frac{512}{64} = 8 = k^{3} \\Rightarrow k = 2$$",
     "solution_step2": "Stosunek pól powierzchni jest kwadratem stosunku liniowego.",
-    "solution_math2": "\\frac{P_{F_2}}{P_{F_1}} = k^{2} = 4"
+    "solution_math2": "$$\\frac{P_{F_2}}{P_{F_1}} = k^{2} = 4$$"
   },
   {
     "num": 27,
@@ -265,7 +265,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Liczymy permutacje 4 cyfr.",
-    "solution_math1": "4! = 4 \\cdot 3 \\cdot 2 \\cdot 1 = 24",
+    "solution_math1": "$$4! = 4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -275,7 +275,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Jeśli $\\frac{a+b+c}{3} = 9$, to $a+b+c = 27$.",
-    "solution_math1": "\\frac{a+a+b+b+c+c}{6} = \\frac{2(a+b+c)}{6} = \\frac{2 \\cdot 27}{6} = 9",
+    "solution_math1": "$$\\frac{a+a+b+b+c+c}{6} = \\frac{2(a+b+c)}{6} = \\frac{2 \\cdot 27}{6} = 9$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -285,9 +285,9 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Porządkujemy dane i szukamy mediany (środkowej wartości). Przy 22 uczniach mediana to średnia 11. i 12. wartości.",
-    "solution_math1": "\\text{Uczniowie z oceną} \\leq 3: 0+2+7 = 9; \\quad \\text{z oceną} \\leq 4: 9+5 = 14",
+    "solution_math1": "$$\\text{Uczniowie z oceną} \\leq 3: 0+2+7 = 9; \\quad \\text{z oceną} \\leq 4: 9+5 = 14$$",
     "solution_step2": "11. i 12. wartość: 11. to ocena 4, 10. to ocena 3. Mediana = $\\frac{3+4}{2} = 3{,}5$.",
-    "solution_math2": "\\text{Mediana} = \\frac{3+4}{2} = 3{,}5"
+    "solution_math2": "$$\\text{Mediana} = \\frac{3+4}{2} = 3{,}5$$"
   },
   {
     "num": 30,
@@ -295,9 +295,9 @@
     "type": "otwarte",
     "answer": "$P(A) = \\frac{13}{25}$",
     "solution_step1": "Liczba wszystkich zdarzeń elementarnych: $|\\Omega| = 5 \\cdot 5 = 25$. Suma parzysta: dwie liczby parzyste lub dwie nieparzyste. W zbiorze $K$: parzyste $\\{6,8\\}$ (2 szt.), nieparzyste $\\{5,7,9\\}$ (3 szt.).",
-    "solution_math1": "|A| = 2 \\cdot 2 + 3 \\cdot 3 = 4 + 9 = 13",
+    "solution_math1": "$$|A| = 2 \\cdot 2 + 3 \\cdot 3 = 4 + 9 = 13$$",
     "solution_step2": "Obliczamy prawdopodobieństwo.",
-    "solution_math2": "P(A) = \\frac{13}{25}"
+    "solution_math2": "$$P(A) = \\frac{13}{25}$$"
   },
   {
     "num": 31,
@@ -305,8 +305,8 @@
     "type": "otwarte",
     "answer": "$x = 4{,}5\\ \\text{m}$, $y = 3\\ \\text{m}$",
     "solution_step1": "Zapisujemy warunek na długość siatki: dwa boki długości $x$ (przód i tył całości) i cztery boki długości $y$ (wewnętrzne + zewnętrzne).",
-    "solution_math1": "4x + 6y = 36 \\Rightarrow y = 6 - \\frac{2}{3}x",
+    "solution_math1": "$$4x + 6y = 36 \\Rightarrow y = 6 - \\frac{2}{3}x$$",
     "solution_step2": "Zapisujemy sumę pól jako funkcję jednej zmiennej i wyznaczamy wierzchołek paraboli.",
-    "solution_math2": "P(x) = 3xy = 3x\\left(6 - \\tfrac{2}{3}x\\right) = -2x^{2} + 18x \\Rightarrow x = -\\frac{18}{2 \\cdot (-2)} = 4{,}5;\\ y = 6 - \\tfrac{2}{3}\\cdot 4{,}5 = 3"
+    "solution_math2": "$$P(x) = 3xy = 3x\\left(6 - \\tfrac{2}{3}x\\right) = -2x^{2} + 18x \\Rightarrow x = -\\frac{18}{2 \\cdot (-2)} = 4{,}5;\\ y = 6 - \\tfrac{2}{3}\\cdot 4{,}5 = 3$$"
   }
 ]

@@ -5,7 +5,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Podstawa $5\\cdot5^{1/2}=5^{3/2}$. Podnosimy do $1/3$: $\\left(5^{3/2}\\right)^{1/3}=5^{1/2}$.",
-    "solution_math1": "\\left(5^{3/2}\\right)^{1/3} = 5^{\\frac{3}{2}\\cdot\\frac{1}{3}} = 5^{\\frac{1}{2}} = \\sqrt{5}",
+    "solution_math1": "$$\\left(5^{3/2}\\right)^{1/3} = 5^{\\frac{3}{2}\\cdot\\frac{1}{3}} = 5^{\\frac{1}{2}} = \\sqrt{5}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -15,7 +15,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Kapitalizacja roczna: $K_2=K_0\\cdot(1{,}07)^2$.",
-    "solution_math1": "K_2 = 40\\,000\\cdot1{,}07^2 = 40\\,000\\cdot1{,}1449 = 45\\,796",
+    "solution_math1": "$$K_2 = 40\\,000\\cdot1{,}07^2 = 40\\,000\\cdot1{,}1449 = 45\\,796$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -25,7 +25,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Układ: $50x+40y=8000$, $1{,}5x=1{,}2y \\Rightarrow y=\\frac{5}{4}x$.",
-    "solution_math1": "50x+40\\cdot\\frac{5}{4}x = 8000 \\Rightarrow 50x+50x=8000 \\Rightarrow x=80,\\;y=100",
+    "solution_math1": "$$50x+40\\cdot\\frac{5}{4}x = 8000 \\Rightarrow 50x+50x=8000 \\Rightarrow x=80,\\;y=100$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -35,7 +35,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Sprowadzamy do wspólnego mianownika: $(x-y)(x+y)=x^2-y^2$.",
-    "solution_math1": "\\frac{x+y+x-y}{x^2-y^2} = \\frac{2x}{x^2-y^2}",
+    "solution_math1": "$$\\frac{x+y+x-y}{x^2-y^2} = \\frac{2x}{x^2-y^2}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -45,7 +45,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Pierwsza litera: 26 możliwości. Każda kolejna: 25 możliwości (różna od poprzedniej).",
-    "solution_math1": "26\\cdot25\\cdot25\\cdot25 = 26\\cdot25^3",
+    "solution_math1": "$$26\\cdot25\\cdot25\\cdot25 = 26\\cdot25^3$$",
     "solution_step2": "Klucz wskazuje B.",
     "solution_math2": ""
   },
@@ -55,9 +55,9 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Podstawiamy $x=\\sqrt{10}$ do B: $\\frac{10-11}{2\\sqrt{10}}=\\frac{-1}{2\\sqrt{10}}$.",
-    "solution_math1": "f(\\sqrt{10}) = \\frac{10-11}{2\\sqrt{10}} = \\frac{-1}{2\\sqrt{10}} \\neq -\\frac{1}{2}",
+    "solution_math1": "$$f(\\sqrt{10}) = \\frac{10-11}{2\\sqrt{10}} = \\frac{-1}{2\\sqrt{10}} \\neq -\\frac{1}{2}$$",
     "solution_step2": "Zgodnie z kluczem odpowiedź B.",
-    "solution_math2": "\\text{Odpowiedź: B}"
+    "solution_math2": "$$\\text{Odpowiedź: B}$$"
   },
   {
     "num": 7,
@@ -65,9 +65,9 @@
     "type": "otwarte",
     "answer": "7.1: $[-3,+\\infty)$; 7.2: $f(x)=3(x-5)^2-3$",
     "solution_step1": "Z wierzchołka $W=(5,-3)$: minimum $= -3$, więc ZW $= [-3,+\\infty)$. Postać kanoniczna: $f(x)=a(x-5)^2-3$.",
-    "solution_math1": "f(0)=a\\cdot25-3=72 \\Rightarrow 25a=75 \\Rightarrow a=3",
+    "solution_math1": "$$f(0)=a\\cdot25-3=72 \\Rightarrow 25a=75 \\Rightarrow a=3$$",
     "solution_step2": "",
-    "solution_math2": "f(x) = 3(x-5)^2-3"
+    "solution_math2": "$$f(x) = 3(x-5)^2-3$$"
   },
   {
     "num": 8,
@@ -85,7 +85,7 @@
     "type": "zamknięte",
     "answer": "B1",
     "solution_step1": "$a<0$ – ramiona paraboli skierowane w dół. $\\Delta<0$ – brak pierwiastków rzeczywistych, brak przecięcia z $Ox$.",
-    "solution_math1": "a<0,\\;\\Delta<0 \\Rightarrow \\text{parabola skierowana w dół, bez miejsc zerowych}",
+    "solution_math1": "$$a<0,\\;\\Delta<0 \\Rightarrow \\text{parabola skierowana w dół, bez miejsc zerowych}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -95,7 +95,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Układ ma jedno rozwiązanie gdy proste się przecinają (nie są równoległe). Muszą mieć różne wsp. kierunkowe.",
-    "solution_math1": "\\frac{a}{2} \\neq \\frac{1}{-1} \\Rightarrow a \\neq -2",
+    "solution_math1": "$$\\frac{a}{2} \\neq \\frac{1}{-1} \\Rightarrow a \\neq -2$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -105,7 +105,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "$W(x)=(x-2)(x^2-3) = x^3-3x-2x^2+6 = x^3-2x^2-3x+6$.",
-    "solution_math1": "W(x) = (x-2)(x^2-3)",
+    "solution_math1": "$$W(x) = (x-2)(x^2-3)$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -115,7 +115,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Zgodnie z kluczem odpowiedź A (jedno rozwiązanie).",
-    "solution_math1": "\\text{Odpowiedź: A}",
+    "solution_math1": "$$\\text{Odpowiedź: A}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -125,7 +125,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Zgodnie z kluczem: nierówność liniowa, największa całkowita = 6.",
-    "solution_math1": "\\text{Największa całkowita} = 6",
+    "solution_math1": "$$\\text{Największa całkowita} = 6$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -135,9 +135,9 @@
     "type": "otwarte",
     "answer": "Dowód: $5n^2+15n=5n(n+3)$; dla $n$ parzystego $n=2k$: $5\\cdot2k(2k+3)=10k(2k+3)$; dla $n$ nieparzystego $n+3$ parzyste: $5n\\cdot2m=10mn$",
     "solution_step1": "Faktoryzujemy: $5n^2+15n=5n(n+3)$. Jeden z czynników $n$ lub $n+3$ jest zawsze parzysty (kolejne liczby naturalne o różnicy 3).",
-    "solution_math1": "5n(n+3) = 10\\cdot\\frac{n(n+3)}{2}",
+    "solution_math1": "$$5n(n+3) = 10\\cdot\\frac{n(n+3)}{2}$$",
     "solution_step2": "$n$ i $n+3$ maja różną parzystość (jeden parzy, drugi niepar), więc ich iloczyn jest zawsze parzysty i $5n(n+3)\\,\\vdots\\,10$.",
-    "solution_math2": "\\text{c.b.d.}"
+    "solution_math2": "$$\\text{c.b.d.}$$"
   },
   {
     "num": 15,
@@ -145,9 +145,9 @@
     "type": "zamknięte",
     "answer": "FP",
     "solution_step1": "$a_n=2n^2+n$ jest rosnący dla $n\\geq1$ (F – zdanie fałszywe wg klucza). $a_5=2\\cdot25+5=55$ – P.",
-    "solution_math1": "a_5 = 2(25)+5 = 55 \\Rightarrow \\text{P}",
+    "solution_math1": "$$a_5 = 2(25)+5 = 55 \\Rightarrow \\text{P}$$",
     "solution_step2": "Klucz: F, P.",
-    "solution_math2": "\\text{Odpowiedź: F, P}"
+    "solution_math2": "$$\\text{Odpowiedź: F, P}$$"
   },
   {
     "num": 16,
@@ -155,7 +155,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "5 wyrazów, $a_1=-3$, $a_5=11$. Różnica $r=\\frac{11-(-3)}{4}=\\frac{14}{4}=\\frac{7}{2}$.",
-    "solution_math1": "x=a_3=-3+2\\cdot\\frac{7}{2}=4,\\quad y=a_4=-3+3\\cdot\\frac{7}{2}=\\frac{15}{2}",
+    "solution_math1": "$$x=a_3=-3+2\\cdot\\frac{7}{2}=4,\\quad y=a_4=-3+3\\cdot\\frac{7}{2}=\\frac{15}{2}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -165,9 +165,9 @@
     "type": "zamknięte",
     "answer": "A, E",
     "solution_step1": "Iloraz $q=\\frac{15}{-5}=-3$. Wzór ogólny: $a_n=-5\\cdot(-3)^{n-1}$.",
-    "solution_math1": "a_n = -5\\cdot(-3)^{n-1}",
+    "solution_math1": "$$a_n = -5\\cdot(-3)^{n-1}$$",
     "solution_step2": "Wybieramy dwa poprawne wzory spośród opcji A–E.",
-    "solution_math2": "\\text{Odpowiedź: A, E}"
+    "solution_math2": "$$\\text{Odpowiedź: A, E}$$"
   },
   {
     "num": 18,
@@ -175,9 +175,9 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Lewa strona: $\\frac{\\sin^2\\alpha+\\cos^2\\alpha}{\\sin^2\\alpha\\cos^2\\alpha}=\\frac{1}{\\sin^2\\alpha\\cos^2\\alpha}$.",
-    "solution_math1": "\\frac{1}{\\sin^2\\alpha\\cos^2\\alpha}=\\frac{64}{9} \\Rightarrow \\sin^2\\alpha\\cos^2\\alpha=\\frac{9}{64}",
+    "solution_math1": "$$\\frac{1}{\\sin^2\\alpha\\cos^2\\alpha}=\\frac{64}{9} \\Rightarrow \\sin^2\\alpha\\cos^2\\alpha=\\frac{9}{64}$$",
     "solution_step2": "$\\sin\\alpha\\cos\\alpha=\\sqrt{\\frac{9}{64}}=\\frac{3}{8}$... Klucz podaje B = $\\frac{9}{32}$.",
-    "solution_math2": "\\sin\\alpha\\cos\\alpha = \\frac{9}{32}"
+    "solution_math2": "$$\\sin\\alpha\\cos\\alpha = \\frac{9}{32}$$"
   },
   {
     "num": 19,
@@ -185,7 +185,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Kąt środkowy jest dwa razy większy od wpisanego opartego na tym samym łuku.",
-    "solution_math1": "\\angle BOC = 2\\angle BAC = 2\\alpha",
+    "solution_math1": "$$\\angle BOC = 2\\angle BAC = 2\\alpha$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -195,9 +195,9 @@
     "type": "otwarte",
     "answer": "$a=50$ m (boki krótkie), $b=100$ m (strona długa), $P_{\\max}=5000$ m²",
     "solution_step1": "Niech $a$ – bok krótki, $b$ – bok długi. Ograniczenie: $2a+b=200 \\Rightarrow b=200-2a$.",
-    "solution_math1": "P(a) = a\\cdot b = a(200-2a) = 200a-2a^2",
+    "solution_math1": "$$P(a) = a\\cdot b = a(200-2a) = 200a-2a^2$$",
     "solution_step2": "Wierzchołek paraboli: $a=\\frac{200}{4}=50$, $b=100$.",
-    "solution_math2": "P_{\\max} = 50\\cdot100 = 5000\\text{ m}^2"
+    "solution_math2": "$$P_{\\max} = 50\\cdot100 = 5000\\text{ m}^2$$"
   },
   {
     "num": 21,
@@ -205,7 +205,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Ćwiartka koła o promieniu 8 mieści się w kwadracie. Część wspólna = ćwiartka koła.",
-    "solution_math1": "P = \\frac{1}{4}\\pi r^2 = \\frac{1}{4}\\pi\\cdot64 = 16\\pi",
+    "solution_math1": "$$P = \\frac{1}{4}\\pi r^2 = \\frac{1}{4}\\pi\\cdot64 = 16\\pi$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -215,7 +215,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Skala podobieństwa: $k=\\frac{|OC|}{|OA|}=\\frac{9}{3}=3$.",
-    "solution_math1": "|OD| = k\\cdot|OB| = 3\\cdot4 = 12",
+    "solution_math1": "$$|OD| = k\\cdot|OB| = 3\\cdot4 = 12$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -225,9 +225,9 @@
     "type": "otwarte",
     "answer": "$\\frac{48}{7}$",
     "solution_step1": "Korzystamy z własności podobieństwa trójkątów i proporcji przekątnych równoległoboku.",
-    "solution_math1": "\\text{Boki rombu} = \\frac{d_1\\cdot d_2}{2\\sqrt{\\left(\\frac{d_1}{2}\\right)^2+\\left(\\frac{d_2}{2}\\right)^2}}\\cdot 4",
+    "solution_math1": "$$\\text{Boki rombu} = \\frac{d_1\\cdot d_2}{2\\sqrt{\\left(\\frac{d_1}{2}\\right)^2+\\left(\\frac{d_2}{2}\\right)^2}}\\cdot 4$$",
     "solution_step2": "Obliczenia zgodnie z danymi z arkusza dają obwód $\\frac{48}{7}$.",
-    "solution_math2": "\\text{Obwód} = \\frac{48}{7}"
+    "solution_math2": "$$\\text{Obwód} = \\frac{48}{7}$$"
   },
   {
     "num": 24,
@@ -235,9 +235,9 @@
     "type": "otwarte",
     "answer": "$P=\\frac{18}{5}$",
     "solution_step1": "$\\sin\\angle BAC=\\sqrt{1-\\left(\\frac{4}{5}\\right)^2}=\\sqrt{\\frac{9}{25}}=\\frac{3}{5}$.",
-    "solution_math1": "P = \\frac{1}{2}|AB|\\cdot|AC|\\cdot\\sin\\angle BAC = \\frac{1}{2}\\cdot5\\cdot2\\cdot\\frac{3}{5} = 3",
+    "solution_math1": "$$P = \\frac{1}{2}|AB|\\cdot|AC|\\cdot\\sin\\angle BAC = \\frac{1}{2}\\cdot5\\cdot2\\cdot\\frac{3}{5} = 3$$",
     "solution_step2": "Klucz podaje $P=\\frac{18}{5}$. Sprawdź oryginalne dane.",
-    "solution_math2": "P = \\frac{18}{5}"
+    "solution_math2": "$$P = \\frac{18}{5}$$"
   },
   {
     "num": 25,
@@ -245,9 +245,9 @@
     "type": "zamknięte",
     "answer": "25.1: C; 25.2: B",
     "solution_step1": "Pole sześciokąta foremnego: $P=\\frac{3\\sqrt{3}}{2}a^2=6\\sqrt{3} \\Rightarrow a^2=4 \\Rightarrow a=2$.",
-    "solution_math1": "a=2, \\quad r=a=2",
+    "solution_math1": "$$a=2, \\quad r=a=2$$",
     "solution_step2": "Promień okręgu opisanego $= a = 2$.",
-    "solution_math2": "\\text{25.1: C (a=2); 25.2: B}"
+    "solution_math2": "$$\\text{25.1: C (a=2); 25.2: B}$$"
   },
   {
     "num": 26,
@@ -255,7 +255,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Środkowa $EF=\\frac{a+b}{2}$. Obwody trapezów: $13=a+2c+EF$, $39=b+2d+EF$ (przybliżenie).",
-    "solution_math1": "\\text{Zgodnie z kluczem: }a=3,\\;b=9",
+    "solution_math1": "$$\\text{Zgodnie z kluczem: }a=3,\\;b=9$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -265,7 +265,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Dla $x=0$: $(0-3)^2+(y-3)^2=13 \\Rightarrow 9+(y-3)^2=13 \\Rightarrow (y-3)^2=4 \\Rightarrow y=5$ lub $y=1$.",
-    "solution_math1": "y = 3\\pm2 \\Rightarrow y=5\\text{ lub }y=1",
+    "solution_math1": "$$y = 3\\pm2 \\Rightarrow y=5\\text{ lub }y=1$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -275,7 +275,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Warunek prostopadłości: $m_k\\cdot m_l=-1$.",
-    "solution_math1": "m_l = -\\frac{1}{m_k} = -\\frac{1}{1/3} = -3",
+    "solution_math1": "$$m_l = -\\frac{1}{m_k} = -\\frac{1}{1/3} = -3$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -285,7 +285,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Kierunek $AB$: $(2m-1, m-2)$. Zgodnie z zadaniem szukamy warunków na $m$.",
-    "solution_math1": "\\text{Klucz podaje }m=\\frac{1}{2}",
+    "solution_math1": "$$\\text{Klucz podaje }m=\\frac{1}{2}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -295,7 +295,7 @@
     "type": "otwarte",
     "answer": "30.1: A; 30.2: $\\cos\\alpha=\\frac{\\sqrt{3}}{3}$",
     "solution_step1": "Ostrosłup wycinany ze sześcianu o krawędzi $a$: wysokość $H=a$, krawędź boczna $l=a\\sqrt{3}$ (przekątna sześcianu).",
-    "solution_math1": "\\cos\\alpha = \\frac{H}{l} = \\frac{a}{a\\sqrt{3}} = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}",
+    "solution_math1": "$$\\cos\\alpha = \\frac{H}{l} = \\frac{a}{a\\sqrt{3}} = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -305,7 +305,7 @@
     "type": "zamknięte",
     "answer": "D",
     "solution_step1": "Skala podobieństwa $k=3$, stosunek objętości $= k^3$.",
-    "solution_math1": "\\frac{V'}{V} = 3^3 = 27",
+    "solution_math1": "$$\\frac{V'}{V} = 3^3 = 27$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -315,7 +315,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "$P(W)=\\frac{x}{100}$, $P(P)=\\frac{100-x}{100}$. Stosunek $2:7$: $\\frac{x}{100-x}=\\frac{2}{7}$.",
-    "solution_math1": "7x=2(100-x) \\Rightarrow 9x=200 \\Rightarrow x=\\frac{200}{9}",
+    "solution_math1": "$$7x=2(100-x) \\Rightarrow 9x=200 \\Rightarrow x=\\frac{200}{9}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -325,8 +325,8 @@
     "type": "otwarte",
     "answer": "Donice I, II, IV",
     "solution_step1": "Reguła $2\\sigma$: $[\\bar{x}-2\\sigma,\\,\\bar{x}+2\\sigma]=[112,168]$ zawiera $\\approx95\\%$.",
-    "solution_math1": "[\\bar{x}-\\sigma,\\bar{x}+\\sigma]=[126,154]\\supset\\text{I}\\;(130{-}160)\\;\\checkmark",
+    "solution_math1": "$$[\\bar{x}-\\sigma,\\bar{x}+\\sigma]=[126,154]\\supset\\text{I}\\;(130{-}160)\\;\\checkmark$$",
     "solution_step2": "Donica III: $[126,140]\\subset$ – tylko połowa, $<95\\%$. Donice I, II, IV zawierają $\\geq95\\%$.",
-    "solution_math2": "\\text{Odpowiedź: I, II, IV}"
+    "solution_math2": "$$\\text{Odpowiedź: I, II, IV}$$"
   }
 ]

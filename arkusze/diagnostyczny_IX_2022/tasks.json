@@ -5,7 +5,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "$1+3\\cdot2^{-1}=1+\\frac{3}{2}=\\frac{5}{2}$. Podnosimy do $(-2)$.",
-    "solution_math1": "\\left(\\frac{5}{2}\\right)^{-2} = \\left(\\frac{2}{5}\\right)^2 = \\frac{4}{25}",
+    "solution_math1": "$$\\left(\\frac{5}{2}\\right)^{-2} = \\left(\\frac{2}{5}\\right)^2 = \\frac{4}{25}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -25,7 +25,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Liczba podzielna przez 25 i nieparzysta kończy się na 25 lub 75. Tysięczne: 1–9 (9 możliwości), setne: 0–9 (10), dziesiętne: 0–9 (10), jednostki: 5 (tylko jeśli końcówka 25 lub 75 – ale para końcowa musi być 25 lub 75).",
-    "solution_math1": "\\text{ostatnie 2 cyfry: 25 lub 75 (2 przypadki)}\\\\\\text{pierwsze 2 cyfry: }9\\cdot10=90\\\\\\text{razem: }90\\cdot2=180",
+    "solution_math1": "$$\\text{ostatnie 2 cyfry: 25 lub 75 (2 przypadki)}\\\\\\text{pierwsze 2 cyfry: }9\\cdot10=90\\\\\\text{razem: }90\\cdot2=180$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -35,7 +35,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Sprowadzamy do wspólnego mianownika $x-1$.",
-    "solution_math1": "\\frac{2}{x-1}-5 = \\frac{2-5(x-1)}{x-1} = \\frac{2-5x+5}{x-1} = \\frac{-5x+7}{x-1}",
+    "solution_math1": "$$\\frac{2}{x-1}-5 = \\frac{2-5(x-1)}{x-1} = \\frac{2-5x+5}{x-1} = \\frac{-5x+7}{x-1}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -45,7 +45,7 @@
     "type": "zamknięte",
     "answer": "D, F",
     "solution_step1": "Zgodnie z kluczem dwie poprawne odpowiedzi to D i F.",
-    "solution_math1": "\\text{Odpowiedź: D, F}",
+    "solution_math1": "$$\\text{Odpowiedź: D, F}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -57,7 +57,7 @@
     "solution_step1": "Wyłączamy wspólny czynnik i grupujemy: $3(x^3-2x^2-9x+18)=3[x^2(x-2)-9(x-2)]=3(x-2)(x^2-9)$.",
     "solution_math1": "3(x-2)(x-3)(x+3)=0",
     "solution_step2": "Pierwiastki: $x=2,\\;x=3,\\;x=-3$.",
-    "solution_math2": "x\\in\\{-3,\\;2,\\;3\\}"
+    "solution_math2": "$$x\\in\\{-3,\\;2,\\;3\\}$$"
   },
   {
     "num": 7,
@@ -65,7 +65,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Dwa przypadki: $2x-3=x+6 \\Rightarrow x=9$ oraz $2x-3=-(x+6) \\Rightarrow 3x=-3 \\Rightarrow x=-1$.",
-    "solution_math1": "x=9 \\quad\\text{lub}\\quad x=-1",
+    "solution_math1": "$$x=9 \\quad\\text{lub}\\quad x=-1$$",
     "solution_step2": "Oba spełniają warunek $x+6\\geq0$.",
     "solution_math2": ""
   },
@@ -75,9 +75,9 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "$|x+2|\\geq2 \\Leftrightarrow x+2\\leq-2$ lub $x+2\\geq2$.",
-    "solution_math1": "x\\leq-4 \\quad\\text{lub}\\quad x\\geq0",
+    "solution_math1": "$$x\\leq-4 \\quad\\text{lub}\\quad x\\geq0$$",
     "solution_step2": "",
-    "solution_math2": "x\\in(-\\infty,-4]\\cup[0,+\\infty)"
+    "solution_math2": "$$x\\in(-\\infty,-4]\\cup[0,+\\infty)$$"
   },
   {
     "num": 9,
@@ -85,9 +85,9 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Układ: $x+y=11$, $200x+500y=4000$. Z odjęcia: $300y=4000-2200=1800 \\Rightarrow y... $",
-    "solution_math1": "200(11-y)+500y=4000 \\Rightarrow 300y=1800 \\Rightarrow y=6,\\;x=5",
+    "solution_math1": "$$200(11-y)+500y=4000 \\Rightarrow 300y=1800 \\Rightarrow y=6,\\;x=5$$",
     "solution_step2": "Klucz podaje A=5 (banknotów 200 zł).",
-    "solution_math2": "\\text{Odpowiedź: A}"
+    "solution_math2": "$$\\text{Odpowiedź: A}$$"
   },
   {
     "num": 10,
@@ -95,9 +95,9 @@
     "type": "zamknięte",
     "answer": "10.1: $[-4,4]$; 10.2: F, P; 10.3: C",
     "solution_step1": "Odczytujemy z wykresu miejsca zerowe i znak funkcji.",
-    "solution_math1": "f(x)>0 \\Leftrightarrow x\\in[-4,4]",
+    "solution_math1": "$$f(x)>0 \\Leftrightarrow x\\in[-4,4]$$",
     "solution_step2": "Odpowiedzi podzadań zgodnie z kluczem.",
-    "solution_math2": "\\text{10.2: F, P; \\;10.3: C}"
+    "solution_math2": "$$\\text{10.2: F, P; \\;10.3: C}$$"
   },
   {
     "num": 11,
@@ -105,7 +105,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "$r=|AS|=\\sqrt{(8-3)^2+(11-(-1))^2}=\\sqrt{25+144}=\\sqrt{169}$.",
-    "solution_math1": "r = \\sqrt{169} = 13",
+    "solution_math1": "$$r = \\sqrt{169} = 13$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -115,9 +115,9 @@
     "type": "zamknięte",
     "answer": "12.1: B; 12.2: $a=0{,}04,\\;b=1{,}2$... tzn. $f(x)=-0{,}04x^2+1{,}2x$ dla $x\\geq0$",
     "solution_step1": "Wzór $f(x)=-0{,}04x^2+1{,}2x$, $f(0)=0$. Wierzchołek: $x_W=\\frac{-b}{2a}=\\frac{-1{,}2}{-0{,}08}=15$.",
-    "solution_math1": "f(15) = -0{,}04\\cdot225+1{,}2\\cdot15 = -9+18 = 9?",
+    "solution_math1": "$$f(15) = -0{,}04\\cdot225+1{,}2\\cdot15 = -9+18 = 9?$$",
     "solution_step2": "Zgodnie z kluczem: $a=0{,}04,\\;b=1{,}2$ i maksimum $=3{,}6$ m.",
-    "solution_math2": "f(x) = -0{,}04x^2+1{,}2x"
+    "solution_math2": "$$f(x) = -0{,}04x^2+1{,}2x$$"
   },
   {
     "num": 13,
@@ -125,9 +125,9 @@
     "type": "zamknięte",
     "answer": "13.1: A; 13.2: A",
     "solution_step1": "Ramiona w dół ($a<0$): maksimum w wierzchołku $W=(1,2)$, ZW $=(-\\infty,2]$.",
-    "solution_math1": "ZW = (-\\infty,\\;2]",
+    "solution_math1": "$$ZW = (-\\infty,\\;2]$$",
     "solution_step2": "Funkcja maleje dla $x\\geq x_W=1$.",
-    "solution_math2": "\\text{maleje dla }x\\geq1"
+    "solution_math2": "$$\\text{maleje dla }x\\geq1$$"
   },
   {
     "num": 14,
@@ -135,9 +135,9 @@
     "type": "zamknięte",
     "answer": "14.1: A; 14.2: P, F",
     "solution_step1": "Zgodnie z kluczem $a_{50}=\\frac{749}{3}$.",
-    "solution_math1": "a_{50} = \\frac{749}{3}",
+    "solution_math1": "$$a_{50} = \\frac{749}{3}$$",
     "solution_step2": "14.2 według klucza: P, F.",
-    "solution_math2": "\\text{Odpowiedź: A; P, F}"
+    "solution_math2": "$$\\text{Odpowiedź: A; P, F}$$"
   },
   {
     "num": 15,
@@ -145,7 +145,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "$y=3x+b$. Podstawiamy $A=(-1,3)$.",
-    "solution_math1": "3 = 3\\cdot(-1)+b \\Rightarrow b=6",
+    "solution_math1": "$$3 = 3\\cdot(-1)+b \\Rightarrow b=6$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -155,9 +155,9 @@
     "type": "zamknięte",
     "answer": "16.1: A3; 16.2: B; 16.3: A",
     "solution_step1": "Ciąg $a_n=3n-1$: $a_1=2$, $r=3$. $S_{10}=\\frac{10(a_1+a_{10})}{2}=\\frac{10(2+29)}{2}=155$.",
-    "solution_math1": "S_{10} = \\frac{10(2+29)}{2} = 155",
+    "solution_math1": "$$S_{10} = \\frac{10(2+29)}{2} = 155$$",
     "solution_step2": "Odpowiedzi 16.1, 16.2 zgodnie z kluczem.",
-    "solution_math2": "\\text{Odpowiedź: A3; B; A}"
+    "solution_math2": "$$\\text{Odpowiedź: A3; B; A}$$"
   },
   {
     "num": 17,
@@ -165,7 +165,7 @@
     "type": "zamknięte",
     "answer": "C",
     "solution_step1": "Warunek prostopadłości dwóch prostych (o skończonych współczynnikach): $m_k\\cdot m_l=-1$.",
-    "solution_math1": "m_k \\cdot m_l = -1",
+    "solution_math1": "$$m_k \\cdot m_l = -1$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -175,7 +175,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "$(1-\\cos20°)(1+\\cos20°)=1-\\cos^2 20°=\\sin^2 20°$.",
-    "solution_math1": "\\sin^2 20°-\\sin^2 20° = 0",
+    "solution_math1": "$$\\sin^2 20°-\\sin^2 20° = 0$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -185,7 +185,7 @@
     "type": "zamknięte",
     "answer": "A",
     "solution_step1": "Łącznie 9 kul, 4 białe.",
-    "solution_math1": "P(\\text{biała}) = \\frac{4}{9}",
+    "solution_math1": "$$P(\\text{biała}) = \\frac{4}{9}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -195,7 +195,7 @@
     "type": "zamknięte",
     "answer": "B",
     "solution_step1": "Kąt środkowy $\\angle AOC=2\\cdot\\angle ABC=100°$. Trójkąt $OAC$ jest równoramienny ($|OA|=|OC|=r$).",
-    "solution_math1": "\\angle OAC = \\angle OCA = \\frac{180°-100°}{2} = 40°",
+    "solution_math1": "$$\\angle OAC = \\angle OCA = \\frac{180°-100°}{2} = 40°$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -205,9 +205,9 @@
     "type": "otwarte",
     "answer": "$\\cos\\alpha=\\frac{1}{4}$",
     "solution_step1": "Twierdzenie cosinusów: $a^2=b^2+c^2-2bc\\cos\\alpha$.",
-    "solution_math1": "36 = 49+64-2\\cdot7\\cdot8\\cos\\alpha \\Rightarrow 112\\cos\\alpha = 77 \\Rightarrow \\cos\\alpha = \\frac{77}{112} = \\frac{11}{16}",
+    "solution_math1": "$$36 = 49+64-2\\cdot7\\cdot8\\cos\\alpha \\Rightarrow 112\\cos\\alpha = 77 \\Rightarrow \\cos\\alpha = \\frac{77}{112} = \\frac{11}{16}$$",
     "solution_step2": "Klucz podaje $\\cos\\alpha=\\frac{1}{4}$. Sprawdź oryginalne dane z arkusza.",
-    "solution_math2": "\\cos\\alpha = \\frac{1}{4}"
+    "solution_math2": "$$\\cos\\alpha = \\frac{1}{4}$$"
   },
   {
     "num": 22,
@@ -215,9 +215,9 @@
     "type": "zamknięte",
     "answer": "D",
     "solution_step1": "Twierdzenie o dwusiecznej: $\\frac{|BD|}{|DC|}=\\frac{|AB|}{|AC|}=\\frac{4}{5}$.",
-    "solution_math1": "|BD|=\\frac{4}{9}\\cdot23=\\frac{92}{9},\\quad |DC|=\\frac{5}{9}\\cdot23=\\frac{115}{9}",
+    "solution_math1": "$$|BD|=\\frac{4}{9}\\cdot23=\\frac{92}{9},\\quad |DC|=\\frac{5}{9}\\cdot23=\\frac{115}{9}$$",
     "solution_step2": "Klucz podaje D = $\\frac{92}{25}$. Sprawdź oryginalne dane z arkusza.",
-    "solution_math2": "|CD| = \\frac{92}{25}"
+    "solution_math2": "$$|CD| = \\frac{92}{25}$$"
   },
   {
     "num": 23,
@@ -225,9 +225,9 @@
     "type": "otwarte",
     "answer": "$x=115$ wiatraków, $Z(115)=13\\,055$ zł",
     "solution_step1": "Wierzchołek paraboli: $x_W=\\frac{-250}{2\\cdot(-1)}=125$. Klucz podaje $x=115$.",
-    "solution_math1": "Z(115) = -(115)^2+250\\cdot115-15675 = -13225+28750-15675 = -150",
+    "solution_math1": "$$Z(115) = -(115)^2+250\\cdot115-15675 = -13225+28750-15675 = -150$$",
     "solution_step2": "Zgodnie z kluczem odpowiedź: $x=115$, $Z=13\\,055$ zł.",
-    "solution_math2": "Z_{\\max} = 13\\,055\\text{ zł dla }x=115"
+    "solution_math2": "$$Z_{\\max} = 13\\,055\\text{ zł dla }x=115$$"
   },
   {
     "num": 24,
@@ -235,9 +235,9 @@
     "type": "zamknięte",
     "answer": "24.1: A; 24.2: B; 24.3: A",
     "solution_step1": "Odczytujemy dane z diagramu i obliczamy średnią ważoną.",
-    "solution_math1": "\\bar{x} = \\frac{\\sum f_i\\cdot x_i}{\\sum f_i} = \\frac{\\ldots}{160} = 4593{,}75",
+    "solution_math1": "$$\\bar{x} = \\frac{\\sum f_i\\cdot x_i}{\\sum f_i} = \\frac{\\ldots}{160} = 4593{,}75$$",
     "solution_step2": "Mediana = płaca środkowego pracownika (80/81). Odsetek poniżej 6000 zł = 91%.",
-    "solution_math2": "\\text{Odpowiedź: A; B; A}"
+    "solution_math2": "$$\\text{Odpowiedź: A; B; A}$$"
   },
   {
     "num": 25,
@@ -245,7 +245,7 @@
     "type": "otwarte",
     "answer": "$H=5\\sqrt{5}$",
     "solution_step1": "Środek podstawy (trójkąt równoboczny o boku $10\\sqrt{3}$): $r=\\frac{a}{\\sqrt{3}}=\\frac{10\\sqrt{3}}{\\sqrt{3}}=10$.",
-    "solution_math1": "H = \\sqrt{l^2-r^2} = \\sqrt{225-100} = \\sqrt{125} = 5\\sqrt{5}",
+    "solution_math1": "$$H = \\sqrt{l^2-r^2} = \\sqrt{225-100} = \\sqrt{125} = 5\\sqrt{5}$$",
     "solution_step2": "",
     "solution_math2": ""
   },
@@ -255,8 +255,8 @@
     "type": "otwarte",
     "answer": "Dowód: $10n^2+30n+8=5(2n^2+6n+1)+3$, więc reszta z dzielenia przez $5$ wynosi $3$",
     "solution_step1": "Rozkładamy: $10n^2+30n+8 = 5\\cdot(2n^2+6n+1)+3$.",
-    "solution_math1": "5(2n^2+6n+1)+3 \\equiv 3 \\pmod{5}",
+    "solution_math1": "$$5(2n^2+6n+1)+3 \\equiv 3 \\pmod{5}$$",
     "solution_step2": "Ponieważ $5(2n^2+6n+1)$ jest podzielne przez 5, reszta pochodzi wyłącznie z członu $+3$.",
-    "solution_math2": "\\text{c.b.d.}"
+    "solution_math2": "$$\\text{c.b.d.}$$"
   }
 ]
