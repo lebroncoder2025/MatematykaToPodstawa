@@ -54,6 +54,16 @@
     .sb0{background:#dbeafe;} .sb1{background:#fce7f3;} .sb2{background:#dcfce7;} .sb3{background:#fef3c7;}
     .sb4{background:#f3e8ff;} .sb5{background:#ecfdf5;} .sb6{background:#fff7ed;} .sb7{background:#e0e7ff;}
     .sb8{background:#fdf2f8;} .sb9{background:#f0fdf4;}
+    /* Flashcard mode */
+    #flashOverlay{position:fixed;inset:0;background:rgba(15,23,42,.97);z-index:9999;display:none;flex-direction:column;align-items:center;justify-content:center;padding:1rem;}
+    #flashOverlay.open{display:flex;}
+    .flash-card{perspective:1000px;width:min(480px,95vw);}
+    .flash-inner{position:relative;width:100%;min-height:220px;transition:transform .5s ease;transform-style:preserve-3d;cursor:pointer;}
+    .flash-inner.flipped{transform:rotateY(180deg);}
+    .flash-front,.flash-back{position:absolute;width:100%;min-height:220px;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:1.25rem;padding:2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+    .flash-front{background:#fff;color:#0f172a;}
+    .flash-back{background:#1e3a5f;color:#f1f5f9;transform:rotateY(180deg);}
+    .flash-hint{font-size:.7rem;color:#94a3b8;margin-top:1rem;text-align:center;}
   </style>
 </head>
 <body>
@@ -92,6 +102,9 @@
     <div class="flex justify-center gap-4 flex-wrap">
       <button onclick="window.print()" class="print-btn inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-xl font-bold hover:bg-gray-100 transition shadow-lg">
         <i class="fa-solid fa-print"></i> Drukuj / Zapisz PDF
+      </button>
+      <button onclick="startFlashcards()" class="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-xl font-bold transition shadow-lg shadow-blue-900/30">
+        <i class="fa-solid fa-clone"></i> Tryb fiszek
       </button>
       <button onclick="expandAll()" class="inline-flex items-center gap-2 bg-white/10 border border-white/20 text-white px-6 py-3 rounded-xl font-bold hover:bg-white/20 transition">
         <i class="fa-solid fa-expand"></i> Rozwiń wszystkie
@@ -499,6 +512,66 @@ function copyFormula(btn, text) {
   });
 }
 
+/* ===== FLASHCARD MODE ===== */
+var _fc = { cards: [], idx: 0, flipped: false };
+
+function startFlashcards() {
+  // Collect all visible formula cards
+  var cards = [];
+  document.querySelectorAll('.formula-card:not(.hidden-formula)').forEach(function(card) {
+    var label = card.dataset.label || '';
+    var mathEl = card.querySelector('.formula-math');
+    if (label && mathEl) cards.push({ label: label, html: mathEl.innerHTML });
+  });
+  if (cards.length === 0) { alert('Brak wzorów do wyświetlenia. Zmień filtr.'); return; }
+  // Shuffle
+  for (var i = cards.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = cards[i]; cards[i] = cards[j]; cards[j] = tmp;
+  }
+  _fc.cards = cards;
+  _fc.idx = 0;
+  _fc.flipped = false;
+  document.getElementById('flashOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  renderFlashCard();
+}
+
+function renderFlashCard() {
+  var q = _fc.cards[_fc.idx];
+  _fc.flipped = false;
+  document.getElementById('flashInner').classList.remove('flipped');
+  document.getElementById('flashFrontLabel').textContent = q.label;
+  document.getElementById('flashBackMath').innerHTML = q.html;
+  document.getElementById('flashCounter').textContent = (_fc.idx + 1) + ' / ' + _fc.cards.length;
+  if (window.renderMathInElement) {
+    window.renderMathInElement(document.getElementById('flashBackMath'), {
+      delimiters: [{left:'$',right:'$',display:false},{left:'$$',right:'$$',display:true}],
+      throwOnError: false
+    });
+  }
+}
+
+function flashFlip() {
+  _fc.flipped = !_fc.flipped;
+  document.getElementById('flashInner').classList.toggle('flipped', _fc.flipped);
+}
+function flashNext() { if (_fc.idx < _fc.cards.length - 1) { _fc.idx++; renderFlashCard(); } }
+function flashPrev() { if (_fc.idx > 0) { _fc.idx--; renderFlashCard(); } }
+function flashClose() {
+  document.getElementById('flashOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  var ov = document.getElementById('flashOverlay');
+  if (!ov || !ov.classList.contains('open')) return;
+  if (e.key === 'Escape') { flashClose(); e.preventDefault(); }
+  else if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); if (!_fc.flipped) flashFlip(); else flashNext(); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); flashPrev(); }
+  else if (e.key === 'Enter') { e.preventDefault(); flashFlip(); }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
   if (window.renderMathInElement) {
     renderMathInElement(document.body, {
@@ -508,5 +581,47 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 </script>
+
+<!-- Flashcard overlay -->
+<div id="flashOverlay" role="dialog" aria-modal="true">
+  <div class="w-full max-w-lg px-4">
+    <!-- Header -->
+    <div class="flex items-center justify-between mb-6">
+      <p class="text-white font-bold text-lg"><i class="fa-solid fa-clone mr-2 text-blue-400"></i>Tryb fiszek</p>
+      <div class="flex items-center gap-3">
+        <span id="flashCounter" class="text-slate-400 text-sm font-semibold">1/1</span>
+        <button onclick="flashClose()" class="text-slate-400 hover:text-white text-xl font-bold">&times;</button>
+      </div>
+    </div>
+    <!-- Card -->
+    <div class="flash-card mb-6" onclick="flashFlip()">
+      <div class="flash-inner" id="flashInner">
+        <div class="flash-front">
+          <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Podaj wzór</p>
+          <p class="text-xl font-black text-gray-900 text-center" id="flashFrontLabel"></p>
+          <p class="flash-hint">Kliknij lub naciśnij Enter, aby odkryć wzór</p>
+        </div>
+        <div class="flash-back">
+          <p class="text-xs font-bold uppercase tracking-widest text-blue-300/70 mb-4">Wzór</p>
+          <div class="text-2xl text-center" id="flashBackMath"></div>
+          <p class="flash-hint">Spacja / → aby przejść dalej &bull; ← wstecz</p>
+        </div>
+      </div>
+    </div>
+    <!-- Controls -->
+    <div class="flex items-center justify-center gap-4">
+      <button onclick="flashPrev()" class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white transition flex items-center justify-center disabled:opacity-30" title="Poprzednia (←)">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <button onclick="flashFlip()" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition text-sm">
+        <i class="fa-solid fa-rotate mr-2"></i>Odkryj wzór
+      </button>
+      <button onclick="flashNext()" class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 text-white transition flex items-center justify-center" title="Następna (→)">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+    <p class="text-center text-slate-500 text-xs mt-4">Esc – zamknij &bull; Enter – odkryj &bull; Spacja / → – dalej</p>
+  </div>
+</div>
 </body>
 </html>
