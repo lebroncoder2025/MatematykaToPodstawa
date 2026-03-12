@@ -1638,6 +1638,33 @@ function showAllNotes() {
   modal.style.display = 'flex';
 }
 
+function exportKursNotes() {
+  var keys = [];
+  for (var i = 0; i < localStorage.length; i++) {
+    var k = localStorage.key(i);
+    if (k && k.indexOf('kurs-note-') === 0) keys.push(k);
+  }
+  if (keys.length === 0) { alert('Brak zapisanych notatek do eksportu.'); return; }
+  keys.sort();
+  var lines = ['MOJE NOTATKI Z KURSU – Matematyka to Podstawa', '==================================================', ''];
+  keys.forEach(function(k) {
+    var parts = k.replace('kurs-note-', '').split('-');
+    var mIdx = parseInt(parts[0], 10);
+    var sIdx = parseInt(parts[1], 10);
+    var modTitle = (COURSE[mIdx] && COURSE[mIdx].meta && COURSE[mIdx].meta.title) ? COURSE[mIdx].meta.title : 'Moduł ' + (mIdx + 1);
+    var stepTitle = (COURSE[mIdx] && COURSE[mIdx].steps && COURSE[mIdx].steps[sIdx]) ? COURSE[mIdx].steps[sIdx].title : 'Krok ' + (sIdx + 1);
+    lines.push('[' + modTitle + ' – ' + stepTitle + ']');
+    lines.push(localStorage.getItem(k) || '');
+    lines.push('');
+  });
+  var blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'notatki-kurs-' + new Date().toISOString().slice(0, 10) + '.txt';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
 function deleteStepNoteKey(key) {
   if (!confirm('Usunąć tę notatkę?')) return;
   localStorage.removeItem(key);
@@ -1650,7 +1677,10 @@ function deleteStepNoteKey(key) {
   <div style="background:#fff;border-radius:1.5rem;padding:1.75rem;width:min(520px,95vw);max-height:80vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.28);">
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
       <h2 style="font-size:1.1rem;font-weight:800;color:#0f172a;"><i class="fa-regular fa-note-sticky" style="color:#f59e0b;margin-right:.4rem;"></i>Moje notatki</h2>
-      <button onclick="document.getElementById('allNotesModal').style.display='none'" style="background:none;border:none;font-size:1.4rem;color:#94a3b8;cursor:pointer;">&times;</button>
+      <div style="display:flex;align-items:center;gap:.5rem;">
+        <button onclick="exportKursNotes()" style="font-size:.75rem;font-weight:700;color:#6366f1;background:none;border:1px solid #c7d2fe;border-radius:.5rem;padding:.3rem .7rem;cursor:pointer;display:flex;align-items:center;gap:.3rem;"><i class="fa-solid fa-file-export"></i> Eksportuj</button>
+        <button onclick="document.getElementById('allNotesModal').style.display='none'" style="background:none;border:none;font-size:1.4rem;color:#94a3b8;cursor:pointer;">&times;</button>
+      </div>
     </div>
     <div id="allNotesList"></div>
   </div>

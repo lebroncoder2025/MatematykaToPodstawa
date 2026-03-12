@@ -208,6 +208,7 @@
         <div class="flex flex-wrap gap-2">
           <button id="onlyBookBtn" class="mini-pill" type="button" onclick="toggleOnlyBookmarked()"><i class="fa-regular fa-bookmark"></i> Tylko ulubione</button>
           <button id="onlyUnsolvedBtn" class="mini-pill" type="button" onclick="toggleOnlyUnsolved()"><i class="fa-regular fa-circle"></i> Tylko nieprzerobione</button>
+          <button id="onlyNoteBtn" class="mini-pill" type="button" onclick="toggleOnlyNote()" style="display:none"><i class="fa-regular fa-note-sticky"></i> Z notatką (<span id="noteFilterCount">0</span>)</button>
         </div>
         <div class="flex flex-wrap gap-2">
           <span class="stat-badge solved"><i class="fa-solid fa-check"></i> Przerobione: <span id="solvedCount">0</span></span>
@@ -225,6 +226,7 @@
     <p id="taskCount" class="text-gray-500 text-sm font-semibold"></p>
     <div class="flex gap-2 items-center">
       <button onclick="window.print()" class="text-xs text-gray-500 hover:text-blue-600 flex items-center gap-1 font-semibold transition border border-gray-200 px-2.5 py-1.5 rounded-lg hover:border-blue-400 print-hide" title="Drukuj / Zapisz PDF"><i class="fa-solid fa-print"></i> Drukuj</button>
+      <button onclick="exportTaskNotes()" class="text-xs text-amber-600 hover:text-amber-800 flex items-center gap-1 font-semibold transition border border-amber-200 px-2.5 py-1.5 rounded-lg hover:border-amber-400 print-hide" title="Pobierz swoje notatki do zadań jako plik .txt"><i class="fa-solid fa-file-export"></i> Eksportuj notatki</button>
       <button onclick="expandAll()" class="text-xs text-blue-600 hover:underline font-semibold">Rozwiń wszystkie</button>
       <span class="text-gray-300">|</span>
       <button onclick="collapseAll()" class="text-xs text-gray-500 hover:underline font-semibold">Zwiń</button>
@@ -702,6 +704,7 @@ const TASKS = [
 var currentFilter = 'all';
 var onlyBookmarked = false;
 var onlyUnsolved = false;
+var onlyWithNote = false;
 var catNames = ['Liczby','Algebra','Równania','Funkcje','Fk. Kwadr.','Ciągi','Trygonom.','Planimetria','Stereometria','Statystyka'];
 var catColors = ['cat-0','cat-1','cat-2','cat-3','cat-4','cat-5','cat-6','cat-7','cat-8','cat-9'];
 var diffColors = [null,'#10b981','#f59e0b','#ef4444'];
@@ -751,7 +754,7 @@ function buildGrid() {
     var bookClass = isBookmarked(t.id) ? ' active-book' : '';
     var bookIcon = isBookmarked(t.id) ? 'fa-solid' : 'fa-regular';
     var bookLabel = isBookmarked(t.id) ? 'W ulubionych' : 'Dodaj do ulubionych';
-    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+normalizeText(t.title)+'" data-search="'+searchPayload.replace(/"/g,'&quot;')+'" data-diff="'+t.diff+'" data-solved="'+(isSolved(t.id)?'1':'0')+'" data-bookmarked="'+(isBookmarked(t.id)?'1':'0')+'">'+
+    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+normalizeText(t.title)+'" data-search="'+searchPayload.replace(/"/g,'&quot;')+'" data-diff="'+t.diff+'" data-solved="'+(isSolved(t.id)?'1':'0')+'" data-bookmarked="'+(isBookmarked(t.id)?'1':'0')+'" data-hasnote="'+(loadTaskNote(t.id)?'1':'0')+'">'+'
       '<button class="toggle-btn" onclick="toggleCard(this)">'+
         '<div class="flex items-start gap-3 flex-1 text-left">'+
           '<div class="flex-shrink-0 w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 font-black text-sm mt-0.5">'+t.id+'</div>'+
@@ -821,6 +824,9 @@ function saveTaskNote(id) {
   }
   var noteBtn = document.getElementById('note-btn-' + id);
   if (noteBtn) noteBtn.classList.toggle('active-note', !!val.trim());
+  var card = document.querySelector('.task-card[data-id="'+id+'"]');
+  if (card) card.dataset.hasnote = val.trim() ? '1' : '0';
+  syncCounters();
 }
 
 function toggleTaskNote(id) {
@@ -856,7 +862,8 @@ function applyFilters(q) {
     var searchMatch = !q || card.dataset.search.includes(q);
     var bookMatch = !onlyBookmarked || card.dataset.bookmarked === '1';
     var unsolvedMatch = !onlyUnsolved || card.dataset.solved !== '1';
-    var show = catMatch && searchMatch && bookMatch && unsolvedMatch;
+    var noteMatch = !onlyWithNote || card.dataset.hasnote === '1';
+    var show = catMatch && searchMatch && bookMatch && unsolvedMatch && noteMatch;
     card.classList.toggle('hidden-task', !show);
     if (show) visible++;
   });
@@ -897,6 +904,12 @@ function collapseAll() {
 function syncCounters(){
   document.getElementById('solvedCount').textContent = solvedIds.size;
   document.getElementById('bookCount').textContent = bookmarkedIds.size;
+  var nc = 0;
+  for(var i=0;i<localStorage.length;i++){ if(localStorage.key(i)&&localStorage.key(i).indexOf('zadania-note-')===0) nc++; }
+  var noteSpan = document.getElementById('noteFilterCount');
+  if(noteSpan) noteSpan.textContent = nc;
+  var noteBtn = document.getElementById('onlyNoteBtn');
+  if(noteBtn) noteBtn.style.display = nc > 0 ? '' : 'none';
 }
 
 function toggleSolved(id){
@@ -927,6 +940,13 @@ function toggleOnlyUnsolved(){
   applyFilters();
 }
 
+function toggleOnlyNote(){
+  onlyWithNote = !onlyWithNote;
+  var btn = document.getElementById('onlyNoteBtn');
+  btn.classList.toggle('active', onlyWithNote);
+  applyFilters();
+}
+
 function jumpToRandomTask(){
   var visibleCards = Array.from(document.querySelectorAll('.task-card:not(.hidden-task)'));
   if(!visibleCards.length) return;
@@ -936,6 +956,31 @@ function jumpToRandomTask(){
   card.scrollIntoView({behavior:'smooth', block:'center'});
   card.style.boxShadow = '0 0 0 3px rgba(59,130,246,.25), 0 8px 28px rgba(59,130,246,.16)';
   setTimeout(function(){ card.style.boxShadow=''; }, 1100);
+}
+
+function exportTaskNotes() {
+  var keys = [];
+  for (var i = 0; i < localStorage.length; i++) {
+    var k = localStorage.key(i);
+    if (k && k.indexOf('zadania-note-') === 0) keys.push(k);
+  }
+  if (keys.length === 0) { alert('Brak zapisanych notatek do eksportu.'); return; }
+  keys.sort(function(a,b){ return parseInt(a.replace('zadania-note-',''),10) - parseInt(b.replace('zadania-note-',''),10); });
+  var lines = ['MOJE NOTATKI DO ZADAŃ – Matematyka to Podstawa', '==================================================', ''];
+  keys.forEach(function(k) {
+    var id = parseInt(k.replace('zadania-note-',''),10);
+    var t = TASKS.find(function(x){ return x.id === id; });
+    var title = t ? '[Zadanie '+id+'] '+t.title : '[Zadanie '+id+']';
+    lines.push(title);
+    lines.push(localStorage.getItem(k) || '');
+    lines.push('');
+  });
+  var blob = new Blob([lines.join('\n')], {type:'text/plain;charset=utf-8'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'notatki-zadania-' + new Date().toISOString().slice(0,10) + '.txt';
+  a.click();
+  URL.revokeObjectURL(a.href);
 }
 
 function toggleMobileNav(){

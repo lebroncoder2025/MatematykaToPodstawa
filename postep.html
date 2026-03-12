@@ -92,6 +92,24 @@
     <div id="quizHistoryList" class="space-y-2"></div>
   </div>
 
+  <!-- ZADANIA STATS -->
+  <div class="card p-6 mb-8" id="taskStatsBox">
+    <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+      <h2 class="font-black text-gray-900 text-lg"><i class="fa-solid fa-pen-to-square text-emerald-500 mr-2"></i>Zadania z rozwiązaniami</h2>
+      <a href="zadania.html" class="text-xs text-blue-600 hover:underline font-semibold flex items-center gap-1">Przejdź do zadań <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+    </div>
+    <div class="grid grid-cols-3 gap-4 mb-5" id="taskStatCards"></div>
+    <div>
+      <div class="flex justify-between text-xs text-gray-400 font-semibold mb-1">
+        <span>Postęp: przerobione zadania</span>
+        <span id="taskPctLabel">0 %</span>
+      </div>
+      <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
+        <div id="taskProgressBar" class="h-full rounded-full transition-all duration-700" style="width:0%;background:linear-gradient(90deg,#10b981,#059669)"></div>
+      </div>
+    </div>
+  </div>
+
   <!-- STUDY SESSION TIMER -->
   <div class="card p-6 mb-8">
     <div class="flex items-center justify-between mb-4 flex-wrap gap-3">
@@ -561,8 +579,42 @@ renderBarChart();
 renderQuizStats();
 renderQuizHistory();
 renderStudyWeek();
+renderTaskStats();
 
-/* ===== Cel tygodniowy ===== */
+/* ===== ZADANIA STATS ===== */
+function renderTaskStats() {
+  var TOTAL_TASKS = 140;
+  var solved = 0, bookmarked = 0, noted = 0;
+  try {
+    var s = localStorage.getItem('zadaniaSolvedIds');
+    if (s) solved = JSON.parse(s).length;
+  } catch(e) {}
+  try {
+    var b = localStorage.getItem('zadaniaBookmarkedIds');
+    if (b) bookmarked = JSON.parse(b).length;
+  } catch(e) {}
+  for (var i = 0; i < localStorage.length; i++) {
+    var k = localStorage.key(i);
+    if (k && k.indexOf('zadania-note-') === 0) noted++;
+  }
+  var pct = Math.round((solved / TOTAL_TASKS) * 100);
+  var metrics = [
+    { label: 'Przerobione', value: solved + ' / ' + TOTAL_TASKS, icon: 'fa-circle-check', color: '#10b981', bg: '#f0fdf4', border: '#bbf7d0' },
+    { label: 'Ulubione',    value: bookmarked,                   icon: 'fa-bookmark',    color: '#f59e0b', bg: '#fffbeb', border: '#fde68a' },
+    { label: 'Z notatką',  value: noted,                        icon: 'fa-note-sticky', color: '#6366f1', bg: '#f5f3ff', border: '#c4b5fd' }
+  ];
+  document.getElementById('taskStatCards').innerHTML = metrics.map(function(m) {
+    return '<div style="border:1.5px solid '+m.border+';border-radius:1rem;padding:1rem 1.25rem;background:'+m.bg+';">' +
+      '<div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.35rem;">' +
+        '<i class="fa-solid '+m.icon+'" style="color:'+m.color+';font-size:.85rem;"></i>' +
+        '<span style="font-size:.7rem;font-weight:700;color:#6b7280;text-transform:uppercase;letter-spacing:.05em;">'+m.label+'</span>' +
+      '</div>' +
+      '<div style="font-size:1.5rem;font-weight:900;color:#111827;">'+m.value+'</div>' +
+    '</div>';
+  }).join('');
+  document.getElementById('taskPctLabel').textContent = pct + ' %';
+  document.getElementById('taskProgressBar').style.width = pct + '%';
+}
 function loadStudyGoal() {
   return parseInt(localStorage.getItem('mtp-study-goal') || '120', 10);
 }
