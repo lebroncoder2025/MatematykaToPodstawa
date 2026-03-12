@@ -82,6 +82,12 @@
     <div id="quizStats" class="grid grid-cols-2 sm:grid-cols-3 gap-4"></div>
   </div>
 
+  <!-- QUIZ HISTORY -->
+  <div class="card p-6 mb-8" id="quizHistoryBox" style="display:none">
+    <h2 class="font-black text-gray-900 text-lg mb-4"><i class="fa-solid fa-clock-rotate-left text-blue-500 mr-2"></i>Historia wyników quizu</h2>
+    <div id="quizHistoryList" class="space-y-2"></div>
+  </div>
+
   <!-- ACTIONS -->
   <div class="card p-6 mb-8">
     <h2 class="font-black text-gray-900 text-lg mb-4"><i class="fa-solid fa-gear text-gray-400 mr-2"></i>Akcje</h2>
@@ -280,6 +286,34 @@ function renderQuizStats() {
   }).join('');
 }
 
+/* ===== QUIZ HISTORY ===== */
+function renderQuizHistory() {
+  var hist = [];
+  try { hist = JSON.parse(localStorage.getItem('quiz_history') || '[]'); } catch(e) {}
+  if (!hist || hist.length === 0) return;
+  document.getElementById('quizHistoryBox').style.display = 'block';
+  var bestPct = Math.max.apply(null, hist.map(function(h){ return h.percent||0; }));
+  document.getElementById('quizHistoryList').innerHTML = hist.map(function(entry, idx) {
+    var pct = entry.percent || 0;
+    var color = pct >= 70 ? '#10b981' : pct >= 50 ? '#f59e0b' : '#ef4444';
+    var bgColor = pct >= 70 ? '#f0fdf4' : pct >= 50 ? '#fefce8' : '#fef2f2';
+    var borderColor = pct >= 70 ? '#bbf7d0' : pct >= 50 ? '#fde68a' : '#fecaca';
+    var badge = (pct === bestPct && idx === hist.findIndex(function(h){return h.percent===bestPct;})) ? ' <span class="text-amber-500 text-xs ml-1">&#9733; Rekord</span>' : '';
+    return '<div class="flex items-center justify-between p-3 rounded-xl border" style="background:'+bgColor+';border-color:'+borderColor+'">' +
+      '<div class="flex items-center gap-3">' +
+        '<div class="w-11 h-11 rounded-xl flex items-center justify-center font-black text-sm" style="background:'+color+'22;color:'+color+'">' + pct + '%</div>' +
+        '<div>' +
+          '<p class="font-semibold text-gray-900 text-sm">' + entry.score + '/' + entry.total + ' pkt' + badge + '</p>' +
+          '<p class="text-gray-400 text-xs">' + entry.date + '</p>' +
+        '</div>' +
+      '</div>' +
+      '<div class="w-20 h-2 bg-gray-200 rounded-full overflow-hidden">' +
+        '<div class="h-full rounded-full" style="width:'+pct+'%;background:'+color+'"></div>' +
+      '</div>' +
+    '</div>';
+  }).join('');
+}
+
 /* ===== EXPORT ===== */
 function exportProgress() {
   var data = {
@@ -321,6 +355,7 @@ renderAchievements();
 renderModuleList();
 renderBarChart();
 renderQuizStats();
+renderQuizHistory();
 </script>
 </body>
 </html>

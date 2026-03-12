@@ -237,6 +237,30 @@
         </div>
     </section>
 
+    <!-- Zadanie dnia -->
+    <section class="py-12 md:py-16 bg-gradient-to-b from-white to-slate-50 border-b">
+      <div class="max-w-2xl mx-auto px-4">
+        <div class="text-center mb-6 reveal">
+          <span class="inline-block bg-emerald-50 border border-emerald-200 text-emerald-700 px-4 py-1.5 rounded-full text-sm font-bold mb-3">
+            <i class="fa-solid fa-calendar-day mr-1"></i> CODZIENNE WYZWANIE
+          </span>
+          <h2 class="text-2xl md:text-3xl font-black text-gray-900 mb-1">Zadanie dnia</h2>
+          <p class="text-gray-400 text-sm" id="dailyDate"></p>
+        </div>
+        <div id="dailyCard" class="bg-white border border-gray-200 rounded-2xl shadow-sm p-6 md:p-8 reveal delay-1">
+          <p class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-3" id="dailyTopic"></p>
+          <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-6" id="dailyQuestion"></h3>
+          <div class="grid gap-3" id="dailyOptions"></div>
+          <div id="dailyFeedback" class="hidden mt-5 p-4 rounded-xl border text-sm font-medium"></div>
+          <div class="mt-5 flex justify-end">
+            <a href="quiz.html" class="inline-flex items-center gap-2 text-blue-600 font-bold text-sm hover:text-blue-700 transition">
+              Pełny quiz diagnostyczny <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Platform Features -->
     <section class="py-14 md:py-20 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4">
@@ -496,6 +520,84 @@
       }
       upd();
       setInterval(upd, 1000);
+    })();
+
+    /* ─── Zadanie dnia ─── */
+    (function() {
+      var dp = [
+        { t: 'Liczby rzeczywiste', q: 'Oblicz: $\\log_2 64$', o: ['4','5','6','8'], c: 2, e: '$2^6=64$, więc $\\log_2 64=6$.' },
+        { t: 'Liczby rzeczywiste', q: 'Oblicz: $\\sqrt{72}$', o: ['$6\\sqrt{2}$','$8\\sqrt{2}$','$4\\sqrt{3}$','$12$'], c: 0, e: '$72=36\\cdot2$, więc $\\sqrt{72}=6\\sqrt{2}$.' },
+        { t: 'Liczby rzeczywiste', q: 'Wartość $|3-10|$ to:', o: ['-7','7','13','0'], c: 1, e: 'Wartość bezwzględna wynosi 7.' },
+        { t: 'Wyrażenia algebraiczne', q: 'Rozłóż: $x^2-49$', o: ['$(x-7)^2$','$(x-7)(x+7)$','$x(x-49)$','$(x+7)^2$'], c: 1, e: 'Różnica kwadratów: $(x-7)(x+7)$.' },
+        { t: 'Wyrażenia algebraiczne', q: 'Uprość: $\\dfrac{x^2-9}{x-3}$ dla $x\\neq3$', o: ['$x-3$','$x+3$','$x^2-3$','$1$'], c: 1, e: '$x^2-9=(x-3)(x+3)$, skracamy przez $x-3$.' },
+        { t: 'Równania', q: 'Ile rozwiązań ma $x^2+1=0$ w $\\mathbb{R}$?', o: ['0','1','2','nieskończenie wiele'], c: 0, e: '$x^2\\ge0$, więc $x^2+1>0$ zawsze.' },
+        { t: 'Równania', q: 'Rozwiąż: $(x-2)(x+5)=0$', o: ['$x=2$','$x=-5$','$x\\in\\{2,-5\\}$','$x=10$'], c: 2, e: 'Iloczyn=0, gdy jeden czynnik jest zerem.' },
+        { t: 'Funkcje', q: 'Miejsce zerowe $f(x)=4x-12$:', o: ['2','3','4','-3'], c: 1, e: '$4x-12=0\\Rightarrow x=3$.' },
+        { t: 'Funkcje', q: 'Funkcja $f(x)=-x+7$ jest:', o: ['rosnąca','malejąca','stała','okresowa'], c: 1, e: 'Współczynnik kierunkowy $a=-1<0$ → malejąca.' },
+        { t: 'Funkcje', q: 'Dziedzina $f(x)=\\sqrt{x-4}$:', o: ['$x \\geq 4$','$x > 4$','$x \\leq 4$','$x \\in \\mathbb{R}$'], c: 0, e: 'Podpierwiastkowe musi być $\\geq 0$: $x-4\\geq0\\Rightarrow x\\geq4$.' },
+        { t: 'Ciągi', q: 'W ciągu arytmetycznym $a_1=2$, $r=3$. Wyraz $a_4$:', o: ['8','9','10','11'], c: 3, e: '$a_4=2+(4-1)\\cdot3=11$.' },
+        { t: 'Ciągi', q: 'Ciąg 3, 6, 12, 24 jest:', o: ['arytmetyczny','geometryczny q=2','geometryczny q=3','niemonotoniczny'], c: 1, e: 'Iloraz kolejnych wyrazów wynosi 2.' },
+        { t: 'Ciągi', q: 'Suma 5 wyrazów ciągu arytm. $a_1=1$, $r=2$:', o: ['10','15','25','20'], c: 3, e: '$S_5=\\frac{5}{2}(2\\cdot1+4\\cdot2)=\\frac{5}{2}\\cdot10=25$. Hmm, $S_5=25$.' },
+        { t: 'Trygonometria', q: 'Wartość $\\cos 60°$:', o: ['$0$','$\\frac{1}{2}$','$\\frac{\\sqrt{2}}{2}$','$1$'], c: 1, e: 'To wartość szczególna: $\\cos60°=\\frac{1}{2}$.' },
+        { t: 'Trygonometria', q: '$\\sin^2\\alpha+\\cos^2\\alpha=$', o: ['$0$','$1$','$2$','zależy od kąta'], c: 1, e: 'Jedynka trygonometryczna — zawsze równa 1.' },
+        { t: 'Trygonometria', q: '$\\sin 30°=$', o: ['$\\frac{1}{2}$','$\\frac{\\sqrt{3}}{2}$','$\\frac{\\sqrt{2}}{2}$','$1$'], c: 0, e: 'Kąt 30°: $\\sin30°=\\frac{1}{2}$.' },
+        { t: 'Planimetria', q: 'Pole koła o promieniu 4:', o: ['$8\\pi$','$16\\pi$','$32\\pi$','$4\\pi$'], c: 1, e: '$P=\\pi r^2=16\\pi$.' },
+        { t: 'Planimetria', q: 'Suma kątów trójkąta:', o: ['$90°$','$180°$','$270°$','$360°$'], c: 1, e: 'Suma kątów w każdym trójkącie wynosi $180°$.' },
+        { t: 'Planimetria', q: 'Pole trapezu o podstawach 6 i 10 oraz wys. 4:', o: ['32','48','40','24'], c: 0, e: '$P=\\frac{(6+10)\\cdot4}{2}=32$.' },
+        { t: 'Geometria analityczna', q: 'Odległość punktów $(0,0)$ i $(6,8)$:', o: ['10','12','14','8'], c: 0, e: '$\\sqrt{36+64}=\\sqrt{100}=10$.' },
+        { t: 'Geometria analityczna', q: 'Środek odcinka A(2,4), B(6,10):', o: ['(4,7)','(8,14)','(2,6)','(3,5)'], c: 0, e: '$\\left(\\frac{2+6}{2},\\frac{4+10}{2}\\right)=(4,7)$.' },
+        { t: 'Stereometria', q: 'Objętość sześcianu o krawędzi 5:', o: ['25','75','125','150'], c: 2, e: '$V=a^3=125$.' },
+        { t: 'Stereometria', q: 'Objętość ostrosłupa o $P_p=9$ i $h=6$:', o: ['54','27','18','9'], c: 2, e: '$V=\\frac{1}{3}\\cdot9\\cdot6=18$.' },
+        { t: 'Stereometria', q: 'Pole powierzchni bocznej walca o $r=3$, $h=5$:', o: ['$15\\pi$','$30\\pi$','$45\\pi$','$18\\pi$'], c: 1, e: '$P_b=2\\pi r h=30\\pi$.' },
+        { t: 'Prawdopodobieństwo', q: 'Rzut kostką: P(liczba parzysta):', o: ['$\\frac{1}{3}$','$\\frac{1}{2}$','$\\frac{2}{3}$','$\\frac{1}{6}$'], c: 1, e: 'Parzyste: 2,4,6 — 3 spośród 6 wyników.' },
+        { t: 'Prawdopodobieństwo', q: 'Jeśli $P(A)=0{,}2$, to $P(A\')=$', o: ['$0{,}2$','$0{,}8$','$1{,}2$','$0$'], c: 1, e: "$P(A')=1-P(A)=0{,}8$." },
+        { t: 'Prawdopodobieństwo', q: 'Dla niezależnych A, B: $P(A\\cap B)=$', o: ['$P(A)+P(B)$','$P(A)\\cdot P(B)$','$P(A)-P(B)$','$1$'], c: 1, e: 'Zdarzenia niezależne: $P(A\\cap B)=P(A)\\cdot P(B)$.' },
+        { t: 'Funkcja kwadratowa', q: 'Wierzchołek $f(x)=x^2-6x+5$:', o: ['$(3,-4)$','$(3,4)$','$(-3,-4)$','$(6,5)$'], c: 0, e: '$p=-\\frac{-6}{2}=3$; $q=9-18+5=-4$.' },
+        { t: 'Funkcja kwadratowa', q: 'Delta $f(x)=x^2-5x+6$:', o: ['$-1$','$1$','$11$','$25$'], c: 1, e: '$\\Delta=25-24=1$.' },
+        { t: 'Liczby rzeczywiste', q: '$2^3 \\cdot 2^4=$', o: ['$2^7$','$2^{12}$','$4^7$','$16$'], c: 0, e: 'Działanie na potęgach: $2^3\\cdot2^4=2^{3+4}=2^7$.' }
+      ];
+      var d = new Date();
+      var dayOfYear = Math.floor((d - new Date(d.getFullYear(),0,0))/86400000);
+      var q = dp[dayOfYear % dp.length];
+      var lbls = ['A','B','C','D'];
+      var dateEl = document.getElementById('dailyDate');
+      if (dateEl) dateEl.textContent = d.toLocaleDateString('pl-PL',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
+      var topicEl = document.getElementById('dailyTopic');
+      if (topicEl) topicEl.textContent = q.t;
+      var qEl = document.getElementById('dailyQuestion');
+      if (qEl) qEl.innerHTML = q.q;
+      var optBox = document.getElementById('dailyOptions');
+      if (!optBox) return;
+      var dAnswered = false;
+      q.o.forEach(function(opt, i) {
+        var btn = document.createElement('button');
+        btn.className = 'w-full text-left px-4 py-3 rounded-xl border-2 border-gray-200 bg-white font-medium text-gray-700 hover:border-blue-400 hover:bg-blue-50 transition text-sm daily-opt';
+        btn.innerHTML = '<span class="inline-flex items-center gap-3"><span class="w-6 h-6 rounded-full bg-gray-100 text-gray-600 text-xs font-bold flex items-center justify-center flex-shrink-0">'+lbls[i]+'</span><span>'+opt+'</span></span>';
+        btn.addEventListener('click', function() {
+          if (dAnswered) return;
+          dAnswered = true;
+          var all = optBox.querySelectorAll('.daily-opt');
+          all.forEach(function(b){b.disabled=true;b.style.cursor='default';});
+          if (i===q.c) {
+            btn.className='w-full text-left px-4 py-3 rounded-xl border-2 border-green-400 bg-green-50 font-medium text-green-800 text-sm';
+          } else {
+            btn.className='w-full text-left px-4 py-3 rounded-xl border-2 border-red-400 bg-red-50 font-medium text-red-800 text-sm';
+            all[q.c].className='w-full text-left px-4 py-3 rounded-xl border-2 border-green-400 bg-green-50 font-medium text-green-800 text-sm';
+          }
+          var fb=document.getElementById('dailyFeedback');
+          fb.className='mt-5 p-4 rounded-xl border text-sm font-medium '+(i===q.c?'border-green-200 bg-green-50 text-green-800':'border-red-200 bg-red-50 text-red-800');
+          fb.innerHTML=(i===q.c?'<i class="fa-solid fa-circle-check mr-2 text-green-500"></i><strong>Brawo!</strong> ':'<i class="fa-solid fa-circle-xmark mr-2 text-red-500"></i><strong>Niestety błąd.</strong> ')+q.e;
+          fb.classList.remove('hidden');
+          if (window.renderMathInElement) window.renderMathInElement(fb,{delimiters:[{left:'$',right:'$',display:false},{left:'$$',right:'$$',display:true}]});
+        });
+        optBox.appendChild(btn);
+      });
+      // Render math in question after KaTeX loads
+      (function tryRender(){
+        var card=document.getElementById('dailyCard');
+        if(window.renderMathInElement&&card){window.renderMathInElement(card,{delimiters:[{left:'$',right:'$',display:false},{left:'$$',right:'$$',display:true}]});}
+        else{setTimeout(tryRender,120);}
+      })();
     })();
     </script>
 </body>

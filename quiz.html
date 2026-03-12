@@ -151,6 +151,15 @@
         <div id="topicStats" class="space-y-3"></div>
       </div>
 
+      <!-- Missed questions review -->
+      <div id="missedReviewBox" class="mt-6 hidden">
+        <button id="toggleMissed" class="w-full flex items-center justify-between p-4 rounded-xl border border-red-200 bg-red-50 text-red-800 font-bold text-sm hover:bg-red-100 transition">
+          <span><i class="fa-solid fa-circle-xmark mr-2"></i>Przejrzyj błędy (<span id="missedCount">0</span> pytań)</span>
+          <i class="fa-solid fa-chevron-down" id="missedChevron" style="transition:transform .2s"></i>
+        </button>
+        <div id="missedList" class="hidden mt-3 space-y-4"></div>
+      </div>
+
       <div class="mt-8 flex flex-col sm:flex-row gap-3">
         <button id="retryBtn" class="flex-1 bg-gray-900 hover:bg-black text-white font-bold px-5 py-3 rounded-xl transition inline-flex items-center justify-center gap-2">
           <i class="fa-solid fa-rotate-right"></i> Powtórz quiz
@@ -191,6 +200,7 @@
     let index = 0;
     let score = 0;
     let answered = false;
+    let userChoices = [];
     const topicStat = {};
 
     const startCard = document.getElementById('startCard');
@@ -225,11 +235,28 @@
       }
     }
 
+    function saveQuizResult(sc, total) {
+      const pct = Math.round((sc / total) * 100);
+      // Cumulative stats (postep.html reads this)
+      let qs = {};
+      try { qs = JSON.parse(localStorage.getItem('quiz_state') || '{}'); } catch(e) {}
+      qs.total = (qs.total || 0) + total;
+      qs.correct = (qs.correct || 0) + sc;
+      try { localStorage.setItem('quiz_state', JSON.stringify(qs)); } catch(e) {}
+      // Per-run history (last 10 runs)
+      let hist = [];
+      try { hist = JSON.parse(localStorage.getItem('quiz_history') || '[]'); } catch(e) {}
+      hist.unshift({ date: new Date().toLocaleDateString('pl-PL'), score: sc, total, percent: pct });
+      if (hist.length > 10) hist = hist.slice(0, 10);
+      try { localStorage.setItem('quiz_history', JSON.stringify(hist)); } catch(e) {}
+    }
+
     function beginQuiz() {
       test = shuffle(pool).slice(0, 15);
       index = 0;
       score = 0;
       answered = false;
+      userChoices = [];
       Object.keys(topicStat).forEach(k => delete topicStat[k]);
       startCard.classList.add('hidden');
       resultCard.classList.add('hidden');
@@ -270,6 +297,7 @@
     function choose(optionIdx, button) {
       if (answered) return;
       answered = true;
+      userChoices[index] = optionIdx;
 
       const current = test[index];
       const buttons = [...optionsBox.children];
@@ -383,6 +411,43 @@
           `;
           statsBox.appendChild(row);
         });
+
+      // Save result to localStorage
+      saveQuizResult(score, test.length);
+
+      // Missed questions review
+      const missed = test.filter((q, i) => userChoices[i] !== q.correct);
+      const missedBox = document.getElementById('missedReviewBox');
+      document.getElementById('missedCount').textContent = missed.length;
+      if (missed.length > 0) {
+        missedBox.classList.remove('hidden');
+        const lbls = ['A', 'B', 'C', 'D'];
+        document.getElementById('missedList').innerHTML = missed.map(q => `
+          <div class="quiz-card p-5">
+            <p class="text-xs font-bold uppercase tracking-wider mb-2 text-gray-400">${q.topic}</p>
+            <p class="font-bold text-gray-900 mb-4">${q.q}</p>
+            <div class="space-y-2 mb-3">
+              ${q.options.map((opt, oi) => `
+                <div class="px-4 py-2.5 rounded-xl border text-sm font-medium ${
+                  oi === q.correct ? 'border-green-300 bg-green-50 text-green-800' : 'border-gray-100 bg-gray-50 text-gray-400'
+                }">
+                  <span class="font-bold mr-2">${lbls[oi]}.</span>${opt}${oi === q.correct ? ' <i class="fa-solid fa-check text-green-600 ml-1"></i>' : ''}
+                </div>
+              `).join('')}
+            </div>
+            <div class="p-3 bg-amber-50 rounded-xl border border-amber-200 text-amber-800 text-sm">
+              <i class="fa-solid fa-lightbulb mr-1 text-amber-500"></i>${q.explain}
+            </div>
+          </div>
+        `).join('');
+        document.getElementById('toggleMissed').addEventListener('click', function() {
+          const list = document.getElementById('missedList');
+          const chevron = document.getElementById('missedChevron');
+          list.classList.toggle('hidden');
+          chevron.style.transform = list.classList.contains('hidden') ? '' : 'rotate(180deg)';
+        });
+        renderMath(document.getElementById('missedList'));
+      }
     }
 
     document.getElementById('startBtn').addEventListener('click', beginQuiz);
