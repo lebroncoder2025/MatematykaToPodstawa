@@ -2,7 +2,8 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiz diagnostyczny - Matematyka to Podstawa</title>
   <meta name="description" content="Quiz diagnostyczny z matematyki na maturę podstawową. 15 losowych pytań z 10 działów z feedbackiem i raportem końcowym.">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,9 +13,7 @@
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
-  <script src="assets/firebase-init.js"></script>
-  <script src="assets/db-sync.js"></script>
-  <script src="assets/auth.js"></script>
+  <script src="assets/recent.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <style>
@@ -102,6 +101,20 @@
       <div class="mb-8">
         <p class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3 text-center">Filtruj pytania według działu (opcjonalnie):</p>
         <div class="flex flex-wrap gap-2 justify-center" id="topicFilterBox"></div>
+      </div>
+
+      <!-- Słabe tematy banner (shows after first quiz) -->
+      <div id="weakTopicBanner" style="display:none;" class="mb-6 bg-amber-50 border border-amber-200 rounded-2xl px-5 py-4 flex flex-wrap items-center justify-between gap-3 mx-auto max-w-lg">
+        <div class="flex items-center gap-3">
+          <i class="fa-solid fa-triangle-exclamation text-amber-500 text-xl"></i>
+          <div>
+            <p class="text-xs font-bold text-amber-600 uppercase tracking-wider">Słaby dział — powtórz!</p>
+            <p class="text-sm font-bold text-amber-900" id="weakTopicLabel">—</p>
+          </div>
+        </div>
+        <button id="weakTopicBtn" class="bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm px-4 py-2 rounded-xl transition inline-flex items-center gap-2">
+          <i class="fa-solid fa-dumbbell"></i> Ćwicz ten dział
+        </button>
       </div>
 
       <div class="text-center">
@@ -243,6 +256,34 @@
     }
     renderFilterBtns();
 
+    // "Słabe tematy" quick-start — pokazuje si gdy jest historia quizów
+    (function() {
+      try {
+        var hist = JSON.parse(localStorage.getItem('quiz_history') || '[]');
+        var qs = JSON.parse(localStorage.getItem('quiz_state') || '{}');
+        if (!hist.length && !(qs.topicStats)) return;
+        // Oblicz procent dla każdego tematu
+        var tStats = {};
+        try { tStats = JSON.parse(localStorage.getItem('quiz_topic_stats') || '{}'); } catch(e) {}
+        if (!Object.keys(tStats).length) return;
+        var worst = null, worstPct = 100;
+        Object.keys(tStats).forEach(function(t){
+          var s = tStats[t];
+          var pct = s.total > 0 ? Math.round(s.correct / s.total * 100) : 0;
+          if (pct < worstPct) { worstPct = pct; worst = t; }
+        });
+        if (!worst || worstPct >= 80) return;
+        var box = document.getElementById('weakTopicBanner');
+        if (box) {
+          box.style.display = '';
+          var lbl = document.getElementById('weakTopicLabel');
+          if (lbl) lbl.textContent = worst + ' (' + worstPct + '% poprawnych)';
+          var btn = document.getElementById('weakTopicBtn');
+          if (btn) btn.onclick = function() { selectedTopic = worst; renderFilterBtns(); beginQuiz(); };
+        }
+      } catch(e) {}
+    })();
+
     const startCard = document.getElementById('startCard');
     const quizCard = document.getElementById('quizCard');
     const resultCard = document.getElementById('resultCard');
@@ -277,7 +318,7 @@
 
     function saveQuizResult(sc, total) {
       const pct = Math.round((sc / total) * 100);
-      // Cumulative stats (postep.html reads this)
+      // Cumulative stats
       let qs = {};
       try { qs = JSON.parse(localStorage.getItem('quiz_state') || '{}'); } catch(e) {}
       qs.total = (qs.total || 0) + total;
@@ -289,6 +330,15 @@
       hist.unshift({ date: new Date().toLocaleDateString('pl-PL'), score: sc, total, percent: pct });
       if (hist.length > 10) hist = hist.slice(0, 10);
       try { localStorage.setItem('quiz_history', JSON.stringify(hist)); } catch(e) {}
+      // Per-topic stats (for "słabe tematy" feature)
+      let ts = {};
+      try { ts = JSON.parse(localStorage.getItem('quiz_topic_stats') || '{}'); } catch(e) {}
+      test.forEach(function(q, i) {
+        if (!ts[q.topic]) ts[q.topic] = { correct: 0, total: 0 };
+        ts[q.topic].total++;
+        if (userChoices[i] === q.answer) ts[q.topic].correct++;
+      });
+      try { localStorage.setItem('quiz_topic_stats', JSON.stringify(ts)); } catch(e) {}
     }
 
     function beginQuiz() {
@@ -536,6 +586,14 @@
       else showQuestion();
     });
     document.getElementById('retryBtn').addEventListener('click', beginQuiz);
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
   </script>
 </body>
 </html>

@@ -2,7 +2,8 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zadania z Rozwiązaniami – Matematyka to Podstawa</title>
   <meta name="description" content="30+ w pełni rozwiązanych zadań maturalnych krok po kroku. Liczby, algebra, funkcje, trygonometria, geometria i więcej. Pełne rozwiązania z komentarzem."/>
   <link rel="canonical" href="https://matematykatopodstawa.pl/zadania.html"/>
@@ -18,9 +19,7 @@
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
-  <script src="assets/firebase-init.js"></script>
-  <script src="assets/db-sync.js"></script>
-  <script src="assets/auth.js"></script>
+  <script src="assets/recent.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <style>
@@ -959,5 +958,13 @@ document.addEventListener('DOMContentLoaded', function(){
   document.addEventListener('katex-rendered', function(){});
 });
 </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>

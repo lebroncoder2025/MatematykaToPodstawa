@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
+    <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matematyka to Podstawa - Kompendium Wiedzy Maturalnej</title>
     <meta name="description" content="Najlepsze kompendium matematyczne na maturę podstawową. 10 działów, 100+ zadań z pełnymi rozwiązaniami, quizy diagnostyczne.">
@@ -12,9 +13,7 @@
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
-  <script src="assets/firebase-init.js"></script>
-  <script src="assets/db-sync.js"></script>
-  <script src="assets/auth.js"></script>
+  <script src="assets/recent.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
     <style>
@@ -288,6 +287,17 @@
           <p class="text-gray-400 text-sm">Na podstawie twoich wyników i postępu</p>
         </div>
         <div class="grid sm:grid-cols-3 gap-4 reveal delay-1" id="recommendCards"></div>
+      </div>
+    </section>
+
+    <!-- Ostatnio odwiedzone (shown by recent.js when history exists) -->
+    <section id="recentPagesSection" style="display:none;" class="py-10 bg-gray-50 border-b">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="flex items-center gap-3 mb-5 reveal">
+          <i class="fa-solid fa-clock-rotate-left text-gray-400 text-xl"></i>
+          <h2 class="text-xl font-black text-gray-700">Ostatnio odwiedzone</h2>
+        </div>
+        <div id="recentPagesList" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 reveal delay-1"></div>
       </div>
     </section>
 
@@ -708,5 +718,13 @@
       } catch(e) {}
     })();
     </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>
