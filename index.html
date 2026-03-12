@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
     <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/dark-mode.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
     <style>
@@ -132,6 +133,31 @@
                 <a href="arkusze.html" class="bg-blue-500/30 backdrop-blur text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-blue-500/50 transition shadow-lg border border-blue-400/30 flex items-center justify-center gap-2">
                     <i class="fa-solid fa-file-lines"></i> Arkusze CKE
                 </a>
+            </div>
+            <!-- Odliczanie do matury 2026 -->
+            <div class="mt-10 animate-fade-in-up delay-3" id="maturaCountdownWrap">
+              <p class="text-blue-200/80 text-[11px] font-bold mb-3 uppercase tracking-widest">&#9203; Matura podstawowa 2026 za:</p>
+              <div class="inline-flex items-center gap-3 sm:gap-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-6 sm:px-10 py-4">
+                <div class="text-center">
+                  <span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-days">--</span>
+                  <p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">dni</p>
+                </div>
+                <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
+                <div class="text-center">
+                  <span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-hours">--</span>
+                  <p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">godz.</p>
+                </div>
+                <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
+                <div class="text-center">
+                  <span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-minutes">--</span>
+                  <p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">min.</p>
+                </div>
+                <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
+                <div class="text-center">
+                  <span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-seconds">--</span>
+                  <p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">sek.</p>
+                </div>
+              </div>
             </div>
         </div>
     </header>
@@ -445,6 +471,32 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.08 });
     revealEls.forEach(el => observer.observe(el));
+
+    /* ─── Matura 2026 Countdown ─── */
+    (function() {
+      var target = new Date('2026-05-05T09:00:00');
+      function upd() {
+        var diff = target - new Date();
+        var w = document.getElementById('maturaCountdownWrap');
+        if (!w) return;
+        if (diff <= 0) {
+          w.innerHTML = '<p class="text-xl font-black text-yellow-300">🎉 Powodzenia na maturze 2026!</p>';
+          return;
+        }
+        var d = Math.floor(diff / 86400000),
+            h = Math.floor((diff % 86400000) / 3600000),
+            m = Math.floor((diff % 3600000) / 60000),
+            s = Math.floor((diff % 60000) / 1000);
+        function p(n) { return String(n).padStart(2, '0'); }
+        var el;
+        if ((el = document.getElementById('cd-days'))) el.textContent = p(d);
+        if ((el = document.getElementById('cd-hours'))) el.textContent = p(h);
+        if ((el = document.getElementById('cd-minutes'))) el.textContent = p(m);
+        if ((el = document.getElementById('cd-seconds'))) el.textContent = p(s);
+      }
+      upd();
+      setInterval(upd, 1000);
+    })();
     </script>
 </body>
 </html>

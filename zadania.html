@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8"/>
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
   <link rel="stylesheet" href="assets/styles.css"/>
+  <script src="assets/dark-mode.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <style>
@@ -68,6 +69,17 @@
     .task-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0;}
     .tiny-btn{display:inline-flex;align-items:center;gap:.4rem;border:1.5px solid #e2e8f0;background:#fff;color:#475569;padding:.42rem .72rem;border-radius:.65rem;font-size:.75rem;font-weight:800;transition:all .2s;cursor:pointer;}
     .tiny-btn:hover{border-color:#94a3b8;background:#f8fafc;}
+    @media print {
+      nav, .hero-z, .filter-bar-wrap, .task-actions, #noResults, footer,
+      .tiny-btn, .mini-pill, .filter-btn, .search-box, select, .stat-badge,
+      .toggle-btn .chevron { display: none !important; }
+      .task-card { break-inside: avoid; box-shadow: none !important; border: 1px solid #ccc !important; }
+      .solution-panel { display: block !important; max-height: none !important; overflow: visible !important; }
+      .step-row { break-inside: avoid; }
+      body { background: white !important; }
+      main { padding: 0 !important; }
+      @page { margin: 1.5cm; }
+    }
     .tiny-btn.active-book{background:#fef3c7;border-color:#f59e0b;color:#92400e;}
     .tiny-btn.active-solved{background:#dcfce7;border-color:#22c55e;color:#166534;}
     .mobile-nav-btn{border:1.5px solid #e2e8f0;background:#fff;color:#475569;width:2.3rem;height:2.3rem;border-radius:.7rem;display:none;align-items:center;justify-content:center;}
@@ -204,7 +216,8 @@
 <main class="max-w-7xl mx-auto px-4 py-10">
   <div class="flex items-center justify-between mb-6">
     <p id="taskCount" class="text-gray-500 text-sm font-semibold"></p>
-    <div class="flex gap-2">
+    <div class="flex gap-2 items-center">
+      <button onclick="window.print()" class="text-xs text-gray-500 hover:text-blue-600 flex items-center gap-1 font-semibold transition border border-gray-200 px-2.5 py-1.5 rounded-lg hover:border-blue-400 print-hide" title="Drukuj / Zapisz PDF"><i class="fa-solid fa-print"></i> Drukuj</button>
       <button onclick="expandAll()" class="text-xs text-blue-600 hover:underline font-semibold">Rozwiń wszystkie</button>
       <span class="text-gray-300">|</span>
       <button onclick="collapseAll()" class="text-xs text-gray-500 hover:underline font-semibold">Zwiń</button>

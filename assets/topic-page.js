@@ -556,9 +556,12 @@
         <p class="text-slate-700 mb-4 leading-relaxed">${block.text}</p>
         ${block.diagram ? `<div class="diagram-container mb-4">${block.diagram}<p class="diagram-label">${block.diagramLabel || ""}</p></div>` : ""}
         <div class="space-y-3">
-          ${block.formulas.map(f => `
-            <div class="formula">
-              <p class="font-medium mb-1">$${f.latex}$</p>
+          ${block.formulas.map((f, fi) => `
+            <div class="formula relative group">
+              <button class="copy-formula-btn absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity p-1.5 rounded-md hover:bg-slate-200 text-slate-400 hover:text-slate-700" data-bi="${bi}" data-fi="${fi}" title="Kopiuj wzór (LaTeX)">
+                <i class="fa-regular fa-copy text-xs"></i>
+              </button>
+              <p class="font-medium mb-1 pr-8">$${f.latex}$</p>
               <p class="text-sm text-slate-600">${f.meaning}</p>
             </div>
           `).join("")}
@@ -617,6 +620,10 @@
               <i class="fa-solid fa-brain text-sm"></i>
               <span class="hidden sm:inline">Quiz</span>
             </a>
+            <button onclick="window.print()" class="print-hide flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-slate-100 transition text-sm font-semibold text-slate-700" title="Drukuj / Zapisz jako PDF">
+              <i class="fa-solid fa-print text-sm"></i>
+              <span class="hidden sm:inline">Drukuj</span>
+            </button>
           </div>
         </div>
       </nav>
@@ -759,6 +766,35 @@
 
     // Save scroll position on leaving page
     window.addEventListener("beforeunload", () => saveScrollPos(topicKey));
+
+    // Copy formula to clipboard
+    document.querySelectorAll(".copy-formula-btn").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        const bi2 = parseInt(btn.getAttribute("data-bi"));
+        const fi2 = parseInt(btn.getAttribute("data-fi"));
+        const latex = topic.theory[bi2]?.formulas[fi2]?.latex || "";
+        const icon = btn.querySelector("i");
+        const doCopy = (text) => {
+          if (navigator.clipboard) return navigator.clipboard.writeText(text);
+          const ta = document.createElement("textarea");
+          ta.value = text; ta.style.cssText = "position:fixed;opacity:0";
+          document.body.appendChild(ta); ta.select(); document.execCommand("copy");
+          document.body.removeChild(ta); return Promise.resolve();
+        };
+        doCopy(latex).then(() => {
+          icon.className = "fa-solid fa-check text-xs text-green-600";
+          btn.classList.add("opacity-100");
+          setTimeout(() => { icon.className = "fa-regular fa-copy text-xs"; btn.classList.remove("opacity-100"); }, 1800);
+        }).catch(() => {});
+      });
+    });
+
+    // Before print: expand all content so it's visible when printing
+    window.addEventListener("beforeprint", () => {
+      document.querySelectorAll(".exercise-solution").forEach(el => el.classList.add("open"));
+      document.querySelectorAll(".reveal").forEach(el => el.classList.add("visible"));
+    });
 
     // Render math
     renderMath(document.body);

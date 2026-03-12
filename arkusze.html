@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/dark-mode.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <style>
@@ -48,6 +49,20 @@
     .btn-pdf:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(0,0,0,.1); }
     .pdf-embed { width:100%; height:700px; border:none; border-radius:0.75rem; background:#f1f5f9; }
     .section-divider { border:none; height:2px; background:linear-gradient(90deg,transparent,#cbd5e1,transparent); margin:3rem 0; }
+    /* Exam Stopwatch */
+    .exam-stopwatch { position:fixed; bottom:5rem; left:1.25rem; z-index:49; background:#fff; border:1.5px solid #e2e8f0; border-radius:1.25rem; box-shadow:0 8px 28px rgba(0,0,0,.12); padding:1rem 1.25rem; min-width:175px; transition:border-color .2s; }
+    .exam-stopwatch.sw-running { border-color:#22c55e; }
+    .exam-stopwatch.sw-exam { border-color:#3b82f6; }
+    .exam-stopwatch.sw-warning { border-color:#f59e0b; }
+    .exam-stopwatch.sw-danger { border-color:#ef4444; }
+    .sw-time { font-family:'Inter',monospace; font-size:1.6rem; font-weight:900; color:#0f172a; letter-spacing:.04em; line-height:1; }
+    .exam-stopwatch.sw-running .sw-time { color:#16a34a; }
+    .exam-stopwatch.sw-warning .sw-time { color:#d97706; }
+    .exam-stopwatch.sw-danger .sw-time { color:#dc2626; animation:sw-blink 1s ease infinite; }
+    @keyframes sw-blink { 50%{opacity:.5} }
+    .exam-stopwatch-toggle { position:fixed; bottom:1.25rem; left:1.25rem; z-index:50; background:#fff; border:1.5px solid #e2e8f0; border-radius:.875rem; box-shadow:0 4px 16px rgba(0,0,0,.1); padding:.5rem .9rem; font-size:.75rem; font-weight:800; color:#475569; cursor:pointer; transition:all .2s; display:flex; align-items:center; gap:.5rem; }
+    .exam-stopwatch-toggle:hover { border-color:#3b82f6; color:#2563eb; }
+    @media (max-width:640px) { .exam-stopwatch { left:.75rem; bottom:4rem; min-width:155px; } .exam-stopwatch-toggle { left:.75rem; bottom:.75rem; } }
   </style>
 </head>
 <body class="min-h-screen bg-gray-50 text-gray-900">
@@ -1207,5 +1222,95 @@
 
   <!-- Load exam data from JSON files to ensure proper encoding -->
   <script src="assets/load-exam-data.js"></script>
+
+  <!-- Exam Stopwatch Widget -->
+  <div class="exam-stopwatch print-hide" id="examStopwatch" style="display:none" role="timer" aria-label="Stoper egzaminacyjny">
+    <div class="flex items-center justify-between mb-2">
+      <span class="text-[10px] font-black text-gray-400 uppercase tracking-widest">Stoper</span>
+      <button onclick="document.getElementById('examStopwatch').style.display='none';resetStopwatch()" class="text-gray-300 hover:text-gray-500 text-base leading-none ml-3" title="Zamknij">&times;</button>
+    </div>
+    <div class="sw-time" id="swDisplay">00:00</div>
+    <div class="text-[10px] text-gray-400 font-semibold mt-0.5 mb-2" id="swLabel">czas egzaminu</div>
+    <div class="flex gap-1.5 mb-2">
+      <button id="swStartBtn" onclick="toggleStopwatch()" class="flex-1 text-xs font-bold py-1.5 rounded-lg bg-emerald-100 text-emerald-700 hover:bg-emerald-200 transition">Start</button>
+      <button onclick="resetStopwatch()" class="text-xs font-bold py-1.5 px-2 rounded-lg bg-gray-100 text-gray-600 hover:bg-gray-200 transition">Reset</button>
+    </div>
+    <button onclick="startExamMode(this)" class="w-full text-[11px] font-bold py-1.5 rounded-lg bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 transition" id="swExamBtn">
+      &#9203; Tryb egzaminacyjny (170 min)
+    </button>
+  </div>
+  <button class="exam-stopwatch-toggle print-hide" onclick="toggleSwWidget()" id="swToggleBtn" title="Stoper egzaminacyjny">
+    <i class="fa-regular fa-clock"></i> Stoper
+  </button>
+
+  <script>
+  /* ============ Exam Stopwatch ============ */
+  var _sw = { secs: 0, running: false, interval: null, examMode: false, examTotal: 170 * 60 };
+
+  function swFmt(s) {
+    var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+    var p = function(n) { return String(n).padStart(2, '0'); };
+    return (h > 0 ? p(h) + ':' : '') + p(m) + ':' + p(sec);
+  }
+
+  function swUpdate() {
+    var el = document.getElementById('swDisplay');
+    var box = document.getElementById('examStopwatch');
+    if (!el) return;
+    if (_sw.examMode) {
+      var remaining = _sw.examTotal - _sw.secs;
+      if (remaining <= 0) {
+        clearInterval(_sw.interval); _sw.running = false;
+        el.textContent = '00:00'; box.className = 'exam-stopwatch sw-danger';
+        document.getElementById('swStartBtn').textContent = 'Start';
+        return;
+      }
+      el.textContent = swFmt(remaining);
+      var cls = 'exam-stopwatch sw-exam';
+      if (remaining <= 600) cls = 'exam-stopwatch sw-danger';
+      else if (remaining <= 1800) cls = 'exam-stopwatch sw-warning';
+      else if (_sw.running) cls = 'exam-stopwatch sw-exam';
+      box.className = cls;
+    } else {
+      el.textContent = swFmt(_sw.secs);
+      box.className = 'exam-stopwatch' + (_sw.running ? ' sw-running' : '');
+    }
+  }
+
+  function toggleStopwatch() {
+    if (_sw.running) {
+      clearInterval(_sw.interval); _sw.running = false;
+      document.getElementById('swStartBtn').textContent = 'Start';
+    } else {
+      _sw.interval = setInterval(function() { _sw.secs++; swUpdate(); }, 1000);
+      _sw.running = true;
+      document.getElementById('swStartBtn').textContent = 'Pauza';
+    }
+    swUpdate();
+  }
+
+  function resetStopwatch() {
+    clearInterval(_sw.interval); _sw.running = false; _sw.secs = 0; _sw.examMode = false;
+    document.getElementById('swStartBtn').textContent = 'Start';
+    document.getElementById('swLabel').textContent = 'czas egzaminu';
+    document.getElementById('swExamBtn').style.display = '';
+    swUpdate();
+  }
+
+  function startExamMode(btn) {
+    _sw.secs = 0; _sw.examMode = true;
+    clearInterval(_sw.interval); _sw.running = true;
+    document.getElementById('swStartBtn').textContent = 'Pauza';
+    document.getElementById('swLabel').textContent = 'pozostały czas (170 min)';
+    if (btn) btn.style.display = 'none';
+    _sw.interval = setInterval(function() { _sw.secs++; swUpdate(); }, 1000);
+    swUpdate();
+  }
+
+  function toggleSwWidget() {
+    var sw = document.getElementById('examStopwatch');
+    sw.style.display = sw.style.display === 'none' ? 'block' : 'none';
+  }
+  </script>
 </body>
 </html>
