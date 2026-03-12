@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zadania z Rozwiązaniami – Matematyka to Podstawa</title>
   <meta name="description" content="30+ w pełni rozwiązanych zadań maturalnych krok po kroku. Liczby, algebra, funkcje, trygonometria, geometria i więcej. Pełne rozwiązania z komentarzem."/>
+  <link rel="canonical" href="https://matematykatopodstawa.pl/zadania.html"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Zadania maturalne z rozwiązaniami krok po kroku"/>
+  <meta property="og:description" content="Ćwicz maturę z matematyki na gotowych, szczegółowych rozwiązaniach i filtruj zadania po dziale oraz trudności."/>
+  <meta property="og:url" content="https://matematykatopodstawa.pl/zadania.html"/>
+  <meta name="twitter:card" content="summary_large_image"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
@@ -53,6 +59,23 @@
     .step-bg-2{background:#fef3c7;color:#92400e;}
     .step-bg-3{background:#f3e8ff;color:#6b21a8;}
     .hidden-task{display:none!important;}
+    .mini-pill{display:inline-flex;align-items:center;gap:.4rem;padding:.45rem .8rem;border:1.5px solid #e2e8f0;background:#fff;border-radius:.75rem;font-size:.78rem;font-weight:800;color:#475569;cursor:pointer;transition:all .2s;}
+    .mini-pill:hover{border-color:#94a3b8;background:#f8fafc;}
+    .mini-pill.active{border-color:#2563eb;background:#dbeafe;color:#1d4ed8;}
+    .stat-badge{display:inline-flex;align-items:center;gap:.45rem;padding:.45rem .75rem;border-radius:.75rem;font-size:.78rem;font-weight:800;}
+    .stat-badge.solved{background:#dcfce7;color:#166534;}
+    .stat-badge.book{background:#fef3c7;color:#92400e;}
+    .task-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0;}
+    .tiny-btn{display:inline-flex;align-items:center;gap:.4rem;border:1.5px solid #e2e8f0;background:#fff;color:#475569;padding:.42rem .72rem;border-radius:.65rem;font-size:.75rem;font-weight:800;transition:all .2s;cursor:pointer;}
+    .tiny-btn:hover{border-color:#94a3b8;background:#f8fafc;}
+    .tiny-btn.active-book{background:#fef3c7;border-color:#f59e0b;color:#92400e;}
+    .tiny-btn.active-solved{background:#dcfce7;border-color:#22c55e;color:#166534;}
+    .mobile-nav-btn{border:1.5px solid #e2e8f0;background:#fff;color:#475569;width:2.3rem;height:2.3rem;border-radius:.7rem;display:none;align-items:center;justify-content:center;}
+    @media (max-width: 767px){
+      .mobile-nav-btn{display:inline-flex;}
+      .mobile-nav{display:none;}
+      .mobile-nav.open{display:block;}
+    }
   </style>
 </head>
 <body>
@@ -76,6 +99,20 @@
     <a href="kurs.html" class="hidden md:inline-flex items-center gap-1.5 bg-blue-600 text-white px-4 py-2 rounded-xl text-sm font-bold hover:bg-blue-700 transition">
       <i class="fa-solid fa-play text-xs"></i> Rozpocznij kurs
     </a>
+    <button class="mobile-nav-btn" type="button" onclick="toggleMobileNav()" aria-label="Otwórz menu nawigacji">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </div>
+  <div id="mobileNav" class="mobile-nav md:hidden border-t border-gray-100 bg-white">
+    <div class="px-4 py-3 flex flex-col gap-2 text-sm font-semibold">
+      <a href="index.html" class="text-gray-700">Strona główna</a>
+      <a href="kurs.html" class="text-gray-700">Kurs</a>
+      <a href="zadania.html" class="text-blue-600">Zadania</a>
+      <a href="wzory.html" class="text-gray-700">Wzory</a>
+      <a href="arkusze.html" class="text-gray-700">Arkusze CKE</a>
+      <a href="quiz.html" class="text-gray-700">Quiz</a>
+      <a href="postep.html" class="text-gray-700">Postęp</a>
+    </div>
   </div>
 </nav>
 
@@ -117,7 +154,8 @@
 <!-- Controls -->
 <div class="bg-white border-b sticky top-16 z-40">
   <div class="max-w-7xl mx-auto px-4 py-3">
-    <div class="flex flex-col sm:flex-row gap-3 items-start sm:items-center justify-between">
+    <div class="flex flex-col gap-3">
+      <div class="flex flex-col lg:flex-row gap-3 items-start lg:items-center justify-between">
       <!-- Filters -->
       <div class="flex flex-wrap gap-2">
         <button class="filter-btn active" data-filter="all" onclick="filterTasks(this)">Wszystkie</button>
@@ -133,9 +171,30 @@
         <button class="filter-btn" data-filter="9" onclick="filterTasks(this)">Statystyka</button>
       </div>
       <!-- Search -->
-      <div class="relative w-full sm:w-64 flex-shrink-0">
-        <input type="text" id="searchBox" placeholder="Szukaj zadania..." class="search-box pl-9" oninput="searchTasks(this.value)"/>
+      <div class="w-full lg:w-auto flex flex-col sm:flex-row gap-2 sm:items-center lg:justify-end">
+        <div class="relative w-full sm:w-72 flex-shrink-0">
+        <input type="text" id="searchBox" placeholder="Szukaj po tytule, treści, odpowiedzi..." class="search-box pl-9" oninput="searchTasks(this.value)"/>
         <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
+        </div>
+        <select id="sortMode" class="search-box w-full sm:w-52" onchange="applyFilters()" aria-label="Sortowanie zadań">
+          <option value="default">Sortowanie: domyślne</option>
+          <option value="easy">Najpierw łatwe</option>
+          <option value="hard">Najpierw trudne</option>
+          <option value="az">Tytuł A-Z</option>
+        </select>
+        <button class="mini-pill" type="button" onclick="jumpToRandomTask()"><i class="fa-solid fa-shuffle"></i> Losuj zadanie</button>
+      </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2 justify-between">
+        <div class="flex flex-wrap gap-2">
+          <button id="onlyBookBtn" class="mini-pill" type="button" onclick="toggleOnlyBookmarked()"><i class="fa-regular fa-bookmark"></i> Tylko ulubione</button>
+          <button id="onlyUnsolvedBtn" class="mini-pill" type="button" onclick="toggleOnlyUnsolved()"><i class="fa-regular fa-circle"></i> Tylko nieprzerobione</button>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="stat-badge solved"><i class="fa-solid fa-check"></i> Przerobione: <span id="solvedCount">0</span></span>
+          <span class="stat-badge book"><i class="fa-solid fa-bookmark"></i> Ulubione: <span id="bookCount">0</span></span>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -621,10 +680,38 @@ const TASKS = [
    UI LOGIC
    ================================================================ */
 var currentFilter = 'all';
+var onlyBookmarked = false;
+var onlyUnsolved = false;
 var catNames = ['Liczby','Algebra','Równania','Funkcje','Fk. Kwadr.','Ciągi','Trygonom.','Planimetria','Stereometria','Statystyka'];
 var catColors = ['cat-0','cat-1','cat-2','cat-3','cat-4','cat-5','cat-6','cat-7','cat-8','cat-9'];
 var diffColors = [null,'#10b981','#f59e0b','#ef4444'];
 var diffLabels = [null,'Łatwe','Średnie','Trudne'];
+var solvedIds = loadSet('zadaniaSolvedIds');
+var bookmarkedIds = loadSet('zadaniaBookmarkedIds');
+
+function normalizeText(v){
+  return (v || '')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g,'');
+}
+
+function loadSet(key){
+  try{
+    var raw = localStorage.getItem(key);
+    if(!raw) return new Set();
+    return new Set(JSON.parse(raw));
+  }catch(e){
+    return new Set();
+  }
+}
+
+function saveSet(key, setObj){
+  localStorage.setItem(key, JSON.stringify(Array.from(setObj)));
+}
+
+function isSolved(id){ return solvedIds.has(id); }
+function isBookmarked(id){ return bookmarkedIds.has(id); }
 
 function buildGrid() {
   var grid = document.getElementById('tasksGrid');
@@ -637,7 +724,14 @@ function buildGrid() {
         '<div class="text-gray-700 text-sm leading-relaxed flex-1">'+s.text+'</div>'+
       '</div>';
     }).join('');
-    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+t.title.toLowerCase()+'">'+
+    var searchPayload = normalizeText([t.title, t.content, t.hint, t.answer].join(' '));
+    var solvedClass = isSolved(t.id) ? ' active-solved' : '';
+    var solvedIcon = isSolved(t.id) ? 'fa-solid' : 'fa-regular';
+    var solvedLabel = isSolved(t.id) ? 'Przerobione' : 'Oznacz jako przerobione';
+    var bookClass = isBookmarked(t.id) ? ' active-book' : '';
+    var bookIcon = isBookmarked(t.id) ? 'fa-solid' : 'fa-regular';
+    var bookLabel = isBookmarked(t.id) ? 'W ulubionych' : 'Dodaj do ulubionych';
+    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+normalizeText(t.title)+'" data-search="'+searchPayload.replace(/"/g,'&quot;')+'" data-diff="'+t.diff+'" data-solved="'+(isSolved(t.id)?'1':'0')+'" data-bookmarked="'+(isBookmarked(t.id)?'1':'0')+'">'+
       '<button class="toggle-btn" onclick="toggleCard(this)">'+
         '<div class="flex items-start gap-3 flex-1 text-left">'+
           '<div class="flex-shrink-0 w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 font-black text-sm mt-0.5">'+t.id+'</div>'+
@@ -658,6 +752,10 @@ function buildGrid() {
             '<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"><i class="fa-solid fa-circle-question mr-1 text-blue-500"></i>Zadanie</p>'+
             '<p class="text-gray-800 font-medium">'+t.content+'</p>'+
           '</div>'+
+          '<div class="task-actions">'+
+            '<button type="button" class="tiny-btn'+solvedClass+'" onclick="toggleSolved('+t.id+')"><i class="'+solvedIcon+' fa-circle-check"></i> '+solvedLabel+'</button>'+
+            '<button type="button" class="tiny-btn'+bookClass+'" onclick="toggleBookmark('+t.id+')"><i class="'+bookIcon+' fa-bookmark"></i> '+bookLabel+'</button>'+
+          '</div>'+
           (t.hint?'<div class="hint-box mb-4"><p class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1"><i class="fa-solid fa-lightbulb mr-1"></i>Wskazówka</p><p class="text-amber-800 text-sm">'+t.hint+'</p></div>':'')+
           '<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"><i class="fa-solid fa-list-check mr-1 text-blue-500"></i>Rozwiązanie krok po kroku</p>'+
           '<div class="border border-gray-100 rounded-xl overflow-hidden">'+stepsHtml+'</div>'+
@@ -669,6 +767,7 @@ function buildGrid() {
       '</div>'+
     '</div>';
   }).join('');
+  syncCounters();
   updateCount();
 }
 
@@ -692,15 +791,30 @@ function filterTasks(btn) {
 function searchTasks(q) { applyFilters(q); }
 
 function applyFilters(q) {
-  q = (q !== undefined ? q : document.getElementById('searchBox').value).toLowerCase().trim();
+  q = normalizeText((q !== undefined ? q : document.getElementById('searchBox').value).trim());
+  var mode = document.getElementById('sortMode').value;
   var visible = 0;
-  document.querySelectorAll('.task-card').forEach(function(card) {
+  var cards = Array.from(document.querySelectorAll('.task-card'));
+  cards.forEach(function(card) {
     var catMatch = currentFilter === 'all' || card.dataset.cat === currentFilter;
-    var searchMatch = !q || card.dataset.title.includes(q);
-    var show = catMatch && searchMatch;
+    var searchMatch = !q || card.dataset.search.includes(q);
+    var bookMatch = !onlyBookmarked || card.dataset.bookmarked === '1';
+    var unsolvedMatch = !onlyUnsolved || card.dataset.solved !== '1';
+    var show = catMatch && searchMatch && bookMatch && unsolvedMatch;
     card.classList.toggle('hidden-task', !show);
     if (show) visible++;
   });
+
+  var sortedVisible = cards.filter(function(c){ return !c.classList.contains('hidden-task'); });
+  sortedVisible.sort(function(a,b){
+    if(mode === 'easy') return Number(a.dataset.diff) - Number(b.dataset.diff) || Number(a.dataset.id) - Number(b.dataset.id);
+    if(mode === 'hard') return Number(b.dataset.diff) - Number(a.dataset.diff) || Number(a.dataset.id) - Number(b.dataset.id);
+    if(mode === 'az') return a.dataset.title.localeCompare(b.dataset.title, 'pl');
+    return Number(a.dataset.id) - Number(b.dataset.id);
+  });
+  var grid = document.getElementById('tasksGrid');
+  sortedVisible.forEach(function(card){ grid.appendChild(card); });
+
   document.getElementById('noResults').classList.toggle('hidden', visible > 0);
   updateCount(visible);
 }
@@ -724,8 +838,67 @@ function collapseAll() {
   });
 }
 
+function syncCounters(){
+  document.getElementById('solvedCount').textContent = solvedIds.size;
+  document.getElementById('bookCount').textContent = bookmarkedIds.size;
+}
+
+function toggleSolved(id){
+  if(solvedIds.has(id)) solvedIds.delete(id); else solvedIds.add(id);
+  saveSet('zadaniaSolvedIds', solvedIds);
+  buildGrid();
+  applyFilters();
+}
+
+function toggleBookmark(id){
+  if(bookmarkedIds.has(id)) bookmarkedIds.delete(id); else bookmarkedIds.add(id);
+  saveSet('zadaniaBookmarkedIds', bookmarkedIds);
+  buildGrid();
+  applyFilters();
+}
+
+function toggleOnlyBookmarked(){
+  onlyBookmarked = !onlyBookmarked;
+  var btn = document.getElementById('onlyBookBtn');
+  btn.classList.toggle('active', onlyBookmarked);
+  applyFilters();
+}
+
+function toggleOnlyUnsolved(){
+  onlyUnsolved = !onlyUnsolved;
+  var btn = document.getElementById('onlyUnsolvedBtn');
+  btn.classList.toggle('active', onlyUnsolved);
+  applyFilters();
+}
+
+function jumpToRandomTask(){
+  var visibleCards = Array.from(document.querySelectorAll('.task-card:not(.hidden-task)'));
+  if(!visibleCards.length) return;
+  var card = visibleCards[Math.floor(Math.random()*visibleCards.length)];
+  var btn = card.querySelector('.toggle-btn');
+  if(!btn.classList.contains('expanded')) toggleCard(btn);
+  card.scrollIntoView({behavior:'smooth', block:'center'});
+  card.style.boxShadow = '0 0 0 3px rgba(59,130,246,.25), 0 8px 28px rgba(59,130,246,.16)';
+  setTimeout(function(){ card.style.boxShadow=''; }, 1100);
+}
+
+function toggleMobileNav(){
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
 document.addEventListener('DOMContentLoaded', function(){
   buildGrid();
+  applyFilters('');
+  document.addEventListener('keydown', function(e){
+    if(e.key === '/' && document.activeElement !== document.getElementById('searchBox')){
+      e.preventDefault();
+      document.getElementById('searchBox').focus();
+    }
+    if(e.key === 'Escape' && document.activeElement === document.getElementById('searchBox')){
+      document.getElementById('searchBox').value = '';
+      applyFilters('');
+    }
+  });
   document.addEventListener('katex-rendered', function(){});
 });
 </script>
