@@ -1,0 +1,1170 @@
+Rodzaj dokumentu:   Zasady oceniania rozwiązań zadań
+                    Egzamin maturalny
+Egzamin:
+                    Arkusz diagnostyczny
+Przedmiot:          Matematyka
+Poziom:             Poziom podstawowy
+                    MMAP-P0-100, MMAP-P0-200,
+                    MMAP-P0-300, MMAP-P0-400,
+Formy arkusza:
+                    MMAP-P0-660, MMAP-P0-700,
+                    MMAP-P0-Q00
+
+Data publikacji
+                    30 września 2022 r.
+dokumentu:
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Uwaga: Akceptowane są wszystkie rozwiązania merytorycznie poprawne i spełniające
+warunki zadania.
+
+
+Zadanie 1. (0–1)
+                            Wymagania egzaminacyjne 2023 i 20241
+
+              Wymaganie ogólne                                   Wymaganie szczegółowe
+ I. Sprawność rachunkowa.                             Zdający:
+ Wykonywanie obliczeń na liczbach                     I.1) wykonuje działania (dodawanie,
+ rzeczywistych, także przy użyciu                     odejmowanie, mnożenie, dzielenie,
+ kalkulatora, stosowanie praw działań                 potęgowanie, pierwiastkowanie,
+ matematycznych przy przekształcaniu                  logarytmowanie) w zbiorze liczb
+ wyrażeń algebraicznych oraz                          rzeczywistych.
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+Komentarz
+Obliczamy wartość wyrażenia:
+                                                −2          3 −2      5 −2      2 2
+              (1 + 3 ⋅ 2−1 )−2 = (1 + 3 ⋅ 1)                                           4
+                                            2
+                                                     = (1 + 2)     = (2)     = (5) = 25
+
+
+
+
+1 Komunikat o wymaganiach egzaminacyjnych obowiązujących w roku 2023 i 2024,
+
+https://www.gov.pl/web/edukacja-i-nauka/wymagania-egzaminacyjne-obowiazujace-na-egzaminie-maturalnym-w-
+roku-2023-i-2024
+
+
+
+
+Strona 2 z 24
+                                                          Zasady oceniania rozwiązań zadań
+
+
+Zadanie 2. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymaganie szczegółowe
+ I. Sprawność rachunkowa.                     Zdający:
+ Wykonywanie obliczeń na liczbach             I.9) stosuje związek logarytmowania
+ rzeczywistych, także przy użyciu             z potęgowaniem, posługuje się wzorami na
+ kalkulatora, stosowanie praw działań         logarytm iloczynu, logarytm ilorazu
+ matematycznych przy przekształcaniu          i logarytm potęgi.
+ wyrażeń algebraicznych oraz
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+Komentarz
+Obliczamy wartość wyrażenia:
+                               1                      1
+              2 log 5 5 + 1 − 2 log 5 625 = 2 ⋅ 1 + 1 − 2 ⋅ 4 = 2 + 1 − 2 = 1
+
+
+
+Zadanie 3. (0-1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               XI.2) zlicza obiekty, stosując reguły
+ 2. Dobieranie i tworzenie modeli             mnożenia i dodawania […].
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+
+
+                                                                                Strona 3 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Komentarz
+Wśród wielokrotności liczby 25 nieparzyste to te, których końcówka dwucyfrowa to 25 lub
+75, co daje dwie możliwości. Cyfrę setek możemy wybrać na 10 sposobów, natomiast cyfrę
+tysięcy na 9 sposobów.
+
+
+Zadanie 4. (0–1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               II.6) dodaje i odejmuje wyrażenia wymierne
+ 1. Stosowanie obiektów matematycznych        […].
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+Komentarz
+Przekształcamy wyrażenie
+                    2        2    5 ⋅ (𝑥 − 1) 2 − 5𝑥 + 5 −5𝑥 + 7
+                       −5 =     −            =          =
+                   𝑥−1      𝑥−1      𝑥−1        𝑥−1       𝑥−1
+
+
+
+Zadanie 5. (0–2)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie         I. Zdający:
+ reprezentacji.                               II.1) stosuje wzory skróconego mnożenia
+ 1. Stosowanie obiektów matematycznych        na: (𝑎 + 𝑏)2, (𝑎 − 𝑏)2 , 𝑎2 − 𝑏 2 ;
+ i operowanie nimi, interpretowanie pojęć     II.2) dodaje, odejmuje i mnoży wielomiany
+ matematycznych.                              jednej i wielu zmiennych;
+
+Zasady oceniania
+2 pkt – wybranie dwóch poprawnych odpowiedzi: D i F.
+1 pkt – wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: D albo F.
+0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+DF
+
+
+Strona 4 z 24
+                                                       Zasady oceniania rozwiązań zadań
+
+
+Komentarz
+Przekształcamy wyrażenia, stosując wzór skróconego mnożenia na różnicę kwadratów
+dwóch wyrażeń:
+          [3 − (𝑥 − 𝑦)] ⋅ [3 + (𝑥 − 𝑦)] = 9 − (𝑥 − 𝑦)2 = 9 − (𝑥 2 − 2𝑥𝑦 + 𝑦 2 )
+oraz
+
+       −[(𝑥 − 𝑦) − 3] ⋅ [(𝑥 − 𝑦) + 3] = −[(𝑥 − 𝑦)2 − 9] = 9 − (𝑥 2 − 2𝑥𝑦 + 𝑦 2 ).
+
+
+
+Zadanie 6. (0–3)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              III.5) rozwiązuje równania wielomianowe
+ 1. Stosowanie obiektów matematycznych       postaci 𝑊(𝑥) = 0 dla wielomianów
+ i operowanie nimi, interpretowanie pojęć    doprowadzonych do postaci iloczynowej lub
+ matematycznych.                             takich, które dają się doprowadzić do
+                                             postaci iloczynowej metodą wyłączania
+                                             wspólnego czynnika przed nawias lub
+                                             metodą grupowania.
+
+Zasady oceniania
+3 pkt – zastosowanie poprawnej metody rozwiązania równania i podanie wszystkich
+        rozwiązań równania: 𝑥 = −3 lub 𝑥 = 2 lub 𝑥 = 3.
+2 pkt – rozwiązanie jednego z równań: 𝑥 2 − 9 = 0 albo 𝑥 − 2 = 0.
+1 pkt – przekształcenie lewej strony równania 3𝑥 3 − 6𝑥 2 − 27𝑥 + 54 = 0 do postaci
+        iloczynu wielomianów stopnia co najwyżej drugiego.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązanie
+Przekształcamy lewą stronę równania do postaci iloczynu:
+
+                               3𝑥 3 − 6𝑥 2 − 27𝑥 + 54 = 0
+                              3𝑥 2 (𝑥 − 2) − 27(𝑥 − 2) = 0
+                                 (𝑥 − 2)(3𝑥 2 − 27) = 0
+                                  3(𝑥 − 2)(𝑥 2 − 9) = 0
+Stąd otrzymujemy kolejno
+                              𝑥 − 2 = 0 lub 𝑥 2 − 9 = 0
+                           𝑥 − 2 = 0 lub (𝑥 − 3)(𝑥 + 3) = 0
+                       𝑥 − 2 = 0 lub 𝑥 − 3 = 0 lub 𝑥 + 3 = 0
+                            𝑥 = 2 lub 𝑥 = 3 lub 𝑥 = −3
+
+
+                                                                            Strona 5 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Rozwiązaniami równania są liczby: (−3), 2 oraz 3.
+
+
+
+Zadanie 7. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              III.6) rozwiązuje równania wymierne postaci
+ 1. Stosowanie obiektów matematycznych       𝑉(𝑥)
+                                                    = 0, gdzie wielomiany 𝑉(𝑥) i 𝑊(𝑥)
+ i operowanie nimi, interpretowanie pojęć    𝑊(𝑥)
+
+ matematycznych.                             są zapisane w postaci iloczynowej.
+
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+Komentarz
+Wyznaczamy dziedzinę równania: 𝐷 = 𝑅\{−1,1}.
+Licznik ułamka jest równy 0, gdy
+
+                     (𝑥 2 + 𝑥) = 0 lub (𝑥 + 3) = 0 lub (𝑥 − 1) = 0
+Zatem
+
+                          𝑥(𝑥 + 1) = 0 lub 𝑥 = −3 lub 𝑥 = 1
+                       𝑥 = 0 lub 𝑥 = −1 lub 𝑥 = −3 lub 𝑥 = 1
+Spośród tych czterech liczb do dziedziny należą tylko 𝑥 = −3 oraz 𝑥 = 0.
+
+
+
+Zadanie 8. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              I.6) posługuje się pojęciem przedziału
+ 1. Stosowanie obiektów matematycznych       liczbowego, zaznacza przedziały na osi
+ i operowanie nimi, interpretowanie pojęć    liczbowej;
+ matematycznych.                             I.7) stosuje interpretację geometryczną
+                                             i algebraiczną wartości bezwzględnej,
+                                             rozwiązuje równania i nierówności typu:
+                                             |𝑥 + 4| = 5, |𝑥 − 2| < 3, |𝑥 + 3| ≥ 4.
+
+
+
+Strona 6 z 24
+                                                       Zasady oceniania rozwiązań zadań
+
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+Komentarz
+Dany zbiór składa się z dwóch przedziałów, których końce są równo odległe od liczby (−2).
+Z własności wartości bezwzględnej mamy, że
+              |𝑥 − 𝑎| ≥ 𝑟 wtedy i tylko wtedy, gdy 𝑥 ≤ 𝑎 − 𝑟 lub 𝑥 ≥ 𝑎 + 𝑟.
+Zatem uwzględniając interpretację geometryczną możemy stwierdzić, że rozwiązaniem jest
+C
+
+
+
+Zadanie 9. (0–1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              IV.2) stosuje układy równań do
+ 2. Dobieranie i tworzenie modeli            rozwiązywania zadań tekstowych.
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 10.1. (0–1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymagania ogólne                          Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             V.4) odczytuje z wykresu funkcji: dziedzinę,
+ informacjami przedstawionymi w tekście,     zbiór wartości […].
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+
+
+
+
+                                                                              Strona 7 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Zasady oceniania
+1 pkt – rozwiązanie poprawne.
+0 pkt – rozwiązanie niepoprawne albo brak rozwiązania.
+
+Przykładowe pełne rozwiązanie
+[−4, 4]
+
+
+Zadanie 10.2. (0–1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                             Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             V.4) odczytuje z wykresu funkcji: […]
+ informacjami przedstawionymi w tekście,     miejsca zerowe, przedziały
+ zarówno matematycznym, jak                  monotoniczności, przedziały, w których
+ i popularnonaukowym, a także w formie       funkcja przyjmuje wartości większe (nie
+ wykresów, diagramów, tabel.                 mniejsze) lub mniejsze (nie większe) od
+                                             danej liczby […].
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+FP
+
+
+Zadanie 10.3.
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                             Wymagania szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             V.4) odczytuje z wykresu funkcji: […]
+ informacjami przedstawionymi w tekście,     największe i najmniejsze wartości funkcji
+ zarówno matematycznym, jak                  (o ile istnieją) w danym przedziale
+ i popularnonaukowym, a także w formie       domkniętym […].
+ wykresów, diagramów, tabel.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+
+
+Strona 8 z 24
+                                                       Zasady oceniania rozwiązań zadań
+
+
+Zadanie 11. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             IX.4) posługuje się równaniem okręgu
+ 1. Stosowanie obiektów matematycznych      (𝑥 − 𝑎)2 + (𝑦 − 𝑏)2 = 𝑟 2 .
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+Komentarz
+Środkiem okręgu jest punkt 𝑆 = (3, −1). Obliczmy długość odcinka 𝐴𝑆:
+
+
+   |𝐴𝑆| = √(3 − 8)2 + (−1 − 11)2 = √(−5)2 + (−12)2 = √25 + 144 = √169 = 13
+
+
+
+Zadanie 12.1. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             V.2) oblicza wartość funkcji zadanej wzorem
+ 2. Dobieranie i tworzenie modeli           algebraicznym.
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+Komentarz
+Największa głębokość basenu jest miejscu odległym od płytszego brzegu o 25 m.
+
+                             𝑦(25) = 0,18 ⋅ 25 − 0,9 = 3,6
+
+
+
+
+                                                                           Strona 9 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Zadanie 12.2. (0–2)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                             Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               V.5) interpretuje współczynniki występujące
+ 2. Dobieranie i tworzenie modeli             we wzorze funkcji liniowej;
+ matematycznych przy rozwiązywaniu            V.6) wyznacza wzór funkcji liniowej na
+ problemów praktycznych i teoretycznych.      podstawie informacji o jej wykresie lub o jej
+                                              własnościach.
+
+Zasady oceniania
+2 pkt – poprawne obliczenie wartości współczynnika 𝑎: 𝑎 = 0,04.
+1 pkt – poprawne obliczenie wartości współczynnika 𝑏: 𝑏 = 1,2.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązanie
+Obliczamy wartość współczynnika 𝑏:
+
+                                     𝑏 = 𝑦(0) = 1,2
+
+W celu obliczenia wartości współczynnika 𝑎 obliczamy głębokość basenu w odległości
+15 m od płytszego brzegu, gdzie łączą się obie płaszczyzny dna:
+
+                              𝑦(15) = 0,18 ∙ 15 − 0,9 = 1,8
+Zatem
+
+                                    𝑎 ∙ 15 + 1,2 = 1,8
+i stąd 𝑎 = 0,04.
+
+
+
+Zadanie 13.1. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                             Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               V.8) interpretuje współczynniki występujące
+ 1. Stosowanie obiektów matematycznych        we wzorze funkcji kwadratowej w postaci
+ i operowanie nimi, interpretowanie pojęć     ogólnej, kanonicznej i iloczynowej (jeśli
+ matematycznych.                              istnieje).
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+
+Strona 10 z 24
+                                                       Zasady oceniania rozwiązań zadań
+
+
+Komentarz
+Funkcja 𝑓 dana jest w postaci kanonicznej 𝑓(𝑥) = 𝑎(𝑥 − 𝑝)2 + 𝑞 , z której można odczytać
+współrzędne wierzchołka 𝑊 = (𝑝, 𝑞).
+
+
+
+Zadanie 13.2. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              V.4) odczytuje z wykresu funkcji: dziedzinę,
+ 1. Stosowanie obiektów matematycznych       zbiór wartości […].
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+Komentarz
+Funkcja 𝑓 dana jest w postaci kanonicznej 𝑓(𝑥) = 𝑎(𝑥 − 𝑝)2 + 𝑞 , z której można odczytać
+współrzędne wierzchołka 𝑊(𝑝, 𝑞). Biorąc pod uwagę, że współczynnik 𝑎 = −1,
+stwierdzamy, że ramiona paraboli są opuszczone do dołu, a największa przyjmowana przez
+nią wartość jest w wierzchołku, dla którego 𝑞 = 2.
+
+
+
+Zadanie 14.1 (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              VI.1) oblicza wyrazy ciągu określonego
+ 1. Stosowanie obiektów matematycznych       wzorem ogólnym.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+
+                                                                            Strona 11 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Komentarz
+                                             750 749
+                                     𝑎50 =      =
+                                             21   3
+
+
+Zadanie 14.2 (0–1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie          Zdający:
+ reprezentacji.                                VI.3) sprawdza, czy dany ciąg jest
+ 1. Stosowanie obiektów matematycznych         arytmetyczny lub geometryczny;
+ i operowanie nimi, interpretowanie pojęć      VI.5) stosuje wzór […] na sumę 𝑛
+ matematycznych.                               początkowych wyrazów ciągu
+                                               geometrycznego.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+PF
+
+Komentarz
+Aby sprawdzić, czy ciąg (𝑎𝑛 ) jest geometryczny, sprawdzamy, czy jego iloraz jest stały:
+
+                                  𝑎𝑛+1 7𝑛+1 7𝑛 7𝑛+1
+                             𝑞=       =    :  = 𝑛 =7
+                                   𝑎𝑛   21 21   7
+Obliczamy sumę trzech początkowych wyrazów:
+                                             1 7 49 57
+                       𝑆3 = 𝑎1 + 𝑎2 + 𝑎3 =    + +  =   = 19
+                                             3 3 3   3
+
+
+
+Zadanie 15. (0-1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie          Zdający:
+ reprezentacji.                                IX.2) posługuje się równaniem prostej na
+ 1. Stosowanie obiektów matematycznych         płaszczyźnie w postaci kierunkowej, w tym
+ i operowanie nimi, interpretowanie pojęć      wyznacza równanie prostej o zadanych
+ matematycznych.                               własnościach.
+
+
+
+
+Strona 12 z 24
+                                                          Zasady oceniania rozwiązań zadań
+
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+Komentarz
+Podstawiając współrzędne punktu 𝐴 do równania prostej, otrzymamy
+
+                                     3 = 3 ⋅ (−1) + 𝑏,
+a stąd
+
+                                           𝑏=6
+
+
+
+Zadanie 16.1 (0–1)
+                          Wymagania egzaminacyjne 2023 i 2024
+
+             Wymaganie ogólne                            Wymaganie szczegółowe
+ IV. Rozumowanie i argumentacja.                Zdający:
+ 3. Dobieranie argumentów do uzasadnienia       VI.2) w prostych przypadkach bada, czy
+ poprawności rozwiązywania problemów,           ciąg jest rosnący, czy malejący.
+ tworzenie ciągu argumentów
+ gwarantujących poprawność rozwiązania
+ i skuteczność w poszukiwaniu rozwiązań
+ zagadnienia.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A3
+
+Komentarz
+Obliczmy różnicę ciągu:
+
+           𝑎𝑛+1 − 𝑎𝑛 = [3(𝑛 + 1) − 1] − [3𝑛 − 1] = 3𝑛 + 3 − 1 − 3𝑛 + 1 = 3
+Ponieważ różnica ciągu jest liczbą dodatnią, więc ciąg jest rosnący.
+
+
+
+
+                                                                             Strona 13 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Zadanie 16.2 (0–1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                            Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie          Zdający:
+ reprezentacji.                                III.3) rozwiązuje nierówności liniowe z jedną
+ 1. Stosowanie obiektów matematycznych         niewiadomą.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+Komentarz
+Rozwiązujemy nierówność 𝑎𝑛 > 25:
+                                            𝑎𝑛 > 25
+                                         3𝑛 − 1 > 25
+                                            3𝑛 > 26
+                                                  2
+                                            𝑛 > 83
+
+Najmniejszą liczbą naturalną, która spełnia tę nierówność, jest 𝑛 = 9.
+
+
+
+Zadanie 16.3 (0–1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                            Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie          Zdający:
+ reprezentacji.                                VI.1) oblicza wyrazy ciągu określonego
+ 1. Stosowanie obiektów matematycznych         wzorem ogólnym;
+ i operowanie nimi, interpretowanie pojęć      VI.3) sprawdza, czy dany ciąg jest
+ matematycznych.                               arytmetyczny lub geometryczny;
+                                               VI.4) stosuje wzór […] na sumę 𝑛
+                                               początkowych wyrazów ciągu
+                                               arytmetycznego.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+
+
+
+Strona 14 z 24
+                                                       Zasady oceniania rozwiązań zadań
+
+
+Rozwiązanie
+A
+
+Komentarz
+Wypisujemy kilka początkowych wyrazów ciągu (𝑎𝑛 ) i obliczamy ich sumy:
+
+                                       2+5=7
+                                     2 + 5 + 8 = 15
+                                  2 + 5 + 8 + 11 = 26
+                               2 + 5 + 8 + 11 + 14 = 40
+                             2 + 5 + 8 + 11 + 14 + 17 = 57
+Suma sześciu początkowych wyrazów ciągu (𝑎𝑛 ) jest równa 57.
+
+
+
+Zadanie 17. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             IX. 2) posługuje się równaniem prostej na
+ 1. Stosowanie obiektów matematycznych      płaszczyźnie w postaci kierunkowej, w tym
+ i operowanie nimi, interpretowanie pojęć   wyznacza równanie prostej o zadanych
+ matematycznych.                            własnościach (takich jak na przykład
+                                            przechodzenie przez dwa dane punkty,
+                                            znany współczynnik kierunkowy,
+                                            równoległość lub prostopadłość do innej
+                                            prostej, styczność do okręgu).
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+Zadanie 18. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             VII.2) korzysta z wzorów
+ 1. Stosowanie obiektów matematycznych                                  sin 𝛼
+                                            sin2 𝛼 + cos2 𝛼 = 1, tg 𝛼 = cos 𝛼 .
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+
+
+
+                                                                           Strona 15 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+
+Rozwiązanie
+B
+
+Komentarz
+Przekształcamy dane wyrażenie:
+                       (1 − cos 20°) ⋅ (1 + cos 20°) − sin2 20° =
+                            = (1 − cos2 20°) − sin2 20° =
+                              = sin2 20° − sin2 20° = 0
+
+
+
+Zadanie 19. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymagania ogólne                              Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              XII.1) oblicza prawdopodobieństwo
+ 1. Stosowanie obiektów matematycznych       w modelu klasycznym.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych;
+ 3. Tworzenie pomocniczych obiektów
+ matematycznych na podstawie istniejących,
+ w celu przeprowadzenia argumentacji lub
+ rozwiązania problemu.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+Komentarz
+Niech 𝐴 oznacza zdarzenie polegające na wylosowaniu kuli białej. Przyjmujemy, że
+w pojemniku jest 4𝑛 kul białych oraz 5𝑛 kul czerwonych i obliczamy prawdopodobieństwo
+wylosowania kuli białej spośród 9𝑛 wszystkich kul:
+                                             4𝑛       4
+                                    𝑃(𝐴) =        =
+                                             9𝑛       9
+
+
+
+
+Strona 16 z 24
+                                                       Zasady oceniania rozwiązań zadań
+
+
+Zadanie 20. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              VIII.5) stosuje własności kątów wpisanych
+ 3. Tworzenie pomocniczych obiektów          i środkowych.
+ matematycznych na podstawie istniejących,
+ w celu przeprowadzenia argumentacji lub
+ rozwiązania problemu.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+Komentarz
+Każdy z trójkątów 𝐴𝐵𝑂, 𝐵𝐶𝑂 oraz 𝐴𝐶𝑂 jest równoramienny (ramionami są promienie
+okręgu). Wynika stąd, że
+                             |∠𝐴𝑂𝐵| = 180° − 2 ⋅ 40° = 100°
+                             |∠𝐵𝑂𝐶| = 180° − 2 ⋅ 10° = 160°
+
+Kąty 𝐴𝑂𝐵, 𝐵𝑂𝐶 oraz 𝐴𝑂𝐶 tworzą razem kąt pełny, stąd
+                         |∠𝐴𝑂𝐶| = 360° − (100° + 160°) = 100°
+
+Stąd
+
+                           |∠𝐴𝐶𝑂| = (180° − 100°): 2 = 40°
+
+
+
+Zadanie 21. (0–2)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymagania szczegółowe
+ IV. Rozumowanie i argumentacja.             Zdający:
+ 4. Stosowanie i tworzenie strategii przy    VII.4) oblicza kąty trójkąta i długości jego
+ rozwiązywaniu zadań, również w sytuacjach   boków przy odpowiednich danych
+ nietypowych.                                (rozwiązuje trójkąty m.in. z wykorzystaniem
+                                             twierdzenia cosinusów).
+                                             VIII.2) […] stosuje twierdzenie: w trójkącie
+                                             naprzeciw większego kąta wewnętrznego
+                                             leży dłuższy bok.
+
+
+
+
+                                                                            Strona 17 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Zasady oceniania
+2 pkt – zastosowanie twierdzenia cosinusów i obliczenie cosinusa największego kąta
+                         1
+        trójkąta: cos 𝛼 = .
+                         4
+1 pkt – zastosowanie twierdzenia cosinusów i zapisanie równania
+        82 = 62 + 72 − 2 ⋅ 6 ⋅ 7 ⋅ cos 𝛼 .
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązanie
+Oznaczmy miarę największego kąta w rozpatrywanym trójkącie przez 𝛼 .
+W trójkącie największy kąt wewnętrzny znajduje się naprzeciw najdłuższego boku.
+Korzystamy z twierdzenia cosinusów i obliczamy cosinus największego kąta:
+
+                             82 = 62 + 72 − 2 ⋅ 6 ⋅ 7 ⋅ cos 𝛼
+                                64 = 36 + 49 − 84 cos 𝛼
+                                                  1
+                                        cos 𝛼 =
+                                                  4
+
+
+Zadanie 22. (0–1)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               VIII.7) stosuje twierdzenia: Talesa,
+ 1. Stosowanie obiektów matematycznych        odwrotne do twierdzenia Talesa,
+ i operowanie nimi, interpretowanie pojęć     o dwusiecznej kąta oraz o kącie między
+ matematycznych.                              styczną a cięciwą.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+Komentarz
+Korzystając z twierdzenia o dwusiecznej kąta otrzymujemy proporcję
+                                      |𝐴𝐷| |𝐴𝐵|
+                                          =
+                                      |𝐶𝐷| |𝐶𝐵|
+Podstawiając długości odpowiednich odcinków, mamy
+                                        3,2   4
+                                            =
+                                       |𝐶𝐷| 4,6
+Stąd
+
+
+
+Strona 18 z 24
+                                                                Zasady oceniania rozwiązań zadań
+
+
+                                                3,2 ⋅ 4,6 92
+                                     |𝐶𝐷| =              =
+                                                   4       25
+
+
+
+Zadanie 23. (0–4)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie              Zdający:
+ reprezentacji.                                    XIII. rozwiązuje zadania optymalizacyjne
+ 2. Dobieranie i tworzenie modeli                  w sytuacjach dających się opisać funkcją
+ matematycznych przy rozwiązywaniu                 kwadratową.
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+4 pkt – zastosowanie poprawnej metody obliczenia liczby wiatraków maksymalizującej zysk
+        oraz poprawny wynik: 𝑥 = 115 oraz 𝑍(115) = 13 055 𝑧ł.
+3 pkt – zapisanie dziedziny funkcji 𝑍 : 𝑥 ∈ [0 ,150] ∩ ℤ oraz obliczenie pierwszej
+        współrzędnej wierzchołka paraboli i zapisanie, że 115 należy do dziedziny funkcji
+        𝑍.
+2 pkt – zapisanie poprawnego wzoru funkcji 𝑍 zysku w postaci jawnej:
+         𝑍(𝑥) = −𝑥 2 + 230𝑥 − 170.
+1 pkt – zapisanie funkcji 𝑍 zysku w postaci 𝑍(𝑥) = 𝑃(𝑥) − 𝐾(𝑥).
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązanie
+Zysk ze sprzedaży jest różnicą przychodu ze sprzedaży wiatraków oraz kosztu ich
+wytworzenia: 𝑍(𝑥) = 𝑃(𝑥) − 𝐾(𝑥) = −𝑥 2 + 230𝑥 − 170.
+Tygodniowo w zakładzie można wyprodukować maksymalnie 150 wiatraków, więc
+dziedziną funkcji 𝑍 jest zbiór wszystkich liczb całkowitych z przedziału [0 , 150].
+Ponieważ funkcja 𝑍(𝑥) = −𝑥 2 + 230𝑥 − 170 jest funkcją kwadratową, największą
+wartość przyjmuje dla argumentu będącego pierwszą współrzędną wierzchołka paraboli.
+                             𝑏
+Korzystając ze wzoru 𝑝 = −        , obliczamy
+                             2𝑎
+
+                                         230      −230
+                              𝑥=−               =      = 115
+                                       2 ⋅ (−1)    −2
+Liczba 𝑥 = 115 należy do dziedziny funkcji 𝑍 .
+Największy tygodniowy zysk jest osiągany przy produkcji 115 wiatraków tygodniowo.
+Obliczymy go, przyjmując 𝑥 = 115:
+
+                     𝑍(115) = −1152 + 230 ∙ 115 − 170 = 13 055 zł
+
+Przy produkcji 115 wiatraków tygodniowo zysk firmy będzie równy 13 055 zł.
+
+
+
+
+                                                                                  Strona 19 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Zadanie 24.1. (0–1)
+                          Wymagania egzaminacyjne 2023 i 2024
+
+            Wymagania ogólne                             Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.      Zdający:
+ 1. Interpretowanie i operowanie                XII.2) oblicza średnią arytmetyczną i średnią
+ informacjami przedstawionymi w tekście,        ważoną […].
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+ III. Wykorzystanie i interpretowanie
+ reprezentacji.
+ 1. Stosowanie obiektów matematycznych
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+
+Zasady oceniania
+1 pkt – rozwiązanie poprawne.
+0 pkt – rozwiązanie niepoprawne albo brak rozwiązania.
+
+Rozwiązanie
+A
+
+Komentarz
+Dodając wszystkie płace pracowników firmy 𝐹 , otrzymujemy sumę
+              75 ⋅ 4000 + 50 ⋅ 4800 + 20 ⋅ 5000 + 10 ⋅ 6000 + 5 ⋅ 7000 = 735 000
+Dzieląc ją przez liczbę pracowników, mamy
+                                  735 000: 160 = 4 593,75
+
+
+
+
+Strona 20 z 24
+                                                       Zasady oceniania rozwiązań zadań
+
+
+Zadanie 24.2. (0–1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymagania ogólne                          Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             XII.2) […] znajduje medianę i dominantę.
+ informacjami przedstawionymi w tekście,
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+ III. Wykorzystanie i interpretowanie
+ reprezentacji.
+ 1. Stosowanie obiektów matematycznych
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+Komentarz
+Mediana jest średnią arytmetyczną płac pracownika nr 80 i 81 przy uporządkowaniu ich
+w porządku niemalejącym. Obaj pracownicy otrzymują płacę miesięczną równą 4800 zł.
+
+
+
+
+                                                                           Strona 21 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Zadanie 24.3. (0–1)
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymagania ogólne                          Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             I.1) wykonuje działania […] w zbiorze liczb
+ informacjami przedstawionymi w tekście,     rzeczywistych.
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+ I. Sprawność rachunkowa.
+ Wykonywanie obliczeń na liczbach
+ rzeczywistych, także przy użyciu
+ kalkulatora, stosowanie praw działań
+ matematycznych przy przekształcaniu
+ wyrażeń algebraicznych oraz
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+Komentarz
+Do grupy, o której mowa w zadaniu, zaliczamy pracowników z płacą 4000 zł, 4800 zł oraz
+5000 zł. Jest ich razem
+                                   75 + 50 + 20 = 145.
+Obliczamy, jakim procentem liczby wszystkich pracowników jest liczba pracowników w danej
+grupie:
+                              145
+                                  ⋅ 100% = 90,625% ≈ 91%
+                              160
+
+
+
+
+Strona 22 z 24
+                                                         Zasady oceniania rozwiązań zadań
+
+
+Zadanie 25. (0–3)
+                            Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymagania szczegółowe
+ IV. Rozumowanie i argumentacja.               Zdający:
+ 4. Stosowanie i tworzenie strategii podczas   VII.4) oblicza kąty trójkąta i długości jego
+ rozwiązywania zadań, również w sytuacjach     boków przy odpowiednich danych
+ nietypowych.                                  (rozwiązuje trójkąty m.in. z wykorzystaniem
+                                               twierdzenia cosinusów).
+                                               VIII.2) […] stosuje twierdzenie: w trójkącie
+                                               naprzeciw większego kąta wewnętrznego
+                                               leży dłuższy bok.
+
+Zasady oceniania
+3 pkt – obliczenie promienia okręgu opisanego na podstawie ostrosłupa, poprawne
+        zastosowanie twierdzenia Pitagorasa do obliczenia wysokości 𝐻 bryły i poprawny
+        wynik: 𝐻 = 5√5.
+2 pkt – obliczenie promienia okręgu opisanego na podstawie ostrosłupa oraz poprawne
+        zastosowanie twierdzenia Pitagorasa do obliczenia wysokości 𝐻 bryły.
+1 pkt – obliczenie promienia 𝑅 okręgu opisanego na trójkącie równobocznym: 𝑅 = 10.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązanie
+Podstawą ostrosłupa jest trójkąt równoboczny o boku 10√3.
+Ponieważ krawędzie boczne ostrosłupa mają taką samą długość, spodek wysokości
+ostrosłupa jest punktem jednakowo odległym od wierzchołków podstawy bryły, czyli jest
+środkiem okręgu opisanego na podstawie.
+Obliczamy promień 𝑅 okręgu opisanego na                               𝑆
+                 10√3⋅√3
+podstawie: 𝑅 =             = 10.
+                    3
+Oznaczmy przez 𝐴, 𝐵, 𝐶 , 𝑆 wierzchołki ostrosłupa,
+przez 𝑆 ′ – spodek wysokości 𝐻 opuszczonej z
+wierzchołka 𝑆 na podstawę 𝐴𝐵𝐶 (patrz rysunek).
+Stosujemy do trójkąta 𝐴𝑆 ′ 𝑆 twierdzenie Pitagorasa                     𝐻
+i otrzymujemy kolejno
+            |𝐴𝑆 ′ |2 + |𝑆 ′ 𝑆|2 = |𝑆𝐴|2
+               𝑅 2 + 𝐻 2 = |𝑆𝐴|2
+                 102 + 𝐻 2 = 152                  𝐴                                            𝐶
+                                                             𝑅        𝑆′
+               𝐻 2 = 225 − 100
+                                                                  𝐵
+                    𝐻 = 5√5
+
+Wysokość ostrosłupa jest równa 5√5.
+
+
+
+
+                                                                              Strona 23 z 24
+Egzamin maturalny z matematyki. Test diagnostyczny – wrzesień 2022 r.
+
+
+Zadanie 26. (0–2)
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ IV. Rozumowanie i argumentacja.              Zdający:
+ 1. Przeprowadzanie rozumowań, także          I.2) przeprowadza proste dowody dotyczące
+ kilkuetapowych, podawanie argumentów         podzielności liczb całkowitych i reszt
+ uzasadniających poprawność rozumowania,      z dzielenia nie trudniejsze niż dowód
+ odróżnianie dowodu od przykładu.             podzielności przez 24 iloczynu czterech
+                                              kolejnych liczb naturalnych.
+
+Zasady oceniania
+2 pkt – przekształcenie danego wyrażenia do postaci 5 ⋅ (2𝑛2 + 6𝑛 + 1) + 3 oraz
+        zapisanie, że 2𝑛2 + 6𝑛 + 1 jest liczbą całkowitą.
+1 pkt – przekształcenie wyrażenia 10𝑛2 + 30𝑛 + 8 do postaci
+        5 ⋅ (2𝑛2 + 6𝑛 + 1) + 3.
+0 pkt –rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania
+
+Przykładowe pełne rozwiązanie
+Przekształcamy równoważnie dane wyrażenie
+
+            10𝑛2 + 30𝑛 + 8 = 10𝑛2 + 30𝑛 + 5 + 3 = 5 ⋅ (2𝑛2 + 6𝑛 + 1) + 3.
+Ponieważ wartość wyrażenia 2𝑛2 + 6𝑛 + 1 jest liczbą całkowitą, to 5 ⋅ (2𝑛2 + 6𝑛 + 1)
+jest wielokrotnością liczby 5, zatem 5 ⋅ (2𝑛2 + 6𝑛 + 1) + 3 przy dzieleniu przez 5 daje
+resztę 3. To należało wykazać.
+
+
+
+
+Strona 24 z 24
+

@@ -1,0 +1,812 @@
+                                                    Arkusz zawiera informacje prawnie chronione
+                                                    do momentu rozpoczęcia egzaminu.
+
+
+
+                  WYPEŁNIA ZDAJĄCY                         Miejsce na naklejkę.
+                                                       Sprawdź, czy kod na naklejce to
+       KOD                   PESEL                                  M-100.
+                                                        Jeżeli tak – przyklej naklejkę.
+                                                      Jeżeli nie – zgłoś to nauczycielowi.
+
+
+
+
+ Egzamin maturalny                                    Formuła 2023
+
+
+
+ MATEMATYKA
+ Poziom podstawowy
+                                                        Symbol arkusza
+    TEST DIAGNOSTYCZNY                                  MMAP-P0-100-2209
+                                              WYPEŁNIA ZESPÓŁ NADZORUJĄCY
+DATA: 29 września 2022 r.                     Uprawnienia zdającego do:
+                                                   dostosowania zasad oceniania
+GODZINA ROZPOCZĘCIA: 9:00                          dostosowania w zw. z dyskalkulią
+
+CZAS TRWANIA: 180 minut                            nieprzenoszenia zaznaczeń na kartę.
+
+
+LICZBA PUNKTÓW DO UZYSKANIA: 46
+
+Przed rozpoczęciem pracy z arkuszem egzaminacyjnym
+
+1. Sprawdź, czy nauczyciel przekazał Ci właściwy arkusz egzaminacyjny,
+   tj. arkusz z właściwego przedmiotu na właściwym poziomie.
+2. Jeżeli przekazano Ci niewłaściwy arkusz – natychmiast zgłoś to nauczycielowi.
+   Nie rozrywaj banderol.
+3. Jeżeli przekazano Ci właściwy arkusz – rozerwij banderole po otrzymaniu
+   takiego polecenia od nauczyciela. Zapoznaj się z instrukcją na stronie 2.
+
+
+
+Układ graficzny
+© CKE 2022
+Instrukcja dla zdającego
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 29 stron (zadania 1–26).
+    Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego egzamin.
+2. Na stronie tytułowej arkusza oraz na karcie odpowiedzi wpisz swój numer PESEL
+    i przyklej naklejkę z kodem. Nie wpisuj żadnych znaków w części przeznaczonej dla
+    egzaminatora.
+3. Nie wpisuj żadnych znaków w tabelkach przeznaczonych dla egzaminatora. Tabelki
+    umieszczone są na marginesie przy odpowiednich zadaniach.
+4. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym.
+5. Symbol              zamieszczony w nagłówku zadania oznacza, że rozwiązanie zadania
+    zamkniętego musisz przenieść na kartę odpowiedzi.
+6. Odpowiedzi do zadań zamkniętych zaznacz na karcie odpowiedzi w części karty
+    przeznaczonej dla zdającego. Zamaluj       pola do tego przeznaczone. Błędne
+    zaznaczenie otocz kółkiem        i zaznacz właściwe.
+7. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń w rozwiązaniu zadania
+    otwartego może spowodować, że za to rozwiązanie nie otrzymasz pełnej liczby punktów.
+8. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub atramentem.
+9. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl.
+10. Pamiętaj, że zapisy w brudnopisie nie będą oceniane.
+11. Możesz korzystać z Wybranych wzorów matematycznych, cyrkla i linijki oraz kalkulatora
+    prostego. Upewnij się, czy przekazano Ci broszurę z taką okładką, jak poniżej.
+
+
+
+
+                                      Strona 2 z 29
+                                                                              MMAP-P0_100
+Zadania egzaminacyjne są wydrukowane na kolejnych
+stronach.
+
+
+
+
+                       Strona 3 z 29
+MMAP-P0_100
+Zadanie 1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wartość wyrażenia (1 + 3 ⋅ 2−1 )−2 jest równa
+
+     25                    4                     36            40
+A.                    B.                    C.            D.
+     4                     25                    49            9
+
+ Brudnopis
+
+
+
+
+Zadanie 2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+                                 1
+Wartość wyrażenia 2 log 5 5 + 1 − log 5 625 jest równa
+                                 2
+
+A. 1                  B. 5                  C. 10         D. 25
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 4 z 29
+                                                                    MMAP-P0_100
+Zadanie 3. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wszystkich różnych liczb naturalnych czterocyfrowych, które są nieparzyste i podzielne
+przez 25, jest
+
+A. 9 ⋅ 9 ⋅ 2           B. 9 ⋅ 10 ⋅ 2          C. 9 ⋅ 9 ⋅ 4              D. 9 ⋅ 10 ⋅ 4
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 4. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+                                                    2
+Dla każdej liczby rzeczywistej 𝑥 ≠ 1 wyrażenie         − 5 jest równe
+                                                   𝑥−1
+
+     −5𝑥+1                  −5𝑥+7                  −5𝑥+3                     −5𝑥−3
+A.                     B.                     C.                        D.
+      𝑥−1                    𝑥−1                    𝑥−1                       𝑥−1
+
+
+ Brudnopis
+
+
+
+
+                                            1.1.
+
+
+                                       Strona 5 z 29
+MMAP-P0_100
+5.    Zadanie 5. (0–2)
+0–2   Dokończ zdanie. Wybierz dwie właściwe odpowiedzi spośród podanych.
+
+      Dla każdej liczby rzeczywistej 𝑥 i dla każdej liczby rzeczywistej 𝑦 wyrażenie
+      9 − (𝑥 2 − 2𝑥𝑦 + 𝑦 2 ) jest równe
+
+      A. [3 − (𝑥 − 2𝑦)]2
+
+      B. [3 + (𝑥 − 2𝑦)]2
+
+      C. [3 − (𝑥 + 2𝑦)]2
+
+      D. [3 − (𝑥 − 𝑦)] ⋅ [3 + (𝑥 − 𝑦)]
+
+      E. [3 − (𝑥 + 2𝑦)] ⋅ [3 + (𝑥 + 2𝑦)]
+
+      F. −[(𝑥 − 𝑦) − 3] ⋅ [(𝑥 − 𝑦) + 3]
+
+
+
+
+       Brudnopis
+
+
+
+
+                                             Strona 6 z 29
+                                                                                      MMAP-P0_100
+Zadanie 6. (0–3)                              6.
+
+Rozwiąż równanie                              0–3
+                       𝟑     𝟐
+                     𝟑𝒙 − 𝟔𝒙 − 𝟐𝟕𝒙 + 𝟓𝟒 = 𝟎
+Zapisz obliczenia.
+
+
+
+
+                           Strona 7 z 29
+MMAP-P0_100
+Zadanie 7. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+Równanie
+                                (𝑥 2 + 𝑥)(𝑥 + 3)(𝑥 − 1)
+                                                        =0
+                                         𝑥2 − 1
+ma w zbiorze liczb rzeczywistych dokładnie
+
+A. jedno rozwiązanie: 𝑥 = −3.
+
+B. dwa rozwiązania: 𝑥 = −3, 𝑥 = 0.
+
+C. trzy rozwiązania: 𝑥 = −3, 𝑥 = −1, 𝑥 = 0.
+
+D. cztery rozwiązania: 𝑥 = −3, 𝑥 = −1, 𝑥 = 0, 𝑥 = 1.
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 8. (0–1)
+Spośród nierówności A–D wybierz tę, której zbiór wszystkich rozwiązań zaznaczono
+na osi liczbowej.
+
+
+         −7 −6       −5 −4 −3 −2             −1    0   1      2   3    𝑥
+
+A. |𝑥 + 2| ≤ 2        B. |𝑥 − 2| ≤ 2         C. |𝑥 + 2| ≥ 2       D. |𝑥 − 2| ≥ 2
+
+
+
+ Brudnopis
+
+
+
+
+                                       Strona 8 z 29
+                                                                            MMAP-P0_100
+Zadanie 9. (0–1)
+Klient banku wypłacił z bankomatu kwotę 1040 zł. Bankomat wydał kwotę w banknotach
+o nominałach 20 zł, 50 zł oraz 100 zł. Banknotów 100-złotowych było dwa razy więcej
+niż 50-złotowych, a banknotów 20-złotowych było o 2 mniej niż 50-złotowych.
+
+Niech 𝑥 oznacza liczbę banknotów 50-złotowych, a 𝑦 – liczbę banknotów 20-złotowych,
+które otrzymał ten klient.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Poprawny układ równań prowadzący do obliczenia liczb 𝑥 i 𝑦 to
+
+       20𝑦 + 50𝑥 + 100 ⋅ 2𝑥 = 1040
+A. {
+       𝑦 =𝑥−2
+       20𝑦 + 50𝑥 + 50𝑥 ⋅ 2 = 1040
+B. {
+       𝑦 =𝑥−2
+       20𝑦 + 50𝑥 + 100 ⋅ 2𝑥 = 1040
+C. {
+       𝑥 =𝑦−2
+       20𝑦 + 50𝑥 + 50𝑥 ⋅ 2 = 1040
+D. {
+       𝑥 =𝑦−2
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 9 z 29
+MMAP-P0_100
+        Zadanie 10.
+        Na rysunku, w kartezjańskim układzie
+        współrzędnych (𝑥, 𝑦), przedstawiono wykres
+                                                                                                                   𝑦
+        funkcji 𝑓 określonej dla każdego 𝑥 ∈ [−5, 4).
+        Na tym wykresie zaznaczono punkty
+        o współrzędnych całkowitych.                                                                               4
+                                                                                                                   3
+                                                                                                                   2        𝑦 = 𝑓(𝑥)
+                                                                                                                   1
+
+                                                                                          −5−4 −3−2 −1 0 1 2 3 4 5 𝑥
+                                                                                                     −1
+                                                                                                     −2
+                                                                                                     −3
+                                                                                                     −4
+
+10.1.   Zadanie 10.1. (0–1)
+0–1     Zapisz w wykropkowanym miejscu zbiór wartości funkcji 𝒇.
+
+
+        .................................................................................................................................................
+
+
+        Zadanie 10.2. (0–1)
+        Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+        prawdziwe, albo F – jeśli jest fałszywe.
+
+         Dla każdego argumentu z przedziału (−4, −2) funkcja 𝑓 przyjmuje wartości
+                                                                                                                                          P        F
+         ujemne.
+
+         Funkcja 𝑓 ma trzy miejsca zerowe.                                                                                                P        F
+
+
+
+
+         Brudnopis
+
+
+
+
+                                                                    Strona 10 z 29
+                                                                                                                                       MMAP-P0_100
+Zadanie 10.3. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Najmniejsza wartość funkcji 𝑓 w przedziale [−4, 0] jest równa
+
+A. (−4)               B. (−3)               C. (−2)             D. 0
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 11. (0–1)
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) dane są: punkt 𝐴 = (8, 11) oraz okrąg
+o równaniu (𝑥 − 3)2 + (𝑦 + 1)2 = 25.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Odległość punktu 𝐴 od środka tego okręgu jest równa
+
+A. 25                 B. 13                 C. √125             D. √265
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 11 z 29
+MMAP-P0_100
+Zadanie 12.
+Basen ma długość 25 m. W najpłytszym miejscu jego głębokość jest równa 1,2 m.
+Przekrój podłużny tego basenu przedstawiono poglądowo na rysunku.
+Głębokość 𝑦 basenu zmienia się wraz z odległością 𝑥 od brzegu w sposób opisany
+funkcją:
+                              𝑎𝑥 + 𝑏      dla 0 ≤ 𝑥 ≤ 15 m
+                        𝑦={
+                              0,18𝑥 − 0,9 dla 15 m ≤ 𝑥 ≤ 25 m
+Odległość 𝑥 jest mierzona od płytszego brzegu w poziomie na powierzchni wody (zobacz
+rysunek). Wielkości 𝑥 i 𝑦 są wyrażone w metrach.
+
+                   𝑥
+
+ 1,2 m                            𝑦
+
+
+
+
+                                         25 m
+
+
+
+Zadanie 12.1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Największa głębokość basenu jest równa
+
+A. 5,4 m               B. 3,6 m             C. 2,2 m             D. 1,8 m
+
+
+ Brudnopis
+
+
+
+
+                                      Strona 12 z 29
+                                                                            MMAP-P0_100
+Zadanie 12.2. (0–2)                                            12.2.
+
+Oblicz wartość współczynnika 𝒂 oraz wartość współczynnika 𝒃.   0–2
+
+
+Zapisz obliczenia.
+
+
+
+
+                                 Strona 13 z 29
+MMAP-P0_100
+Zadanie 13.
+Funkcja kwadratowa 𝑓 jest określona wzorem 𝑓(𝑥) = −(𝑥 − 1)2 + 2.
+
+Zadanie 13.1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wykresem funkcji 𝑓 jest parabola, której wierzchołek ma współrzędne
+
+A. (1, 2)              B. (−1, 2)           C. (1, −2)            D. (−1, −2)
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 13.2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Zbiorem wartości funkcji 𝑓 jest przedział
+
+A. (−∞, 2]             B. (−∞, 2)           C. (2, +∞)            D. [2, +∞)
+
+
+ Brudnopis
+
+
+
+
+                                      Strona 14 z 29
+                                                                               MMAP-P0_100
+Zadanie 14.
+                                             7𝑛
+Dany jest ciąg (𝑎𝑛 ) określony wzorem 𝑎𝑛 =         dla każdej liczby naturalnej 𝑛 ≥ 1.
+                                             21
+
+
+Zadanie 14.1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Pięćdziesiątym wyrazem ciągu (𝑎𝑛 ) jest
+
+
+     749                  750                     751                     752
+A.                   B.                      C.                      D.
+      3                    3                       3                       3
+
+
+ Brudnopis
+
+
+
+
+Zadanie 14.2. (0–1)
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Ciąg (𝑎𝑛 ) jest geometryczny.                                                    P      F
+
+
+ Suma trzech początkowych wyrazów ciągu (𝑎𝑛 ) jest równa 20.                      P      F
+
+
+
+ Brudnopis
+
+
+
+
+                                    Strona 15 z 29
+MMAP-P0_100
+Zadanie 15. (0–1)
+Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥, 𝑦), dana jest prosta 𝑘
+o równaniu 𝑦 = 3𝑥 + 𝑏, przechodząca przez punkt 𝐴 = (−1, 3).
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Współczynnik 𝑏 w równaniu tej prostej jest równy
+
+A. 0                  B. 6                  C. (−10)                D. 8
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 16.
+Dany jest ciąg (𝑎𝑛 ) określony wzorem 𝑎𝑛 = 3𝑛 − 1 dla każdej liczby naturalnej 𝑛 ≥ 1.
+
+Zadanie 16.1. (0–1)
+Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A, B albo C oraz jej
+uzasadnienie 1., 2. albo 3.
+
+Ciąg (𝑎𝑛 ) jest
+
+
+ A.    rosnący,                                                1.   𝑎𝑛+1 − 𝑎𝑛 = −1
+
+ B.    malejący, ponieważ dla każdej liczby naturalnej 𝑛 ≥ 1   2.   𝑎𝑛+1 − 𝑎𝑛 = 0
+
+ C.    stały,                                                  3.   𝑎𝑛+1 − 𝑎𝑛 = 3
+
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 16 z 29
+                                                                              MMAP-P0_100
+Zadanie 16.2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Najmniejszą wartością 𝑛, dla której wyraz 𝑎𝑛 jest większy od 25, jest
+
+A. 8                  B. 9                   C. 7                  D. 26
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 16.3. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Suma 𝑛 początkowych wyrazów ciągu (𝑎𝑛 ) jest równa 57 dla 𝑛 równego
+
+A. 6                  B. 23                  C. 5                  D. 11
+
+
+
+ Brudnopis
+
+
+
+
+                                      Strona 17 z 29
+MMAP-P0_100
+Zadanie 17. (0–1)
+Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥, 𝑦), dane są:
+                                  1
+    • prosta 𝑘 o równaniu 𝑦 = 𝑥 + 5
+                                  2
+    • prosta 𝑙 o równaniu 𝑦 − 1 = −2𝑥 .
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Proste 𝑘 i 𝑙
+
+A. się pokrywają.
+B. nie mają punktów wspólnych.
+C. są prostopadłe.
+D. przecinają się pod kątem 30°.
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 18. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wartość wyrażenia (1 − cos 20°) ⋅ (1 + cos 20°) − sin2 20° jest równa
+
+A. (−1)               B. 0                  C. 1                  D. 20
+
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 18 z 29
+                                                                           MMAP-P0_100
+Zadanie 19. (0–1)
+W pojemniku są wyłącznie kule białe i czerwone. Stosunek liczby kul białych do liczby kul
+czerwonych jest równy 4 ∶ 5. Z pojemnika losujemy jedną kulę.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Prawdopodobieństwo wylosowania kuli białej jest równe
+
+     4                      4                      1                      1
+A.                     B.                     C.                     D.
+     9                      5                      9                      4
+
+
+ Brudnopis
+
+
+
+
+Zadanie 20. (0–1)
+Punkty 𝐴, 𝐵 oraz 𝐶 leżą na okręgu o środku w punkcie 𝑂. Kąt 𝐴𝐵𝑂 ma miarę 40°, a kąt
+𝑂𝐵𝐶 ma miarę 10° (zobacz rysunek).
+                                                       𝐶
+
+
+
+
+                                                              𝑂
+                                                                                      10°
+                                                                       40°
+                                              𝐴                               𝐵
+
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Miara kąta 𝐴𝐶𝑂 jest równa
+
+A. 30°                 B. 40°                 C. 50°                 D. 60°
+
+
+
+ Brudnopis
+
+
+
+
+                                       Strona 19 z 29
+MMAP-P0_100
+21.   Zadanie 21. (0–2)
+0–2   Dany jest trójkąt 𝐴𝐵𝐶 o bokach długości 6, 7 oraz 8.
+
+      Oblicz cosinus największego kąta tego trójkąta.
+
+      Zapisz obliczenia.
+
+
+
+
+                                           Strona 20 z 29
+                                                             MMAP-P0_100
+Zadanie 22. (0–1)
+W trójkącie 𝐴𝐵𝐶 bok 𝐴𝐵 ma długość 4, a bok 𝐵𝐶 ma długość 4,6. Dwusieczna kąta
+𝐴𝐵𝐶 przecina bok 𝐴𝐶 w punkcie 𝐷 takim, że |𝐴𝐷| = 3,2 (zobacz rysunek).
+
+                                                                𝐶
+
+
+
+
+                                        𝐷                 4,6
+                               3,2
+
+
+                          𝐴            4              𝐵
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Odcinek 𝐶𝐷 ma długość
+
+     64                  16                      23                      92
+A.                  B.                      C.                      D.
+     23                  5                       4                       25
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 21 z 29
+MMAP-P0_100
+23.   Zadanie 23. (0–4)
+0–4   Rodzinna firma stolarska produkuje małe wiatraki ogrodowe. Na podstawie analizy
+      rzeczywistych wpływów i wydatków stwierdzono, że:
+      • przychód 𝑃 (w złotych) z tygodniowej sprzedaży 𝑥 wiatraków można opisać funkcją
+          𝑃(𝑥) = 251𝑥
+      •   koszt 𝐾 (w złotych) produkcji 𝑥 wiatraków w ciągu jednego tygodnia można określić
+          funkcją 𝐾(𝑥) = 𝑥 2 + 21𝑥 + 170.
+
+      Tygodniowo w zakładzie można wyprodukować co najwyżej 150 wiatraków.
+
+      Oblicz, ile tygodniowo wiatraków należy sprzedać, aby zysk zakładu w ciągu jednego
+      tygodnia był największy. Oblicz ten największy zysk.
+
+      Zapisz obliczenia.
+      Wskazówka: przyjmij, że zysk jest różnicą przychodu i kosztów.
+
+
+
+
+                                            Strona 22 z 29
+                                                                                     MMAP-P0_100
+              Strona 23 z 29
+MMAP-P0_100
+Zadanie 24.
+Firma ℱ zatrudnia 160 osób. Rozkład płac brutto pracowników tej firmy przedstawia
+poniższy diagram. Na osi poziomej podano – wyrażoną w złotych – miesięczną płacę brutto,
+a na osi pionowej podano liczbę pracowników firmy ℱ , którzy otrzymują płacę miesięczną
+w danej wysokości.
+
+
+                               75
+                          80
+     Liczba pracowników
+
+
+
+
+                          70
+                          60
+                                              50
+                          50
+                          40
+                          30
+                                                              20
+                          20
+                                                                            10            5
+                          10
+                           0
+                               4000          4800           5000            6000        7000
+                                           Płaca miesięczna brutto (w złotych)
+
+
+Zadanie 24.1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Średnia miesięczna płaca brutto w firmie ℱ jest równa
+
+A. 4 593,75 zł                      B. 4 800,00 zł         C. 5 360,00 zł          D. 2 399,33 zł
+
+
+
+ Brudnopis
+
+
+
+
+                                                     Strona 24 z 29
+                                                                                               MMAP-P0_100
+Zadanie 24.2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Mediana miesięcznej płacy pracowników firmy ℱ jest równa
+
+A. 4 000 zł           B. 4 800 zł           C. 5 000 zł            D. 5 500 zł
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 24.3. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Liczba pracowników firmy ℱ , których miesięczna płaca brutto nie przewyższa
+5 000 zł, stanowi (w zaokrągleniu do 1%)
+
+A. 91% liczby wszystkich pracowników tej firmy.
+
+B. 78% liczby wszystkich pracowników tej firmy.
+
+C. 53% liczby wszystkich pracowników tej firmy.
+
+D. 22% liczby wszystkich pracowników tej firmy.
+
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 25 z 29
+MMAP-P0_100
+25.   Zadanie 25. (0–3)
+0–3   Każda z krawędzi podstawy trójkątnej ostrosłupa ma długość 10√3, a każda jego krawędź
+      boczna ma długość 15.
+
+      Oblicz wysokość tego ostrosłupa.
+
+      Zapisz obliczenia.
+
+
+
+
+                                          Strona 26 z 29
+                                                                                  MMAP-P0_100
+Zadanie 26. (0–2)                                                              26.
+                                                   𝟐
+Wykaż, że dla każdej liczby naturalnej 𝒏 liczba 𝟏𝟎𝒏 + 𝟑𝟎𝒏 + 𝟖 przy dzieleniu   0–2
+przez 𝟓 daje resztę 𝟑.
+
+
+
+
+                                  Strona 27 z 29
+MMAP-P0_100
+BRUDNOPIS (nie podlega ocenie)
+
+
+
+
+          Strona 28 z 29
+                                 MMAP-P0_100
+              Strona 29 z 29
+MMAP-P0_100
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+
+
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+
+
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+

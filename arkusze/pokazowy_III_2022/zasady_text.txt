@@ -1,0 +1,1112 @@
+                    Zasady oceniania rozwiązań
+Rodzaj dokumentu:
+                    zadań
+
+Egzamin:
+                    Egzamin maturalny
+                    Arkusz pokazowy
+
+Przedmiot:          Matematyka
+Poziom:             Poziom podstawowy
+                    MMAP-P0-100, MMAP-P0-200,
+                    MMAP-P0-300, MMAP-P0-400,
+Formy arkusza:
+                    MMAP-P0-660, MMAP-P0-700,
+                    MMAP-P0-Q00
+Data publikacji
+dokumentu:
+                    18 marca 2022 r.
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Uwagi:
+
+1. Akceptowane są wszystkie rozwiązania merytorycznie poprawne i spełniające warunki
+zadania.
+
+2. Jeżeli zdający, rozwiązując zadanie otwarte, popełni błędy rachunkowe, które na żadnym
+etapie rozwiązania nie upraszczają i nie zmieniają danego zagadnienia, lecz stosuje poprawną
+metodę i konsekwentnie do popełnionych błędów rachunkowych rozwiązuje zadanie, to może
+otrzymać co najwyżej (𝑛 − 1) punktów (gdzie 𝑛 jest maksymalną możliwą do uzyskania
+liczbą punktów za dane zadanie).
+
+
+Zadanie 1. (0–1)
+                            Wymagania egzaminacyjne 2023 i 20241
+
+                Wymaganie ogólne                              Wymagania szczegółowe
+ I. Sprawność rachunkowa.                            Zdający:
+ Wykonywanie obliczeń na liczbach                    I.1) wykonuje działania (dodawanie,
+ rzeczywistych, także przy użyciu                    odejmowanie, mnożenie, dzielenie,
+ kalkulatora, stosowanie praw działań                potęgowanie, pierwiastkowanie,
+ matematycznych przy przekształcaniu                 logarytmowanie) w zbiorze liczb
+ wyrażeń algebraicznych oraz                         rzeczywistych;
+ wykorzystywanie tych umiejętności przy              I.4) stosuje związek pierwiastkowania
+ rozwiązywaniu problemów w kontekstach               z potęgowaniem oraz prawa działań na
+ rzeczywistych i teoretycznych.                      potęgach i pierwiastkach.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+
+
+1 Komunikat o wymaganiach egzaminacyjnych obowiązujących w roku 2023 i 2024,
+
+https://www.gov.pl/web/edukacja-i-nauka/wymagania-egzaminacyjne-obowiazujace-na-egzaminie-maturalnym-w-
+roku-2023-i-2024
+
+
+
+
+Strona 2 z 25
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 2. (0–1)
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ I. Sprawność rachunkowa.                   Zdający:
+ Wykonywanie obliczeń na liczbach           I.9) stosuje związek logarytmowania
+ rzeczywistych, także przy użyciu           z potęgowaniem, posługuje się wzorami na
+ kalkulatora, stosowanie praw działań       logarytm iloczynu, logarytm ilorazu
+ matematycznych przy przekształcaniu        i logarytm potęgi.
+ wyrażeń algebraicznych oraz
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+Zadanie 3. (0-1)
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             XI.2) zlicza obiekty, stosując reguły
+ 2. Dobieranie i tworzenie modeli           mnożenia i dodawania […].
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+
+
+                                                                                Strona 3 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Zadanie 4. (0–1)
+                Wymaganie ogólne                             Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie               Zdający:
+ reprezentacji.                                     II.1) stosuje wzory skróconego mnożenia
+ 1. Stosowanie obiektów matematycznych              na: (𝑎 + 𝑏)2 , (𝑎 − 𝑏)2 , 𝑎2 − 𝑏 2 .
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+Zadanie 5. (0–2)
+                Wymaganie ogólne                             Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie               Zdający:
+ reprezentacji.                                     IV.1) rozwiązuje układy równań liniowych
+ 1. Stosowanie obiektów matematycznych              z dwiema niewiadomymi, podaje
+ i operowanie nimi, interpretowanie pojęć           interpretację geometryczną układów
+ matematycznych.                                    oznaczonych, nieoznaczonych
+                                                    i sprzecznych.
+                                                    VIII.4) korzysta z własności kątów […].
+
+Zasady oceniania
+2 pkt – wybranie dwóch poprawnych odpowiedzi: B i E.
+1 pkt – wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: B albo E.
+0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+BE
+
+
+
+
+Strona 4 z 25
+                                                            Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 6. (0–1)
+            Wymagania ogólne                          Wymaganie szczegółowe
+ I. Sprawność rachunkowa.                   Zdający:
+ Wykonywanie obliczeń na liczbach           V.2) oblicza wartość funkcji zadanej
+ rzeczywistych, także przy użyciu           wzorem algebraicznym.
+ kalkulatora, stosowanie praw działań
+ matematycznych przy przekształcaniu
+ wyrażeń algebraicznych oraz
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+ III. Wykorzystanie i interpretowanie
+ reprezentacji.
+ 1. Stosowanie obiektów matematycznych
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+Zadanie 7. (0–1)
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             III.6) rozwiązuje równania wymierne postaci
+ 1. Stosowanie obiektów matematycznych       𝑉(𝑥)
+                                                    = 0, gdzie wielomiany 𝑉(𝑥) i 𝑊(𝑥)
+ i operowanie nimi, interpretowanie pojęć   𝑊(𝑥)
+ matematycznych.                            są zapisane w postaci iloczynowej.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+
+
+                                                                               Strona 5 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Zadanie 8. (0–1)
+                Wymaganie ogólne                             Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie               Zdający:
+ reprezentacji.                                     I.6) posługuje się pojęciem przedziału
+ 1. Stosowanie obiektów matematycznych              liczbowego, zaznacza przedziały na osi
+ i operowanie nimi, interpretowanie pojęć           liczbowej;
+ matematycznych.                                    I.7) stosuje interpretację geometryczną
+                                                    i algebraiczną wartości bezwzględnej,
+                                                    rozwiązuje równania i nierówności typu:
+                                                    |𝑥 + 4| = 5, |𝑥 − 2| < 3, |𝑥 + 3| ≥ 4.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 9. (0–2)
+                Wymaganie ogólne                             Wymaganie szczegółowe
+ IV. Rozumowanie i argumentacja.                    Zdający:
+ 1. Przeprowadzanie rozumowań, także                I.2) przeprowadza proste dowody dotyczące
+ kilkuetapowych, podawanie argumentów               podzielności liczb całkowitych i reszt
+ uzasadniających poprawność rozumowania,            z dzielenia […].
+ odróżnianie dowodu od przykładu.
+
+Zasady oceniania
+dla sposobów 1. i 2.
+2 pkt – przeprowadzenie pełnego dowodu, tzn.:
+        przekształcenie wyrażenia (2𝑘 + 1)2 + 2023 do postaci 4 ⋅ 𝑚(𝑘) oraz
+        uzasadnienie, że 𝑚(𝑘) jest liczbą parzystą
+        LUB
+        przekształcenie wyrażenia (2𝑘 + 1)2 + 2023 do postaci sumy składników, z których
+        każdy jest liczbą podzielną przez 8 i uzasadnienie podzielności przez 8 każdego
+        składnika
+        LUB
+        uzasadnienie podzielności przez 8 wyrażeń (4𝑘 − 1)2 + 2023 oraz
+        (4𝑘 + 1)2 + 2023, gdzie 𝑘 ∈ ℤ
+        LUB
+        zapisanie liczby 𝑛2 + 2023 w postaci 𝑛2 − 1 + 8 ⋅ 253 i uzasadnienie, że 𝑛2 − 1
+        jest liczbą podzielną przez 8.
+1 pkt – zapisanie liczby 𝑛 w postaci 𝑛 = 2𝑘 + 1, gdzie 𝑘 ∈ ℤ, i przekształcenie wyrażenia
+        (2𝑘 + 1)2 + 2023 do 4𝑘 2 + 4𝑘 + 1 + 2023 lub (2𝑘 + 1)2 − 1 + 2024
+
+
+
+Strona 6 z 25
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+        LUB
+        przeprowadzenie pełnego dowodu dla 𝑛 postaci 4𝑘 − 1 (lub 4𝑘 + 1), gdzie 𝑘 ∈ ℤ
+        LUB
+        przeprowadzenie pełnego dowodu dla dwóch lub trzech przypadków spośród:
+        𝑛 = 8𝑘 + 1, 𝑛 = 8𝑘 + 3, 𝑛 = 8𝑘 + 5, 𝑛 = 8𝑘 + 7 (gdzie 𝑘 ∈ ℤ)
+        LUB
+        zapisanie liczby 𝑛2 + 2023 w postaci 𝑛2 − 1 + 8 ⋅ 253.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Uwagi:
+1. Jeżeli zdający stosuje metodę indukcji i przeprowadzi dowód tylko dla liczb
+   dodatnich/ujemnych, to może otrzymać co najwyżej 1 punkt za całe rozwiązanie.
+2. Jeżeli zdający sprawdza prawdziwość tezy tylko dla wybranych wartości 𝑛, to otrzymuje
+   0 punktów za całe rozwiązanie.
+
+Przykładowe pełne rozwiązania
+Sposób 1.
+Niech 𝑛 będzie liczbą całkowitą nieparzystą. Wtedy 𝑛 = 2𝑘 + 1 przy pewnym 𝑘 ∈ ℤ, więc
+𝑛2 + 2023 = (2𝑘 + 1)2 + 2023 = 4𝑘 2 + 4𝑘 + 1 + 2023 = 4𝑘(𝑘 + 1) + 2024.
+Jeżeli 𝑘 jest liczbą parzystą, to liczba 4𝑘(𝑘 + 1) jest podzielna przez 8 jako iloczyn
+liczby 4, liczby parzystej 𝑘 i liczby całkowitej 𝑘 + 1.
+Jeżeli 𝑘 jest liczbą nieparzystą, to liczba 4𝑘(𝑘 + 1) jest podzielna przez 8 jako iloczyn
+liczby 4, liczby parzystej 𝑘 + 1 i liczby całkowitej 𝑘 .
+Liczba 2024 jest podzielna przez 8, gdyż 2024 = 8 ⋅ 253.
+Zatem liczba 4𝑘(𝑘 + 1) + 2024 jest podzielna przez 8 jako suma liczb podzielnych
+przez 8. To kończy dowód.
+
+Sposób 2.
+Zauważmy, że 𝑛2 + 2023 = 𝑛2 − 1 + 2024 = (𝑛 − 1)(𝑛 + 1) + 8 ⋅ 506 .
+Ponieważ 𝑛 jest liczbą całkowitą nieparzystą, to 𝑛 − 1 i 𝑛 + 1 to dwie kolejne liczby
+parzyste. Zatem jedna z tych liczb jest podzielna przez 4. Stąd wynika, że iloczyn
+(𝑛 − 1)(𝑛 + 1) jest podzielny przez 2 ⋅ 4 = 8. Suma dwóch liczb podzielnych przez 8 jest
+podzielna przez 8. To kończy dowód.
+
+
+
+
+                                                                                Strona 7 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Zadanie 10.1. (0–1)
+                Wymagania ogólne                             Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.          Zdający:
+ 1. Interpretowanie i operowanie                    V.12) na podstawie wykresu funkcji
+ informacjami przedstawionymi w tekście,            𝑦 = 𝑓(𝑥) szkicuje wykresy funkcji
+ zarówno matematycznym, jak                         𝑦 = 𝑓(𝑥 − 𝑎), 𝑦 = 𝑓(𝑥) + 𝑏 […].
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+ III. Wykorzystanie i interpretowanie
+ reprezentacji.
+ 1. Stosowanie obiektów matematycznych
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+Zadanie 10.2. (0–1)
+                Wymaganie ogólne                             Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.          Zdający:
+ 1. Interpretowanie i operowanie                    V.4) odczytuje z wykresu funkcji: dziedzinę,
+ informacjami przedstawionymi w tekście,            zbiór wartości, miejsca zerowe, przedziały
+ zarówno matematycznym, jak                         monotoniczności, przedziały, w których
+ i popularnonaukowym, a także w formie              funkcja przyjmuje wartości większe (nie
+ wykresów, diagramów, tabel.                        mniejsze) lub mniejsze (nie większe) od
+                                                    danej liczby, największe i najmniejsze
+                                                    wartości funkcji (o ile istnieją) w danym
+                                                    przedziale domkniętym oraz argumenty, dla
+                                                    których wartości największe i najmniejsze
+                                                    są przez funkcję przyjmowane.
+
+Zasady oceniania
+1 pkt – rozwiązanie poprawne.
+0 pkt – rozwiązanie niepoprawne lub niepełne albo brak rozwiązania.
+
+
+Przykładowe pełne rozwiązanie
+(−∞, −1] ∪ [3, +∞)
+
+
+
+
+Strona 8 z 25
+                                                              Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 10.3. (0–3)
+            Wymaganie ogólne                          Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               V.8) interpretuje współczynniki występujące
+ 1. Stosowanie obiektów matematycznych        we wzorze funkcji kwadratowej w postaci
+ i operowanie nimi, interpretowanie pojęć     ogólnej, kanonicznej i iloczynowej (jeśli
+ matematycznych.                              istnieje);
+                                              V.9) wyznacza wzór funkcji kwadratowej na
+                                              podstawie informacji o tej funkcji lub o jej
+                                              wykresie.
+
+
+Zasady oceniania
+3 pkt – poprawna metoda obliczenia (lub wyznaczenia) współczynnika 𝑎 i zapisanie wzoru
+        funkcji 𝑓 w postaci kanonicznej: 𝑓(𝑥) = −2(𝑥 − 1)2 + 8.
+2 pkt – zapisanie poprawnego równania z jedną niewiadomą 𝑎
+        LUB
+        zapisanie wzoru funkcji 𝑓 w postaci 𝑓(𝑥) = −2(𝑥 − 1)2 + 8 bez uzasadnienia, że
+        𝑎 = −2.
+1 pkt – poprawne odczytanie z wykresu współrzędnych wierzchołka paraboli i zapisanie
+        𝑓(𝑥) = 𝑎(𝑥 − 1)2 + 8 (lub zapisanie 𝑓(𝑥) = 𝑎(𝑥 − 1)2 + 8 z arbitralnie przyjętym
+        współczynnikiem 𝑎 ≠ −2)
+        LUB
+        poprawne odczytanie z wykresu miejsc zerowych funkcji 𝑓 i zapisanie
+       𝑓(𝑥) = 𝑎(𝑥 + 1)(𝑥 − 3)
+        LUB
+        zapisanie wzoru funkcji 𝑓 w postaci ogólnej 𝑓(𝑥) = 𝑎𝑥 2 + 𝑏𝑥 + 𝑐 i zapisanie
+        trzech poprawnych równań z niewiadomymi 𝑎, 𝑏 oraz 𝑐 .
+0 pkt – rozwiązanie niepoprawne lub niepełne albo brak rozwiązania.
+
+Uwagi:
+1. Jeżeli zdający błędnie odczyta jedną współrzędną wierzchołka paraboli będącej
+   wykresem funkcji 𝑓 i konsekwentnie doprowadzi rozwiązanie do końca, to może
+   otrzymać co najwyżej 2 punkty za całe rozwiązanie.
+2. Jeżeli zdający błędnie odczyta jedną współrzędną wierzchołka lub innego punktu
+   należącego do wykresu funkcji 𝑓 i konsekwentnie do popełnionego błędu zapisze
+   równanie z jedną niewiadomą 𝑎, i na tym zakończy, to może otrzymać co najwyżej
+   1 punkt za całe rozwiązanie.
+
+
+Przykładowe pełne rozwiązanie
+Korzystamy ze wzoru na postać kanoniczną funkcji kwadratowej i zapisujemy
+𝑓(𝑥) = 𝑎(𝑥 − 𝑝)2 + 𝑞 .
+Odczytujemy z wykresu funkcji 𝑓 współrzędne wierzchołka paraboli: 𝑝 = 1 oraz 𝑞 = 8.
+Zatem 𝑓(𝑥) = 𝑎(𝑥 − 1)2 + 8.
+
+
+                                                                                 Strona 9 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Z wykresu odczytujemy jedno z miejsc zerowych funkcji 𝑓 , np. 𝑥 = −1. Ponieważ
+𝑓(−1) = 0, więc
+                                       0 = 𝑎(−1 − 1)2 + 8
+
+                                              𝑎 = −2
+
+Wzór funkcji 𝑓 w postaci kanonicznej: 𝑓(𝑥) = −2(𝑥 − 1)2 + 8.
+
+
+
+
+Strona 10 z 25
+                                                              Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 11. (0–1)
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             V.5) interpretuje współczynniki występujące
+ informacjami przedstawionymi w tekście,     we wzorze funkcji liniowej.
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+
+Rozwiązanie
+B
+
+
+Zadanie 12. (0–1)
+            Wymagania ogólne                          Wymagania szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             V.6) wyznacza wzór funkcji liniowej na
+ informacjami przedstawionymi w tekście,     podstawie informacji o jej wykresie lub o jej
+ zarówno matematycznym, jak                  własnościach;
+ i popularnonaukowym, a także w formie       V.11) wykorzystuje własności funkcji
+ wykresów, diagramów, tabel.                 liniowej i kwadratowej do interpretacji
+ III. Wykorzystanie i interpretowanie        zagadnień geometrycznych, fizycznych itp.,
+ reprezentacji.                              także osadzonych w kontekście
+ 2. Dobieranie i tworzenie modeli            praktycznym.
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+
+Rozwiązanie
+B
+
+
+
+
+                                                                                Strona 11 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Zadanie 13.1 (0–1)
+                 Wymagania ogólne                              Wymagania szczegółowe
+ II. Wykorzystanie i tworzenie informacji.          Zdający:
+ 1. Interpretowanie i operowanie                    V.3) odczytuje i interpretuje wartości funkcji
+ informacjami przedstawionymi w tekście,            określonych za pomocą tabel, wykresów,
+ zarówno matematycznym, jak                         wzorów itp., również w sytuacjach
+ i popularnonaukowym, a także w formie              wielokrotnego użycia tego samego źródła
+ wykresów, diagramów, tabel.                        informacji lub kilku źródeł jednocześnie;
+ III. Wykorzystanie i interpretowanie               V.13) posługuje się funkcjami wykładniczą
+ reprezentacji.                                     i logarytmiczną, w tym ich wykresami, do
+ 2. Dobieranie i tworzenie modeli                   opisu i interpretacji zagadnień związanych
+ matematycznych przy rozwiązywaniu                  z zastosowaniami praktycznymi.
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 13.2 (0–3)
+                 Wymagania ogólne                              Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.          Zdający:
+ 1. Interpretowanie i operowanie                    VI.5) stosuje wzór na 𝑛–ty wyraz i na sumę
+ informacjami przedstawionymi w tekście,            𝑛 początkowych wyrazów ciągu
+ zarówno matematycznym, jak                         geometrycznego.
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+ III. Wykorzystanie i interpretowanie
+ reprezentacji.
+ 2. Dobieranie i tworzenie modeli
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+dla sposobów 1. i 2.
+3 pkt – poprawna metoda obliczenia masy leku tuż przed przyjęciem jedenastej dawki
+        i poprawny wynik: 99,9 mg.
+2 pkt – poprawne zastosowanie wzoru na sumę początkowych kolejnych wyrazów ciągu
+                                                                          1 10
+                                                       1 1−(2)
+        geometrycznego i zapisanie sumy w postaci 100 ⋅ ⋅
+                                                       2 1−1
+                                                                          2
+
+
+
+
+Strona 12 z 25
+                                                               Zasady oceniania rozwiązań zadań
+
+
+
+       LUB
+       wypisanie wszystkich mas leku pozostających w organizmie tuż przed przyjęciem
+       jedenastej dawki (z kolejno przyjmowanych dawek) albo mas leku pozostałych
+       z przyjęcia pierwszej dawki po kolejnych okresach czterodniowych i zastosowanie
+       bezpośredniego zsumowania wyrazów, np.:
+       50 + 25 + 12,5 + 6,25 + 3,125 + 1,56 + 0,781 + 0,391 + 0,195 + 0,098
+        LUB
+        poprawne obliczenie masy leku pozostającego w organizmie po 4, 8, 12 itd. dniach
+        (tuż przed przyjęciem kolejnej dawki): 50 mg, 75 mg, 87,5 mg, itd.
+        LUB
+        poprawne obliczenie masy leku pozostającego w organizmie tuż po przyjęciu
+        kolejnych dawek leku: 100 mg, 150 mg, 175 mg, 187,5 mg, itd.
+1 pkt – poprawne wyznaczenie mas leku, jakie pozostały w organizmie z poszczególnych
+        dawek na moment przed przyjęciem jedenastej dawki:
+                1 10             1 9              1 8                1 1
+        100 ⋅ (2) mg, 100 ⋅ (2) mg, 100 ⋅ (2) mg, …, 100 ⋅ (2) mg
+        LUB
+        obliczenie poszczególnych mas leku pozostających w organizmie przed przyjęciem
+        jedenastej dawki: 50 mg (z dziesiątej dawki), 25 mg (z dziewiątej dawki), …,
+        0,098 mg (z pierwszej dawki)
+        LUB
+        zapisanie sumy 𝑚(4) + 𝑚(8)+. . . +𝑚(40)
+        LUB
+        obliczenie mas leku pozostałych z przyjęcia pierwszej dawki po kolejnych okresach
+        czterodniowych: 50 mg, 25 mg, …, 0,098 mg.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Uwagi:
+1. Jeżeli zdający poprawnie określa masę leku w organizmie tuż po przyjęciu kolejnych
+   dawek (lub tuż przed przyjęciem kolejnych dawek), lecz popełnia błąd przy ustaleniu
+   liczby przyjętych dawek i konsekwentnie doprowadza rozwiązanie do końca, to może
+   otrzymać co najwyżej 2 punkty za całe rozwiązanie.
+2. Jeżeli zdający przy sumowaniu mas leku, jakie pozostały w organizmie z poszczególnych
+   dawek na moment przed przyjęciem jedenastej dawki, określi pierwszy wyraz ciągu
+   jako 100 i konsekwentnie doprowadza rozwiązanie do końca, to może otrzymać co
+   najwyżej 2 punkty.
+
+Przykładowe pełne rozwiązania
+Sposób 1.
+Pacjent przyjmuje jedenastą dawkę leku po 40 dniach, licząc od momentu przyjęcia
+pierwszej dawki.
+Tuż przed przyjęciem jedenastej dawki leku w organizmie pacjenta znajduje się:
+       1 10
+100 ⋅ (2) mg leku z pierwszej dawki,
+       1 9
+100 ⋅ (2) mg leku z drugiej dawki,
+
+
+
+
+                                                                                 Strona 13 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+       1 8
+100 ⋅ (2) mg leku z trzeciej dawki,
+⋮
+       1 2
+100 ⋅ (2) mg leku z dziewiątej dawki,
+       1 1
+100 ⋅ (2) mg leku z dziesiątej dawki.
+Łącznie w organizmie pacjenta znajduje się
+           1             2                    9              10
+                                                                                 1 10
+                                                                            1 − (
+       1           1               1           1
+100 ⋅ ( ) + 100 ⋅ ( ) + … + 100 ⋅ ( ) + 100 ⋅ ( )
+                                                                         1
+                                                                  = 100 ⋅ ⋅      2) =
+       2           2               2           2                         2        1
+                                                                              1−2
+            1 10
+= 100 (1 − (2) ) ≈ 99,9 mg leku.
+
+Sposób 2.
+Obliczamy i zapisujemy w lewej tabeli łączną masę leku (w mg), który jest w organizmie
+pacjenta tuż po przyjęciu każdej kolejnej dawki 100 mg tego leku.
+W prawej tabeli obliczamy i zapisujemy masę leku (w mg), który pozostaje w organizmie
+pacjenta tuż przed przyjęciem kolejnej dawki, z uwzględnieniem czasu półtrwania tego leku
+(𝑇 = 4 doby) w organizmie pacjenta.
+
+
+                     tuż po przyjęciu                         tuż przed przyjęciem
+
+                  1. dawki         100                            50       2. dawki
+                  2. dawki         150                            75       3. dawki
+                  3. dawki         175                        87,5         4. dawki
+                  4. dawki        187,5                       93,75        5. dawki
+                  5. dawki       193,75                       96,88        6. dawki
+                  6. dawki       196,88                       98,44        7. dawki
+                  7. dawki       198,44                       99,22        8. dawki
+                  8. dawki       199,22                       99,61        9. dawki
+                  9. dawki       199,61                       99,81       10. dawki
+                  10. dawki      199,81                       𝟗𝟗, 𝟗       11. dawki
+
+
+Zatem tuż przed przyjęciem jedenastej dawki łączna masa tego leku w organizmie pacjenta
+jest równa 99,9 mg.
+
+
+
+
+Strona 14 z 25
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 14. (0–1)
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ I. Sprawność rachunkowa.                    Zdający:
+ Wykonywanie obliczeń na liczbach            I.8) wykorzystuje własności potęgowania
+ rzeczywistych, także przy użyciu            i pierwiastkowania w sytuacjach
+ kalkulatora, stosowanie praw działań        praktycznych, w tym do obliczania
+ matematycznych przy przekształcaniu         procentów składanych z kapitalizacją
+ wyrażeń algebraicznych oraz                 roczną i zysków z lokat.
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+Zadanie 15. (0–1)
+            Wymaganie ogólne                          Wymagania szczegółowe
+ IV. Rozumowanie i argumentacja.             Zdający:
+ 3. Dobieranie argumentów do uzasadnienia    VI.1) oblicza wyrazy ciągu określonego
+ poprawności rozwiązywania problemów,        wzorem ogólnym;
+ tworzenie ciągu argumentów,                 VI.3) sprawdza, czy dany ciąg jest
+ gwarantujących poprawność rozwiązania       arytmetyczny lub geometryczny.
+ i skuteczność w poszukiwaniu rozwiązań
+ zagadnienia.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+PF
+
+
+
+
+                                                                               Strona 15 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Zadanie 16. (0–1)
+                 Wymaganie ogólne                            Wymaganie szczegółowe
+ IV. Rozumowanie i argumentacja.                    Zdający:
+ 3. Dobieranie argumentów do uzasadnienia           VII.3) stosuje twierdzenie cosinusów oraz
+ poprawności rozwiązywania problemów,                                           1
+                                                    wzór na pole trójkąta 𝑃 = ∙ 𝑎 ∙ 𝑏 ∙ sin 𝛾.
+ tworzenie ciągu argumentów,                                                    2
+ gwarantujących poprawność rozwiązania
+ i skuteczność w poszukiwaniu rozwiązań
+ zagadnienia.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+PP
+
+
+Zadanie 17. (0-1)
+                 Wymaganie ogólne                            Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie               Zdający:
+ reprezentacji.                                     IX.4) posługuje się równaniem okręgu
+ 1. Stosowanie obiektów matematycznych              (𝑥 − 𝑎)2 + (𝑦 − 𝑏)2 = 𝑟 2 .
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+
+
+Strona 16 z 25
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 18. (0–1)
+            Wymaganie ogólne                         Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              VIII.8) korzysta z cech podobieństwa
+ 1. Stosowanie obiektów matematycznych       trójkątów.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – poprawna metoda rozwiązania oraz zapisanie wyniku: |𝑂𝐷| = 6.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+
+Przykładowe pełne rozwiązanie
+Ponieważ |∡𝑂𝐴𝐵| = |∡𝑂𝐶𝐷| (z założenia), |∡𝐴𝑂𝐵| = |∡𝐶𝑂𝐷| (jako miary kątów
+wierzchołkowych) oraz |∡𝐴𝐵𝑂| = |∡𝐶𝐷𝑂| (z twierdzenia o sumie miar kątów w trójkącie),
+więc trójkąty 𝐴𝐵𝑂 i 𝑂𝐷𝐶 są podobne na mocy cechy kkk podobieństwa trójkątów.
+Zatem
+                                      |𝐶𝑂| |𝑂𝐷|
+                                          =
+                                      |𝐴𝑂| |𝑂𝐵|
+                                       10 |𝑂𝐷|
+                                          =
+                                        5   3
+                                        |𝑂𝐷| = 6
+
+Długość boku 𝑂𝐷 trójkąta 𝑂𝐷𝐶 jest równa 6.
+
+
+
+
+                                                                               Strona 17 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Zadanie 19. (0–2)
+                 Wymaganie ogólne                            Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie               Zdający:
+ reprezentacji.                                     IX.2) posługuje się równaniem prostej na
+ 1. Stosowanie obiektów matematycznych              płaszczyźnie w postaci kierunkowej, w tym
+ i operowanie nimi, interpretowanie pojęć           wyznacza równanie prostej o zadanych
+ matematycznych.                                    własnościach (takich jak na przykład
+                                                    przechodzenie przez dwa dane punkty,
+                                                    znany współczynnik kierunkowy,
+                                                    równoległość lub prostopadłość do innej
+                                                    prostej, styczność do okręgu).
+
+Zasady oceniania
+2 pkt – poprawne dokończenia dwóch zdań.
+1 pkt – poprawne dokończenie jednego zdania.
+0 pkt – odpowiedź całkowicie niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+1. B 2. E
+
+
+Zadanie 20. (0–1)
+                 Wymaganie ogólne                            Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie               Zdający:
+ reprezentacji.                                     IX.3) oblicza odległość dwóch punktów
+ 1. Stosowanie obiektów matematycznych              w układzie współrzędnych.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+Zadanie 21. (0–1)
+                 Wymaganie ogólne                            Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie               Zdający:
+ reprezentacji.                                     VII.4) oblicza kąty trójkąta i długości jego
+ 1. Stosowanie obiektów matematycznych              boków przy odpowiednich danych […].
+ i operowanie nimi, interpretowanie pojęć           VIII.5) stosuje własności kątów wpisanych
+ matematycznych.                                    i środkowych.
+
+
+
+
+Strona 18 z 25
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 22. (0–1)
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              VII.2) korzysta z wzorów
+ 1. Stosowanie obiektów matematycznych                                      sin 𝛼
+                                             sin2 𝛼 + cos 2 𝛼 = 1, tg 𝛼 =         .
+ i operowanie nimi, interpretowanie pojęć                                   cos 𝛼
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 23. (0–1)
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ IV. Rozumowanie i argumentacja.             Zdający:
+ 3. Dobieranie argumentów do                 VIII.9) wykorzystuje zależności między
+ uzasadnienia poprawności                    obwodami oraz między polami figur
+ rozwiązywania problemów, tworzenie          podobnych.
+ ciągu argumentów gwarantujących
+ poprawność rozwiązania i skuteczność
+ w poszukiwaniu rozwiązań
+ zagadnienia.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A2
+
+
+
+
+                                                                                Strona 19 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Zadanie 24. (0–1)
+                 Wymagania ogólne                            Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie               Zdający:
+ reprezentacji.                                     VIII.5) stosuje własności kątów wpisanych
+ 1. Stosowanie obiektów matematycznych              i środkowych;
+ i operowanie nimi, interpretowanie pojęć           VIII.7) stosuje twierdzenia: Talesa,
+ matematycznych;                                    odwrotne do twierdzenia Talesa,
+ 3. Tworzenie pomocniczych obiektów                 o dwusiecznej kąta oraz o kącie między
+ matematycznych na podstawie istniejących,          styczną a cięciwą.
+ w celu przeprowadzenia argumentacji lub
+ rozwiązania problemu.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+Zadanie 25. (0–1)
+                 Wymaganie ogólne                            Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie               Zdający:
+ reprezentacji.                                     VIII.11) stosuje funkcje trygonometryczne
+ 1. Stosowanie obiektów matematycznych              do wyznaczania długości odcinków
+ i operowanie nimi, interpretowanie pojęć           w figurach płaskich oraz obliczania pól figur.
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+
+
+Strona 20 z 25
+                                                            Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 26. (0–1)
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             X.5) wykorzystuje zależność między
+ 1. Stosowanie obiektów matematycznych      objętościami graniastosłupów oraz
+ i operowanie nimi, interpretowanie pojęć   ostrosłupów podobnych.
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+Zadanie 27. (0–1)
+            Wymaganie ogólne                          Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             X.2) posługuje się pojęciem kąta między
+ 1. Stosowanie obiektów matematycznych      prostą a płaszczyzną;
+ i operowanie nimi, interpretowanie pojęć   X.3) rozpoznaje w graniastosłupach
+ matematycznych.                            i ostrosłupach kąty między odcinkami (np.
+                                            krawędziami, krawędziami i przekątnymi),
+                                            oblicza miary tych kątów.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+
+
+                                                                              Strona 21 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+Zadanie 28. (0–3)
+                 Wymaganie ogólne                            Wymagania szczegółowe
+ IV. Rozumowanie i argumentacja.                    Zdający:
+ 2. Dostrzeganie regularności, podobieństw          XI.2) zlicza obiekty, stosując reguły
+ oraz analogii, formułowanie wniosków na            mnożenia i dodawania […].
+ ich podstawie i uzasadnianie ich                   XII.1) oblicza prawdopodobieństwo
+ poprawności.                                       w modelu klasycznym.
+
+Zasady oceniania
+3 pkt – poprawna metoda obliczenia prawdopodobieństwa zdarzenia 𝐴 i podanie
+                                       |𝐴|    10
+        poprawnego wyniku: 𝑃(𝐴) =          = 9000 .
+                                       |Ω|
+2 pkt – obliczenie liczby wszystkich zdarzeń elementarnych i liczby wszystkich zdarzeń
+        sprzyjających zdarzeniu 𝐴: |Ω| = 9000, |𝐴| = 10.
+1 pkt – obliczenie liczby wszystkich zdarzeń elementarnych: |Ω| = 9999 − 999 = 9 000
+        LUB
+        wypisanie wszystkich zdarzeń elementarnych sprzyjających zdarzeniu 𝐴
+        i niezapisanie żadnego niewłaściwego:
+                     1011, 1101, 1110, 1002, 1020, 1200, 2001, 2010, 2100, 3000
+        LUB
+        obliczenie liczby wszystkich zdarzeń elementarnych sprzyjających zdarzeniu 𝐴:
+        |𝐴| = 10.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Uwaga:
+                                         10
+Jeżeli zdający zapisze tylko 𝑃(𝐴) =          , to otrzymuje 1 punkt.
+                                        9000
+
+Przykładowe pełne rozwiązanie
+Ponieważ losy są ponumerowane kolejno od 1000 do 9999, więc początkowa liczba
+wszystkich losów na tej loterii jest równa 9999 − 999 = 9000. Zatem |Ω| = 9000.
+Niech 𝐴 oznacza zdarzenie polegające na tym, że pierwszy wylosowany z pojemnika los
+był wygrywający. Wtedy
+𝐴 = {1011, 1101, 1110, 1002, 1020, 1200, 2001, 2010, 2100, 3000}, więc |𝐴| = 10.
+Obliczamy prawdopodobieństwo zdarzenia 𝐴:
+
+                                             |𝐴|   10   1
+                                   𝑃(𝐴) =        =    =
+                                             |Ω| 9000 900
+
+
+
+
+Strona 22 z 25
+                                                               Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 29. (0–4)
+            Wymaganie ogólne                             Wymaganie szczegółowe
+ IV. Rozumowanie i argumentacja.               Zdający:
+ 4. Stosowanie i tworzenie strategii podczas   XIII. rozwiązuje zadania optymalizacyjne
+ rozwiązywania zadań, również                  w sytuacjach dających się opisać funkcją
+ w sytuacjach nietypowych.                     kwadratową.
+
+Zasady oceniania
+4 pkt – poprawna metoda obliczenia długości boków równoległoboku o największym polu,
+        poprawne wyznaczenie dziedziny funkcji 𝑃, oraz podanie prawidłowych wyników:
+        𝐷 = (0, 100), 𝑥 = 50, 𝑏 = 50 oraz 𝑃(50) = 1250.
+3 pkt – poprawne zapisanie wzoru na pole 𝑃 równoległoboku w zależności od jednej
+        zmiennej, wyznaczenie dziedziny 𝐷 tej funkcji oraz prawidłowe obliczenie
+        argumentu 𝑥𝑜𝑝𝑡 , dla którego funkcja pola osiąga wartość największą:
+                               1
+        𝑃(𝑥) = 𝑥 ∙ (100 − 𝑥) ∙ 2 , 𝐷 = (0, 100), 𝑥𝑜𝑝𝑡 = 50.
+        LUB
+        poprawna metoda obliczenia długości boków równoległoboku o największym polu
+        oraz podanie prawidłowych wyników bez wyznaczonej dziedziny: 𝑥 = 50,
+        𝑏 = 50 oraz 𝑃(50) = 1250.
+2 pkt – poprawne zapisanie wzoru na pole równoległoboku w zależności od jednej zmiennej:
+                               1
+        𝑃(𝑥) = 𝑥 ∙ (100 − 𝑥) ∙ 2 .
+1 pkt – zapisanie wzoru na pole równoległoboku w zależności od długości dwóch sąsiednich
+        boków równoległoboku, np.: 𝑃 = 𝑥 ⋅ 𝑏 ∙ sin 30°
+        LUB
+        zapisanie związku między długościami boków równoległoboku, np.: 2𝑥 + 2𝑏 = 200
+        LUB
+        zapisanie zakresu zmienności długości 𝑥 boku równoległoboku, np.
+        𝑥 > 0 i 𝑥 < 100.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+
+Przykładowe pełne rozwiązanie
+Oznaczmy przez 𝑥 oraz 𝑏 długości boków
+                                                           𝐷                                 𝐶
+równoległoboku o obwodzie równym 200
+i kącie ostrym o mierze 30° (zobacz
+rysunek).                                           𝑏
+
+
+
+                                                   30°
+                                               𝐴               𝑥               𝐵
+
+Ponieważ 2𝑥 + 2𝑏 = 200 oraz 𝑥 > 0 i 𝑏 > 0, więc 𝑏 = 100 − 𝑥 i 𝑥 ∈ (0, 100).
+Wyznaczamy pole 𝑃 równoległoboku jako funkcję jednej zmiennej 𝑥 :
+
+
+
+                                                                                 Strona 23 z 25
+Arkusz pokazowy z egzaminu maturalnego z matematyki (poziom podstawowy)
+
+
+
+                                        𝑃 = 𝑥 ⋅ 𝑏 ⋅ sin 30°
+                                                               1
+                                     𝑃(𝑥) = 𝑥 ⋅ (100 − 𝑥) ⋅
+                                                               2
+                                              1
+                                      𝑃(𝑥) = − 𝑥 2 + 50𝑥
+                                              2
+dla 𝑥 ∈ (0, 100).
+Wykresem funkcji 𝑃 jest fragment paraboli skierowanej ramionami do dołu. Z własności
+funkcji kwadratowej wynika, że funkcja 𝑃 może osiągnąć wartość największą dla argumentu
+                                                                     50
+równego pierwszej współrzędnej wierzchołka paraboli, tj. dla 𝑥 = −         = 50. Ponieważ
+                                                                   2⋅(−12)
+50 ∈ (0, 100), więc funkcja 𝑃 osiąga wartość największą dla argumentu 𝑥 = 50. Wtedy
+                                                                 1
+𝑏 = 100 − 𝑥 = 100 − 50 = 50 oraz 𝑃(50) = 50 ⋅ (100 − 50) ⋅ 2 = 1250.
+Z rozważanych równoległoboków największe pole – równe 1250 – ma ten, który jest
+rombem o boku długości 50.
+
+
+
+
+Strona 24 z 25
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 30.1. (0–1)
+            Wymaganie ogólne                         Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             XII.2) oblicza średnią arytmetyczną i średnią
+ informacjami przedstawionymi w tekście,     ważoną, znajduje medianę i dominantę.
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+PP
+
+
+Zadanie 30.2. (0–1)
+            Wymaganie ogólne                         Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             XII.2) oblicza średnią arytmetyczną i średnią
+ informacjami przedstawionymi w tekście,     ważoną, znajduje medianę i dominantę.
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+
+
+                                                                               Strona 25 z 25
+

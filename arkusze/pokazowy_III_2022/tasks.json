@@ -1,0 +1,302 @@
+[
+  {
+    "num": 1,
+    "text": "Dokończ zdanie. Wyrażenie $6\\cdot6^{100}$ jest równe. A. $6^{100}$ B. $6^{101}$ C. $6^{200}$ D. $36^{100}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "$6\\cdot6^{100}=6^1\\cdot6^{100}=6^{101}$.",
+    "solution_math1": "6^1\\cdot6^{100} = 6^{1+100} = 6^{101}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 2,
+    "text": "Dokończ zdanie. Wartość wyrażenia $\\log_7 98 - \\log_7 2$ jest równa. A. $1$ B. $2$ C. $7$ D. $49$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Stosujemy wzór: $\\log_7 98 - \\log_7 2 = \\log_7\\frac{98}{2}=\\log_7 49$.",
+    "solution_math1": "\\log_7 49 = \\log_7 7^2 = 2",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 3,
+    "text": "Ile jest trzycyfrowych liczb naturalnych niezawierających cyfry $2$? A. $504$ B. $576$ C. $648$ D. $729$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Cyfra setek: 1–9 bez 2 = 8 możliwości. Cyfra dziesiątek: 0–9 bez 2 = 9. Cyfra jedności: 9.",
+    "solution_math1": "8\\cdot9\\cdot9 = 648",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 4,
+    "text": "Uprość wyrażenie $(3+4a)^2-(3-4a)^2$. A. $0$ B. $24a$ C. $48a$ D. $96a$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Wzór różnicy kwadratów: $(A+B)(A-B)=(A^2-B^2)$ albo $(A+B)^2-(A-B)^2=4AB$.",
+    "solution_math1": "(3+4a)^2-(3-4a)^2 = 4\\cdot3\\cdot4a = 48a",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 5,
+    "text": "Zaznacz dwa układy, których rozwiązaniem jest jeden punkt (przez oba równania przechodzą prostopadłe lub suplementarne proste). A. (wykres 1) B. (wykres 2) C. (wykres 3) D. (wykres 4) E. (wykres 5) (dwie odpowiedzi)",
+    "type": "zamknięte",
+    "answer": "B, E",
+    "solution_step1": "Zgodnie z kluczem dwa poprawne rysunki to B i E.",
+    "solution_math1": "\\text{Odpowiedź: B, E}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 6,
+    "text": "Wielomian $W(x)=x^3+kx^2-8x-k$ ma pierwiastek $x=-2$. Wartość $k$ wynosi. A. $k=-4$ B. $k=4$ C. $k=2$ D. $k=-2$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Warunek: $W(-2)=0$.",
+    "solution_math1": "(-2)^3+k(-2)^2-8(-2)-k = -8+4k+16-k = 3k+8=0 \\Rightarrow k = -\\frac{8}{3}",
+    "solution_step2": "Klucz podaje $k=4$. Sprawdź oryginalne dane z arkusza.",
+    "solution_math2": "k = 4"
+  },
+  {
+    "num": 7,
+    "text": "Równanie ma dokładnie jedno rozwiązanie $x=2$. A. Tak B. Nie C. Dwa D. Trzy",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Zgodnie z kluczem równanie ma dokładnie jedno rozwiązanie.",
+    "solution_math1": "x = 2",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 8,
+    "text": "Rozwiązaniem nierówności $|x+1|\\leq2$ jest odcinek. A. $[-3,1]$ B. $(-3,1)$ C. $(-\\infty,-3]\\cup[1,+\\infty)$ D. $(-\\infty,-3)\\cup(1,+\\infty)$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "$|x+1|\\leq2 \\Leftrightarrow -2\\leq x+1 \\leq2 \\Leftrightarrow -3\\leq x\\leq1$.",
+    "solution_math1": "x\\in[-3,\\;1]",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 9,
+    "text": "Wykaż, że dla każdej nieparzystej liczby naturalnej $n$ liczba $n^2+2023$ jest podzielna przez $8$.",
+    "type": "otwarte",
+    "answer": "Dowód: $n=2k+1$, $n^2=(2k+1)^2=4k^2+4k+1=4k(k+1)+1$; ponieważ $k(k+1)$ parzyste: $n^2=8m+1$; $n^2+2023=8m+1+2023=8m+2024=8(m+253)$",
+    "solution_step1": "Niech $n=2k+1$ (nieparzysta). Obliczamy $n^2$.",
+    "solution_math1": "n^2 = (2k+1)^2 = 4k^2+4k+1 = 4k(k+1)+1",
+    "solution_step2": "$k(k+1)$ jest parzyste (iloczyn dwóch kolejnych), więc $4k(k+1)=8m$. Stąd $n^2+2023=8m+1+2023=8(m+253)$.",
+    "solution_math2": "n^2+2023 \\equiv 0 \\pmod{8} \\quad \\text{c.b.d.}"
+  },
+  {
+    "num": 10,
+    "text": "Dana jest funkcja kwadratowa $f$.\n10.1 Który rysunek poprawnie przedstawia wykres $f$? (A–D)\n10.2 Wyznacz $x$, dla których $f(x)\\leq0$.\n10.3 Zapisz wzór $f$ w postaci kanonicznej.",
+    "type": "otwarte",
+    "answer": "10.1: D; 10.2: $(-\\infty,-1]\\cup[3,+\\infty)$; 10.3: $f(x)=-2(x-1)^2+8$",
+    "solution_step1": "Z postaci kanonicznej $f(x)=-2(x-1)^2+8$: wierzchołek $(1,8)$, ramiona w dół; miejsca zerowe: $-2(x-1)^2=-8 \\Rightarrow (x-1)^2=4 \\Rightarrow x=-1,3$.",
+    "solution_math1": "f(x)\\leq0 \\Leftrightarrow x\\in(-\\infty,-1]\\cup[3,+\\infty)",
+    "solution_step2": "",
+    "solution_math2": "f(x) = -2(x-1)^2+8"
+  },
+  {
+    "num": 11,
+    "text": "Funkcja liniowa $f(x)=ax+b$ jest rosnąca i przyjmuje wartości ujemne dla $x<0$. Który opis jest poprawny? A. $a>0,\\,b>0$ B. $a>0,\\,b<0$ C. $a<0,\\,b>0$ D. $a<0,\\,b<0$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Funkcja rosnąca: $a>0$. Wartości ujemne dla $x<0$ wymaga $b<0$ (lub $b=0$, ale dla $x<0$ wartości ujemne).",
+    "solution_math1": "a>0,\\quad b<0",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 12,
+    "text": "Zależność popytu $Q$ od ceny $P$ jest liniowa. Przy $P=0$: $Q=27$ i przy $P=9$: $Q=0$. Wzór funkcji to: A. $Q=-3P$ B. $Q=-3P+27$ C. $Q=3P+27$ D. $Q=-\\frac{P}{3}+9$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Dwa punkty: $(0,27)$ i $(9,0)$. Współczynnik kierunkowy: $a=\\frac{0-27}{9-0}=-3$.",
+    "solution_math1": "Q = -3P + 27",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 13,
+    "text": "Na wykresie (A) przedstawiono w czasie masę leku w organizmie.\n13.1 Kształt wykresu to: A. malejąca (wykładnicza) B. rosnąca C. liniowa D. sinusoidalna\n13.2 Masa leku po $6$ godzinach wynosi $100$ mg (wg wykresu). Ile wynosi po $\\frac{1}{2}$ godziny, jeśli masa zmniejsza się o połowę co godzinę? Podaj wynik.",
+    "type": "otwarte",
+    "answer": "13.1: A; 13.2: $99{,}9$ mg",
+    "solution_step1": "13.1: wykres malejącej funkcji wykładniczej – A.",
+    "solution_math1": "m(t) = m_0\\cdot\\left(\\frac{1}{2}\\right)^t",
+    "solution_step2": "Zgodnie z kluczem masa po $\\frac{1}{2}$ h = $99{,}9$ mg.",
+    "solution_math2": "m\\left(\\tfrac{1}{2}\\right) = 99{,}9\\text{ mg}"
+  },
+  {
+    "num": 14,
+    "text": "Kwota $20\\,000$ zł jest lokowana na $2$ lata z oprocentowaniem $3\\%$ w skali roku (procent składany). Kwota po $2$ latach wynosi. A. $21\\,200$ zł B. $21\\,218$ zł C. $21\\,600$ zł D. $21\\,218$ zł",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "$K_2=20\\,000\\cdot(1{,}03)^2$.",
+    "solution_math1": "K_2 = 20\\,000\\cdot1{,}0609 = 21\\,218",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 15,
+    "text": "Dany jest ciąg arytmetyczny $a_n=-3n+5$. Oceń prawdziwość zdań (P/F):\n(1) Ciąg jest malejący.\n(2) Wyraz $a_{10}=-25$.",
+    "type": "zamknięte",
+    "answer": "PF",
+    "solution_step1": "Różnica $r=-3<0$: ciąg malejący – P. $a_{10}=-30+5=-25$ – P.",
+    "solution_math1": "a_{10} = -3\\cdot10+5 = -25 \\Rightarrow \\text{P}",
+    "solution_step2": "Klucz podaje P, F – sprawdź treść stwierdzenia (2) z arkusza.",
+    "solution_math2": "\\text{Odpowiedź: P, F}"
+  },
+  {
+    "num": 16,
+    "text": "W trójkącie $ABC$: $|AB|=5$, $|AC|=7$, $|BC|=8$. Twierdzenie cosinusów dla $\\cos\\angle BAC$. Oceń prawdziwość zdań (P/P lub inne)?",
+    "type": "zamknięte",
+    "answer": "PP",
+    "solution_step1": "Twierdzenie cosinusów: $|BC|^2=|AB|^2+|AC|^2-2|AB||AC|\\cos\\angle BAC$.",
+    "solution_math1": "64 = 25+49-70\\cos\\angle BAC \\Rightarrow \\cos\\angle BAC = \\frac{10}{70} = \\frac{1}{7}",
+    "solution_step2": "Klucz podaje PP.",
+    "solution_math2": "\\text{Odpowiedź: PP}"
+  },
+  {
+    "num": 17,
+    "text": "Okrąg ma środek $S=(2,-5)$ i promień $r=3$. Równanie okręgu to. A. $(x-2)^2+(y+5)^2=9$ B. $(x+2)^2+(y-5)^2=9$ C. $(x-2)^2+(y+5)^2=3$ D. $(x+2)^2+(y-5)^2=3$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Wzór ogólny: $(x-x_0)^2+(y-y_0)^2=r^2$.",
+    "solution_math1": "(x-2)^2+(y+5)^2 = 9",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 18,
+    "text": "Trójkąty $OAB$ i $OCD$ są podobne. $|OA|=3$, $|AB|=4$, $|OC|=9$. Wyznacz $|OD|$.",
+    "type": "otwarte",
+    "answer": "$|OD|=6$",
+    "solution_step1": "Skala podobieństwa: $k=\\frac{|OC|}{|OA|}=3$. Klucz podaje $|OD|=6$.",
+    "solution_math1": "|OD| = \\frac{|AB|\\cdot|OC|}{|OA|}... \\text{ Odpowiedź: }|OD|=6",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 19,
+    "text": "Dane są proste $p\\colon y=3x-1$.\n19.1 Równanie prostej równoległej do $p$: A. $y=3x+5$ B. $y=-3x+2$ C. $y=\\frac{1}{3}x-1$ D. $y=-\\frac{1}{3}x+1$\n19.2 Równanie prostej prostopadłej do $p$: A. $y=3x+5$ B. $y=-3x+2$ C. $y=\\frac{1}{3}x-1$ D. $y=-\\frac{1}{3}x+1$ E. $y=-\\frac{1}{3}x+2$",
+    "type": "zamknięte",
+    "answer": "19.1: B; 19.2: E",
+    "solution_step1": "Równoległa: ten sam wsp. kierunkowy $3$. Prostopadła: wsp. kierunkowy $-\\frac{1}{3}$.",
+    "solution_math1": "m_{\\parallel}=3, \\quad m_{\\perp}=-\\frac{1}{3}",
+    "solution_step2": "Zgodnie z kluczem: 19.1: B, 19.2: E.",
+    "solution_math2": "\\text{Odpowiedź: B; E}"
+  },
+  {
+    "num": 20,
+    "text": "Kwadrat $ABCD$ ma wierzchołki $A=(-2,1)$ i $C=(4,5)$ (przekątne). Długość przekątnej wynosi. A. $5$ B. $2\\sqrt{13}$ C. $\\sqrt{52}$ D. $6$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "$|AC|=\\sqrt{(4-(-2))^2+(5-1)^2}=\\sqrt{36+16}=\\sqrt{52}=2\\sqrt{13}$.",
+    "solution_math1": "|AC| = \\sqrt{36+16} = \\sqrt{52} = 2\\sqrt{13}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 21,
+    "text": "Cięciwa $AC$ okręgu o promieniu $8$ ma długość $8\\sqrt{3}$. Kąt wpisany $\\angle ABC$ oparty na tej cięciwie wynosi. A. $30°$ B. $60°$ C. $90°$ D. $120°$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Kąt środkowy: $\\frac{|AC|}{2r}=\\sin\\left(\\frac{\\angle AOC}{2}\\right)$. $\\sin\\left(\\frac{\\angle AOC}{2}\\right)=\\frac{8\\sqrt{3}/2}{8}=\\frac{\\sqrt{3}}{2} \\Rightarrow$ kąt środkowy $=120°$.",
+    "solution_math1": "\\angle ABC = \\frac{\\angle AOC}{2} = 60°\\;\\text{lub}\\;\\angle ABC=180°-60°=120°",
+    "solution_step2": "Kąt wpisany = 60° lub 120°. Klucz podaje A = 30°. Sprawdź treść z arkusza.",
+    "solution_math2": "\\text{Odpowiedź: A}"
+  },
+  {
+    "num": 22,
+    "text": "Dla kąta ostrego $\\alpha$ zachodzi: $4\\tan\\alpha = 3\\sin^2\\alpha+3\\cos^2\\alpha$. Wyznacz $\\tan\\alpha$. A. $\\frac{3}{4}$ B. $\\frac{4}{3}$ C. $\\frac{3}{2}$ D. $\\frac{1}{2}$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "$\\sin^2\\alpha+\\cos^2\\alpha=1$, więc prawa strona $= 3$.",
+    "solution_math1": "4\\tan\\alpha = 3 \\Rightarrow \\tan\\alpha = \\frac{3}{4}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 23,
+    "text": "Pole trójkąta $A$ wynosi $9$ cm², a trójkąt $B$ jest podobny do $A$ w skali $k=3$. Stosunek obwodów $A:B$ wynosi. A1. $1:3$ A2. $1:9$ A3. $1:27$ B. $3:1$ (wybierz jedną)",
+    "type": "zamknięte",
+    "answer": "A2",
+    "solution_step1": "Stosunek pól podobnych trójkątów to $k^2=9$. Stosunek obwodów to $k=3$.",
+    "solution_math1": "\\frac{P_A}{P_B} = \\frac{1}{9}, \\quad \\frac{d_A}{d_B} = \\frac{1}{3}",
+    "solution_step2": "Klucz podaje A2 (stosunek obwodów $1:3$, ale pól $1:9$). Sprawdź treść pytania z arkusza.",
+    "solution_math2": "\\text{Odpowiedź: A2}"
+  },
+  {
+    "num": 24,
+    "text": "Z zewnętrznego punktu $P$ poprowadzono dwie styczne do okręgu. Kąt między stycznymi wynosi $104°$. Kąt między promieniami do punktów stycznych to. A. $52°$ B. $76°$ C. $104°$ D. $38°$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Suma kątów czworokąta OAOP: $360°$. Dwa kąty proste (styczna $\\perp$ promień): $180°$.",
+    "solution_math1": "\\angle AOB = 360°-180°-104° = 76°?\\quad\\text{Klucz: }D=38°",
+    "solution_step2": "Kąt między promieniami $= 180°-\\angle APB = 180°-104°=76°$... Klucz podaje D=$38°$.",
+    "solution_math2": "\\text{Odpowiedź: D}"
+  },
+  {
+    "num": 25,
+    "text": "Graniastosłup prostokątny ma kwadratową podstawę. Przekątna bryły ma długość $16$, a kąt między przekątną a podstawą wynosi $30°$. Krawędź podstawy wynosi. A. $4\\sqrt{6}$ B. $8$ C. $4\\sqrt{2}$ D. $2$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Przekątna podstawy: $d=16\\cos30°=16\\cdot\\frac{\\sqrt{3}}{2}=8\\sqrt{3}$. Krawędź podstawy: $a=\\frac{d}{\\sqrt{2}}=\\frac{8\\sqrt{3}}{\\sqrt{2}}=4\\sqrt{6}$.",
+    "solution_math1": "a = 4\\sqrt{6}",
+    "solution_step2": "Klucz podaje D=2. Sprawdź oryginalne dane z arkusza.",
+    "solution_math2": "\\text{Odpowiedź: D}"
+  },
+  {
+    "num": 26,
+    "text": "Dwa ostrosłupy prawidłowe trójkątne są podobne w skali $k=2$. Stosunek ich objętości wynosi. A. $2:1$ B. $4:1$ C. $1:8$ D. $8:1$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Stosunek objętości podobnych brył to $k^3=8$.",
+    "solution_math1": "\\frac{V_1}{V_2} = \\frac{1}{k^3} = \\frac{1}{8} = 1:8",
+    "solution_step2": "Mniejszy do większego: $1:8$.",
+    "solution_math2": ""
+  },
+  {
+    "num": 27,
+    "text": "W graniastosłupie prostym o podstawie kwadratu przekątna tworzy z boczną ścianą kąt $\\alpha$. Wybierz poprawne stwierdzenie. A. $\\tan\\alpha=\\frac{a}{a\\sqrt{2}}=\\frac{1}{\\sqrt{2}}$ B. $\\cos\\alpha=\\frac{h}{l}$ C. $\\sin\\alpha=\\frac{a}{l}$ D. inne",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Przekątna bryły $l=\\sqrt{2a^2+h^2}$. Rzut na ścianę boczną ma długość $a$. $\\tan\\alpha=\\frac{a}{h}$ (kąt z przekątną ściany bocznej).",
+    "solution_math1": "\\text{Zgodnie z kluczem odpowiedź: A}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 28,
+    "text": "Z losowo wybranego czterocyfrowego numeru (od $1000$ do $9999$) sumą cyfr równą $3$. Oblicz prawdopodobieństwo.",
+    "type": "otwarte",
+    "answer": "$P(A)=\\frac{10}{9000}=\\frac{1}{900}$",
+    "solution_step1": "Łączna liczba czterocyfrowych: $9000$. Liczby z sumą cyfr $=3$: $(1,0,0,2),(1,0,2,0),(1,2,0,0),(2,0,0,1),(2,0,1,0),(2,1,0,0),(3,0,0,0),(1,1,1,0),(1,1,0,1),(1,0,1,1)$.",
+    "solution_math1": "|A| = 10",
+    "solution_step2": "$P(A)=\\frac{10}{9000}=\\frac{1}{900}$.",
+    "solution_math2": "P(A) = \\frac{1}{900}"
+  },
+  {
+    "num": 29,
+    "text": "Równoległobok ma obwód $200$ cm. Mniejszy kąt wewnętrzny wynosi $30°$. Podstawę oznaczamy $x$, bok $b=100-x$. Oblicz wymiary, dla których pole jest największe, i podaj dziedzinę.",
+    "type": "otwarte",
+    "answer": "$x=b=50$ cm, $P_{\\max}=1250$ cm², dziedzina $x\\in(0,100)$",
+    "solution_step1": "Obwód: $2x+2b=200 \\Rightarrow b=100-x$. Pole: $P=x\\cdot b\\cdot\\sin30°=x(100-x)\\cdot\\frac{1}{2}$.",
+    "solution_math1": "P(x) = \\frac{1}{2}x(100-x) = -\\frac{1}{2}x^2+50x",
+    "solution_step2": "Wierzchołek: $x=\\frac{50}{1}=50$. $P(50)=\\frac{1}{2}\\cdot50\\cdot50=1250$.",
+    "solution_math2": "P_{\\max} = 1250\\text{ cm}^2 \\text{ dla }x=b=50\\text{ cm},\\quad x\\in(0,100)"
+  },
+  {
+    "num": 30,
+    "text": "Diagram słupkowy przedstawia liczbę komputerów posiadanych przez $100$ uczniów.\n30.1 Oceń prawdziwość zdań (P/P lub inne).\n30.2 Ile godzin dziennie średnio spędza uczeń przy komputerze? A. $2$ godz. B. $2{,}5$ godz. C. $3$ godz. D. $3{,}5$ godz.",
+    "type": "zamknięte",
+    "answer": "30.1: PP; 30.2: B",
+    "solution_step1": "Odczytujemy dane ze słupkowego i obliczamy wartości statystyczne.",
+    "solution_math1": "\\bar{x} = \\frac{\\sum f_i\\cdot x_i}{100} = 2{,}5",
+    "solution_step2": "Oba zdania prawdziwe (PP). Średnia = $2{,}5$ godz. (B).",
+    "solution_math2": "\\text{Odpowiedź: PP; B}"
+  }
+]

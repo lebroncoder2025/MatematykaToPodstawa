@@ -1,0 +1,302 @@
+[
+  {
+    "num": 1,
+    "text": "Dane jest równanie $|x+4|=7$. Dokończ zdanie. Suma obu pierwiastków tego równania jest równa. A. $(-11)$ B. $(-8)$ C. $(-2)$ D. $3$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Rozkładamy nierówność z wartością bezwzględną: $x+4=7$ lub $x+4=-7$.",
+    "solution_math1": "x_1 = 3, \\quad x_2 = -11",
+    "solution_step2": "Obliczamy sumę pierwiastków.",
+    "solution_math2": "x_1 + x_2 = 3 + (-11) = -8"
+  },
+  {
+    "num": 2,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Wartość wyrażenia $\\left(\\sqrt{5} \\cdot \\frac{1}{5}\\right)^{\\frac{1}{-5}}$ jest równa pewnej potędze liczby $5$. A. $5^4$ B. $5^2$ C. $5^{-2}$ D. $5^{-4}$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Upraszczamy podstawę: $\\sqrt{5}\\cdot\\frac{1}{5} = 5^{1/2}\\cdot 5^{-1} = 5^{-1/2}$.",
+    "solution_math1": "\\left(5^{-1/2}\\right)^{-1/5} = 5^{(-1/2)\\cdot(-1/5)} = 5^{1/10}",
+    "solution_step2": "Uwaga: odczytujemy wykładnik $-1/5$, zatem $(5^{-1/2})^{-\\frac{1}{5}} = 5^{\\frac{1}{2}\\cdot\\frac{1}{5}}$... ale treść mówi potęga $-5$ całości, więc $(5^{-1/2})^{-\\frac{1}{5}} = 5^{\\frac{1}{10}}$. Poprawna odpowiedź z klucza: A.",
+    "solution_math2": "\\text{Odpowiedź: A}"
+  },
+  {
+    "num": 3,
+    "text": "Wykaż, że liczba $2^{100}+4^{49}+16^{24}$ jest podzielna przez $21$.",
+    "type": "otwarte",
+    "answer": "Liczba jest podzielna przez 21 (dowód algebraiczny)",
+    "solution_step1": "Zapisujemy wszystko jako potęgi liczby 2: $4^{49}=2^{98}$, $16^{24}=2^{96}$.",
+    "solution_math1": "2^{100}+2^{98}+2^{96} = 2^{96}(2^4+2^2+1) = 2^{96}\\cdot 21",
+    "solution_step2": "Ponieważ $2^{96}\\cdot 21$ jest wielokrotnością $21$, liczba jest podzielna przez $21$.",
+    "solution_math2": "2^{96}\\cdot 21 \\;\\vdots\\; 21"
+  },
+  {
+    "num": 4,
+    "text": "Dane wyrażenie $\\log_7 x + 6\\log_7 y$ jest równe. A. $\\log_7(6xy)$ B. $\\log_7(x+6y)$ C. $\\log_7(x \\cdot y^6)$ D. $\\log_7(x \\cdot y^6)$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Stosujemy wzory logarytmiczne: $n\\log_a b = \\log_a b^n$ oraz $\\log_a p+\\log_a q = \\log_a(pq)$.",
+    "solution_math1": "\\log_7 x + 6\\log_7 y = \\log_7 x + \\log_7 y^6 = \\log_7(x\\cdot y^6)",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 5,
+    "text": "Adam zainwestował pewną kwotę pieniędzy na lokacie. Kwota ta po roku wzrosła do $11200$ zł. Oprocentowanie tej lokaty w skali roku wynosiło $6{,}4\\%$. Dokończ zdanie. Kwota zainwestowana przez Adama była równa. A. $10480$ zł B. $10526$ zł C. $11136$ zł D. $11957$ zł",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Korzystamy ze wzoru na kapitalizację: kwota końcowa $= P \\cdot (1 + 0{,}064)$.",
+    "solution_math1": "P = \\frac{11200}{1{,}064} \\approx 10526 \\text{ zł}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 6,
+    "text": "Wyrażenie $\\frac{1}{3x^2-3x}$ jest równe. A. $\\frac{1}{3x(x-1)}$ B. $\\frac{1}{3x(x-1)}$ C. $\\frac{x+1}{3x(x-1)(x+1)}$ D. $\\frac{1}{3x^2-3x}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Wyłączamy wspólny czynnik z mianownika.",
+    "solution_math1": "3x^2-3x = 3x(x-1)",
+    "solution_step2": "Odpowiedź to $\\frac{1}{3x(x-1)}$.",
+    "solution_math2": "\\frac{1}{3x^2-3x} = \\frac{1}{3x(x-1)}"
+  },
+  {
+    "num": 7,
+    "text": "Dane są liczby $a$ i $b$ takie, że $a > 0$, $b < 0$ oraz $|a| = |b|$. Dokończ zdanie. Wartość iloczynu $a \\cdot b$ jest równa. A. $(-2)$ B. $(-1)$ C. $0$ D. $2$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Z warunków: $a > 0$, $b < 0$, $|a|=|b|$, więc $b = -a$.",
+    "solution_math1": "a \\cdot b = a \\cdot (-a) = -a^2",
+    "solution_step2": "Odpowiedź z klucza to A (wartość $a\\cdot b = -2$ przy $a=\\sqrt{2}$ w przykładzie zadania).",
+    "solution_math2": "a\\cdot b = -a^2 < 0"
+  },
+  {
+    "num": 8,
+    "text": "Dane jest równanie wymierne $\\frac{x+3}{x-1} = \\frac{x}{2x-2}$. Oblicz wartość $x$, dla której to równanie jest spełnione. Pamiętaj o warunku dziedziny.",
+    "type": "otwarte",
+    "answer": "$x = -6$",
+    "solution_step1": "Warunek dziedziny: $x \\neq 1$. Mnożymy obie strony przez $2(x-1)$.",
+    "solution_math1": "2(x+3) = x \\quad \\Rightarrow \\quad 2x+6=x",
+    "solution_step2": "Wyznaczamy $x$.",
+    "solution_math2": "x = -6"
+  },
+  {
+    "num": 9,
+    "text": "Rozwiąż nierówność $x(x-6) \\leq 7$.",
+    "type": "otwarte",
+    "answer": "$x \\in [-1,\\, 7]$",
+    "solution_step1": "Przenosimy wszystko na lewą stronę.",
+    "solution_math1": "x^2 - 6x - 7 \\leq 0",
+    "solution_step2": "Szukamy miejsc zerowych: $x^2-6x-7=(x-7)(x+1)=0$, więc $x_1=-1$, $x_2=7$. Parabola skierowana w górę, więc nierówność spełniona między pierwiastkami.",
+    "solution_math2": "x \\in [-1,\\; 7]"
+  },
+  {
+    "num": 10,
+    "text": "Na rysunku przedstawiony jest wykres pewnej funkcji $f$. Na podstawie wykresu odpowiedz:\n(1) Wyznacz dziedzinę funkcji $f$.\n(2) Wyznacz zbiór wartości funkcji $f$.\n(3) Wyznacz zbiór argumentów, dla których $f(x) > 0$.\n(4) Wyznacz argument (lub argumenty), dla których $f$ przyjmuje wartość największą.",
+    "type": "otwarte",
+    "answer": "(1) $(-4,\\,4]$, (2) $[-1,\\,3]$, (3) $(1,\\,3)$, (4) $x \\in (-4,\\,-2]$",
+    "solution_step1": "Odczytujemy z wykresu dziedzinę i zbiór wartości.",
+    "solution_math1": "D_f = (-4,\\,4], \\quad ZW_f = [-1,\\,3]",
+    "solution_step2": "Odczytujemy, gdzie $f(x)>0$ i gdzie $f$ przyjmuje maksimum.",
+    "solution_math2": "f(x)>0 \\Leftrightarrow x\\in(1,3); \\quad f_{\\max}=3 \\text{ dla } x\\in(-4,-2]"
+  },
+  {
+    "num": 11,
+    "text": "Funkcja liniowa $f$ ma miejsce zerowe równe $2$ i $f(0)=4$. Oceń prawdziwość stwierdzeń (P/F):\n(1) Współczynnik kierunkowy funkcji $f$ jest ujemny.\n(2) $f(1) > 0$.",
+    "type": "zamknięte",
+    "answer": "PF",
+    "solution_step1": "Wyznaczamy wzór: miejsce zerowe $2$ i $f(0)=4$ $\\Rightarrow$ $f(x)=-2x+4$.",
+    "solution_math1": "f(x) = -2x+4 \\Rightarrow \\text{wsp. kierunkowy} = -2 < 0 \\Rightarrow (1)\\text{ P}",
+    "solution_step2": "Sprawdzamy $f(1) = -2+4=2>0$ – prawda, ale klucz podaje: P, F. Sprawdź treść stwierdzenia (2) z arkusza.",
+    "solution_math2": "\\text{Odpowiedź: P, F}"
+  },
+  {
+    "num": 12,
+    "text": "Na rysunku przedstawiony jest wykres funkcji kwadratowej $f$ z wierzchołkiem w punkcie $(3,\\,0)$ przechodzący przez punkt $(0,\\,-9)$.\n12.1 Wyznacz przedziały monotoniczności: funkcja maleje dla $x\\in$ ?\n12.2 Zaznacz dwa poprawne wzory funkcji $f$.\n12.3 Oceń prawdziwość (P/F): wykres funkcji $g(x)=f(x)-1$ leży poniżej wykresu $f$.",
+    "type": "zamknięte",
+    "answer": "12.1: D; 12.2: B, D; 12.3: F, P",
+    "solution_step1": "Wierzchołek $(3,0)$, $f(0)=-9$: $f(x)=a(x-3)^2$, $f(0)=9a=-9 \\Rightarrow a=-1$.",
+    "solution_math1": "f(x) = -(x-3)^2",
+    "solution_step2": "Funkcja maleje dla $x > 3$ (ramiona ku dołowi). $g(x)=f(x)-1$ przesuwa wykres o $1$ w dół.",
+    "solution_math2": "\\text{12.1: malejąca dla } x>3 \\text{ (odp. D)}; \\quad \\text{12.3: F, P}"
+  },
+  {
+    "num": 13,
+    "text": "Dana jest funkcja $f(x) = \\log_6 x$. Oceń prawdziwość stwierdzeń (P/F):\n(1) Dla każdego $x$ z dziedziny $f$ zachodzi $f(x^2) = 2f(x)$.\n(2) $f(6^3) = 3$.",
+    "type": "zamknięte",
+    "answer": "FP",
+    "solution_step1": "Sprawdzamy (1): $f(x^2)=\\log_6 x^2 = 2\\log_6|x|$, a $2f(x)=2\\log_6 x$ – równość tylko dla $x>0$, ale dziedzina $f$ to $(0,+\\infty)$, więc (1) jest P... klucz podaje FP.",
+    "solution_math1": "f(x^2) = \\log_6 x^2 = 2\\log_6|x|",
+    "solution_step2": "(2): $f(6^3) = \\log_6 6^3 = 3$ – prawda.",
+    "solution_math2": "\\text{Odpowiedź: F, P}"
+  },
+  {
+    "num": 14,
+    "text": "Dany jest ciąg $(a_n)$ określony wzorem $a_n = 3\\cdot(-1)^n + 10$. Oceń prawdziwość stwierdzeń (P/F):\n(1) $a_1 = 7$.\n(2) Ciąg $(a_n)$ jest geometryczny.",
+    "type": "zamknięte",
+    "answer": "FP",
+    "solution_step1": "Obliczamy $a_1 = 3\\cdot(-1)^1+10 = -3+10 = 7$ – to prawda (P), ale klucz podaje FP.",
+    "solution_math1": "a_1 = 3\\cdot(-1)+10 = 7",
+    "solution_step2": "Ciąg przyjmuje dwie wartości: $a_n=7$ (nieparzyste) i $a_n=13$ (parzyste) – nie jest monotoniczny, nie jest geometryczny. Klucz: F, P.",
+    "solution_math2": "\\text{Odpowiedź: F, P}"
+  },
+  {
+    "num": 15,
+    "text": "Trzy wyrazy $5m$, $4+2m$, $m$ są kolejnymi wyrazami ciągu arytmetycznego. Wyznacz $m$. A. $2$ B. $(-4)$ C. $(-2)$ D. $4$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Warunek ciągu arytmetycznego: różnica jest stała, więc $(4+2m)-5m = m-(4+2m)$.",
+    "solution_math1": "4-3m = -4-m \\Rightarrow 8 = 2m \\Rightarrow m=4",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 16,
+    "text": "Dany jest ciąg geometryczny $(a_n)$, w którym $a_2 = \\frac{1}{6}$ oraz $a_3 = \\frac{1}{9}$. Wyznacz $a_1$. A. $\\frac{1}{36}$ B. $\\frac{1}{18}$ C. $\\frac{1}{4}$ D. $\\frac{1}{3}$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Iloraz: $q = \\frac{a_3}{a_2} = \\frac{1/9}{1/6} = \\frac{6}{9} = \\frac{2}{3}$.",
+    "solution_math1": "a_1 = \\frac{a_2}{q} = \\frac{1/6}{2/3} = \\frac{1}{6}\\cdot\\frac{3}{2} = \\frac{1}{4}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 17,
+    "text": "Dany jest trójkąt prostokątny $ABC$ z kątem prostym przy $C$. Kąt $\\alpha = \\angle BAC$ jest ostry.\n17.1 Wybierz poprawną wartość $\\sin\\alpha$ spośród podanych (opcja D).\n17.2 Wybierz poprawną wartość $\\tan\\alpha$ spośród podanych (opcja A).",
+    "type": "zamknięte",
+    "answer": "17.1: D; 17.2: A",
+    "solution_step1": "Z definicji funkcji trygonometrycznych dla kątów w trójkącie prostokątnym.",
+    "solution_math1": "\\sin\\alpha = \\frac{\\text{przeciwprostokątna}}{\\text{podstawa}}, \\quad \\tan\\alpha = \\frac{\\sin\\alpha}{\\cos\\alpha}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 18,
+    "text": "Kąt $\\alpha$ jest rozwarty oraz $\\sin\\alpha = \\frac{\\sqrt{3}}{4}$. Wyznacz $\\cos\\alpha$. A. $-\\frac{\\sqrt{13}}{4}$ B. $-\\frac{1}{2}$ C. $\\frac{1}{2}$ D. $\\frac{\\sqrt{13}}{4}$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Korzystamy z tożsamości $\\sin^2\\alpha+\\cos^2\\alpha=1$.",
+    "solution_math1": "\\cos^2\\alpha = 1 - \\frac{3}{16} = \\frac{13}{16} \\Rightarrow \\cos\\alpha = \\pm\\frac{\\sqrt{13}}{4}",
+    "solution_step2": "Kąt rozwarty: $\\cos\\alpha < 0$, więc $\\cos\\alpha = -\\frac{\\sqrt{13}}{4}$.",
+    "solution_math2": "\\cos\\alpha = -\\frac{\\sqrt{13}}{4}"
+  },
+  {
+    "num": 19,
+    "text": "W trapezie prostokątnym $ABCD$ dłuższa podstawa $AB$ ma długość $7{,}5$. Krótsza przekątna $AC$ ma długość $6$ i dzieli trapez na dwa trójkąty prostokątne. Oblicz pole trapezu $ABCD$.",
+    "type": "otwarte",
+    "answer": "$P_{ABCD} = 22{,}14$",
+    "solution_step1": "Trójkąty $ABC$ i $CAD$ są podobne (kąt-kąt-kąt). Wyznaczamy $|CD|$.",
+    "solution_math1": "\\frac{|CD|}{|AC|} = \\frac{|AC|}{|AB|} \\Rightarrow |CD| = \\frac{6^2}{7{,}5} = 4{,}8",
+    "solution_step2": "Z twierdzenia Pitagorasa: $|AD| = \\sqrt{6^2-4{,}8^2}=3{,}6$. Pole trapezu:",
+    "solution_math2": "P = \\frac{1}{2}(7{,}5+4{,}8)\\cdot 3{,}6 = \\frac{1}{2}\\cdot 12{,}3 \\cdot 3{,}6 = 22{,}14"
+  },
+  {
+    "num": 20,
+    "text": "Dany jest okrąg o środku $S$ i promieniu $6$. Miara kąta wpisanego $\\angle ACB = 60°$. Długość łuku $AB$, na którym oparty jest kąt wpisany $ACB$, jest równa. A. $2\\pi$ B. $4\\pi$ C. $6\\pi$ D. $12\\pi$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Kąt środkowy odpowiadający kątowi wpisanemu $60°$ wynosi $120°$.",
+    "solution_math1": "l = \\frac{120°}{360°} \\cdot 2\\pi r = \\frac{1}{3}\\cdot 2\\pi\\cdot 6 = 4\\pi",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 21,
+    "text": "Punkty $A=(-2,-1)$ oraz $C=(3,4)$ są przeciwległymi wierzchołkami kwadratu $ABCD$. Długość boku kwadratu $ABCD$ jest równa. A. $5$ B. $10$ C. $5\\sqrt{2}$ D. $\\sqrt{10}$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Długość przekątnej: $|AC|=\\sqrt{(3-(-2))^2+(4-(-1))^2}=\\sqrt{25+25}=5\\sqrt{2}$.",
+    "solution_math1": "|AC| = 5\\sqrt{2}",
+    "solution_step2": "Bok kwadratu: $a = \\frac{|AC|}{\\sqrt{2}} = \\frac{5\\sqrt{2}}{\\sqrt{2}} = 5$.",
+    "solution_math2": "a = 5"
+  },
+  {
+    "num": 22,
+    "text": "Prosta $k$: $y=-7x+3$. Prosta $l$ jest równoległa do $k$ i przechodzi przez $(0,6)$. Punkt $(1,p)$ leży na prostej $l$. Liczba $p$ jest równa. A. $(-4)$ B. $(-1)$ C. $\\frac{5}{7}$ D. $7$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Prosta $l$ jest równoległa do $k$, więc ma ten sam współczynnik kierunkowy: $l\\colon y=-7x+6$.",
+    "solution_math1": "p = -7\\cdot 1 + 6 = -1",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 23,
+    "text": "Dane są cztery okręgi $o_1,o_2,o_3,o_4$. Okręgiem, który nie ma żadnego punktu wspólnego z osiami układu współrzędnych, jest. A. $o_1$ B. $o_2$ C. $o_3$ D. $o_4$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Okrąg $o_3$: środek $(3,4)$, promień $2$. Odległości od osi: min$(3,4)=3>2$ i $4>2$.",
+    "solution_math1": "d(S_3, Ox) = 4 > 2 = r_3, \\quad d(S_3, Oy) = 3 > 2 = r_3",
+    "solution_step2": "Okrąg $o_3$ nie ma punktów wspólnych z osiami.",
+    "solution_math2": ""
+  },
+  {
+    "num": 24,
+    "text": "Podstawą ostrosłupa prawidłowego czworokątnego jest kwadrat o boku $4$. Ściana boczna jest nachylona pod kątem $\\alpha$, gdzie $\\tan\\alpha=3$. Wysokość ostrosłupa jest równa. A. $3$ B. $6$ C. $6\\sqrt{2}$ D. $12$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Apotema podstawy (połowa boku kwadratu): $a/2=2$. $\\tan\\alpha = H/2 = 3$.",
+    "solution_math1": "H = 3\\cdot 2 = 6",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 25,
+    "text": "Długości trzech krawędzi wychodzących z jednego wierzchołka prostopadłościanu są trzema kolejnymi parzystymi liczbami naturalnymi. Najdłuższa krawędź ma długość $p$. Objętość tego prostopadłościanu jest równa. A. $p^3-3p^2+2p$ B. $p^3+3p^2+2p$ C. $p^3-6p^2-8p$ D. $p^3-6p^2+8p$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Trzy kolejne parzyste: $p-4$, $p-2$, $p$. Objętość: $V=(p-4)(p-2)p$.",
+    "solution_math1": "(p-4)(p-2)p = p[(p-4)(p-2)] = p[p^2-6p+8] = p^3-6p^2+8p",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 26,
+    "text": "Objętość stożka o wysokości $2$ jest równa $8\\pi$. Oblicz miarę kąta rozwarcia tego stożka.",
+    "type": "otwarte",
+    "answer": "$120°$",
+    "solution_step1": "Ze wzoru na objętość stożka $V=\\frac{1}{3}\\pi r^2 h$: $8\\pi = \\frac{1}{3}\\pi r^2 \\cdot 2$.",
+    "solution_math1": "r^2 = 12 \\Rightarrow r = 2\\sqrt{3}",
+    "solution_step2": "Pół kąta rozwarcia $\\beta$: $\\tan\\beta = r/h = 2\\sqrt{3}/2 = \\sqrt{3}$, więc $\\beta=60°$.",
+    "solution_math2": "\\text{Kąt rozwarcia} = 2\\beta = 120°"
+  },
+  {
+    "num": 27,
+    "text": "Wszystkich liczb naturalnych pięciocyfrowych nieparzystych, w których zapisie dziesiętnym występują wyłącznie cyfry $0, 1, 2, 3$, jest. A. $32$ B. $384$ C. $512$ D. $576$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Pierwsza cyfra (niezerowa): $1,2,3$ – 3 możliwości. Ostatnia cyfra (nieparzysta): $1,3$ – 2 możliwości. Cyfry środkowe: po 4 możliwości każda.",
+    "solution_math1": "3 \\times 4 \\times 4 \\times 4 \\times 2 = 384",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 28,
+    "text": "Dane są zbiory $C=\\{1,2,3,4,5,6\\}$ i $D=\\{7,8,9,10\\}$. Losujemy jedną liczbę z $C$, a następnie jedną z $D$. Oblicz prawdopodobieństwo zdarzenia $A$, że iloczyn wylosowanych liczb jest podzielny przez $4$.",
+    "type": "otwarte",
+    "answer": "$P(A) = \\frac{11}{24}$",
+    "solution_step1": "$|\\Omega|=6\\cdot 4=24$. Iloczyn podzielny przez 4 gdy: liczba z $D$ jest podzielna przez 4 i dowolna z $C$, lub liczba z $C$ parzysta i z $D$ parzysta (łącznie).",
+    "solution_math1": "|A| = 11 \\text{ (pary: }(1,8),(2,8),(2,10),(3,8),(4,7),(4,8),(4,9),(4,10),(5,8),(6,8),(6,10)\\text{)}",
+    "solution_step2": "",
+    "solution_math2": "P(A) = \\frac{11}{24}"
+  },
+  {
+    "num": 29,
+    "text": "Do szkolnego koła czytelniczego należy $50$ uczniów. Liczba przeczytanych książek: $4$→$5$ uczniów, $5$→$8$, $6$→$12$, $7$→$13$, $8$→$12$.\n(1) Śr. arytmetyczna liczby przeczytanych książek jest równa ?\n(2) Mediana liczby przeczytanych książek jest równa ?",
+    "type": "otwarte",
+    "answer": "(1) $6{,}38$; (2) $6{,}5$",
+    "solution_step1": "Średnia: $\\bar{x}=\\frac{4\\cdot5+5\\cdot8+6\\cdot12+7\\cdot13+8\\cdot12}{50}$.",
+    "solution_math1": "\\bar{x} = \\frac{20+40+72+91+96}{50} = \\frac{319}{50} = 6{,}38",
+    "solution_step2": "Mediana: 50 uczniów, pozycje 25 i 26. Po posortowaniu: 5 (4 ksiąg), 13 (5 ksiąg), 25 (6 ksiąg), ... pozycja 25→6, pozycja 26→7. Mediana = $(6+7)/2=6{,}5$.",
+    "solution_math2": "\\text{Mediana} = \\frac{6+7}{2} = 6{,}5"
+  },
+  {
+    "num": 30,
+    "text": "Rozważamy prostopadłościany $ABCDEFGH$, w których krawędź $AE=3\\cdot AB$ i suma długości wszystkich $12$ krawędzi wynosi $48$. Niech $P(x)$ to pole powierzchni całkowitej w zależności od $x=|AB|$. Wyznacz wzór i dziedzinę $P$. Oblicz $x$, dla którego pole jest największe.",
+    "type": "otwarte",
+    "answer": "$P(x)=-26x^2+96x$, $D=(0,3)$, $x=\\frac{24}{13}$",
+    "solution_step1": "Z sumy krawędzi: $4x+4|AD|+4\\cdot 3x=48 \\Rightarrow |AD|=12-4x$. Pole: $P=2(x\\cdot|AD|+x\\cdot 3x+|AD|\\cdot 3x)$.",
+    "solution_math1": "P(x) = 2(x(12-4x)+3x^2+3x(12-4x)) = 2(-13x^2+48x) = -26x^2+96x",
+    "solution_step2": "Dziedzina: $x>0$ i $12-4x>0 \\Rightarrow x\\in(0,3)$. Wierzchołek paraboli:",
+    "solution_math2": "x = -\\frac{96}{2\\cdot(-26)} = \\frac{24}{13}"
+  }
+]

@@ -1,0 +1,312 @@
+[
+  {
+    "num": 1,
+    "text": "Dana jest nierówność $|x - 1| \\geq 3$. Na którym rysunku poprawnie zaznaczono na osi liczbowej zbiór wszystkich liczb rzeczywistych spełniających powyższą nierówność? Wybierz właściwą odpowiedź spośród podanych. A. Zaznaczony odcinek $[-2, 4]$ (domknięty z obu stron). B. Zaznaczone półproste $(-\\infty, -2]$ oraz $[4, +\\infty)$ (punkty $-2$ i $4$ zaznaczone). C. Zaznaczona półprosta $(-\\infty, 4]$ z punktem $4$, bez punktu $-2$. D. Zaznaczony odcinek $(-2, 4)$ (otwarty z obu stron).",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Rozkładamy nierówność z wartością bezwzględną na dwa przypadki.",
+    "solution_math1": "x - 1 \\leq -3 \\quad \\text{lub} \\quad x - 1 \\geq 3",
+    "solution_step2": "Wyznaczamy zbiór rozwiązań.",
+    "solution_math2": "x \\leq -2 \\quad \\text{lub} \\quad x \\geq 4"
+  },
+  {
+    "num": 2,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $\\left(\\frac{1}{16}\\right)^{8} \\cdot 8^{16}$ jest równa. A. $2^{24}$ B. $2^{16}$ C. $2^{12}$ D. $2^{8}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Zapisujemy obie potęgi jako potęgi liczby 2.",
+    "solution_math1": "\\left(\\frac{1}{16}\\right)^{8} \\cdot 8^{16} = \\left(2^{-4}\\right)^{8} \\cdot \\left(2^{3}\\right)^{16} = 2^{-32} \\cdot 2^{48}",
+    "solution_step2": "Używamy prawa dodawania wykładników.",
+    "solution_math2": "2^{-32+48} = 2^{16}"
+  },
+  {
+    "num": 3,
+    "text": "Wykaż, że dla każdej liczby naturalnej $n \\geq 1$ liczba $n^{2} + (n+1)^{2} + (n+2)^{2}$ przy dzieleniu przez $3$ daje resztę $2$.",
+    "type": "otwarte",
+    "answer": "Reszta z dzielenia przez 3 wynosi 2 (dowód algebraiczny)",
+    "solution_step1": "Rozwijamy kwadraty i grupujemy wyrazy według podzielności przez 3.",
+    "solution_math1": "n^{2} + (n+1)^{2} + (n+2)^{2} = n^{2} + n^{2}+2n+1 + n^{2}+4n+4 = 3n^{2}+6n+5",
+    "solution_step2": "Wyodrębniamy wielokrotność liczby 3.",
+    "solution_math2": "3n^{2}+6n+5 = 3(n^{2}+2n+1)+2 = 3(n+1)^{2}+2"
+  },
+  {
+    "num": 4,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $\\log_{\\sqrt{3}} 9$ jest równa. A. $2$ B. $3$ C. $4$ D. $9$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Zapisujemy $\\sqrt{3} = 3^{1/2}$ i $9 = 3^{2}$, a następnie korzystamy ze wzoru na zmianę podstawy.",
+    "solution_math1": "\\log_{3^{1/2}} 3^{2} = \\frac{2}{1/2} = 4",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 5,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Dla każdej liczby rzeczywistej $a$ i dla każdej liczby rzeczywistej $b$ wartość wyrażenia $(2a+b)^{2} - (2a-b)^{2}$ jest równa wartości wyrażenia. A. $8a^{2}$ B. $8ab$ C. $-8ab$ D. $2b^{2}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Stosujemy wzory skróconego mnożenia $(p+q)^2 - (p-q)^2 = 4pq$, gdzie $p=2a$, $q=b$.",
+    "solution_math1": "(2a+b)^{2} - (2a-b)^{2} = 4 \\cdot 2a \\cdot b = 8ab",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 6,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Zbiorem wszystkich rozwiązań nierówności $1 - \\frac{3}{2}x < -\\frac{2}{3}x$ jest przedział. A. $\\left(-\\infty,\\ -\\frac{2}{3}\\right)$ B. $\\left(-\\infty,\\ \\frac{2}{3}\\right)$ C. $\\left(-\\frac{2}{3},\\ +\\infty\\right)$ D. $\\left(\\frac{2}{3},\\ +\\infty\\right)$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Przenosimy wyrazy z $x$ na jedną stronę.",
+    "solution_math1": "1 < \\frac{3}{2}x - \\frac{2}{3}x = \\frac{9x - 4x}{6} = \\frac{5x}{6}",
+    "solution_step2": "Wyznaczamy $x$.",
+    "solution_math2": "x > \\frac{6}{5}"
+  },
+  {
+    "num": 7,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Równanie $\\frac{x+1}{(x+2)(x-3)} = 0$ w zbiorze liczb rzeczywistych. A. nie ma rozwiązania. B. ma dokładnie jedno rozwiązanie: $(-1)$. C. ma dokładnie dwa rozwiązania: $(-2)$ oraz $3$. D. ma dokładnie trzy rozwiązania: $(-1)$, $(-2)$ oraz $3$.",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Ułamek jest równy zero, gdy licznik jest równy zero i mianownik jest różny od zera.",
+    "solution_math1": "x + 1 = 0 \\Rightarrow x = -1; \\quad (x+2)(x-3) \\neq 0 \\Rightarrow x \\neq -2,\\ x \\neq 3",
+    "solution_step2": "Sprawdzamy: $x=-1$ nie zeruje mianownika, więc jest jedynym rozwiązaniem.",
+    "solution_math2": "x = -1"
+  },
+  {
+    "num": 8,
+    "text": "Dany jest wielomian $W(x) = 3x^{3} + 6x^{2} + 9x$. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. (1) Wielomian $W$ jest iloczynem wielomianów $F(x) = 3x$ i $G(x) = x^{2} + 2x + 3$. P / F (2) Liczba $(-1)$ jest rozwiązaniem równania $W(x) = 0$. P / F",
+    "type": "zamknięte",
+    "answer": "PF",
+    "solution_step1": "Sprawdzamy stwierdzenie (1): $F(x)\\cdot G(x) = 3x(x^2+2x+3) = 3x^3+6x^2+9x = W(x)$ – prawda. Stwierdzenie (2): $W(-1) = 3(-1)^3+6(-1)^2+9(-1) = -3+6-9 = -6 \\neq 0$ – fałsz.",
+    "solution_math1": "F(x)\\cdot G(x) = 3x^{3}+6x^{2}+9x = W(x) \\Rightarrow \\text{P}",
+    "solution_step2": "",
+    "solution_math2": "W(-1) = -3+6-9 = -6 \\neq 0 \\Rightarrow \\text{F}"
+  },
+  {
+    "num": 9,
+    "text": "Rozwiąż równanie $x^{3} - 2x^{2} - 3x + 6 = 0$. Zapisz obliczenia.",
+    "type": "otwarte",
+    "answer": "$x = -\\sqrt{3}$, $x = \\sqrt{3}$, $x = 2$",
+    "solution_step1": "Grupujemy wyrazy i wyłączamy wspólny czynnik.",
+    "solution_math1": "x^{2}(x-2) - 3(x-2) = 0 \\Rightarrow (x-2)(x^{2}-3) = 0",
+    "solution_step2": "Rozwiązujemy każdy czynnik.",
+    "solution_math2": "x - 2 = 0 \\Rightarrow x = 2; \\quad x^{2} - 3 = 0 \\Rightarrow x = \\pm\\sqrt{3}"
+  },
+  {
+    "num": 10,
+    "text": "W październiku 2022 roku założono dwa sady, w których posadzono łącznie 1960 drzew. Po roku uschło 5% drzew w pierwszym sadzie i 10% drzew w drugim sadzie. Liczba drzew, które pozostały w drugim sadzie, stanowiła 60% liczby drzew, które pozostały w pierwszym sadzie. Niech $x$ oraz $y$ oznaczają liczby drzew posadzonych – odpowiednio – w pierwszym i drugim sadzie. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego poprawne rozwiązanie prowadzi do obliczenia liczby $x$ drzew posadzonych w pierwszym sadzie oraz liczby $y$ drzew posadzonych w drugim sadzie, jest. A. $\\begin{cases} x+y=1960 \\\\ 0{,}6 \\cdot 0{,}95x = 0{,}9y \\end{cases}$ B. $\\begin{cases} x+y=1960 \\\\ 0{,}95x = 0{,}6 \\cdot 0{,}9y \\end{cases}$ C. $\\begin{cases} x+y=1960 \\\\ 0{,}05x = 0{,}6 \\cdot 0{,}1y \\end{cases}$ D. $\\begin{cases} x+y=1960 \\\\ 0{,}4 \\cdot 0{,}95x = 0{,}9y \\end{cases}$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Po roku w pierwszym sadzie pozostało $0{,}95x$ drzew, a w drugim $0{,}9y$. Warunek: $0{,}9y = 0{,}6 \\cdot 0{,}95x$.",
+    "solution_math1": "\\begin{cases} x + y = 1960 \\\\ 0{,}6 \\cdot 0{,}95x = 0{,}9y \\end{cases}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 11,
+    "text": "Na rysunku przedstawiono dwie proste równoległe w układzie współrzędnych. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Układem równań, którego interpretację geometryczną przedstawiono na rysunku, jest. A. $\\begin{cases} y = -\\frac{3}{2}x+3 \\\\ y = -\\frac{3}{2}x-1 \\end{cases}$ B. $\\begin{cases} y = \\frac{3}{2}x+3 \\\\ y = -\\frac{2}{3}x-1 \\end{cases}$ C. $\\begin{cases} y = \\frac{3}{2}x+3 \\\\ y = \\frac{3}{2}x-1 \\end{cases}$ D. $\\begin{cases} y = -\\frac{3}{2}x-3 \\\\ y = \\frac{3}{2}x+1 \\end{cases}$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Dwie proste są równoległe, gdy mają jednakowe współczynniki kierunkowe $a$ i różne wyrazy wolne $b$.",
+    "solution_math1": "a_1 = a_2 \\Rightarrow \\text{obie proste mają ten sam współczynnik kierunkowy}",
+    "solution_step2": "Tylko odpowiedź A i C mają jednakowe współczynniki kierunkowe. Z rysunku odczytujemy nachylenie jako $-\\frac{3}{2}$, co odpowiada odpowiedzi A.",
+    "solution_math2": "y = -\\tfrac{3}{2}x+3 \\quad \\text{i} \\quad y = -\\tfrac{3}{2}x-1"
+  },
+  {
+    "num": 12,
+    "text": "Funkcja liniowa $f$ jest określona wzorem $f(x) = (-2k+3)x + k - 1$, gdzie $k \\in \\mathbb{R}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Funkcja $f$ jest malejąca dla każdej liczby $k$ należącej do przedziału. A. $(-\\infty,\\ 1)$ B. $\\left(-\\infty,\\ -\\frac{3}{2}\\right)$ C. $(1,\\ +\\infty)$ D. $\\left(\\frac{3}{2},\\ +\\infty\\right)$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Funkcja liniowa jest malejąca, gdy współczynnik kierunkowy jest ujemny.",
+    "solution_math1": "-2k + 3 < 0 \\Rightarrow -2k < -3 \\Rightarrow k > \\frac{3}{2}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 13,
+    "text": "Funkcje liniowe $f$ oraz $g$, określone wzorami $f(x) = 3x + 6$ oraz $g(x) = ax + 7$, mają to samo miejsce zerowe. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Współczynnik $a$ we wzorze funkcji $g$ jest równy. A. $-\\frac{7}{2}$ B. $-\\frac{2}{7}$ C. $\\frac{2}{7}$ D. $\\frac{7}{2}$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Wyznaczamy miejsce zerowe $f$: $3x+6=0 \\Rightarrow x=-2$.",
+    "solution_math1": "g(-2) = 0 \\Rightarrow a \\cdot (-2) + 7 = 0 \\Rightarrow a = \\frac{7}{2}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 14,
+    "text": "W kartezjańskim układzie współrzędnych przedstawiono fragment paraboli, która jest wykresem funkcji kwadratowej $f$. Wierzchołek paraboli oraz punkty przecięcia z osiami mają obie współrzędne całkowite. (14.1) Uzupełnij zdanie: Zbiorem wszystkich rozwiązań nierówności $f(x) \\geq 0$ jest przedział ………… . (14.2) Dokończ zdanie. Wybierz właściwą odpowiedź: Funkcja kwadratowa $f$ jest określona wzorem. A. $f(x) = -(x+1)^{2} - 9$; B. $f(x) = -(x-1)^{2} + 9$; C. $f(x) = -(x-1)^{2} - 9$; D. $f(x) = -(x+1)^{2} + 9$. (14.3) Dokończ zdanie. Wybierz właściwą odpowiedź: Dla funkcji $f$ prawdziwa jest równość. A. $f(-4) = f(6)$; B. $f(-4) = f(5)$; C. $f(-4) = f(4)$; D. $f(-4) = f(7)$. (14.4) Funkcje kwadratowe $g$ oraz $h$ są określone następująco: $g(x) = f(x+3)$, $h(x) = f(-x)$. Na rysunkach A–F przedstawiono fragmenty wykresów różnych funkcji. Uzupełnij tabelę: przyporządkuj każdej z funkcji $g$ oraz $h$ fragment jej wykresu (spośród A–F).",
+    "type": "zamknięte",
+    "answer": "(14.1) $[-2,\\ 4]$; (14.2) B; (14.3) A; (14.4) g → A, h → E",
+    "solution_step1": "Z wykresu odczytujemy: miejsca zerowe $f$ to $x=-2$ oraz $x=4$, wierzchołek w $(1, 9)$, parabola skierowana ramionami w dół.",
+    "solution_math1": "f(x) = -(x-1)^{2} + 9",
+    "solution_step2": "Oś symetrii to $x=1$. $f(-4) = -(−5)^2+9 = -16$; symetrycznie $f(6) = -(5)^2+9 = -16$. Przesunięcie $g(x) = f(x+3)$ w lewo o 3: wierzchołek w $(-2, 9)$. Odbicie $h(x)=f(-x)$: wierzchołek w $(-1, 9)$.",
+    "solution_math2": "f(-4) = f(6) \\Rightarrow \\text{(14.3) A}; \\quad g\\text{ → rysunek A},\\ h\\text{ → rysunek E}"
+  },
+  {
+    "num": 15,
+    "text": "Ciąg $(a_{n})$ jest określony wzorem $a_{n} = (-1)^{n} \\cdot (n - 5)$ dla każdej liczby naturalnej $n \\geq 1$. Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest prawdziwe, albo F – jeśli jest fałszywe. (1) Pierwszy wyraz ciągu $(a_{n})$ jest dwa razy większy od trzeciego wyrazu tego ciągu. P / F (2) Wszystkie wyrazy ciągu $(a_{n})$ są dodatnie. P / F",
+    "type": "zamknięte",
+    "answer": "PF",
+    "solution_step1": "Obliczamy $a_1 = (-1)^1 \\cdot (1-5) = (-1)(-4) = 4$ oraz $a_3 = (-1)^3 \\cdot (3-5) = (-1)(-2) = 2$.",
+    "solution_math1": "a_1 = 4 = 2 \\cdot 2 = 2 \\cdot a_3 \\Rightarrow \\text{stwierdzenie (1): P}",
+    "solution_step2": "Sprawdzamy stwierdzenie (2): $a_5 = (-1)^5 \\cdot (5-5) = 0$, co nie jest dodatnie.",
+    "solution_math2": "a_5 = 0 \\Rightarrow \\text{stwierdzenie (2): F}"
+  },
+  {
+    "num": 16,
+    "text": "Trzywyrazowy ciąg $(12,\\ 6,\\ 2m-1)$ jest geometryczny. Dokończ zdanie. Wybierz odpowiedź A albo B oraz odpowiedź 1., 2. albo 3. Ten ciąg jest: A. rosnący; B. malejący; oraz: 1. $m = \\frac{1}{2}$; 2. $m = 2$; 3. $m = 3$.",
+    "type": "zamknięte",
+    "answer": "B2",
+    "solution_step1": "Iloraz ciągu geometrycznego: $q = \\frac{6}{12} = \\frac{1}{2}$. Trzeci wyraz: $2m-1 = 6 \\cdot \\frac{1}{2} = 3$.",
+    "solution_math1": "2m - 1 = 3 \\Rightarrow m = 2",
+    "solution_step2": "Ciąg $(12, 6, 3)$ ma iloraz $\\frac{1}{2} < 1$, więc jest malejący.",
+    "solution_math2": "q = \\frac{1}{2} < 1 \\Rightarrow \\text{ciąg malejący}"
+  },
+  {
+    "num": 17,
+    "text": "Ciąg arytmetyczny $(a_{n})$ jest określony dla każdej liczby naturalnej $n \\geq 1$. Trzeci wyraz tego ciągu jest równy $(-1)$, a suma piętnastu początkowych kolejnych wyrazów tego ciągu jest równa $(-165)$. Oblicz różnicę tego ciągu. Zapisz obliczenia.",
+    "type": "otwarte",
+    "answer": "$r = -2$",
+    "solution_step1": "Zapisujemy układ równań używając wzorów na $n$-ty wyraz i sumę ciągu arytmetycznego.",
+    "solution_math1": "\\begin{cases} a_1 + 2r = -1 \\\\ \\dfrac{2a_1 + 14r}{2} \\cdot 15 = -165 \\end{cases} \\Rightarrow \\begin{cases} a_1 + 2r = -1 \\\\ a_1 + 7r = -11 \\end{cases}",
+    "solution_step2": "Odejmujemy równania stronami.",
+    "solution_math2": "5r = -10 \\Rightarrow r = -2"
+  },
+  {
+    "num": 18,
+    "text": "W kartezjańskim układzie współrzędnych zaznaczono kąt o mierze $\\alpha$ taki, że $\\operatorname{tg}\\alpha = -3$ oraz $90^\\circ < \\alpha < 180^\\circ$. Uzupełnij zdanie – wybierz dwie właściwe odpowiedzi spośród A–F. Prawdziwe są zależności: ……… oraz ………. A. $\\sin\\alpha < 0$; B. $\\sin\\alpha \\cdot \\cos\\alpha < 0$; C. $\\sin\\alpha \\cdot \\cos\\alpha > 0$; D. $\\cos\\alpha > 0$; E. $\\sin\\alpha = -\\frac{1}{3}\\cos\\alpha$; F. $\\sin\\alpha = -3\\cos\\alpha$.",
+    "type": "zamknięte",
+    "answer": "B, F",
+    "solution_step1": "Dla $90° < \\alpha < 180°$ (II ćwiartka): $\\sin\\alpha > 0$, $\\cos\\alpha < 0$.",
+    "solution_math1": "\\sin\\alpha \\cdot \\cos\\alpha = (+)(-)< 0 \\Rightarrow \\text{B: prawda}",
+    "solution_step2": "Ze wzoru $\\operatorname{tg}\\alpha = \\frac{\\sin\\alpha}{\\cos\\alpha} = -3$ wynika $\\sin\\alpha = -3\\cos\\alpha$.",
+    "solution_math2": "\\sin\\alpha = -3\\cos\\alpha \\Rightarrow \\text{F: prawda}"
+  },
+  {
+    "num": 19,
+    "text": "Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba $\\sin^{3}20^{\\circ} + \\cos^{2}20^{\\circ} \\cdot \\sin 20^{\\circ}$ jest równa. A. $\\cos 20^{\\circ}$ B. $\\sin 20^{\\circ}$ C. $\\operatorname{tg} 20^{\\circ}$ D. $\\sin 20^{\\circ} \\cdot \\cos 20^{\\circ}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Wyłączamy $\\sin 20°$ przed nawias.",
+    "solution_math1": "\\sin^{3}20^{\\circ} + \\cos^{2}20^{\\circ}\\cdot\\sin 20^{\\circ} = \\sin 20^{\\circ}(\\sin^{2}20^{\\circ} + \\cos^{2}20^{\\circ})",
+    "solution_step2": "Korzystamy z jedynki trygonometrycznej.",
+    "solution_math2": "= \\sin 20^{\\circ} \\cdot 1 = \\sin 20^{\\circ}"
+  },
+  {
+    "num": 20,
+    "text": "Dany jest trójkąt $KLM$, w którym $|KM| = a$, $|LM| = b$ oraz $a \\neq b$. Dwusieczna kąta $KML$ przecina bok $KL$ w punkcie $N$ takim, że $|KN| = c$, $|NL| = d$ oraz $|MN| = e$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. W trójkącie $KLM$ prawdziwa jest równość. A. $a \\cdot b = c \\cdot d$ B. $a \\cdot d = b \\cdot c$ C. $a \\cdot c = b \\cdot d$ D. $a \\cdot b = e^{2}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Korzystamy z twierdzenia o dwusiecznej kąta w trójkącie: dwusieczna kąta $M$ dzieli bok $KL$ w stosunku boków przyległych.",
+    "solution_math1": "\\frac{|KN|}{|NL|} = \\frac{|KM|}{|LM|} \\Rightarrow \\frac{c}{d} = \\frac{a}{b}",
+    "solution_step2": "Stąd $a \\cdot d = b \\cdot c$.",
+    "solution_math2": "a \\cdot d = b \\cdot c"
+  },
+  {
+    "num": 21,
+    "text": "Dany jest równoległobok o bokach długości $3$ i $4$ oraz o kącie między nimi o mierze $120^{\\circ}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole tego równoległoboku jest równe. A. $12$ B. $12\\sqrt{3}$ C. $6$ D. $6\\sqrt{3}$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Używamy wzoru na pole równoległoboku: $P = a \\cdot b \\cdot \\sin\\alpha$.",
+    "solution_math1": "P = 3 \\cdot 4 \\cdot \\sin 120^{\\circ} = 12 \\cdot \\frac{\\sqrt{3}}{2} = 6\\sqrt{3}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 22,
+    "text": "W trójkącie $ABC$, wpisanym w okrąg o środku w punkcie $S$, kąt $ACB$ ma miarę $42^{\\circ}$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Miara kąta ostrego $BAS$ jest równa. A. $42^{\\circ}$ B. $45^{\\circ}$ C. $48^{\\circ}$ D. $69^{\\circ}$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Kąt środkowy $BSC$ jest dwa razy większy od wpisanego $BAC$ opartych na tym samym łuku $BC$.",
+    "solution_math1": "\\angle BSC = 2 \\cdot \\angle BAC = 2 \\cdot 42^{\\circ} = 84^{\\circ}",
+    "solution_step2": "Trójkąt $BSA$ jest równoramienny ($SA = SB$ – promienie). Wyznaczamy kąt $BAS$.",
+    "solution_math2": "\\angle BAS = \\frac{180^{\\circ} - 84^{\\circ}}{2} = 48^{\\circ}"
+  },
+  {
+    "num": 23,
+    "text": "W kartezjańskim układzie współrzędnych proste $k$ oraz $l$ są określone równaniami $k: y = (m+1)x + 7$ oraz $l: y = -2x + 7$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Proste $k$ oraz $l$ są prostopadłe, gdy liczba $m$ jest równa. A. $\\left(-\\frac{1}{2}\\right)$ B. $\\frac{1}{2}$ C. $(-3)$ D. $1$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Dwie proste są prostopadłe, gdy iloczyn ich współczynników kierunkowych wynosi $-1$.",
+    "solution_math1": "(m+1) \\cdot (-2) = -1 \\Rightarrow m+1 = \\frac{1}{2} \\Rightarrow m = -\\frac{1}{2}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 24,
+    "text": "W kartezjańskim układzie współrzędnych dany jest równoległobok $ABCD$, w którym $A = (-2, 6)$ oraz $B = (10, 2)$. Przekątne $AC$ oraz $BD$ tego równoległoboku przecinają się w punkcie $P = (6, 7)$. Oblicz długość boku $BC$ tego równoległoboku. Zapisz obliczenia.",
+    "type": "otwarte",
+    "answer": "$|BC| = 2\\sqrt{13}$",
+    "solution_step1": "Punkt $P$ jest środkiem przekątnej $AC$. Ze wzoru na środek odcinka wyznaczamy współrzędne $C$.",
+    "solution_math1": "\\frac{-2 + x_C}{2} = 6 \\Rightarrow x_C = 14; \\quad \\frac{6 + y_C}{2} = 7 \\Rightarrow y_C = 8 \\Rightarrow C = (14, 8)",
+    "solution_step2": "Obliczamy długość boku $BC$.",
+    "solution_math2": "|BC| = \\sqrt{(14-10)^{2} + (8-2)^{2}} = \\sqrt{16+36} = \\sqrt{52} = 2\\sqrt{13}"
+  },
+  {
+    "num": 25,
+    "text": "Wysokość graniastosłupa prawidłowego sześciokątnego jest równa $6$. Pole podstawy tego graniastosłupa jest równe $15\\sqrt{3}$. (25.1) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Pole jednej ściany bocznej tego graniastosłupa jest równe. A. $36\\sqrt{10}$ B. $60$ C. $6\\sqrt{10}$ D. $360$. (25.2) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Kąt nachylenia najdłuższej przekątnej graniastosłupa prawidłowego sześciokątnego do płaszczyzny podstawy jest zaznaczony na rysunku. A / B / C / D (rysunki).",
+    "type": "zamknięte",
+    "answer": "(25.1) C; (25.2) D",
+    "solution_step1": "Pole podstawy prawidłowego sześciokąta foremnego: $P_{podst} = 15\\sqrt{3} = \\frac{3\\sqrt{3}}{2}a^{2}$, stąd $a^{2} = 10$, $a = \\sqrt{10}$. Pole jednej ściany bocznej: $P_{bok} = a \\cdot h = \\sqrt{10} \\cdot 6 = 6\\sqrt{10}$.",
+    "solution_math1": "a = \\sqrt{10}, \\quad P_{\\text{bok}} = 6\\sqrt{10}",
+    "solution_step2": "Najdłuższa przekątna łączy przeciwległe wierzchołki podstawy i przechodzi przez środek graniastosłupa. Jej rzut na podstawę ma długość $2a = 2\\sqrt{10}$, wysokość $h=6$. Kąt nachylenia jest zaznaczony na rysunku D.",
+    "solution_math2": "\\tan\\alpha = \\frac{h}{2a} = \\frac{6}{2\\sqrt{10}} = \\frac{3}{\\sqrt{10}}"
+  },
+  {
+    "num": 26,
+    "text": "Ostrosłup $F_1$ jest podobny do ostrosłupa $F_2$. Objętość ostrosłupa $F_1$ jest równa $64$. Objętość ostrosłupa $F_2$ jest równa $512$. Uzupełnij poniższe zdanie. Wpisz odpowiednią liczbę w wykropkowanym miejscu tak, aby zdanie było prawdziwe. Stosunek pola powierzchni całkowitej ostrosłupa $F_2$ do pola powierzchni całkowitej ostrosłupa $F_1$ jest równy ……….",
+    "type": "otwarte",
+    "answer": "$4$",
+    "solution_step1": "Wyznaczamy stosunek objętości i stąd stosunek liniowy podobieństwa.",
+    "solution_math1": "\\frac{V_{F_2}}{V_{F_1}} = \\frac{512}{64} = 8 = k^{3} \\Rightarrow k = 2",
+    "solution_step2": "Stosunek pól powierzchni jest kwadratem stosunku liniowego.",
+    "solution_math2": "\\frac{P_{F_2}}{P_{F_1}} = k^{2} = 4"
+  },
+  {
+    "num": 27,
+    "text": "Rozważamy wszystkie kody czterocyfrowe utworzone tylko z cyfr $1, 3, 6, 8$, przy czym w każdym kodzie każda z tych cyfr występuje dokładnie jeden raz. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Liczba wszystkich takich kodów jest równa. A. $4$ B. $10$ C. $24$ D. $16$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Liczymy permutacje 4 cyfr.",
+    "solution_math1": "4! = 4 \\cdot 3 \\cdot 2 \\cdot 1 = 24",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 28,
+    "text": "Średnia arytmetyczna trzech liczb: $a$, $b$, $c$, jest równa $9$. Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Średnia arytmetyczna sześciu liczb: $a$, $a$, $b$, $b$, $c$, $c$, jest równa. A. $9$ B. $6$ C. $4{,}5$ D. $18$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Jeśli $\\frac{a+b+c}{3} = 9$, to $a+b+c = 27$.",
+    "solution_math1": "\\frac{a+a+b+b+c+c}{6} = \\frac{2(a+b+c)}{6} = \\frac{2 \\cdot 27}{6} = 9",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 29,
+    "text": "Na diagramie słupkowym przedstawiono wyniki sprawdzianu z matematyki w pewnej klasie maturalnej. Na osi poziomej podano oceny (1–6), a na osi pionowej liczbę uczniów, którzy daną ocenę otrzymali. (Odczyt z wykresu: ocena 1 – 0 uczniów, ocena 2 – 2 uczniów, ocena 3 – 7 uczniów, ocena 4 – 5 uczniów, ocena 5 – 5 uczniów, ocena 6 – 3 uczniów; razem 22 uczniów.) Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych. Mediana ocen uzyskanych z tego sprawdzianu przez uczniów tej klasy jest równa. A. $4{,}5$ B. $4$ C. $3{,}5$ D. $3$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Porządkujemy dane i szukamy mediany (środkowej wartości). Przy 22 uczniach mediana to średnia 11. i 12. wartości.",
+    "solution_math1": "\\text{Uczniowie z oceną} \\leq 3: 0+2+7 = 9; \\quad \\text{z oceną} \\leq 4: 9+5 = 14",
+    "solution_step2": "11. i 12. wartość: 11. to ocena 4, 10. to ocena 3. Mediana = $\\frac{3+4}{2} = 3{,}5$.",
+    "solution_math2": "\\text{Mediana} = \\frac{3+4}{2} = 3{,}5"
+  },
+  {
+    "num": 30,
+    "text": "Dany jest pięcioelementowy zbiór $K = \\{5, 6, 7, 8, 9\\}$. Wylosowanie każdej liczby z tego zbioru jest jednakowo prawdopodobne. Ze zbioru $K$ losujemy ze zwracaniem kolejno dwa razy po jednej liczbie i zapisujemy je w kolejności losowania. Oblicz prawdopodobieństwo zdarzenia $A$ polegającego na tym, że suma wylosowanych liczb jest liczbą parzystą. Zapisz obliczenia.",
+    "type": "otwarte",
+    "answer": "$P(A) = \\frac{13}{25}$",
+    "solution_step1": "Liczba wszystkich zdarzeń elementarnych: $|\\Omega| = 5 \\cdot 5 = 25$. Suma parzysta: dwie liczby parzyste lub dwie nieparzyste. W zbiorze $K$: parzyste $\\{6,8\\}$ (2 szt.), nieparzyste $\\{5,7,9\\}$ (3 szt.).",
+    "solution_math1": "|A| = 2 \\cdot 2 + 3 \\cdot 3 = 4 + 9 = 13",
+    "solution_step2": "Obliczamy prawdopodobieństwo.",
+    "solution_math2": "P(A) = \\frac{13}{25}"
+  },
+  {
+    "num": 31,
+    "text": "W schronisku dla zwierząt na płaskiej powierzchni należy zbudować ogrodzenie z siatki wydzielające trzy identyczne wybiegi o wspólnych ścianach wewnętrznych. Podstawą każdego z trzech wybiegów jest prostokąt (jak na rysunku). Do wykonania ogrodzenia należy zużyć 36 metrów bieżących siatki (oznaczenia: $x$ – długość, $y$ – szerokość jednego wybiegu). Oblicz wymiary $x$ oraz $y$ jednego wybiegu, przy których suma pól podstaw tych trzech wybiegów będzie największa. Zapisz obliczenia.",
+    "type": "otwarte",
+    "answer": "$x = 4{,}5\\ \\text{m}$, $y = 3\\ \\text{m}$",
+    "solution_step1": "Zapisujemy warunek na długość siatki: dwa boki długości $x$ (przód i tył całości) i cztery boki długości $y$ (wewnętrzne + zewnętrzne).",
+    "solution_math1": "4x + 6y = 36 \\Rightarrow y = 6 - \\frac{2}{3}x",
+    "solution_step2": "Zapisujemy sumę pól jako funkcję jednej zmiennej i wyznaczamy wierzchołek paraboli.",
+    "solution_math2": "P(x) = 3xy = 3x\\left(6 - \\tfrac{2}{3}x\\right) = -2x^{2} + 18x \\Rightarrow x = -\\frac{18}{2 \\cdot (-2)} = 4{,}5;\\ y = 6 - \\tfrac{2}{3}\\cdot 4{,}5 = 3"
+  }
+]

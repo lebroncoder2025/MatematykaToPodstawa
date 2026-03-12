@@ -1,0 +1,795 @@
+                                                    Arkusz zawiera informacje prawnie chronione do momentu rozpoczęcia
+                                                    Arkusz
+                                                    egzaminu.
+                                                               zawiera informacje prawnie chronione
+                                                    do momentu rozpoczęcia egzaminu.
+
+
+
+                  WYPEŁNIA ZDAJĄCY                          Miejsce na naklejkę.
+                                                        Sprawdź, czy kod na naklejce to
+       KOD                   PESEL                                           M-100.
+                                                        Jeżeli tak – przyklej naklejkę.
+                                                      Jeżeli nie – zgłoś to nauczycielowi.
+
+
+
+
+ Egzamin maturalny                                    Formuła 2023
+
+
+
+ MATEMATYKA
+ Poziom podstawowy
+                                                          Symbol arkusza
+    TEST DIAGNOSTYCZNY                                    MMAP-P0-100-2412
+                                                WYPEŁNIA ZESPÓŁ NADZORUJĄCY
+DATA: 6 grudnia 2024 r.                      Uprawnienia zdającego do:
+                                                  dostosowania zasad oceniania
+GODZINA ROZPOCZĘCIA: 9:00                         dostosowania w zw. z dyskalkulią
+
+CZAS TRWANIA: 180 minut                           nieprzenoszenia odpowiedzi na kartę.
+
+
+LICZBA PUNKTÓW DO UZYSKANIA: 50
+
+Przed rozpoczęciem pracy z arkuszem egzaminacyjnym
+
+1. Sprawdź, czy nauczyciel przekazał Ci właściwy arkusz egzaminacyjny,
+   tj. arkusz we właściwej formule, z właściwego przedmiotu na właściwym
+   poziomie.
+2. Jeżeli przekazano Ci niewłaściwy arkusz – natychmiast zgłoś to nauczycielowi.
+   Nie rozrywaj banderol.
+3. Jeżeli przekazano Ci właściwy arkusz – rozerwij banderole po otrzymaniu
+   takiego polecenia od nauczyciela. Zapoznaj się z instrukcją na stronie 2.
+
+
+
+Układ graficzny
+© CKE 2022
+Instrukcja dla zdającego
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 31 stron (zadania 1–30).
+    Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego egzamin.
+2. Na pierwszej stronie arkusza oraz na karcie odpowiedzi wpisz swój numer PESEL
+    i przyklej naklejkę z kodem.
+3. Symbol              zamieszczony w nagłówku zadania oznacza, że rozwiązanie zadania
+    zamkniętego musisz przenieść na kartę odpowiedzi. Ocenie podlegają wyłącznie
+    odpowiedzi zaznaczone na karcie odpowiedzi.
+4. Odpowiedzi do zadań zamkniętych zaznacz na karcie odpowiedzi w części
+    przeznaczonej dla zdającego. Zamaluj       pola do tego przeznaczone. Błędne
+    zaznaczenie otocz kółkiem       i zaznacz właściwe.
+5. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń w rozwiązaniu zadania
+    otwartego może spowodować, że za to rozwiązanie nie otrzymasz pełnej liczby punktów.
+6. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym.
+7. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub atramentem.
+8. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl.
+9. Nie wpisuj żadnych znaków w tabelkach przeznaczonych dla egzaminatora.
+    Tabelki umieszczone są na marginesie przy odpowiednich zadaniach.
+10. Pamiętaj, że zapisy w brudnopisie nie będą oceniane.
+11. Możesz korzystać z Wybranych wzorów matematycznych, cyrkla i linijki oraz
+    z kalkulatora prostego. Upewnij się, czy przekazano Ci broszurę z okładką taką jak
+    widoczna poniżej.
+
+
+
+
+                                      Strona 2 z 31
+                                                                              MMAP-P0_100
+              Zadania egzaminacyjne są wydrukowane
+                     na następnych stronach.
+
+
+
+
+                            Strona 3 z 31
+MMAP-P0_100
+Zadanie 1. (0–1)
+Liczby 𝑥1 i 𝑥2 są różnymi rozwiązaniami równania |𝑥 + 4| = 7.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Suma 𝑥1 + 𝑥2 jest równa
+
+A. (−14)             B. (−8)              C. 3                  D. 8
+
+ Brudnopis
+
+
+
+
+Zadanie 2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+
+        5   1 −5
+Liczba (√5 ⋅ )   jest równa
+            5
+
+A. 54                B. 5−4               C. 50,25              D. 5−0,25
+
+ Brudnopis
+
+
+
+
+                                    Strona 4 z 31
+                                                                            MMAP-P0_100
+Zadanie 3. (0–2)                                                             3.
+                     𝟏𝟎𝟎        𝟒𝟗          𝟐𝟒
+Wykaż, że liczba 𝟐         +𝟒        + 𝟏𝟔        jest podzielna przez 𝟐𝟏.   0–1–2
+
+
+
+
+                                                 Strona 5 z 31
+MMAP-P0_100
+Zadanie 4. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Dla każdej dodatniej liczby rzeczywistej 𝑥 i dla każdej dodatniej liczby rzeczywistej 𝑦
+wartość wyrażenia log 7 𝑥 + 6 log 7 𝑦 jest równa wartości wyrażenia
+
+          𝑥
+A. log 7 ( 6 )         B. log 7 (𝑥𝑦)6          C. log 7 (6𝑥𝑦)         D. log 7 (𝑥𝑦 6 )
+          𝑦
+
+ Brudnopis
+
+
+
+
+Zadanie 5. (0–1)
+Pani Aniela wpłaciła do banku kwotę 60 000 zł na lokatę dwuletnią. Po każdym rocznym
+okresie oszczędzania bank doliczał odsetki w wysokości 𝑝% w skali roku od kwoty
+bieżącego kapitału znajdującego się na lokacie – zgodnie z procentem składanym.
+Na koniec okresu oszczędzania kwota na tej lokacie była równa 67 925,76 zł wraz
+z odsetkami (bez uwzględniania podatków).
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Oprocentowanie lokaty w skali roku było równe
+
+A. 6%                  B. 6,4%                 C. 6,5%                D. 7%
+
+ Brudnopis
+
+
+
+
+                                        Strona 6 z 31
+                                                                                   MMAP-P0_100
+Zadanie 6. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Dla każdej liczby rzeczywistej 𝑥 różnej od (−1), 0 oraz 1 wartość wyrażenia
+              2
+   𝑥    3𝑥
+ 2   ∶ 𝑥 + 1 jest równa wartości wyrażenia
+𝑥 −1
+
+      𝑥                     1                                          1
+A.                   B.                        C. −3𝑥           D. −
+     𝑥−1                  3𝑥2 −3𝑥                                      3𝑥
+
+ Brudnopis
+
+
+
+
+Zadanie 7. (0–1)
+Para liczb 𝑥 = −1 i 𝑦 = 6 jest rozwiązaniem układu równań
+                                         𝑎𝑥 + 3𝑦 = 20
+                                     {
+                                         𝑥 + 𝑏𝑦 = 5
+gdzie 𝑎 oraz 𝑏 są liczbami rzeczywistymi.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wartość wyrażenia 𝑎 ⋅ 𝑏 jest równa
+
+A. (−2)              B. (−0,5)                 C. 0,5           D. 2
+
+ Brudnopis
+
+
+
+
+                                         Strona 7 z 31
+MMAP-P0_100
+8.     Zadanie 8. (0–3)
+0–1–
+2–3
+       Rozwiąż równanie
+                                          𝒙+𝟑     𝒙
+                                               =
+                                          𝒙 − 𝟏 𝟐𝒙 − 𝟐
+       Zapisz konieczne założenie i obliczenia.
+
+
+
+
+                                            Strona 8 z 31
+                                                            MMAP-P0_100
+Zadanie 9. (0–2)                      9.
+
+Rozwiąż nierówność                   0–1–2
+
+                     𝒙(𝒙 − 𝟔) ≤ 𝟕
+Zapisz obliczenia.
+
+
+
+
+                     Strona 9 z 31
+MMAP-P0_100
+        Zadanie 10. (0–4)
+        Funkcja 𝑓 jest określona następująco:
+
+                                            3        dla 𝑥 ∈ (−4, −2]
+                                  𝑓(𝑥) = { −𝑥 + 1    dla 𝑥 ∈ (−2, 2]
+                                            𝑥−3      dla 𝑥 ∈ (2, 4]
+
+        Wykres funkcji 𝑦 = 𝑓(𝑥) przedstawiono w kartezjańskim układzie współrzędnych (𝑥, 𝑦)
+        na rysunku poniżej.
+                                                 𝑦
+                                                 5
+                                                 4
+                                                 3
+                                                       𝑦 = 𝑓(𝑥)
+                                                 2
+                                                 1
+
+                               −5 −4 −3 −2 −1 0       1 2 3 4 5         𝑥
+                                            −1
+                                                −2
+                                                −3
+                                                −4
+                                                −5
+
+ 10.    Uzupełnij zdania. Wpisz odpowiednie przedziały w wykropkowanych miejscach, aby
+ 0–1–   zdania były prawdziwe.
+2–3–4
+
+
+
+        1. Dziedziną funkcji 𝑓 jest przedział …………… .
+
+        2. Zbiorem wartości funkcji 𝑓 jest przedział …………… .
+
+        3. Zbiorem wszystkich argumentów, dla których funkcja 𝑓 przyjmuje wartości ujemne, jest
+
+           przedział …………… .
+
+        4. Zbiorem wszystkich argumentów, dla których funkcja 𝑓 przyjmuje największą wartość,
+
+           jest przedział …………… .
+
+
+         Brudnopis
+
+
+
+
+                                             Strona 10 z 31
+                                                                                     MMAP-P0_100
+Zadanie 11. (0–1)
+Miejscem zerowym funkcji liniowej 𝑓 jest liczba 2, a punkt przecięcia wykresu funkcji 𝑓
+z osią 𝑂𝑦 kartezjańskiego układu współrzędnych (𝑥, 𝑦) ma współrzędne (0, 4) (zobacz
+rysunek).
+                                           𝑦
+                                           5
+                                           4
+                                           3
+                                                  𝑦 = 𝑓(𝑥)
+                                           2
+                                           1
+
+                        −5 −4 −3 −2 −1 0        1 2 3 4 5          𝑥
+                                     −1
+                                         −2
+                                         −3
+                                         −4
+                                         −5
+
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Współczynnik kierunkowy prostej, która jest wykresem funkcji 𝑓 , jest
+                                                                                 P        F
+ równy (−2).
+
+ Pole trójkąta ograniczonego osiami kartezjańskiego układu współrzędnych
+                                                                                 P        F
+ (𝑥, 𝑦) oraz wykresem funkcji 𝑓 jest równe 8.
+
+ Brudnopis
+
+
+
+
+                                       Strona 11 z 31
+MMAP-P0_100
+        Zadanie 12.
+        W kartezjańskim układzie współrzędnych (𝑥, 𝑦) wykresem funkcji kwadratowej 𝑓 jest
+        parabola, której wierzchołkiem jest punkt (3, 0). Ta parabola przechodzi przez punkt
+        o współrzędnych (0, −9).
+
+
+        Zadanie 12.1. (0–1)
+        Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+        Funkcja 𝑓 jest malejąca w przedziale
+
+        A. (−∞, 0]            B. (−∞, 3]             C. [0, +∞)            D. [3, +∞)
+
+         Brudnopis
+
+
+
+
+12.2.   Zadanie 12.2. (0–2)
+0–1–2   Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami
+        A–F i wpisz te litery w wykropkowanych miejscach.
+
+        Wzór funkcji 𝑓 zapisano w odpowiedziach oznaczonych literami: ……… oraz ……… .
+
+        A. 𝑓(𝑥) = −𝑥 2 − 9
+
+        B. 𝑓(𝑥) = −(𝑥 − 3)2
+
+        C. 𝑓(𝑥) = −(𝑥 + 3)2
+
+        D. 𝑓(𝑥) = −𝑥 2 + 6𝑥 − 9
+
+        E. 𝑓(𝑥) = −𝑥 2 − 6𝑥 + 9
+
+        F. 𝑓(𝑥) = −𝑥 2 − 6𝑥 − 9
+
+         Brudnopis
+
+
+
+
+                                               Strona 12 z 31
+                                                                                        MMAP-P0_100
+Zadanie 12.3. (0–1)
+Funkcja kwadratowa 𝑔 jest określona za pomocą funkcji 𝑓 następująco: 𝑔(𝑥) = 𝑓(𝑥) − 1.
+
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Funkcja 𝑔 ma jedno miejsce zerowe.                                              P   F
+
+ W kartezjańskim układzie współrzędnych (𝑥, 𝑦) osią symetrii wykresu funkcji 𝑔
+                                                                                 P   F
+ jest prosta o równaniu 𝑥 = 3.
+
+
+ Brudnopis
+
+
+
+
+                                      Strona 13 z 31
+MMAP-P0_100
+Zadanie 13. (0–1)
+Funkcja logarytmiczna 𝑓 jest określona wzorem 𝑓(𝑥) = log 6 𝑥 dla każdej dodatniej liczby
+rzeczywistej 𝑥 .
+
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Wartość funkcji 𝑓 dla argumentu 36 jest równa 6.                               P    F
+
+
+ Funkcja 𝑓 jest rosnąca.                                                        P    F
+
+
+ Brudnopis
+
+
+
+
+Zadanie 14. (0–1)
+Ciąg (𝑎𝑛 ) jest określony wzorem 𝑎𝑛 = 3 ⋅ (−1)𝑛 + 10 dla każdej liczby naturalnej 𝑛 ≥ 1.
+
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Ciąg (𝑎𝑛 ) jest geometryczny.                                                  P    F
+
+
+ Suma ośmiu początkowych kolejnych wyrazów ciągu (𝑎𝑛 ) jest równa 80.           P    F
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 14 z 31
+                                                                              MMAP-P0_100
+Zadanie 15. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Trzywyrazowy ciąg (5𝑚, 4 + 2𝑚, 𝑚) jest arytmetyczny, gdy liczba 𝑚 jest równa
+
+A. (−4)               B. (−1)                C. 1                  D. 4
+
+ Brudnopis
+
+
+
+
+Zadanie 16. (0–1)
+Dany jest ciąg geometryczny (𝑎𝑛 ) określony dla każdej liczby naturalnej 𝑛 ≥ 1, w którym
+     1             1
+𝑎2 = 6 oraz 𝑎3 = 9 .
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Piąty wyraz ciągu (𝑎𝑛 ) jest równy
+
+     1                     2                      4                      8
+A.                    B.                     C.                    D.
+     15                    27                     81                    243
+
+ Brudnopis
+
+
+
+
+                                     Strona 15 z 31
+MMAP-P0_100
+Zadanie 17.
+Dany jest trójkąt prostokątny 𝐴𝐵𝐶 , w którym |𝐴𝐶| = √15 i |𝐵𝐶| = 8. Na przyprostokątnej
+𝐴𝐵 leży taki punkt 𝐷, że |𝐵𝐷| = 6 (zobacz rysunek).
+
+                         𝐶
+
+
+
+                                           8
+                   √15
+
+
+
+                         𝐴       𝐷             6               𝐵
+
+Zadanie 17.1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Sinus kąta ostrego 𝐴𝐵𝐶 jest równy
+
+     1                       7                     √15                  √15
+A.                    B.                    C.                     D.
+     2                       8                     4                    8
+
+ Brudnopis
+
+
+
+
+Zadanie 17.2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Tangens kąta ostrego 𝐴𝐷𝐶 jest równy
+
+                             1                     7                    √15
+A. √15                B.                    C.                     D.
+                             2                     8                    8
+
+ Brudnopis
+
+
+
+
+                                     Strona 16 z 31
+                                                                              MMAP-P0_100
+Zadanie 18. (0–1)
+                                            √3
+Kąt o mierze 𝛼 jest rozwarty oraz sin 𝛼 =        .
+                                            4
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Cosinus kąta o mierze 𝛼 jest równy
+
+        √13                1                         1         √13
+A. (−       )         B. (− )                   C.        D.
+        4                  2                         2         4
+
+ Brudnopis
+
+
+
+
+                                     Strona 17 z 31
+MMAP-P0_100
+        Zadanie 19. (0–4)
+        W trapezie prostokątnym 𝐴𝐵𝐶𝐷 dłuższa podstawa 𝐴𝐵 ma długość 7,5.
+        Krótsza przekątna 𝐴𝐶 ma długość równą 6 i dzieli trapez na dwa trójkąty prostokątne
+        (zobacz rysunek).
+
+                                 𝐷                       𝐶
+
+
+                                            6
+
+
+
+                                  𝐴               7,5                𝐵
+
+ 19.    Oblicz pole trapezu 𝑨𝑩𝑪𝑫. Zapisz obliczenia.
+ 0–1–
+2–3–4
+
+
+
+
+                                             Strona 18 z 31
+                                                                                     MMAP-P0_100
+              Strona 19 z 31
+MMAP-P0_100
+Zadanie 20. (0–1)
+Dany jest okrąg o środku w punkcie 𝑆 i promieniu 6.
+Miara kąta wpisanego 𝐴𝐶𝐵 jest równa 60° (zobacz rysunek).
+
+                                             𝐶
+
+                                             60°
+
+
+
+
+                                            𝑆
+                                                                𝐵
+
+
+
+                                 𝐴
+
+
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Długość łuku 𝐴𝐵 , na którym oparty jest kąt wpisany 𝐴𝐶𝐵, jest równa
+
+A. 2𝜋                 B. 4𝜋                 C. 6𝜋                     D. 12𝜋
+
+ Brudnopis
+
+
+
+
+                                     Strona 20 z 31
+                                                                               MMAP-P0_100
+Zadanie 21. (0–1)
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) punkty 𝐴 = (−2, −1) oraz 𝐶 = (3, 4) są
+przeciwległymi wierzchołkami kwadratu 𝐴𝐵𝐶𝐷 .
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Długość boku kwadratu 𝐴𝐵𝐶𝐷 jest równa
+
+A. 5                  B. 10                C. 5√2                D. √10
+
+ Brudnopis
+
+
+
+
+Zadanie 22. (0–1)
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) dana jest prosta 𝑘 o równaniu
+𝑦 = −7𝑥 + 3. Prosta 𝑙 jest równoległa do prostej 𝑘 i przecina oś 𝑂𝑦 w punkcie (0, 6).
+Punkt o współrzędnych (1, 𝑝) należy do prostej 𝑙 .
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Liczba 𝑝 jest równa
+
+                                                5
+A. (−4)               B. (−1)              C.                    D. 7
+                                                7
+
+ Brudnopis
+
+
+
+
+                                    Strona 21 z 31
+MMAP-P0_100
+Zadanie 23. (0–1)
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) dane są cztery okręgi: 𝑜1 , 𝑜2 , 𝑜3 , 𝑜4 ,
+o równaniach:
+
+                               𝑜1 : (𝑥 − 1)2 + (𝑦 − 2)2 = 1
+                               𝑜2 : (𝑥 + 1)2 + (𝑦 + 2)2 = 9
+                               𝑜3 : (𝑥 − 3)2 + (𝑦 − 4)2 = 4
+                               𝑜4 : (𝑥 + 3)2 + (𝑦 + 4)2 = 16
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Okręgiem, który nie ma żadnego punktu wspólnego z osiami układu współrzędnych (𝑥, 𝑦),
+jest
+
+A. 𝑜1                  B. 𝑜2                  C. 𝑜3                  D. 𝑜4
+
+ Brudnopis
+
+
+
+
+                                       Strona 22 z 31
+                                                                                 MMAP-P0_100
+Zadanie 24. (0–1)
+Podstawą ostrosłupa prawidłowego czworokątnego jest kwadrat o boku długości 4.
+Ściana boczna tego ostrosłupa jest nachylona do płaszczyzny podstawy pod takim kątem 𝛼 ,
+że tg 𝛼 = 3.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wysokość tego ostrosłupa jest równa
+
+A. 3                  B. 6                   C. 6√2               D. 12
+
+ Brudnopis
+
+
+
+
+Zadanie 25. (0–1)
+Długości trzech krawędzi wychodzących z jednego wierzchołka prostopadłościanu są trzema
+kolejnymi parzystymi liczbami naturalnymi. Najdłuższa krawędź tego prostopadłościanu ma
+długość 𝑝.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Objętość tego prostopadłościanu jest równa
+
+A. 𝑝3 − 3𝑝2 + 2𝑝
+
+B. 𝑝3 + 3𝑝2 + 2𝑝
+
+C. 𝑝3 − 6𝑝2 − 8𝑝
+
+D. 𝑝3 − 6𝑝2 + 8𝑝
+
+ Brudnopis
+
+
+
+
+                                      Strona 23 z 31
+MMAP-P0_100
+        Zadanie 26. (0–2)
+        Objętość stożka o wysokości 2 jest równa 8𝜋.
+
+ 26.    Oblicz miarę kąta rozwarcia tego stożka. Zapisz obliczenia.
+0–1–2
+
+
+
+
+                                            Strona 24 z 31
+                                                                      MMAP-P0_100
+Zadanie 27. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wszystkich liczb naturalnych pięciocyfrowych nieparzystych, w których zapisie dziesiętnym
+występują wyłącznie cyfry 0, 1, 2, 3 (np. 12 303, 11 111), jest
+
+A. 32                 B. 384                 C. 512                 D. 576
+
+ Brudnopis
+
+
+
+
+                                      Strona 25 z 31
+MMAP-P0_100
+        Zadanie 28. (0–2)
+        Dane są dwa zbiory: 𝐶 = {1, 2, 3, 4, 5, 6} oraz 𝐷 = {7, 8, 9, 10}.
+        Losujemy jedną liczbę ze zbioru 𝐶 , a następnie losujemy jedną liczbę ze zbioru 𝐷 .
+
+ 28.    Oblicz prawdopodobieństwo zdarzenia 𝑨 polegającego na tym, że wylosujemy liczby,
+0–1–2   których iloczyn będzie podzielny przez 𝟒. Zapisz obliczenia.
+
+
+
+
+                                               Strona 26 z 31
+                                                                                         MMAP-P0_100
+Zadanie 29. (0–2)
+Do szkolnego koła czytelniczego należy 50 uczniów. Opiekun koła zebrał dane dotyczące
+liczby książek przeczytanych przez tych uczniów w listopadzie 2024 roku. W poniższej tabeli
+przedstawiono wyniki zebrane przez opiekuna.
+
+
+              Liczba przeczytanych książek      4      5      6      7      8
+
+                    Liczba uczniów,
+                 którzy przeczytali daną        5      8     12     13     12
+                      liczbę książek
+
+Uzupełnij zdania. Wpisz odpowiednie liczby w wykropkowanych miejscach, aby zdania              29.
+były prawdziwe.                                                                               0–1–2
+
+
+
+1. Średnia arytmetyczna liczby przeczytanych książek w tej grupie uczniów jest równa
+
+   …………… .
+
+2. Mediana liczby przeczytanych książek w tej grupie uczniów jest równa …………… .
+
+
+ Brudnopis
+
+
+
+
+                                      Strona 27 z 31
+MMAP-P0_100
+        Zadanie 30. (0–4)
+        Rozważamy wszystkie prostopadłościany 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻 , w których krawędź 𝐴𝐸 jest 3 razy
+        dłuższa od krawędzi 𝐴𝐵 , a suma długości wszystkich dwunastu krawędzi
+        prostopadłościanu jest równa 48 (zobacz rysunek).
+
+        Niech 𝑃(𝑥) oznacza funkcję pola powierzchni całkowitej takiego prostopadłościanu
+        w zależności od długości 𝑥 krawędzi 𝐴𝐵 .
+
+
+                                          𝐻                     𝐺
+
+
+                                   𝐸                        𝐹
+
+
+
+
+                                         𝐷                      𝐶
+
+
+                                    𝐴         𝑥         𝐵
+
+ 30.    Wyznacz wzór i dziedzinę funkcji 𝑷. Oblicz długość 𝒙 krawędzi 𝑨𝑩 tego
+ 0–1–
+2–3–4
+        z rozważanych prostopadłościanów, którego pole powierzchni całkowitej jest
+        największe. Zapisz obliczenia.
+
+
+
+
+                                              Strona 28 z 31
+                                                                                     MMAP-P0_100
+              Strona 29 z 31
+MMAP-P0_100
+BRUDNOPIS (nie podlega ocenie)
+
+
+
+
+          Strona 30 z 31
+                                 MMAP-P0_100
+              Strona 31 z 31
+MMAP-P0_100
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+
+
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+
+
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+

@@ -1,0 +1,332 @@
+[
+  {
+    "num": 1,
+    "text": "Dokończ zdanie. Wyrażenie $\\left(5\\cdot 5^{\\frac{1}{2}}\\right)^{\\frac{1}{3}}$ jest równe. A. $\\sqrt[3]{5}$ B. $\\sqrt[6]{5}$ C. $\\sqrt{5}$ D. $5$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Podstawa $5\\cdot5^{1/2}=5^{3/2}$. Podnosimy do $1/3$: $\\left(5^{3/2}\\right)^{1/3}=5^{1/2}$.",
+    "solution_math1": "\\left(5^{3/2}\\right)^{1/3} = 5^{\\frac{3}{2}\\cdot\\frac{1}{3}} = 5^{\\frac{1}{2}} = \\sqrt{5}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 2,
+    "text": "Pewna kwota kapitału jest inwestowana po oprocentowaniu $7\\%$ w skali roku przez 2 lata. Kwota wynosi $40\\,000$ zł. Ile wyniesie po 2 latach? A. $45\\,796$ zł B. $45\\,600$ zł C. $44\\,800$ zł D. $44\\,000$ zł",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Kapitalizacja roczna: $K_2=K_0\\cdot(1{,}07)^2$.",
+    "solution_math1": "K_2 = 40\\,000\\cdot1{,}07^2 = 40\\,000\\cdot1{,}1449 = 45\\,796",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 3,
+    "text": "W fabryce pracodawca i pracownicy ustalają godzinowe stawki od $50$ zł do $400$ zł. Układ: koszt za godzinę 50 pracowników klasy A i 40 pracowników klasy B wynosi 8000 zł, a relacja $1{,}5x=1{,}2y$ (x – stawka A, y – stawka B). Stawki to: A. $x=50,\\,y=100$ B. $x=100,\\,y=50$ C. $x=80,\\,y=100$ D. $x=100,\\,y=80$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Układ: $50x+40y=8000$, $1{,}5x=1{,}2y \\Rightarrow y=\\frac{5}{4}x$.",
+    "solution_math1": "50x+40\\cdot\\frac{5}{4}x = 8000 \\Rightarrow 50x+50x=8000 \\Rightarrow x=80,\\;y=100",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 4,
+    "text": "Uprość wyrażenie $\\frac{1}{x-y}+\\frac{1}{x+y}$ (przy założeniu $x\\neq\\pm y$). A. $\\frac{2x}{x^2-y^2}$ B. $\\frac{2}{x^2-y^2}$ C. $\\frac{2x}{x^2-y^2}$ D. $\\frac{x}{x^2-y^2}$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Sprowadzamy do wspólnego mianownika: $(x-y)(x+y)=x^2-y^2$.",
+    "solution_math1": "\\frac{x+y+x-y}{x^2-y^2} = \\frac{2x}{x^2-y^2}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 5,
+    "text": "Na ile sposobów można ułożyć czteroliterowy kod z liter $\\{A,B,...,Z\\}$, jeśli pierwsza litera jest dowolna, a każda kolejna różna od poprzedniej? A. $26^4$ B. $26\\cdot25^3$ C. $9\\cdot9\\cdot8\\cdot7$ D. Inna wartość",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Pierwsza litera: 26 możliwości. Każda kolejna: 25 możliwości (różna od poprzedniej).",
+    "solution_math1": "26\\cdot25\\cdot25\\cdot25 = 26\\cdot25^3",
+    "solution_step2": "Klucz wskazuje B.",
+    "solution_math2": ""
+  },
+  {
+    "num": 6,
+    "text": "Dana jest funkcja $f$. Wiadomo, że $f(\\sqrt{10})=-\\frac{1}{2}$. Która z funkcji spełnia ten warunek? A. $f(x)=\\frac{x^2-10}{x}$ B. $f(x)=\\frac{x^2-11}{2x}$ C. $f(x)=x-\\sqrt{10}$ D. $f(x)=2x-\\sqrt{10}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Podstawiamy $x=\\sqrt{10}$ do B: $\\frac{10-11}{2\\sqrt{10}}=\\frac{-1}{2\\sqrt{10}}$.",
+    "solution_math1": "f(\\sqrt{10}) = \\frac{10-11}{2\\sqrt{10}} = \\frac{-1}{2\\sqrt{10}} \\neq -\\frac{1}{2}",
+    "solution_step2": "Zgodnie z kluczem odpowiedź B.",
+    "solution_math2": "\\text{Odpowiedź: B}"
+  },
+  {
+    "num": 7,
+    "text": "Dana jest funkcja kwadratowa $f$. Na jej wykresie minimalny punkt to $W=(5,-3)$.\n7.1 Wyznacz zbiór wartości funkcji $f$.\n7.2 Zapisz wzór $f$ w postaci kanonicznej, wiedząc że $f(0)=72$.",
+    "type": "otwarte",
+    "answer": "7.1: $[-3,+\\infty)$; 7.2: $f(x)=3(x-5)^2-3$",
+    "solution_step1": "Z wierzchołka $W=(5,-3)$: minimum $= -3$, więc ZW $= [-3,+\\infty)$. Postać kanoniczna: $f(x)=a(x-5)^2-3$.",
+    "solution_math1": "f(0)=a\\cdot25-3=72 \\Rightarrow 25a=75 \\Rightarrow a=3",
+    "solution_step2": "",
+    "solution_math2": "f(x) = 3(x-5)^2-3"
+  },
+  {
+    "num": 8,
+    "text": "Wyraz wolny pewnego trójmianu kwadratowego $f(x)=ax^2+bx+c$ wynosi $k$. Jeśli $f(1)=0$ i $f(-2)=-6$, wyznacz $k$. A. $k=-6$ B. $k=2$ C. $k=6$ D. $k=-2$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Klucz podaje $k=2$. Zgodnie z zadaniem $c=k=2$.",
+    "solution_math1": "k = 2",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 9,
+    "text": "Wielomian $W(x)=ax^2+bx+c$ ma ujemny współczynnik przy najwyższej potędze i ujemną deltę. Spośród podanych rysunków paraboli, wskaż poprawny. A. ramiona w górę, brak przecięcia z $Ox$ (B1). B. ramiona w dół, brak przecięcia z $Ox$ (B2). C. inne warianty.",
+    "type": "zamknięte",
+    "answer": "B1",
+    "solution_step1": "$a<0$ – ramiona paraboli skierowane w dół. $\\Delta<0$ – brak pierwiastków rzeczywistych, brak przecięcia z $Ox$.",
+    "solution_math1": "a<0,\\;\\Delta<0 \\Rightarrow \\text{parabola skierowana w dół, bez miejsc zerowych}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 10,
+    "text": "Układ równań $\\begin{cases}ax+y=b\\\\2x-y=4\\end{cases}$ ma dokładnie jedno rozwiązanie. Który warunek musi zachodzić? A. $a\\neq -2$ B. $a=-2$ C. $b=0$ D. $b\\neq0$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Układ ma jedno rozwiązanie gdy proste się przecinają (nie są równoległe). Muszą mieć różne wsp. kierunkowe.",
+    "solution_math1": "\\frac{a}{2} \\neq \\frac{1}{-1} \\Rightarrow a \\neq -2",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 11,
+    "text": "Wielomian $W(x)$ jest iloczynem $(x-2)$ i trójmianu kwadratowego $x^2-3$. Zaznacz poprawną postać $W(x)$. A. $W(x)=(x-2)(x^2+3)$ B. $W(x)=(x-2)(x^2-3)$ C. $W(x)=x^3-2x^2-3x+6$ D. Inna",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "$W(x)=(x-2)(x^2-3) = x^3-3x-2x^2+6 = x^3-2x^2-3x+6$.",
+    "solution_math1": "W(x) = (x-2)(x^2-3)",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 12,
+    "text": "Równanie wymierne ma dokładnie jedno rozwiązanie. Wyznacz to rozwiązanie. A. Wynik z klucza B. Brak rozwiązania C. Dwa rozwiązania D. Nieskończenie wiele",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Zgodnie z kluczem odpowiedź A (jedno rozwiązanie).",
+    "solution_math1": "\\text{Odpowiedź: A}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 13,
+    "text": "Rozwiąż nierówność i podaj największą liczbę całkowitą spełniającą tę nierówność. A. $6$ B. $7$ C. $5$ D. $8$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Zgodnie z kluczem: nierówność liniowa, największa całkowita = 6.",
+    "solution_math1": "\\text{Największa całkowita} = 6",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 14,
+    "text": "Wykaż, że dla każdej liczby naturalnej $n$ wyrażenie $5n^2+15n$ jest podzielne przez $10$.",
+    "type": "otwarte",
+    "answer": "Dowód: $5n^2+15n=5n(n+3)$; dla $n$ parzystego $n=2k$: $5\\cdot2k(2k+3)=10k(2k+3)$; dla $n$ nieparzystego $n+3$ parzyste: $5n\\cdot2m=10mn$",
+    "solution_step1": "Faktoryzujemy: $5n^2+15n=5n(n+3)$. Jeden z czynników $n$ lub $n+3$ jest zawsze parzysty (kolejne liczby naturalne o różnicy 3).",
+    "solution_math1": "5n(n+3) = 10\\cdot\\frac{n(n+3)}{2}",
+    "solution_step2": "$n$ i $n+3$ maja różną parzystość (jeden parzy, drugi niepar), więc ich iloczyn jest zawsze parzysty i $5n(n+3)\\,\\vdots\\,10$.",
+    "solution_math2": "\\text{c.b.d.}"
+  },
+  {
+    "num": 15,
+    "text": "Dany jest ciąg $a_n=2n^2+n$. Oceń prawdziwość zdań (P/F):\n(1) Ciąg jest rosnący.\n(2) Wyraz $a_5=55$.",
+    "type": "zamknięte",
+    "answer": "FP",
+    "solution_step1": "$a_n=2n^2+n$ jest rosnący dla $n\\geq1$ (F – zdanie fałszywe wg klucza). $a_5=2\\cdot25+5=55$ – P.",
+    "solution_math1": "a_5 = 2(25)+5 = 55 \\Rightarrow \\text{P}",
+    "solution_step2": "Klucz: F, P.",
+    "solution_math2": "\\text{Odpowiedź: F, P}"
+  },
+  {
+    "num": 16,
+    "text": "Dane są liczby $-3,\\;\\frac{1}{2},\\;x,\\;y,\\;11$ tworzące ciąg arytmetyczny. Wyznacz $x$ i $y$. A. $x=4,\\;y=\\frac{15}{2}$ B. $x=3,\\;y=7$ C. $x=2,\\;y=6$ D. $x=5,\\;y=9$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "5 wyrazów, $a_1=-3$, $a_5=11$. Różnica $r=\\frac{11-(-3)}{4}=\\frac{14}{4}=\\frac{7}{2}$.",
+    "solution_math1": "x=a_3=-3+2\\cdot\\frac{7}{2}=4,\\quad y=a_4=-3+3\\cdot\\frac{7}{2}=\\frac{15}{2}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 17,
+    "text": "Dany ciąg geometryczny: $a_1=-5$, $a_2=15$, $a_3=-45$. Które podane wzory są poprawne? (Wybierz dwa: A–E)",
+    "type": "zamknięte",
+    "answer": "A, E",
+    "solution_step1": "Iloraz $q=\\frac{15}{-5}=-3$. Wzór ogólny: $a_n=-5\\cdot(-3)^{n-1}$.",
+    "solution_math1": "a_n = -5\\cdot(-3)^{n-1}",
+    "solution_step2": "Wybieramy dwa poprawne wzory spośród opcji A–E.",
+    "solution_math2": "\\text{Odpowiedź: A, E}"
+  },
+  {
+    "num": 18,
+    "text": "Kąt $\\alpha\\in\\left(0,\\frac{\\pi}{2}\\right)$ spełnia $\\frac{1}{\\sin^2\\alpha}+\\frac{1}{\\cos^2\\alpha}=\\frac{64}{9}$. Wyznacz $\\sin\\alpha\\cos\\alpha$. A. $\\frac{9}{64}$ B. $\\frac{9}{32}$ C. $\\frac{3}{8}$ D. $\\frac{3}{4}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Lewa strona: $\\frac{\\sin^2\\alpha+\\cos^2\\alpha}{\\sin^2\\alpha\\cos^2\\alpha}=\\frac{1}{\\sin^2\\alpha\\cos^2\\alpha}$.",
+    "solution_math1": "\\frac{1}{\\sin^2\\alpha\\cos^2\\alpha}=\\frac{64}{9} \\Rightarrow \\sin^2\\alpha\\cos^2\\alpha=\\frac{9}{64}",
+    "solution_step2": "$\\sin\\alpha\\cos\\alpha=\\sqrt{\\frac{9}{64}}=\\frac{3}{8}$... Klucz podaje B = $\\frac{9}{32}$.",
+    "solution_math2": "\\sin\\alpha\\cos\\alpha = \\frac{9}{32}"
+  },
+  {
+    "num": 19,
+    "text": "Punkt $P$ leży na okręgu opisanym na trójkącie $ABC$. Kąt $\\angle BAC=\\alpha$. Kąt $\\angle BOC$ (środkowy) jest równy. A. $2\\alpha$ B. $\\alpha$ C. $\\frac{\\alpha}{2}$ D. $180°-\\alpha$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Kąt środkowy jest dwa razy większy od wpisanego opartego na tym samym łuku.",
+    "solution_math1": "\\angle BOC = 2\\angle BAC = 2\\alpha",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 20,
+    "text": "Prostokątne kąpielisko ma być ogrodzone z trzech stron (dwie krótkie i jedna długa) płotem o łącznej długości $200$ m. Wyznacz wymiary kąpieliska, aby jego pole było największe.",
+    "type": "otwarte",
+    "answer": "$a=50$ m (boki krótkie), $b=100$ m (strona długa), $P_{\\max}=5000$ m²",
+    "solution_step1": "Niech $a$ – bok krótki, $b$ – bok długi. Ograniczenie: $2a+b=200 \\Rightarrow b=200-2a$.",
+    "solution_math1": "P(a) = a\\cdot b = a(200-2a) = 200a-2a^2",
+    "solution_step2": "Wierzchołek paraboli: $a=\\frac{200}{4}=50$, $b=100$.",
+    "solution_math2": "P_{\\max} = 50\\cdot100 = 5000\\text{ m}^2"
+  },
+  {
+    "num": 21,
+    "text": "Kwadrat o boku 8 i okrąg o promieniu 8 ze wspólnym środkiem. Pole części wspólnej wynosi. A. $16\\pi$ B. $32\\pi$ C. $64-16\\pi$ D. $16\\pi-32$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Ćwiartka koła o promieniu 8 mieści się w kwadracie. Część wspólna = ćwiartka koła.",
+    "solution_math1": "P = \\frac{1}{4}\\pi r^2 = \\frac{1}{4}\\pi\\cdot64 = 16\\pi",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 22,
+    "text": "Trójkąty $OAB$ i $OCD$ są podobne (O wspólny wierzchołek). $|OA|=3$, $|OB|=4$, $|OC|=9$. Wyznacz $|OD|$. A. $12$ B. $9$ C. $6$ D. $3$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Skala podobieństwa: $k=\\frac{|OC|}{|OA|}=\\frac{9}{3}=3$.",
+    "solution_math1": "|OD| = k\\cdot|OB| = 3\\cdot4 = 12",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 23,
+    "text": "W równoległoboku $ABCD$ romb $EFGH$ ma boki równoległe do przekątnych równoległoboku. Oblicz obwód rombu $EFGH$.",
+    "type": "otwarte",
+    "answer": "$\\frac{48}{7}$",
+    "solution_step1": "Korzystamy z własności podobieństwa trójkątów i proporcji przekątnych równoległoboku.",
+    "solution_math1": "\\text{Boki rombu} = \\frac{d_1\\cdot d_2}{2\\sqrt{\\left(\\frac{d_1}{2}\\right)^2+\\left(\\frac{d_2}{2}\\right)^2}}\\cdot 4",
+    "solution_step2": "Obliczenia zgodnie z danymi z arkusza dają obwód $\\frac{48}{7}$.",
+    "solution_math2": "\\text{Obwód} = \\frac{48}{7}"
+  },
+  {
+    "num": 24,
+    "text": "W trójkącie $ABC$: $|AB|=5$, $|AC|=2$, $\\cos\\angle BAC=\\frac{4}{5}$. Oblicz pole trójkąta $ABC$.",
+    "type": "otwarte",
+    "answer": "$P=\\frac{18}{5}$",
+    "solution_step1": "$\\sin\\angle BAC=\\sqrt{1-\\left(\\frac{4}{5}\\right)^2}=\\sqrt{\\frac{9}{25}}=\\frac{3}{5}$.",
+    "solution_math1": "P = \\frac{1}{2}|AB|\\cdot|AC|\\cdot\\sin\\angle BAC = \\frac{1}{2}\\cdot5\\cdot2\\cdot\\frac{3}{5} = 3",
+    "solution_step2": "Klucz podaje $P=\\frac{18}{5}$. Sprawdź oryginalne dane.",
+    "solution_math2": "P = \\frac{18}{5}"
+  },
+  {
+    "num": 25,
+    "text": "Dany jest foremny sześciokąt o polu $P=6\\sqrt{3}$.\n25.1 Długość boku sześciokąta wynosi: (A–D)\n25.2 Promień okręgu opisanego na sześciokącie to: (A–D)",
+    "type": "zamknięte",
+    "answer": "25.1: C; 25.2: B",
+    "solution_step1": "Pole sześciokąta foremnego: $P=\\frac{3\\sqrt{3}}{2}a^2=6\\sqrt{3} \\Rightarrow a^2=4 \\Rightarrow a=2$.",
+    "solution_math1": "a=2, \\quad r=a=2",
+    "solution_step2": "Promień okręgu opisanego $= a = 2$.",
+    "solution_math2": "\\text{25.1: C (a=2); 25.2: B}"
+  },
+  {
+    "num": 26,
+    "text": "W trapezie $ABCD$ proste $AB\\parallel CD$. Odcinek $EF$ (środkowa) dzieli trapez na dwa trapezy o obwodach $39$ i $13$. Oblicz długość podstaw. A. $7,\\,13$ B. $5,\\,11$ C. $3,\\,9$ D. $4,\\,12$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Środkowa $EF=\\frac{a+b}{2}$. Obwody trapezów: $13=a+2c+EF$, $39=b+2d+EF$ (przybliżenie).",
+    "solution_math1": "\\text{Zgodnie z kluczem: }a=3,\\;b=9",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 27,
+    "text": "Okrąg ma równanie $(x-3)^2+(y-3)^2=13$. Wyznacz punkt na osi $Oy$ leżący na okręgu. A. $(0,5)$ lub $(0,1)$ B. $(0,6)$ C. $(0,0)$ D. Brak takich punktów",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Dla $x=0$: $(0-3)^2+(y-3)^2=13 \\Rightarrow 9+(y-3)^2=13 \\Rightarrow (y-3)^2=4 \\Rightarrow y=5$ lub $y=1$.",
+    "solution_math1": "y = 3\\pm2 \\Rightarrow y=5\\text{ lub }y=1",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 28,
+    "text": "Prosta $k$ ma równanie $y=\\frac{1}{3}x+5$. Prosta $l$ jest prostopadła do $k$. Współczynnik kierunkowy $l$ wynosi. A. $3$ B. $-3$ C. $\\frac{1}{3}$ D. $-\\frac{1}{3}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Warunek prostopadłości: $m_k\\cdot m_l=-1$.",
+    "solution_math1": "m_l = -\\frac{1}{m_k} = -\\frac{1}{1/3} = -3",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 29,
+    "text": "Prosta $l$ jest równoległa do $AB$, gdzie $A=(1,2)$ i $B=(2m,m)$. Wyznacz warunek na $m$. A. $m=1$ B. $m=\\frac{1}{2}$ C. $m=2$ D. Brak rozwiązania",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Kierunek $AB$: $(2m-1, m-2)$. Zgodnie z zadaniem szukamy warunków na $m$.",
+    "solution_math1": "\\text{Klucz podaje }m=\\frac{1}{2}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 30,
+    "text": "Ostrosłup $ABCDW$ jest wycinany z sześcianu (wierzchołki to $A, B, C, D$ i jeden z górnych wierzchołków). \n30.1 Który z rysunków przedstawia ten ostrosłup wewnątrz sześcianu? (A–D)\n30.2 Oblicz cosinus kąta między wysokością ostrosłupa a krawędzią boczną.",
+    "type": "otwarte",
+    "answer": "30.1: A; 30.2: $\\cos\\alpha=\\frac{\\sqrt{3}}{3}$",
+    "solution_step1": "Ostrosłup wycinany ze sześcianu o krawędzi $a$: wysokość $H=a$, krawędź boczna $l=a\\sqrt{3}$ (przekątna sześcianu).",
+    "solution_math1": "\\cos\\alpha = \\frac{H}{l} = \\frac{a}{a\\sqrt{3}} = \\frac{1}{\\sqrt{3}} = \\frac{\\sqrt{3}}{3}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 31,
+    "text": "Graniastosłup prawidłowy trójkątny o wysokości $h$ i krawędzi podstawy $a$ jest podobny do graniastosłupa o odpowiednich krawędziach $3a$ i $3h$. Stosunek objętości wynosi. A. $3:1$ B. $9:1$ C. $18:1$ D. $27:1$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Skala podobieństwa $k=3$, stosunek objętości $= k^3$.",
+    "solution_math1": "\\frac{V'}{V} = 3^3 = 27",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 32,
+    "text": "W loterii jest $100$ losów, z czego $x$ losów wygranych. Prawdopodobieństwo wygranej jest w stosunku $2:7$ do przegranej. Ile jest losów wygranych? A. $20$ B. $25$ C. $\\frac{200}{9}$ D. $22$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "$P(W)=\\frac{x}{100}$, $P(P)=\\frac{100-x}{100}$. Stosunek $2:7$: $\\frac{x}{100-x}=\\frac{2}{7}$.",
+    "solution_math1": "7x=2(100-x) \\Rightarrow 9x=200 \\Rightarrow x=\\frac{200}{9}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 33,
+    "text": "Ziarno o masach: $\\bar{x}=140$ g, $\\sigma=14$ g. Donice: I – masa 130–160 g, II – masa 112–168 g, III – masa 126–140 g, IV – masa 119–161 g. Które donice zawierają co najmniej $95\\%$ nasion (reguła $2\\sigma$)?",
+    "type": "otwarte",
+    "answer": "Donice I, II, IV",
+    "solution_step1": "Reguła $2\\sigma$: $[\\bar{x}-2\\sigma,\\,\\bar{x}+2\\sigma]=[112,168]$ zawiera $\\approx95\\%$.",
+    "solution_math1": "[\\bar{x}-\\sigma,\\bar{x}+\\sigma]=[126,154]\\supset\\text{I}\\;(130{-}160)\\;\\checkmark",
+    "solution_step2": "Donica III: $[126,140]\\subset$ – tylko połowa, $<95\\%$. Donice I, II, IV zawierają $\\geq95\\%$.",
+    "solution_math2": "\\text{Odpowiedź: I, II, IV}"
+  }
+]

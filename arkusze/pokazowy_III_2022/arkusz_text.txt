@@ -1,0 +1,937 @@
+                                                        Arkusz zawiera informacje prawnie chronione
+                                                        do momentu rozpoczęcia egzaminu.
+
+
+
+                  WYPEŁNIA ZDAJĄCY                            Miejsce na naklejkę.
+                                                          Sprawdź, czy kod na naklejce to
+       KOD                     PESEL                                   M-100.
+                                                           Jeżeli tak – przyklej naklejkę.
+                                                         Jeżeli nie – zgłoś to nauczycielowi.
+
+
+
+
+ EGZAMIN MATURALNY Z MATEMATYKI
+ POZIOM PODSTAWOWY
+ ARKUSZ POKAZOWY
+                                                 WYPEŁNIA ZESPÓŁ NADZORUJĄCY
+
+ TERMIN: 4 marca 2022 r.                         Uprawnienia zdającego do:
+                                                     dostosowania zasad oceniania
+ CZAS PRACY: 180 minut
+ LICZBA PUNKTÓW DO UZYSKANIA: 46                     dostosowania w zw. z dyskalkulią
+                                                     nieprzenoszenia zaznaczeń na kartę.
+
+
+
+
+                                                              MMAP-P0-100-2203
+
+
+
+
+Instrukcja dla zdającego
+
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 31 stron (zadania 1–30).
+    Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego egzamin.
+2. Na tej stronie oraz na karcie odpowiedzi wpisz swój numer PESEL i przyklej naklejkę
+    z kodem.
+3. Nie wpisuj żadnych znaków w części przeznaczonej dla egzaminatora.
+4. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym.
+5. Symbol             zamieszczony w nagłówku zadania oznacza, że rozwiązanie zadania
+    zamkniętego musisz przenieść na kartę odpowiedzi.
+6. Odpowiedzi do zadań zamkniętych zaznacz na karcie odpowiedzi w części karty
+    przeznaczonej dla zdającego. Zamaluj       pola do tego przeznaczone. Błędne
+    zaznaczenie otocz kółkiem       i zaznacz właściwe.
+7. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń w rozwiązaniu zadania
+    otwartego może spowodować, że za to rozwiązanie nie otrzymasz pełnej liczby punktów.
+8. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub atramentem.
+9. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl.
+10. Pamiętaj, że zapisy w brudnopisie nie będą oceniane.
+11. Możesz korzystać z zestawu wzorów matematycznych, cyrkla i linijki oraz kalkulatora
+    prostego.
+
+
+
+Układ graficzny
+© CKE 2022
+Zadanie 1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wartość wyrażenia 6100 + 6100 + 6100 + 6100 + 6100 + 6100 jest równa
+
+A. 6600               B. 6101                C. 36100           D. 36600
+
+ Brudnopis
+
+
+
+
+Zadanie 2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wartość wyrażenia log 7 98 − log 7 2 jest równa
+
+A. 7                  B. 2                   C. 1               D. (−1)
+
+
+ Brudnopis
+
+
+
+
+                                      Strona 2 z 31
+                                                                           MMAP-P0_100
+Zadanie 3. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wszystkich liczb naturalnych trzycyfrowych, w których zapisie dziesiętnym nie występuje
+cyfra 2, jest
+
+A. 900                B. 729                 C. 648                 D. 512
+
+ Brudnopis
+
+
+
+
+Zadanie 4. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Dla każdej liczby rzeczywistej 𝑎 wartość wyrażenia (3 + 4𝑎)2 − (3 − 4𝑎)2 jest równa
+
+A. 32𝑎2               B. 0                   C. 48𝑎                 D. 8𝑎2
+
+
+ Brudnopis
+
+
+
+
+                                       Strona 3 z 31
+MMAP-P0_100
+Zadanie 5. (0–2)
+Dane są dwie przecinające się proste. Miary kątów utworzonych przez te proste zapisano za
+pomocą wyrażeń algebraicznych (zobacz rysunek).
+
+
+
+
+                                            𝛽
+                                     𝛼 + 𝛽 2𝛼 − 𝛽
+
+
+
+
+Dokończ zdanie. Wybierz dwie odpowiedzi, tak aby dla każdej z nich dokończenie
+poniższego zdania było prawdziwe.
+
+Układem równań, w którym zapisano prawidłowe zależności między miarami kątów
+utworzonych przez te proste, jest układ
+
+       (𝛼 + 𝛽) + 𝛽 = 90°
+A. {
+       𝛼 + 𝛽 = 2𝛼 − 𝛽
+
+       (𝛼 + 𝛽) + 𝛽 = 180°
+B. {
+       𝛼 + 𝛽 = 2𝛼 − 𝛽
+
+       (𝛼 + 𝛽) + 𝛽 = 180°
+C. {
+       𝛽 = 2𝛼 − 𝛽
+       𝛼 + 𝛽 = 90°
+D. {
+       𝛽 = 2𝛼 − 𝛽
+
+       𝛼 + 𝛽 = 2𝛼 − 𝛽
+E. {
+       180° − (2𝛼 − 𝛽) = 𝛽
+       3𝛼 + 2𝛽 = 360°
+F. {
+       2𝛼 − 𝛽 = 2𝛽
+
+ Brudnopis
+
+
+
+
+                                      Strona 4 z 31
+                                                                               MMAP-P0_100
+Zadanie 6. (0–1)
+Dany jest wielomian
+                          𝑊(𝑥) = 3𝑥 3 + 𝑘𝑥 2 − 12𝑥 − 7𝑘 + 12
+
+gdzie 𝑘 jest pewną liczbą rzeczywistą. Wiadomo, że liczba (−2) jest pierwiastkiem tego
+wielomianu.
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Liczba 𝑘 jest równa
+
+A. 2                  B. 4                   C. 6                 D. 8
+
+ Brudnopis
+
+
+
+
+Zadanie 7. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+Równanie
+                                    (4𝑥 − 6)(𝑥 − 2)2
+                                                      =0
+                                   2𝑥(𝑥 − 1,5)(𝑥 + 6)
+ma w zbiorze liczb rzeczywistych
+
+A. dokładnie jedno rozwiązanie: 𝑥 = 2.
+
+B. dokładnie dwa rozwiązania: 𝑥 = 1,5, 𝑥 = 2.
+
+C. dokładnie trzy rozwiązania: 𝑥 = −6, 𝑥 = 0, 𝑥 = 2.
+
+D. dokładnie cztery rozwiązania: 𝑥 = −6, 𝑥 = 0, 𝑥 = 1,5, 𝑥 = 2.
+
+ Brudnopis
+
+
+
+
+                                       Strona 5 z 31
+MMAP-P0_100
+Zadanie 8. (0–1)
+Spośród rysunków A–D wybierz ten, na którym prawidłowo zaznaczono na osi
+liczbowej zbiór wszystkich liczb rzeczywistych spełniających nierówność:
+
+                                  |𝒙 + 𝟏| ≤ 𝟐
+
+
+A.
+             −6 −5   −4 −3 −2      −1     0       1   2   3   4   𝑥
+
+B.
+             −6 −5   −4 −3 −2      −1     0       1   2   3   4   𝑥
+
+
+C.
+             −6 −5   −4 −3 −2      −1     0       1   2   3   4   𝑥
+
+
+D.
+             −6 −5   −4 −3 −2      −1     0       1   2   3   4   𝑥
+
+
+ Brudnopis
+
+
+
+
+                                  Strona 6 z 31
+                                                                      MMAP-P0_100
+Zadanie 9. (0–2)
+Wykaż, że dla każdej liczby całkowitej nieparzystej 𝒏 liczba 𝒏𝟐 + 𝟐𝟎𝟐𝟑 jest podzielna
+przez 𝟖.
+
+
+
+
+                                      Nr zadania            9.
+                        Wypełnia      Maks. liczba pkt      2
+                       egzaminator
+                                      Uzyskana liczba pkt
+
+
+                                     Strona 7 z 31
+MMAP-P0_100
+Zadanie 10.                                                             𝑦
+Dana jest funkcja kwadratowa 𝑓 , której fragment
+wykresu przedstawiono w kartezjańskim układzie
+                                                                                    𝑓
+współrzędnych (𝑥, 𝑦) na rysunku obok. Wierzchołek
+paraboli, która jest wykresem funkcji 𝑓 , oraz punkty
+przecięcia paraboli z osiami układu współrzędnych
+mają współrzędne całkowite.
+                                                                            2
+
+                                                                        0                 𝑥
+                                                                                2
+
+
+
+
+Zadanie 10.1. (0–1)
+Funkcja 𝑔 jest określona za pomocą funkcji 𝑓 następująco: 𝑔(𝑥) = 𝑓(𝑥 − 2).
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wykres funkcji 𝑔 przedstawiono na rysunku
+
+A.             𝑦                                 B.        𝑦
+
+
+
+                                                                        𝑔
+                       𝑔
+
+
+                   2                                            2
+
+               0                 𝑥                          0                       𝑥
+                       2                                            2
+
+
+
+
+C.                                               D.
+               𝑦                                            𝑦
+
+
+                   𝑔                                                        𝑔
+
+
+
+               2                                           2
+               0                 𝑥                          0                       𝑥
+                       2                                            2
+
+
+
+
+                                       Strona 8 z 31
+                                                                                MMAP-P0_100
+Zadanie 10.2. (0–1)
+Wyznacz i zapisz w miejscu wykropkowanym poniżej zbiór wszystkich rozwiązań
+nierówności:
+
+                                                                𝒇(𝒙) ≤ 𝟎
+
+.................................................................................................................................................
+
+
+Zadanie 10.3. (0–3)
+Wyznacz wzór funkcji kwadratowej 𝒇 w postaci kanonicznej.
+Zapisz obliczenia.
+
+
+
+
+                                                           Nr zadania                        10.2.       10.3.
+                                   Wypełnia                Maks. liczba pkt                    1
+                                                                                              7.           3
+                                                                                                           7
+                                  egzaminator
+                                                           Uzyskana liczba pkt
+
+
+                                                             Strona 9 z 31
+MMAP-P0_100
+Zadanie 11. (0–1)
+Dana jest funkcja liniowa 𝑓 określona wzorem                   𝑦
+𝑓(𝑥) = 𝑎𝑥 + 𝑏, gdzie 𝑎 i 𝑏 są liczbami                             𝑓
+rzeczywistymi. Wykres funkcji 𝑓 przedstawiono
+w kartezjańskim układzie współrzędnych (𝑥, 𝑦) na                                 𝑥
+rysunku obok.
+
+
+
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Współczynniki 𝑎 i 𝑏 we wzorze funkcji 𝑓 spełniają warunki
+
+A. 𝑎 > 0 i 𝑏 > 0.                          B. 𝑎 > 0 i 𝑏 < 0.
+
+C. 𝑎 < 0 i 𝑏 > 0.                          D. 𝑎 < 0 i 𝑏 < 0.
+
+
+
+ Brudnopis
+
+
+
+
+                                    Strona 10 z 31
+                                                                   MMAP-P0_100
+Zadanie 12. (0–1)
+Firma przeprowadziła badania rynkowe dotyczące wpływu zmiany ceny 𝑃 swojego produktu
+na liczbę 𝑄 kupujących ten produkt. Z badań wynika, że każdorazowe zwiększenie ceny
+o 1 jednostkę powoduje spadek liczby kupujących o 3 jednostki. Ponadto przy cenie
+równej 5 jednostek liczba kupujących jest równa 12 jednostek.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Funkcja, która opisuje zależność liczby kupujących ten produkt od jego ceny, ma wzór
+
+A. 𝑄 = −0,9𝑃2 + 6,9                          B. 𝑄 = −3𝑃 + 27
+
+C. 𝑃 = −0,9𝑄 2 + 6,9                         D. 𝑃 = −3𝑄 + 27
+
+
+
+
+ Brudnopis
+
+
+
+
+                                      Strona 11 z 31
+MMAP-P0_100
+          Zadanie 13.
+          Czas 𝑇 półtrwania leku w organizmie to czas, po którym masa leku w organizmie zmniejsza się
+          o połowę – po przyjęciu jednorazowej dawki.
+          Przyjmij, że po przyjęciu jednej dawki masa 𝑚 leku w organizmie zmienia się w czasie
+          zgodnie z zależnością wykładniczą
+                                                                 𝑡
+                                                           1 𝑇
+                                              𝑚(𝑡) = 𝑚0 ⋅ ( )
+                                                           2
+          gdzie:
+          𝑚0 – masa przyjętej dawki leku
+          𝑇 – czas półtrwania leku
+          𝑡 – czas liczony od momentu przyjęcia dawki.
+          W przypadku przyjęcia kilku(nastu) dawek powyższa zależność pozwala obliczyć, ile leku
+          pozostało w danym momencie w organizmie z każdej poprzednio przyjętej dawki. W ten
+          sposób obliczone masy leku z przyjętych poprzednich dawek sumują się i dają informację
+          o całkowitej aktualnej masie leku w organizmie.
+
+          Pacjent otrzymuje co 4 dni o tej samej godzinie dawkę 𝑚0 = 100 mg leku L. Czas
+          półtrwania tego leku w organizmie jest równy 𝑇 = 4 doby.
+
+
+          Zadanie 13.1. (0–1)
+          Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+          Wykres zależności masy 𝑀 leku L w organizmie tego pacjenta od czasu 𝑡, liczonego od
+          momentu przyjęcia przez pacjenta pierwszej dawki, przedstawiono na rysunku
+
+
+          A.                                             B.
+𝑀, mg                                                          𝑀, mg
+180                                                           180
+160                                                           160
+140                                                           140
+120                                                           120
+100                                                           100
+ 80                                                            80
+ 60                                                            60
+ 40                                                            40
+ 20                                                            20
+  0                                                             0
+      0            4          8          12   𝑡, doby             0           4          8          12 𝑡, doby
+
+
+
+
+                                                Strona 12 z 31
+                                                                                          MMAP-P0_100
+          C.                                       D.
+ 𝑀, mg                                                   𝑀, mg
+180                                                     180
+160                                                     160
+140                                                     140
+120                                                     120
+100                                                     100
+ 80                                                      80
+ 60                                                      60
+ 40                                                      40
+ 20                                                      20
+  0                                                       0
+      0            4        8         12 𝑡, doby            0          4         8        12 𝑡, doby
+
+
+          Zadanie 13.2. (0–3)
+          Oblicz masę leku L w organizmie tego pacjenta tuż przed przyjęciem jedenastej
+          dawki tego leku. Wynik podaj w zaokrągleniu do 𝟎, 𝟏 mg.
+          Zapisz obliczenia.
+
+
+
+
+                                            Strona 13 z 31
+          MMAP-P0_100
+Strona 14 z 31
+                 MMAP-P0_100
+Zadanie 14. (0–1)
+Klient wpłacił do banku 20 000 zł na lokatę dwuletnią. Po każdym rocznym okresie
+oszczędzania bank dolicza odsetki w wysokości 3% od kwoty bieżącego kapitału
+znajdującego się na lokacie.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Po 2 latach oszczędzania w tym banku kwota na lokacie (bez uwzględniania podatków) jest
+równa
+
+A. 20 000 ∙ (1,12)2   B. 20 000 ∙ 2 ⋅ 1,03   C. 20 000 ∙ 1,06           D. 20 000 ∙ (1,03)2
+
+ Brudnopis
+
+
+
+
+Zadanie 15. (0–1)
+Dany jest ciąg (𝑎𝑛 ) określony wzorem 𝑎𝑛 = −3𝑛 + 5 dla każdej liczby naturalnej 𝑛 ≥ 1.
+
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Liczby 2, (−1), (−4) są trzema kolejnymi początkowymi wyrazami
+                                                                                    P     F
+ ciągu (𝑎𝑛 ).
+
+ (𝑎𝑛 ) jest ciągiem arytmetycznym o różnicy równej 5.                               P     F
+
+
+
+ Brudnopis
+
+
+
+
+                                        Nr zadania              13.2.
+                         Wypełnia       Maks. liczba pkt          3
+                        egzaminator
+                                        Uzyskana liczba pkt
+
+
+                                      Strona 15 z 31
+MMAP-P0_100
+Zadanie 16. (0–1)
+Dany jest trójkąt 𝐴𝐵𝐶 , w którym |𝐴𝐵| = 6, |𝐵𝐶| = 5, |𝐴𝐶| = 10.
+
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Cosinus kąta 𝐴𝐵𝐶 jest równy (−0,65).                                           P     F
+
+
+Trójkąt 𝐴𝐵𝐶 jest rozwartokątny.                                                 P     F
+
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 17. (0–1)
+Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥, 𝑦), dany jest okrąg o środku
+𝑆 = (2, −5 ) i promieniu 𝑟 = 3.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Równanie tego okręgu ma postać
+
+A. (𝑥 − 2)2 + (𝑦 + 5)2 = 9                  B. (𝑥 + 2)2 + (𝑦 − 5)2 = 3
+
+C. (𝑥 − 2)2 + (𝑦 + 5)2 = 3                  D. (𝑥 + 2)2 + (𝑦 − 3)2 = 9
+
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 16 z 31
+                                                                               MMAP-P0_100
+Zadanie 18. (0–1)
+Odcinki 𝐴𝐷 i 𝐵𝐶 przecinają się w punkcie 𝑂. W trójkątach 𝐴𝐵𝑂 i 𝑂𝐷𝐶 zachodzą
+związki: |𝐴𝑂| = 5, |𝐵𝑂| = 3, |𝑂𝐶| = 10, |∡𝑂𝐴𝐵| = |∡𝑂𝐶𝐷| (zobacz rysunek).
+
+
+                                                  𝐷
+
+
+                  𝐵   3
+                              𝑂                  10               𝐶
+                      5
+
+              𝐴
+
+Oblicz długość boku 𝑶𝑫 trójkąta 𝑶𝑫𝑪.
+Zapisz obliczenia.
+
+
+
+
+                                      Nr zadania            18.
+                       Wypełnia       Maks. liczba pkt       1
+                      egzaminator
+                                      Uzyskana liczba pkt
+
+
+                                    Strona 17 z 31
+MMAP-P0_100
+Zadanie 19. (0–2)
+Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥, 𝑦), dana jest prosta 𝑘
+o równaniu 𝑦 = −3𝑥 + 1.
+
+Dokończ zdania. Wybierz odpowiedź spośród A–D oraz odpowiedź spośród E–H.
+
+19.1. Jedną z prostych równoległych do prostej 𝑘 jest prosta o równaniu
+                                                     1                      1
+A. 𝑦 = 3𝑥 + 2          B. 𝑦 = −3𝑥 + 2        C. 𝑦 = 𝑥 + 1           D. 𝑦 = − 𝑥 + 1
+                                                     3                      3
+
+19.2. Jedną z prostych prostopadłych do prostej 𝑘 jest prosta o równaniu
+        1                       1
+E. 𝑦 = 𝑥 + 2           F. 𝑦 = − 𝑥 + 2        G. 𝑦 = 3𝑥 + 1          H. 𝑦 = −3𝑥 + 1
+        3                       3
+
+ Brudnopis
+
+
+
+
+Zadanie 20. (0–1)
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) dany jest kwadrat 𝐴𝐵𝐶𝐷 . Wierzchołki
+𝐴 = (−2, 1) i 𝐶 = (4, 5) są końcami przekątnej tego kwadratu.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Długość przekątnej kwadratu 𝐴𝐵𝐶𝐷 jest równa
+
+A. 10                 B. 2√13               C. 2√10                D. 8
+
+
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 18 z 31
+                                                                              MMAP-P0_100
+Zadanie 21. (0–1)
+Odcinek 𝐴𝐵 jest średnicą okręgu o środku w punkcie 𝑂 i promieniu          𝐴
+𝑟 = 8 (zobacz rysunek). Cięciwa 𝐴𝐶 ma długość 8√3.
+
+
+                                                                      𝑂
+
+Dokończ zdanie.
+                                                                              𝐶
+Wybierz właściwą odpowiedź spośród podanych.
+                                                                          𝐵
+Miara kąta 𝐵𝐴𝐶 jest równa
+
+A. 30°                 B. 45°                 C. 15°               D. 60°
+
+
+
+ Brudnopis
+
+
+
+
+Zadanie 22. (0–1)
+Kąt 𝛼 jest ostry oraz 4 tg 𝛼 = 3sin2 𝛼 + 3cos 2 𝛼 .
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Tangens kąta 𝛼 jest równy
+
+     3                      4                      1
+A.                     B.                     C.                   D. 4
+     4                      3                      4
+
+ Brudnopis
+
+
+
+
+                                       Strona 19 z 31
+MMAP-P0_100
+Zadanie 23. (0–1)
+Dane są dwa trójkąty podobne 𝐴𝐵𝐶 i 𝐾𝐿𝑀 o polach równych – odpowiednio – 𝑃 oraz 2𝑃 .
+Obwód trójkąta 𝐴𝐵𝐶 jest równy 𝑥 .
+
+Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A albo B oraz jej
+uzasadnienie 1., 2. albo 3.
+
+Obwód trójkąta 𝐾𝐿𝑀 jest równy
+
+
+                                       1.   kwadratowi stosunku pól tych trójkątów.
+ A.   √2 ⋅ 𝑥,
+                ponieważ stosunek
+                                            pierwiastkowi kwadratowemu ze stosunku
+                obwodów trójkątów      2.
+                                            pól tych trójkątów.
+                podobnych jest równy
+ B.   2𝑥 ,
+                                       3.   stosunkowi pól tych trójkątów.
+
+
+
+ Brudnopis
+
+
+
+
+                                   Strona 20 z 31
+                                                                             MMAP-P0_100
+Zadanie 24. (0–1)
+Punkty 𝐴 oraz 𝐵 leżą na okręgu o środku 𝑂. Proste 𝑘 i 𝑙 są styczne do tego okręgu
+w punktach – odpowiednio – 𝐴 i 𝐵. Te proste przecinają się w punkcie 𝑆 i tworzą kąt
+o mierze 76° (zobacz rysunek).
+
+
+                                            𝑙
+
+
+
+                                                𝐵
+                               𝑂
+
+
+
+
+                                             76°
+                  𝑘            𝐴                     𝑆
+
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Miara kąta 𝑂𝐵𝐴 jest równa
+
+A. 52°                B. 26°               C. 14°                D. 38°
+
+
+ Brudnopis
+
+
+
+
+                                    Strona 21 z 31
+MMAP-P0_100
+Zadanie 25. (0–1)
+Powierzchnię boczną graniastosłupa prawidłowego czworokątnego rozcięto wzdłuż krawędzi
+bocznej graniastosłupa i rozłożono na płaszczyźnie. Otrzymano w ten sposób prostokąt
+𝐴𝐵𝐶𝐷, w którym bok 𝐵𝐶 odpowiada krawędzi rozcięcia (wysokości graniastosłupa).
+Przekątna 𝐴𝐶 tego prostokąta ma długość 16 i tworzy z bokiem 𝐵𝐶 kąt o mierze 30°
+(zobacz rysunek).
+                                𝐷                      𝐶
+
+
+                                                 30°
+
+                                          16
+
+
+
+
+                                𝐴                      𝐵
+
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Długość krawędzi podstawy tego graniastosłupa jest równa
+
+A. 8                  B. 8√3                C. 2√3              D. 2
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 22 z 31
+                                                                            MMAP-P0_100
+Zadanie 26. (0–1)
+Dany jest ostrosłup prawidłowy trójkątny 𝐴𝐵𝐶𝑆 o podstawie 𝐴𝐵𝐶 . Punkty 𝐷 , 𝐸 i 𝐹 są
+środkami – odpowiednio – krawędzi bocznych 𝐴𝑆, 𝐵𝑆 i 𝐶𝑆 (zobacz rysunek).
+
+
+                                                𝑆
+
+
+                                            𝐹
+
+                                 𝐷                    𝐸
+                                                𝐶
+
+
+
+
+                  𝐴                                       𝐵
+
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Stosunek objętości ostrosłupa 𝐷𝐸𝐹𝑆 do objętości ostrosłupa 𝐴𝐵𝐶𝑆 jest równy
+
+A. 3 ∶ 4              B. 1 ∶ 4             C. 1 ∶ 8             D. 3 ∶ 8
+
+
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 23 z 31
+MMAP-P0_100
+Zadanie 27. (0–1)                                                         𝐹
+Dany jest graniastosłup prawidłowy trójkątny 𝐴𝐵𝐶𝐷𝐸𝐹 (zobacz
+rysunek obok).                                                    𝐷             𝐸
+
+Na którym z rysunków prawidłowo narysowano, oznaczono
+i podpisano kąt 𝜶 pomiędzy ścianą boczną 𝑨𝑪𝑭𝑫
+i przekątną 𝑨𝑬 ściany bocznej 𝑨𝑩𝑬𝑫 tego graniastosłupa?
+Wybierz właściwą odpowiedź spośród podanych.
+
+                                                                          𝐶
+
+
+                                                                  𝐴             𝐵
+
+
+
+A. 𝛼 = ∡𝐸𝐴𝐺                                     B. 𝛼 = ∡𝐸𝐴𝐷
+                 𝐹                                            𝐹
+             𝐺
+     𝐷                 𝐸                      𝐷                       𝐸
+
+
+
+
+                 𝐶                                            𝐶
+         𝛼                                         𝛼
+     𝐴                𝐵                        𝐴                      𝐵
+
+
+C. 𝛼 = ∡𝐸𝐴𝐹                                     D. 𝛼 = ∡𝐸𝐴𝐶
+                 𝐹                                            𝐹
+
+    𝐷                  𝐸                       𝐷                      𝐸
+
+
+
+
+             𝛼
+                 𝐶                                            𝐶
+                                                       𝛼
+     𝐴                𝐵                        𝐴                      𝐵
+
+
+
+
+                                   Strona 24 z 31
+                                                                          MMAP-P0_100
+Zadanie 28. (0–3)
+W pojemniku znajdują się losy loterii fantowej ponumerowane kolejnymi liczbami naturalnymi
+od 1000 do 9999. Każdy los, którego numer jest liczbą o sumie cyfr równej 3, jest
+wygrywający. Uczestnicy loterii losują z pojemnika po jednym losie.
+
+Oblicz prawdopodobieństwo zdarzenia polegającego na tym, że pierwszy los
+wyciągnięty z pojemnika był wygrywający.
+Zapisz obliczenia.
+
+
+
+
+                                         Nr zadania            28.
+                          Wypełnia       Maks. liczba pkt       3
+                         egzaminator
+                                         Uzyskana liczba pkt
+
+
+                                       Strona 25 z 31
+MMAP-P0_100
+Zadanie 29. (0–4)
+Rozważamy wszystkie równoległoboki o obwodzie równym 200 i kącie ostrym o mierze 30°.
+
+Podaj wzór i dziedzinę funkcji opisującej zależność pola takiego równoległoboku od
+długości 𝒙 boku równoległoboku.
+Oblicz wymiary tego z rozważanych równoległoboków, który ma największe pole, i oblicz
+to największe pole.
+Zapisz obliczenia.
+
+
+
+
+                                    Strona 26 z 31
+                                                                           MMAP-P0_100
+                               Nr zadania            29.
+               Wypełnia        Maks. liczba pkt       4
+              egzaminator
+                               Uzyskana liczba pkt
+
+
+                            Strona 27 z 31
+MMAP-P0_100
+Zadanie 30.
+W pewnej grupie 100 uczniów przeprowadzono sondaż dotyczący dziennego czasu
+korzystania z komputera. Wyniki sondażu przedstawia poniższy diagram. Na osi poziomej
+podano – wyrażony w godzinach – dzienny czas korzystania przez ucznia z komputera.
+Na osi pionowej przedstawiono liczbę uczniów, którzy dziennie korzystają z komputera przez
+określony czas.
+
+  Liczba uczniów 30
+                                      24    26
+                   25
+                                21
+                   20
+                   15                             14
+
+                   10
+                                                         6
+                          5                                     3
+                    5
+                                                                      1
+                    0
+                          1     1,5    2    2,5    3    3,5     4    4,5
+                        Dzienny czas korzystania z komputera (w godzinach)
+
+
+Zadanie 30.1. (0–1)
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Mediana dziennego czasu korzystania przez ucznia z komputera jest równa
+                                                                                 P    F
+ 2,25 godziny.
+
+Połowa z tej grupy uczniów korzysta dziennie z komputera przez mniej niż
+                                                                                 P    F
+2,5 godziny.
+
+
+ Brudnopis
+
+
+
+
+                                      Strona 28 z 31
+                                                                               MMAP-P0_100
+Zadanie 30.2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Dominanta dziennego czasu korzystania przez ucznia z komputera jest równa
+
+A. 2,25 godziny.     B. 2,50 godziny.      C. 2,75 godziny.      D. 1,50 godziny.
+
+ Brudnopis
+
+
+
+
+                                    Strona 29 z 31
+MMAP-P0_100
+BRUDNOPIS (nie podlega ocenie)
+
+
+
+
+         Strona 30 z 31
+                                 MMAP-P0_100
+              Strona 31 z 31
+MMAP-P0_100
+

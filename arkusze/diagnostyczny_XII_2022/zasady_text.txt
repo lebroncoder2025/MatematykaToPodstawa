@@ -1,0 +1,1419 @@
+                    Zasady oceniania rozwiązań
+Rodzaj dokumentu:
+                    zadań
+Egzamin:
+                    Egzamin maturalny
+                    Test diagnostyczny
+Przedmiot:          Matematyka
+Poziom:             Poziom podstawowy
+                    MMAP-P0-100-2212, MMAP-P0-200-2212,
+                    MMAP-P0-300-2212, MMAP-P0-400-2212,
+Formy arkusza:
+                    MMAP-P0-700-2212, MMAP-P0-Q00-2212,
+                    MMAP-P0-Z00-2212, MMAU-P0-100-2212
+Data publikacji
+dokumentu:
+                    15 grudnia 2022 r. (wersja 1)
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Uwagi:
+1. Akceptowane są wszystkie rozwiązania merytorycznie poprawne i spełniające warunki
+zadania.
+2. Jeżeli zdający, rozwiązując zadanie otwarte, popełni błędy rachunkowe, które na żadnym
+etapie rozwiązania nie upraszczają i nie zmieniają danego zagadnienia, lecz stosuje
+poprawną metodę i konsekwentnie do popełnionych błędów rachunkowych rozwiązuje
+zadanie, to może otrzymać co najwyżej (𝑛 − 1) punktów (gdzie 𝑛 jest maksymalną
+możliwą do uzyskania liczbą punktów za dane zadanie).
+
+Zadanie 1. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 20241
+
+                Wymaganie ogólne                                 Wymagania szczegółowe
+ I. Sprawność rachunkowa.                              Zdający:
+ Wykonywanie obliczeń na liczbach                      I.1) wykonuje działania ([…] mnożenie, […]
+ rzeczywistych, także przy użyciu                      potęgowanie, […]) w zbiorze liczb
+ kalkulatora, stosowanie praw działań                  rzeczywistych;
+ matematycznych przy przekształcaniu                   I.4) stosuje związek pierwiastkowania
+ wyrażeń algebraicznych oraz                           z potęgowaniem oraz prawa działań na
+ wykorzystywanie tych umiejętności przy                potęgach i pierwiastkach.
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+
+
+1 Rozporządzenie Ministra Edukacji i Nauki z dnia 10 czerwca 2022 r. w sprawie wymagań egzaminacyjnych dla
+
+egzaminu maturalnego przeprowadzanego w roku szkolnym 2022/2023 i 2023/2024 (Dz.U. 2022, poz.1246).
+
+
+Strona 2 z 27
+                                                            Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 2. (0–1)
+
+            Wymagania ogólne                          Wymaganie szczegółowe
+ I. Sprawność rachunkowa.                   Zdający:
+ Wykonywanie obliczeń na liczbach           I.8) wykorzystuje własności potęgowania
+ rzeczywistych, także przy użyciu           […] w sytuacjach praktycznych, w tym do
+ kalkulatora, stosowanie praw działań       obliczania procentów składanych
+ matematycznych przy przekształcaniu        z kapitalizacją roczną i zysków z lokat.
+ wyrażeń algebraicznych oraz
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+ III. Wykorzystanie i interpretowanie
+ reprezentacji.
+ 1. Stosowanie obiektów matematycznych
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 3. (0–1)
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             IV.2) stosuje układy równań liniowych do
+ 2. Dobieranie i tworzenie modeli           rozwiązywania zadań tekstowych.
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+
+
+                                                                               Strona 3 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Zadanie 4. (0–1)
+
+                Wymaganie ogólne                                Wymagania szczegółowe
+ I. Sprawność rachunkowa.                             Zdający:
+ Wykonywanie obliczeń na liczbach                     II.1) stosuje wzory skróconego mnożenia
+ rzeczywistych, także przy użyciu                     na: […] 𝑎2 − 𝑏 2 ;
+ kalkulatora, stosowanie praw działań                 II.6) dodaje i odejmuje wyrażenia wymierne,
+ matematycznych przy przekształcaniu                  w przypadkach nie trudniejszych niż:
+ wyrażeń algebraicznych oraz                            1      1    1    1     1   𝑥+1 𝑥−1
+                                                            − , 𝑥 + 2 + 3 , 𝑥+2 + 𝑥+1 .
+ wykorzystywanie tych umiejętności przy               𝑥+1 𝑥              𝑥    𝑥
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+Zadanie 5. (0–1)
+
+                Wymaganie ogólne                                Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       XI.1) zlicza obiekty w prostych sytuacjach
+ 2. Dobieranie i tworzenie modeli                     kombinatorycznych.
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+
+
+Strona 4 z 27
+                                                              Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 6. (0–1)
+
+            Wymaganie ogólne                          Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               I.4) stosuje związek pierwiastkowania
+ 1. Stosowanie obiektów matematycznych        z potęgowaniem oraz prawa działań na
+ i operowanie nimi, interpretowanie pojęć     potęgach i pierwiastkach;
+ matematycznych.                              I.9) stosuje związek logarytmowania
+                                              z potęgowaniem, posługuje się wzorami na
+                                              […] logarytm potęgi;
+                                              V.2) oblicza wartość funkcji zadanej wzorem
+                                              algebraicznym.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+Zadanie 7.1. (0–1)
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               V.4) odczytuje z wykresu funkcji:[…] zbiór
+ 1. Stosowanie obiektów matematycznych        wartości […].
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – rozwiązanie poprawne.
+0 pkt – rozwiązanie niepoprawne lub niepełne albo brak rozwiązania.
+
+Rozwiązanie
+[−3, ∞)
+
+
+Zadanie 7.2. (0–2)
+
+            Wymaganie ogólne                          Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               V.8) interpretuje współczynniki występujące
+ 1. Stosowanie obiektów matematycznych        we wzorze funkcji kwadratowej w postaci
+ i operowanie nimi, interpretowanie pojęć     ogólnej, kanonicznej i iloczynowej […];
+ matematycznych.                              V.9) wyznacza wzór funkcji kwadratowej na
+                                              podstawie informacji o tej funkcji lub o jej
+                                              wykresie.
+
+
+                                                                                 Strona 5 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Zasady oceniania
+2 pkt – poprawna metoda wyznaczenia postaci kanonicznej funkcji 𝑓 oraz zapisanie jej wzoru:
+        𝑓(𝑥) = 3(𝑥 − 5)2 − 3.
+1 pkt – zapisanie wzoru funkcji 𝑓 w postaci kanonicznej: 𝑓(𝑥) = 𝑎(𝑥 − 5)2 − 3 lub
+        w postaci iloczynowej 𝑓(𝑥) = 𝑎(𝑥 − 4)(𝑥 − 6), lub w postaci ogólnej
+        𝑓(𝑥) = 3𝑥 2 − 30𝑥 + 72.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązania
+Sposób I
+Wzór funkcji 𝑓 w postaci kanonicznej to
+
+                                𝑓(𝑥) = 𝑎(𝑥 − 5)2 − 3, gdzie 𝑎 ≠ 0
+Obliczamy 𝑎. Wykres funkcji przechodzi przez punkt o współrzędnych (4, 0), zatem
+
+                               0 = 𝑎 ⋅ (4 − 5)2 − 3, czyli 0 = 𝑎 − 3
+Stąd 𝑎 = 3.
+Wzór funkcji 𝑓 w postaci kanonicznej to 𝑓(𝑥) = 3(𝑥 − 5)2 − 3.
+
+Sposób II
+Wzór funkcji 𝑓 w postaci kanonicznej to
+
+                                𝑓(𝑥) = 𝑎(𝑥 − 5)2 − 3, gdzie 𝑎 ≠ 0
+Ponieważ wykres funkcji kwadratowej 𝑓 jest symetryczny względem prostej o równaniu
+𝑥 = 5, więc miejscami zerowymi funkcji 𝑓 są liczby 4 oraz 6.
+Przyrównujemy postać iloczynową funkcji 𝑓 do jej postaci kanonicznej:
+
+                                 𝑎(𝑥 − 4)(𝑥 − 6) = 𝑎(𝑥 − 5)2 − 3
+                          𝑎𝑥 2 − 10𝑎𝑥 + 24𝑎 = 𝑎𝑥 2 − 10𝑎𝑥 + 25𝑎 − 3
+                                                 𝑎=3
+Wzór funkcji 𝑓 w postaci kanonicznej to 𝑓(𝑥) = 3(𝑥 − 5)2 − 3.
+
+Sposób III
+Wzór funkcji 𝑓 w postaci kanonicznej to
+
+                                𝑓(𝑥) = 𝑎(𝑥 − 5)2 − 3, gdzie 𝑎 ≠ 0
+Ponieważ wykres funkcji kwadratowej 𝑓 jest symetryczny względem prostej o równaniu
+𝑥 = 5, więc miejscami zerowymi funkcji 𝑓 są liczby 4 oraz 6.
+Zapisujemy wzór funkcji 𝑓 w postaci iloczynowej: 𝑓(𝑥) = 𝑎(𝑥 − 4)(𝑥 − 6)
+
+Podstawiając do tego wzoru współrzędne wierzchołka (5, −3), otrzymujemy równanie
+
+                                   𝑓(5) = 𝑎(5 − 4)(5 − 6) = −3
+Stąd 𝑎 = 3.
+
+
+
+Strona 6 z 27
+                                                               Zasady oceniania rozwiązań zadań
+
+
+
+Wzór funkcji 𝑓 w postaci kanonicznej to 𝑓(𝑥) = 3(𝑥 − 5)2 − 3.
+
+Sposób IV
+Wzór funkcji 𝑓 w postaci ogólnej to
+
+                            𝑓(𝑥) = 𝑎𝑥 2 + 𝑏𝑥 + 𝑐, gdzie 𝑎 ≠ 0
+Ponieważ wykres funkcji kwadratowej 𝑓 jest symetryczny względem prostej o równaniu
+𝑥 = 5, więc jej miejscami zerowymi są liczby 4 oraz 6.
+Do wykresu funkcji 𝑓 należą punkty (4, 0), (5, −3) oraz (6, 0).
+Wstawiając ich współrzędne do wzoru funkcji 𝑓 , otrzymujemy
+
+                                  0 = 𝑎 ⋅ 42 + 𝑏 ⋅ 4 + 𝑐
+                                 {−3 = 𝑎 ⋅ 52 + 𝑏 ⋅ 5 + 𝑐
+                                  0 = 𝑎 ⋅ 62 + 𝑏 ⋅ 6 + 𝑐
+                                       0 = 16𝑎 + 4𝑏 + 𝑐
+                                      {−3 = 25𝑎 + 5𝑏 + 𝑐
+                                       0 = 36𝑎 + 6𝑏 + 𝑐
+Stąd 𝑎 = 3, 𝑏 = −30, 𝑐 = 72.
+
+Zatem
+                                 𝑓(𝑥) = 3𝑥 2 − 30𝑥 + 72
+Wzór ten można przekształcić do postaci
+
+            𝑓(𝑥) = 3𝑥 2 − 30𝑥 + 72 = 3(𝑥 2 − 10𝑥 + 25) − 3 = 3(𝑥 − 5)2 − 3
+Wzór funkcji 𝑓 w postaci kanonicznej to 𝑓(𝑥) = 3(𝑥 − 5)2 − 3.
+
+
+
+Zadanie 8. (0–1)
+
+            Wymaganie ogólne                           Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie          Zdający:
+ reprezentacji.                                V.8) interpretuje współczynniki
+ 1. Stosowanie obiektów matematycznych         występujące we wzorze funkcji kwadratowej
+ i operowanie nimi, interpretowanie pojęć      w postaci […] iloczynowej (jeśli istnieje).
+ matematycznych.                               III.4) rozwiązuje równania i nierówności
+                                               kwadratowe.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+
+
+                                                                                  Strona 7 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Zadanie 9. (0–1)
+
+                Wymaganie ogólne                                Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       V.8) interpretuje współczynniki
+ 1. Stosowanie obiektów matematycznych                występujące we wzorze funkcji kwadratowej
+ i operowanie nimi, interpretowanie pojęć             w postaci ogólnej […].
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B1
+
+
+Zadanie 10. (0–1)
+
+                Wymaganie ogólne                                Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       IV.1) […] podaje interpretację geometryczną
+ 1. Stosowanie obiektów matematycznych                układów oznaczonych […].
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 11. (0–1)
+
+                Wymaganie ogólne                                Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       II.4) rozkłada wielomiany na czynniki
+ 1. Stosowanie obiektów matematycznych                metodą wyłączania wspólnego czynnika
+ i operowanie nimi, interpretowanie pojęć             przed nawias oraz metodą grupowania
+ matematycznych.                                      wyrazów […].
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+
+
+
+Strona 8 z 27
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Rozwiązanie
+B
+
+
+Zadanie 12. (0–1)
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             III.6) rozwiązuje równania wymierne
+ 1. Stosowanie obiektów matematycznych                   𝑉(𝑥)
+                                            w postaci         = 0, gdzie wielomiany
+ i operowanie nimi, interpretowanie pojęć               𝑊(𝑥)
+ matematycznych.                            𝑉(𝑥) i 𝑊(𝑥) są zapisane w postaci
+                                            iloczynowej.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 13. (0–1)
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             III.3) rozwiązuje nierówności liniowe z jedną
+ 1. Stosowanie obiektów matematycznych      niewiadomą.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 14. (0–2)
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ IV. Rozumowanie i argumentacja.            Zdający:
+ 1. Przeprowadzanie rozumowań, także        I.2) przeprowadza proste dowody dotyczące
+ kilkuetapowych, podawanie argumentów       podzielności liczb całkowitych i reszt
+ uzasadniających poprawność rozumowania,    z dzielenia […].
+ odróżnianie dowodu od przykładu.
+
+
+
+                                                                                Strona 9 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Zasady oceniania
+2 pkt – przeprowadzenie pełnego dowodu, tj. rozpatrzenie dwóch przypadków: gdy 𝑛 = 2𝑘
+        oraz 𝑛 = 2𝑘 + 1
+        ALBO
+        przekształcenie wyrażenia 5𝑛2 + 15𝑛 do postaci 5𝑛(𝑛 + 3) oraz uzasadnienie, że
+        liczba 5𝑛(𝑛 + 3) dzieli się przez 2 i przez 5, czyli jest podzielna przez 10.
+1 pkt – przekształcenie wyrażenia 5𝑛2 + 15𝑛 do postaci 5𝑛(𝑛 + 3)
+        ALBO
+        rozpatrzenie przypadku, gdy 𝑛 = 2𝑘 (gdzie 𝑘 ∈ ℕ), tj. przekształcenie wyrażenia
+        5𝑛2 + 15𝑛 do postaci 10 ⋅ (2𝑘 2 + 3𝑘) i zapisanie, że liczba 2𝑘 2 + 3𝑘 jest
+        naturalna,
+        ALBO
+        rozpatrzenie przypadku, gdy 𝑛 = 2𝑘 + 1 (gdzie 𝑘 ∈ ℕ), tj. przekształcenie
+        wyrażenia 5𝑛2 + 15𝑛 do postaci 10 ⋅ (2𝑘 2 + 5𝑘 + 2) i zapisanie, że liczba
+        2𝑘 2 + 5𝑘 + 2 jest naturalna.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązania
+Sposób I
+Przedstawiamy liczbę 5𝑛2 + 15𝑛 w postaci iloczynu
+
+                                       5𝑛2 + 15𝑛 = 5𝑛(𝑛 + 3)
+Liczby 𝑛 oraz 𝑛 + 3 różnią się o liczbę nieparzystą. Zatem, jeśli 𝑛 jest parzysta, wtedy
+𝑛 + 3 jest nieparzysta. Jeśli 𝑛 jest nieparzysta, wtedy 𝑛 + 3 jest parzysta. Wynika stąd,
+że liczba 5𝑛(𝑛 + 3) dzieli się przez 2 i przez 5, czyli jest podzielna przez 10. To należało
+wykazać.
+
+Sposób II
+Rozważamy dwa przypadki: gdy liczba 𝑛 jest parzysta i gdy liczba 𝑛 jest nieparzysta.
+Parzystą liczbę 𝑛 możemy zapisać w postaci 𝑛 = 2𝑘 , gdzie 𝑘 ∈ ℕ.
+Wtedy
+
+                 5𝑛2 + 15𝑛 = 5(2𝑘)2 + 15 ⋅ 2𝑘 = 20𝑘 2 + 30𝑘 = 10 ⋅ (2𝑘 2 + 3𝑘)
+Ponieważ 𝑘 jest liczbą naturalną, to liczba 2𝑘 2 + 3𝑘 również jest naturalna, a iloczyn
+10 ⋅ (2𝑘 2 + 3𝑘) jest podzielny przez 10.
+W przypadku, gdy liczba 𝑛 jest nieparzysta, możemy ją zapisać w postaci 𝑛 = 2𝑘 + 1,
+gdzie 𝑘 ∈ ℕ.
+Wtedy
+
+        5𝑛2 + 15𝑛 = 5(2𝑘 + 1)2 + 15 ⋅ (2𝑘 + 1) = 5(4𝑘 2 + 4𝑘 + 1) + 30𝑘 + 15 =
+         = 20𝑘 2 + 20𝑘 + 5 + 30𝑘 + 15 = 20𝑘 2 + 50𝑘 + 20 = 10 ⋅ (2𝑘 2 + 5𝑘 + 2)
+Ponieważ 𝑘 jest liczbą naturalną, to liczba 2𝑘 2 + 5𝑘 + 2 również jest naturalna, a iloczyn
+10 ⋅ (2𝑘 2 + 5𝑘 + 2) jest podzielny przez 10. To należało wykazać.
+
+
+
+Strona 10 z 27
+                                                               Zasady oceniania rozwiązań zadań
+
+
+
+Sposób III
+Przedstawiamy liczbę 5𝑛2 + 15𝑛 w postaci iloczynu
+
+                                 5𝑛2 + 15𝑛 = 5𝑛(𝑛 + 3)
+Rozważamy dwa przypadki: gdy liczba 𝑛 jest parzysta i gdy liczba 𝑛 jest nieparzysta.
+Parzystą liczbę 𝑛 możemy zapisać w postaci 𝑛 = 2𝑘 , gdzie 𝑘 ∈ ℕ.
+Wtedy
+
+                       5𝑛2 + 15𝑛 = 5 ⋅ 2𝑘(2𝑘 + 3) = 10𝑘(2𝑘 + 3)
+Ponieważ 𝑘 jest liczbą naturalną, to liczba 2𝑘 + 3 również jest naturalna, a iloczyn
+10 ⋅ 𝑘(2𝑘 + 3) jest podzielny przez 10.
+W przypadku, gdy liczba 𝑛 jest nieparzysta, możemy ją zapisać w postaci 𝑛 = 2𝑘 + 1,
+gdzie 𝑘 ∈ ℕ.
+Wtedy
+
+               5𝑛2 + 15𝑛 = 5(2𝑘 + 1)(2𝑘 + 1 + 3) = 10(2𝑘 + 1)(𝑘 + 2)
+Ponieważ 𝑘 jest liczbą naturalną, to liczby 2𝑘 + 1 oraz 𝑘 + 2 również są naturalne,
+a iloczyn 10 ⋅ (2𝑘 + 1)(𝑘 + 2) jest podzielny przez 10. To należało wykazać.
+
+
+Zadanie 15. (0–1)
+
+            Wymaganie ogólne                           Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie          Zdający:
+ reprezentacji.                                VI.2) w prostych przypadkach bada, czy
+ 1. Stosowanie obiektów matematycznych         ciąg jest rosnący, czy malejący;
+ i operowanie nimi, interpretowanie pojęć      VI.1) oblicza wyrazy ciągu określonego
+ matematycznych.                               wzorem ogólnym.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+FP
+
+
+Zadanie 16. (0–1)
+
+            Wymaganie ogólne                           Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie          Zdający:
+ reprezentacji.                                VI.4) stosuje wzór na 𝑛–ty wyraz […] ciągu
+ 1. Stosowanie obiektów matematycznych         arytmetycznego.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+
+
+
+                                                                                 Strona 11 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 17. (0–2)
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VI.5) stosuje wzór na 𝑛–ty wyraz […] ciągu
+ 1. Stosowanie obiektów matematycznych                geometrycznego.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+2 pkt – wybranie dwóch odpowiedzi, z których obie są poprawne: A i E.
+1 pkt – wybranie jednej lub dwóch odpowiedzi, z których jedna jest poprawna: A albo E.
+0 pkt – rozwiązanie niepoprawne lub niepełne albo brak rozwiązania.
+
+Rozwiązanie
+AE
+
+
+Zadanie 18. (0–1)
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VII.2) korzysta z wzorów
+ 1. Stosowanie obiektów matematycznych                sin2 α + cos2 α = 1 […].
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+
+
+Strona 12 z 27
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 19. (0–1)
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              VIII.5) stosuje własności kątów wpisanych
+ 1. Stosowanie obiektów matematycznych       i środkowych.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 20. (0–4)
+
+            Wymagania ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        XIII. Zdający rozwiązuje zadania
+ reprezentacji.                              optymalizacyjne w sytuacjach dających się
+ 2. Dobieranie i tworzenie modeli            opisać funkcją kwadratową.
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+ IV. Rozumowanie i argumentacja.
+ 4. Stosowanie i tworzenie strategii przy
+ rozwiązywaniu zadań, również w sytuacjach
+ nietypowych.
+
+Zasady oceniania
+4 pkt – poprawna metoda obliczenia obu wymiarów kąpieliska oraz podanie poprawnych
+        wyników: 𝑎 = 50 m oraz 𝑏 = 100 m.
+3 pkt – poprawne zapisanie wzoru na pole powierzchni kąpieliska w zależności od zmiennej
+        𝑎 oraz podanie dziedziny funkcji 𝑎 ∈ (0, 100) i prawidłowe obliczenie pierwszej
+        współrzędnej wierzchołka paraboli: 𝑎 = 50 m
+        ALBO
+        poprawne zapisanie wzoru na pole powierzchni kąpieliska w zależności od zmiennej
+        𝑏 oraz podanie dziedziny funkcji 𝑏 ∈ (0, 200) i prawidłowe obliczenie pierwszej
+        współrzędnej wierzchołka paraboli: 𝑏 = 100 m.
+2 pkt – poprawne zapisanie wzoru na pole powierzchni kąpieliska w zależności od jednej
+                                                              1
+        zmiennej: 𝑃(𝑎) = 𝑎(200 − 2𝑎) lub 𝑃(𝑏) = 𝑏 (100 − 𝑏).
+                                                              2
+1 pkt – zapisanie związku między wymiarami kąpieliska: 2𝑎 + 𝑏 = 200.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+
+
+
+                                                                               Strona 13 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Przykładowe pełne rozwiązania
+Sposób I
+Przyjmijmy oznaczenia jak na rysunku w zadaniu. Długość liny użytej do wytyczenia
+kąpieliska – po uwzględnieniu warunków zadania – można zapisać równaniem
+                                              2𝑎 + 𝑏 = 200
+Stąd wyznaczamy 𝑏: 𝑏 = 200 − 2𝑎.
+Z warunków zadania wynika, że
+                                         𝑎>0        i    𝑏>0
+Powierzchnia 𝑃 kąpieliska jest równa polu prostokąta o bokach długości 𝑎 oraz 𝑏. Zatem
+                                               𝑃 =𝑎⋅𝑏
+Powierzchnię kąpieliska wyrażamy jako funkcję jednej zmiennej 𝑎. W tym celu podstawiamy
+𝑏 = 200 − 2𝑎 i otrzymujemy
+                              𝑃(𝑎) = 𝑎(200 − 2𝑎) = −2𝑎2 + 200𝑎
+Wyznaczamy dziedzinę funkcji 𝑃. Wykorzystamy związek między wymiarami 𝑎 i 𝑏 oraz
+wykorzystamy warunki, jakie te wymiary spełniają
+
+                                  𝑏 = 200 − 2𝑎 > 0 oraz 𝑎 > 0
+Zatem
+                                        𝑎 < 100 oraz 𝑎 > 0
+Zmienna 𝑎 może przyjmować wartości z przedziału (0, 100).
+
+Wykresem funkcji 𝑃 jest fragment paraboli skierowanej ramionami do dołu. Obliczamy
+pierwszą współrzędną wierzchołka paraboli:
+                                            200
+                                  𝑝=−              = 50 ∈ (0, 100)
+                                          2 ⋅ (−2)
+Zatem funkcja 𝑃 przyjmuje wartość największą dla argumentu 50.
+Obliczamy drugi wymiar, dla którego kąpielisko ma największą powierzchnię:
+
+                                  𝑏 = 200 m − 2 ⋅ 50 m = 100 m
+Największą powierzchnię ma kąpielisko o wymiarach: 𝑎 = 50 m oraz 𝑏 = 100 m.
+
+Sposób II
+Przyjmiemy oznaczenia jak na rysunku w zadaniu. Długość liny użytej do wytyczenia
+kąpieliska – po uwzględnieniu warunków zadania – można zapisać równaniem
+
+                                              2𝑎 + 𝑏 = 200
+                                       1
+Stąd wyznaczamy 𝑎: 𝑎 = 100 −             𝑏.
+                                       2
+Z warunków zadania wynika, że
+                                         𝑎>0        i    𝑏>0
+
+
+
+
+Strona 14 z 27
+                                                                  Zasady oceniania rozwiązań zadań
+
+
+
+Powierzchnia 𝑃 kąpieliska jest równa polu prostokąta o bokach długości 𝑎 oraz 𝑏. Zatem
+
+                                        𝑃 =𝑎⋅𝑏
+Powierzchnię kąpieliska wyrażamy jako funkcję jednej zmiennej 𝑏. W tym celu podstawiamy
+          1
+𝑎 = 100 − 2 𝑏 i otrzymujemy
+                                                  1
+                                   𝑃(𝑏) = 𝑏 (100 − 𝑏)
+                                                  2
+Wyznaczamy dziedzinę funkcji 𝑃. Wykorzystamy związek między wymiarami 𝑎 i 𝑏 oraz
+wykorzystamy warunki, jakie te wymiary spełniają
+                                      1
+                            𝑎 = 100 − 2 𝑏 > 0       oraz    𝑏>0
+
+Zatem
+
+                                 𝑏 < 200     oraz    𝑏>0
+Zmienna 𝑏 może przyjmować wartości z przedziału (0, 200).
+
+Wykresem funkcji 𝑃 jest fragment paraboli skierowanej ramionami do dołu. Obliczamy
+pierwszą współrzędną wierzchołka paraboli jako średnią arytmetyczną pierwiastków
+równania:
+                                           1
+                                   𝑏 (100 − 𝑏) = 0
+                                           2
+Pierwiastkami tego równania są liczby
+
+                                 𝑏1 = 0 oraz 𝑏2 = 200
+Zatem pierwsza współrzędna wierzchołka paraboli jest równa
+                                   𝑏1 + 𝑏2
+                              𝑝=           = 100 ∈ (0, 200)
+                                      2
+Zatem funkcja 𝑃 przyjmuje wartość największą dla argumentu 100.
+Obliczamy drugi wymiar, dla którego kąpielisko ma największą powierzchnię:
+                                            1
+                             𝑎 = 100 m −      ⋅ 100 m = 50 m
+                                            2
+Największą powierzchnię ma kąpielisko o wymiarach: 𝑎 = 50 m oraz 𝑏 = 100 m.
+
+
+Zadanie 21. (0–1)
+
+            Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie         Zdający:
+ reprezentacji.                               VIII.6) stosuje wzory na pole wycinka koła
+ 1. Stosowanie obiektów matematycznych        […].
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+
+
+
+                                                                                    Strona 15 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 22. (0–1)
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VIII.8) korzysta z cech podobieństwa
+ 1. Stosowanie obiektów matematycznych                trójkątów.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 23. (0–2)
+
+                 Wymagania ogólne                               Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VIII.4) korzysta z własności kątów
+ 1. Stosowanie obiektów matematycznych                i przekątnych w […] równoległobokach,
+ i operowanie nimi, interpretowanie pojęć             rombach […];
+ matematycznych.                                      VIII.8) korzysta z cech podobieństwa
+ 3.Tworzenie pomocniczych obiektów                    trójkątów.
+ matematycznych na podstawie istniejących,
+ w celu przeprowadzenia argumentacji lub
+ rozwiązania problemu.
+
+Zasady oceniania
+                                                                                    48
+2 pkt – poprawna metoda obliczenia długości boku rombu oraz poprawny wynik: 𝑎 =        .
+                                                                                    7
+1 pkt – zapisanie związku między długościami odcinków wynikającego z podobieństwa
+                                    |𝐴𝐹|   |𝐴𝐵| |𝐵𝐹|    |𝐴𝐵| |𝐾𝐻|     |𝐾𝐶| |𝐾𝐺|    |𝐾𝐶|
+        odpowiednich trójkątów, np.      = |𝐵𝐷|, |𝐹𝐺| = |𝐴𝐶| , |𝑂𝐷| = |𝑂𝐶|, |𝑂𝐵| = |𝑂𝐶| .
+                                    |𝐸𝐹|
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+
+
+
+Strona 16 z 27
+                                                                        Zasady oceniania rozwiązań zadań
+
+
+
+Przykładowe pełne rozwiązania                                                     𝐻
+                                                                𝐷                                     𝐶
+Sposób I
+Niech 𝑎 oznacza długość boku rombu.
+
+Trójkąty 𝐴𝐸𝐹 i 𝐴𝐷𝐵 są podobne oraz
+trójkąty 𝐹𝐵𝐺 i 𝐴𝐵𝐶 są podobne (na
+mocy cechy kkk podobieństwa trójkątów).
+                                                           𝐸
+Zatem mamy zależności:
+                                                                              𝑂
+     |𝐴𝐹|     |𝐴𝐵|       |𝐵𝐹|      |𝐴𝐵|                                                       𝐺
+     |𝐸𝐹|
+            = |𝐵𝐷| oraz |𝐹𝐺| = |𝐴𝐶|
+
+     |𝐴𝐹|    |𝐴𝐵|    |𝐵𝐹| |𝐴𝐵|
+            = 12 oraz 𝑎 = 16
+        𝑎
+Zatem
+            |𝐴𝐵|⋅𝑎                 |𝐴𝐵|⋅𝑎
+   |𝐴𝐹| =            oraz |𝐵𝐹| =                   𝐴                    𝐹              𝐵
+              12                     16
+Wobec tego
+                                                       |𝐴𝐵| ⋅ 𝑎 |𝐴𝐵| ⋅ 𝑎
+                          |𝐴𝐵| = |𝐴𝐹| + |𝐵𝐹| =                 +
+                                                         12       16
+Zatem
+                                                 𝑎   𝑎
+                                            1=     +
+                                                 12 16
+                       48
+Wynika stąd, że 𝑎 =       .
+                       7
+                                            48
+Długość boku rombu 𝐸𝐹𝐺𝐻 jest równa             .
+                                            7
+
+Sposób II                                                       𝐷                 𝐻                   𝐶
+Niech 𝑎 oznacza długość boku rombu.
+Z warunków zadania mamy |𝑂𝐷| = 6,
+|𝑂𝐶| = 8.                                                           𝐿
+Punkt 𝐾 jest punktem przecięcia                                                          𝐾
+przekątnej 𝐴𝐶 równoległoboku z bokiem
+                                                           𝐸
+𝐺𝐻 rombu. Punkt 𝐿 jest punktem
+                                                                              𝑂
+przecięcia przekątnej 𝐵𝐷
+                                                                                              𝐺
+równoległoboku z bokiem 𝐸𝐻 rombu.
+
+
+
+
+                                                   𝐴                    𝐹              𝐵
+
+
+
+
+                                                                                           Strona 17 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Trójkąty 𝐻𝐾𝐶 i 𝐷𝑂𝐶 są podobne oraz trójkąty 𝐺𝐾𝐶 i 𝐵𝑂𝐶 są podobne (na mocy cechy
+kkk podobieństwa trójkątów), zatem
+                                   |𝐾𝐻|     |𝐾𝐶|      |𝐾𝐺|   |𝐾𝐶|
+                                   |𝑂𝐷|
+                                          = |𝑂𝐶| oraz |𝑂𝐵| = |𝑂𝐶|
+
+Stąd
+                                             |𝐾𝐻| |𝐾𝐺|
+                                                 =
+                                               6    6
+                       𝑎
+Zatem |𝐾𝐻| = |𝐾𝐺| =      .
+                       2
+                             𝑎
+Analogicznie |𝐿𝐻| = |𝐿𝐸| = .
+                             2
+Ponieważ boki czworokąta 𝐿𝑂𝐾𝐻 są równoległe do boków rombu 𝐸𝐹𝐺𝐻 , więc 𝐿𝑂𝐾𝐻
+                                                   𝑎
+również jest rombem i każdy z jego boków ma długość .
+                                                   2
+                                                               𝑎
+Możemy zatem obliczyć długość odcinka |𝐾𝐶| = |𝑂𝐶| − |𝑂𝐾| = 8 − .
+                                                               2
+Korzystając ponownie z podobieństwa trójkątów 𝐻𝐾𝐶 i 𝐷𝑂𝐶 , mamy
+                                             |𝐾𝐻| |𝐾𝐶|
+                                                 =
+                                             |𝑂𝐷| |𝑂𝐶|
+                                               𝑎      𝑎
+                                               2 = 8−2
+                                               6    8
+Stąd
+                                                      48
+                                                 𝑎=
+                                                       7
+                                               48
+Długość boku rombu 𝐸𝐹𝐺𝐻 jest równa                .
+                                               7
+
+
+
+Zadanie 24. (0–2)
+
+                 Wymaganie ogólne                               Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VII.2) korzysta z wzorów
+ 1. Stosowanie obiektów matematycznych                                             sin 𝛼
+                                                      sin2 𝛼 + cos 2 𝛼 = 1, tg 𝛼 = cos 𝛼 ;
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.                                      VII.3) stosuje […] wzór na pole trójkąta
+                                                            1
+                                                      𝑃 = 2 ⋅ 𝑎 ⋅ 𝑏 ⋅ sin 𝛾.
+                                                      VIII.11) stosuje funkcje trygonometryczne
+                                                      do wyznaczania długości odcinków […].
+
+
+
+
+Strona 18 z 27
+                                                                    Zasady oceniania rozwiązań zadań
+
+
+
+Zasady oceniania
+                                                                                  18
+2 pkt – obliczenie pola trójkąta 𝐴𝐵𝐶 i zapisanie poprawnego wyniku: 𝑃 =              .
+                                                                                  5
+                                             3
+1 pkt – obliczenie sinusa kąta 𝛼 : sin 𝛼 =
+                                             5
+        ALBO
+                                                             12
+        obliczenie długości wysokości trójkąta 𝐴𝐵𝐶 : ℎ =        ,
+                                                             5
+        ALBO
+                                                     29
+        obliczenie kwadratu długości boku 𝐵𝐶 : |𝐵𝐶|2 =  .
+                                                      5
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązania
+Sposób I                                                                                            𝐶
+Z warunków zadania mamy: |𝐴𝐶| = 4, |𝐴𝐵| = 3.
+                                                         4                           4
+Oznaczmy przez 𝛼 miarę kąta 𝐵𝐴𝐶. Wtedy cos 𝛼 =             .
+                                                         5
+
+Aby obliczyć pole 𝑃 trójkąta 𝐴𝐵𝐶 , zastosujemy wzór                           𝛼
+                                                                         𝐴           3          𝐵
+                                    1
+                                 𝑃 = ∙ |𝐴𝐵| ∙ |𝐴𝐶| ∙ sin 𝛼
+                                    2
+Korzystając z tożsamości sin2 𝛼 + cos 2 𝛼 = 1, obliczamy sinus kąta 𝛼 :
+
+                                                        4 2   9 3
+                      sin 𝛼 = √1 − cos 2 𝛼 = √1 − (      ) =√ =
+                                                        5    25 5
+
+Zatem
+                                           1      3 18
+                                      𝑃=     ∙3∙4∙ =
+                                           2      5  5
+                               18
+Pole trójkąta 𝐴𝐵𝐶 jest równe      .
+                               5
+
+Sposób II                                                                                           𝐶
+Z warunków zadania mamy: |𝐴𝐶| = 4, |𝐴𝐵| = 3.
+Niech ℎ oznacza wysokość 𝐶𝐷 trójkąta 𝐴𝐵𝐶 opuszczoną                                  4
+z wierzchołka 𝐶 , natomiast 𝛼 – miarę kąta 𝐵𝐴𝐶 .                                                    ℎ
+                4
+Wtedy cos 𝛼 = .                                                              𝛼
+                5
+                                                                         𝐴           3         𝐵 𝐷
+Aby obliczyć pole 𝑃 trójkąta 𝐴𝐵𝐶 , zastosujemy wzór
+                                           1
+                                      𝑃=     ∙ |𝐴𝐵| ∙ |𝐶𝐷|
+                                           2
+W tym celu najpierw obliczamy długość odcinka 𝐴𝐷 :
+                                                 |𝐴𝐷|
+                                       cos 𝛼 =
+                                                 |𝐴𝐶|
+
+
+
+                                                                                         Strona 19 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+                                          4 |𝐴𝐷|
+                                            =
+                                          5      4
+                                                  16
+                                         |𝐴𝐷| =
+                                                   5
+Korzystając z twierdzenia Pitagorasa dla trójkąta 𝐴𝐷𝐶 , obliczamy wysokość ℎ = |𝐶𝐷|:
+                                       |𝐴𝐷|2 + |𝐶𝐷|2 = |𝐴𝐶|2
+                                            16 2
+                                           ( ) + ℎ2 = 42
+                                             5
+                                                       256
+                                            ℎ2 = 16 −
+                                                       25
+                                                    144
+                                               ℎ2 =
+                                                    25
+                                                    12
+                                                ℎ=
+                                                     5
+Obliczamy pole trójkąta 𝐴𝐵𝐶 :
+                                               1     12 18
+                                          𝑃=     ∙3⋅    =
+                                               2      5   5
+                                   18
+Pole trójkąta 𝐴𝐵𝐶 jest równe          .
+                                   5
+
+Sposób III
+Z warunków zadania mamy: |𝐴𝐶| = 4, |𝐴𝐵| = 3.
+Z twierdzenia cosinusów mamy:
+                                                                 4 29
+                                |𝐵𝐶|2 = 32 + 42 − 2 ⋅ 3 ⋅ 4 ⋅      =
+                                                                 5   5
+
+                                                  29 √145
+                                          |𝐵𝐶| = √ =
+                                                   5  5
+
+Obwód 𝑂𝐴𝐵𝐶 trójkąta 𝐴𝐵𝐶 jest równy
+
+                                                   √145 35 + √145
+                                𝑂𝐴𝐵𝐶 = 4 + 3 +         =
+                                                    5       5
+Stosując wzór Herona, obliczamy pole 𝑃 trójkąta 𝐴𝐵𝐶 :
+
+                       35 + √145 35 − √145 √145 − 5 √145 + 5
+                    𝑃=√         ⋅         ⋅        ⋅         =
+                           10        10      10       10
+
+                         1225 − 145 145 − 25    1080 120 360 18
+                    =√             ⋅         =√     ⋅   =   =
+                            100       100       100 100 100   5
+
+                                   18
+Pole trójkąta 𝐴𝐵𝐶 jest równe          .
+                                   5
+
+
+Strona 20 z 27
+                                                                  Zasady oceniania rozwiązań zadań
+
+                                                                                     𝐶
+Sposób IV
+Z warunków zadania mamy: |𝐴𝐶| = 4, |𝐴𝐵| = 3.                           4                    3
+Niech 𝐷 będzie punktem przecięcia prostej 𝐴𝐵
+z prostą prostopadłą do prostej 𝐴𝐶 przechodzącą                  𝛼
+przez punkt 𝐶 .                                             𝐴          3         𝐵                𝐷
+
+Wtedy trójkąt 𝐴𝐷𝐶 jest prostokątny, a ponieważ                               5
+        4
+cos 𝛼 = 5 oraz |𝐴𝐶| = 4, więc jest to trójkąt egipski.
+Zatem |𝐴𝐷| = 5 oraz |𝐶𝐷| = 3.
+
+Pole trójkąta 𝐴𝐷𝐶 jest równe
+                                                1
+                                       𝑃𝐴𝐷𝐶 =     ⋅3⋅4=6
+                                                2
+Trójkąty 𝐴𝐵𝐶 i 𝐴𝐷𝐶 mają wspólną wysokość ℎ poprowadzoną z wierzchołka 𝐶 . Możemy
+ją wyznaczyć ze wzoru na pole trójkąta 𝐴𝐷𝐶 :
+                                                1
+                                       𝑃𝐴𝐷𝐶 =     ⋅5⋅ℎ =6
+                                                2
+           12
+Stąd ℎ =      .
+           5
+Obliczamy pole trójkąta 𝐴𝐵𝐶 :
+                                            1     12 18
+                                       𝑃=     ∙3⋅    =
+                                            2      5   5
+                                18
+Pole trójkąta 𝐴𝐵𝐶 jest równe       .
+                                5
+
+
+Zadanie 25.1. (0–1)
+
+             Wymaganie ogólne                             Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie             Zdający:
+ reprezentacji.                                   VIII.3) rozpoznaje wielokąty foremne
+ 1. Stosowanie obiektów matematycznych            i korzysta z ich podstawowych własności.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+
+
+                                                                                         Strona 21 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Zadanie 25.2. (0–1)
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VIII.3) rozpoznaje wielokąty foremne
+ 1. Stosowanie obiektów matematycznych                i korzysta z ich podstawowych własności.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+Zadanie 26. (0–1)
+
+                 Wymaganie ogólne                               Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VIII.4) korzysta z własności kątów
+ 1. Stosowanie obiektów matematycznych                i przekątnych w […] trapezach;
+ i operowanie nimi, interpretowanie pojęć             VIII.8) korzysta z cech podobieństwa
+ matematycznych.                                      trójkątów;
+                                                      VIII.9) wykorzystuje zależności między
+                                                      obwodami […] figur podobnych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+Zadanie 27. (0–1)
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       IX.4) posługuje się równaniem okręgu
+ 1. Stosowanie obiektów matematycznych                (𝑥 − 𝑎)2 + (𝑦 − 𝑏)2 = 𝑟 2 .
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+
+Strona 22 z 27
+                                                            Zasady oceniania rozwiązań zadań
+
+
+
+Rozwiązanie
+A
+
+
+Zadanie 28. (0–1)
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             IX.1) rozpoznaje wzajemne położenie
+ 1. Stosowanie obiektów matematycznych      prostych na płaszczyźnie na podstawie ich
+ i operowanie nimi, interpretowanie pojęć   równań […].
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+Zadanie 29. (0–1)
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             IX.2) posługuje się równaniem prostej na
+ 1. Stosowanie obiektów matematycznych      płaszczyźnie w postaci kierunkowej, w tym
+ i operowanie nimi, interpretowanie pojęć   wyznacza równanie prostej o zadanych
+ matematycznych.                            własnościach (takich jak na przykład
+                                            przechodzenie przez dwa dane punkty,
+                                            znany współczynnik kierunkowy,
+                                            równoległość […] do innej prostej […]).
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+
+
+                                                                              Strona 23 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Zadanie 30.1. (0–1)
+
+                 Wymaganie ogólne                                 Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       X.1) rozpoznaje wzajemne położenie
+ 1. Stosowanie obiektów matematycznych                prostych w przestrzeni […];
+ i operowanie nimi, interpretowanie pojęć             X.4) oblicza objętości […] ostrosłupów […].
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 30.2. (0–2)
+
+                 Wymaganie ogólne                                 Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       X.2) posługuje się pojęciem kąta między
+ 1. Stosowanie obiektów matematycznych                prostą a płaszczyzną.
+ i operowanie nimi, interpretowanie pojęć             VII.1) wykorzystuje definicje funkcji sinus,
+ matematycznych.                                      cosinus i tangens dla kątów od 0° do
+                                                      180° […].
+
+Zasady oceniania
+                                                             √3
+2 pkt – obliczenie wartości cosinusa kąta 𝛼 : cos 𝛼 =             .
+                                                              3
+                                               9√2
+1 pkt – obliczenie długości odcinka 𝐴𝑂: |𝐴𝑂| =     .
+                                                2
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązania                                             𝐻                          𝐺
+Sposób I
+Oznaczamy przez 𝑂 spodek wysokości                                                 𝑊
+ostrosłupa 𝐴𝐵𝐶𝐷𝑊 . Wtedy wysokość                                 𝐸
+ostrosłupa jest równa |𝑂𝑊| = 9.                                                             𝐹
+                                                                                                     9
+Odcinek 𝐴𝐶 jest przekątną kwadratu
+o boku 9, zatem jego długość jest równa
+9√2. Odcinek 𝐴𝑂 stanowi jego połowę,                                      𝐷                          𝐶
+            9√2
+więc |𝐴𝑂| =     .
+             2                                                                     𝑂
+
+                                                                  𝐴                         𝐵
+
+
+
+Strona 24 z 27
+                                                                 Zasady oceniania rozwiązań zadań
+
+
+
+Z twierdzenia Pitagorasa dla trójkąta 𝐴𝑂𝑊 mamy:
+
+                                 |𝐴𝑂|2 + |𝑂𝑊|2 = |𝐴𝑊|2
+Podstawiamy długości odcinków:
+                                          2
+                                  9√2
+                                 (   ) + 92 = |𝐴𝑊|2
+                                   2
+                                              2
+                                  |𝐴𝑊|2 = 92 ( + 1)
+                                              4
+                                               9√6
+                                      |𝐴𝑊| =
+                                                2
+Oznaczamy kąt 𝑊𝐴𝑂 przez 𝛼 . Obliczamy cosinus kąta 𝛼 :
+
+                                          9√2
+                                    |𝐴𝑂|       √2 √3
+                            cos 𝛼 =      = 2 =   =
+                                    |𝐴𝑊| 9√6 √6    3
+                                           2
+                                                                  𝐻                          𝐺
+Sposób II
+Oznaczamy przez 𝑂 spodek wysokości                                        𝑊
+ostrosłupa 𝐴𝐵𝐶𝐷𝑊 . Wtedy wysokość                         𝐸
+ostrosłupa jest równa |𝑂𝑊| = 9.                                                   𝐹
+                                                                                             9
+Odcinek 𝐴𝐶 jest przekątną kwadratu
+o boku 9, zatem jego długość jest równa
+9√2. Odcinek 𝐴𝑂 stanowi jego połowę,                             𝐷                           𝐶
+            9√2
+więc |𝐴𝑂| =     .
+             2                                                             𝑂
+Oznaczamy kąt 𝑊𝐴𝑂 przez 𝛼 .
+                                                          𝐴                     𝐵
+                      |𝑂𝑊|     9
+             tg 𝛼 =         =     = √2
+                       |𝐴𝑂|   9√2
+                               2
+                                                       sin 𝛼
+Korzystając z tożsamości trygonometrycznej tg 𝛼 =            , mamy
+                                                       cos 𝛼
+                                       sin 𝛼
+                                             = √2
+                                       cos 𝛼
+                                    sin 𝛼 = √2 cos 𝛼
+Stąd z tożsamości sin2 𝛼 + cos 2 𝛼 = 1 mamy
+
+                                  2 cos2 𝛼 + cos 2 𝛼 = 1
+                                      3 cos 2 𝛼 = 1
+                                                   1
+                                       cos 2 𝛼 =
+                                                   3
+
+
+                                                                                    Strona 25 z 27
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2022 r.
+
+
+
+Ponieważ kąt 𝛼 jest ostry, więc
+                                                        √3
+                                              cos 𝛼 =
+                                                         3
+
+
+Zadanie 31. (0–1)
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       X.5) wykorzystuje zależność między
+ 1. Stosowanie obiektów matematycznych                objętościami graniastosłupów […]
+ i operowanie nimi, interpretowanie pojęć             podobnych.
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+Zadanie 32. (0–1)
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       XII.1) oblicza prawdopodobieństwo
+ 2. Dobieranie i tworzenie modeli                     w modelu klasycznym.
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+Zadanie 33. (0–2)
+
+                 Wymaganie ogólne                               Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       XII.2) oblicza średnią arytmetyczną […];
+ 1. Stosowanie obiektów matematycznych                XII.3) oblicza odchylenie standardowe
+ i operowanie nimi, interpretowanie pojęć             zestawu danych (także w przypadku danych
+ matematycznych.                                      odpowiednio pogrupowanych), interpretuje
+                                                      ten parametr dla danych empirycznych.
+
+
+
+Strona 26 z 27
+                                                                Zasady oceniania rozwiązań zadań
+
+
+
+Zasady oceniania
+2 pkt – wyznaczenie końców przedziału wyznaczonego przez jedno odchylenie standardowe
+        od średniej oraz zapisanie numerów donic, w których liczby wykiełkowanych nasion
+        mieszczą się w tym przedziale: 126, 154, I, II, IV.
+1 pkt – poprawna metoda obliczenia średniej liczby wykiełkowanych nasion i obliczenie tej
+        średniej: 𝑥̅ = 140.
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Przykładowe pełne rozwiązanie
+Na podstawie wyników eksperymentu obliczamy średnią liczbę wykiełkowanych nasion:
+                           133 + 140 + 119 + 147 + 161 700
+                    𝑥̅ =                              =    = 140
+                                        5               5
+Ponieważ odchylenie standardowe w tym doświadczeniu jest równe 𝜎 = 14, więc przedział
+określony przez to odchylenie standardowe od średniej będzie równy
+
+                                (𝑥̅ − 𝜎, 𝑥̅ + 𝜎) = (126, 154)
+Numery donic, w których liczby wykiełkowanych nasion mieszczą się w tym przedziale, to:
+I, II oraz IV.
+
+
+
+
+                                                                                  Strona 27 z 27
+

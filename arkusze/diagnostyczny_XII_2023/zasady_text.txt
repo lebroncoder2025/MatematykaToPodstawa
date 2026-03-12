@@ -1,0 +1,1883 @@
+                    Zasady oceniania rozwiązań
+Rodzaj dokumentu:
+                    zadań
+                    Egzamin maturalny
+Egzamin:
+                    Test diagnostyczny
+
+Przedmiot:          Matematyka
+Poziom:             Poziom podstawowy
+                    MMAP-P0-100,
+                    MMAP-P0-200, MMAP-P0-300,
+Formy arkusza:      MMAP-P0-400, MMAP-P0-660,
+                    MMAP-P0-700, MMAP-P0-Q00,
+                    MMAP-P0-K00, MMAU-P0-100
+
+Termin egzaminu:    7 grudnia 2023 r.
+Data publikacji
+dokumentu:
+                    12 grudnia 2023 r.
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Uwagi ogólne:
+
+1. Akceptowane są wszystkie rozwiązania merytorycznie poprawne i spełniające warunki
+   zadania.
+2. Jeżeli zdający poprawnie rozwiąże zadanie i otrzyma poprawny wynik, lecz w końcowym
+   zapisie przekształca ten wynik i popełnia przy tym błąd, to może uzyskać maksymalną
+   liczbę punktów.
+3. Jeżeli zdający popełni błędy rachunkowe, które na żadnym etapie rozwiązania nie
+   upraszczają i nie zmieniają danego zagadnienia, lecz stosuje poprawną metodę
+   i konsekwentnie do popełnionych błędów rachunkowych rozwiązuje zadanie, to może
+   otrzymać co najwyżej (𝑛 − 1) punktów (gdzie 𝑛 jest maksymalną możliwą do uzyskania
+   liczbą punktów za dane zadanie).
+
+
+Zadanie 1. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 20241
+
+                Wymaganie ogólne                                 Wymagania szczegółowe
+ I. Sprawność rachunkowa.                              Zdający:
+ Wykonywanie obliczeń na liczbach                      I.1) wykonuje działania ([…] potęgowanie
+ rzeczywistych, także przy użyciu                      […]) w zbiorze liczb rzeczywistych;
+ kalkulatora, stosowanie praw działań                  I.4) stosuje związek pierwiastkowania
+ matematycznych przy przekształcaniu                   z potęgowaniem oraz prawa działań na
+ wyrażeń algebraicznych oraz                           potęgach i pierwiastkach.
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+
+
+1 Rozporządzenie Ministra Edukacji i Nauki z dnia 10 czerwca 2022 r. w sprawie wymagań egzaminacyjnych dla
+
+egzaminu maturalnego przeprowadzanego w roku szkolnym 2022/2023 i 2023/2024 (Dz.U. 2022, poz.1246).
+
+
+Strona 2 z 37
+                                                            Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 2. (0–1)
+
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             I.1) wykonuje działania ([…]
+ 1. Stosowanie obiektów matematycznych      logarytmowanie) w zbiorze liczb
+ i operowanie nimi, interpretowanie pojęć   rzeczywistych;
+ matematycznych.                            I.9) stosuje związek logarytmowania
+                                            z potęgowaniem, posługuje się wzorami na
+                                            logarytm […] ilorazu […].
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+Zadanie 3. (0–1)
+
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ I. Sprawność rachunkowa.                   Zdający:
+ Wykonywanie obliczeń na liczbach           I.8) wykorzystuje własności potęgowania
+ rzeczywistych, także przy użyciu           i pierwiastkowania w sytuacjach
+ kalkulatora, stosowanie praw działań       praktycznych, w tym do obliczania
+ matematycznych przy przekształcaniu        procentów składanych z kapitalizacją
+ wyrażeń algebraicznych oraz                roczną i zysków z lokat.
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+
+
+                                                                               Strona 3 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Zadanie 4. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                Wymaganie ogólne                                Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       I.7) stosuje interpretację geometryczną
+ 2. Dobieranie i tworzenie modeli                     i algebraiczną wartości bezwzględnej,
+ matematycznych przy rozwiązywaniu                    rozwiązuje równania i nierówności typu: […]
+ problemów praktycznych i teoretycznych.              |𝑥 − 2| < 3 […].
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 5. (0–2)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                Wymaganie ogólne                                Wymaganie szczegółowe
+ IV. Rozumowanie i argumentacja.                      Zdający:
+ 1. Przeprowadzanie rozumowań, także                  I.2) przeprowadza proste dowody dotyczące
+ kilkuetapowych, podawanie argumentów                 podzielności liczb całkowitych i reszt
+ uzasadniających poprawność rozumowania,              z dzielenia nie trudniejsze niż dowód
+ odróżnianie dowodu od przykładu.                     podzielności przez 24 iloczynu czterech
+                                                      kolejnych liczb naturalnych.
+
+Zasady oceniania
+2 pkt – założenie, że 𝑛 = 2𝑙 + 1 oraz przekształcenie wyrażenia 3𝑛2 + 4𝑛 + 1 do
+        postaci 4(3𝑙 2 + 5𝑙 + 2) oraz zapisanie, że 𝑙 jest liczbą całkowitą lub, że suma
+        3𝑙 2 + 5𝑙 + 2 jest liczbą całkowitą
+        ALBO
+      – stwierdzenie, że składnik 4𝑛 jest podzielny przez 4, oraz założenie, że 𝑛 = 2𝑙 + 1
+        oraz przekształcenie wyrażenia 3𝑛2 + 1 do postaci 4(3𝑙 2 + 3𝑙 + 1) i zapisanie,
+        że 𝑙 jest liczbą całkowitą lub, że suma 3𝑙 2 + 3𝑙 + 1 jest liczbą całkowitą,
+        ALBO
+      – przekształcenie wyrażenia 3𝑛2 + 4𝑛 + 1 do postaci (3𝑛 + 1)(𝑛 + 1) oraz
+        stwierdzenie, że wyrażenie (3𝑛 + 1)(𝑛 + 1) jest iloczynem dwóch liczb parzystych,
+        ALBO
+      – przekształcenie wyrażenia 3𝑛2 + 4𝑛 + 1 do postaci 4(𝑛2 + 𝑛) + (1 − 𝑛)(1 + 𝑛)
+        oraz stwierdzenie, że wyrażenie 4(𝑛2 + 𝑛) + (1 − 𝑛)(1 + 𝑛) jest sumą dwóch
+        liczb podzielnych przez 4,
+        ALBO
+
+
+Strona 4 z 37
+                                                              Zasady oceniania rozwiązań zadań
+
+
+
+     – przekształcenie wyrażenia 3𝑛2 + 4𝑛 + 1 do postaci 2(𝑛2 + 𝑛) + (𝑛 + 1)2
+       oraz stwierdzenie, że wyrażenie 2(𝑛2 + 𝑛) + (𝑛 + 1)2 jest sumą dwóch liczb
+       podzielnych przez 4,
+       ALBO
+     – rozpatrzenie przypadku, gdy 𝑛 = 4𝑙 + 1, tj. przekształcenie wyrażenia
+       3𝑛2 + 4𝑛 + 1 do postaci 4(12𝑙 2 + 10𝑙 + 2) i zapisanie, że 𝑙 jest liczbą całkowitą
+       lub, że suma 12𝑙 2 + 10𝑙 + 2 jest liczbą całkowitą oraz rozpatrzenie przypadku, gdy
+       𝑛 = 4𝑙 + 3, tj. przekształcenie wyrażenia 3𝑛2 + 4𝑛 + 1 do postaci
+       4(12𝑙 2 + 22𝑙 + 10) i zapisanie, że 𝑙 jest liczbą całkowitą lub, że suma
+       12𝑙 2 + 22𝑙 + 10 jest liczbą całkowitą.
+
+1 pkt – założenie, że 𝑛 = 2𝑙 + 1 oraz zapisanie wyrażenia 3𝑛2 + 4𝑛 + 1 w postaci
+       3(4𝑙 2 + 4𝑙 + 1) + 4(2𝑙 + 1) + 1
+       ALBO
+     – stwierdzenie, że składnik 4𝑛 jest podzielny przez 4, oraz założenie, że 𝑛 = 2𝑙 + 1
+       oraz przekształcenie wyrażenia 3𝑛2 + 1 do postaci 3(4𝑙 2 + 4𝑙 + 1) + 1,
+       ALBO
+     – przekształcenie wyrażenia 3𝑛2 + 4𝑛 + 1 do postaci (3𝑛 + 1)(𝑛 + 1),
+       ALBO
+     – przekształcenie wyrażenia 3𝑛2 + 4𝑛 + 1 do postaci 4(𝑛2 + 𝑛) + (1 − 𝑛)(1 + 𝑛),
+       ALBO
+     – przekształcenie wyrażenia 3𝑛2 + 4𝑛 + 1 do postaci 2(𝑛2 + 𝑛) + (𝑛 + 1)2 ,
+       ALBO
+     – rozpatrzenie przypadku, gdy 𝑛 = 4𝑙 + 1, tj. przekształcenie wyrażenia
+       3𝑛2 + 4𝑛 + 1 do postaci 4(12𝑙 2 + 10𝑙 + 2) i zapisanie, że 𝑙 jest liczbą całkowitą
+       lub, że suma 12𝑙 2 + 10𝑙 + 2 jest liczbą całkowitą,
+       ALBO
+     – rozpatrzenie przypadku, gdy 𝑛 = 4𝑙 + 3, tj. przekształcenie wyrażenia
+       3𝑛2 + 4𝑛 + 1 do postaci 4(12𝑙 2 + 22𝑙 + 10) i zapisanie, że 𝑙 jest liczbą
+       całkowitą lub, że suma 12𝑙 2 + 22𝑙 + 10 jest liczbą całkowitą.
+
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Uwaga:
+Jeżeli zdający sprawdza prawdziwość tezy tylko dla wybranych wartości 𝑛, to otrzymuje
+0 punktów za całe rozwiązanie.
+
+
+Przykładowe pełne rozwiązania
+Sposób I
+Ponieważ liczba 𝑛 jest nieparzysta, więc zapisujemy ją w postaci 𝑛 = 2𝑙 + 1, gdzie 𝑙 ∈ ℤ.
+Wówczas badana liczba ma postać
+
+       3𝑛2 + 4𝑛 + 1 = 3(2𝑙 + 1)2 + 4(2𝑙 + 1) + 1 = 3(4𝑙 2 + 4𝑙 + 1) + 8𝑙 + 4 + 1
+             = 12𝑙 2 + 12𝑙 + 3 + 8𝑙 + 5 = 12𝑙 2 + 20𝑙 + 8 = 4(3𝑙 2 + 5𝑙 + 2)
+
+
+                                                                                 Strona 5 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Ponieważ 𝑙 ∈ ℤ, więc również 3𝑙 2 + 5𝑙 + 2 jest liczbą całkowitą. Zatem iloczyn
+4(3𝑙 2 + 5𝑙 + 2) jest podzielny przez 4. To należało wykazać.
+
+
+Sposób II
+Liczba 3𝑛2 + 4𝑛 + 1 jest sumą trzech składników. Składnik 4𝑛 jest podzielny przez 4
+dla dowolnej liczby całkowitej 𝑛. Wystarczy zatem udowodnić, że liczba 3𝑛2 + 1 jest
+podzielna przez 4 dla dowolnej nieparzystej liczby 𝑛. Ponieważ liczba 𝑛 jest nieparzysta,
+więc zapisujemy ją w postaci 𝑛 = 2𝑙 + 1, gdzie 𝑙 ∈ ℤ. Wówczas liczba 3𝑛2 + 1 ma
+postać
+
+           3𝑛2 + 1 = 3(2𝑙 + 1)2 + 1 = 3(4𝑙 2 + 4𝑙 + 1) + 1 = 12𝑙 2 + 12𝑙 + 3 + 1
+                               = 12𝑙 2 + 12𝑙 + 4 = 4(3𝑙 2 + 3𝑙 + 1)
+Ponieważ 𝑙 ∈ ℤ, więc również 3𝑙 2 + 3𝑙 + 1 jest liczbą całkowitą. Zatem iloczyn
+4(3𝑙 2 + 3𝑙 + 1) jest podzielny przez 4. To należało wykazać.
+
+
+Sposób III
+Obliczamy wyróżnik trójmianu kwadratowego 3𝑛2 + 4𝑛 + 1 oraz jego pierwiastki
+
+                                   Δ = 42 − 4 ∙ 3 ∙ 1 = 16 − 12 = 4
+                                              −4 + 2   2   1
+                                       𝑛1 =          =− =−
+                                                6      6   3
+                                              −4 − 2    6
+                                       𝑛2 =          = − = −1
+                                                6       6
+Następnie zapisujemy liczbę 3𝑛2 + 4𝑛 + 1 w postaci iloczynu
+                                          1
+                     3𝑛2 + 4𝑛 + 1 = 3 (𝑛 + ) (𝑛 + 1) = (3𝑛 + 1)(𝑛 + 1)
+                                          3
+Liczba 𝑛 jest nieparzysta, zatem liczby 3𝑛 + 1 oraz 𝑛 + 1 są parzyste (suma dwóch liczb
+nieparzystych). Stąd iloczyn (3𝑛 + 1)(𝑛 + 1) jest liczbą podzielną przez 2 ⋅ 2, czyli przez
+4. To należało wykazać.
+
+
+Sposób IV
+Zapisujemy liczbę 3𝑛2 + 4𝑛 + 1 w postaci sumy dwóch liczb podzielnych przez 4
+
+3𝑛2 + 4𝑛 + 1 = 4𝑛2 − 𝑛2 + 4𝑛 + 1 = 4𝑛2 + 4𝑛 + 1 − 𝑛2 = 4(𝑛2 + 𝑛) + (1 − 𝑛)(1 + 𝑛)
+Liczba 4(𝑛2 + 𝑛) jest podzielna przez 4 dla dowolnej liczby całkowitej 𝑛.
+Liczba 𝑛 jest nieparzysta, zatem liczby 1 − 𝑛 oraz 1 + 𝑛 są parzyste (różnica oraz suma
+dwóch liczb nieparzystych). Stąd iloczyn (1 − 𝑛)(1 + 𝑛) jest liczbą podzielną przez 2 ⋅ 2,
+czyli przez 4. Zatem liczba 3𝑛2 + 4𝑛 + 1 jest podzielna prze 4 jako suma dwóch liczb
+podzielnych przez 4.
+
+
+
+
+Strona 6 z 37
+                                                               Zasady oceniania rozwiązań zadań
+
+
+
+Sposób V
+Rozważmy dwa przypadki: gdy 𝑛 jest liczbą, która przy dzieleniu przez 4 daje resztę 1,
+oraz gdy 𝑛 jest liczbą, która przy dzieleniu przez 4 daje resztę 3.
+
+Jeśli 𝑛 jest liczbą, która przy dzieleniu przez 4 daje resztę 1, to możemy ją zapisać
+w postaci 𝑛 = 4𝑙 + 1, gdzie 𝑙 ∈ ℤ. Wówczas badana liczba ma postać
+
+     3𝑛2 + 4𝑛 + 1 = 3(4𝑙 + 1)2 + 4(4𝑙 + 1) + 1 = 3(16𝑙 2 + 8𝑙 + 1) + 16𝑙 + 4 + 1
+           = 48𝑙 2 + 24𝑙 + 3 + 16𝑙 + 5 = 48𝑙 2 + 40𝑙 + 8 = 4(12𝑙 2 + 10𝑙 + 2)
+Ponieważ 𝑙 ∈ ℤ, więc suma 12𝑙 2 + 10𝑙 + 2 jest liczbą całkowitą. Zatem iloczyn
+4(12𝑙 2 + 10𝑙 + 2) jest podzielny przez 4.
+
+Jeśli 𝑛 jest liczbą, która przy dzieleniu przez 4 daje resztę 3, to możemy ją zapisać
+w postaci 𝑛 = 4𝑙 + 3, gdzie 𝑙 ∈ ℤ. Wówczas badana liczba ma postać
+
+    3𝑛2 + 4𝑛 + 1 = 3(4𝑙 + 3)2 + 4(4𝑙 + 3) + 1 = 3(16𝑙 2 + 24𝑙 + 9) + 16𝑙 + 12 + 1
+        = 48𝑙 2 + 72𝑙 + 27 + 16𝑙 + 13 = 48𝑙 2 + 88𝑙 + 40 = 4(12𝑙 2 + 22𝑙 + 10)
+Ponieważ 𝑙 ∈ ℤ, więc suma 12𝑙 2 + 22𝑙 + 10 jest liczbą całkowitą. Zatem iloczyn
+4(12𝑙 2 + 22𝑙 + 10) jest podzielny przez 4.
+
+
+Zadanie 6. (0–1)
+
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                           Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie          Zdający:
+ reprezentacji.                                IV.1) rozwiązuje układy równań liniowych
+ 1. Stosowanie obiektów matematycznych         z dwiema niewiadomymi […].
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+
+
+                                                                                  Strona 7 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Zadanie 7. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                Wymaganie ogólne                                Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       II.1) stosuje wzory skróconego mnożenia
+ 1. Stosowanie obiektów matematycznych                na: (𝑎 + 𝑏)2 , (𝑎 − 𝑏)2 , 𝑎2 − 𝑏 2 ;
+ i operowanie nimi, interpretowanie pojęć             II.5) mnoży i dzieli wyrażenia wymierne.
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+Zadanie 8. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                Wymaganie ogólne                                Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       III.5) rozwiązuje równania wielomianowe
+ 1. Stosowanie obiektów matematycznych                postaci 𝑊(𝑥) = 0 dla wielomianów
+ i operowanie nimi, interpretowanie pojęć             doprowadzonych do postaci iloczynowej
+ matematycznych.                                      […];
+                                                      V.2) oblicza wartość funkcji zadanej wzorem
+                                                      algebraicznym.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+
+
+Strona 8 z 37
+                                                                 Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 9. (0–3)
+
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                             Wymaganie szczegółowe
+ IV. Rozumowanie i argumentacja.                 Zdający:
+ 4. Stosowanie i tworzenie strategii przy        III.1) przekształca równania i nierówności w
+ rozwiązywaniu zadań, również w sytuacjach       sposób równoważny;
+ nietypowych.                                    III.5) rozwiązuje równania wielomianowe
+                                                 postaci 𝑊(𝑥) = 0 dla wielomianów […]
+                                                 takich, które dają się doprowadzić do
+                                                 postaci iloczynowej […] metodą
+                                                 grupowania.
+
+Zasady oceniania
+3 pkt – poprawna metoda rozwiązania równania i obliczenie wszystkich rozwiązań równania:
+                  3
+        (−√5), (− ), √5 .
+                  2
+
+2 pkt – przekształcenie równania 2𝑥 3 + 3𝑥 2 = 10𝑥 + 15 do postaci 𝑊(𝑥) = 0, gdzie
+        𝑊 jest iloczynem wielomianów stopnia co najwyżej drugiego oraz rozwiązanie
+        jednego z równań wynikającego z tego rozkładu, np.
+                                      3
+      (2𝑥 + 3)(𝑥 2 − 5) = 0 i 𝑥 = −
+                                      2
+       ALBO
+     – przekształcenie równania 2𝑥 3 + 3𝑥 2 = 10𝑥 + 15 do postaci 𝑊(𝑥) = 0, gdzie
+       𝑊 jest wielomianem rozłożonym na czynniki liniowe, np.
+       𝑊(𝑥) = (2𝑥 + 3)(𝑥 − √5)(𝑥 + √5) ,
+       ALBO
+     – przekształcenie równania 2𝑥 3 + 3𝑥 2 = 10𝑥 + 15 do postaci 𝑊(𝑥) = 0, gdzie
+       𝑊 jest wielomianem stopnia trzeciego oraz obliczenie jednego z pierwiastków
+       wielomianu 𝑊 oraz poprawne podzielenie wielomianu 𝑊 przez odpowiedni
+       dwumian, np.
+             3                                     3
+       𝑥 = − 2 i (2𝑥 3 + 3𝑥 2 − 10𝑥 − 15): (𝑥 + 2) = 2𝑥 2 − 10 ,
+       ALBO
+     – przekształcenie równania 2𝑥 3 + 3𝑥 2 = 10𝑥 + 15 do postaci alternatywy równań
+       oraz rozwiązanie jednego z nich, tj. zapisanie:
+                                             3
+       (2𝑥 + 3 = 0, 𝑥 2 − 5 = 0) oraz 𝑥 = − 2
+             albo
+       (2𝑥 + 3 = 0, 𝑥 2 − 5 = 0) oraz (𝑥 = −√5 , 𝑥 = √5) ,
+             albo
+       (2𝑥 + 3 = 0, 𝑥 − √5 = 0, 𝑥 + √5 = 0) oraz 𝑥 = −√5 ,
+             albo
+       (2𝑥 + 3 = 0, 𝑥 − √5 = 0, 𝑥 + √5 = 0) oraz 𝑥 = √5 ,
+             albo
+
+
+
+                                                                                    Strona 9 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+                                                                     3
+        (2𝑥 + 3 = 0, 𝑥 − √5 = 0, 𝑥 + √5 = 0) oraz 𝑥 = − .
+                                                                     2
+
+
+1 pkt – przekształcenie równania 2𝑥 3 + 3𝑥 2 = 10𝑥 + 15 do postaci 𝑊(𝑥) = 0, gdzie
+        𝑊 jest iloczynem wielomianów stopnia co najwyżej drugiego, np.
+        𝑊(𝑥) = (2𝑥 + 3)(𝑥 2 − 5)
+        ALBO
+      – zapisanie jednego rozwiązania wymiernego równania 2𝑥 3 + 3𝑥 2 = 10𝑥 + 15 lub
+        dwóch rozwiązań niewymiernych tego równania, jeśli te rozwiązania nie zostały
+        otrzymane w wyniku zastosowania błędnej metody,
+        ALBO
+      – przekształcenie równania 2𝑥 3 + 3𝑥 2 = 10𝑥 + 15 do postaci alternatywy równań,
+        (np. 2𝑥 + 3 = 0, 𝑥 2 = 5), przy czym alternatywa musi wynikać z poprawnego
+        wnioskowania.
+
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Uwagi:
+1. Jeżeli zdający zapisze tylko trzy poprawne rozwiązania równania, to otrzymuje 1 punkt za
+   całe rozwiązanie.
+2. Jeżeli zdający uzyska tylko dwa poprawne rozwiązania 𝑥 = √5 oraz 𝑥 = −√5 w wyniku
+   dzielenia obustronnie równania przez dwumian (2𝑥 + 3) z podaniem odpowiednich
+   założeń, to otrzymuje 2 punkty za całe rozwiązanie.
+3. Jeżeli zdający uzyska dwa poprawne rozwiązania 𝑥 = √5 oraz 𝑥 = −√5 w wyniku
+   dzielenia obustronnie równania przez dwumian (2𝑥 + 3) bez podania odpowiednich
+   założeń lub w wyniku zauważenia, że obie strony równania 𝑥 2 (2𝑥 + 3) = 5(2𝑥 + 3)
+   zawierają ten sam czynnik 2𝑥 + 3, to otrzymuje 1 punkt za całe rozwiązanie.
+4. Jeżeli zdający uzyska trzy poprawne pierwiastki wielomianu, lecz traktuje równanie jako
+   nierówność (podaje zbiór rozwiązań w postaci przedziału/ sumy przedziałów), to otrzymuje
+   2 punkty za całe rozwiązanie.
+5. Jeżeli zdający przy przekształcaniu równania do postaci 𝑊(𝑥) = 0 zapisuje czynnik
+   (2𝑥 + 3) z wykładnikiem 2, to może otrzymać co najwyżej 2 punkty za całe rozwiązanie
+   (za zapisanie alternatywy równań oraz za rozwiązanie równań tej alternatywy).
+
+
+Przykładowe pełne rozwiązania
+
+Sposób I
+Przekształcamy równanie równoważnie, stosując metodę grupowania wyrazów:
+
+                                       2𝑥 3 + 3𝑥 2 = 10𝑥 + 15
+                                     2𝑥 3 + 3𝑥 2 − 10𝑥 − 15 = 0
+                                    𝑥 2 (2𝑥 + 3) − 5(2𝑥 + 3) = 0
+                                        (2𝑥 + 3)(𝑥 2 − 5) = 0
+
+
+
+Strona 10 z 37
+                                                                 Zasady oceniania rozwiązań zadań
+
+
+
+                              (2𝑥 + 3)(𝑥 − √5)(𝑥 + √5) = 0
+
+                       2𝑥 + 3 = 0 lub 𝑥 − √5 = 0 lub 𝑥 + √5 = 0
+                                   3
+                           𝑥=−           lub 𝑥 = √5 lub 𝑥 = −√5
+                                   2
+                                                     3
+Rozwiązaniami równania są liczby: (−√5) , (− ), √5 .
+                                                     2
+
+
+
+Sposób II
+Przekształcamy równanie równoważnie, stosując metodę grupowania wyrazów:
+
+                                    2𝑥 3 + 3𝑥 2 = 10𝑥 + 15
+                                  2𝑥 3 + 3𝑥 2 − 10𝑥 − 15 = 0
+                                  2𝑥(𝑥 2 − 5) + 3(𝑥 2 − 5) = 0
+                                       (2𝑥 + 3)(𝑥 2 − 5) = 0
+
+                              (2𝑥 + 3)(𝑥 − √5)(𝑥 + √5) = 0
+
+                       2𝑥 + 3 = 0 lub 𝑥 − √5 = 0 lub 𝑥 + √5 = 0
+                                   3
+                           𝑥=−           lub 𝑥 = √5 lub 𝑥 = −√5
+                                   2
+                                                     3
+Rozwiązaniami równania są liczby: (−√5) , (− ), √5 .
+                                                     2
+
+
+
+Sposób III
+Przekształcamy równanie równoważnie:
+
+                                    2𝑥 3 + 3𝑥 2 = 10𝑥 + 15
+                                  2𝑥 3 + 3𝑥 2 − 10𝑥 − 15 = 0
+                   3                                     3
+Obliczamy 𝑊 (− ) = 0 i stwierdzamy, że liczba (− ) jest pierwiastkiem wielomianu
+                   2                                     2
+𝑊(𝑥) = 2𝑥 3 + 3𝑥 2 − 10𝑥 − 15.
+                                                             3
+Zatem wielomian 𝑊 jest podzielny przez dwumian 𝑥 + . Dzielimy wielomian 𝑊 przez
+                                                             2
+              3
+dwumian 𝑥 +       i otrzymujemy
+              2
+
+                                                      3
+                        (2𝑥 3 + 3𝑥 2 − 10𝑥 − 15): (𝑥 + ) = 2𝑥 2 − 10
+                                                      2
+                       3                         3                    3
+Zatem 𝑊(𝑥) = (𝑥 + ) (2𝑥 2 − 10) = 2 (𝑥 + ) (𝑥 2 − 5) = 2 (𝑥 + ) (𝑥 − √5)(𝑥 + √5).
+                       2                         2                    2
+
+Obliczamy pierwiastki wielomianu 𝑊:
+
+
+
+
+                                                                                   Strona 11 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+                                       3
+                                 2 (𝑥 + ) (𝑥 − √5)(𝑥 + √5) = 0
+                                       2
+                               3
+                          𝑥+     = 0 lub 𝑥 − √5 = 0 lub 𝑥 + √5 = 0
+                               2
+                                      3
+                               𝑥=−          lub 𝑥 = √5 lub 𝑥 = −√5
+                                      2
+                                                       3
+Rozwiązaniami równania są liczby: (−√5) , (− ), √5 .
+                                                       2
+
+
+
+Sposób IV
+Przekształcamy równanie do postaci alternatywy dwóch równań
+
+                                          2𝑥 3 + 3𝑥 2 = 10𝑥 + 15
+                                      𝑥 2 (2𝑥 + 3) = 5(2𝑥 + 3)
+Zatem
+
+                                      2𝑥 + 3 = 0 lub 𝑥 2 = 5
+                                      3
+                               𝑥=−          lub 𝑥 = √5 lub 𝑥 = −√5
+                                      2
+                                                       3
+Rozwiązaniami równania są liczby: (−√5) , (− ), √5 .
+                                                       2
+
+
+
+Sposób V
+Przekształcamy równanie równoważnie
+
+                                          2𝑥 3 + 3𝑥 2 = 10𝑥 + 15
+                                      𝑥 2 (2𝑥 + 3) = 5(2𝑥 + 3)
+                 3
+Zatem 𝑥 = −          jest rozwiązaniem tego równania.
+                 2
+                                                                                  3         3
+Rozwiązujemy równanie 𝑥 2 (2𝑥 + 3) = 5(2𝑥 + 3) w zbiorze (−∞, − ) ∪ (− , +∞)
+                                                                                  2         2
+
+                               𝑥 2 (2𝑥 + 3) = 5(2𝑥 + 3) /: (2𝑥 + 3)
+                                                 𝑥2 = 5
+
+                                       𝑥 = √5 lub 𝑥 = −√5
+                                                       3
+Rozwiązaniami równania są liczby: (−√5) , (− ), √5 .
+                                                       2
+
+
+
+
+Strona 12 z 37
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 10. (0–1)
+
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie        Zdający:
+ reprezentacji.                              V.5) interpretuje współczynniki występujące
+ 1. Stosowanie obiektów matematycznych       we wzorze funkcji liniowej.
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+PF
+
+
+Zadanie 11.1. (0–1)
+
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             V.4) odczytuje z wykresu funkcji: […] zbiór
+ informacjami przedstawionymi w tekście,     wartości […].
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+
+
+                                                                               Strona 13 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Zadanie 11.2. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.            Zdający:
+ 1. Interpretowanie i operowanie                      V.4) odczytuje z wykresu funkcji: […]
+ informacjami przedstawionymi w tekście,              przedziały, w których funkcja przyjmuje
+ zarówno matematycznym, jak                           wartości większe (nie mniejsze) lub
+ i popularnonaukowym, a także w formie                mniejsze (nie większe) od danej liczby […].
+ wykresów, diagramów, tabel.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+(2, 6)
+
+
+Zadanie 11.3. (0–2)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.            Zdający:
+ 1. Interpretowanie i operowanie                      V.9) wyznacza wzór funkcji kwadratowej na
+ informacjami przedstawionymi w tekście,              podstawie informacji o tej funkcji lub o jej
+ zarówno matematycznym, jak                           wykresie.
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+
+Zasady oceniania
+2 pkt – dwie poprawne odpowiedzi.
+1 pkt – jedna poprawna odpowiedź.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+AB
+
+
+
+
+Strona 14 z 37
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 11.4. (0–1)
+
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             V.12) na podstawie wykresu funkcji
+ informacjami przedstawionymi w tekście,     𝑦 = 𝑓(𝑥) szkicuje wykresy funkcji
+ zarówno matematycznym, jak                  𝑦 = 𝑓(𝑥 − 𝑎) […].
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+Zadanie 12. (0–1)
+
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymagania szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             V.13) posługuje się funkcją wykładniczą […]
+ informacjami przedstawionymi w tekście,     do opisu i interpretacji zagadnień
+ zarówno matematycznym, jak                  związanych z zastosowaniami
+ i popularnonaukowym, a także w formie       praktycznymi;
+ wykresów, diagramów, tabel.                 V.2) oblicza wartość funkcji zadanej wzorem
+                                             algebraicznym.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+
+
+                                                                               Strona 15 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Zadanie 13. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VI.4) stosuje wzór na 𝑛-ty wyraz […] ciągu
+ 2. Dobieranie i tworzenie modeli                     arytmetycznego.
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 14. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymaganie ogólne                               Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VI.1) oblicza wyrazy ciągu określonego
+ 2. Dobieranie i tworzenie modeli                     wzorem ogólnym;
+ matematycznych przy rozwiązywaniu                    VI.5) stosuje wzór […] na sumę
+ problemów praktycznych i teoretycznych.              𝑛 początkowych wyrazów ciągu
+                                                      geometrycznego.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+PF
+
+
+
+
+Strona 16 z 37
+                                                            Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 15. (0–1)
+
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             VI.6) wykorzystuje własności ciągów […]
+ 2. Dobieranie i tworzenie modeli           geometrycznych […].
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 16. (0–2)
+
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             VII.1) wykorzystuje definicje funkcji: […]
+ 1. Stosowanie obiektów matematycznych      cosinus i tangens dla kątów od 0° do 180°
+ i operowanie nimi, interpretowanie pojęć   […].
+ matematycznych.
+
+Zasady oceniania
+2 pkt – dwie poprawne odpowiedzi.
+1 pkt – jedna poprawna odpowiedź.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+16.1. B
+16.2. D
+
+
+
+
+                                                                              Strona 17 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Zadanie 17. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymaganie ogólne                               Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       VII.1) wykorzystuje definicje funkcji: sinus,
+ 1. Stosowanie obiektów matematycznych                cosinus i tangens dla kątów
+ i operowanie nimi, interpretowanie pojęć             od 0° do 180° […];
+ matematycznych.                                      VII.2) korzysta z wzorów
+                                                                                        sin 𝛼
+                                                      sin2 𝛼 + cos 2 𝛼 = 1, tg 𝛼 = cos 𝛼 .
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+Zadanie 18. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       IX.2) posługuje się równaniem prostej na
+ 1. Stosowanie obiektów matematycznych                płaszczyźnie w postaci kierunkowej, w tym
+ i operowanie nimi, interpretowanie pojęć             wyznacza równanie prostej o zadanych
+ matematycznych.                                      własnościach (takich jak na przykład […]
+                                                      prostopadłość do innej prostej […]).
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+
+
+Strona 18 z 37
+                                                            Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 19. (0–1)
+
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             IX.2) posługuje się równaniem prostej na
+ 1. Stosowanie obiektów matematycznych      płaszczyźnie w postaci kierunkowej, w tym
+ i operowanie nimi, interpretowanie pojęć   wyznacza równanie prostej o zadanych
+ matematycznych.                            własnościach (takich jak na przykład […]
+                                            równoległość […] do innej prostej […]).
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+Zadanie 20. (0–1)
+
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie       Zdający:
+ reprezentacji.                             IX.4) posługuje się równaniem okręgu
+ 1. Stosowanie obiektów matematycznych      (𝑥 − 𝑎)2 + (𝑦 − 𝑏)2 = 𝑟 2 .
+ i operowanie nimi, interpretowanie pojęć
+ matematycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+
+
+                                                                              Strona 19 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Zadanie 21. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       IX.3) oblicza odległość dwóch punktów
+ 2. Dobieranie i tworzenie modeli                     w układzie współrzędnych.
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+D
+
+
+Zadanie 22. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymaganie ogólne                               Wymagania szczegółowe
+ IV. Rozumowanie i argumentacja.                      Zdający:
+ 1. Przeprowadzanie rozumowań, także                  VIII.5) stosuje własności kątów wpisanych
+ kilkuetapowych, podawanie argumentów                 i środkowych;
+ uzasadniających poprawność rozumowania,              VIII.7) stosuje twierdzenie […] o kącie
+ odróżnianie dowodu od przykładu.                     między styczną a cięciwą.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+B
+
+
+
+
+Strona 20 z 37
+                                                                     Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 23. (0–1)
+
+                              Wymagania egzaminacyjne 2023 i 2024
+
+              Wymaganie ogólne                               Wymagania szczegółowe
+ II. Wykorzystanie i tworzenie informacji.          Zdający:
+ 1. Interpretowanie i operowanie                    VIII.4) korzysta z własności kątów
+ informacjami przedstawionymi w tekście,            i przekątnych w […] rombach […];
+ zarówno matematycznym, jak                         VIII.11) stosuje funkcje trygonometryczne
+ i popularnonaukowym, a także w formie              do wyznaczania długości odcinków
+ wykresów, diagramów, tabel.                        w figurach płaskich oraz obliczania pól figur.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+Zadanie 24. (0–2)
+
+                              Wymagania egzaminacyjne 2023 i 2024
+
+              Wymaganie ogólne                               Wymagania szczegółowe
+ IV. Rozumowanie i argumentacja.                    Zdający:
+ 4. Stosowanie i tworzenie strategii przy           VIII.1) wyznacza promienie i średnice
+ rozwiązywaniu zadań, również w sytuacjach          okręgów, długości cięciw okręgów oraz
+ nietypowych.                                       odcinków stycznych, w tym
+                                                    z wykorzystaniem twierdzenia Pitagorasa;
+                                                    VIII.8) korzysta z cech podobieństwa
+                                                    trójkątów.
+
+Zasady oceniania
+2 pkt – poprawna metoda i obliczenie promienia okręgu 𝒪 : 𝑟 = 7.
+
+1 pkt – stwierdzenie i wykazanie, że trójkąty 𝐴𝑃𝐶 oraz 𝐵𝑃𝐷 są podobne
+        ALBO
+      – stwierdzenie i wykazanie, że trójkąty 𝐴𝑃𝐷 oraz 𝐵𝑃𝐶 są podobne,
+        ALBO
+      – zapisanie równości, wynikającej z podobieństwa trójkątów lub twierdzenia
+        o siecznych, prowadzącej do obliczenia długości odcinka 𝑃𝐴, np.
+       |𝑃𝐴|       |𝑃𝐶|
+              =          , |𝑃𝐴| ∙ |𝑃𝐵| = |𝑃𝐶| ∙ |𝑃𝐷|.
+       |𝑃𝐷|       |𝑃𝐵|
+
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+
+
+
+                                                                                       Strona 21 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Przykładowe pełne rozwiązania
+
+Sposób I
+Z warunków zadania otrzymujemy:
+   • |∢𝐴𝐵𝐷| = |∢𝐴𝐶𝐷| , ponieważ są to kąty wpisane oparte na tym samym łuku 𝐴𝐷 ,
+   • |∢𝐵𝐴𝐶| = |∢𝐵𝐷𝐶| , ponieważ są to kąty wpisane oparte na tym samym łuku 𝐵𝐶 ,
+   • |∢𝐴𝑃𝐶| = |∢𝐵𝑃𝐷| , ponieważ są to kąty wierzchołkowe.
+
+Zatem trójkąty 𝐴𝐶𝑃 oraz 𝐵𝑃𝐷 są podobne na podstawie cechy 𝐾𝐾𝐾 (kąt – kąt – kąt).
+
+Z podobieństwa trójkątów 𝐴𝐶𝑃 oraz 𝐵𝑃𝐷 otrzymujemy:
+                                             |𝑃𝐴| |𝑃𝐶|
+                                                 =
+                                             |𝑃𝐷| |𝑃𝐵|
+                                               |𝑃𝐴| 8
+                                                   =
+                                                 5   4
+                                               |𝑃𝐴| = 10
+                                |𝐴𝐵| = |𝐴𝑃| + |𝑃𝐵| = 10 + 4 = 14
+Zatem promień 𝑟 okręgu 𝒪 jest równy:
+                                           1         1
+                                      𝑟=     ∙ |𝐴𝐵| = ∙ 14 = 7
+                                           2         2
+
+Sposób II
+Z warunków zadania otrzymujemy:
+   • |∢𝐴𝐷𝐶| = |∢𝐴𝐵𝐶| , ponieważ są to kąty wpisane oparte na tym samym łuku 𝐴𝐶 ,
+   • |∢𝐵𝐴𝐷| = |∢𝐵𝐶𝐷| , ponieważ są to kąty wpisane oparte na tym samym łuku 𝐵𝐷 ,
+   • |∢𝐴𝑃𝐷| = |∢𝐵𝑃𝐶| , ponieważ są to kąty wierzchołkowe.
+
+Zatem trójkąty 𝐴𝑃𝐷 oraz 𝐵𝑃𝐶 są podobne na podstawie cechy 𝐾𝐾𝐾 (kąt – kąt – kąt).
+
+Z podobieństwa trójkątów 𝐴𝑃𝐷 oraz 𝐵𝑃𝐶 otrzymujemy:
+                                             |𝑃𝐴| |𝑃𝐷|
+                                                 =
+                                             |𝑃𝐶| |𝑃𝐵|
+                                               |𝑃𝐴| 5
+                                                   =
+                                                 8   4
+                                               |𝑃𝐴| = 10
+                                |𝐴𝐵| = |𝐴𝑃| + |𝑃𝐵| = 10 + 4 = 14
+Zatem promień 𝑟 okręgu 𝒪 jest równy:
+                                           1         1
+                                      𝑟=     ∙ |𝐴𝐵| = ∙ 14 = 7
+                                           2         2
+
+
+
+
+Strona 22 z 37
+                                                               Zasady oceniania rozwiązań zadań
+
+
+
+Sposób III
+Korzystamy z twierdzenia o siecznych okręgu:
+                                |𝑃𝐴| ∙ |𝑃𝐵| = |𝑃𝐶| ∙ |𝑃𝐷|
+                                     |𝑃𝐴| ∙ 4 = 8 ∙ 5
+                                         |𝑃𝐴| = 10
+Obliczamy długość średnicy okręgu 𝐴𝐵 :
+
+                          |𝐴𝐵| = |𝐴𝑃| + |𝑃𝐵| = 10 + 4 = 14
+Zatem promień 𝑟 okręgu 𝒪 jest równy:
+                                     1         1
+                                𝑟=     ∙ |𝐴𝐵| = ∙ 14 = 7
+                                     2         2
+
+
+Zadanie 25. (0–1)
+
+                        Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                            Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie          Zdający:
+ reprezentacji.                                X.1) rozpoznaje wzajemne położenie
+ 3. Tworzenie pomocniczych obiektów            prostych w przestrzeni […];
+ matematycznych na podstawie istniejących,     X.2) posługuje się pojęciem kąta między
+ w celu przeprowadzenia argumentacji lub       prostą a płaszczyzną;
+ rozwiązania problemu.                         X.4) oblicza objętości […] graniastosłupów
+                                               i ostrosłupów […].
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A
+
+
+
+
+                                                                                 Strona 23 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Zadanie 26. (0–3)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                  Wymaganie ogólne                              Wymagania szczegółowe
+ III. Wykorzystanie i interpretowanie                  Zdający:
+ reprezentacji.                                        X.2) posługuje się pojęciem kąta między
+ 3. Tworzenie pomocniczych obiektów                    prostą a płaszczyzną;
+ matematycznych na podstawie istniejących,             X.3) rozpoznaje w graniastosłupach
+ w celu przeprowadzenia argumentacji lub               i ostrosłupach kąty między odcinkami
+ rozwiązania problemu.                                 (np. krawędziami, krawędziami
+                                                       i przekątnymi), oblicza miary tych kątów;
+                                                       X.4) oblicza objętości […] ostrosłupów,
+                                                       również z wykorzystaniem trygonometrii
+                                                       i poznanych twierdzeń.
+
+Zasady oceniania
+3 pkt – poprawna metoda obliczenia wysokości ściany bocznej ostrosłupa oraz poprawny
+        wynik: ℎ𝑏 = 10.
+
+2 pkt – obliczenie współczynnika proporcjonalności: 𝑥 = 2
+        ALBO
+      – obliczenie długości krawędzi podstawy: 𝑎 = 12,
+        ALBO
+      – obliczenie wysokości ostrosłupa: 𝐻 = 8,
+        ALBO
+                                      1
+      – zapisanie, że 𝐻 = 8 i             𝑎 = 6 oraz sprawdzenie, że dla tych danych liczbowych
+                                      2
+        objętość ostrosłupa jest równa 384,
+      – zapisanie równania z jedną niewiadomą ℎ𝑏 – wysokością ściany bocznej, np.
+        1     6     2   4
+          ∙ (5 ℎ𝑏 ) ∙ 5 ℎ𝑏 = 384,
+        3
+      – obliczenie objętości 𝑉1 = 48 ostrosłupa o krawędzi podstawy 𝑎1 = 6 i wysokości
+        𝐻1 = 4, podobnego do rozpatrywanego oraz obliczenie skali podobieństwa tych
+                                  3   384
+        ostrosłupów, np. 𝑘 = √              = 2.
+                                      48
+
+
+1 pkt – oznaczenie połowy krawędzi podstawy jako 3𝑥 i zapisanie wysokości ostrosłupa
+        jako 4𝑥 oraz zapisanie wysokości ściany bocznej jako 5𝑥, gdzie 𝑥 jest
+        współczynnikiem proporcjonalności
+        ALBO
+      – oznaczenie połowy krawędzi podstawy jako 3𝑥 i zapisanie wysokości ostrosłupa
+        jako 4𝑥 oraz zapisanie równania z jedną niewiadomą 𝑥 prowadzącego do
+        wyznaczenia krawędzi podstawy oraz wysokości ostrosłupa, np.
+        1
+            ∙ (6𝑥)2 ∙ 4𝑥 = 384,
+        3
+        ALBO
+
+
+
+Strona 24 z 37
+                                                                    Zasady oceniania rozwiązań zadań
+
+
+
+     – zapisanie dwóch równań z niewiadomymi 𝑎 oraz 𝐻 prowadzących do wyznaczenia
+       krawędzi podstawy oraz wysokości ostrosłupa, np.
+       𝐻       4       1
+       1     = 3 oraz 3 ∙ 𝑎2 ∙ 𝐻 = 384,
+         𝑎
+       2
+       ALBO
+     – zapisanie zależności pomiędzy długością krawędzi podstawy oraz wysokością ściany
+                      1
+                          𝑎   3
+       bocznej np. 2 =            oraz zapisanie zależności pomiędzy wysokością ostrosłupa oraz
+                      ℎ𝑏      5
+                                             𝐻    4
+       wysokością ściany bocznej, np.          =5,
+                                             ℎ𝑏
+     – obliczenie objętości 𝑉1 = 48 ostrosłupa o krawędzi podstawy 𝑎1 = 6 i wysokości
+       𝐻1 = 4, podobnego do rozpatrywanego oraz zapisanie stosunku objętości tych
+                              𝑉     384
+       ostrosłupów, np.         = 48 .
+                              𝑉
+                              1
+
+
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Uwagi:
+1. Jeżeli zdający przyjmuje w rozwiązaniu, że jedna ze ścian bocznych ostrosłupa jest
+   trójkątem równobocznym i wykorzystuje to do obliczenia wysokości ściany bocznej, to
+   otrzymuje 0 punktów za całe rozwiązanie, o ile nie nabył prawa do innej liczby punktów.
+2. Jeżeli jedynym błędem zdającego jest:
+        a) zastosowanie niepoprawnej definicji jednej funkcji trygonometrycznej
+        b) błędne zastosowanie twierdzenia Pitagorasa
+        c) zastosowanie niepoprawnej tożsamości √𝑥 2 + 𝑦 2 = 𝑥 + 𝑦
+        d) uwzględnienie we wzorze na objętość ostrosłupa połowy długości krawędzi
+            podstawy
+   i rozwiązanie zostanie doprowadzone konsekwentnie do końca, to zdający może otrzymać
+   1 punkt za całe rozwiązanie, o ile nie nabył praw do innej liczby punktów.
+   Jeżeli zdający popełni więcej niż jeden z wymienionych błędów a) – d), to otrzymuje
+   0 punktów za całe rozwiązanie.
+3. Jeżeli zdający jedynie zapisze lub obliczy długość przeciwprostokątnej trójkąta
+   prostokątnego o przyprostokątnych długości 3 i 4, to otrzymuje 0 punktów.
+4. Jeżeli zdający poprawnie obliczy wysokość ściany bocznej ostrosłupa opuszczoną
+   z wierzchołka podstawy na krawędź boczną, to otrzymuje 3 punkty.
+
+Przykładowe pełne rozwiązania
+
+Sposób I
+Przyjmujemy oznaczenia:
+𝛼 – miara kąta pomiędzy wysokością ściany bocznej a podstawą,
+𝑎 – długość krawędzi podstawy,
+𝐻 – wysokość ostrosłupa,
+ℎ𝑏 – wysokość ściany bocznej ostrosłupa,
+𝑉 – objętość ostrosłupa,
+𝑃𝑝 – pole podstawy ostrosłupa.
+
+
+
+
+                                                                                      Strona 25 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Zauważamy, że 𝛼 ∈ (0°, 90°) oraz 𝑎 > 0, 𝐻 > 0 i ℎ𝑏 > 0.
+                                                                                      1
+Ponieważ 𝑂 jest punktem przecięcia przekątnych kwadratu, więc |𝑂𝐸| = 𝑎.
+                                                                                      2
+
+W trójkącie prostokątnym 𝑆𝑂𝐸 mamy
+                                                  |𝑆𝑂|  𝐻   4
+                                         tg 𝛼 =        =1 =
+                                                  |𝑂𝐸|   𝑎 32
+
+Zatem |𝑆𝑂| = 4𝑥 oraz |𝑂𝐸| = 3𝑥 (zobacz rysunek)
+
+                                                    𝑆
+
+
+
+
+                                                                    ℎ𝑏
+                                                  4𝑥
+
+
+                                     𝐷                                                      𝐶
+
+                                                        ∶                 𝛼    ∶𝐸
+                                                    𝑂           3𝑥
+
+
+           𝐴                          6𝑥                        𝐵
+
+Z twierdzenia Pitagorasa otrzymujemy:
+                                       |𝑆𝐸|2 = |𝑆𝑂|2 + |𝑂𝐸|2
+
+                                                         1 2
+                                         (ℎ𝑏 )2 = 𝐻 2 + ( 𝑎)
+                                                         2
+                           (ℎ𝑏 )2 = (4𝑥)2 + (3𝑥)2 = 16𝑥 2 + 9𝑥 2 = 25𝑥 2
+                                                  ℎ𝑏 = 5𝑥
+Ponadto
+                      1           1          1              1
+                 𝑉=     ∙ 𝑃𝑝 ∙ 𝐻 = ∙ 𝑎2 ∙ 𝐻 = ∙ (6𝑥)2 ∙ 4𝑥 = ∙ 36𝑥 2 ∙ 4𝑥 = 48𝑥 3
+                      3           3          3              3
+Stąd, że 𝑉 = 384, otrzymujemy
+
+                                              48𝑥 3 = 384
+                                                  𝑥3 = 8
+                                                   𝑥=2
+Obliczamy wysokość ℎ𝑏 ściany bocznej ostrosłupa:
+
+                                            ℎ𝑏 = 5𝑥 = 10
+
+
+Strona 26 z 37
+                                                                      Zasady oceniania rozwiązań zadań
+
+
+
+Sposób II
+Przyjmujemy oznaczenia:
+𝛼 – miara kąta pomiędzy wysokością ściany bocznej a podstawą,
+𝑎 – długość krawędzi podstawy,
+𝐻 – wysokość ostrosłupa,
+ℎ𝑏 – wysokość ściany bocznej ostrosłupa,
+𝑉 – objętość ostrosłupa,
+𝑃𝑝 – pole podstawy ostrosłupa.
+
+Zauważamy, że 𝛼 ∈ (0°, 90°) oraz 𝑎 > 0, 𝐻 > 0 i ℎ𝑏 > 0.
+                                                                                  1
+Ponieważ 𝑂 jest punktem przecięcia przekątnych kwadratu, więc |𝑂𝐸| = 𝑎.
+                                                                                  2
+
+                                                 𝑆
+
+
+
+
+                                                                 ℎ𝑏
+                                             𝐻
+
+
+                              𝐷                                                           𝐶
+
+                                                     ∶                𝛼    ∶
+                                              𝑂              1
+                                                               𝑎           𝐸
+                                                             2
+
+
+          𝐴                     𝑎                            𝐵
+
+
+W trójkącie prostokątnym 𝑆𝑂𝐸 mamy
+                                             |𝑆𝑂|  𝐻   4
+                                    tg 𝛼 =        =1 =
+                                             |𝑂𝐸|   𝑎 3  2
+
+Zatem
+                                             4 1  2
+                                      𝐻=      ⋅ 𝑎= 𝑎
+                                             3 2  3
+Ponadto
+                          1           1          1      2   2
+                     𝑉=     ∙ 𝑃𝑝 ∙ 𝐻 = ∙ 𝑎2 ∙ 𝐻 = ∙ 𝑎2 ∙ 𝑎 = 𝑎3
+                          3           3          3      3   9
+Stąd, że 𝑉 = 384, otrzymujemy
+                                         2 3
+                                           𝑎 = 384
+                                         9
+
+
+
+
+                                                                                        Strona 27 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+                                                2        9
+                                  𝑎3 = 384 ∶      = 384 ∙ = 1728
+                                                9        2
+                                                 𝑎 = 12
+                                            2   2
+                                         𝐻 = 𝑎 = ∙ 12 = 8
+                                            3   3
+Z twierdzenia Pitagorasa obliczamy wysokość ℎ𝑏 ściany bocznej ostrosłupa:
+
+                                         |𝑆𝐸|2 = |𝑆𝑂|2 + |𝑂𝐸|2
+
+                                                         1 2
+                                         (ℎ𝑏 )2 = 𝐻 2 + ( 𝑎)
+                                                         2
+                                (ℎ𝑏 )2 = 82 + 62 = 64 + 36 = 100
+                                                ℎ𝑏 = 10
+
+
+Sposób III
+Przyjmujemy oznaczenia:
+𝛼 – miara kąta pomiędzy wysokością ściany bocznej a podstawą,
+𝑎 – długość krawędzi podstawy,
+𝐻 – wysokość ostrosłupa,
+ℎ𝑏 – wysokość ściany bocznej ostrosłupa,
+𝑉 – objętość ostrosłupa,
+𝑃𝑝 – pole podstawy ostrosłupa.
+
+Zauważamy, że 𝛼 ∈ (0°, 90°) oraz 𝑎 > 0, 𝐻 > 0 i ℎ𝑏 > 0.
+
+                                                     𝑆
+
+
+
+
+                                                                   ℎ𝑏
+                                                 𝐻
+
+
+                                     𝐷                                                      𝐶
+
+                                                         ∶               𝛼    ∶
+                                                  𝑂             1
+                                                                  𝑎           𝐸
+                                                                2
+
+
+          𝐴                          𝑎                         𝐵
+
+                                                                                      1
+Ponieważ 𝑂 jest punktem przecięcia przekątnych kwadratu, więc |𝑂𝐸| = 𝑎.
+                                                                                      2
+
+
+
+
+Strona 28 z 37
+                                                                                           Zasady oceniania rozwiązań zadań
+
+
+                                        4                  sin 𝛼        4                        4
+Z treści zadania wiemy, że tg 𝛼 =           , zatem                = . Stąd sin 𝛼 = ⋅ cos 𝛼.
+                                        3                  cos 𝛼        3                        3
+                                                               2                 2
+Wykorzystując tę zależność oraz tożsamość sin 𝛼 + cos 𝛼 = 1 otrzymujemy
+                                               2
+                                        4
+                                       ( cos 𝛼) + cos 2 𝛼 = 1
+                                        3
+                                        16
+                                           cos2 𝛼 + cos2 𝛼 = 1
+                                         9
+                                                    25
+                                                       cos 2 𝛼 = 1
+                                                     9
+                                                                    9
+                                                    cos 2 𝛼 =
+                                                                   25
+               3
+Stąd cos 𝛼 =       , ponieważ 𝛼 jest kątem ostrym.
+               5
+                   4         4   3     4
+Zatem sin 𝛼 = ⋅ cos 𝛼 = ⋅ =
+                   3         3   5     5
+
+
+Z trójkąta prostokątnego 𝐴𝑂𝑆 otrzymujemy
+                                                                                     1
+                                                    𝐻                                  𝑎
+                                                                                     2
+                                     sin 𝛼 = ℎ            oraz     cos 𝛼 = ℎ
+                                                     𝑏                                𝑏
+Zatem
+                                                                   1
+                                           𝐻         4               𝑎       3
+                                                                   2
+                                                =5        oraz              =5
+                                           ℎ𝑏                      ℎ𝑏
+
+                                                4                            6
+                                      𝐻 = 5 ℎ𝑏            oraz      𝑎 = 5 ℎ𝑏
+
+Ponadto
+                                           2
+             1          1 2       1 6        4    1 36    4     48 3
+          𝑉 = ∙ 𝑃𝑝 ∙ 𝐻 = ∙ 𝑎 ∙ 𝐻 = ∙ ( ℎ𝑏 ) ∙ ℎ𝑏 = ⋅ ℎ𝑏2 ⋅ ℎ𝑏 =    ℎ
+             3          3         3 5        5    3 25    5     125 𝑏
+Stąd, że 𝑉 = 384, otrzymujemy
+                                                    48 3
+                                                       ℎ = 384
+                                                    125 𝑏
+                                                    48          125
+                             ℎ𝑏3 = 384 ∶                = 384 ⋅     = 1000
+                                                    125         48
+                                                         ℎ𝑏 = 10
+
+
+
+
+                                                                                                             Strona 29 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Sposób IV
+Rozważmy ostrosłup prawidłowy czworokątny 𝐴1 𝐵1 𝐶1 𝐷1 𝑆1 o wysokości 4
+i krawędzi podstawy długości 6.
+
+
+                                                  𝑆1
+
+
+
+
+                                                                    5
+                                                 4
+
+                                    𝐷1                                                      𝐶1
+
+                                                       ∶                 𝛼    ∶
+                                                  𝑂1           3              𝐸1
+
+
+         𝐴1                          6                         𝐵1
+
+
+Objętość tego ostrosłupa jest równa
+                                                1 2
+                                         𝑉1 =     ⋅ 6 ⋅ 4 = 48
+                                                3
+Ostrosłup ten jest podobny do danego ostrosłupa, a stosunek ich objętości jest równy
+sześcianowi skali podobieństwa. Zatem
+                                                𝑉 384
+                                         𝑘3 =      =    =8
+                                                𝑉1   48
+Stąd 𝑘 = 2.
+Ponieważ wysokość 𝑆1 𝐸1 ściany bocznej ostrosłupa 𝐴1 𝐵1 𝐶1 𝐷1 𝑆1 jest równa 5, więc
+szukana wysokość ściany bocznej danego ostrosłupa jest równa 5 ⋅ 2 = 10.
+
+
+
+
+Strona 30 z 37
+                                                                Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 27. (0–2)
+
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                            Wymagania szczegółowe
+ IV. Rozumowanie i argumentacja.               Zdający:
+ 4. Stosowanie i tworzenie strategii przy      XI.1) zlicza obiekty w prostych sytuacjach
+ rozwiązywaniu zadań, również w sytuacjach     kombinatorycznych;
+ nietypowych.                                  XI.2) zlicza obiekty, stosując reguły
+                                               mnożenia i dodawania (także łącznie) […];
+                                               VI.6) wykorzystuje własności ciągów […]
+                                               arytmetycznych […] do rozwiązywania
+                                               zadań, również osadzonych w kontekście
+                                               praktycznym.
+
+Zasady oceniania
+2 pkt – poprawna metoda i obliczenie liczby numerów CAN spełniających warunki zadania:
+        840.
+
+1 pkt – podanie liczby możliwości wyboru pierwszej, drugiej i trzeciej cyfry numeru CAN
+        ALBO
+      – wypisanie czterech trzywyrazowych ciągów arytmetycznych: (9, 6, 3), (8, 5, 2),
+        (7, 4, 1), (6, 3, 0),
+        ALBO
+      – zapisanie liczby możliwości wyboru czwartej, piątej i szóstej cyfry numeru CAN:
+        7 ⋅ 6 ⋅ 5.
+
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Uwagi:
+1. Jeżeli zdający błędnie przyjmie, że w numerze CAN nie występuje cyfra 0
+   i konsekwentnie poda liczbę wszystkich numerów CAN, w których nie występuje cyfra 0,
+   to otrzymuje 1 punkt za całe rozwiązanie.
+2. Jeżeli zdający zapisze tylko 840, to otrzymuje 1 punkt za całe rozwiązanie.
+
+
+Przykładowe pełne rozwiązanie
+
+Liczba wszystkich sześciocyfrowych numerów CAN spełniających warunki zadania jest
+iloczynem liczby możliwości ustawienia cyfr na trzech pierwszych miejscach i liczby
+możliwości ustawienia czwartej, piątej i szóstej cyfry.
+
+Na pierwszych trzech miejscach znajdują się cyfry, które tworzą ciąg arytmetyczny o różnicy
+(−3). Cztery trzywyrazowe ciągi spełniają powyższy warunek: (9, 6, 3), (8, 5, 2), (7, 4, 1),
+(6, 3, 0).
+
+
+
+
+                                                                                  Strona 31 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Czwartą cyfrę w numerze CAN możemy ustawić na 7 sposobów. Piątą cyfrę – na 6
+sposobów. Szóstą cyfrę – na 5 sposobów.
+
+Zatem liczba wszystkich sześciocyfrowych numerów CAN, spełniających warunki zadania,
+jest równa: 4 ∙ 7 ∙ 6 ∙ 5 = 840.
+
+
+Zadanie 28. (0–1)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymagania ogólne                               Wymaganie szczegółowe
+ I. Sprawność rachunkowa.                             Zdający:
+ Wykonywanie obliczeń na liczbach                     XII.1) oblicza prawdopodobieństwo
+ rzeczywistych, także przy użyciu                     w modelu klasycznym.
+ kalkulatora, stosowanie praw działań
+ matematycznych przy przekształcaniu
+ wyrażeń algebraicznych oraz
+ wykorzystywanie tych umiejętności przy
+ rozwiązywaniu problemów w kontekstach
+ rzeczywistych i teoretycznych;
+ III. Wykorzystanie i interpretowanie
+ reprezentacji.
+ 2. Dobieranie i tworzenie modeli
+ matematycznych przy rozwiązywaniu
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+
+
+Strona 32 z 37
+                                                             Zasady oceniania rozwiązań zadań
+
+
+
+Zadanie 29.1 (0–1)
+
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymaganie ogólne                          Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             XII.1) oblicza prawdopodobieństwo
+ informacjami przedstawionymi w tekście,     w modelu klasycznym.
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+C
+
+
+Zadanie 29.2 (0–1)
+
+                         Wymagania egzaminacyjne 2023 i 2024
+
+            Wymagania ogólne                          Wymaganie szczegółowe
+ II. Wykorzystanie i tworzenie informacji.   Zdający:
+ 1. Interpretowanie i operowanie             XII.2) […] znajduje […] dominantę.
+ informacjami przedstawionymi w tekście,
+ zarówno matematycznym, jak
+ i popularnonaukowym, a także w formie
+ wykresów, diagramów, tabel;
+ IV. Rozumowanie i argumentacja.
+ 3. Dobieranie argumentów do uzasadnienia
+ poprawności rozwiązywania problemów,
+ tworzenie ciągu argumentów,
+ gwarantujących poprawność rozwiązania
+ i skuteczność w poszukiwaniu rozwiązań
+ zagadnienia.
+
+Zasady oceniania
+1 pkt – odpowiedź poprawna.
+0 pkt – odpowiedź niepełna lub niepoprawna albo brak odpowiedzi.
+
+Rozwiązanie
+A3
+
+
+
+
+                                                                               Strona 33 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Zadanie 30. (0–4)
+
+                             Wymagania egzaminacyjne 2023 i 2024
+
+                 Wymaganie ogólne                               Wymaganie szczegółowe
+ III. Wykorzystanie i interpretowanie                 Zdający:
+ reprezentacji.                                       XIII) rozwiązuje zadania optymalizacyjne
+ 2. Dobieranie i tworzenie modeli                     w sytuacjach dających się opisać funkcją
+ matematycznych przy rozwiązywaniu                    kwadratową.
+ problemów praktycznych i teoretycznych.
+
+Zasady oceniania
+4 pkt – poprawna metoda obliczenia długości krótszej podstawy trapezu o największym polu
+        i obliczenie największego pola trapezu oraz poprawne wyniki:
+        𝑏 = 3 dm, 𝑃 = 112,5 dm2.
+
+3 pkt – zapisanie poprawnego wzoru na pole trapezu w zależności od zmiennej 𝑏 oraz
+        prawidłowe obliczenie pierwszej współrzędnej wierzchołka paraboli: 𝑏 = 3
+        ALBO
+      – zapisanie poprawnego wzoru na pole trapezu w zależności od zmiennej ℎ oraz
+        prawidłowe obliczenie pierwszej współrzędnej wierzchołka paraboli: ℎ = 15,
+        ALBO
+      – zapisanie poprawnej nierówności między średnią geometryczną i średnią
+        arytmetyczną dla liczb dodatnich, np. (12 + 𝑏) i (18 − 𝑏)
+                                   12+𝑏+18−𝑏
+        √(12 + 𝑏)(18 − 𝑏) ≤             2
+                                               ,
+        ALBO
+      – wyznaczenie pochodnej funkcji 𝑃 oraz obliczenie jej miejsca zerowego, np.
+        𝑃′ (𝑏) = −𝑏 + 3, 𝑏 = 3.
+
+2 pkt – zapisanie poprawnego wzoru na pole trapezu w zależności od jednej zmiennej:
+                  1                                     1
+        𝑃(𝑏) = 2 (12 + 𝑏)(18 − 𝑏) lub 𝑃(ℎ) = 2 (30 − ℎ)ℎ.
+
+1 pkt – zapisanie związku między krótszą podstawą a wysokością trapezu: 𝑏 + ℎ = 18
+        oraz zapisanie wzoru na pole trapezu w zależności od dwóch zmiennych:
+                  1
+        𝑃(𝑏) = 2 (12 + 𝑏)ℎ.
+
+0 pkt – rozwiązanie, w którym zastosowano niepoprawną metodę, albo brak rozwiązania.
+
+Uwagi:
+1. Jeżeli zdający zapisze pole trapezu jako funkcję 𝑃 jednej zmiennej, ale otrzyma wartość
+   pierwszej współrzędnej wierzchołka paraboli zawierającej wykres funkcji 𝑃, która leży
+   poza dziedziną funkcji 𝑃, to może otrzymać co najwyżej 2 punkty za całe rozwiązanie.
+2. Jeżeli zdający zapisze pole trapezu jako funkcję 𝑃 jednej zmiennej, a następnie obliczy
+   wartości tej funkcji dla pierwszej współrzędnej wierzchołka i dwóch argumentów leżących
+
+
+
+
+Strona 34 z 37
+                                                               Zasady oceniania rozwiązań zadań
+
+
+
+   symetrycznie względem pierwszej współrzędnej wierzchołka i nie odwoła się do własności
+   wykresu funkcji kwadratowej, to otrzymuje co najwyżej 3 punkty za całe rozwiązanie.
+3. Jeżeli zdający nie zapisze pola trapezu jako funkcji jednej zmiennej, a jedynie oblicza
+   wartości pola dla wybranych par liczb 𝑏 oraz ℎ i na tej podstawie wskazuje największą
+   wartość pola, to za całe rozwiązanie otrzymuje 0 punktów, o ile nie nabył prawa do innej
+   liczby punktów.
+
+
+Przykładowe pełne rozwiązanie
+
+Sposób I
+Przyjmujemy oznaczenia:
+𝑎 = 12 – dłuższa podstawa trapezu,
+𝑏 – krótsza podstawa trapezu,
+ℎ – wysokość trapezu.
+
+Z warunków zadania otrzymujemy:
+
+                                        𝑏 + ℎ = 18
+Stąd wyznaczamy ℎ:
+
+                                        ℎ = 18 − 𝑏
+Pole trapezu wyrażamy jako funkcję zmiennej 𝑏:
+                         1                    1
+                   𝑃(𝑏) = (12 + 𝑏)(18 − 𝑏) = − (𝑏 + 12)(𝑏 − 18)
+                         2                    2
+Wyznaczamy dziedzinę funkcji 𝑃. Z warunków zadania wynika, że:
+
+                        𝑏 > 0 oraz ℎ = 18 − 𝑏 > 0 oraz 𝑏 < 12
+Zatem
+
+                            𝑏 > 0 oraz 𝑏 < 18 oraz 𝑏 < 12
+Zmienna 𝑏 może przyjmować wartość z przedziału (0, 12).
+Wykresem funkcji 𝑃 jest fragment paraboli skierowanej ramionami do dołu. Obliczamy
+pierwszą współrzędną wierzchołka paraboli:
+                                 −12 + 18 6
+                            𝑝=           = = 3 ∈ (0, 12)
+                                    2     2
+Zatem funkcja 𝑃 przyjmuje wartość największą dla argumentu 3.
+Dla 𝑏 = 3 pole tego trapezu jest równe:
+                                 1
+                           𝑃(3) = (12 + 3)(18 − 3) = 112,5
+                                 2
+Największe pole równe 112,5 dm2 ma trapez, którego krótsza podstawa ma 3 dm.
+
+
+
+
+                                                                                 Strona 35 z 37
+Egzamin maturalny z matematyki (poziom podstawowy). Test diagnostyczny – grudzień 2023 r.
+
+
+
+Sposób II
+Przyjmujemy oznaczenia:
+𝑎 = 12 – dłuższa podstawa trapezu,
+𝑏 – krótsza podstawa trapezu,
+ℎ – wysokość trapezu.
+
+Z warunków zadania otrzymujemy:
+
+                                              𝑏 + ℎ = 18
+Stąd wyznaczamy 𝑏:
+
+                                              𝑏 = 18 − ℎ
+Pole trapezu wyrażamy jako funkcję zmiennej ℎ:
+                                   1                1
+                             𝑃(ℎ) = (12 + 18 − ℎ)ℎ = (30 − ℎ)ℎ
+                                   2                2
+Wyznaczamy dziedzinę funkcji 𝑃. Z warunków zadania wynika, że:
+
+                      ℎ > 0 oraz 𝑏 = 18 − ℎ > 0 oraz 𝑏 = 18 − ℎ < 12
+Zatem
+
+                                 ℎ > 0 oraz ℎ < 18 oraz ℎ > 6
+Zmienna ℎ może przyjmować wartość z przedziału (6, 18).
+Wykresem funkcji 𝑃 jest fragment paraboli skierowanej ramionami do dołu. Obliczamy
+pierwszą współrzędną wierzchołka paraboli:
+                                          30 + 0
+                                     𝑝=          = 15 ∈ (6, 18)
+                                            2
+Zatem funkcja 𝑃 przyjmuje wartość największą dla argumentu 15.
+Dla ℎ = 15 pole tego trapezu jest równe:
+                                            1
+                                 𝑃(15) =      (30 − 15)15 = 112,5
+                                            2
+Obliczamy długość krótszej podstawy trapezu:
+
+                                           𝑏 = 18 − 15 = 3
+Największe pole równe 112,5 dm2 ma trapez, którego krótsza podstawa ma 3 dm.
+
+
+
+
+Strona 36 z 37
+                                                              Zasady oceniania rozwiązań zadań
+
+
+
+Sposób III
+Przyjmujemy oznaczenia:
+𝑎 = 12 – dłuższa podstawa trapezu,
+𝑏 – krótsza podstawa trapezu,
+ℎ – wysokość trapezu.
+
+Z warunków zadania otrzymujemy:
+
+                                        𝑏 + ℎ = 18
+Stąd wyznaczamy ℎ:
+
+                                        ℎ = 18 − 𝑏
+Pole trapezu wyrażamy jako funkcję zmiennej 𝑏:
+                                        1
+                               𝑃(𝑏) =     (12 + 𝑏)(18 − 𝑏)
+                                        2
+Z nierówności między średnią geometryczną i średnią arytmetyczną dla liczb dodatnich
+(12 + 𝑏) i (18 − 𝑏) otrzymujemy
+                                                 12 + 𝑏 + 18 − 𝑏
+                         √(12 + 𝑏)(18 − 𝑏) ≤
+                                                        2
+                                √(12 + 𝑏)(18 − 𝑏) ≤ 15
+Stąd
+                                (12 + 𝑏)(18 − 𝑏) ≤ 225
+przy czym równość zachodzi tylko wtedy, gdy 12 + 𝑏 = 18 − 𝑏, czyli dla 𝑏 = 3.
+                                                     1
+Wtedy pole trapezu jest największe i równe 𝑃(3) = ⋅ 225 = 112,5.
+                                                     2
+
+
+
+
+                                                                                Strona 37 z 37
+

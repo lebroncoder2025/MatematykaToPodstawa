@@ -1,0 +1,878 @@
+                                                    Arkusz zawiera informacje prawnie chronione
+                                                    do momentu rozpoczęcia egzaminu.
+
+
+
+                  WYPEŁNIA ZDAJĄCY                         Miejsce na naklejkę.
+                                                       Sprawdź, czy kod na naklejce to
+       KOD                   PESEL                                  M-100.
+                                                        Jeżeli tak – przyklej naklejkę.
+                                                      Jeżeli nie – zgłoś to nauczycielowi.
+
+
+
+
+ Egzamin maturalny                                    Formuła 2023
+
+
+
+ MATEMATYKA
+ Poziom podstawowy
+                                                        Symbol arkusza
+    TEST DIAGNOSTYCZNY                                  MMAP-P0-100-2312
+                                              WYPEŁNIA ZESPÓŁ NADZORUJĄCY
+DATA: 7 grudnia 2023 r.                       Uprawnienia zdającego do:
+                                                   dostosowania zasad oceniania
+GODZINA ROZPOCZĘCIA: 9:00                          dostosowania w zw. z dyskalkulią
+
+CZAS TRWANIA: 180 minut                            nieprzenoszenia zaznaczeń na kartę.
+
+
+LICZBA PUNKTÓW DO UZYSKANIA: 46
+
+Przed rozpoczęciem pracy z arkuszem egzaminacyjnym
+
+1. Sprawdź, czy nauczyciel przekazał Ci właściwy arkusz egzaminacyjny,
+   tj. arkusz we właściwej formule, z właściwego przedmiotu na właściwym
+   poziomie.
+2. Jeżeli przekazano Ci niewłaściwy arkusz – natychmiast zgłoś to nauczycielowi.
+   Nie rozrywaj banderol.
+3. Jeżeli przekazano Ci właściwy arkusz – rozerwij banderole po otrzymaniu
+   takiego polecenia od nauczyciela. Zapoznaj się z instrukcją na stronie 2.
+
+
+
+Układ graficzny
+© CKE 2022
+Instrukcja dla zdającego
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 33 strony (zadania 1–30).
+    Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego egzamin.
+2. Na pierwszej stronie arkusza oraz na karcie odpowiedzi wpisz swój numer PESEL
+    i przyklej naklejkę z kodem.
+3. Symbol              zamieszczony w nagłówku zadania oznacza, że rozwiązanie zadania
+    zamkniętego musisz przenieść na kartę odpowiedzi. Ocenie podlegają wyłącznie
+    odpowiedzi zaznaczone na karcie odpowiedzi.
+4. Odpowiedzi do zadań zamkniętych zaznacz na karcie odpowiedzi w części karty
+    przeznaczonej dla zdającego. Zamaluj       pola do tego przeznaczone. Błędne
+    zaznaczenie otocz kółkiem        i zaznacz właściwe.
+5. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń w rozwiązaniu zadania
+    otwartego może spowodować, że za to rozwiązanie nie otrzymasz pełnej liczby punktów.
+6. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym.
+7. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub atramentem.
+8. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl.
+9. Nie wpisuj żadnych znaków w tabelkach przeznaczonych dla egzaminatora.
+    Tabelki umieszczone są na marginesie przy odpowiednich zadaniach.
+10. Pamiętaj, że zapisy w brudnopisie nie będą oceniane.
+11. Możesz korzystać z Wybranych wzorów matematycznych, cyrkla i linijki oraz kalkulatora
+    prostego. Upewnij się, czy przekazano Ci broszurę z okładką taką jak widoczna poniżej.
+
+
+
+
+                                      Strona 2 z 33
+                                                                               MMAP-P0_100
+              Zadania egzaminacyjne są wydrukowane
+                     na następnych stronach.
+
+
+
+
+                            Strona 3 z 33
+MMAP-P0_100
+Zadanie 1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+                   1
+                 2 2
+                 5
+Liczba (3−2,4 ⋅ 3 )    jest równa
+
+
+                            √3                    1
+A. √3                  B.                    C.           D. 0,3
+                            3                     3
+
+ Brudnopis
+
+
+
+
+Zadanie 2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Liczba log 2 96 − log 2 3 jest równa
+
+A. log 2 93            B. log 2 30           C. 4         D. 5
+
+ Brudnopis
+
+
+
+
+                                       Strona 4 z 33
+                                                                   MMAP-P0_100
+Zadanie 3. (0–1)
+Pan Grzegorz wpłacił do banku pewną kwotę na lokatę dwuletnią. Po każdym rocznym
+okresie oszczędzania bank doliczał odsetki w wysokości 5% od kwoty bieżącego kapitału
+znajdującego się na lokacie. Po dwóch latach oszczędzania pan Grzegorz odebrał z tego
+banku wraz z odsetkami kwotę 4851 zł (bez uwzględnienia podatków).
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Kwota wpłacona przez pana Grzegorza na tę lokatę była równa
+
+A. 4300 zł            B. 4400 zł               C. 4500 zł          D. 4600 zł
+
+ Brudnopis
+
+
+
+
+Zadanie 4. (0–1)
+Na osi liczbowej zaznaczono przedział.
+
+
+
+                           −3                               7     𝑥
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Zbiór zaznaczony na osi jest zbiorem wszystkich rozwiązań nierówności
+
+A. |𝑥 − 2| < 5                                 B. |𝑥 − 2| > 5
+
+C. |𝑥 − 5| < 2                                 D. |𝑥 − 5| > 2
+
+ Brudnopis
+
+
+
+
+                                         Strona 5 z 33
+MMAP-P0_100
+ 5.     Zadanie 5. (0–2)
+0–1–2   Wykaż, że dla każdej liczby całkowitej nieparzystej 𝒏 liczba 𝟑𝒏𝟐 + 𝟒𝒏 + 𝟏 jest
+        podzielna przez 𝟒.
+
+
+
+
+                                            Strona 6 z 33
+                                                                                  MMAP-P0_100
+Zadanie 6. (0–1)
+                           𝑥 − 3𝑦 + 5 = 0
+Dany jest układ równań {
+                           2𝑥 + 𝑦 + 3 = 0
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Rozwiązaniem tego układu równań jest para liczb
+
+A. 𝑥 = 1 i 𝑦 = 2                             B. 𝑥 = 0 i 𝑦 = −3
+
+C. 𝑥 = −2 i 𝑦 = 1                            D. 𝑥 = −1 i 𝑦 = −1
+
+ Brudnopis
+
+
+
+
+Zadanie 7. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Dla każdej liczby rzeczywistej 𝑥 różnej od (−3) i (−2) wartość wyrażenia
+   𝑥+3      𝑥2 +2𝑥
+          ⋅         jest równa wartości wyrażenia
+𝑥2 +4𝑥+4 2𝑥+6
+
+     𝑥                     𝑥                        𝑥                    𝑥3 +3𝑥2
+A.                    B.                     C.                   D.
+     2                     4                      2𝑥+4                 6𝑥2 +24𝑥+24
+
+ Brudnopis
+
+
+
+
+                                       Strona 7 z 33
+MMAP-P0_100
+       Zadanie 8. (0–1)
+       Dany jest wielomian 𝑊(𝑥) = −3𝑥 3 − 𝑥 2 + 𝑘𝑥 + 1, gdzie 𝑘 jest pewną liczbą rzeczywistą.
+       Wiadomo, że wielomian 𝑊 można zapisać w postaci 𝑊(𝑥) = (𝑥 + 1) ⋅ 𝑄(𝑥) dla pewnego
+       wielomianu 𝑄 .
+
+       Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+       Liczba 𝑘 jest równa
+
+       A. 29                 B. (−3)              C. 0                  D. 3
+
+        Brudnopis
+
+
+
+
+9.     Zadanie 9. (0–3)
+0–1–
+2–3
+       Rozwiąż równanie
+                                       𝟐𝒙𝟑 + 𝟑𝒙𝟐 = 𝟏𝟎𝒙 + 𝟏𝟓
+       Zapisz obliczenia.
+
+
+
+
+                                            Strona 8 z 33
+                                                                                   MMAP-P0_100
+              Strona 9 z 33
+MMAP-P0_100
+Zadanie 10. (0–1)
+                                                1   2
+Funkcja liniowa 𝑓 jest określona wzorem 𝑓(𝑥) = − 𝑥 + .
+                                                6   3
+
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Miejscem zerowym funkcji 𝑓 jest liczba 4.                                    P     F
+
+                                                                  1
+ Punkt przecięcia wykresu funkcji 𝑓 z osią 𝑂𝑦 ma współrzędne (0, − ).         P     F
+                                                                  6
+
+ Brudnopis
+
+
+
+
+                                    Strona 10 z 33
+                                                                             MMAP-P0_100
+Zadanie 11.
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) przedstawiono fragment wykresu funkcji
+kwadratowej 𝑓 (zobacz rysunek). Wierzchołek paraboli, która jest wykresem funkcji 𝑓 , oraz
+punkty przecięcia paraboli z osiami układu współrzędnych mają współrzędne całkowite.
+                               𝑦
+                               9
+                               8
+                                                   𝑦 = 𝑓(𝑥)
+                               7
+                               6
+                               5
+                               4
+                               3
+                               2
+                               1
+
+                     –3 –2 –1 0     1 2 3 4 5 6 7 8 9              𝑥
+                            –1
+                            –2
+                            –3
+
+
+Zadanie 11.1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Zbiorem wartości funkcji 𝑓 jest przedział
+
+A. (−∞, −2]            B. (−∞, 4]            C. [−2, +∞)           D. [4, +∞)
+
+ Brudnopis
+
+
+
+
+                                      Strona 11 z 33
+MMAP-P0_100
+11.2.   Zadanie 11.2. (0–1)
+0–1     Zapisz poniżej w postaci przedziału zbiór wszystkich argumentów, dla których
+        funkcja 𝒇 przyjmuje wartości ujemne.
+
+        .................................................................................................................................................
+
+         Brudnopis
+
+
+
+
+11.3.   Zadanie 11.3. (0–2)
+0–1–2   Uzupełnij zdanie. Wybierz dwie właściwe odpowiedzi spośród oznaczonych literami
+        A–F i wpisz te litery w wykropkowanych miejscach.
+
+        Wzór funkcji 𝑓 można przedstawić w postaci: ………. oraz ………. .
+
+                         1                                                                        1
+        A. 𝑓(𝑥) =          (𝑥 − 2)(𝑥 − 6)                                       B. 𝑓(𝑥) =           (𝑥 − 4)2 − 2
+                         2                                                                        2
+                                                                                                  1
+        C. 𝑓(𝑥) = 2(𝑥 − 2)(𝑥 − 6)                                               D. 𝑓(𝑥) =           (𝑥 + 4)2 − 2
+                                                                                                  2
+        E. 𝑓(𝑥) = 2(𝑥 + 2)(𝑥 + 6)                                               F. 𝑓(𝑥) = 2(𝑥 + 4)2 − 2
+
+         Brudnopis
+
+
+
+
+                                                                    Strona 12 z 33
+                                                                                                                                       MMAP-P0_100
+Zadanie 11.4. (0–1)
+Funkcja kwadratowa 𝑔 jest określona za pomocą funkcji 𝑓 (zobacz rysunek na stronie 11)
+następująco: 𝑔(𝑥) = 𝑓(𝑥 + 1). Na jednym z rysunków A–D przedstawiono,
+w kartezjańskim układzie współrzędnych (𝑥, 𝑦), fragment wykresu funkcji 𝑦 = 𝑔(𝑥).
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Fragment wykresu funkcji 𝑦 = 𝑔(𝑥) przedstawiono na rysunku
+
+A.            𝑦                            B.         𝑦
+              9                                       9
+              8                                       8
+              7                                       7
+              6                                       6
+              5                                       5
+              4                                       4
+              3                                       3
+              2                                       2
+              1                                       1
+              0                  𝑥                       0                  𝑥
+            –1 1 2 3 4 5 6 7 8 9
+     –3 –2 –1                                          –1 1 2 3 4 5 6 7 8 9
+                                                –3 –2 –1
+          –2                                         –2
+          –3                                         –3
+
+
+C.            𝑦                            D.         𝑦
+              9                                       9
+              8                                       8
+              7                                       7
+              6                                       6
+              5                                       5
+              4                                       4
+              3                                       3
+              2                                       2
+              1                                       1
+              0                  𝑥                       0                  𝑥
+            –1 1 2 3 4 5 6 7 8 9
+     –3 –2 –1                                          –1 1 2 3 4 5 6 7 8 9
+                                                –3 –2 –1
+          –2                                         –2
+          –3                                         –3
+
+
+ Brudnopis
+
+
+
+
+                                    Strona 13 z 33
+MMAP-P0_100
+Zadanie 12. (0–1)
+Proces stygnięcia naparu z ziół w otoczeniu o stałej temperaturze 22 °C opisuje funkcja
+wykładnicza 𝑇(𝑥) = 78 ⋅ 2−0,05𝑥 + 22, gdzie 𝑇(𝑥) to temperatura naparu wyrażona
+w stopniach Celsjusza (°C) po 𝑥 minutach liczonych od momentu 𝑥 = 0, w którym zioła
+zalano wrzątkiem.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Temperatura naparu po 20 minutach od momentu zalania ziół wrzątkiem jest równa
+
+A. 22 °C              B. 39 °C               C. 78 °C               D. 61 °C
+
+ Brudnopis
+
+
+
+
+Zadanie 13. (0–1)
+Ciąg arytmetyczny (𝑎𝑛 ) jest określony dla każdej liczby naturalnej 𝑛 ≥ 1. W tym ciągu
+𝑎2 = 4 oraz 𝑎3 = 9.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Szósty wyraz ciągu (𝑎𝑛 ) jest równy
+
+A. 24                 B. 29                  C. 36                  D. 69
+
+ Brudnopis
+
+
+
+
+                                      Strona 14 z 33
+                                                                                MMAP-P0_100
+Zadanie 14. (0–1)
+Ciąg (𝑎𝑛 ) jest określony dla każdej liczby naturalnej 𝑛 ≥ 1. Suma 𝑛 początkowych
+wyrazów tego ciągu jest określona wzorem 𝑆𝑛 = 4 ⋅ (2𝑛 − 1) dla każdej liczby naturalnej
+𝑛 ≥ 1.
+
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Pierwszy wyraz ciągu (𝑎𝑛 ) jest równy 4.                                       P     F
+
+
+ Drugi wyraz ciągu (𝑎𝑛 ) jest równy 12.                                         P     F
+
+
+ Brudnopis
+
+
+
+
+Zadanie 15. (0–1)
+Trzywyrazowy ciąg (1 − 2𝑎, 12, 48) jest geometryczny.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Liczba 𝑎 jest równa
+
+A. (−1)               B. 3                  C. 4                   D. 12,5
+
+ Brudnopis
+
+
+
+
+                                     Strona 15 z 33
+MMAP-P0_100
+        Zadanie 16. (0–2)
+        Dane są dwa kąty o miarach 𝛼 oraz 𝛽 , spełniające warunki:
+                                  2                                 1
+        𝛼 ∈ (0°, 180°) i tg 𝛼 = − 3 oraz 𝛽 ∈ (0°, 180°) i cos 𝛽 =      .
+                                                                   √10
+
+        Na rysunkach A–F w kartezjańskim układzie współrzędnych (𝑥, 𝑦) zaznaczono różne kąty
+        – w tym kąt o mierze 𝛼 oraz kąt o mierze 𝛽 . Jedno z ramion każdego z tych kątów pokrywa
+        się z dodatnią półosią 𝑂𝑥 , a drugie przechodzi przez jeden z punktów o współrzędnych
+        całkowitych: 𝐴 lub 𝐵, lub 𝐶 , lub 𝐷 , lub 𝐸 , lub 𝐹 .
+
+ 16.    Uzupełnij tabelę. Wpisz w każdą pustą komórkę tabeli właściwą odpowiedź, wybraną
+0–1–2   spośród oznaczonych literami A–F.
+
+
+         16.1.   Kąt 𝛼 jest zaznaczony na rysunku
+
+
+         16.2.   Kąt 𝛽 jest zaznaczony na rysunku
+
+
+        A.                  𝑦                         B.             𝑦
+                 𝐴       3                                           3
+                                                                 𝐵
+                         2                                           2
+                         1                                           1
+
+                                            𝑥                                              𝑥
+             −3 −2 −1 0         1   2   3                   −3 −2 −1 0     1       2   3
+                    −1                                             −1
+
+
+        C.               𝑦                            D.             𝑦
+                         3                                           3         𝐷
+                                        𝐶
+                         2                                           2
+                         1                                           1
+
+                                            𝑥                                              𝑥
+             −3 −2 −1 0         1   2   3                   −3 −2 −1 0     1       2   3
+                    −1                                             −1
+
+
+        E.               𝑦                            F.             𝑦
+                     𝐸   3                                           3
+                         2                                           2
+                                                                                       𝐹
+                         1                                           1
+
+                                            𝑥                                              𝑥
+             −3 −2 −1 0         1   2   3                   −3 −2 −1 0     1       2   3
+                    −1                                             −1
+
+
+                                                Strona 16 z 33
+                                                                                           MMAP-P0_100
+ Brudnopis
+
+
+
+
+Zadanie 17. (0–1)
+                                √5
+Kąt 𝛼 jest ostry oraz sin 𝛼 =        .
+                                3
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Tangens kąta 𝛼 jest równy
+
+     √5                    2                        2√5        3√5
+A.                    B.                       C.         D.
+     2                     3                         5          5
+
+ Brudnopis
+
+
+
+
+                                         Strona 17 z 33
+MMAP-P0_100
+Zadanie 18. (0–1)
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) dana jest prosta 𝑙 o równaniu
+    3     15
+𝑦 = 2 𝑥 − 2 . Prosta 𝑘 jest prostopadła do prostej 𝑙 i przechodzi przez punkt 𝑃 = (6, 0).
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Prosta 𝑘 ma równanie
+
+         3                                           2
+A. 𝑦 =     𝑥+6                               B. 𝑦 = − 𝑥 + 6
+         2                                           3
+         3                                           2
+C. 𝑦 =     𝑥−9                               D. 𝑦 = − 𝑥 + 4
+         2                                           3
+
+ Brudnopis
+
+
+
+
+Zadanie 19. (0–1)
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) dane są proste 𝑘 oraz 𝑙 o równaniach
+                                            1
+                                   𝑘: 𝑦 = − 2 𝑥 − 7
+
+                                   𝑙: 𝑦 = (2𝑚 − 1)𝑥 + 13
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Proste 𝑘 oraz 𝑙 są równoległe, gdy
+
+         1                     1                       3
+A. 𝑚 = (− )           B. 𝑚 =                 C. 𝑚 =                D. 𝑚 = 2
+         2                     4                       2
+
+ Brudnopis
+
+
+
+
+                                      Strona 18 z 33
+                                                                               MMAP-P0_100
+Zadanie 20. (0–1)
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) dany jest okrąg 𝒪 o środku w punkcie
+𝑆 = (4, −2). Okrąg 𝒪 jest styczny do osi 𝑂𝑥 układu współrzędnych.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Okrąg 𝒪 jest określony równaniem
+
+A. (𝑥 − 4)2 + (𝑦 + 2)2 = 4                 B. (𝑥 − 4)2 + (𝑦 + 2)2 = 2
+
+C. (𝑥 + 4)2 + (𝑦 − 2)2 = 4                 D. (𝑥 + 4)2 + (𝑦 − 2)2 = 2
+
+ Brudnopis
+
+
+
+
+Zadanie 21. (0–1)
+W kartezjańskim układzie współrzędnych (𝑥, 𝑦) punkty 𝐾 = (−7, −2) oraz 𝐿 = (−1, 4)
+są wierzchołkami trójkąta równobocznego 𝐾𝐿𝑀 .
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Pole trójkąta 𝐾𝐿𝑀 jest równe
+
+A. 17√2              B. 17√3               C. 18√2              D. 18√3
+
+ Brudnopis
+
+
+
+
+                                    Strona 19 z 33
+MMAP-P0_100
+Zadanie 22. (0–1)
+Punkty 𝐴, 𝐵 oraz 𝐶 leżą na okręgu o środku w punkcie 𝑂. Prosta 𝑘 jest styczna do tego
+okręgu w punkcie 𝐴 i tworzy z cięciwą 𝐴𝐵 kąt o mierze 32°. Ponadto odcinek 𝐴𝐶 jest
+średnicą tego okręgu (zobacz rysunek).
+                                           𝐶
+
+
+
+
+                                       𝑂
+
+
+                                                          𝐵
+
+
+
+                𝑘                               32°
+                                           𝐴
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Miara kąta rozwartego 𝐵𝑂𝐶 jest równa
+
+A. 148°              B. 116°                   C. 154°          D. 122°
+
+ Brudnopis
+
+
+
+
+                                    Strona 20 z 33
+                                                                           MMAP-P0_100
+Zadanie 23. (0–1)
+W rombie 𝐴𝐵𝐶𝐷 dłuższa przekątna 𝐴𝐶 ma długość 12 i tworzy z bokiem 𝐴𝐵 kąt
+o mierze 30° (zobacz rysunek).
+                               𝐷                                     𝐶
+
+
+
+
+                    30°
+               𝐴                                    𝐵
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Pole rombu 𝐴𝐵𝐶𝐷 jest równe
+
+A. 24               B. 36                C. 24√3           D. 36√2
+
+ Brudnopis
+
+
+
+
+                                   Strona 21 z 33
+MMAP-P0_100
+        Zadanie 24. (0–2)
+        Dany jest okrąg 𝒪 o środku w punkcie 𝑆. Średnica 𝐴𝐵 tego okręgu przecina cięciwę 𝐶𝐷
+        w punkcie 𝑃 (zobacz rysunek). Ponadto: |𝑃𝐵| = 4, |𝑃𝐶| = 8 oraz |𝑃𝐷| = 5.
+                                            𝐷           𝐵
+
+
+
+
+                                                    𝑃
+
+
+                                                𝑆
+
+
+
+
+                                                                𝐶
+
+
+                                        𝐴
+
+
+ 24.    Oblicz promień okręgu 𝓞. Zapisz obliczenia.
+0–1–2
+
+
+
+
+                                            Strona 22 z 33
+                                                                                  MMAP-P0_100
+Zadanie 25. (0–1)
+Dany jest sześcian 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻 o krawędzi długości 5. Wewnątrz sześcianu znajduje się
+punkt 𝑃 (zobacz rysunek).
+
+                                 𝐻                        𝐺
+
+
+
+                        𝐸                          𝐹      5
+                                       𝑃
+
+                                  𝐷                       𝐶
+
+
+
+
+                         𝐴                    𝐵
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Suma odległości punktu 𝑃 od wszystkich ścian sześcianu 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻 jest równa
+
+A. 15               B. 20                  C. 25              D. 30
+
+ Brudnopis
+
+
+
+
+                                   Strona 23 z 33
+MMAP-P0_100
+       Zadanie 26. (0–3)
+       Objętość ostrosłupa prawidłowego czworokątnego jest równa 384. Wysokość ściany
+                                                                                              4
+       bocznej tego ostrosłupa tworzy z płaszczyzną podstawy kąt o mierze 𝛼 taki, że tg 𝛼 =
+                                                                                              3
+       (zobacz rysunek).
+
+
+
+
+                                                    ⋅                𝛼   ⋅
+
+
+26.    Oblicz wysokość ściany bocznej tego ostrosłupa. Zapisz obliczenia.
+0–1–
+2–3
+
+
+
+
+                                            Strona 24 z 33
+                                                                                     MMAP-P0_100
+              Strona 25 z 33
+MMAP-P0_100
+        Zadanie 27. (0–2)
+        E-dowód ma zapisany na pierwszej stronie specjalny sześciocyfrowy numer CAN, który
+        zabezpiecza go przed odczytaniem danych przez osoby nieuprawnione.
+
+ 27.    Oblicz, ile jest wszystkich sześciocyfrowych numerów CAN o różnych cyfrach,
+0–1–2   spełniających warunek: trzy pierwsze cyfry są kolejnymi wyrazami ciągu
+        arytmetycznego o różnicy (−𝟑). Zapisz obliczenia.
+
+
+
+
+                                            Strona 26 z 33
+                                                                                    MMAP-P0_100
+Zadanie 28. (0–1)
+Doświadczenie losowe polega na dwukrotnym rzucie symetryczną sześcienną kostką do gry,
+która na każdej ściance ma inną liczbę oczek – od jednego oczka do sześciu oczek.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Prawdopodobieństwo zdarzenia polegającego na tym, że iloczyn liczb wyrzuconych oczek
+jest liczbą nieparzystą, jest równe
+
+     1                    1                     1                     3
+A.                   B.                    C.                    D.
+     2                    5                     4                     4
+
+ Brudnopis
+
+
+
+
+                                    Strona 27 z 33
+MMAP-P0_100
+Zadanie 29.
+W hurtowni owoców wyselekcjonowane jabłko spełnia normę jakości, gdy jego masa (po
+zaokrągleniu do pełnych dekagramów) mieści się w przedziale [19 dag, 21 dag].
+Pobrano próbę kontrolną liczącą 50 jabłek i następnie zważono każde z nich.
+Na poniższym wykresie słupkowym przedstawiono rozkład masy jabłek w badanej próbie.
+Na osi poziomej podano – wyrażoną w dekagramach – masę jabłka (w zaokrągleniu do
+pełnych dekagramów), a na osi pionowej przedstawiono liczbę jabłek o określonej masie.
+
+           18
+           16
+           14
+           12
+     liczba 10
+     jabłek
+            8
+            6
+            4
+            2
+            0
+                 17            18     19         20        21           22       23
+                                        masa jabłka (w dag)
+
+
+Zadanie 29.1. (0–1)
+Spośród 50 zważonych jabłek z pobranej próby kontrolnej losujemy jedno jabłko.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Prawdopodobieństwo zdarzenia polegającego na tym, że wylosowane jabłko spełnia normę
+jakości, jest równe
+
+     3                     5                     18                     9
+A.                    B.                    C.                     D.
+     7                     7                     25                     10
+
+ Brudnopis
+
+
+
+
+                                     Strona 28 z 33
+                                                                              MMAP-P0_100
+Zadanie 29.2. (0–1)
+Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A albo B oraz jej
+uzasadnienie 1., 2. albo 3.
+
+Dominanta masy 50 zważonych jabłek (w zaokrągleniu do pełnych dekagramów)
+z pobranej próby kontrolnej jest równa
+
+
+                           1.   ta masa jest największa w tej próbie.
+ A.   20 dag,
+                                iloczyn tej masy i liczby jabłek o takiej masie jest
+                ponieważ   2.
+                                największy w tej próbie.
+ B.   23 dag,
+                           3.   ta masa występuje najliczniej w tej próbie.
+
+
+ Brudnopis
+
+
+
+
+                                   Strona 29 z 33
+MMAP-P0_100
+        Zadanie 30. (0–4)
+        Zgodnie z założeniem architekta okno na poddaszu ma mieć kształt trapezu
+        równoramiennego, który nie jest równoległobokiem. Dłuższa podstawa trapezu ma mieć
+        długość 12 dm, a suma długości krótszej podstawy i wysokości tego trapezu ma być
+        równa 18 dm.
+
+ 30.    Oblicz, jaką długość powinna mieć krótsza podstawa tego trapezu, tak aby pole
+ 0–1–   powierzchni okna było największe. Oblicz to pole. Zapisz obliczenia.
+2–3–4
+
+
+
+
+                                            Strona 30 z 33
+                                                                                    MMAP-P0_100
+              Strona 31 z 33
+MMAP-P0_100
+BRUDNOPIS (nie podlega ocenie)
+
+
+
+
+          Strona 32 z 33
+                                 MMAP-P0_100
+              Strona 33 z 33
+MMAP-P0_100
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+
+
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+
+
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+

@@ -1,0 +1,891 @@
+                                                    Arkusz zawiera informacje prawnie chronione
+                                                    do momentu rozpoczęcia egzaminu.
+
+
+
+                  WYPEŁNIA ZDAJĄCY                         Miejsce na naklejkę.
+                                                       Sprawdź, czy kod na naklejce to
+       KOD                   PESEL                                  M-100.
+                                                        Jeżeli tak – przyklej naklejkę.
+                                                      Jeżeli nie – zgłoś to nauczycielowi.
+
+
+
+
+ Egzamin maturalny                                    Formuła 2023
+
+
+
+ MATEMATYKA
+ Poziom podstawowy
+                                                        Symbol arkusza
+    TEST DIAGNOSTYCZNY                                  MMAP-P0-100-2212
+                                              WYPEŁNIA ZESPÓŁ NADZORUJĄCY
+DATA: 14 grudnia 2022 r.                      Uprawnienia zdającego do:
+                                                   dostosowania zasad oceniania
+GODZINA ROZPOCZĘCIA: 9:00                          dostosowania w zw. z dyskalkulią
+
+CZAS TRWANIA: 180 minut                            nieprzenoszenia zaznaczeń na kartę.
+
+
+LICZBA PUNKTÓW DO UZYSKANIA: 46
+
+Przed rozpoczęciem pracy z arkuszem egzaminacyjnym
+
+1. Sprawdź, czy nauczyciel przekazał Ci właściwy arkusz egzaminacyjny,
+   tj. arkusz we właściwej formule, z właściwego przedmiotu na właściwym
+   poziomie.
+2. Jeżeli przekazano Ci niewłaściwy arkusz – natychmiast zgłoś to nauczycielowi.
+   Nie rozrywaj banderol.
+3. Jeżeli przekazano Ci właściwy arkusz – rozerwij banderole po otrzymaniu
+   takiego polecenia od nauczyciela. Zapoznaj się z instrukcją na stronie 2.
+
+
+Układ graficzny
+© CKE 2022
+Instrukcja dla zdającego
+1. Sprawdź, czy arkusz egzaminacyjny zawiera 32 strony (zadania 1–33).
+    Ewentualny brak zgłoś przewodniczącemu zespołu nadzorującego egzamin.
+2. Na pierwszej stronie arkusza oraz na karcie odpowiedzi wpisz swój numer PESEL
+    i przyklej naklejkę z kodem.
+3. Pamiętaj, że pominięcie argumentacji lub istotnych obliczeń w rozwiązaniu zadania
+    otwartego może spowodować, że za to rozwiązanie nie otrzymasz pełnej liczby punktów.
+4. Rozwiązania zadań i odpowiedzi wpisuj w miejscu na to przeznaczonym.
+5. Symbol              zamieszczony w nagłówku zadania oznacza, że rozwiązanie zadania
+    zamkniętego musisz przenieść na kartę odpowiedzi.
+6. Odpowiedzi do zadań zamkniętych zaznacz na karcie odpowiedzi w części karty
+    przeznaczonej dla zdającego. Zamaluj       pola do tego przeznaczone. Błędne
+    zaznaczenie otocz kółkiem       i zaznacz właściwe.
+7. Nie wpisuj żadnych znaków w tabelkach przeznaczonych dla egzaminatora.
+    Tabelki umieszczone są na marginesie przy odpowiednich zadaniach.
+8. Pisz czytelnie i używaj tylko długopisu lub pióra z czarnym tuszem lub atramentem.
+9. Nie używaj korektora, a błędne zapisy wyraźnie przekreśl.
+10. Pamiętaj, że zapisy w brudnopisie nie będą oceniane.
+11. Możesz korzystać z Wybranych wzorów matematycznych, cyrkla i linijki oraz kalkulatora
+    prostego. Upewnij się, czy przekazano Ci broszurę z taką okładką, jak poniżej.
+
+
+
+
+                                      Strona 2 z 32
+                                                                              MMAP-P0_100
+              Zadania egzaminacyjne są wydrukowane
+                     na następnych stronach.
+
+
+
+
+                            Strona 3 z 32
+MMAP-P0_100
+Zadanie 1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+                  1
+               1 3
+Liczba   (5 ⋅ 52 )    jest równa
+
+   6                          3                                     3
+A. √5                      B. √25          C. √5                 D. √5
+
+ Brudnopis
+
+
+
+
+Zadanie 2. (0–1)
+Pan Nowak kupił obligacje Skarbu Państwa za 40 000 zł oprocentowane 7% w skali roku.
+Odsetki są naliczane i kapitalizowane co rok.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wartość obligacji kupionych przez pana Nowaka będzie po dwóch latach równa
+
+A. 40 000 ⋅ (1,07)2 zł
+B. 40 000 ⋅ (1,7)2 zł
+C. 40 000 ⋅ 1,14 zł
+D. 40 000 ⋅ 1,49 zł
+
+ Brudnopis
+
+
+
+
+                                     Strona 4 z 32
+                                                                             MMAP-P0_100
+Zadanie 3. (0–1)
+Właściciel sklepu kupił w hurtowni 50 par identycznych spodni po 𝑥 zł za parę
+i 40 identycznych marynarek po 𝑦 zł za sztukę. Za zakupy w hurtowni zapłacił 8000 zł.
+Po doliczeniu marży 50% na każdą parę spodni i 20% na każdą marynarkę ceny
+detaliczne spodni i marynarki były jednakowe.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Cenę pary spodni 𝑥 oraz cenę marynarki 𝑦, jakie trzeba zapłacić w hurtowni, można
+obliczyć z układu równań
+
+    𝑥 + 𝑦 = 8000
+A. {
+    0,5𝑥 = 0,2𝑦
+    50𝑥 + 40𝑦 = 8000
+B. {
+    0,5𝑥 = 0,2𝑦
+    50𝑥 + 40𝑦 = 8000
+C. {
+    1,5𝑥 = 1,2𝑦
+    𝑥 + 𝑦 = 8000
+D. {
+    1,5𝑥 = 1,2𝑦
+
+ Brudnopis
+
+
+
+
+                                     Strona 5 z 32
+MMAP-P0_100
+Zadanie 4. (0–1)
+Liczby rzeczywiste 𝑥 i 𝑦 są dodatnie oraz 𝑥 ≠ 𝑦.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+              1   1
+Wyrażenie       +    można przekształcić do postaci
+             𝑥−𝑦 𝑥+𝑦
+
+      2                      2                       2𝑥                  −2𝑥𝑦
+A.                    B.                       C.                   D.
+     𝑥−𝑦                   𝑥2 −𝑦2                   𝑥2 −𝑦2               𝑥+𝑦
+
+ Brudnopis
+
+
+
+
+Zadanie 5. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wszystkich różnych liczb naturalnych czterocyfrowych, w których zapisie dziesiętnym
+wszystkie cyfry są różne, jest
+
+A. 9 ⋅ 8 ⋅ 7 ⋅ 6      B. 9 ⋅ 9 ⋅ 8 ⋅ 7         C. 10 ⋅ 9 ⋅ 8 ⋅ 7    D. 9 ⋅ 10 ⋅ 10 ⋅ 10
+
+ Brudnopis
+
+
+
+
+                                         Strona 6 z 32
+                                                                                MMAP-P0_100
+Zadanie 6. (0–1)
+Funkcja 𝑓 jest określona wzorem 𝑓(𝑥) = − log 𝑥 dla wszystkich liczb rzeczywistych
+dodatnich 𝑥 .
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wartość funkcji 𝑓 dla argumentu 𝑥 = √10 jest równa
+
+                          1                     1
+A. 2                 B. (− )               C.                    D. (−2)
+                          2                     2
+
+ Brudnopis
+
+
+
+
+                                     Strona 7 z 32
+MMAP-P0_100
+       Zadanie 7.
+       W kartezjańskim układzie współrzędnych (𝑥, 𝑦) przedstawiono fragment wykresu funkcji
+       kwadratowej 𝑓(𝑥) = 𝑎𝑥 2 + 𝑏𝑥 + 𝑐 . Wierzchołek paraboli, która jest wykresem funkcji 𝑓 ,
+       ma współrzędne (5, −3). Jeden z punktów przecięcia paraboli z osią 𝑂𝑥 układu
+       współrzędnych ma współrzędne (4, 0).
+
+                                                                         𝑦
+
+                                                                        7
+                                                                        6
+                                                                        5
+                                                                        4
+                                                                        3
+                                                                        2             𝑦 = 𝑓(𝑥)
+                                                                        1
+
+                          −7 −6 −5 −4 −3 −2 −1 0                                  1      2     3      4      5     6      7        𝑥
+                                             −1
+                                                                     −2
+                                                                     −3
+                                                                     −4
+                                                                     −5
+                                                                     −6
+                                                                     −7
+
+
+
+
+7.1.   Zadanie 7.1. (0–1)
+0–1    Zapisz poniżej zbiór wszystkich wartości funkcji 𝒇.
+
+       .................................................................................................................................................
+
+        Brudnopis
+
+
+
+
+                                                                    Strona 8 z 32
+                                                                                                                                       MMAP-P0_100
+Zadanie 7.2. (0–2)                                          7.2.
+
+Wyznacz wzór funkcji kwadratowej 𝒇 w postaci kanonicznej.   0–1–2
+
+
+Zapisz obliczenia.
+
+
+
+
+                                  Strona 9 z 32
+MMAP-P0_100
+Zadanie 8. (0–1)
+Dana jest nierówność kwadratowa
+                                  (3𝑥 − 9)(𝑥 + 𝑘) < 0
+z niewiadomą 𝑥 i parametrem 𝑘 ∈ ℝ. Rozwiązaniem tej nierówności jest przedział (−2, 3).
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Liczba 𝑘 jest równa
+
+A. (−2)               B. 2                 C. (−3)               D. 3
+
+ Brudnopis
+
+
+
+
+Zadanie 9. (0–1)
+Dana jest funkcja kwadratowa 𝑓(𝑥) = 𝑎𝑥 2 + 𝑏𝑥 + 𝑐, gdzie 𝑎, 𝑏 i 𝑐 są liczbami
+rzeczywistymi takimi, że 𝑎 ≠ 0 oraz 𝑐 < 0. Funkcja 𝑓 nie ma miejsc zerowych.
+
+Dokończ zdanie tak, aby było prawdziwe. Wybierz odpowiedź A albo B oraz jej
+uzasadnienie 1., 2. albo 3.
+
+Wykres funkcji 𝑓 leży w całości
+
+
+                                             1.   𝑎 < 0 i 𝑏 2 − 4𝑎𝑐 < 0.
+ A.   nad osią 𝑂𝑥 ,
+
+                          ponieważ           2.   𝑎 > 0 i 𝑏 2 − 4𝑎𝑐 < 0.
+ B.   pod osią 𝑂𝑥 ,
+                                             3.   𝑎 < 0 i 𝑏 2 − 4𝑎𝑐 = 0.
+
+
+ Brudnopis
+
+
+
+
+                                     Strona 10 z 32
+                                                                            MMAP-P0_100
+Zadanie 10. (0–1)
+Dany jest układ równań
+                                       𝑦 =𝑥−1
+                                   {
+                                       𝑦 = −𝑥 + 1
+
+Na którym z rysunków A–D przedstawiona jest interpretacja geometryczna tego
+układu równań? Wybierz właściwą odpowiedź spośród podanych.
+
+
+ A.                                         B.
+                    𝑦                                       𝑦
+
+
+
+
+                1                                       1
+                0       1         𝑥                     0       1             𝑥
+
+
+
+
+ C.                                         D.
+                    𝑦                                       𝑦
+
+
+
+
+                1                                       1
+                0       1         𝑥                     0       1             𝑥
+
+
+
+
+                                  Strona 11 z 32
+MMAP-P0_100
+Zadanie 11. (0–1)
+Dany jest wielomian 𝑊 określony wzorem 𝑊(𝑥) = 𝑥 3 − 2𝑥 2 − 3𝑥 + 6 dla każdej liczby
+rzeczywistej 𝑥 .
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wielomian 𝑊 przy rozkładzie na czynniki ma postać
+
+A. 𝑊(𝑥) = (𝑥 + 2)(𝑥 2 − 3)
+
+B. 𝑊(𝑥) = (𝑥 − 2)(𝑥 2 − 3)
+
+C. 𝑊(𝑥) = (𝑥 + 2)(𝑥 2 + 3)
+
+D. 𝑊(𝑥) = (𝑥 − 2)(𝑥 2 + 3)
+
+ Brudnopis
+
+
+
+
+Zadanie 12. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+             (4−𝑥)(2𝑥−3)
+Równanie
+           (3𝑥−5)(3−2𝑥)
+                           = 0 w zbiorze liczb rzeczywistych ma dokładnie
+
+A. jedno rozwiązanie.
+B. dwa rozwiązania.
+C. trzy rozwiązania.
+D. cztery rozwiązania.
+
+ Brudnopis
+
+
+
+
+                                       Strona 12 z 32
+                                                                            MMAP-P0_100
+Zadanie 13. (0–1)
+Dana jest nierówność
+                                            𝑥  𝑥
+                                       2−     ≥ −3
+                                            2  3
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Największą liczbą całkowitą, która spełnia tę nierówność, jest
+
+A. 6                   B. 5                    C. 7              D. (−6)
+
+ Brudnopis
+
+
+
+
+Zadanie 14. (0–2)                                                                    14.
+                                                        𝟐
+Wykaż, że dla każdej liczby naturalnej 𝒏 liczba 𝟓𝒏 + 𝟏𝟓𝒏 jest podzielna przez 𝟏𝟎.   0–1–2
+
+
+
+
+                                       Strona 13 z 32
+MMAP-P0_100
+Zadanie 15. (0–1)
+Dany jest ciąg (𝑎𝑛 ) określony wzorem 𝑎𝑛 = 2𝑛2 + 𝑛 dla każdej liczby naturalnej 𝑛 ≥ 1.
+
+Oceń prawdziwość poniższych stwierdzeń. Wybierz P, jeśli stwierdzenie jest
+prawdziwe, albo F – jeśli jest fałszywe.
+
+
+ Ciąg (𝑎𝑛 ) jest malejący.                                                    P     F
+
+ Ósmy wyraz ciągu (𝑎𝑛 ) jest równy 136.                                       P     F
+
+
+ Brudnopis
+
+
+
+
+Zadanie 16. (0–1)
+                             1
+Pięciowyrazowy ciąg (−3,       , 𝑥, 𝑦, 11) jest arytmetyczny.
+                             2
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Liczby 𝑥 oraz 𝑦 są równe
+
+                    15                                  15
+A. 𝑥 = 4 oraz 𝑦 =      .                      B. 𝑥 =       oraz 𝑦 = 4.
+                    2                                   2
+                      15                                 15
+C. 𝑥 = −4 oraz 𝑦 =       .                    D. 𝑥 = −      oraz 𝑦 = 4.
+                      2                                  2
+
+ Brudnopis
+
+
+
+
+                                       Strona 14 z 32
+                                                                             MMAP-P0_100
+Zadanie 17. (0–2)
+Dany jest ciąg geometryczny (𝑎𝑛 ), określony dla każdej liczby naturalnej 𝑛 ≥ 1.
+W tym ciągu 𝑎1 = −5, 𝑎2 = 15, 𝑎3 = −45.
+
+Dokończ zdanie. Zaznacz dwie odpowiedzi tak, aby dla każdej z nich dokończenie      17.
+poniższego zdania było prawdziwe.                                                  0–1–2
+
+
+Wzór ogólny ciągu (𝑎𝑛 ) ma postać
+
+A. 𝑎𝑛 = −5 ∙ (−3)𝑛−1
+
+B. 𝑎𝑛 = −5 ∙ (−3)𝑛
+
+C. 𝑎𝑛 = −5 ∙ 3𝑛−1
+                         𝑛
+               (−3)
+D. 𝑎𝑛 = −5 ∙
+                   3
+                     𝑛
+              (−3)
+E. 𝑎𝑛 = 5 ∙
+               3
+F. 𝑎𝑛 = 5 ∙ (−3)𝑛 ∙ 3
+
+ Brudnopis
+
+
+
+
+                                      Strona 15 z 32
+MMAP-P0_100
+Zadanie 18. (0–1)
+                           1       1      64
+Kąt 𝛼 jest ostry oraz       2  +    2   = 9 .
+                        |sin 𝛼| |cos 𝛼|
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wartość wyrażenia sin 𝛼 ∙ cos 𝛼 jest równa
+
+     8                       3                    64                  9
+A.                      B.                   C.                  D.
+     3                       8                    9                   64
+
+ Brudnopis
+
+
+
+
+Zadanie 19. (0–1)
+Punkty 𝐴, 𝐵, 𝐶 leżą na okręgu o środku 𝑂 (zobacz rysunek).                   𝐶
+Ponadto |∡𝐴𝑂𝐶| = 130° oraz |∡𝐵𝑂𝐴| = 110°.
+
+
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród
+podanych.                                                             130° 𝑂
+                                                                           110°
+Miara kąta wewnętrznego 𝐵𝐴𝐶 trójkąta 𝐴𝐵𝐶 jest równa
+                                                             𝐴                           𝐵
+A. 60°
+B. 55°
+C. 50°
+D. 65°
+
+ Brudnopis
+
+
+
+
+                                     Strona 16 z 32
+                                                                                  MMAP-P0_100
+        Kolejne zadania egzaminacyjne są wydrukowane
+                   na następnych stronach.
+
+
+
+
+                         Strona 17 z 32
+MMAP-P0_100
+        Zadanie 20. (0–4)
+        Do wyznaczenia trzech boków pewnego kąpieliska w kształcie prostokąta należy użyć liny
+        o długości 200 m. Czwarty bok tego kąpieliska będzie pokrywał się z brzegiem plaży, który
+        w tym miejscu jest linią prostą (zobacz rysunek).
+
+
+
+
+                                                    𝑏
+                                                                          lina
+
+                                    𝑎          kąpielisko
+
+                                                                           woda
+
+
+
+
+                                                 plaża
+
+
+
+
+ 20.    Oblicz wymiary 𝒂 i 𝒃 kąpieliska tak, aby jego powierzchnia była największa.
+ 0–1–
+2–3–4
+        Zapisz obliczenia.
+
+
+
+
+                                              Strona 18 z 32
+                                                                                       MMAP-P0_100
+              Strona 19 z 32
+MMAP-P0_100
+Zadanie 21. (0–1)
+Dany jest kwadrat 𝐴𝐵𝐶𝐷 o boku długości 8.                       𝐷                𝐶
+Z wierzchołka 𝐴 zakreślono koło o promieniu równym
+długości boku kwadratu (zobacz rysunek).
+                                                                     8
+
+
+                                                                𝐴        8       𝐵
+
+
+
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Pole powierzchni części wspólnej koła i kwadratu jest równe
+
+A. 16𝜋                B. 8𝜋                  C. 4√2𝜋          D. 16√2𝜋
+
+ Brudnopis
+
+
+
+
+                                      Strona 20 z 32
+                                                                         MMAP-P0_100
+Zadanie 22. (0–1)
+Odcinki 𝐴𝐶 i 𝐵𝐷 przecinają się w punkcie 𝑂. Ponadto |𝐴𝐷| = 4 i |𝑂𝐷| = |𝐵𝐶| = 6.
+Kąty 𝑂𝐷𝐴 i 𝐵𝐶𝑂 są proste (zobacz rysunek).
+                               𝐷
+
+                        4          6
+                                          𝑂                   𝐶
+                    𝐴
+
+
+                                                              6
+
+
+                                                              𝐵
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Długość odcinka 𝑂𝐶 jest równa
+
+A. 9                    B. 8                  C. 2√13         D. 3√13
+
+ Brudnopis
+
+
+
+
+                                       Strona 21 z 32
+MMAP-P0_100
+        Zadanie 23. (0–2)
+        Przekątne równoległoboku 𝐴𝐵𝐶𝐷 mają                 𝐷           𝐻               𝐶
+        długości: |𝐴𝐶| = 16 oraz |𝐵𝐷| = 12.
+        Wierzchołki 𝐸 , 𝐹 , 𝐺 oraz 𝐻 rombu 𝐸𝐹𝐺𝐻
+        leżą na bokach równoległoboku 𝐴𝐵𝐶𝐷
+        (zobacz rysunek).
+        Boki tego rombu są równoległe do
+        przekątnych równoległoboku.
+                                                   𝐸
+                                                                   𝑂
+                                                                               𝐺
+
+
+
+
+ 23.    Oblicz długość boku rombu 𝑬𝑭𝑮𝑯.     𝐴                  𝐹           𝐵
+0–1–2
+        Zapisz obliczenia.
+
+
+
+
+                                          Strona 22 z 32
+                                                                               MMAP-P0_100
+Zadanie 24. (0–2)
+                                                                  4
+Dany jest trójkąt 𝐴𝐵𝐶 , w którym |𝐴𝐶| = 4, |𝐴𝐵| = 3, cos ∡𝐵𝐴𝐶 =     .
+                                                                  5
+
+Oblicz pole trójkąta 𝑨𝑩𝑪.                                                24.
+
+                                                                        0–1–2
+Zapisz obliczenia.
+
+
+
+
+                                    Strona 23 z 32
+MMAP-P0_100
+Zadanie 25.
+Dany jest sześciokąt foremny 𝐴𝐵𝐶𝐷𝐸𝐹 o polu
+                                                   𝐸             𝐷
+równym 6√3 (zobacz rysunek).
+
+
+
+
+                                             𝐹                             𝐶
+
+
+
+
+                                                   𝐴             𝐵
+
+
+Zadanie 25.1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Pole trójkąta 𝐴𝐵𝐸 jest równe
+
+A. 6                 B. 4√3              C. 2√3           D. 4
+
+ Brudnopis
+
+
+
+
+Zadanie 25.2. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Długość odcinka 𝐴𝐸 jest równa
+
+A. 2                 B. 2√3              C. 4√3           D. 4
+
+ Brudnopis
+
+
+
+
+                                  Strona 24 z 32
+                                                                     MMAP-P0_100
+Zadanie 26. (0–1)
+Dany jest trapez 𝐴𝐵𝐶𝐷 , w którym 𝐴𝐵||𝐶𝐷 oraz                𝐷                𝐶
+przekątne 𝐴𝐶 i 𝐵𝐷 przecinają się w punkcie 𝑂
+(zobacz rysunek). Wysokość tego trapezu jest
+równa 12. Obwód trójkąta 𝐴𝐵𝑂 jest równy 39,                          𝑂
+a obwód trójkąta 𝐶𝐷𝑂 jest równy 13.                                                     12
+
+
+
+
+                                                𝐴                                   𝐵
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Wysokość trójkąta 𝐴𝐵𝑂 poprowadzona z punktu 𝑂 jest równa
+
+A. 3                  B. 4                  C. 9                   D. 6
+
+ Brudnopis
+
+
+
+
+Zadanie 27. (0–1)
+Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥, 𝑦), dany jest okrąg 𝒪
+o równaniu
+                               (𝑥 − 3)2 + (𝑦 − 3)2 = 13
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Okrąg 𝒪 przecina oś 𝑂𝑦 w punktach o współrzędnych
+
+A. (0, 1) i (0, 5).                         B. (0, 1) i (0, −5).
+
+C. (1, 0) i (5, 0).                         D. (0, −1) i (0, 5).
+
+ Brudnopis
+
+
+
+
+                                     Strona 25 z 32
+MMAP-P0_100
+Zadanie 28. (0–1)
+Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥, 𝑦), dane są proste 𝑘 oraz 𝑙
+o równaniach
+         1
+𝑘: 𝑦 =     𝑥−1
+         3
+𝑙: 𝑦 = −3𝑥 + 6
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Proste 𝑘 oraz 𝑙
+
+A. nie mają punktów wspólnych.
+B. są prostopadłe.
+
+C. przecinają się w punkcie 𝑃 = (0, −1).
+
+D. się pokrywają.
+
+ Brudnopis
+
+
+
+
+Zadanie 29. (0–1)
+Na płaszczyźnie, w kartezjańskim układzie współrzędnych (𝑥, 𝑦), dane są punkty
+𝐴 = (1, 2) i 𝐵 = (2𝑚, 𝑚), gdzie 𝑚 jest liczbą rzeczywistą, oraz prosta 𝑘 o równaniu
+𝑦 = −𝑥 − 1.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Prosta przechodząca przez punkty 𝐴 i 𝐵 jest równoległa do prostej 𝑘 , gdy
+
+                                                      1
+A. 𝑚 = −1             B. 𝑚 = 1              C. 𝑚 =                D. 𝑚 = 2
+                                                      2
+
+ Brudnopis
+
+
+
+
+                                     Strona 26 z 32
+                                                                             MMAP-P0_100
+Zadanie 30.
+Dany jest sześcian 𝐴𝐵𝐶𝐷𝐸𝐹𝐺𝐻 o krawędzi długości 9. Wierzchołki podstawy 𝐴𝐵𝐶𝐷
+sześcianu połączono odcinkami z punktem 𝑊 , który jest punktem przecięcia przekątnych
+podstawy 𝐸𝐹𝐺𝐻 . Otrzymano w ten sposób ostrosłup prawidłowy czworokątny 𝐴𝐵𝐶𝐷𝑊
+(zobacz rysunek).
+                                    𝐻                      𝐺
+                                           𝑊
+
+                           𝐸
+                                                  𝐹
+                                                           9
+
+
+
+                                   𝐷                       𝐶
+
+
+
+                           𝐴                    𝐵
+
+Zadanie 30.1. (0–1)
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Objętość 𝑉 ostrosłupa 𝐴𝐵𝐶𝐷𝑊 jest równa
+
+A. 243                B. 364,5              C. 489                D. 729
+
+ Brudnopis
+
+
+
+
+                                     Strona 27 z 32
+MMAP-P0_100
+30.2.   Zadanie 30.2. (0–2)
+0–1–2   Oblicz cosinus kąta nachylenia krawędzi bocznej ostrosłupa do płaszczyzny
+        podstawy.
+
+        Zapisz obliczenia.
+
+
+
+
+                                          Strona 28 z 32
+                                                                                    MMAP-P0_100
+Zadanie 31. (0–1)
+Dany jest sześcian ℱ o krawędzi długości 𝑎 i objętości 𝑉 oraz sześcian 𝒢 o krawędzi
+długości 3𝑎 .
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Objętość sześcianu 𝒢 jest równa
+
+A. 3𝑉                 B. 9𝑉                  C. 18𝑉                 D. 27𝑉
+
+ Brudnopis
+
+
+
+
+Zadanie 32. (0–1)
+Na loterii stosunek liczby losów wygrywających do liczby losów przegrywających jest
+równy 2 ∶ 7. Zakupiono jeden los z tej loterii.
+
+Dokończ zdanie. Wybierz właściwą odpowiedź spośród podanych.
+
+Prawdopodobieństwo zdarzenia polegającego na tym, że zakupiony los jest wygrywający,
+jest równe
+
+     1                     1                      2                      2
+A.                    B.                     C.                     D.
+     9                     2                      9                      7
+
+ Brudnopis
+
+
+
+
+                                      Strona 29 z 32
+MMAP-P0_100
+        Zadanie 33. (0–2)
+        W eksperymencie badano kiełkowanie nasion w pięciu donicach. Na koniec eksperymentu
+        policzono wykiełkowane nasiona w każdej z donic:
+        • w I donicy – 133 nasiona
+        • w II donicy – 140 nasion
+        • w III donicy – 119 nasion
+        • w IV donicy – 147 nasion
+        • w V donicy – 161 nasion.
+        Odchylenie standardowe liczby wykiełkowanych nasion jest równe 𝜎 = 14.
+
+ 33.    Podaj numery donic, w których liczba wykiełkowanych nasion mieści się w przedziale
+0–1–2   określonym przez jedno odchylenie standardowe od średniej.
+
+        Zapisz obliczenia.
+
+
+
+
+                                            Strona 30 z 32
+                                                                                   MMAP-P0_100
+              BRUDNOPIS (nie podlega ocenie)
+
+
+
+
+                        Strona 31 z 32
+MMAP-P0_100
+Strona 32 z 32
+                 MMAP-P0_100
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+
+
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+
+
+MATEMATYKA
+Poziom podstawowy
+Formuła 2023
+

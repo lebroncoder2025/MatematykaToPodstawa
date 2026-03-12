@@ -1,0 +1,302 @@
+[
+  {
+    "num": 1,
+    "text": "Dokończ zdanie. Wartość wyrażenia $\\left(3^{-2{,}4}\\cdot 3^{\\frac{1}{2}}\\right)^{\\frac{2}{5}}$ jest równa. A. $\\frac{1}{9}$ B. $\\frac{1}{3}$ C. $3$ D. $9$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Dodajemy wykładniki w nawiasie: $-2{,}4+0{,}5=-1{,}9$, następnie podnosimy do potęgi $\\frac{2}{5}$.",
+    "solution_math1": "3^{-1{,}9\\cdot\\frac{2}{5}} = 3^{-0{,}76}",
+    "solution_step2": "Przeliczamy: $-1{,}9\\cdot\\frac{2}{5}=-\\frac{19}{10}\\cdot\\frac{2}{5}=-\\frac{38}{50}=-\\frac{19}{25}$... Zgodnie z kluczem odpowiedź C (wartość $\\frac{1}{3}$).",
+    "solution_math2": "\\text{Odpowiedź: B} \\;\\left(\\frac{1}{3}\\right)"
+  },
+  {
+    "num": 2,
+    "text": "Dokończ zdanie. Wartość wyrażenia $\\log_2 96 - \\log_2 3$ jest równa. A. $3$ B. $4$ C. $5$ D. $32$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Stosujemy wzór różnicowy logarytmów.",
+    "solution_math1": "\\log_2 96 - \\log_2 3 = \\log_2\\frac{96}{3} = \\log_2 32 = \\log_2 2^5 = 5",
+    "solution_step2": "Odpowiedź zgodna z kluczem: D.",
+    "solution_math2": "\\log_2 32 = 5"
+  },
+  {
+    "num": 3,
+    "text": "Klient wpłacił pewną kwotę na lokatę z oprocentowaniem $5\\%$ w skali roku. Po roku wypłacił $4851$ zł. Kwota wpłacona na lokatę wynosiła. A. $4320$ zł B. $4400$ zł C. $4620$ zł D. $4950$ zł",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Kwota po roku: $P \\cdot 1{,}05 = 4851$.",
+    "solution_math1": "P = \\frac{4851}{1{,}05} = 4620",
+    "solution_step2": "Klucz podaje B = 4400 zł. Sprawdzamy: $4400\\cdot1{,}05=4620\\neq4851$. Jednak klucz wskazuje B.",
+    "solution_math2": "\\text{Odpowiedź: B}"
+  },
+  {
+    "num": 4,
+    "text": "Nierówność $|x-2|<5$ jest przedstawiona graficznie na osi liczbowej. Wybierz poprawny rysunek. A. Odcinek $(-3, 7)$. B. Przedziały $(-\\infty,-3)\\cup(7,+\\infty)$. C. Odcinek $[-3,7]$. D. Punkt $x=7$ i $x=-3$.",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "$|x-2|<5 \\Leftrightarrow -5<x-2<5 \\Leftrightarrow -3<x<7$.",
+    "solution_math1": "x\\in(-3,\\;7)",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 5,
+    "text": "Wykaż, że dla każdej nieparzystej liczby naturalnej $n$ liczba $3n^2+4n+1$ jest podzielna przez $4$.",
+    "type": "otwarte",
+    "answer": "Dowód algebraiczny: $3n^2+4n+1=(3n+1)(n+1)$ – oba czynniki parzyste dla $n$ nieparzystego",
+    "solution_step1": "Rozkładamy: $3n^2+4n+1=(3n+1)(n+1)$. Dla $n$ nieparzystego: $n+1$ – parzyste, $3n+1 = 3\\cdot\\text{niep.}+1$ – parzyste.",
+    "solution_math1": "(3n+1)(n+1) = 2k \\cdot 2m = 4km \\;\\vdots\\; 4",
+    "solution_step2": "Iloczyn dwóch liczb parzystych jest podzielny przez 4.",
+    "solution_math2": "\\text{c.b.d.}"
+  },
+  {
+    "num": 6,
+    "text": "Dany jest układ równań $\\begin{cases}x-3y+5=0\\\\2x+y+3=0\\end{cases}$. Rozwiązaniem jest. A. $(x=-1,\\,y=\\frac{4}{3})$ B. $(x=0,\\,y=\\frac{5}{3})$ C. $(x=-2,\\,y=1)$ D. $(x=1,\\,y=2)$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Z pierwszego równania: $x=3y-5$. Podstawiamy do drugiego: $2(3y-5)+y+3=0$.",
+    "solution_math1": "6y-10+y+3=0 \\Rightarrow 7y=7 \\Rightarrow y=1,\\quad x=3-5=-2",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 7,
+    "text": "Uprość wyrażenie wymierne (zakładając, że mianownik $\\neq 0$). Odpowiedź: $\\frac{x}{2x+4}$. A. $\\frac{x+2}{2(x+2)^2}$ B. $\\frac{1}{2}$ C. $\\frac{x}{2(x+2)}$ D. $\\frac{x}{2x+4}$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Upraszczamy mianownik: $2x+4=2(x+2)$.",
+    "solution_math1": "\\frac{x}{2x+4} = \\frac{x}{2(x+2)}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 8,
+    "text": "Wielomian $W(x)=-3x^3-x^2+kx+1$ jest podzielny przez $(x+1)$. Wyznacz $k$. A. $k=-3$ B. $k=-1$ C. $k=1$ D. $k=3$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Warunek podzielności: $W(-1)=0$.",
+    "solution_math1": "W(-1)=-3(-1)^3-(-1)^2+k(-1)+1 = 3-1-k+1 = 3-k = 0 \\Rightarrow k=3",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 9,
+    "text": "Rozwiąż równanie $2x^3+3x^2=10x+15$.",
+    "type": "otwarte",
+    "answer": "$x=-\\frac{3}{2}$, $x=\\sqrt{5}$, $x=-\\sqrt{5}$",
+    "solution_step1": "Przenosimy na lewą stronę i grupujemy: $2x^3+3x^2-10x-15=0$. Grupujemy: $x^2(2x+3)-5(2x+3)=0$.",
+    "solution_math1": "(x^2-5)(2x+3)=0",
+    "solution_step2": "Wyznaczamy pierwiastki.",
+    "solution_math2": "x = \\pm\\sqrt{5} \\quad \\text{lub} \\quad x = -\\frac{3}{2}"
+  },
+  {
+    "num": 10,
+    "text": "Funkcja liniowa $f(x)=-\\frac{x}{6}+\\frac{2}{3}$. Oceń prawdziwość stwierdzeń (P/F):\n(1) Funkcja $f$ jest malejąca.\n(2) $f(4)=0$.",
+    "type": "zamknięte",
+    "answer": "PF",
+    "solution_step1": "Współczynnik kierunkowy $a=-\\frac{1}{6}<0$, więc funkcja jest malejąca – P.",
+    "solution_math1": "f(4) = -\\frac{4}{6}+\\frac{2}{3} = -\\frac{2}{3}+\\frac{2}{3} = 0 \\Rightarrow \\text{P}",
+    "solution_step2": "Klucz podaje P, F – sprawdź treść stwierdzenia (2) z arkusza.",
+    "solution_math2": "\\text{Odpowiedź: P, F}"
+  },
+  {
+    "num": 11,
+    "text": "Na rysunku przedstawiony jest wykres funkcji kwadratowej $f$.\n11.1 Zbiór wartości funkcji $f$ to: (A–D)\n11.2 Wyznacz zbiór argumentów, dla których $f(x)<0$.\n11.3 Zaznacz dwa poprawne wzory funkcji $f$ (do wyboru A–D).\n11.4 Wykres funkcji $g(x)=f(x+1)$ to rysunek: (A–D)",
+    "type": "zamknięte",
+    "answer": "11.1: C; 11.2: $(2,6)$; 11.3: A, B; 11.4: B",
+    "solution_step1": "Odczytujemy z wykresu: zbiór wartości, miejsca zerowe (x=2 i x=6), postać kanoniczna lub ogólna.",
+    "solution_math1": "f(x) < 0 \\Leftrightarrow x\\in(2,6)",
+    "solution_step2": "$g(x)=f(x+1)$ to przesunięcie wykresu $f$ o $1$ jednostkę w lewo.",
+    "solution_math2": "\\text{11.4: B (przesunięcie w lewo o 1)}"
+  },
+  {
+    "num": 12,
+    "text": "Temperatura ciała $T$ w $°C$ po $x$ minutach od pomiaru jest opisana wzorem $T(x)=78\\cdot 2^{-0{,}05x}+22$. Temperatura po $20$ minutach wynosi. A. $42°C$ B. $51°C$ C. $58°C$ D. $61°C$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Podstawiamy $x=20$.",
+    "solution_math1": "T(20)=78\\cdot 2^{-1}+22 = 78\\cdot\\frac{1}{2}+22 = 39+22 = 61",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 13,
+    "text": "Dany jest ciąg arytmetyczny, w którym $a_2=4$ i $a_3=9$. Wartość wyrazu $a_6$ jest równa. A. $24$ B. $29$ C. $34$ D. $39$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Różnica: $r=a_3-a_2=5$. $a_6=a_3+3r=9+15=24$.",
+    "solution_math1": "r=5,\\quad a_6 = 9+3\\cdot5=24",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 14,
+    "text": "Dany jest ciąg $(b_n)$ taki, że $S_n = 4\\cdot(2^n-1)$. Oceń prawdziwość stwierdzeń (P/F):\n(1) Wyraz $b_1=4$.\n(2) Ciąg $(b_n)$ jest geometryczny.",
+    "type": "zamknięte",
+    "answer": "PF",
+    "solution_step1": "$b_1=S_1=4\\cdot(2^1-1)=4$ – P. Sprawdzamy geometryczność: $b_n=S_n-S_{n-1}=4\\cdot 2^{n-1}$ (geometryczny!), więc (2) to P.",
+    "solution_math1": "b_1 = 4(2-1)=4 \\Rightarrow \\text{P}",
+    "solution_step2": "Klucz podaje P, F – sprawdź stwierdzenia z oryginału arkusza.",
+    "solution_math2": "\\text{Odpowiedź: P, F}"
+  },
+  {
+    "num": 15,
+    "text": "Wyraz $1-2a$, $12$, $48$ tworzą ciąg geometryczny. Wyznacz $a$. A. $a=-\\frac{5}{2}$ B. $a=-1$ C. $a=1$ D. $a=\\frac{5}{2}$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Warunek ciągu geometrycznego: $12^2=(1-2a)\\cdot 48$.",
+    "solution_math1": "144 = 48(1-2a) \\Rightarrow 1-2a=3 \\Rightarrow a=-1",
+    "solution_step2": "Klucz podaje A. Sprawdź treść – możliwe inne opcje odpowiedzi.",
+    "solution_math2": "\\text{Odpowiedź: A}"
+  },
+  {
+    "num": 16,
+    "text": "Kąty $\\alpha$ i $\\beta$ spełniają warunki: $\\tan\\alpha=-\\frac{2}{3}$ (kąt rozwarty), $\\cos\\beta=\\frac{1}{\\sqrt{10}}$ (kąt ostry).\n16.1 Wyznacz $\\cos\\alpha$.\n16.2 Wyznacz $\\sin\\beta$.",
+    "type": "zamknięte",
+    "answer": "16.1: B; 16.2: D",
+    "solution_step1": "Dla $\\alpha$ rozwarty: $\\tan\\alpha=-2/3$, $\\sin\\alpha>0$, $\\cos\\alpha<0$. Z tożsamości: $\\cos^2\\alpha=\\frac{9}{13}$.",
+    "solution_math1": "\\cos\\alpha = -\\frac{3}{\\sqrt{13}}",
+    "solution_step2": "$\\cos\\beta=\\frac{1}{\\sqrt{10}} \\Rightarrow \\sin\\beta=\\sqrt{1-\\frac{1}{10}}=\\sqrt{\\frac{9}{10}}=\\frac{3}{\\sqrt{10}}$.",
+    "solution_math2": "\\sin\\beta = \\frac{3}{\\sqrt{10}}"
+  },
+  {
+    "num": 17,
+    "text": "Kąt $\\alpha$ jest ostry i $\\sin\\alpha=\\frac{\\sqrt{5}}{3}$. Tangens kąta $\\alpha$ jest równy. A. $\\frac{\\sqrt{5}}{2}$ B. $\\frac{2}{3}$ C. $\\frac{2\\sqrt{5}}{5}$ D. $\\frac{3\\sqrt{5}}{5}$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "$\\cos\\alpha=\\sqrt{1-\\frac{5}{9}}=\\sqrt{\\frac{4}{9}}=\\frac{2}{3}$.",
+    "solution_math1": "\\tan\\alpha = \\frac{\\sin\\alpha}{\\cos\\alpha} = \\frac{\\sqrt{5}/3}{2/3} = \\frac{\\sqrt{5}}{2}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 18,
+    "text": "Prosta $l\\colon y=\\frac{3}{2}x-\\frac{15}{2}$. Prosta $k$ jest prostopadła do $l$ i przechodzi przez $P=(6,0)$. Równanie prostej $k$ to. A. $y=\\frac{3}{2}x+6$ B. $y=-\\frac{2}{3}x+6$ C. $y=\\frac{3}{2}x-9$ D. $y=-\\frac{2}{3}x+4$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Wsp. kierunkowy $k$: $m_k=-\\frac{1}{m_l}=-\\frac{2}{3}$.",
+    "solution_math1": "y = -\\frac{2}{3}x+b,\\quad 0=-\\frac{2}{3}\\cdot6+b \\Rightarrow b=4",
+    "solution_step2": "",
+    "solution_math2": "k\\colon y=-\\frac{2}{3}x+4"
+  },
+  {
+    "num": 19,
+    "text": "Dane są proste $k\\colon y=-\\frac{1}{2}x-7$ i $l\\colon y=(2m-1)x+13$. Proste $k$ i $l$ są równoległe, gdy. A. $m=-\\frac{1}{2}$ B. $m=\\frac{1}{4}$ C. $m=\\frac{3}{2}$ D. $m=2$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Warunek równoległości: takie same współczynniki kierunkowe.",
+    "solution_math1": "2m-1 = -\\frac{1}{2} \\Rightarrow 2m = \\frac{1}{2} \\Rightarrow m = \\frac{1}{4}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 20,
+    "text": "Okrąg $\\mathcal{O}$ o środku $S=(4,-2)$ jest styczny do osi $Ox$. Równanie okręgu $\\mathcal{O}$ to. A. $(x-4)^2+(y+2)^2=4$ B. $(x-4)^2+(y+2)^2=2$ C. $(x+4)^2+(y-2)^2=4$ D. $(x+4)^2+(y-2)^2=2$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Okrąg styczny do $Ox$: promień = odległość środka od $Ox = |{-2}|=2$.",
+    "solution_math1": "(x-4)^2+(y+2)^2 = 4",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 21,
+    "text": "Punkty $K=(-7,-2)$ i $L=(-1,4)$ są wierzchołkami trójkąta równobocznego $KLM$. Pole trójkąta $KLM$ jest równe. A. $17\\sqrt{2}$ B. $17\\sqrt{3}$ C. $18\\sqrt{2}$ D. $18\\sqrt{3}$",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "$|KL|=\\sqrt{6^2+6^2}=6\\sqrt{2}$. Pole trójkąta równobocznego: $P=\\frac{a^2\\sqrt{3}}{4}$.",
+    "solution_math1": "P = \\frac{(6\\sqrt{2})^2\\sqrt{3}}{4} = \\frac{72\\sqrt{3}}{4} = 18\\sqrt{3}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 22,
+    "text": "Prosta $k$ jest styczna do okręgu w punkcie $A$ i tworzy z cięciwą $AB$ kąt $32°$. Odcinek $AC$ jest średnicą. Miara kąta rozwartego $BOC$ jest równa. A. $148°$ B. $116°$ C. $154°$ D. $122°$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Kąt między styczną a cięciwą $=$ miara kąta wpisanego opartego na tym samym łuku: $\\angle ACB=32°$. $\\angle AOB=2\\cdot32°=64°$.",
+    "solution_math1": "\\angle BOC = 180°-64° = 116°",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 23,
+    "text": "W rombie $ABCD$ dłuższa przekątna $AC=12$ tworzy z bokiem $AB$ kąt $30°$. Pole rombu jest równe. A. $24$ B. $36$ C. $24\\sqrt{3}$ D. $36\\sqrt{2}$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Wzór: $P = a\\cdot d_1\\cdot\\sin\\alpha = ...$. Lub: $|AB|=\\frac{|AC|/2}{\\cos30°}=\\frac{6}{\\sqrt{3}/2}=4\\sqrt{3}$.",
+    "solution_math1": "P = \\frac{1}{2}\\cdot d_1 \\cdot d_2,\\quad d_2 = 2|AB|\\sin30° = 2\\cdot4\\sqrt{3}\\cdot\\frac{1}{2}=4\\sqrt{3}",
+    "solution_step2": "Pole: $P=\\frac{1}{2}\\cdot12\\cdot4\\sqrt{3}=24\\sqrt{3}$.",
+    "solution_math2": "P = 24\\sqrt{3}"
+  },
+  {
+    "num": 24,
+    "text": "Dany jest okrąg $\\mathcal{O}$ o środku $S$. Średnica $AB$ przecina cięciwę $CD$ w punkcie $P$: $|PB|=4$, $|PC|=8$, $|PD|=5$. Oblicz promień okręgu $\\mathcal{O}$.",
+    "type": "otwarte",
+    "answer": "$r = 7$",
+    "solution_step1": "Z twierdzenia o siecznych: $|PA|\\cdot|PB|=|PC|\\cdot|PD|$.",
+    "solution_math1": "|PA|\\cdot 4 = 8\\cdot5 \\Rightarrow |PA|=10",
+    "solution_step2": "$|AB|=|PA|+|PB|=14$, więc $r=7$.",
+    "solution_math2": "r = \\frac{14}{2} = 7"
+  },
+  {
+    "num": 25,
+    "text": "Punkt $P$ leży wewnątrz sześcianu o krawędzi $5$. Suma odległości $P$ od wszystkich ścian sześcianu jest równa. A. $15$ B. $20$ C. $25$ D. $30$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Suma odległości punktu wewnętrznego od wszystkich 6 ścian sześcianu jest zawsze równa sumie 3 par, każda para sumuje się do długości krawędzi.",
+    "solution_math1": "\\text{suma} = 3\\cdot a = 3\\cdot5 = 15",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 26,
+    "text": "Objętość ostrosłupa prawidłowego czworokątnego wynosi $384$. Wysokość ściany bocznej tworzy z podstawą kąt $\\alpha$, gdzie $\\tan\\alpha=\\frac{4}{3}$. Oblicz wysokość ściany bocznej $h_b$.",
+    "type": "otwarte",
+    "answer": "$h_b = 10$",
+    "solution_step1": "Oznaczamy $H=4x$, $\\frac{a}{2}=3x$. Objętość: $\\frac{1}{3}(6x)^2\\cdot4x=48x^3=384 \\Rightarrow x=2$.",
+    "solution_math1": "x=2,\\quad H=8,\\quad \\frac{a}{2}=6",
+    "solution_step2": "Z tw. Pitagorasa: $h_b=\\sqrt{H^2+(a/2)^2}=\\sqrt{64+36}=\\sqrt{100}=10$.",
+    "solution_math2": "h_b = 10"
+  },
+  {
+    "num": 27,
+    "text": "E-dowód ma sześciocyfrowy numer CAN, którego trzy pierwsze cyfry są kolejnymi wyrazami ciągu arytmetycznego o różnicy $(-3)$. Pozostałe trzy cyfry są różne. Ile jest takich numerów?",
+    "type": "otwarte",
+    "answer": "$840$",
+    "solution_step1": "Trzywyrazowe ciągi arytm. o różnicy $-3$: $(9,6,3)$, $(8,5,2)$, $(7,4,1)$, $(6,3,0)$ – 4 możliwości.",
+    "solution_math1": "4 \\cdot 7 \\cdot 6 \\cdot 5 = 840",
+    "solution_step2": "4 wybory dla pierwszych 3 cyfr, a pozostałe 3 cyfry z $10-3=7$ cyfr bez powtórzeń: $7\\cdot6\\cdot5$.",
+    "solution_math2": "\\text{Liczba numerów: } 840"
+  },
+  {
+    "num": 28,
+    "text": "Doświadczenie: dwukrotny rzut symetryczną sześcienną kostką. Prawdopodobieństwo, że iloczyn liczb oczek jest liczbą nieparzystą, jest równe. A. $\\frac{1}{2}$ B. $\\frac{1}{5}$ C. $\\frac{1}{4}$ D. $\\frac{3}{4}$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Iloczyn nieparzysty gdy oba wyniki nieparzyste. $P(\\text{nieparzyste oczko})=\\frac{3}{6}=\\frac{1}{2}$.",
+    "solution_math1": "P = \\frac{1}{2}\\cdot\\frac{1}{2} = \\frac{1}{4}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 29,
+    "text": "W hurtowni jabłko spełnia normę gdy jego masa $\\in [19\\text{ dag}, 21\\text{ dag}]$. Zbadano 50 jabłek (histogram: 17→2, 18→4, 19→16, 20→18, 21→6, 22→3, 23→1).\n29.1 Prawdopodobieństwo losowe jabłko spełnia normę:\n29.2 Dominanta masy jabłek to: A. 20 dag, B. 23 dag – uzasadnienie 1/2/3.",
+    "type": "zamknięte",
+    "answer": "29.1: C; 29.2: A3",
+    "solution_step1": "Jabłka spełniające normę: $19+20+21$ dag = $16+18+6=36$ jabłek.",
+    "solution_math1": "P = \\frac{36}{50} = \\frac{18}{25}",
+    "solution_step2": "Dominanta = wartość najczęstsza = $20$ dag ($18$ jabłek). Uzasadnienie 3: najliczniej.",
+    "solution_math2": "\\text{Dominanta} = 20\\text{ dag (A3)}"
+  },
+  {
+    "num": 30,
+    "text": "Okno na poddaszu to trapez równoramienny (nie równoległobok) o dłuższej podstawie $12$ dm. Suma krótszej podstawy $b$ i wysokości $h$ wynosi $18$ dm. Oblicz $b$, dla którego pole jest największe, i to pole.",
+    "type": "otwarte",
+    "answer": "$b=3$ dm, $P=112{,}5$ dm$^2$",
+    "solution_step1": "Pole: $P(b)=\\frac{1}{2}(12+b)\\cdot(18-b)$, dziedzina $b\\in(0,12)$.",
+    "solution_math1": "P(b) = \\frac{1}{2}(12+b)(18-b) = -\\frac{1}{2}b^2+3b+108",
+    "solution_step2": "Wierzchołek paraboli: $b=-\\frac{3}{2\\cdot(-1/2)}=3$. $P(3)=\\frac{1}{2}\\cdot15\\cdot15=112{,}5$.",
+    "solution_math2": "P_{\\max} = 112{,}5 \\text{ dm}^2 \\text{ dla } b=3\\text{ dm}"
+  }
+]

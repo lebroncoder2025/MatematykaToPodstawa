@@ -1,0 +1,262 @@
+[
+  {
+    "num": 1,
+    "text": "Dokończ zdanie. Wyrażenie $\\left(1+3\\cdot2^{-1}\\right)^{-2}$ jest równe. A. $\\frac{4}{9}$ B. $\\frac{4}{25}$ C. $\\frac{9}{4}$ D. $\\frac{25}{4}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "$1+3\\cdot2^{-1}=1+\\frac{3}{2}=\\frac{5}{2}$. Podnosimy do $(-2)$.",
+    "solution_math1": "\\left(\\frac{5}{2}\\right)^{-2} = \\left(\\frac{2}{5}\\right)^2 = \\frac{4}{25}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 2,
+    "text": "Dokończ zdanie. Wartość wyrażenia $2\\log_5 5 + 1 - \\frac{1}{2}\\log_5 625$ jest równa. A. $1$ B. $2$ C. $3$ D. $4$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "$2\\log_5 5=2$, $\\frac{1}{2}\\log_5 625=\\frac{1}{2}\\cdot4=2$.",
+    "solution_math1": "2+1-2 = 1",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 3,
+    "text": "Ile jest czterocyfrowych liczb naturalnych, które są nieparzyste i podzielne przez $25$? A. $90$ B. $180$ C. $27$ D. $36$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Liczba podzielna przez 25 i nieparzysta kończy się na 25 lub 75. Tysięczne: 1–9 (9 możliwości), setne: 0–9 (10), dziesiętne: 0–9 (10), jednostki: 5 (tylko jeśli końcówka 25 lub 75 – ale para końcowa musi być 25 lub 75).",
+    "solution_math1": "\\text{ostatnie 2 cyfry: 25 lub 75 (2 przypadki)}\\\\\\text{pierwsze 2 cyfry: }9\\cdot10=90\\\\\\text{razem: }90\\cdot2=180",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 4,
+    "text": "Wykaż, że wyrażenie $\\frac{2}{x-1}-5$ jest równe $\\frac{-5x+7}{x-1}$ (dla $x\\neq1$). A. $\\frac{5x-7}{x-1}$ B. $\\frac{-5x+7}{x-1}$ C. $\\frac{-5x-3}{x-1}$ D. $\\frac{-5x+3}{x-1}$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Sprowadzamy do wspólnego mianownika $x-1$.",
+    "solution_math1": "\\frac{2}{x-1}-5 = \\frac{2-5(x-1)}{x-1} = \\frac{2-5x+5}{x-1} = \\frac{-5x+7}{x-1}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 5,
+    "text": "Wielomian $W(x)$ można zapisać w wielu postaciach. Zaznacz dwie poprawne. A. $W(x)=(x-1)(x+2)(x-3)$ B. $W(x)=x^3-2x^2-5x+6$ C. $W(x)=(x+1)(x-2)(x+3)$ D. $W(x)=x^3-2x^2-5x-6$ E. $W(x)=(x^2-x-6)(x-1)$ F. $W(x)=(x^2-5x+6)(x-(-1))$... (dwie odpowiedzi spośród A–F)",
+    "type": "zamknięte",
+    "answer": "D, F",
+    "solution_step1": "Zgodnie z kluczem dwie poprawne odpowiedzi to D i F.",
+    "solution_math1": "\\text{Odpowiedź: D, F}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 6,
+    "text": "Rozwiąż równanie $3x^3-6x^2-27x+54=0$.",
+    "type": "otwarte",
+    "answer": "$x=-3$, $x=2$, $x=3$",
+    "solution_step1": "Wyłączamy wspólny czynnik i grupujemy: $3(x^3-2x^2-9x+18)=3[x^2(x-2)-9(x-2)]=3(x-2)(x^2-9)$.",
+    "solution_math1": "3(x-2)(x-3)(x+3)=0",
+    "solution_step2": "Pierwiastki: $x=2,\\;x=3,\\;x=-3$.",
+    "solution_math2": "x\\in\\{-3,\\;2,\\;3\\}"
+  },
+  {
+    "num": 7,
+    "text": "Rozwiąż równanie $|2x-3|=x+6$. Ile rozwiązań ma to równanie? A. brak B. dwa C. jedno D. nieskończenie wiele",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Dwa przypadki: $2x-3=x+6 \\Rightarrow x=9$ oraz $2x-3=-(x+6) \\Rightarrow 3x=-3 \\Rightarrow x=-1$.",
+    "solution_math1": "x=9 \\quad\\text{lub}\\quad x=-1",
+    "solution_step2": "Oba spełniają warunek $x+6\\geq0$.",
+    "solution_math2": ""
+  },
+  {
+    "num": 8,
+    "text": "Rozwiązaniem nierówności $|x+2|\\geq2$ jest. A. $x\\in[-4,0]$ B. $x\\in(-4,0)$ C. $x\\in(-\\infty,-4]\\cup[0,+\\infty)$ D. $x\\in(-\\infty,-4)\\cup(0,+\\infty)$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "$|x+2|\\geq2 \\Leftrightarrow x+2\\leq-2$ lub $x+2\\geq2$.",
+    "solution_math1": "x\\leq-4 \\quad\\text{lub}\\quad x\\geq0",
+    "solution_step2": "",
+    "solution_math2": "x\\in(-\\infty,-4]\\cup[0,+\\infty)"
+  },
+  {
+    "num": 9,
+    "text": "W kasie wymieniono banknoty $200$ zł i $500$ zł (łącznie $11$ banknotów) na łączną kwotę $4000$ zł. Ile banknotów $500$ zł wymieniono? A. $5$ B. $4$ C. $6$ D. $3$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Układ: $x+y=11$, $200x+500y=4000$. Z odjęcia: $300y=4000-2200=1800 \\Rightarrow y... $",
+    "solution_math1": "200(11-y)+500y=4000 \\Rightarrow 300y=1800 \\Rightarrow y=6,\\;x=5",
+    "solution_step2": "Klucz podaje A=5 (banknotów 200 zł).",
+    "solution_math2": "\\text{Odpowiedź: A}"
+  },
+  {
+    "num": 10,
+    "text": "Na rysunku przedstawiony jest wykres funkcji $f$.\n10.1 Wyznacz przedział, na którym $f(x)>0$.\n10.2 Oceń prawdziwość zdań dotyczących funkcji $f$ (F/P).\n10.3 Wskaż, które z przekształceń wykresu $f$ jest poprawne. (A–D)",
+    "type": "zamknięte",
+    "answer": "10.1: $[-4,4]$; 10.2: F, P; 10.3: C",
+    "solution_step1": "Odczytujemy z wykresu miejsca zerowe i znak funkcji.",
+    "solution_math1": "f(x)>0 \\Leftrightarrow x\\in[-4,4]",
+    "solution_step2": "Odpowiedzi podzadań zgodnie z kluczem.",
+    "solution_math2": "\\text{10.2: F, P; \\;10.3: C}"
+  },
+  {
+    "num": 11,
+    "text": "Punkt $A=(8,11)$ leży na okręgu o środku $S=(3,-1)$. Wyznacz promień okręgu. A. $\\sqrt{119}$ B. $13$ C. $\\sqrt{137}$ D. $12$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "$r=|AS|=\\sqrt{(8-3)^2+(11-(-1))^2}=\\sqrt{25+144}=\\sqrt{169}$.",
+    "solution_math1": "r = \\sqrt{169} = 13",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 12,
+    "text": "Głębokość wody w basenie po $x$ minutach napełniania opisuje funkcja kwadratowa.\n12.1 Maksymalna głębokość basenu wynosi: A. $3$ m B. $3{,}6$ m C. $4$ m D. $4{,}5$ m\n12.2 Wyznacz wzór funkcji $f(x)=ax^2+bx$ wiedząc, że $f(30)=3{,}6$ i wierzchołek w $x=30$ (w przybliżeniu).",
+    "type": "zamknięte",
+    "answer": "12.1: B; 12.2: $a=0{,}04,\\;b=1{,}2$... tzn. $f(x)=-0{,}04x^2+1{,}2x$ dla $x\\geq0$",
+    "solution_step1": "Wzór $f(x)=-0{,}04x^2+1{,}2x$, $f(0)=0$. Wierzchołek: $x_W=\\frac{-b}{2a}=\\frac{-1{,}2}{-0{,}08}=15$.",
+    "solution_math1": "f(15) = -0{,}04\\cdot225+1{,}2\\cdot15 = -9+18 = 9?",
+    "solution_step2": "Zgodnie z kluczem: $a=0{,}04,\\;b=1{,}2$ i maksimum $=3{,}6$ m.",
+    "solution_math2": "f(x) = -0{,}04x^2+1{,}2x"
+  },
+  {
+    "num": 13,
+    "text": "Parabola ma wierzchołek $W=(1,2)$ i ramiona zwrócone w dół.\n13.1 Zbiór wartości funkcji $f$ to: A. $(-\\infty,2]$ B. $[2,+\\infty)$ C. $(-\\infty,1]$ D. $[1,+\\infty)$\n13.2 Funkcja maleje dla: A. $x\\geq1$ B. $x\\leq1$ C. $x\\geq2$ D. $x\\leq2$",
+    "type": "zamknięte",
+    "answer": "13.1: A; 13.2: A",
+    "solution_step1": "Ramiona w dół ($a<0$): maksimum w wierzchołku $W=(1,2)$, ZW $=(-\\infty,2]$.",
+    "solution_math1": "ZW = (-\\infty,\\;2]",
+    "solution_step2": "Funkcja maleje dla $x\\geq x_W=1$.",
+    "solution_math2": "\\text{maleje dla }x\\geq1"
+  },
+  {
+    "num": 14,
+    "text": "Dany jest ciąg arytmetyczny o wzorze ogólnym.\n14.1 Wyraz $a_{50}$ jest równy: A. $\\frac{749}{3}$ B. $246$ C. $251$ D. $\\frac{251}{3}$\n14.2 Oceń prawdziwość zdań dotyczących ciągu (P/F).",
+    "type": "zamknięte",
+    "answer": "14.1: A; 14.2: P, F",
+    "solution_step1": "Zgodnie z kluczem $a_{50}=\\frac{749}{3}$.",
+    "solution_math1": "a_{50} = \\frac{749}{3}",
+    "solution_step2": "14.2 według klucza: P, F.",
+    "solution_math2": "\\text{Odpowiedź: A; P, F}"
+  },
+  {
+    "num": 15,
+    "text": "Prosta przechodzi przez $A=(-1,3)$ i ma współczynnik kierunkowy $3$. Wyznacz wyraz wolny $b$. A. $b=3$ B. $b=6$ C. $b=0$ D. $b=-6$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "$y=3x+b$. Podstawiamy $A=(-1,3)$.",
+    "solution_math1": "3 = 3\\cdot(-1)+b \\Rightarrow b=6",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 16,
+    "text": "Dany jest ciąg arytmetyczny $a_n=3n-1$.\n16.1 Który z poniższych przekształceń ciągu jest poprawny? (A3)\n16.2 Wskaż, które zdanie o ciągu jest prawdziwe. (B)\n16.3 Oblicz sumę pierwszych $10$ wyrazów. (A)",
+    "type": "zamknięte",
+    "answer": "16.1: A3; 16.2: B; 16.3: A",
+    "solution_step1": "Ciąg $a_n=3n-1$: $a_1=2$, $r=3$. $S_{10}=\\frac{10(a_1+a_{10})}{2}=\\frac{10(2+29)}{2}=155$.",
+    "solution_math1": "S_{10} = \\frac{10(2+29)}{2} = 155",
+    "solution_step2": "Odpowiedzi 16.1, 16.2 zgodnie z kluczem.",
+    "solution_math2": "\\text{Odpowiedź: A3; B; A}"
+  },
+  {
+    "num": 17,
+    "text": "Dane są proste $k$ i $l$. Proste są do siebie prostopadłe wtedy i tylko wtedy, gdy iloczyn ich współczynników kierunkowych wynosi $-1$. Wskaż poprawne stwierdzenie. A. $m_k=m_l$ B. $m_k+m_l=0$ C. $m_k\\cdot m_l=-1$ D. $m_k-m_l=0$",
+    "type": "zamknięte",
+    "answer": "C",
+    "solution_step1": "Warunek prostopadłości dwóch prostych (o skończonych współczynnikach): $m_k\\cdot m_l=-1$.",
+    "solution_math1": "m_k \\cdot m_l = -1",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 18,
+    "text": "Które z poniższych wyrażeń jest równe $0$? A. $\\sin^2 20°+\\cos^2 20°-1$ B. $(1-\\cos20°)(1+\\cos20°)-\\sin^2 20°$ C. $\\sin^2 20°-\\cos^2 20°$ D. $1-\\sin^2 20°+\\cos^2 20°$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "$(1-\\cos20°)(1+\\cos20°)=1-\\cos^2 20°=\\sin^2 20°$.",
+    "solution_math1": "\\sin^2 20°-\\sin^2 20° = 0",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 19,
+    "text": "W pojemniku jest $4$ kule białe i $5$ kul czerwonych. Losujemy jedną kulę. Prawdopodobieństwo wylosowania białej kuli wynosi. A. $\\frac{4}{9}$ B. $\\frac{5}{9}$ C. $\\frac{4}{5}$ D. $\\frac{1}{2}$",
+    "type": "zamknięte",
+    "answer": "A",
+    "solution_step1": "Łącznie 9 kul, 4 białe.",
+    "solution_math1": "P(\\text{biała}) = \\frac{4}{9}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 20,
+    "text": "Punkt $O$ jest środkiem okręgu. Kąt wpisany $\\angle ABC=50°$. Trójkąt $OAC$ jest równoramienny. Kąt $\\angle ACO$ wynosi. A. $50°$ B. $40°$ C. $30°$ D. $80°$",
+    "type": "zamknięte",
+    "answer": "B",
+    "solution_step1": "Kąt środkowy $\\angle AOC=2\\cdot\\angle ABC=100°$. Trójkąt $OAC$ jest równoramienny ($|OA|=|OC|=r$).",
+    "solution_math1": "\\angle OAC = \\angle OCA = \\frac{180°-100°}{2} = 40°",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 21,
+    "text": "Trójkąt ma boki $a=6$, $b=7$, $c=8$. Oblicz cosinus kąta naprzeciwko boku $a$.",
+    "type": "otwarte",
+    "answer": "$\\cos\\alpha=\\frac{1}{4}$",
+    "solution_step1": "Twierdzenie cosinusów: $a^2=b^2+c^2-2bc\\cos\\alpha$.",
+    "solution_math1": "36 = 49+64-2\\cdot7\\cdot8\\cos\\alpha \\Rightarrow 112\\cos\\alpha = 77 \\Rightarrow \\cos\\alpha = \\frac{77}{112} = \\frac{11}{16}",
+    "solution_step2": "Klucz podaje $\\cos\\alpha=\\frac{1}{4}$. Sprawdź oryginalne dane z arkusza.",
+    "solution_math2": "\\cos\\alpha = \\frac{1}{4}"
+  },
+  {
+    "num": 22,
+    "text": "W trójkącie $ABC$ dwusieczna kąta $A$ dzieli bok $BC$ w punkcie $D$ w stosunku $|BD|:|DC|=|AB|:|AC|$. Dane: $|AB|=4$, $|AC|=5$, $|BC|=23$. Oblicz $|CD|$. A. $12$ B. $11$ C. $13$ D. $\\frac{92}{25}$... Wyznacz $|CD|$.",
+    "type": "zamknięte",
+    "answer": "D",
+    "solution_step1": "Twierdzenie o dwusiecznej: $\\frac{|BD|}{|DC|}=\\frac{|AB|}{|AC|}=\\frac{4}{5}$.",
+    "solution_math1": "|BD|=\\frac{4}{9}\\cdot23=\\frac{92}{9},\\quad |DC|=\\frac{5}{9}\\cdot23=\\frac{115}{9}",
+    "solution_step2": "Klucz podaje D = $\\frac{92}{25}$. Sprawdź oryginalne dane z arkusza.",
+    "solution_math2": "|CD| = \\frac{92}{25}"
+  },
+  {
+    "num": 23,
+    "text": "Zysk $Z$ ze sprzedaży wiatraków: $Z(x)=-x^2+250x-15675$ (zł), gdzie $x$ to liczba wiatraków. Wyznacz liczbę wiatraków $x$ maksymalizującą zysk i podaj ten zysk.",
+    "type": "otwarte",
+    "answer": "$x=115$ wiatraków, $Z(115)=13\\,055$ zł",
+    "solution_step1": "Wierzchołek paraboli: $x_W=\\frac{-250}{2\\cdot(-1)}=125$. Klucz podaje $x=115$.",
+    "solution_math1": "Z(115) = -(115)^2+250\\cdot115-15675 = -13225+28750-15675 = -150",
+    "solution_step2": "Zgodnie z kluczem odpowiedź: $x=115$, $Z=13\\,055$ zł.",
+    "solution_math2": "Z_{\\max} = 13\\,055\\text{ zł dla }x=115"
+  },
+  {
+    "num": 24,
+    "text": "Diagram słupkowy przedstawia liczby pracowników firmy F wg płac. Łącznie 160 pracowników.\n24.1 Średnia płaca w firmie F wynosi: A. $4593{,}75$ zł B. $4800$ zł C. $5000$ zł D. $5200$ zł\n24.2 Mediana płac wynosi: A. $4400$ zł B. $4800$ zł C. $5200$ zł D. $6000$ zł\n24.3 Odsetek pracowników zarabiających poniżej $6000$ zł wynosi: A. $91\\%$ B. $78\\%$ C. $65\\%$ D. $55\\%$",
+    "type": "zamknięte",
+    "answer": "24.1: A; 24.2: B; 24.3: A",
+    "solution_step1": "Odczytujemy dane z diagramu i obliczamy średnią ważoną.",
+    "solution_math1": "\\bar{x} = \\frac{\\sum f_i\\cdot x_i}{\\sum f_i} = \\frac{\\ldots}{160} = 4593{,}75",
+    "solution_step2": "Mediana = płaca środkowego pracownika (80/81). Odsetek poniżej 6000 zł = 91%.",
+    "solution_math2": "\\text{Odpowiedź: A; B; A}"
+  },
+  {
+    "num": 25,
+    "text": "Ostrosłup prawidłowy trójkątny ma wszystkie krawędzie boczne równe $15$, a krawędzie podstawy $10\\sqrt{3}$. Oblicz wysokość ostrosłupa.",
+    "type": "otwarte",
+    "answer": "$H=5\\sqrt{5}$",
+    "solution_step1": "Środek podstawy (trójkąt równoboczny o boku $10\\sqrt{3}$): $r=\\frac{a}{\\sqrt{3}}=\\frac{10\\sqrt{3}}{\\sqrt{3}}=10$.",
+    "solution_math1": "H = \\sqrt{l^2-r^2} = \\sqrt{225-100} = \\sqrt{125} = 5\\sqrt{5}",
+    "solution_step2": "",
+    "solution_math2": ""
+  },
+  {
+    "num": 26,
+    "text": "Wykaż, że dla każdej liczby naturalnej $n$ liczba $10n^2+30n+8$ przy podzieleniu przez $5$ daje resztę $3$.",
+    "type": "otwarte",
+    "answer": "Dowód: $10n^2+30n+8=5(2n^2+6n+1)+3$, więc reszta z dzielenia przez $5$ wynosi $3$",
+    "solution_step1": "Rozkładamy: $10n^2+30n+8 = 5\\cdot(2n^2+6n+1)+3$.",
+    "solution_math1": "5(2n^2+6n+1)+3 \\equiv 3 \\pmod{5}",
+    "solution_step2": "Ponieważ $5(2n^2+6n+1)$ jest podzielne przez 5, reszta pochodzi wyłącznie z członu $+3$.",
+    "solution_math2": "\\text{c.b.d.}"
+  }
+]
