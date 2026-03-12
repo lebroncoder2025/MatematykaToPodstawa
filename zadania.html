@@ -18,6 +18,9 @@
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
+  <script src="assets/firebase-init.js"></script>
+  <script src="assets/db-sync.js"></script>
+  <script src="assets/auth.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <style>
@@ -84,6 +87,9 @@
     }
     .tiny-btn.active-book{background:#fef3c7;border-color:#f59e0b;color:#92400e;}
     .tiny-btn.active-solved{background:#dcfce7;border-color:#22c55e;color:#166534;}
+    .tiny-btn.active-note{background:#fefce8;border-color:#fde68a;color:#854d0e;}
+    .task-note-ta{width:100%;border:1.5px solid #e2e8f0;border-radius:.75rem;padding:.65rem 1rem;font-size:.83rem;resize:vertical;outline:none;font-family:inherit;transition:border-color .15s;box-sizing:border-box;min-height:70px;}
+    .task-note-ta:focus{border-color:#f59e0b;box-shadow:0 0 0 3px rgba(245,158,11,.1);}
     .mobile-nav-btn{border:1.5px solid #e2e8f0;background:#fff;color:#475569;width:2.3rem;height:2.3rem;border-radius:.7rem;display:none;align-items:center;justify-content:center;}
     @media (max-width: 767px){
       .mobile-nav-btn{display:inline-flex;}
@@ -770,6 +776,7 @@ function buildGrid() {
           '<div class="task-actions">'+
             '<button type="button" class="tiny-btn'+solvedClass+'" onclick="toggleSolved('+t.id+')"><i class="'+solvedIcon+' fa-circle-check"></i> '+solvedLabel+'</button>'+
             '<button type="button" class="tiny-btn'+bookClass+'" onclick="toggleBookmark('+t.id+')"><i class="'+bookIcon+' fa-bookmark"></i> '+bookLabel+'</button>'+
+            '<button type="button" class="tiny-btn'+(loadTaskNote(t.id)?' active-note':'')+'" id="note-btn-'+t.id+'" onclick="toggleTaskNote('+t.id+')"><i class="fa-regular fa-note-sticky"></i> Notatka</button>'+
           '</div>'+
           (t.hint?'<div class="hint-box mb-4"><p class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1"><i class="fa-solid fa-lightbulb mr-1"></i>Wskazówka</p><p class="text-amber-800 text-sm">'+t.hint+'</p></div>':'')+
           '<p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2"><i class="fa-solid fa-list-check mr-1 text-blue-500"></i>Rozwiązanie krok po kroku</p>'+
@@ -777,6 +784,10 @@ function buildGrid() {
           '<div class="answer-box">'+
             '<p class="text-xs font-bold text-emerald-600 uppercase tracking-wider mb-1"><i class="fa-solid fa-check-circle mr-1"></i>Odpowiedź</p>'+
             '<p class="text-gray-900 font-bold">'+t.answer+'</p>'+
+          '</div>'+
+          '<div id="note-panel-'+t.id+'" style="display:none;margin-top:.75rem;">'+
+            '<p class="text-xs font-bold text-amber-600 uppercase tracking-wider mb-1"><i class="fa-regular fa-note-sticky mr-1"></i>Moja notatka do zadania</p>'+
+            '<textarea id="note-ta-'+t.id+'" class="task-note-ta" rows="3" placeholder="Wpisz swoje notatki, obserwacje, trudności..." oninput="saveTaskNote('+t.id+')"></textarea>'+
           '</div>'+
         '</div>'+
       '</div>'+
@@ -793,6 +804,37 @@ function toggleCard(btn) {
   btn.classList.toggle('expanded', !isOpen);
   if (!isOpen && window.renderMathInElement) {
     renderMathInElement(panel, { delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}], throwOnError:false });
+  }
+}
+
+/* ===== Notatki do zadań ===== */
+function loadTaskNote(id) {
+  return localStorage.getItem('zadania-note-' + id) || '';
+}
+
+function saveTaskNote(id) {
+  var ta = document.getElementById('note-ta-' + id);
+  var val = ta ? ta.value : '';
+  if (val.trim()) {
+    localStorage.setItem('zadania-note-' + id, val);
+  } else {
+    localStorage.removeItem('zadania-note-' + id);
+  }
+  var noteBtn = document.getElementById('note-btn-' + id);
+  if (noteBtn) noteBtn.classList.toggle('active-note', !!val.trim());
+}
+
+function toggleTaskNote(id) {
+  var panel = document.getElementById('note-panel-' + id);
+  if (!panel) return;
+  var isOpen = panel.style.display !== 'none';
+  panel.style.display = isOpen ? 'none' : '';
+  if (!isOpen) {
+    var ta = document.getElementById('note-ta-' + id);
+    if (ta) {
+      ta.value = loadTaskNote(id);
+      setTimeout(function() { ta.focus(); }, 50);
+    }
   }
 }
 

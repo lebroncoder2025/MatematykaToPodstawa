@@ -12,6 +12,9 @@
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
+  <script src="assets/firebase-init.js"></script>
+  <script src="assets/db-sync.js"></script>
+  <script src="assets/auth.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
     body{font-family:'Inter',sans-serif;background:#f8fafc;}
@@ -116,6 +119,29 @@
     </div>
   </div>
 
+  <!-- WEEKLY GOAL -->
+  <div class="card p-6 mb-8">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+      <h2 class="font-black text-gray-900 text-lg"><i class="fa-solid fa-bullseye text-rose-500 mr-2"></i>Cel tygodniowy</h2>
+      <div class="flex items-center gap-2">
+        <span class="text-sm text-gray-500">Cel:</span>
+        <input id="studyGoalInput" type="number" min="5" max="1000" value="120"
+          class="border border-gray-200 rounded-lg px-2 py-1 text-sm font-bold w-20 text-center outline-none focus:border-blue-400">
+        <span class="text-sm text-gray-500">min/tydzień</span>
+        <button onclick="applyStudyGoal()"
+          class="bg-rose-500 hover:bg-rose-600 text-white font-bold text-sm px-3 py-1.5 rounded-lg transition">
+          Zapisz
+        </button>
+      </div>
+    </div>
+    <p class="text-sm text-gray-500 mb-3" id="studyGoalLabel">0 / 120 min (0%)</p>
+    <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
+      <div id="studyGoalBar" class="h-full rounded-full transition-all duration-700"
+        style="width:0%;background:linear-gradient(90deg,#f43f5e,#fb923c)"></div>
+    </div>
+    <p class="text-xs text-gray-400 mt-2">Postęp na podstawie stopera nauki z bieżącego tygodnia.</p>
+  </div>
+
   <!-- ACTIONS -->
   <div class="card p-6 mb-8">
     <h2 class="font-black text-gray-900 text-lg mb-4"><i class="fa-solid fa-gear text-gray-400 mr-2"></i>Akcje</h2>
@@ -130,7 +156,7 @@
         <i class="fa-solid fa-trash"></i> Zresetuj postęp kursu
       </button>
     </div>
-    <p class="text-xs text-gray-400 mt-3"><i class="fa-solid fa-circle-info mr-1"></i>Dane przechowywane są wyłącznie lokalnie w Twojej przeglądarce (localStorage). Nie są wysyłane na serwer.</p>
+    <p class="text-xs text-gray-400 mt-3"><i class="fa-solid fa-circle-info mr-1"></i>Dane przechowywane lokalnie. <span id="syncInfoText">Zaloguj się, aby synchronizować postęp między urządzeniami.</span></p>
   </div>
 
   <!-- LAST SESSION CHART (visual bar) -->
@@ -472,6 +498,53 @@ renderBarChart();
 renderQuizStats();
 renderQuizHistory();
 renderStudyWeek();
+
+/* ===== Cel tygodniowy ===== */
+function loadStudyGoal() {
+  return parseInt(localStorage.getItem('mtp-study-goal') || '120', 10);
+}
+function saveStudyGoal(min) {
+  localStorage.setItem('mtp-study-goal', String(min));
+}
+function renderStudyGoal() {
+  var goal = loadStudyGoal();
+  var goalInp = document.getElementById('studyGoalInput');
+  if (goalInp) goalInp.value = goal;
+  // Compute this week's total
+  var log = loadStudyLog();
+  var weekTotal = 0;
+  var now = new Date();
+  for (var d = 0; d < 7; d++) {
+    var dt = new Date(now);
+    dt.setDate(now.getDate() - d);
+    var k = dt.toISOString().slice(0, 10);
+    weekTotal += Math.round((log[k] || 0) / 60);
+  }
+  var pct = Math.min(100, Math.round((weekTotal / goal) * 100));
+  var bar = document.getElementById('studyGoalBar');
+  var label = document.getElementById('studyGoalLabel');
+  if (bar) bar.style.width = pct + '%';
+  if (label) label.textContent = weekTotal + ' / ' + goal + ' min (' + pct + '%)';
+}
+function applyStudyGoal() {
+  var val = parseInt((document.getElementById('studyGoalInput') || {}).value || '120', 10);
+  if (isNaN(val) || val < 5) val = 5;
+  if (val > 1000) val = 1000;
+  saveStudyGoal(val);
+  renderStudyGoal();
+  window.mtpToast && window.mtpToast('Cel zapisany!', 'success');
+}
+renderStudyGoal();
+document.addEventListener('mtp-data-loaded', function() {
+  renderStudyWeek();
+  renderStudyGoal();
+  renderQuizStats();
+  renderQuizHistory();
+  renderModuleList();
+  renderStatCards();
+  var el = document.getElementById('syncInfoText');
+  if (el) el.textContent = 'Dane zsynchronizowane z chmury \u2713';
+});
 </script>
 </body>
 </html>

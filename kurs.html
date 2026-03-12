@@ -12,6 +12,9 @@
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
+  <script src="assets/firebase-init.js"></script>
+  <script src="assets/db-sync.js"></script>
+  <script src="assets/auth.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"></script>
   <style>
@@ -221,6 +224,9 @@
       <a href="postep.html" class="text-xs text-blue-500 hover:text-blue-700 flex items-center gap-1.5 transition font-semibold">
         <i class="fa-solid fa-chart-line"></i> Szczegółowe statystyki
       </a>
+      <button onclick="showAllNotes()" class="text-xs text-yellow-600 hover:text-yellow-800 flex items-center gap-1.5 transition border border-yellow-200 px-3 py-1.5 rounded-lg hover:bg-yellow-50">
+        <i class="fa-regular fa-note-sticky"></i> Moje notatki
+      </button>
       <button onclick="downloadOffline()" class="text-xs text-slate-500 hover:text-slate-700 flex items-center gap-1.5 transition border border-slate-200 px-3 py-1.5 rounded-lg hover:bg-slate-50">
         <i class="fa-solid fa-download"></i> Pobierz kurs PDF/offline
       </button>
@@ -879,6 +885,13 @@ function init() {
   buildModules();
   updateGlobalStats();
 }
+
+document.addEventListener('mtp-data-loaded', function() {
+  state.load();
+  buildModules();
+  updateGlobalStats();
+  updateResumeCard();
+});
 
 function buildModules() {
   var grid = document.getElementById('modulesGrid');
@@ -1583,7 +1596,58 @@ function clearStepNote() {
   document.getElementById('stepNoteText').value = '';
   saveStepNote();
 }
+
+/* ===== Wszystkie notatki ===== */
+function showAllNotes() {
+  var keys = [];
+  for (var i = 0; i < localStorage.length; i++) {
+    var k = localStorage.key(i);
+    if (k && k.indexOf('kurs-note-') === 0) keys.push(k);
+  }
+  keys.sort();
+  var modal = document.getElementById('allNotesModal');
+  var list  = document.getElementById('allNotesList');
+  if (!modal || !list) return;
+  if (keys.length === 0) {
+    list.innerHTML = '<p class="text-gray-400 text-sm text-center py-6">Brak zapisanych notatek.</p>';
+  } else {
+    list.innerHTML = keys.map(function(k) {
+      var parts = k.replace('kurs-note-', '').split('-');
+      var mIdx = parseInt(parts[0], 10);
+      var sIdx = parseInt(parts[1], 10);
+      var modTitle = (COURSE[mIdx] && COURSE[mIdx].meta && COURSE[mIdx].meta.title) ? COURSE[mIdx].meta.title : 'Moduł ' + (mIdx + 1);
+      var stepTitle = (COURSE[mIdx] && COURSE[mIdx].steps && COURSE[mIdx].steps[sIdx])
+        ? COURSE[mIdx].steps[sIdx].title : 'Krok ' + (sIdx + 1);
+      var text = localStorage.getItem(k) || '';
+      return '<div style="border:1.5px solid #e2e8f0;border-radius:.875rem;padding:1rem;margin-bottom:.75rem;">' +
+        '<p style="font-size:.72rem;font-weight:700;color:#6366f1;text-transform:uppercase;letter-spacing:.05em;margin-bottom:.25rem;">' +
+          modTitle + ' &rsaquo; ' + stepTitle + '</p>' +
+        '<p style="font-size:.875rem;color:#334155;white-space:pre-wrap;">' + text.replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</p>' +
+        '<button onclick="deleteStepNoteKey(\'' + k + '\')" style="margin-top:.5rem;font-size:.72rem;color:#ef4444;background:none;border:none;cursor:pointer;">' +
+          '<i class=\'fa-solid fa-trash\'></i> Usuń</button>' +
+      '</div>';
+    }).join('');
+  }
+  modal.style.display = 'flex';
+}
+
+function deleteStepNoteKey(key) {
+  if (!confirm('Usunąć tę notatkę?')) return;
+  localStorage.removeItem(key);
+  showAllNotes();
+}
 </script>
+
+<!-- All notes modal -->
+<div id="allNotesModal" style="display:none;position:fixed;inset:0;z-index:9998;background:rgba(15,23,42,.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;" onclick="if(event.target===this)this.style.display='none'">
+  <div style="background:#fff;border-radius:1.5rem;padding:1.75rem;width:min(520px,95vw);max-height:80vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.28);">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;">
+      <h2 style="font-size:1.1rem;font-weight:800;color:#0f172a;"><i class="fa-regular fa-note-sticky" style="color:#f59e0b;margin-right:.4rem;"></i>Moje notatki</h2>
+      <button onclick="document.getElementById('allNotesModal').style.display='none'" style="background:none;border:none;font-size:1.4rem;color:#94a3b8;cursor:pointer;">&times;</button>
+    </div>
+    <div id="allNotesList"></div>
+  </div>
+</div>
 
 <!-- Keyboard shortcuts modal -->
 <div id="kbdModal" role="dialog" aria-modal="true" aria-label="Skróty klawiszowe" onclick="if(event.target===this)this.classList.remove('open')">
