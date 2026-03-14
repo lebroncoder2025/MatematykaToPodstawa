@@ -14,6 +14,7 @@
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
   <script src="assets/recent.js"></script>
+  <script src="assets/visits.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left: '$$', right: '$$', display: true}, {left: '$', right: '$', display: false}]});"></script>
     <style>
@@ -237,7 +238,7 @@
 
     <!-- Statistics -->
     <section class="py-10 md:py-14 bg-white border-b">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+        <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center mb-8">
             <div class="reveal">
                 <p class="text-3xl md:text-4xl font-black text-blue-600">10</p>
                 <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Działów tematycznych</p>
@@ -254,6 +255,24 @@
                 <p class="text-3xl md:text-4xl font-black text-blue-600">100%</p>
                 <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Zgodności z CKE</p>
             </div>
+        </div>
+        <!-- Visit counter -->
+        <div class="max-w-7xl mx-auto px-4 border-t border-gray-100 pt-6">
+          <p class="text-xs font-bold text-gray-400 uppercase tracking-widest text-center mb-4"><i class="fa-solid fa-eye mr-1"></i>Twoje odwiedziny</p>
+          <div class="grid grid-cols-3 gap-4 max-w-lg mx-auto text-center">
+            <div>
+              <p class="text-2xl font-black text-indigo-600" id="visitDaily">—</p>
+              <p class="text-gray-400 text-xs font-semibold uppercase tracking-wider mt-1">Dziś</p>
+            </div>
+            <div>
+              <p class="text-2xl font-black text-indigo-600" id="visitWeekly">—</p>
+              <p class="text-gray-400 text-xs font-semibold uppercase tracking-wider mt-1">Ten tydzień</p>
+            </div>
+            <div>
+              <p class="text-2xl font-black text-indigo-600" id="visitTotal">—</p>
+              <p class="text-gray-400 text-xs font-semibold uppercase tracking-wider mt-1">Łącznie</p>
+            </div>
+          </div>
         </div>
     </section>
 
@@ -763,6 +782,18 @@
       });
     });
   })();</script>
+  <script>
+  /* ── Visit counter strip ── */
+  document.addEventListener('DOMContentLoaded', function() {
+    var v = window.mtpVisits || { total: 0, weekly: 0, daily: 0 };
+    var d = document.getElementById('visitDaily');
+    var w = document.getElementById('visitWeekly');
+    var t = document.getElementById('visitTotal');
+    if (d) d.textContent = v.daily;
+    if (w) w.textContent = v.weekly;
+    if (t) t.textContent = v.total;
+  });
+  </script>
   <script>
   /* ── Personal Progress Ribbon ── */
   (function() {

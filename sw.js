@@ -4,7 +4,7 @@
 // Strona działa w pełni offline po pierwszym odwiedzeniu.
 // ================================================================
 
-var CACHE = 'mtp-v3';
+var CACHE = 'mtp-v4';
 
 var LOCAL_ASSETS = [
   '/',
@@ -30,6 +30,8 @@ var LOCAL_ASSETS = [
   '/assets/dark-mode.js',
   '/assets/notepad.js',
   '/assets/fontsize.js',
+  '/assets/recent.js',
+  '/assets/visits.js',
   '/assets/content.js',
   '/assets/topic-page.js',
   '/assets/load-exam-data.js',
