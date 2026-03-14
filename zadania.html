@@ -758,7 +758,7 @@ function buildGrid() {
     var bookClass = isBookmarked(t.id) ? ' active-book' : '';
     var bookIcon = isBookmarked(t.id) ? 'fa-solid' : 'fa-regular';
     var bookLabel = isBookmarked(t.id) ? 'W ulubionych' : 'Dodaj do ulubionych';
-    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+normalizeText(t.title)+'" data-search="'+searchPayload.replace(/"/g,'&quot;')+'" data-diff="'+t.diff+'" data-solved="'+(isSolved(t.id)?'1':'0')+'" data-bookmarked="'+(isBookmarked(t.id)?'1':'0')+'" data-hasnote="'+(loadTaskNote(t.id)?'1':'0')+'">'+'
+    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+normalizeText(t.title)+'" data-search="'+searchPayload.replace(/"/g,'&quot;')+'" data-diff="'+t.diff+'" data-solved="'+(isSolved(t.id)?'1':'0')+'" data-bookmarked="'+(isBookmarked(t.id)?'1':'0')+'" data-hasnote="'+(loadTaskNote(t.id)?'1':'0')+'">' +
       '<button class="toggle-btn" onclick="toggleCard(this)">'+
         '<div class="flex items-start gap-3 flex-1 text-left">'+
           '<div class="flex-shrink-0 w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 font-black text-sm mt-0.5">'+t.id+'</div>'+
