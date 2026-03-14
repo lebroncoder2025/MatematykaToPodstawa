@@ -213,6 +213,9 @@
         <div class="flex flex-wrap gap-2">
           <span class="stat-badge solved"><i class="fa-solid fa-check"></i> Przerobione: <span id="solvedCount">0</span></span>
           <span class="stat-badge book"><i class="fa-solid fa-bookmark"></i> Ulubione: <span id="bookCount">0</span></span>
+          <button id="diffBtn1" type="button" onclick="toggleDiffFilter(1)" class="mini-pill" title="Pokaż tylko łatwe"><i class="fa-solid fa-star text-emerald-500"></i> Łatwe: <span id="diffSolved1">0</span>/<span id="diffTotal1">0</span></button>
+          <button id="diffBtn2" type="button" onclick="toggleDiffFilter(2)" class="mini-pill" title="Pokaż tylko średnie"><i class="fa-solid fa-star text-amber-500"></i> Średnie: <span id="diffSolved2">0</span>/<span id="diffTotal2">0</span></button>
+          <button id="diffBtn3" type="button" onclick="toggleDiffFilter(3)" class="mini-pill" title="Pokaż tylko trudne"><i class="fa-solid fa-star text-red-500"></i> Trudne: <span id="diffSolved3">0</span>/<span id="diffTotal3">0</span></button>
         </div>
       </div>
       </div>
@@ -705,6 +708,7 @@ var currentFilter = 'all';
 var onlyBookmarked = false;
 var onlyUnsolved = false;
 var onlyWithNote = false;
+var diffFilter = 0;  // 0 = all, 1/2/3 = only that difficulty
 var catNames = ['Liczby','Algebra','Równania','Funkcje','Fk. Kwadr.','Ciągi','Trygonom.','Planimetria','Stereometria','Statystyka'];
 var catColors = ['cat-0','cat-1','cat-2','cat-3','cat-4','cat-5','cat-6','cat-7','cat-8','cat-9'];
 var diffColors = [null,'#10b981','#f59e0b','#ef4444'];
@@ -863,7 +867,8 @@ function applyFilters(q) {
     var bookMatch = !onlyBookmarked || card.dataset.bookmarked === '1';
     var unsolvedMatch = !onlyUnsolved || card.dataset.solved !== '1';
     var noteMatch = !onlyWithNote || card.dataset.hasnote === '1';
-    var show = catMatch && searchMatch && bookMatch && unsolvedMatch && noteMatch;
+    var diffMatch = !diffFilter || card.dataset.diff === String(diffFilter);
+    var show = catMatch && searchMatch && bookMatch && unsolvedMatch && noteMatch && diffMatch;
     card.classList.toggle('hidden-task', !show);
     if (show) visible++;
   });
@@ -910,6 +915,7 @@ function syncCounters(){
   if(noteSpan) noteSpan.textContent = nc;
   var noteBtn = document.getElementById('onlyNoteBtn');
   if(noteBtn) noteBtn.style.display = nc > 0 ? '' : 'none';
+  syncDiffStats();
 }
 
 function toggleSolved(id){
@@ -945,6 +951,26 @@ function toggleOnlyNote(){
   var btn = document.getElementById('onlyNoteBtn');
   btn.classList.toggle('active', onlyWithNote);
   applyFilters();
+}
+
+function toggleDiffFilter(d) {
+  diffFilter = diffFilter === d ? 0 : d;
+  [1,2,3].forEach(function(n) {
+    var btn = document.getElementById('diffBtn'+n);
+    if (btn) btn.classList.toggle('active', diffFilter === n);
+  });
+  applyFilters();
+}
+
+function syncDiffStats() {
+  [1,2,3].forEach(function(d) {
+    var total = TASKS.filter(function(t){ return t.diff === d; }).length;
+    var solved = TASKS.filter(function(t){ return t.diff === d && isSolved(t.id); }).length;
+    var ts = document.getElementById('diffTotal'+d);
+    var ss = document.getElementById('diffSolved'+d);
+    if (ts) ts.textContent = total;
+    if (ss) ss.textContent = solved;
+  });
 }
 
 function jumpToRandomTask(){

@@ -257,6 +257,16 @@
         </div>
     </section>
 
+    <!-- Personal Progress Ribbon (shown by JS if user has data) -->
+    <section id="personalRibbon" style="display:none" class="py-6 bg-gradient-to-r from-indigo-50 to-blue-50 border-b border-indigo-100">
+      <div class="max-w-4xl mx-auto px-4">
+        <p class="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-3 text-center">
+          <i class="fa-solid fa-chart-line mr-1"></i> Tw\u00f3j post\u0119p
+        </p>
+        <div class="grid grid-cols-3 gap-3" id="personalRibbonGrid"></div>
+      </div>
+    </section>
+
     <!-- Zadanie dnia -->
     <section class="py-12 md:py-16 bg-gradient-to-b from-white to-slate-50 border-b">
       <div class="max-w-2xl mx-auto px-4">
@@ -753,5 +763,45 @@
       });
     });
   })();</script>
+  <script>
+  /* ── Personal Progress Ribbon ── */
+  (function() {
+    var ks = null, qh = null, si = null;
+    try { ks = JSON.parse(localStorage.getItem('kurs_state') || 'null'); } catch(e){}
+    try { qh = JSON.parse(localStorage.getItem('quiz_history') || 'null'); } catch(e){}
+    try { si = JSON.parse(localStorage.getItem('zadaniaSolvedIds') || 'null'); } catch(e){}
+    if (!ks && (!qh || !qh.length) && (!si || !si.length)) return;
+    document.addEventListener('DOMContentLoaded', function() {
+      var ribbon = document.getElementById('personalRibbon');
+      var grid = document.getElementById('personalRibbonGrid');
+      if (!ribbon || !grid) return;
+      var doneSteps = 0;
+      if (ks && ks.modProgress) {
+        Object.keys(ks.modProgress).forEach(function(k){ doneSteps += (ks.modProgress[k].done || 0); });
+      }
+      var bestPct = (qh && qh.length) ? Math.max.apply(null, qh.map(function(h){ return h.percent || 0; })) : null;
+      var solvedCount = si ? si.length : 0;
+      var items = [
+        { icon:'fa-graduation-cap', col:'text-purple-600', bg:'bg-purple-50', label:'Kurs', val: doneSteps ? doneSteps + '/80 krok\u00f3w' : '&mdash;', href:'kurs.html' },
+        { icon:'fa-brain', col:'text-emerald-600', bg:'bg-emerald-50', label:'Quiz &ndash; najlepszy', val: bestPct !== null ? bestPct + '%' : '&mdash;', href:'quiz.html' },
+        { icon:'fa-pen-to-square', col:'text-blue-600', bg:'bg-blue-50', label:'Zadania', val: solvedCount ? solvedCount + '/140' : '&mdash;', href:'zadania.html' }
+      ];
+      if (!doneSteps && bestPct === null && !solvedCount) return;
+      grid.innerHTML = items.map(function(it) {
+        return '<a href="' + it.href + '" class="flex items-center gap-3 p-3 rounded-xl bg-white border border-white hover:border-indigo-200 shadow-sm transition group">' +
+          '<div class="w-9 h-9 rounded-lg ' + it.bg + ' flex items-center justify-center flex-shrink-0">' +
+            '<i class="fa-solid ' + it.icon + ' ' + it.col + '"></i>' +
+          '</div>' +
+          '<div class="min-w-0">' +
+            '<p class="text-xs text-gray-400 font-semibold truncate">' + it.label + '</p>' +
+            '<p class="font-black text-gray-900 text-sm">' + it.val + '</p>' +
+          '</div>' +
+          '<i class="fa-solid fa-arrow-right text-gray-300 group-hover:text-indigo-400 text-xs ml-auto transition flex-shrink-0"></i>' +
+        '</a>';
+      }).join('');
+      ribbon.style.display = '';
+    });
+  })();
+  </script>
 </body>
 </html>
