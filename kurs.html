@@ -1475,15 +1475,7 @@ function downloadOffline() {
     html += '</div>';
   });
 
-  html += '<hr style="margin:2rem 0;border-color:#e2e8f0;"/><p style="text-align:center;color:#94a3b8;font-size:0.8rem">© MatematykaToPodstawa · Bezpłatna platforma edukacyjna · Wydrukuj lub zapisz jako PDF</p>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').catch(function(){});
-      });
-    }
-  </script>
-</body></html>';
+  html += '<hr style="margin:2rem 0;border-color:#e2e8f0;"/><p style="text-align:center;color:#94a3b8;font-size:0.8rem">\u00a9 MatematykaToPodstawa &middot; Bezp\u0142atna platforma edukacyjna &middot; Wydrukuj lub zapisz jako PDF</p></body></html>';
 
   var blob = new Blob([html], {type: 'text/html;charset=utf-8'});
   var url = URL.createObjectURL(blob);
@@ -1735,5 +1727,12 @@ function deleteStepNoteKey(key) {
     <button onclick="clearStepNote()" style="font-size:.72rem;color:#ef4444;background:none;border:none;cursor:pointer;font-weight:700;">Wyczyść</button>
   </div>
 </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  </script>
 </body>
 </html>
