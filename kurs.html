@@ -653,8 +653,8 @@ const COURSE = [
     },
     {
       type: 'question', text: '(Matura) Rozwiąż układ: $\\begin{cases}3x-2y=8\\\\x+4y=6\\end{cases}$. Wartość $x+y$:',
-      answers: ['$4$','$5$','$3$','$6$'], correct: 0,
-      explanation: 'Z drugiego równania: $x=6-4y$. Podstawiamy: $3(6-4y)-2y=8 \\Rightarrow 18-14y=8 \\Rightarrow y=\\frac{5}{7}$... Właściwie: $x=4,\\;y=\\frac{1}{2}$? Sprawdź: z wierza $x=6-4y$. $3(6-4y)-2y=8 \\Rightarrow 18-12y-2y=8 \\Rightarrow 14y=10 \\Rightarrow y=\\frac{5}{7}$. $x=6-\\frac{20}{7}=\\frac{22}{7}$. $x+y=\\frac{27}{7}$? Sprawdź ponownie: eliminacja: $3x-2y=8$, $2(x+4y=6)\\Rightarrow 2x+8y=12$. $3x-2y=8$ minus→ mnożymy pierwsze przez 2: $6x-4y=16$, drugie: $x+4y=6$. Dodajemy: $7x=22 \\Rightarrow x=\\frac{22}{7}$. $x+y=\\frac{22}{7}+\\frac{5}{7}=\\frac{27}{7}$. Zaokrąglone: $\\approx 4$. Wybierz $4$.' }
+      answers: ['$\\frac{27}{7}$','$5$','$3$','$4$'], correct: 0,
+      explanation: 'Eliminacja: mnożymy I przez 2: $6x-4y=16$. Dodajemy do II: $6x-4y+x+4y=16+6 \\Rightarrow 7x=22 \\Rightarrow x=\\frac{22}{7}$. Stąd $y=\\frac{6-\\frac{22}{7}}{4}=\\frac{\\frac{20}{7}}{4}=\\frac{5}{7}$. $x+y=\\frac{22}{7}+\\frac{5}{7}=\\frac{27}{7}$.'
     }
   ]
 },
