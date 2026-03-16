@@ -301,7 +301,7 @@
 const COURSE = [
 /* ================================================ MODULE 0 */
 {
-  meta: { icon: 'fa-hashtag', color: '#3b82f6', title: 'Liczby rzeczywiste', desc: 'Potęgi, pierwiastki, logarytmy, wartość bezwzględna – pełny kurs z przykładami maturalnymi.', badge: 0 },
+  meta: { icon: 'fa-hashtag', color: '#3b82f6', title: 'Liczby rzeczywiste', desc: 'Potęgi, pierwiastki, logarytmy, wartość bezwzględna, procenty, notacja wykładnicza – pełny kurs z przykładami maturalnymi.', badge: 0 },
   steps: [
     {
       type: 'theory', title: 'Potęgi – prawa i wzory',
@@ -312,15 +312,17 @@ const COURSE = [
           '$\\dfrac{a^m}{a^n} = a^{m-n}$',
           '$(a^m)^n = a^{m\\cdot n}$',
           '$(a\\cdot b)^n = a^n \\cdot b^n$',
+          '$\\left(\\dfrac{a}{b}\\right)^n = \\dfrac{a^n}{b^n}$',
           '$a^0 = 1 \\;(a\\neq 0)$',
           '$a^{-n} = \\dfrac{1}{a^n}$',
           '$a^{\\frac{1}{n}} = \\sqrt[n]{a}$',
-          '$a^{\\frac{m}{n}} = \\sqrt[n]{a^m}$'
+          '$a^{\\frac{m}{n}} = \\sqrt[n]{a^m} = (\\sqrt[n]{a})^m$'
         ]},
-        { kind: 'example', label: 'Przykład 1 – liczenie', text: '$2^3 \\cdot 2^4 = 2^{3+4} = 2^7 = 128$' },
-        { kind: 'example', label: 'Przykład 2 – upraszczanie', text: '$\\dfrac{(3^4)^2}{3^5} = \\dfrac{3^8}{3^5} = 3^3 = 27$' },
-        { kind: 'example', label: 'Przykład 3 – wykładnik ułamkowy', text: '$8^{\\frac{2}{3}} = (\\sqrt[3]{8})^2 = 2^2 = 4$' },
-        { kind: 'tip', text: '⚠️ Częsty błąd: $(-2)^4 = 16$ (pozytywne, bo parzysty wykładnik), ale $-2^4 = -16$ (negacja po podniesieniu).' }
+        { kind: 'example', label: 'Mnożenie potęg', text: '$2^3 \\cdot 2^4 = 2^{3+4} = 2^7 = 128$' },
+        { kind: 'example', label: 'Potęga potęgi', text: '$\\dfrac{(3^4)^2}{3^5} = \\dfrac{3^8}{3^5} = 3^3 = 27$' },
+        { kind: 'example', label: 'Wykładnik ułamkowy', text: '$8^{\\frac{2}{3}} = (\\sqrt[3]{8})^2 = 2^2 = 4$' },
+        { kind: 'example', label: 'Ujemny wykładnik', text: '$5^{-2} = \\dfrac{1}{5^2} = \\dfrac{1}{25} = 0{,}04$' },
+        { kind: 'tip', text: '⚠️ Częsty błąd: $(-2)^4 = 16$ (pozytywne, bo parzysty wykładnik), ale $-2^4 = -16$ (najpierw potęga, potem negacja).' }
       ]
     },
     {
@@ -332,30 +334,48 @@ const COURSE = [
           '$\\dfrac{\\sqrt{a}}{\\sqrt{b}}=\\sqrt{\\dfrac{a}{b}}\\;(b>0)$',
           '$(\\sqrt{a})^2 = a\\;(a\\geq 0)$',
           '$\\sqrt{a^2} = |a|$',
-          '$\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[mn]{a}$'
+          '$\\sqrt[m]{\\sqrt[n]{a}} = \\sqrt[mn]{a}$',
+          '$\\sqrt[n]{a^m} = a^{m/n}\\;(a\\geq 0)$'
         ]},
         { kind: 'example', label: 'Upraszczanie', text: '$\\sqrt{72} = \\sqrt{36\\cdot 2} = 6\\sqrt{2}$' },
-        { kind: 'example', label: 'Wyłudzanie przed pierwiastek', text: '$\\sqrt{48} = \\sqrt{16 \\cdot 3} = 4\\sqrt{3}$' },
-        { kind: 'example', label: 'Racjonalizacja mianownika', text: '$\\dfrac{1}{\\sqrt{3}} = \\dfrac{\\sqrt{3}}{3}$ (mnożymy licznik i mianownik przez $\\sqrt{3}$)' },
-        { kind: 'tip', text: 'Szukaj największego kwadratu, który dzieli liczbę pod pierwiastkiem: $\\sqrt{180}=\\sqrt{36\\cdot 5}=6\\sqrt{5}$.' }
+        { kind: 'example', label: 'Wyłączanie przed pierwiastek', text: '$\\sqrt{48} = \\sqrt{16 \\cdot 3} = 4\\sqrt{3}$' },
+        { kind: 'example', label: 'Racjonalizacja mianownika', text: '$\\dfrac{1}{\\sqrt{3}} = \\dfrac{\\sqrt{3}}{3}$; $\\quad \\dfrac{1}{\\sqrt{5}-\\sqrt{3}} = \\dfrac{\\sqrt{5}+\\sqrt{3}}{(\\sqrt{5})^2-(\\sqrt{3})^2} = \\dfrac{\\sqrt{5}+\\sqrt{3}}{2}$' },
+        { kind: 'example', label: 'Dodawanie pierwiastków', text: '$3\\sqrt{2}+5\\sqrt{2}=8\\sqrt{2}$, ale $\\sqrt{2}+\\sqrt{3}$ NIE upraszcza się dalej.' },
+        { kind: 'tip', text: 'Szukaj największego kwadratu będącego dzielnikiem: $\\sqrt{180}=\\sqrt{36\\cdot 5}=6\\sqrt{5}$. Rozkład na czynniki pierwsze pomaga.' }
       ]
     },
     {
-      type: 'theory', title: 'Logarytmy – definicja, prawa, zamiana podstawy',
+      type: 'theory', title: 'Logarytmy – definicja i prawa',
       items: [
         { kind: 'rule', text: '$\\log_a b = c \\Leftrightarrow a^c = b$, gdzie $a>0$, $a\\neq 1$ i $b>0$. Podstawowe prawa logarytmów:' },
         { kind: 'formulas', items: [
           '$\\log_a(xy) = \\log_a x + \\log_a y$',
           '$\\log_a\\!\\left(\\dfrac{x}{y}\\right) = \\log_a x - \\log_a y$',
           '$\\log_a(x^k) = k\\cdot\\log_a x$',
-          '$\\log_a a = 1$',
-          '$\\log_a 1 = 0$',
-          '$\\text{Zamiana podstawy: } \\log_a b = \\dfrac{\\log_c b}{\\log_c a}$',
-          '$\\log_a b \\cdot \\log_b c = \\log_a c \\quad (\\text{łańcuch})$'
+          '$\\log_a a = 1$, $\\quad \\log_a 1 = 0$',
+          '$a^{\\log_a x} = x$ (logarytm i potęga znoszą się)',
+          '$\\log_a \\sqrt[n]{x} = \\dfrac{1}{n}\\log_a x$'
         ]},
         { kind: 'example', label: 'Obliczanie', text: '$\\log_2 32 = 5$, bo $2^5=32$. $\\log_9 27 = \\frac{3}{2}$, bo $9^{3/2}=(\\sqrt{9})^3=27$.' },
         { kind: 'example', label: 'Upraszczanie wyrażenia', text: '$\\log_2 6 - \\log_2 3 = \\log_2 \\frac{6}{3} = \\log_2 2 = 1$' },
-        { kind: 'tip', text: '⚠️ $\\log_a 0$ NIE ISTNIEJE. Dziedzina $\\log_a x$ to $x>0$, $a>0$, $a\\neq 1$.' }
+        { kind: 'example', label: 'Wyciąganie wykładnika', text: '$\\log_5 125 = \\log_5 5^3 = 3\\log_5 5 = 3$' },
+        { kind: 'tip', text: '⚠️ $\\log_a 0$ i $\\log_a(-3)$ NIE ISTNIEJĄ. Dziedzina: $x>0$, $a>0$, $a\\neq 1$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Logarytmy – zamiana podstawy i równania',
+      items: [
+        { kind: 'rule', text: 'Zamiana podstawy logarytmu pozwala porównywać logarytmy o różnych podstawach i rozwiązywać równania logarytmiczne.' },
+        { kind: 'formulas', items: [
+          '$\\log_a b = \\dfrac{\\log_c b}{\\log_c a}$ (zamiana na dowolną podstawę $c$)',
+          '$\\log_a b = \\dfrac{\\ln b}{\\ln a} = \\dfrac{\\log b}{\\log a}$',
+          '$\\log_a b \\cdot \\log_b c = \\log_a c$ (reguła łańcuchowa)',
+          '$\\log_a b = \\dfrac{1}{\\log_b a}$'
+        ]},
+        { kind: 'example', label: 'Zamiana podstawy', text: '$\\log_4 8 = \\dfrac{\\log_2 8}{\\log_2 4} = \\dfrac{3}{2}$' },
+        { kind: 'example', label: 'Równanie logarytmiczne', text: '$\\log_2(x-1)=3 \\Rightarrow x-1=2^3=8 \\Rightarrow x=9$. Sprawdzenie: $x-1=8>0$ ✓' },
+        { kind: 'example', label: 'Równanie z sumą logarytmów', text: '$\\log_3 x + \\log_3(x+6)=3 \\Rightarrow \\log_3[x(x+6)]=3 \\Rightarrow x^2+6x=27 \\Rightarrow x^2+6x-27=0 \\Rightarrow x=3$ (odrzucamy $x=-9$, bo $\\log_3(-9)$ nie istnieje).' },
+        { kind: 'tip', text: 'Zawsze sprawdzaj dziedzinę równania logarytmicznego – argumenty logarytmów muszą być DODATNIE.' }
       ]
     },
     {
@@ -365,37 +385,98 @@ const COURSE = [
         { kind: 'formulas', items: [
           '$\\mathbb{N} = \\{0,1,2,3,\\ldots\\}$ – naturalne',
           '$\\mathbb{Z} = \\{\\ldots,-2,-1,0,1,2,\\ldots\\}$ – całkowite',
-          '$\\mathbb{Q}$ – wymierne (ilorazy $\\frac{p}{q}$ gdzie $p\\in\\mathbb{Z}$, $q\\in\\mathbb{N}^+$)',
-          '$\\mathbb{R}\\setminus\\mathbb{Q}$ – niewymierne (np. $\\sqrt{2}$, $\\pi$, $e$)'
+          '$\\mathbb{Q}$ – wymierne ($\\frac{p}{q}$, $p\\in\\mathbb{Z}$, $q\\in\\mathbb{N}^+$) – skończone lub okresowe rozwinięcia dziesiętne',
+          '$\\mathbb{R}\\setminus\\mathbb{Q}$ – niewymierne (nieskończone, NIEOKRESOWE rozwinięcia): $\\sqrt{2}$, $\\pi$, $e$, $\\sqrt[3]{5}$'
         ]},
-        { kind: 'rule', text: 'Wartość bezwzględna – definicja i zastosowania:' },
+        { kind: 'rule', text: 'Wartość bezwzględna – definicja i własności:' },
         { kind: 'formulas', items: [
           '$|x| = x$ gdy $x \\geq 0$; $\\quad|x| = -x$ gdy $x < 0$',
-          '$|x| = \\sqrt{x^2}$',
-          '$|ab| = |a|\\cdot|b|$',
+          '$|x| = \\sqrt{x^2}$; $\\quad |x|\\geq 0$ zawsze',
+          '$|ab| = |a|\\cdot|b|$; $\\quad \\left|\\frac{a}{b}\\right| = \\frac{|a|}{|b|}$',
           '$|a+b| \\leq |a|+|b|$ (nierówność trójkąta)',
-          '$|x-a|< r \\Leftrightarrow a-r < x < a+r$',
-          '$|x-a|> r \\Leftrightarrow x < a-r \\text{ lub } x > a+r$'
+          '$|x-a|< r \\Leftrightarrow a-r < x < a+r$ (kula otwarta)',
+          '$|x-a|> r \\Leftrightarrow x < a-r$ lub $x > a+r$'
         ]},
         { kind: 'example', label: 'Równanie z |x|', text: '$|2x-3|=7 \\Rightarrow 2x-3=7$ lub $2x-3=-7 \\Rightarrow x=5$ lub $x=-2$.' },
         { kind: 'example', label: 'Nierówność z |x|', text: '$|x-1|<4 \\Rightarrow -4<x-1<4 \\Rightarrow -3<x<5$, czyli $x\\in(-3,\\;5)$.' },
-        { kind: 'tip', text: 'Liczby niewymierne mają nieskończone nieokresowe rozwinięcie dziesiętne. $\\sqrt{2}=1{,}41421\\ldots$, $\\pi=3{,}14159\\ldots$' }
+        { kind: 'tip', text: '$|x|=0 \\Leftrightarrow x=0$. $|x|<0$ – NIEMOŻLIWE. $|x|\\geq 0$ – ZAWSZE PRAWDA (tożsamość).' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Procenty – obliczenia i procent składany',
+      items: [
+        { kind: 'rule', text: 'Procent to ułamek setny: $p\\% = \\frac{p}{100}$. Kluczowe wzory procentowe:' },
+        { kind: 'formulas', items: [
+          '$p\\%$ z $W$ = $\\frac{p}{100}\\cdot W$',
+          'Podwyżka o $p\\%$: $W\\cdot(1+\\frac{p}{100})$',
+          'Obniżka o $p\\%$: $W\\cdot(1-\\frac{p}{100})$',
+          'Procent składany ($n$ okresów, stopa $p\\%$): $K_n = K_0\\cdot\\left(1+\\frac{p}{100}\\right)^n$',
+          'Podwyżka o $a\\%$, potem obniżka o $a\\%$: wynik $<$ oryginał! $\\quad W\\cdot(1+\\frac{a}{100})(1-\\frac{a}{100})=W\\cdot(1-\\frac{a^2}{10000})$',
+          'Dwie kolejne podwyżki o $a\\%$ i $b\\%$: $W\\cdot(1+\\frac{a}{100})(1+\\frac{b}{100})$'
+        ]},
+        { kind: 'example', label: 'Podwyżka + obniżka', text: 'Cena $200$ zł. Podwyżka $20\\%$: $200\\cdot1{,}2=240$. Obniżka $20\\%$: $240\\cdot0{,}8=192$ zł (NIE $200$!).' },
+        { kind: 'example', label: 'Procent składany', text: 'Lokata $10\\,000$ zł na $3\\%$ rocznie, $4$ lata: $K_4=10000\\cdot1{,}03^4\\approx 11\\,255$ zł.' },
+        { kind: 'tip', text: '⚠️ Podwyżka o $25\\%$ to mnożenie przez $1{,}25$. Obniżka o $25\\%$ to mnożenie przez $0{,}75$. NIE odwrotność!' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Notacja wykładnicza i porównywanie liczb',
+      items: [
+        { kind: 'rule', text: 'Notacja wykładnicza: $a\\times 10^n$, gdzie $1\\leq |a|<10$ i $n\\in\\mathbb{Z}$. Stosowana do bardzo dużych i bardzo małych liczb.' },
+        { kind: 'formulas', items: [
+          '$345\\,000 = 3{,}45 \\times 10^5$',
+          '$0{,}00072 = 7{,}2 \\times 10^{-4}$',
+          'Mnożenie: $(a\\times 10^m)(b\\times 10^n)=ab\\times 10^{m+n}$',
+          'Dzielenie: $\\frac{a\\times 10^m}{b\\times 10^n}=\\frac{a}{b}\\times 10^{m-n}$'
+        ]},
+        { kind: 'rule', text: 'Porównywanie potęg i logarytmów:' },
+        { kind: 'formulas', items: [
+          'Ta sama podstawa $a>1$: $a^m > a^n \\Leftrightarrow m > n$',
+          'Ta sama podstawa $0<a<1$: $a^m > a^n \\Leftrightarrow m < n$ (odwrotnie!)',
+          'Ten sam wykładnik: $a^n > b^n \\Leftrightarrow a>b$ (gdy $n>0$, $a,b>0$)',
+          'Logarytm: $a>1$: $\\log_a x$ rosnący; $0<a<1$: $\\log_a x$ malejący'
+        ]},
+        { kind: 'example', label: 'Porównywanie potęg', text: 'Która większa: $2^{10}$ czy $10^3$? $2^{10}=1024>1000=10^3$.' },
+        { kind: 'example', label: 'Porównywanie z różną podstawą', text: '$3^5=243$ vs $5^3=125$. Zatem $3^5>5^3$.' },
+        { kind: 'tip', text: 'Porównując potęgi: sprowadź do tej samej podstawy lub tego samego wykładnika. Alternatywnie – logarytmuj obie strony.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Działania na zbiorach i przedziały',
+      items: [
+        { kind: 'rule', text: 'Algebra zbiorów – operacje na podzbiorach $\\mathbb{R}$:' },
+        { kind: 'formulas', items: [
+          '$A\\cup B$ – suma (elementy w $A$ LUB $B$)',
+          '$A\\cap B$ – iloczyn / część wspólna (elementy w $A$ I $B$)',
+          '$A\\setminus B$ – różnica (elementy w $A$, ale NIE w $B$)',
+          '$A\'$ – dopełnienie ($\\mathbb{R}\\setminus A$)'
+        ]},
+        { kind: 'rule', text: 'Przedziały liczbowe (a < b):' },
+        { kind: 'formulas', items: [
+          '$(a,b)$ – otwarty: $a<x<b$; $\\quad\\langle a,b\\rangle=[a,b]$ – domknięty: $a\\leq x\\leq b$',
+          '$\\langle a,b) = [a,b)$: $a\\leq x<b$; $\\quad (a,b\\rangle = (a,b]$: $a<x\\leq b$',
+          '$(-\\infty,a)$: $x<a$; $\\quad(a,+\\infty)$: $x>a$',
+          'Suma: $(-\\infty,2)\\cup(5,+\\infty)$; Iloczyn: $(-1,3)\\cap(0,5)=(0,3)$'
+        ]},
+        { kind: 'example', label: 'Iloczyn przedziałów', text: '$A=(-2,4)$, $B=\\langle 1,7\\rangle$. $A\\cap B = \\langle 1,4)$.' },
+        { kind: 'example', label: 'Suma przedziałów', text: '$A=(-\\infty,3)$, $B=(1,+\\infty)$. $A\\cup B=(-\\infty,+\\infty)=\\mathbb{R}$.' },
+        { kind: 'tip', text: 'Przy oznaczeniach polskich: $\\langle a,b\\rangle = [a,b]$ – oba zapisy oznaczają to samo (przedział domknięty).' }
       ]
     },
     {
       type: 'question', text: 'Ile wynosi $\\dfrac{3^7}{3^5}$?',
       answers: ['$243$','$9$','$3$','$27$'], correct: 1,
-      explanation: '$\\dfrac{3^7}{3^5}=3^{7-5}=3^2=9$. Przy dzieleniu potęg o tej samej podstawie odejmujemy wykładniki. $3^2 = 9$.'
+      explanation: '$\\dfrac{3^7}{3^5}=3^{7-5}=3^2=9$. Przy dzieleniu potęg o tej samej podstawie odejmujemy wykładniki.'
     },
     {
       type: 'question', text: 'Ile wynosi $8^{\\frac{2}{3}}$?',
       answers: ['$4$','$2$','$16$','$\\sqrt[3]{64}$'], correct: 0,
-      explanation: '$8^{\\frac{2}{3}} = (\\sqrt[3]{8})^2 = 2^2 = 4$. Wykładnik $\\frac{2}{3}$ oznacza: pierwiastek trzeciego stopnia, a potem do potęgi 2.'
+      explanation: '$8^{\\frac{2}{3}} = (\\sqrt[3]{8})^2 = 2^2 = 4$. Wykładnik $\\frac{2}{3}$: pierwiastek trzeciego stopnia, potem kwadrat.'
     },
     {
       type: 'question', text: 'Uproszczona postać $\\sqrt{75}$ to:',
       answers: ['$5\\sqrt{3}$','$3\\sqrt{5}$','$15\\sqrt{3}$','$25\\sqrt{3}$'], correct: 0,
-      explanation: '$\\sqrt{75} = \\sqrt{25 \\cdot 3} = \\sqrt{25}\\cdot\\sqrt{3} = 5\\sqrt{3}$. Szukamy największego kwadratu – tu $25$.'
+      explanation: '$\\sqrt{75} = \\sqrt{25 \\cdot 3} = 5\\sqrt{3}$. $25$ to największy kwadrat dzielący $75$.'
     },
     {
       type: 'question', text: 'Wartość wyrażenia $\\log_4 64$ wynosi:',
@@ -405,17 +486,12 @@ const COURSE = [
     {
       type: 'question', text: 'Ile wynosi $\\log_3 27 + \\log_3 \\dfrac{1}{9}$?',
       answers: ['$1$','$5$','$-1$','$2$'], correct: 0,
-      explanation: '$\\log_3 27=3$ (bo $3^3=27$), $\\log_3\\frac{1}{9}=\\log_3 3^{-2}=-2$. Korzystamy z prawa sumy: $3 + (-2)=1$.'
-    },
-    {
-      type: 'question', text: 'Które zdanie jest prawdziwe dla $a>0$, $a\\neq 1$?',
-      answers: ['$a^0 = 0$','$a^{-1}=\\frac{1}{a}$','$\\log_a 0 = 1$','$a^{\\frac{1}{2}} = a^2$'], correct: 1,
-      explanation: '$a^{-1}=\\frac{1}{a}$ to definicja ujemnego wykładnika. $a^0=1$ (nie $0$), $\\log_a 0$ nie istnieje, $a^{\\frac{1}{2}}=\\sqrt{a}\\neq a^2$.'
+      explanation: '$\\log_3 27=3$, $\\log_3\\frac{1}{9}=\\log_3 3^{-2}=-2$. Suma: $3+(-2)=1$.'
     },
     {
       type: 'question', text: 'Która z liczb jest niewymierna?',
       answers: ['$\\frac{7}{3}$','$\\sqrt{9}$','$0{,}\\overline{3}$','$\\sqrt{5}$'], correct: 3,
-      explanation: '$\\sqrt{5}$ jest niewymierna, bo $5$ nie jest pełnym kwadratem. $\\sqrt{9}=3\\in\\mathbb{Z}$, $0{,}\\overline{3}=\\frac{1}{3}\\in\\mathbb{Q}$, $\\frac{7}{3}\\in\\mathbb{Q}$.'
+      explanation: '$\\sqrt{5}$ jest niewymierna ($5$ nie jest pełnym kwadratem). $\\sqrt{9}=3\\in\\mathbb{Z}$, $0{,}\\overline{3}=\\frac{1}{3}\\in\\mathbb{Q}$.'
     },
     {
       type: 'question', text: 'Dla jakich $x$ zachodzi $|x - 2| \\leq 3$?',
@@ -423,25 +499,60 @@ const COURSE = [
       explanation: '$|x-2|\\leq 3 \\Leftrightarrow -3\\leq x-2\\leq 3 \\Leftrightarrow -1\\leq x\\leq 5$, czyli $x\\in\\langle -1;5\\rangle$.'
     },
     {
+      type: 'question', text: 'Cena produktu wzrosła o $20\\%$, a potem spadła o $20\\%$. Cena końcowa to:',
+      answers: ['$96\\%$ początkowej','$100\\%$ początkowej','$104\\%$ początkowej','$80\\%$ początkowej'], correct: 0,
+      explanation: '$W\\cdot 1{,}2 \\cdot 0{,}8 = 0{,}96W = 96\\%$. Podwyżka i obniżka o ten sam procent NIE znoszą się!'
+    },
+    {
+      type: 'question', text: 'Racjonalizacja mianownika $\\dfrac{6}{\\sqrt{3}}$ daje:',
+      answers: ['$2\\sqrt{3}$','$\\dfrac{6\\sqrt{3}}{9}$','$3\\sqrt{2}$','$6\\sqrt{3}$'], correct: 0,
+      explanation: '$\\dfrac{6}{\\sqrt{3}}=\\dfrac{6\\sqrt{3}}{3}=2\\sqrt{3}$. Mnożymy licznik i mianownik przez $\\sqrt{3}$.'
+    },
+    {
+      type: 'question', text: '$\\log_4 8$ wynosi:',
+      answers: ['$2$','$\\frac{3}{2}$','$\\frac{2}{3}$','$3$'], correct: 1,
+      explanation: 'Zamiana podstawy: $\\log_4 8=\\frac{\\log_2 8}{\\log_2 4}=\\frac{3}{2}$. Sprawdzenie: $4^{3/2}=(\\sqrt{4})^3=8$ ✓'
+    },
+    {
+      type: 'question', text: 'Część wspólna $A=(-3,5)$ i $B=\\langle 1,8\\rangle$ to:',
+      answers: ['$\\langle 1,5)$','$(1,5)$','$(-3,8\\rangle$','$\\langle 1,8\\rangle$'], correct: 0,
+      explanation: '$A\\cap B$: bierzemy $\\max(-3,1)=1$ (domknięty z $B$) i $\\min(5,8)=5$ (otwarty z $A$). Wynik: $\\langle 1,5)$.'
+    },
+    {
+      type: 'question', text: 'Lokata $5000$ zł na $4\\%$ przez $2$ lata (procent składany). Kwota końcowa:',
+      answers: ['$5408$','$5400$','$5200$','$5800$'], correct: 0,
+      explanation: '$K=5000\\cdot 1{,}04^2=5000\\cdot 1{,}0816=5408$ zł. Procent składany: odsetki doliczamy po każdym roku.'
+    },
+    {
       type: 'question', text: '(Matura) Równanie $4^x - 3\\cdot 2^x - 4 = 0$. Rozwiązanie:',
       answers: ['$x = 2$','$x = -1$','$x = 1$','$x = 0$'], correct: 0,
-      explanation: 'Podstawiamy $t = 2^x$ ($t>0$): $t^2-3t-4=0 \\Rightarrow (t-4)(t+1)=0$. Ponieważ $t>0$: $t=4$, więc $2^x=2^2 \\Rightarrow x=2$.'
+      explanation: 'Podstawiamy $t = 2^x$ ($t>0$): $t^2-3t-4=0 \\Rightarrow (t-4)(t+1)=0$. Ponieważ $t>0$: $t=4$, $2^x=4=2^2$, $x=2$.'
     },
     {
       type: 'question', text: '(Matura) Uproszczona forma $\\dfrac{a^3 \\cdot a^{-1}}{a^{-2}}$ (dla $a\\neq 0$):',
       answers: ['$a^4$','$a^2$','$a^{-2}$','$a^6$'], correct: 0,
-      explanation: '$\\dfrac{a^3 \\cdot a^{-1}}{a^{-2}} = \\dfrac{a^{3+(-1)}}{a^{-2}} = \\dfrac{a^2}{a^{-2}} = a^{2-(-2)} = a^4$.'
+      explanation: '$\\dfrac{a^3 \\cdot a^{-1}}{a^{-2}} = \\dfrac{a^{2}}{a^{-2}} = a^{2-(-2)} = a^4$.'
+    },
+    {
+      type: 'question', text: '(Matura) Rozwiąż: $\\log_2(x+3)+\\log_2(x-1)=5$',
+      answers: ['$x=5$','$x=-7$ i $x=5$','$x=3$','Brak rozwiązań'], correct: 0,
+      explanation: 'Dziedzina: $x+3>0$ i $x-1>0$, więc $x>1$. $\\log_2[(x+3)(x-1)]=5 \\Rightarrow (x+3)(x-1)=32 \\Rightarrow x^2+2x-35=0 \\Rightarrow (x-5)(x+7)=0$. $x=5$ (spełnia $x>1$) lub $x=-7$ (nie spełnia). Jedyne rozwiązanie: $x=5$.'
+    },
+    {
+      type: 'question', text: '(Matura) Liczba $0{,}12(3)$ (tj. $0{,}12333\\ldots$) jest:',
+      answers: ['Wymierna','Niewymierna','Całkowita','Naturalna'], correct: 0,
+      explanation: 'Każdy ułamek dziesiętny okresowy jest wymierny (można go zapisać jako $\\frac{p}{q}$). $0{,}12(3)=\\frac{37}{300}$. Nieskończone rozwinięcie, ale OKRESOWE → wymierna.'
     }
   ]
 },
 /* ================================================ MODULE 1 */
 {
-  meta: { icon: 'fa-x', color: '#ec4899', title: 'Wyrażenia algebraiczne', desc: 'Wzory skróconego mnożenia, faktoryzacja wielomianów, NWD, NWW, ułamki algebraiczne.', badge: 1 },
+  meta: { icon: 'fa-x', color: '#ec4899', title: 'Wyrażenia algebraiczne', desc: 'Wzory skróconego mnożenia, faktoryzacja wielomianów, dzielenie, NWD/NWW, ułamki algebraiczne.', badge: 1 },
   steps: [
     {
       type: 'theory', title: 'Wzory skróconego mnożenia – rozwijanie i faktoryzacja',
       items: [
-        { kind: 'rule', text: 'Sześć kluczowych wzorów (używaj w obie strony!):' },
+        { kind: 'rule', text: 'Siedem kluczowych wzorów (używaj w obie strony! Rozwijanie → faktoryzacja):' },
         { kind: 'formulas', items: [
           '$(a+b)^2 = a^2+2ab+b^2$',
           '$(a-b)^2 = a^2-2ab+b^2$',
@@ -452,8 +563,8 @@ const COURSE = [
           '$a^3-b^3 = (a-b)(a^2+ab+b^2)$  ← różnica sześcianów'
         ]},
         { kind: 'example', label: 'Rozwijanie', text: '$(2x+3)^2 = 4x^2 + 12x + 9$   (podstawiamy $a=2x$, $b=3$)' },
-        { kind: 'example', label: 'Faktoryzacja przez różnicę kwadratów', text: '$9x^2 - 49 = (3x+7)(3x-7)$' },
-        { kind: 'example', label: 'Faktoryzacja przez różnicę sześcianów', text: '$8x^3 - 27 = (2x-3)(4x^2+6x+9)$' },
+        { kind: 'example', label: 'Faktoryzacja przez różnicę kwadratów', text: '$9x^2 - 49 = (3x)^2-7^2 = (3x+7)(3x-7)$' },
+        { kind: 'example', label: 'Różnica sześcianów', text: '$8x^3 - 27 = (2x)^3-3^3 = (2x-3)(4x^2+6x+9)$' },
         { kind: 'tip', text: '⚠️ Częsty błąd: $(a+b)^2 \\neq a^2+b^2$! Środkowy wyraz $2ab$ jest KONIECZNY.' }
       ]
     },
@@ -463,88 +574,174 @@ const COURSE = [
         { kind: 'rule', text: 'Wielomian stopnia $n$: $W(x) = a_n x^n + a_{n-1}x^{n-1} + \\ldots + a_1 x + a_0$, gdzie $a_n\\neq 0$.' },
         { kind: 'formulas', items: [
           'Stopień = najwyższy wykładnik z niezerowym współczynnikiem',
-          '$W(0) = a_0$ – wyraz wolny (stała)',
+          '$W(0) = a_0$ – wyraz wolny',
           'Tw. Bézouta: $W(a)=0 \\Leftrightarrow (x-a)\\mid W(x)$',
-          'Pierwiastki wymierne: szukaj wśród $\\pm\\frac{p}{q}$, gdzie $p\\mid a_0$, $q\\mid a_n$'
+          'Pierwiastki wymierne: szukaj wśród $\\pm\\frac{p}{q}$, gdzie $p\\mid a_0$, $q\\mid a_n$',
+          'Wielomian stopnia $n$ ma co najwyżej $n$ pierwiastków rzeczywistych'
         ]},
-        { kind: 'example', label: 'Szukanie pierwiastków', text: '$W(x)=x^3-6x^2+11x-6$. Próba $x=1$: $W(1)=1-6+11-6=0$. ✓ Zatem $(x-1)$ jest czynnikiem. Dzielenie: $W(x)=(x-1)(x^2-5x+6)=(x-1)(x-2)(x-3)$.' },
-        { kind: 'tip', text: 'Wielomian stopnia $n$ ma co najwyżej $n$ pierwiastków. Trzy pierwiastki wyznaczają wielomian stopnia 3 jednoznacznie (do stałej).' }
+        { kind: 'example', label: 'Szukanie pierwiastków', text: '$W(x)=x^3-6x^2+11x-6$. Próba $x=1$: $W(1)=1-6+11-6=0$. ✓ Dzielenie: $W(x)=(x-1)(x^2-5x+6)=(x-1)(x-2)(x-3)$.' },
+        { kind: 'example', label: 'Wartość wielomianu', text: '$W(x)=2x^3-x+4$. $W(-1)=2(-1)-(-1)+4=-2+1+4=3$.' },
+        { kind: 'tip', text: 'Schemat Hornera: szybki sposób na obliczanie $W(a)$ i dzielenie wielomianu przez $(x-a)$.' }
       ]
     },
     {
-      type: 'theory', title: 'Faktoryzacja – metody i strategy',
+      type: 'theory', title: 'Dzielenie wielomianów i schemat Hornera',
       items: [
-        { kind: 'rule', text: 'Faktoryzacja to rozkład wyrażenia na czynniki. Metody:' },
+        { kind: 'rule', text: 'Dzielenie wielomianów z resztą: $W(x) = D(x)\\cdot Q(x) + R(x)$, gdzie $\\deg R < \\deg D$.' },
         { kind: 'formulas', items: [
-          '1) Wyłącz wspólny czynnik: $6x^2-15x = 3x(2x-5)$',
-          '2) Wzory skróconego mnożenia',
-          '3) Grupowanie wyrazów',
-          '4) Tw. Bézouta (dla wielomianów stopnia $\\geq 3$)'
+          'Dzielenie przez $(x-a)$: reszta $= W(a)$ (tw. o reszcie)',
+          'Schemat Hornera: zapisujemy współczynniki $W(x)$, podajemy $a$',
+          'Odczytujemy wynik $Q(x)$ i resztę $R$',
+          'NWD wielomianów: szukamy czynnika wspólnego najwyższego stopnia',
+          'Jednomian: wielomian stopnia $0$ to stała, stopnia $1$ – liniowy'
         ]},
-        { kind: 'example', label: 'Grupowanie', text: '$ac + ad + bc + bd = a(c+d)+b(c+d) = (a+b)(c+d)$' },
-        { kind: 'example', label: 'Pełna faktoryzacja', text: '$2x^3-8x = 2x(x^2-4) = 2x(x-2)(x+2)$' },
-        { kind: 'tip', text: 'Zawsze zacznij od wyłączenia WSPÓLNEGO CZYNNIKA – duże uproszczenie na starcie.' }
+        { kind: 'example', label: 'Dzielenie', text: '$(x^3+2x^2-5x-6):(x+3)$. Schemat Hornera ($a=-3$): $[1,2,-5,-6]$. Wynik: $x^2-x-2$, reszta $0$. Zatem $(x+3)(x^2-x-2)=(x+3)(x-2)(x+1)$.' },
+        { kind: 'example', label: 'Z resztą', text: '$(2x^2+3x+1):(x-1)$. $W(1)=2+3+1=6$. Wynik: $2x+5$, reszta $6$.' },
+        { kind: 'tip', text: 'Schemat Hornera = szybszy niż pisemne dzielenie. Ćwicz go – pojawia się na maturze.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Faktoryzacja – metody',
+      items: [
+        { kind: 'rule', text: 'Faktoryzacja to rozkład wyrażenia na czynniki. Cztery główne metody:' },
+        { kind: 'formulas', items: [
+          '1) Wyłączanie wspólnego czynnika: $6x^2-15x = 3x(2x-5)$',
+          '2) Wzory skróconego mnożenia: $x^2-16 = (x-4)(x+4)$',
+          '3) Grupowanie wyrazów: $ax+ay+bx+by = a(x+y)+b(x+y) = (a+b)(x+y)$',
+          '4) Tw. Bézouta + dzielenie (wielomiany $\\geq 3$ stopnia)'
+        ]},
+        { kind: 'example', label: 'Wyłączanie + wzory', text: '$2x^3-8x = 2x(x^2-4) = 2x(x-2)(x+2)$' },
+        { kind: 'example', label: 'Grupowanie', text: '$x^3+x^2-x-1 = x^2(x+1)-(x+1) = (x+1)(x^2-1) = (x+1)^2(x-1)$' },
+        { kind: 'example', label: 'Pełna faktoryzacja stopnia 4', text: '$x^4-5x^2+4 = (x^2-1)(x^2-4) = (x-1)(x+1)(x-2)(x+2)$' },
+        { kind: 'tip', text: 'Zawsze zacznij od wyłączenia WSPÓLNEGO CZYNNIKA – duże uproszczenie na starcie. Potem szukaj wzorów.' }
       ]
     },
     {
       type: 'theory', title: 'Ułamki algebraiczne – działania i upraszczanie',
       items: [
-        { kind: 'rule', text: 'Ułamek algebraiczny upraszczamy przez rozkład licznika i mianownika, a następnie skrócenie.' },
+        { kind: 'rule', text: 'Ułamek algebraiczny upraszczamy przez rozkład licznika i mianownika na czynniki, a następnie skrócenie.' },
         { kind: 'formulas', items: [
           'Upraszczanie: $\\dfrac{x^2-9}{x-3} = \\dfrac{(x+3)(x-3)}{x-3} = x+3 \\;(x\\neq 3)$',
-          'Dodawanie: $\\dfrac{a}{b}+\\dfrac{c}{d} = \\dfrac{ad+bc}{bd}$',
+          'Dodawanie: $\\dfrac{a}{b}+\\dfrac{c}{d} = \\dfrac{ad+bc}{bd}$ (NWW mianowników)',
           'Mnożenie: $\\dfrac{a}{b}\\cdot\\dfrac{c}{d} = \\dfrac{ac}{bd}$',
+          'Dzielenie: $\\dfrac{a}{b}:\\dfrac{c}{d} = \\dfrac{a}{b}\\cdot\\dfrac{d}{c} = \\dfrac{ad}{bc}$',
           'Dziedzina ułamka: wszystkie $x$, dla których mianownik $\\neq 0$'
         ]},
-        { kind: 'example', label: 'Dodawanie ułamków algebraicznych', text: '$\\dfrac{2}{x+1}+\\dfrac{3}{x-1} = \\dfrac{2(x-1)+3(x+1)}{(x+1)(x-1)} = \\dfrac{5x+1}{x^2-1}$' },
-        { kind: 'tip', text: 'Po uproszczeniu ułamka ZAWSZE podaj warunek dziedziny (wartości odrzuconych $x$).' }
+        { kind: 'example', label: 'Dodawanie ułamków', text: '$\\dfrac{2}{x+1}+\\dfrac{3}{x-1} = \\dfrac{2(x-1)+3(x+1)}{(x+1)(x-1)} = \\dfrac{5x+1}{x^2-1}$' },
+        { kind: 'example', label: 'Skracanie złożone', text: '$\\dfrac{x^2-4x+4}{x^2-4} = \\dfrac{(x-2)^2}{(x-2)(x+2)} = \\dfrac{x-2}{x+2}\\;(x\\neq 2)$' },
+        { kind: 'tip', text: 'Po uproszczeniu ułamka ZAWSZE podaj warunek dziedziny (wartości odrzuconych).' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Trójmian kwadratowy jako wyrażenie algebraiczne',
+      items: [
+        { kind: 'rule', text: 'Trójmian $ax^2+bx+c$ można rozkładać na czynniki i analizować algebraicznie (zanim poznamy funkcję kwadratową):' },
+        { kind: 'formulas', items: [
+          'Rozkład: $ax^2+bx+c = a(x-x_1)(x-x_2)$ gdy $\\Delta>0$',
+          'Uzupełnianie do kwadratu: $x^2+bx = (x+\\frac{b}{2})^2 - \\frac{b^2}{4}$',
+          'Wyznaczanie $x_1+x_2 = -\\frac{b}{a}$ i $x_1 x_2 = \\frac{c}{a}$ (Viète)',
+          'Trójmian doskonały: $\\Delta=0 \\Rightarrow ax^2+bx+c = a(x-x_0)^2$'
+        ]},
+        { kind: 'example', label: 'Uzupełnianie do kwadratu', text: '$x^2+6x+5 = (x+3)^2-9+5 = (x+3)^2-4 = (x+3-2)(x+3+2) = (x+1)(x+5)$' },
+        { kind: 'example', label: 'Rozkład przez $\\Delta$', text: '$2x^2-7x+3$. $\\Delta=49-24=25$. $x_1=3, x_2=\\frac{1}{2}$. Rozkład: $2(x-3)(x-\\frac{1}{2}) = (x-3)(2x-1)$.' },
+        { kind: 'tip', text: 'Uzupełnianie do kwadratu to technika uniwersalna – działa nawet gdy $\\Delta<0$ (brak pierwiastków).' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Wyrażenia z parametrem',
+      items: [
+        { kind: 'rule', text: 'Wyrażenia z parametrem ($a$, $m$, $k$) wymagają dyskusji – analizujemy różne przypadki:' },
+        { kind: 'formulas', items: [
+          'Wyrażenie $\\frac{f(x,m)}{g(x,m)}$: dziedzina zależy od $m$',
+          'Równoważność wyrażeń: sprawdzamy dla KAŻDEGO dopuszczalnego $x$',
+          'Tożsamość algebraiczna: wyrażenia równe dla WSZYSTKICH $x$ z dziedziny',
+          'Wielomian z parametrem: współczynniki mogą zależeć od $m$'
+        ]},
+        { kind: 'example', label: 'Stopień wielomianu z parametrem', text: '$W(x) = (m-2)x^2+3x+1$. Stopień $=2$ gdy $m\\neq 2$. Gdy $m=2$: $W(x)=3x+1$ – stopień $1$.' },
+        { kind: 'example', label: 'Dziedzina z parametrem', text: '$\\frac{x+1}{x-m}$: dziedzina $= \\mathbb{R}\\setminus\\{m\\}$. Wartość $m$ określa, który punkt wykluczamy.' },
+        { kind: 'tip', text: 'Przy analizie z parametrem: ZAWSZE rozważ przypadki graniczne (gdy parametr przyjmuje wartość krytyczną).' }
       ]
     },
     {
       type: 'question', text: 'Wynik $(2x+3)^2 - (2x-3)^2$ to:',
       answers: ['$24x$','$8x^2+9$','$24$','$4x^2$'], correct: 0,
-      explanation: 'Stosujemy $A^2-B^2=(A+B)(A-B)$, gdzie $A=2x+3$, $B=2x-3$: $(4x+6)\\cdot 6 = 24x$. Szybciej: $(a+b)^2-(a-b)^2=4ab=4\\cdot2x\\cdot3=24x$.'
+      explanation: '$(A+B)(A-B)$ z $A=2x+3$, $B=2x-3$: wynik $= (4x)(6) = 24x$. Szybciej: $(a+b)^2-(a-b)^2=4ab=4\\cdot2x\\cdot3=24x$.'
     },
     {
       type: 'question', text: '$x^2 - 16$ jest równe:',
       answers: ['$(x-4)^2$','$(x+4)(x-4)$','$(x-8)^2$','$(x+8)(x-8)$'], correct: 1,
-      explanation: '$x^2-16 = x^2-4^2 = (x+4)(x-4)$. Wzór: różnica kwadratów $a^2-b^2=(a+b)(a-b)$.'
+      explanation: '$x^2-16 = x^2-4^2 = (x+4)(x-4)$. Różnica kwadratów: $a^2-b^2=(a+b)(a-b)$.'
     },
     {
       type: 'question', text: 'Wyraz wolny w $W(x)=x^3-4x^2+3x-7$ wynosi:',
       answers: ['$1$','$3$','$-4$','$-7$'], correct: 3,
-      explanation: 'Wyraz wolny $a_0 = W(0) = 0-0+0-7=-7$. Wyraz wolny to stała (wyraz bez $x$).'
+      explanation: 'Wyraz wolny $= W(0) = 0-0+0-7=-7$.'
     },
     {
       type: 'question', text: 'Wynik uproszczenia $\\dfrac{x^2 - 9}{x - 3}$ (dla $x \\neq 3$):',
       answers: ['$x+3$','$x-3$','$x^2+3$','$3$'], correct: 0,
-      explanation: '$\\frac{x^2-9}{x-3}=\\frac{(x+3)(x-3)}{x-3}=x+3$. Licznik rozkładamy jako różnicę kwadratów: $x^2-9=(x+3)(x-3)$.'
+      explanation: '$\\frac{x^2-9}{x-3}=\\frac{(x+3)(x-3)}{x-3}=x+3$. Różnica kwadratów w liczniku.'
     },
     {
       type: 'question', text: 'Rozkład $8x^3 - 27$ na czynniki to:',
       answers: ['$(2x-3)(4x^2+6x+9)$','$(2x+3)(4x^2-6x+9)$','$(2x-3)^3$','$(2x-3)(4x^2-9)$'], correct: 0,
-      explanation: '$8x^3-27=(2x)^3-3^3 = (2x-3)\\bigl((2x)^2+2x\\cdot3+3^2\\bigr) = (2x-3)(4x^2+6x+9)$. Wzór różnicy sześcianów: $a^3-b^3=(a-b)(a^2+ab+b^2)$.'
+      explanation: '$8x^3-27=(2x)^3-3^3 = (2x-3)(4x^2+6x+9)$. Różnica sześcianów: $a^3-b^3=(a-b)(a^2+ab+b^2)$.'
     },
     {
       type: 'question', text: 'Dziedzina wyrażenia $\\dfrac{x+2}{x^2-5x+6}$:',
       answers: ['$\\mathbb{R}\\setminus\\{2,3\\}$','$\\mathbb{R}\\setminus\\{-2\\}$','$\\mathbb{R}$','$\\mathbb{R}\\setminus\\{5,-6\\}$'], correct: 0,
-      explanation: 'Mianownik: $x^2-5x+6=(x-2)(x-3)$. Mianownik $\\neq 0$ gdy $x\\neq 2$ i $x\\neq 3$. Dziedzina: $\\mathbb{R}\\setminus\\{2,3\\}$.'
+      explanation: 'Mianownik: $x^2-5x+6=(x-2)(x-3)=0$ gdy $x=2$ lub $x=3$. Dziedzina: $\\mathbb{R}\\setminus\\{2,3\\}$.'
     },
     {
-      type: 'question', text: '(Matura) Jeśli $W(x)=x^3-6x^2+11x-6$ i $W(1)=0$, to pełny rozkład $W(x)$ to:',
-      answers: ['$(x-1)(x-2)(x-3)$','$(x+1)(x+2)(x+3)$','$(x-1)(x^2-5x+6)$','$(x-1)(x-6)^2$'], correct: 0,
-      explanation: 'Z tw. Bézouta $(x-1)$ jest czynnikiem. Dzielenie: $x^3-6x^2+11x-6=(x-1)(x^2-5x+6)=(x-1)(x-2)(x-3)$. Trzy różne pierwiastki: $1, 2, 3$.'
+      type: 'question', text: 'Wynik $(x+1)^3$ po rozwinięciu to:',
+      answers: ['$x^3+3x^2+3x+1$','$x^3+1$','$x^3+x^2+x+1$','$x^3+3x+1$'], correct: 0,
+      explanation: '$(x+1)^3 = x^3+3x^2\\cdot1+3x\\cdot1^2+1^3 = x^3+3x^2+3x+1$. Wzór sześcianu sumy.'
     },
     {
-      type: 'question', text: '(Matura) Uprość $\\dfrac{x^2-1}{x^2+2x+1}$ dla $x\\neq -1$:',
+      type: 'question', text: 'Faktoryzacja $x^3+x^2-x-1$:',
+      answers: ['$(x+1)^2(x-1)$','$(x-1)^2(x+1)$','$(x^2-1)(x-1)$','$(x+1)(x-1)^2$'], correct: 0,
+      explanation: 'Grupowanie: $x^2(x+1)-(x+1) = (x+1)(x^2-1) = (x+1)(x+1)(x-1) = (x+1)^2(x-1)$.'
+    },
+    {
+      type: 'question', text: 'Uzupełnij do kwadratu: $x^2+8x+7 = (x+?)^2+?$',
+      answers: ['$(x+4)^2-9$','$(x+4)^2+7$','$(x+8)^2-57$','$(x+3)^2-2$'], correct: 0,
+      explanation: '$x^2+8x+7 = (x^2+8x+16)-16+7 = (x+4)^2-9$. Dodajemy i odejmujemy $(\\frac{8}{2})^2=16$.'
+    },
+    {
+      type: 'question', text: '$\\dfrac{x^2-1}{x^2+2x+1}$ po uproszczeniu ($x\\neq -1$):',
       answers: ['$\\dfrac{x-1}{x+1}$','$\\dfrac{x+1}{x-1}$','$x-1$','$\\dfrac{1}{x+1}$'], correct: 0,
-      explanation: 'Licznik: $x^2-1=(x-1)(x+1)$. Mianownik: $x^2+2x+1=(x+1)^2$. Skracając $(x+1)$: $\\dfrac{x-1}{x+1}$.'
+      explanation: 'Licznik: $x^2-1=(x-1)(x+1)$. Mianownik: $(x+1)^2$. Skracając: $\\dfrac{x-1}{x+1}$.'
+    },
+    {
+      type: 'question', text: '(Matura) $W(x)=x^3-6x^2+11x-6$ i $W(1)=0$. Pełny rozkład $W(x)$:',
+      answers: ['$(x-1)(x-2)(x-3)$','$(x+1)(x+2)(x+3)$','$(x-1)(x^2-5x+6)$','$(x-1)(x-6)^2$'], correct: 0,
+      explanation: 'Tw. Bézouta: $(x-1)\\mid W(x)$. Dzielenie: $x^3-6x^2+11x-6=(x-1)(x^2-5x+6)=(x-1)(x-2)(x-3)$.'
+    },
+    {
+      type: 'question', text: '(Matura) Reszta z dzielenia $W(x)=x^4+2x^2-3$ przez $(x-1)$:',
+      answers: ['$0$','$-3$','$4$','$2$'], correct: 0,
+      explanation: 'Tw. o reszcie: reszta $= W(1) = 1+2-3 = 0$. Zatem $(x-1)$ dzieli $W(x)$ bez reszty.'
+    },
+    {
+      type: 'question', text: '(Matura) Uprość: $\\dfrac{2}{x-1}-\\dfrac{1}{x+1}$',
+      answers: ['$\\dfrac{x+3}{x^2-1}$','$\\dfrac{1}{x^2-1}$','$\\dfrac{x+3}{(x-1)(x+1)}$','$\\dfrac{x+3}{x^2-1}$'], correct: 0,
+      explanation: '$\\dfrac{2(x+1)-(x-1)}{(x-1)(x+1)} = \\dfrac{2x+2-x+1}{x^2-1} = \\dfrac{x+3}{x^2-1}$.'
+    },
+    {
+      type: 'question', text: '(Matura) Wielomian $W(x)=mx^3+2x^2-x+3$. Dla jakiego $m$ jest $W(-1)=0$?',
+      answers: ['$m=6$','$m=-4$','$m=2$','$m=4$'], correct: 0,
+      explanation: '$W(-1)=m(-1)^3+2(-1)^2-(-1)+3=-m+2+1+3=-m+6=0 \\Rightarrow m=6$.'
+    },
+    {
+      type: 'question', text: '(Matura) Stopień wielomianu $(x^2+1)^3(x-2)^2$ wynosi:',
+      answers: ['$8$','$6$','$7$','$12$'], correct: 0,
+      explanation: 'Stopień $(x^2+1)^3 = 2\\cdot3=6$. Stopień $(x-2)^2=2$. Stopień iloczynu: $6+2=8$.'
     }
   ]
 },
 /* ================================================ MODULE 2 */
 {
-  meta: { icon: 'fa-equals', color: '#10b981', title: 'Równania i nierówności', desc: 'Równania liniowe, kwadratowe, wymierne, układy 2×2, nierówności z wartością bezwzględną.', badge: 2 },
+  meta: { icon: 'fa-equals', color: '#10b981', title: 'Równania i nierówności', desc: 'Równania liniowe, kwadratowe, wymierne, irracjonalne, układy 2×2, nierówności z wartością bezwzględną.', badge: 2 },
   steps: [
     {
       type: 'theory', title: 'Równania liniowe i ich rozwiązywanie',
@@ -553,114 +750,192 @@ const COURSE = [
         { kind: 'formulas', items: [
           'Do obu stron możemy dodawać/odejmować tę samą liczbę',
           'Obie strony możemy mnożyć/dzielić przez tę samą NIEZEROWĄ liczbę',
-          'Przenosząc na drugą stronę – ZMIENIAMY ZNAK'
+          'Przenosząc na drugą stronę – ZMIENIAMY ZNAK',
+          'Równania z ułamkami: mnóż przez NWW mianowników'
         ]},
-        { kind: 'example', label: 'Przykład krok po kroku', text: '$3(2x-1)-4=2(x+5)$\n$\\Rightarrow 6x-3-4=2x+10$\n$\\Rightarrow 4x=17$\n$\\Rightarrow x=\\frac{17}{4}$' },
-        { kind: 'tip', text: '⚠️ Przy równaniach z ułamkami: najpierw mnożymy przez NWW mianowników, by pozbyć się ułamków.' }
+        { kind: 'example', label: 'Krok po kroku', text: '$3(2x-1)-4=2(x+5)$\n$6x-3-4=2x+10$\n$4x=17$\n$x=\\frac{17}{4}$' },
+        { kind: 'example', label: 'Z ułamkami', text: '$\\frac{x}{3}+\\frac{x-1}{2}=1$. NWW$=6$: $2x+3(x-1)=6 \\Rightarrow 5x=9 \\Rightarrow x=\\frac{9}{5}$.' },
+        { kind: 'tip', text: '⚠️ Przy mnożeniu przez wyrażenie z $x$ – sprawdź czy to wyrażenie może być $= 0$!' }
       ]
     },
     {
       type: 'theory', title: 'Równania kwadratowe – pełna teoria',
       items: [
-        { kind: 'rule', text: 'Równanie kwadratowe: $ax^2+bx+c=0$, $a\\neq 0$. Trzy metody rozwiązania:' },
+        { kind: 'rule', text: 'Równanie kwadratowe: $ax^2+bx+c=0$, $a\\neq 0$. Rozwiązanie przez wyróżnik:' },
         { kind: 'formulas', items: [
-          '1) Wzór ogólny: $x_{1,2} = \\dfrac{-b\\pm\\sqrt{\\Delta}}{2a}$, gdzie $\\Delta = b^2-4ac$',
-          '2) Wzory Viète\'a: $x_1+x_2 = -\\dfrac{b}{a}$, $\\quad x_1\\cdot x_2 = \\dfrac{c}{a}$',
-          '3) Postać kanoniczna: $a(x-p)^2+q=0 \\Rightarrow (x-p)^2 = -\\frac{q}{a}$',
-          '$\\Delta>0$: dwa różne pierwiastki rzeczywiste',
-          '$\\Delta=0$: jeden pierwiastek (podwójny) $x_0 = -\\frac{b}{2a}$',
-          '$\\Delta<0$: brak pierwiastków rzeczywistych'
+          '$\\Delta = b^2-4ac$',
+          '$\\Delta>0$: $x_{1,2} = \\dfrac{-b\\pm\\sqrt{\\Delta}}{2a}$ (dwa różne pierwiastki)',
+          '$\\Delta=0$: $x_0 = -\\dfrac{b}{2a}$ (jeden podwójny)',
+          '$\\Delta<0$: brak pierwiastków rzeczywistych',
+          'Viète: $x_1+x_2 = -\\dfrac{b}{a}$, $\\;x_1\\cdot x_2 = \\dfrac{c}{a}$',
+          'Postać kanoniczna: $a(x-p)^2+q=0$, $p=-\\frac{b}{2a}$, $q=-\\frac{\\Delta}{4a}$'
         ]},
-        { kind: 'example', label: 'Przykład – wzór ogólny', text: '$2x^2-5x+3=0$. $\\Delta=25-24=1$. $x = \\frac{5\\pm 1}{4}$, czyli $x_1=\\frac{3}{2},\\;x_2=1$.' },
-        { kind: 'example', label: 'Przykład – sprawdzenie Viète', text: '$x_1+x_2=\\frac{3}{2}+1=\\frac{5}{2}=\\frac{5}{2}$ ✓  $x_1\\cdot x_2=\\frac{3}{2}\\cdot 1=\\frac{3}{2}=\\frac{c}{a}$ ✓' },
-        { kind: 'tip', text: 'Kiedy $b$ jest parzyste: stosuj skrócony wzór z $\\Delta\'=(b/2)^2-ac$, $x=\\frac{-b/2\\pm\\sqrt{\\Delta\'}}{a}$.' }
+        { kind: 'example', label: 'Wzór ogólny', text: '$2x^2-5x+3=0$. $\\Delta=25-24=1$. $x = \\frac{5\\pm 1}{4}$: $x_1=\\frac{3}{2},\\;x_2=1$.' },
+        { kind: 'example', label: 'Sprawdzenie Viète', text: '$x_1+x_2=\\frac{3}{2}+1=\\frac{5}{2}=-\\frac{-5}{2}$ ✓  $x_1 x_2=\\frac{3}{2}=\\frac{c}{a}$ ✓' },
+        { kind: 'tip', text: 'Gdy $b$ parzyste: $\\Delta\'=(b/2)^2-ac$, $x=\\frac{-b/2\\pm\\sqrt{\\Delta\'}}{a}$ – szybszy wzór.' }
       ]
     },
     {
-      type: 'theory', title: 'Równania wymierne i z parametrem',
+      type: 'theory', title: 'Równania wymierne',
       items: [
-        { kind: 'rule', text: 'Równanie wymierne: sprowadzamy do wspólnego mianownika (NWW), ale sprawdzamy dziedzinę!' },
-        { kind: 'example', label: 'Przykład', text: '$\\dfrac{x}{x-2}=\\dfrac{3}{x-2}+1$. Dziedzina: $x\\neq 2$. Mnożymy przez $(x-2)$: $x=3+x-2 \\Rightarrow 0=1$. Sprzeczne. Brak rozwiązań.' },
-        { kind: 'rule', text: 'Równanie z parametrem $m$: badamy liczbę rozwiązań w zależności od $m$.' },
-        { kind: 'example', label: 'Z parametrem', text: '$mx = 3$. Jeśli $m\\neq 0$: $x=\\frac{3}{m}$. Jeśli $m=0$: $0=3$ – sprzeczne.' },
-        { kind: 'tip', text: '⚠️ Sprawdzaj DZIEDZINĘ – zwłaszcza gdy mnożymy przez wyrażenie, które może być zerowe!' }
+        { kind: 'rule', text: 'Równanie wymierne zawiera $x$ w mianowniku. Metoda: sprowadzamy do wspólnego mianownika, ale ZAWSZE sprawdzamy dziedzinę!' },
+        { kind: 'formulas', items: [
+          '1. Wyznacz dziedzinę (mianownik $\\neq 0$)',
+          '2. Pomnóż obie strony przez NWW mianowników',
+          '3. Rozwiąż powstałe równanie wielomianowe',
+          '4. Odrzuć rozwiązania spoza dziedziny'
+        ]},
+        { kind: 'example', label: 'Rozwiązanie z odrzuceniem', text: '$\\frac{x}{x-2}=\\frac{3}{x-2}+1$. Dziedzina: $x\\neq 2$. Mnożymy przez $(x-2)$: $x=3+x-2 \\Rightarrow 0=1$. Sprzeczne – brak rozwiązań.' },
+        { kind: 'example', label: 'Poprawne rozwiązanie', text: '$\\frac{x+1}{x-3}=2$. Dziedzina: $x\\neq 3$. $x+1=2(x-3)=2x-6 \\Rightarrow x=7$. Sprawdzenie: $7\\neq 3$ ✓' },
+        { kind: 'tip', text: '⚠️ Mnożenie przez wyrażenie mogące być zerem może WPROWADZIĆ fałszywe rozwiązania – ZAWSZE sprawdzaj!' }
       ]
     },
     {
-      type: 'theory', title: 'Nierówności – liniowe, kwadratowe, z |x|',
+      type: 'theory', title: 'Równania irracjonalne',
       items: [
-        { kind: 'rule', text: 'Nierówność liniowa $ax+b>0$. Przy dzieleniu/mnożeniu przez ujemną liczbę ODWRACAMY kierunek nierówności.' },
+        { kind: 'rule', text: 'Równanie irracjonalne zawiera $x$ pod pierwiastkiem. Metoda: izolujemy pierwiastek, podnosimy do kwadratu, sprawdzamy.' },
         { kind: 'formulas', items: [
-          'Nierówność kwadratowa $a>0$: $ax^2+bx+c<0 \\Leftrightarrow x\\in(x_1,x_2)$ (gdy $\\Delta>0$)',
-          'Nierówność kwadratowa $a>0$: $ax^2+bx+c>0 \\Leftrightarrow x\\in(-\\infty,x_1)\\cup(x_2,+\\infty)$',
-          '$|x|<a \\;(a>0) \\Leftrightarrow -a<x<a$',
-          '$|x|>a \\;(a>0) \\Leftrightarrow x<-a$ lub $x>a$',
-          '$|f(x)|<g(x) \\Leftrightarrow -g(x)<f(x)<g(x)$'
+          '$\\sqrt{f(x)}=g(x) \\Leftrightarrow f(x)=[g(x)]^2$ ORAZ $g(x)\\geq 0$ ORAZ $f(x)\\geq 0$',
+          'Podniesienie do kwadratu może DODAĆ fałszywe rozwiązania!',
+          'Sprawdzenie jest OBOWIĄZKOWE'
         ]},
-        { kind: 'example', label: 'Nierówność kwadratowa', text: '$x^2-5x+6<0$. Pierwiastki: $x_1=2,x_2=3$. Parabola $a>0$: poniżej osi między pierwiastkami. Wynik: $x\\in(2,3)$.' },
-        { kind: 'example', label: 'Nierówność z |x|', text: '$|2x-1|\\leq 5 \\Rightarrow -5\\leq 2x-1\\leq 5 \\Rightarrow -4\\leq 2x\\leq 6 \\Rightarrow -2\\leq x\\leq 3$.' },
-        { kind: 'tip', text: 'Metoda znakowa: wyznaczone pierwiastki dzielą oś $Ox$ na przedziały – sprawdź znak wyrażenia w każdym przedziale.' }
+        { kind: 'example', label: 'Przykład', text: '$\\sqrt{2x+1}=x-1$. Warunek: $x-1\\geq 0$, tj. $x\\geq 1$. $2x+1=(x-1)^2=x^2-2x+1 \\Rightarrow x^2-4x=0 \\Rightarrow x(x-4)=0$. $x=0$ (nie spełnia $x\\geq 1$), $x=4$ ✓. Sprawdzenie: $\\sqrt{9}=3=4-1$ ✓' },
+        { kind: 'tip', text: 'Bez sprawdzenia możesz uzyskać „rozwiązanie pozorne" – ZAWSZE podstaw do ORYGINALNEGO równania!' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Nierówności liniowe i kwadratowe',
+      items: [
+        { kind: 'rule', text: 'Nierówność liniowa $ax+b>0$: rozwiązujemy jak równanie, ale uwaga na kierunek!' },
+        { kind: 'formulas', items: [
+          'Mnożenie/dzielenie przez liczbę UJEMNĄ → ODWRACA kierunek nierówności',
+          'Nierówność kwadratowa ($a>0$, $\\Delta>0$): $ax^2+bx+c<0 \\Leftrightarrow x\\in(x_1,x_2)$',
+          '$ax^2+bx+c>0 \\Leftrightarrow x\\in(-\\infty,x_1)\\cup(x_2,+\\infty)$ (gdy $a>0$, $\\Delta>0$)',
+          '$a>0$, $\\Delta<0$: $ax^2+bx+c>0$ zawsze; $<0$ nigdy',
+          '$|f(x)|<g(x) \\Leftrightarrow -g(x)<f(x)<g(x)$',
+          '$|f(x)|>g(x) \\Leftrightarrow f(x)<-g(x)$ lub $f(x)>g(x)$'
+        ]},
+        { kind: 'example', label: 'Kwadratowa', text: '$x^2-5x+6<0$. $(x-2)(x-3)<0$. $a=1>0$: ujemna między pierwiastkami: $x\\in(2,3)$.' },
+        { kind: 'example', label: 'Z wartością bezwzgl.', text: '$|2x-1|\\leq 5 \\Rightarrow -5\\leq 2x-1\\leq 5 \\Rightarrow -2\\leq x\\leq 3$.' },
+        { kind: 'tip', text: 'Metoda znakowa: wyznaczone zera dzielą oś na przedziały – wystarczy sprawdzić znak w jednym punkcie każdego przedziału.' }
       ]
     },
     {
       type: 'theory', title: 'Układy równań 2×2',
       items: [
-        { kind: 'rule', text: 'Układ $2\\times 2$ – trzy przypadki geometryczne:' },
+        { kind: 'rule', text: 'Układ $2\\times 2$: dwa równania, dwie niewiadome. Trzy przypadki geometryczne (dwie proste):' },
         { kind: 'formulas', items: [
           'Jedno rozwiązanie (proste przecinają się): $\\frac{a_1}{a_2}\\neq\\frac{b_1}{b_2}$',
-          'Nieskończenie wiele rozwiązań (proste pokrywają się): $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}=\\frac{c_1}{c_2}$',
+          'Nieskończenie wiele (proste pokrywają się): $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}=\\frac{c_1}{c_2}$',
           'Brak rozwiązań (proste równoległe): $\\frac{a_1}{a_2}=\\frac{b_1}{b_2}\\neq\\frac{c_1}{c_2}$'
         ]},
-        { kind: 'example', label: 'Metoda podstawiania', text: '$\\begin{cases}y=2x-1\\\\3x+y=9\\end{cases}$. Podstawiamy: $3x+(2x-1)=9 \\Rightarrow 5x=10 \\Rightarrow x=2,\\;y=3$.' },
-        { kind: 'example', label: 'Metoda eliminacji', text: '$\\begin{cases}2x+3y=7\\\\4x-3y=5\\end{cases}$. Dodajemy: $6x=12 \\Rightarrow x=2$, potem $y=1$.' },
-        { kind: 'tip', text: 'W układach z parametrem: gdy wyznacznik główny $= 0$, układ ma nieskończenie wiele rozwiązań lub jest sprzeczny.' }
+        { kind: 'example', label: 'Podstawianie', text: '$\\begin{cases}y=2x-1\\\\3x+y=9\\end{cases}$. $3x+(2x-1)=9 \\Rightarrow 5x=10 \\Rightarrow x=2,\\;y=3$.' },
+        { kind: 'example', label: 'Eliminacja', text: '$\\begin{cases}2x+3y=7\\\\4x-3y=5\\end{cases}$. Dodajemy: $6x=12 \\Rightarrow x=2$, $y=1$.' },
+        { kind: 'tip', text: 'Układ nieliniowy (np. kwadratowy): podstawiamy jedno równanie do drugiego – może dać 0, 1 lub 2 rozwiązania.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Równania z parametrem',
+      items: [
+        { kind: 'rule', text: 'Równanie z parametrem $m$: badamy liczbę i rodzaj rozwiązań w zależności od wartości $m$.' },
+        { kind: 'formulas', items: [
+          'Liniowe $mx=b$: $m\\neq 0 \\Rightarrow x=\\frac{b}{m}$; $m=0,b\\neq 0 \\Rightarrow$ sprzeczne; $m=0,b=0 \\Rightarrow$ tożsamość',
+          'Kwadratowe $(m-1)x^2+2x+1=0$: gdy $m=1$ – liniowe; gdy $m\\neq 1$ – badamy $\\Delta$',
+          'Ostrożnie z dzieleniem przez wyrażenie zawierające $m$ – może być zerem!'
+        ]},
+        { kind: 'example', label: 'Z parametrem', text: '$(m-3)x^2+2mx+1=0$. Gdy $m=3$: $6x+1=0$, $x=-\\frac{1}{6}$. Gdy $m\\neq 3$: $\\Delta=4m^2-4(m-3)=4m^2-4m+12=4(m^2-m+3)$. $\\Delta\'=m^2-m+3$, $\\Delta_{\\Delta\'}=1-12<0$, więc $\\Delta\'>0$ zawsze. Zatem DWA pierwiastki dla każdego $m\\neq 3$.' },
+        { kind: 'tip', text: 'Przy parametrach: ZAWSZE sprawdź czy $a\\neq 0$ (czy to naprawdę jest równanie kwadratowe).' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Układy nierówności i zadania złożone',
+      items: [
+        { kind: 'rule', text: 'Układ nierówności: rozwiązujemy każdą osobno i bierzemy CZĘŚĆ WSPÓLNĄ (iloczyn) zbiorów rozwiązań.' },
+        { kind: 'formulas', items: [
+          '$\\begin{cases}f(x)>0\\\\g(x)\\leq 0\\end{cases}$ rozwiązanie: $A\\cap B$',
+          'Podwójna nierówność: $a < f(x) < b \\Leftrightarrow \\begin{cases}f(x)>a\\\\f(x)<b\\end{cases}$',
+          'Nierówność wymierna $\\frac{f(x)}{g(x)}>0$: metoda znakowa (tabela znaków)'
+        ]},
+        { kind: 'example', label: 'Układ', text: '$\\begin{cases}x^2-4<0\\\\x+1>0\\end{cases}$. Z I: $x\\in(-2,2)$. Z II: $x\\in(-1,+\\infty)$. Część wspólna: $x\\in(-1,2)$.' },
+        { kind: 'example', label: 'Nierówność wymierna', text: '$\\frac{x-1}{x+3}>0$. Zera: $x=1$, $x=-3$. Znaki: $(-\\infty,-3)$: $+$; $(-3,1)$: $-$; $(1,+\\infty)$: $+$. Wynik: $x\\in(-\\infty,-3)\\cup(1,+\\infty)$.' },
+        { kind: 'tip', text: 'W nierówności wymiernej NIE mnożymy przez mianownik (bo nie wiemy jaki ma znak) – stosujemy metodę znakową!' }
       ]
     },
     {
       type: 'question', text: 'Wyróżnik równania $3x^2-12=0$ wynosi:',
       answers: ['$144$','$0$','$12$','$-12$'], correct: 0,
-      explanation: '$a=3, b=0, c=-12$. $\\Delta=b^2-4ac=0-4\\cdot3\\cdot(-12)=144$. Mamy dwa rozwiązania: $x=\\pm 2$.'
+      explanation: '$a=3, b=0, c=-12$. $\\Delta=0-4\\cdot3\\cdot(-12)=144$. Dwa rozwiązania: $x=\\pm 2$.'
     },
     {
       type: 'question', text: 'Rozwiązaniem nierówności $-3x+6>0$ jest:',
       answers: ['$x>2$','$x<2$','$x>-2$','$x<-2$'], correct: 1,
-      explanation: '$-3x>-6$. Dzielimy przez $-3$ i ZMIENIAMY kierunek nierówności: $x<2$.'
+      explanation: '$-3x>-6$. Dzielimy przez $-3$ – ZMIENIAMY kierunek: $x<2$.'
     },
     {
-      type: 'question', text: 'Suma rozwiązań $x^2-7x+10=0$ (wzór Viète\'a):',
+      type: 'question', text: 'Suma rozwiązań $x^2-7x+10=0$ (Viète):',
       answers: ['$10$','$7$','$-7$','$-10$'], correct: 1,
       explanation: '$x_1+x_2=-\\frac{b}{a}=-\\frac{-7}{1}=7$. Sprawdzenie: $x_1=2,x_2=5$, suma $=7$ ✓'
     },
     {
       type: 'question', text: 'Ile rozwiązań ma układ $\\begin{cases}y=2x+1\\\\4x-2y+2=0\\end{cases}$?',
       answers: ['Jedno','Nieskończenie wiele','Brak','Dwa'], correct: 1,
-      explanation: 'Podstawiamy $y=2x+1$ do drugiego: $4x-2(2x+1)+2=4x-4x-2+2=0$. Równanie $0=0$ jest tożsamością – nieskończenie wiele rozwiązań (proste są identyczne).'
+      explanation: 'Podstawiamy: $4x-2(2x+1)+2=4x-4x-2+2=0$. Tożsamość $0=0$ – nieskończenie wiele rozwiązań.'
     },
     {
       type: 'question', text: 'Rozwiązaniem $|3x - 6| < 9$ jest:',
       answers: ['$x\\in(-1,5)$','$x\\in(-3,5)$','$x\\in(-\\infty,-1)\\cup(5,+\\infty)$','$x\\in(-5,1)$'], correct: 0,
-      explanation: '$|3x-6|<9 \\Rightarrow -9<3x-6<9 \\Rightarrow -3<3x<15 \\Rightarrow -1<x<5$. Odpowiedź: $(-1,5)$.'
+      explanation: '$-9<3x-6<9 \\Rightarrow -3<3x<15 \\Rightarrow -1<x<5$.'
     },
     {
-      type: 'question', text: '(Matura) Nierówność $x^2-5x+6 < 0$ ma rozwiązanie:',
+      type: 'question', text: 'Równanie $\\sqrt{x+5}=x-1$. Rozwiązanie:',
+      answers: ['$x=4$','$x=-1$ i $x=4$','$x=-1$','Brak rozwiązań'], correct: 0,
+      explanation: 'Warunek: $x-1\\geq 0$, tj. $x\\geq 1$. Podnosimy: $x+5=x^2-2x+1 \\Rightarrow x^2-3x-4=0 \\Rightarrow (x-4)(x+1)=0$. $x=4$ (✓ spełnia $x\\geq 1$), $x=-1$ (❌). Jedyne rozwiązanie: $x=4$.'
+    },
+    {
+      type: 'question', text: 'Nierówność $x^2-5x+6 < 0$ ma rozwiązanie:',
       answers: ['$(2,3)$','$(-\\infty,2)\\cup(3,+\\infty)$','$[2,3]$','$\\emptyset$'], correct: 0,
-      explanation: '$x^2-5x+6=(x-2)(x-3)$. Parabola skierowana w górę (a=1>0). Ujemna MIĘDZY pierwiastkami: $x\\in(2,3)$.'
+      explanation: '$(x-2)(x-3)<0$. $a=1>0$: ujemna MIĘDZY pierwiastkami: $x\\in(2,3)$.'
     },
     {
       type: 'question', text: 'Dla jakiego $m$ równanie $(m-2)x = 5$ ma BRAK rozwiązań?',
       answers: ['$m=2$','$m=0$','$m=5$','$m=7$'], correct: 0,
-      explanation: 'Równanie $Ax=5$ nie ma rozwiązań gdy $A=0$. Tutaj $A=m-2=0 \\Rightarrow m=2$. Wtedy $0\\cdot x=5$, co jest sprzecznością.'
+      explanation: '$A\\cdot x=5$ nie ma rozwiązań gdy $A=0$, tj. $m-2=0 \\Rightarrow m=2$.'
     },
     {
-      type: 'question', text: '(Matura) Rozwiąż układ: $\\begin{cases}3x-2y=8\\\\x+4y=6\\end{cases}$. Wartość $x+y$:',
+      type: 'question', text: '$\\frac{x-2}{x+1}>0$. Rozwiązanie:',
+      answers: ['$x\\in(-\\infty,-1)\\cup(2,+\\infty)$','$x\\in(-1,2)$','$x\\in(2,+\\infty)$','$x\\in(-\\infty,-1)$'], correct: 0,
+      explanation: 'Zera: $x=2$ (licznik), $x=-1$ (mianownik). Tabela znaków: $(-\\infty,-1)$: $+$; $(-1,2)$: $-$; $(2,+\\infty)$: $+$. Wynik: $(-\\infty,-1)\\cup(2,+\\infty)$.'
+    },
+    {
+      type: 'question', text: 'Rozwiąż układ: $\\begin{cases}x^2+y^2=25\\\\x+y=7\\end{cases}$',
+      answers: ['$(3,4)$ i $(4,3)$','$(5,0)$ i $(0,5)$','$(3,4)$','Brak rozwiązań'], correct: 0,
+      explanation: 'Z II: $y=7-x$. Do I: $x^2+(7-x)^2=25 \\Rightarrow 2x^2-14x+24=0 \\Rightarrow x^2-7x+12=0 \\Rightarrow (x-3)(x-4)=0$. Rozwiązania: $(3,4)$ i $(4,3)$.'
+    },
+    {
+      type: 'question', text: '(Matura) Układ $\\begin{cases}3x-2y=8\\\\x+4y=6\\end{cases}$. Wartość $x+y$:',
       answers: ['$\\frac{27}{7}$','$5$','$3$','$4$'], correct: 0,
-      explanation: 'Eliminacja: mnożymy I przez 2: $6x-4y=16$. Dodajemy do II: $6x-4y+x+4y=16+6 \\Rightarrow 7x=22 \\Rightarrow x=\\frac{22}{7}$. Stąd $y=\\frac{6-\\frac{22}{7}}{4}=\\frac{\\frac{20}{7}}{4}=\\frac{5}{7}$. $x+y=\\frac{22}{7}+\\frac{5}{7}=\\frac{27}{7}$.'
+      explanation: 'I×2: $6x-4y=16$. Dodajemy do II: $7x=22 \\Rightarrow x=\\frac{22}{7}$. $y=\\frac{6-\\frac{22}{7}}{4}=\\frac{5}{7}$. $x+y=\\frac{27}{7}$.'
+    },
+    {
+      type: 'question', text: '(Matura) Układ nierówności $\\begin{cases}x^2-9\\leq 0\\\\2x-1>0\\end{cases}$:',
+      answers: ['$x\\in(\\frac{1}{2},3\\rangle$','$x\\in[-3,3]$','$x\\in(\\frac{1}{2},+\\infty)$','$x\\in[-3,\\frac{1}{2})$'], correct: 0,
+      explanation: 'I: $x^2\\leq 9 \\Rightarrow x\\in[-3,3]$. II: $x>\\frac{1}{2}$. Część wspólna: $x\\in(\\frac{1}{2},3]$.'
+    },
+    {
+      type: 'question', text: '(Matura) Równanie $\\frac{2x}{x-1}+\\frac{3}{x+1}=\\frac{5x}{x^2-1}$. Ile rozwiązań?',
+      answers: ['$1$','$0$','$2$','Nieskończenie wiele'], correct: 2,
+      explanation: 'Dziedzina: $x\\neq\\pm 1$. NWW $=(x-1)(x+1)$. Mnożymy: $2x(x+1)+3(x-1)=5x$. $2x^2+2x+3x-3=5x \\Rightarrow 2x^2=3 \\Rightarrow x=\\pm\\sqrt{\\frac{3}{2}}$. Oba spełniają dziedzinę – dwa rozwiązania.'
+    },
+    {
+      type: 'question', text: '(Matura) Dla jakich $m$ równanie $x^2+mx+4=0$ ma dwa różne pierwiastki dodatnie?',
+      answers: ['$m\\in(-\\infty,-4)$','$m\\in(-4,0)$','$m<-4$','$m>4$'], correct: 0,
+      explanation: 'Warunki: $\\Delta>0$: $m^2-16>0 \\Rightarrow |m|>4$. Viète: $x_1+x_2=-m>0 \\Rightarrow m<0$. $x_1 x_2=4>0$ ✓. Część wspólna: $m<-4$.'
     }
   ]
 },
 /* ================================================ MODULE 3 */
 {
-  meta: { icon: 'fa-chart-line', color: '#f59e0b', title: 'Funkcje', desc: 'Dziedzina, zbiór wartości, monotoniczność, parzystość, przekształcenia wykresów – pełny kurs.', badge: 3 },
+  meta: { icon: 'fa-chart-line', color: '#f59e0b', title: 'Funkcje', desc: 'Dziedzina, zbiór wartości, monotoniczność, parzystość, przekształcenia wykresów, funkcja liniowa, odwrotna.', badge: 3 },
   steps: [
     {
       type: 'theory', title: 'Funkcja – definicja i podstawowe pojęcia',
@@ -669,137 +944,221 @@ const COURSE = [
         { kind: 'formulas', items: [
           'Dziedzina $D_f$: wartości $x$, dla których $f(x)$ istnieje',
           'Zbiór wartości $Z_f$: zbiór wszystkich $f(x)$',
-          'Wykres: $\\{(x,f(x))\\colon x\\in D_f\\}$ – krzywa w układzie $xOy$',
-          'Funkcja różnowartościowa (injekcja): $x_1\\neq x_2 \\Rightarrow f(x_1)\\neq f(x_2)$',
-          'Funkcja stała: $f(x)=c$ dla wszystkich $x$'
+          'Wykres: $\\{(x,f(x))\\colon x\\in D_f\\}$',
+          'Funkcja różnowartościowa: $x_1\\neq x_2 \\Rightarrow f(x_1)\\neq f(x_2)$',
+          'Miejsce zerowe: punkt $x_0$, w którym $f(x_0)=0$'
         ]},
-        { kind: 'example', label: 'Dziedzina $f(x)=\\frac{1}{x-2}$', text: 'Mianownik $\\neq 0$: $x\\neq 2$. $D_f=\\mathbb{R}\\setminus\\{2\\}$.' },
-        { kind: 'example', label: 'Dziedzina $f(x)=\\sqrt{x+3}$', text: 'Wyrażenie pod $\\sqrt{}$ nieujemne: $x+3\\geq 0 \\Rightarrow x\\geq -3$. $D_f=\\langle -3,+\\infty)$.' },
-        { kind: 'example', label: 'Dziedzina $f(x)=\\log_2(x-1)$', text: 'Argument logarytmu dodatni: $x-1>0 \\Rightarrow x>1$. $D_f=(1,+\\infty)$.' },
-        { kind: 'tip', text: 'Reguły dziedziny: $\\sqrt{g(x)}$ wymaga $g(x)\\geq 0$; $\\frac{1}{g(x)}$ wymaga $g(x)\\neq 0$; $\\log_a g(x)$ wymaga $g(x)>0$.' }
+        { kind: 'example', label: 'Dziedzina $\\frac{1}{x-2}$', text: 'Mianownik $\\neq 0$: $x\\neq 2$. $D_f=\\mathbb{R}\\setminus\\{2\\}$.' },
+        { kind: 'example', label: 'Dziedzina $\\sqrt{x+3}$', text: '$x+3\\geq 0 \\Rightarrow x\\geq -3$. $D_f=\\langle -3,+\\infty)$.' },
+        { kind: 'example', label: 'Dziedzina $\\log_2(x-1)$', text: '$x-1>0 \\Rightarrow x>1$. $D_f=(1,+\\infty)$.' },
+        { kind: 'tip', text: 'Reguły: $\\sqrt{g(x)} \\Rightarrow g(x)\\geq 0$; $\\frac{1}{g(x)} \\Rightarrow g(x)\\neq 0$; $\\log_a g(x) \\Rightarrow g(x)>0$.' }
       ]
     },
     {
       type: 'theory', title: 'Monotoniczność i ekstrema',
       items: [
-        { kind: 'rule', text: 'Funkcja $f$ jest rosnąca na przedziale $I$, gdy: $x_1 < x_2 \\Rightarrow f(x_1) < f(x_2)$ dla wszystkich $x_1,x_2\\in I$.' },
+        { kind: 'rule', text: 'Funkcja rosnąca na $I$: $x_1<x_2 \\Rightarrow f(x_1)<f(x_2)$. Malejąca: $x_1<x_2 \\Rightarrow f(x_1)>f(x_2)$.' },
         { kind: 'formulas', items: [
-          'Rosnąca: $f$ "idzie w górę" – większy $x$ daje większy $f(x)$',
-          'Malejąca: $f$ "idzie w dół" – większy $x$ daje mniejszy $f(x)$',
-          'Stała: $f(x)=c$ – pozioma linia',
-          'Minimum: $f(x_0)\\leq f(x)$ dla wszystkich $x$ w pewnym otoczeniu $x_0$',
-          'Maximum: $f(x_0)\\geq f(x)$ dla wszystkich $x$ w pewnym otoczeniu $x_0$'
+          'Rosnąca: „idzie w górę" – iloraz różnicowy $\\frac{f(x_2)-f(x_1)}{x_2-x_1}>0$',
+          'Malejąca: „idzie w dół" – iloraz różnicowy $<0$',
+          'Stała: $f(x)=c$ na danym przedziale',
+          'Minimum lokalne: $f(x_0)\\leq f(x)$ w otoczeniu $x_0$',
+          'Maximum lokalne: $f(x_0)\\geq f(x)$ w otoczeniu $x_0$',
+          'Ekstremum globalne: minimum/maximum na CAŁEJ dziedzinie'
         ]},
-        { kind: 'example', label: 'Przykład', text: '$f(x)=x^2$ jest malejąca na $(-\\infty,0\\rangle$ i rosnąca na $\\langle 0,+\\infty)$. Minimum $f(0)=0$.' },
-        { kind: 'tip', text: 'Na maturze "funkcja rosnąca/malejąca" bez podania przedziału oznacza CAŁY DZIEDZINĘ.' }
+        { kind: 'example', label: 'Przedziały monotoniczności', text: '$f(x)=x^2$: malejąca na $(-\\infty,0]$, rosnąca na $[0,+\\infty)$. Min globalne: $f(0)=0$.' },
+        { kind: 'tip', text: 'Na maturze „rosnąca" bez podania przedziału oznacza CAŁY DZIEDZINĘ (monotoniczna).' }
       ]
     },
     {
       type: 'theory', title: 'Symetria – parzystość i nieparzystość',
       items: [
-        { kind: 'rule', text: 'Parzystość i nieparzystość to symetrie wykresu. Wymagają: $D_f$ symetrycznej względem $0$.' },
+        { kind: 'rule', text: 'Wymagają symetrycznej dziedziny (tj. $x\\in D_f \\Rightarrow -x\\in D_f$):' },
         { kind: 'formulas', items: [
-          'Funkcja parzysta: $f(-x)=f(x)$ dla wszystkich $x\\in D_f$ (oś $OY$)',
-          'Funkcja nieparzysta: $f(-x)=-f(x)$ dla wszystkich $x\\in D_f$ (punkt $O$)',
+          'Parzysta: $f(-x)=f(x)$ – symetria względem osi $OY$',
+          'Nieparzysta: $f(-x)=-f(x)$ – symetria względem punktu $O(0,0)$',
           'Przykłady parzyste: $x^2$, $x^4$, $|x|$, $\\cos x$',
-          'Przykłady nieparzyste: $x$, $x^3$, $\\sin x$, $\\tan x$'
+          'Przykłady nieparzyste: $x$, $x^3$, $\\sin x$, $\\tan x$',
+          'Funkcja jednocześnie parzysta i nieparzysta: tylko $f(x)=0$'
         ]},
-        { kind: 'example', label: 'Badanie parzystości', text: '$f(x)=x^4-3x^2$. $f(-x)=(-x)^4-3(-x)^2=x^4-3x^2=f(x)$. Parzysta (oś symetrii $OY$).' },
-        { kind: 'tip', text: '⚠️ Większość funkcji nie jest ani parzysta, ani nieparzysta – np. $f(x)=x^2+x$.' }
+        { kind: 'example', label: 'Badanie', text: '$f(x)=x^4-3x^2$. $f(-x)=x^4-3x^2=f(x)$. Parzysta ✓' },
+        { kind: 'example', label: 'Brak symetrii', text: '$f(x)=x^2+x$. $f(-x)=x^2-x\\neq f(x)$ i $\\neq -f(x)$. Ani parzysta, ani nieparzysta.' },
+        { kind: 'tip', text: 'Szybki test: jeśli wszystkie potęgi $x$ parzyste → parzysta; jeśli nieparzyste → nieparzysta.' }
       ]
     },
     {
       type: 'theory', title: 'Przekształcenia wykresów',
       items: [
-        { kind: 'rule', text: 'Znając wykres $y=f(x)$, możemy szkicować przekształcone wykresy:' },
+        { kind: 'rule', text: 'Znając wykres $y=f(x)$, tworzymy wykresy przekształcone:' },
         { kind: 'formulas', items: [
-          '$y=f(x)+c$: przesunięcie o $c$ w GÓRĘ ($c>0$) lub w dół ($c<0$)',
-          '$y=f(x-c)$: przesunięcie o $c$ w PRAWO ($c>0$) lub w lewo ($c<0$)',
-          '$y=-f(x)$: odbicie względem osi $OX$ (odwrócenie wartości)',
-          '$y=f(-x)$: odbicie względem osi $OY$ (odwrócenie argumentu)',
-          '$y=|f(x)|$: "odwracamy" fragmenty wykresu poniżej $OX$ do góry',
-          '$y=k\\cdot f(x)$: "rozciągnięcie" pionowe o czynnik $k$',
-          '$y=f(kx)$: "ściskanie" poziome o czynnik $k$'
+          '$y=f(x)+c$: przesunięcie o $c$ w GÓRĘ ($c>0$) lub w dół',
+          '$y=f(x-c)$: przesunięcie o $c$ w PRAWO ($c>0$) lub w lewo',
+          '$y=-f(x)$: odbicie względem osi $OX$',
+          '$y=f(-x)$: odbicie względem osi $OY$',
+          '$y=|f(x)|$: fragmenty pod $OX$ odbijamy do góry',
+          '$y=f(|x|)$: prawy fragment odbijamy symetrycznie w lewo',
+          '$y=k\\cdot f(x)$: rozciągnięcie pionowe ($|k|>1$) lub ściśnięcie ($|k|<1$)',
+          '$y=f(kx)$: ściskanie poziome ($|k|>1$) lub rozciągnięcie ($|k|<1$)'
         ]},
-        { kind: 'example', label: 'Przykład złożony', text: '$y=(x-3)^2+1$: parabola $y=x^2$ przesunięta o 3 w prawo i 1 w górę. Wierzchołek: $(3,1)$.' },
-        { kind: 'tip', text: 'Kolejność przekształceń: przesunięcia poziome → rozciągnięcia → przesunięcia pionowe → odbicia.' }
+        { kind: 'example', label: 'Złożone', text: '$y=(x-3)^2+1$: parabola $y=x^2$ przesunięta o $3$ w prawo i $1$ w górę. Wierzchołek: $(3,1)$.' },
+        { kind: 'tip', text: 'Kolejność: zmiana argumentu (w nawiasie) → rozciągnięcia → przesunięcia pionowe → odbicia.' }
       ]
     },
     {
       type: 'theory', title: 'Funkcja liniowa – szczegółowo',
       items: [
-        { kind: 'rule', text: 'Funkcja liniowa: $f(x) = ax + b$, gdzie $a$ – współczynnik kierunkowy, $b$ – wyraz wolny.' },
+        { kind: 'rule', text: '$f(x) = ax + b$. $a$ – współczynnik kierunkowy, $b$ – wyraz wolny.' },
         { kind: 'formulas', items: [
-          '$a > 0$: funkcja rosnąca (linia idzie w górę prawo)',
-          '$a < 0$: funkcja malejąca (linia idzie w dół prawo)',
-          '$a = 0$: funkcja stała ($f(x)=b$)',
-          'Miejsce zerowe: $x_0 = -\\frac{b}{a}\\;(a\\neq 0)$',
-          'Punkt przecięcia z osią $y$: $(0, b)$',
-          'Kąt nachylenia: $\\tan\\alpha = a$'
+          '$a > 0$: rosnąca; $a < 0$: malejąca; $a = 0$: stała',
+          'Miejsce zerowe: $x_0 = -\\frac{b}{a}$ ($a\\neq 0$)',
+          'Punkt z osią $y$: $(0, b)$',
+          'Kąt nachylenia: $\\tan\\alpha = a$',
+          'Przez 2 punkty: $a=\\frac{y_2-y_1}{x_2-x_1}$, potem $b=y_1-ax_1$',
+          'Równoległe: $a_1=a_2$; Prostopadłe: $a_1\\cdot a_2=-1$'
         ]},
-        { kind: 'example', label: 'Równanie prostej przez 2 punkty', text: 'Prosta przez $A(1,3)$ i $B(4,9)$: $a=\\frac{9-3}{4-1}=2$. Wzór: $y-3=2(x-1) \\Rightarrow y=2x+1$.' },
-        { kind: 'tip', text: 'Dwie proste są równoległe gdy $a_1=a_2$, prostopadłe gdy $a_1\\cdot a_2=-1$.' }
+        { kind: 'example', label: 'Przez 2 punkty', text: '$A(1,3)$, $B(4,9)$: $a=\\frac{9-3}{4-1}=2$. $y-3=2(x-1) \\Rightarrow y=2x+1$.' },
+        { kind: 'example', label: 'Prostopadła', text: 'Do $y=3x+1$ prostopadła przez $(6,2)$: $a=-\\frac{1}{3}$. $y-2=-\\frac{1}{3}(x-6) \\Rightarrow y=-\\frac{1}{3}x+4$.' },
+        { kind: 'tip', text: 'Dwie proste są prostopadłe gdy iloczyn ich wsp. kierunkowych $= -1$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Funkcja odwrotna',
+      items: [
+        { kind: 'rule', text: 'Funkcja odwrotna $f^{-1}$ istnieje wtw, gdy $f$ jest różnowartościowa (bijekcja na $Z_f$).' },
+        { kind: 'formulas', items: [
+          '$f^{-1}(f(x))=x$ i $f(f^{-1}(y))=y$',
+          'Wykres $f^{-1}$: odbicie wykresu $f$ względem prostej $y=x$',
+          '$D_{f^{-1}} = Z_f$ i $Z_{f^{-1}} = D_f$',
+          'Szukanie $f^{-1}$: zamień $x \\leftrightarrow y$ w $y=f(x)$ i rozwiąż względem $y$'
+        ]},
+        { kind: 'example', label: 'Przykład', text: '$f(x)=2x+3$. Zamieniamy: $x=2y+3 \\Rightarrow y=\\frac{x-3}{2}$. Zatem $f^{-1}(x)=\\frac{x-3}{2}$.' },
+        { kind: 'example', label: 'Potęga', text: '$f(x)=x^2$ dla $x\\geq 0$: $f^{-1}(x)=\\sqrt{x}$. Bez ograniczenia $x\\geq 0$ nie byłoby odwrotnej (bo $f$ nie różnowartościowa).' },
+        { kind: 'tip', text: 'Funkcje wykładnicza i logarytmiczna są wzajemnie odwrotne: $a^{\\log_a x}=x$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Złożenie funkcji i funkcje specjalne',
+      items: [
+        { kind: 'rule', text: 'Złożenie: $(f\\circ g)(x) = f(g(x))$. Najpierw obliczamy $g(x)$, potem stosujemy $f$.' },
+        { kind: 'formulas', items: [
+          '$(f\\circ g)(x) \\neq (g\\circ f)(x)$ w ogólności!',
+          'Dziedzina $(f\\circ g)$: $x\\in D_g$ takie, że $g(x)\\in D_f$',
+          'Funkcja $|x|$: $Z_f=[0,+\\infty)$, kształt V',
+          'Funkcja $\\lfloor x \\rfloor$ (podłoga): największa liczba całkowita $\\leq x$',
+          'Sgn$(x)$: $-1$ dla $x<0$, $0$ dla $x=0$, $1$ dla $x>0$'
+        ]},
+        { kind: 'example', label: 'Złożenie', text: '$f(x)=x^2$, $g(x)=x+1$. $(f\\circ g)(x) = (x+1)^2$. $(g\\circ f)(x) = x^2+1$. Różne!' },
+        { kind: 'example', label: 'Dziedzina złożenia', text: '$f(x)=\\sqrt{x}$, $g(x)=4-x^2$. $(f\\circ g)(x)=\\sqrt{4-x^2}$. $D_{f\\circ g}$: $4-x^2\\geq 0$, tj. $x\\in[-2,2]$.' },
+        { kind: 'tip', text: 'Na maturze złożenia pojawiają się głównie w kontekście dziedzin i zbiorów wartości.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Funkcja wykładnicza i logarytmiczna – wykresy',
+      items: [
+        { kind: 'rule', text: 'Funkcja wykładnicza $f(x)=a^x$ ($a>0$, $a\\neq 1$) i logarytmiczna $g(x)=\\log_a x$ to odwrotne.' },
+        { kind: 'formulas', items: [
+          '$a^x$: $D=\\mathbb{R}$, $Z=(0,+\\infty)$, zawsze przechodzi przez $(0,1)$',
+          '$a>1$: $a^x$ rosnąca; $0<a<1$: malejąca',
+          '$\\log_a x$: $D=(0,+\\infty)$, $Z=\\mathbb{R}$, przechodzi przez $(1,0)$',
+          '$a>1$: $\\log_a x$ rosnąca; $0<a<1$: malejąca',
+          'Wykresy $a^x$ i $\\log_a x$ symetryczne względem $y=x$'
+        ]},
+        { kind: 'example', label: 'Szkicowanie', text: '$f(x)=2^x$: przez $(0,1)$, $(1,2)$, $(-1,\\frac{1}{2})$. Rosnąca. Asymptota: $y=0$ (oś $x$).' },
+        { kind: 'example', label: 'Logarytmiczna', text: '$g(x)=\\log_2 x$: przez $(1,0)$, $(2,1)$, $(4,2)$. Rosnąca. Asymptota: $x=0$ (oś $y$).' },
+        { kind: 'tip', text: 'Funkcja $e^x$ (tzw. exp) i $\\ln x$ (logarytm naturalny) to najważniejsza para wykładniczo-logarytmiczna.' }
       ]
     },
     {
       type: 'question', text: 'Dziedzina funkcji $f(x)=\\sqrt{3-x}$ to:',
       answers: ['$[3,+\\infty)$','$(-\\infty,3]$','$\\mathbb{R}$','$(3,+\\infty)$'], correct: 1,
-      explanation: '$3-x\\geq 0 \\Rightarrow x\\leq 3 \\Rightarrow D_f=(-\\infty,3]$. Pierwiastek wymaga nieujemnego argumentu.'
+      explanation: '$3-x\\geq 0 \\Rightarrow x\\leq 3$. $D_f=(-\\infty,3]$.'
     },
     {
       type: 'question', text: 'Funkcja $f(x)=x^3$ jest:',
       answers: ['Parzysta','Rosnąca i parzysta','Nieparzysta','Stała'], correct: 2,
-      explanation: '$f(-x)=(-x)^3=-x^3=-f(x)$. Funkcja nieparzysta (symetria środkowa). Rosnąca na całym $\\mathbb{R}$, ale sama cecha to nieparzystość.'
+      explanation: '$f(-x)=(-x)^3=-x^3=-f(x)$. Nieparzysta.'
     },
     {
-      type: 'question', text: 'Przesunięcie wykresu $y=x^2$ o 3 w lewo i 2 w dół to:',
+      type: 'question', text: 'Przesunięcie $y=x^2$ o 3 w lewo i 2 w dół:',
       answers: ['$y=(x+3)^2-2$','$y=(x-3)^2+2$','$y=(x+3)^2+2$','$y=(x-3)^2-2$'], correct: 0,
-      explanation: 'O 3 w lewo: $x\\to x+3$ (bo $f(x-(-3))=f(x+3)$). O 2 w dół: odejmujemy 2. Wynik: $y=(x+3)^2-2$.'
+      explanation: 'W lewo o 3: $x\\to x+3$. W dół o 2: $-2$. Wynik: $(x+3)^2-2$.'
     },
     {
-      type: 'question', text: 'Na jakim przedziale funcja $f(x) = -2x + 5$ jest malejąca?',
-      answers: ['$(-\\infty, 0)$','$(0,+\\infty)$','$\\mathbb{R}$ (wszędzie)','Nie jest malejąca'], correct: 2,
-      explanation: 'Współczynnik kierunkowy $a=-2<0$, więc liniowa $f(x)=-2x+5$ jest malejąca na CAŁYM $\\mathbb{R}$.'
+      type: 'question', text: '$f(x)=-2x+5$ jest malejąca na:',
+      answers: ['$(-\\infty, 0)$','$(0,+\\infty)$','$\\mathbb{R}$','Nie jest malejąca'], correct: 2,
+      explanation: '$a=-2<0$, więc liniowa funkcja jest malejąca na CAŁYM $\\mathbb{R}$.'
+    },
+    {
+      type: 'question', text: 'Wykres $f(x)=|x|$ jest symetryczny względem:',
+      answers: ['Osi $OY$','Osi $OX$','Punktu $(0,0)$','Prostej $y=x$'], correct: 0,
+      explanation: '$f(-x)=|-x|=|x|=f(x)$. Parzysta – symetria osi $OY$.'
+    },
+    {
+      type: 'question', text: 'Funkcja odwrotna do $f(x)=3x-6$:',
+      answers: ['$f^{-1}(x)=\\frac{x+6}{3}$','$f^{-1}(x)=\\frac{x-6}{3}$','$f^{-1}(x)=3x+6$','$f^{-1}(x)=\\frac{1}{3x-6}$'], correct: 0,
+      explanation: '$y=3x-6 \\Rightarrow x=\\frac{y+6}{3}$. Zatem $f^{-1}(x)=\\frac{x+6}{3}$.'
+    },
+    {
+      type: 'question', text: '$f(x)=x^2+1$, $g(x)=2x$. $(f\\circ g)(3)=$',
+      answers: ['$37$','$19$','$10$','$20$'], correct: 0,
+      explanation: '$(f\\circ g)(3)=f(g(3))=f(6)=36+1=37$.'
+    },
+    {
+      type: 'question', text: 'Zbiór wartości $f(x)=2^x$:',
+      answers: ['$(0,+\\infty)$','$\\mathbb{R}$','$[0,+\\infty)$','$(1,+\\infty)$'], correct: 0,
+      explanation: '$2^x>0$ dla każdego $x$, i przyjmuje DOWOLNĄ wartość dodatnią. $Z_f=(0,+\\infty)$.'
     },
     {
       type: 'question', text: '(Matura) Dziedzina $f(x) = \\sqrt{x+3} + \\dfrac{1}{x-1}$:',
       answers: ['$[-3,1)\\cup(1,+\\infty)$','$(-3,+\\infty)$','$[-3,+\\infty)$','$(-\\infty,-3]\\cup(1,+\\infty)$'], correct: 0,
-      explanation: 'Warunek 1: $x+3\\geq 0 \\Rightarrow x\\geq -3$. Warunek 2: $x-1\\neq 0 \\Rightarrow x\\neq 1$. Część wspólna: $[-3,1)\\cup(1,+\\infty)$.'
+      explanation: '$x+3\\geq 0 \\Rightarrow x\\geq -3$. $x-1\\neq 0 \\Rightarrow x\\neq 1$. Część wspólna: $[-3,1)\\cup(1,+\\infty)$.'
     },
     {
-      type: 'question', text: 'Wykres funkcji $f(x)=|x|$ jest symetryczny względem:',
-      answers: ['Osi $OY$ (funkcja parzysta)','Osi $OX$','Punktu $(0,0)$ (funkcja nieparzysta)','Prostej $y=x$'], correct: 0,
-      explanation: '$f(-x)=|-x|=|x|=f(x)$, więc $f$ parzysta – symetria osi $OY$. Wykres to dwie półproste tworzące literę V.'
-    },
-    {
-      type: 'question', text: '(Matura) Prosta przez punkty $A(2,-1)$ i $B(6,7)$ ma równanie:',
+      type: 'question', text: '(Matura) Prosta przez $A(2,-1)$ i $B(6,7)$:',
       answers: ['$y=2x-5$','$y=2x+5$','$y=-2x+3$','$y=\\frac{1}{2}x-2$'], correct: 0,
-      explanation: '$a=\\frac{7-(-1)}{6-2}=\\frac{8}{4}=2$. Wzór: $y-(-1)=2(x-2) \\Rightarrow y=2x-5$. Sprawdzenie: $f(6)=12-5=7$ ✓'
+      explanation: '$a=\\frac{7-(-1)}{6-2}=2$. $y+1=2(x-2) \\Rightarrow y=2x-5$.'
     },
     {
-      type: 'question', text: '(Matura) Funkcja $f(x) = \\frac{2}{x^2+1}$ jest:',
-      answers: ['Parzysta (osie $OY$), bo $f(-x)=f(x)$','Nieparzysta','Rosnąca na $\\mathbb{R}$','Brak symetrii'], correct: 0,
-      explanation: '$f(-x)=\\frac{2}{(-x)^2+1}=\\frac{2}{x^2+1}=f(x)$. Funkcja parzysta. Dziedzina $\\mathbb{R}$ – symetryczna. Zbiór wartości: $(0,2]$ (maximum $f(0)=2$).'
+      type: 'question', text: '(Matura) $f(x) = \\frac{2}{x^2+1}$ jest:',
+      answers: ['Parzysta','Nieparzysta','Rosnąca','Brak symetrii'], correct: 0,
+      explanation: '$f(-x)=\\frac{2}{(-x)^2+1}=\\frac{2}{x^2+1}=f(x)$. Parzysta.'
+    },
+    {
+      type: 'question', text: '(Matura) Prosta prostopadła do $y=-\\frac{1}{2}x+3$ ma wsp. kierunkowy:',
+      answers: ['$2$','$-2$','$\\frac{1}{2}$','$-\\frac{1}{2}$'], correct: 0,
+      explanation: 'Prostopadła: $a_1 \\cdot a_2=-1$. $(-\\frac{1}{2})\\cdot a_2=-1 \\Rightarrow a_2=2$.'
+    },
+    {
+      type: 'question', text: '(Matura) Funkcja $f(x)=|x-2|+1$. Minimum $f$ wynosi:',
+      answers: ['$1$','$0$','$2$','$3$'], correct: 0,
+      explanation: '$|x-2|\\geq 0$ zawsze, minimum $=0$ gdy $x=2$. Zatem $f_{\\min}=0+1=1$.'
+    },
+    {
+      type: 'question', text: '(Matura) $\\log_3(2x-1)=2$. Wartość $x$:',
+      answers: ['$5$','$4$','$3$','$\\frac{9}{2}$'], correct: 0,
+      explanation: '$2x-1=3^2=9 \\Rightarrow 2x=10 \\Rightarrow x=5$. Sprawdzenie: $2(5)-1=9>0$ ✓'
     }
   ]
 },
 /* ================================================ MODULE 4 */
 {
-  meta: { icon: 'fa-bezier-curve', color: '#8b5cf6', title: 'Funkcja kwadratowa', desc: 'Parabola, wierzchołek, miejca zerowe, trzy postaci, nierówności, zastosowania na maturze.', badge: 4 },
+  meta: { icon: 'fa-bezier-curve', color: '#8b5cf6', title: 'Funkcja kwadratowa', desc: 'Parabola, wierzchołek, miejsca zerowe, trzy postaci, nierówności, parametry, zadania optymalizacyjne.', badge: 4 },
   steps: [
     {
       type: 'theory', title: 'Trzy postaci funkcji kwadratowej',
       items: [
         { kind: 'rule', text: 'Funkcja kwadratowa $f(x)=ax^2+bx+c$, $a\\neq 0$, ma trzy użyteczne postaci:' },
         { kind: 'formulas', items: [
-          'Ogólna: $f(x)=ax^2+bx+c$  ← łatwo liczyć wartości',
-          'Kanoniczna: $f(x)=a(x-p)^2+q$  ← widać wierzchołek $(p,q)$',
-          'Iloczynowa (gdy $\\Delta>0$): $f(x)=a(x-x_1)(x-x_2)$  ← widać miejsca zerowe',
-          'Wierzchołek: $p=-\\dfrac{b}{2a}$, $q=f(p)=-\\dfrac{\\Delta}{4a}$',
-          'Wyróżnik: $\\Delta = b^2-4ac$'
+          'Ogólna: $f(x)=ax^2+bx+c$ – łatwo obliczać wartości',
+          'Kanoniczna: $f(x)=a(x-p)^2+q$ – widać wierzchołek $(p,q)$',
+          'Iloczynowa ($\\Delta\\geq 0$): $f(x)=a(x-x_1)(x-x_2)$ – widać miejsca zerowe',
+          'Wierzchołek: $p=-\\dfrac{b}{2a}$, $q=-\\dfrac{\\Delta}{4a}$',
+          'Wyróżnik: $\\Delta = b^2-4ac$',
+          'Miejsca zerowe: $x_{1,2}=\\dfrac{-b\\pm\\sqrt{\\Delta}}{2a}$'
         ]},
-        { kind: 'example', label: 'Konwersja postaci', text: '$f(x)=x^2-4x+3$.  $p=2,\\;q=f(2)=4-8+3=-1$.  Kanoniczna: $(x-2)^2-1$.  Iloczynowa: $(x-1)(x-3)$  ($x_1=1, x_2=3$).' },
-        { kind: 'tip', text: 'Postać kanoniczna = ZAWSZE możliwa. Postać iloczynowa = tylko gdy $\\Delta\\geq 0$.' }
+        { kind: 'example', label: 'Konwersja', text: '$f(x)=x^2-4x+3$. $p=2$, $q=4-8+3=-1$. Kanoniczna: $(x-2)^2-1$. Iloczynowa: $(x-1)(x-3)$.' },
+        { kind: 'example', label: 'Tylko kanoniczna', text: '$f(x)=2x^2+4x+5$. $\\Delta=16-40=-24<0$. Brak postaci iloczynowej. $p=-1$, $q=2-4+5=3$. Kanoniczna: $2(x+1)^2+3$.' },
+        { kind: 'tip', text: 'Postać kanoniczna = ZAWSZE możliwa. Iloczynowa = tylko gdy $\\Delta\\geq 0$.' }
       ]
     },
     {
@@ -807,504 +1166,946 @@ const COURSE = [
       items: [
         { kind: 'rule', text: 'Parabola $y=ax^2+bx+c$ jest symetryczna względem osi $x=p=-\\frac{b}{2a}$.' },
         { kind: 'formulas', items: [
-          '$a>0$: parabola skierowana w GÓRĘ (ramiona do góry), minimum $q$ w wierzchołku',
-          '$a<0$: parabola skierowana w DÓŁ (ramiona do dołu), maximum $q$ w wierzchołku',
-          '$a>0,\\;\\Delta<0$: ZAWSZE dodatnia ($f(x)>0$)',
-          '$a<0,\\;\\Delta<0$: ZAWSZE ujemna ($f(x)<0$)',
-          'Zbiór wartości: $a>0$: $\\langle q,+\\infty)$; $a<0$: $(-\\infty,q\\rangle$'
+          '$a>0$: ramiona w GÓRĘ, minimum $q$ w wierzchołku, $Z_f=[q,+\\infty)$',
+          '$a<0$: ramiona w DÓŁ, maximum $q$ w wierzchołku, $Z_f=(-\\infty,q]$',
+          '$a>0,\\;\\Delta<0$: ZAWSZE dodatnia ($f(x)>0$ dla $\\forall x$)',
+          '$a<0,\\;\\Delta<0$: ZAWSZE ujemna ($f(x)<0$ dla $\\forall x$)',
+          'Monotoniczność: $a>0$ → maleje na $(-\\infty,p]$, rośnie na $[p,+\\infty)$',
+          'Monotoniczność: $a<0$ → rośnie na $(-\\infty,p]$, maleje na $[p,+\\infty)$'
         ]},
-        { kind: 'example', label: 'Szkicowanie', text: '$f(x)=-x^2+4x-3$. $a=-1<0$ (w dół). $p=2, q=1$. Wierzchołek $(2,1)$ to maximum. Miles zerowe: $\\Delta=16-12=4$, $x_{1,2}=\\frac{-4\\pm 2}{-2}$: mamy $x_1=1, x_2=3$.' },
-        { kind: 'tip', text: 'Przed szkicowaniem wyznacz: kierunek ramion (a), wierzchołek (p,q), i miejsca zerowe (delta).' }
+        { kind: 'example', label: 'Szkicowanie', text: '$f(x)=-x^2+4x-3$. $a=-1<0$ (w dół). $p=2$, $q=1$. Max $(2,1)$. $\\Delta=4$, $x_1=1$, $x_2=3$. Rośnie na $(-\\infty,2]$, maleje na $[2,+\\infty)$.' },
+        { kind: 'tip', text: 'Schemat szkicowania: kierunek ramion → wierzchołek → miejsca zerowe → rysunek.' }
       ]
     },
     {
       type: 'theory', title: 'Nierówności kwadratowe – metoda graficzna',
       items: [
-        { kind: 'rule', text: 'Nierówność kwadratowa: szkicujemy parabolę i sprawdzamy znak na osi $x$.' },
+        { kind: 'rule', text: 'Nierówność kwadratową rozwiązujemy graficznie: szkicujemy parabolę i odczytujemy, gdzie jest powyżej/poniżej osi $x$.' },
         { kind: 'formulas', items: [
-          '$a>0,\\;\\Delta>0$: $ax^2+bx+c < 0 \\Leftrightarrow x\\in(x_1,x_2)$',
-          '$a>0,\\;\\Delta>0$: $ax^2+bx+c > 0 \\Leftrightarrow x\\in(-\\infty,x_1)\\cup(x_2,+\\infty)$',
-          '$a>0,\\;\\Delta=0$: $ax^2+bx+c \\geq 0$ – cały $\\mathbb{R}$; $>0$: $\\mathbb{R}\\setminus\\{x_0\\}$',
-          '$a>0,\\;\\Delta<0$: $ax^2+bx+c > 0$ – zawsze (cały $\\mathbb{R}$)'
+          '$a>0,\\;\\Delta>0$: $f(x)<0 \\Leftrightarrow x\\in(x_1,x_2)$',
+          '$a>0,\\;\\Delta>0$: $f(x)>0 \\Leftrightarrow x\\in(-\\infty,x_1)\\cup(x_2,+\\infty)$',
+          '$a>0,\\;\\Delta=0$: $f(x)\\geq 0$ na $\\mathbb{R}$; $f(x)>0$ na $\\mathbb{R}\\setminus\\{x_0\\}$',
+          '$a>0,\\;\\Delta<0$: $f(x)>0$ zawsze (cały $\\mathbb{R}$)',
+          '$a<0$: odwracamy znaki (ujemna na zewnątrz, dodatnia wewnątrz)'
         ]},
-        { kind: 'example', label: 'Przykład', text: '$2x^2-x-6>0$. $\\Delta=1+48=49$. $x_1=-\\frac{3}{2},x_2=2$. $a=2>0$. Dodatnia poza pierwiastkami: $x\\in(-\\infty,-\\frac{3}{2})\\cup(2,+\\infty)$.' },
-        { kind: 'tip', text: 'Pamiętaj: parabola do GÓRY ($a>0$) jest DODATNIA NA ZEWNĄTRZ pierwiastków i UJEMNA POMIĘDZY.' }
+        { kind: 'example', label: 'Przykład', text: '$2x^2-x-6>0$. $\\Delta=1+48=49$. $x_1=-\\frac{3}{2}$, $x_2=2$. $a>0$: dodatnia poza pierw.: $x\\in(-\\infty,-\\frac{3}{2})\\cup(2,+\\infty)$.' },
+        { kind: 'example', label: '$a<0$', text: '$-x^2+2x+3\\geq 0$. Mnożymy przez $-1$: $x^2-2x-3\\leq 0$. $\\Delta=16$, $x_1=-1$, $x_2=3$. $a=1>0$: ujemna wewnątrz: $x\\in[-1,3]$.' },
+        { kind: 'tip', text: 'Parabola do GÓRY ($a>0$) jest DODATNIA na zewnątrz pierwiastków, UJEMNA pomiędzy.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Wzory Viète\'a',
+      items: [
+        { kind: 'rule', text: 'Dla $ax^2+bx+c=0$ z pierwiastkami $x_1, x_2$:' },
+        { kind: 'formulas', items: [
+          '$x_1+x_2=-\\dfrac{b}{a}$',
+          '$x_1\\cdot x_2=\\dfrac{c}{a}$',
+          '$(x_1-x_2)^2=(x_1+x_2)^2-4x_1 x_2$',
+          '$x_1^2+x_2^2=(x_1+x_2)^2-2x_1 x_2$',
+          'Można obliczać wyrażenia symetryczne BEZ wyznaczania $x_1$, $x_2$'
+        ]},
+        { kind: 'example', label: 'Klasyczny', text: '$x^2-5x+6=0$. $x_1+x_2=5$, $x_1 x_2=6$. $x_1^2+x_2^2=25-12=13$.' },
+        { kind: 'example', label: 'Odwrotności', text: '$\\frac{1}{x_1}+\\frac{1}{x_2}=\\frac{x_1+x_2}{x_1 x_2}=\\frac{5}{6}$.' },
+        { kind: 'tip', text: 'Viète działa nawet gdy nie obliczamy samych pierwiastków – oszczędza czas na maturze!' }
       ]
     },
     {
       type: 'theory', title: 'Funkcja kwadratowa z parametrem',
       items: [
-        { kind: 'rule', text: 'Parametr $m$ często pojawia się w zadaniach maturalnych. Badamy $\\Delta$ w zależności od $m$.' },
+        { kind: 'rule', text: 'Parametr $m$ w $ax^2+bx+c=0$. Warunki na charakter pierwiastków:' },
         { kind: 'formulas', items: [
-          'Dwa różne pierwiastki: $\\Delta>0$',
-          'Jeden pierwiastek (podwójny): $\\Delta=0$',
-          'Brak pierwiastków: $\\Delta<0$',
-          'Dwa dodatnie pierwiastki: $\\Delta>0$ ORAZ $x_1+x_2=-\\frac{b}{a}>0$ ORAZ $x_1 x_2=\\frac{c}{a}>0$',
-          'Dwa ujemne pierwiastki: $\\Delta>0$ ORAZ $x_1+x_2<0$ ORAZ $x_1 x_2>0$',
-          'Pierwiastki różnych znaków: $x_1 x_2 = \\frac{c}{a}<0$'
+          'Dwa różne: $\\Delta>0$',
+          'Jeden (podwójny): $\\Delta=0$',
+          'Brak: $\\Delta<0$',
+          'Dwa dodatnie: $\\Delta\\geq 0$ ORAZ $x_1+x_2>0$ ORAZ $x_1 x_2>0$',
+          'Dwa ujemne: $\\Delta\\geq 0$ ORAZ $x_1+x_2<0$ ORAZ $x_1 x_2>0$',
+          'Różne znaki: $x_1 x_2<0$ (wtedy $\\Delta>0$ automatycznie)',
+          'Obydwa $>k$: zamiana $t=x-k$, badamy dwa dodatnie $t$'
         ]},
-        { kind: 'example', label: 'Przykład z parametrem', text: '$x^2-mx+4=0$ ma dwa dodatnie pierwiastki gdy: $\\Delta=m^2-16>0$ (tj. $|m|>4$) ORAZ $x_1+x_2=m>0$ ORAZ $x_1 x_2=4>0$. Warunek: $m>4$.' },
-        { kind: 'tip', text: 'Wzory Viète\'a: $x_1+x_2=-b/a$ i $x_1 x_2=c/a$ – kluczowe bez liczenia $\\Delta$.' }
+        { kind: 'example', label: 'Przykład', text: '$x^2-mx+4=0$ ma dwa dodatnie pierw. gdy: $\\Delta=m^2-16>0$ ($|m|>4$) ORAZ $S=m>0$ ORAZ $P=4>0$. Wynik: $m>4$.' },
+        { kind: 'tip', text: 'Viète: $x_1+x_2=-b/a$ i $x_1 x_2=c/a$ – kluczowe w zadaniach z parametrem.' }
       ]
     },
     {
-      type: 'question', text: 'Wierzchołek paraboli $y=2x^2-8x+5$ to:',
+      type: 'theory', title: 'Wartość f. kwadratowej na przedziale domkniętym',
+      items: [
+        { kind: 'rule', text: 'Na domkniętym $[a,b]$ szukamy wartości ekstremalnych: porównujemy $f(a)$, $f(b)$ i ewentualnie $f(p)$.' },
+        { kind: 'formulas', items: [
+          'Jeśli wierzchołek $p\\in[a,b]$: minimum/maximum to $q$ (w zależności od znaku $a$)',
+          'Jeśli $p\\notin[a,b]$: ekstrema tylko na krańcach $f(a)$ i $f(b)$',
+          'Globalne min = $\\min(f(a), f(b), f(p))$, ale $f(p)$ tylko gdy $p\\in[a,b]$',
+          'Na maturze: „Wyznacz NW i NM funkcji $f$ na przedziale $[a,b]$"'
+        ]},
+        { kind: 'example', label: 'Przykład', text: '$f(x)=x^2-4x+5$ na $[0,5]$. $p=2\\in[0,5]$, $q=1$. $f(0)=5$, $f(5)=10$. NM$=1$ (w $x=2$), NW$=10$ (w $x=5$).' },
+        { kind: 'tip', text: 'NW = największa wartość, NM = najmniejsza wartość. Zawsze sprawdzaj oba krańce I wierzchołek (jeśli jest w przedziale).' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Zadania optymalizacyjne',
+      items: [
+        { kind: 'rule', text: 'Wiele zadań „znajdź największą/najmniejszą wartość" sprowadza się do funkcji kwadratowej.' },
+        { kind: 'formulas', items: [
+          'Krok 1: wyrażamy wielkość $Q$ w funkcji jednej zmiennej $x$',
+          'Krok 2: $Q(x)=ax^2+bx+c$, szukamy wierzchołka',
+          'Krok 3: $a>0$ → minimum $q$; $a<0$ → maximum $q$',
+          'Krok 4: sprawdzamy, czy $p$ należy do dziedziny zadania'
+        ]},
+        { kind: 'example', label: 'Pole prostokąta', text: 'Obwód prostokąta = 20. Maksymalne pole? $2a+2b=20 \\Rightarrow b=10-a$. $P=a(10-a)=-a^2+10a$. $p=5$, $q=25$. Max pole = 25 (kwadrat $5\\times 5$).' },
+        { kind: 'example', label: 'Suma dwóch liczb', text: 'Suma dwóch liczb $= 12$. Max iloczynu? $x+(12-x)=12$. $P=x(12-x)=-x^2+12x$. $p=6$, $q=36$. Max = 36.' },
+        { kind: 'tip', text: 'W zadaniach optymalizacyjnych pamiętaj o ograniczeniach: $a>0$, $b>0$, $x\\in[0,10]$ itp.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Położenie pierwiastków i warunki specjalne',
+      items: [
+        { kind: 'rule', text: 'Zaawansowane warunki na pierwiastki $f(x)=ax^2+bx+c$:' },
+        { kind: 'formulas', items: [
+          'Oba pierw. w $(k, l)$: $\\Delta\\geq 0$, $af(k)>0$, $af(l)>0$, $k<p<l$',
+          'Dokładnie jeden pierw. w $(k,l)$: $f(k)\\cdot f(l)<0$',
+          'Pierw. po obu stronach $k$: $af(k)<0$',
+          '$f(x)>0$ dla $\\forall x$: $a>0$ i $\\Delta<0$',
+          '$f(x)\\geq 0$ dla $\\forall x$: $a>0$ i $\\Delta\\leq 0$'
+        ]},
+        { kind: 'example', label: 'Jeden pierw. w $(0,3)$', text: '$f(x)=x^2-mx+2$. $f(0)\\cdot f(3)<0$: $2\\cdot(11-3m)<0 \\Rightarrow m>\\frac{11}{3}$.' },
+        { kind: 'tip', text: 'Graficznie: $f(k)\\cdot f(l)<0$ oznacza, że parabola przecina oś $x$ POMIĘDZY $k$ i $l$.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Wierzchołek paraboli $y=2x^2-8x+5$:',
       answers: ['$(2,-3)$','$(-2,-3)$','$(4,5)$','$(2,5)$'], correct: 0,
-      explanation: '$p=-\\frac{-8}{2\\cdot2}=2$.  $q=2(4)-8(2)+5=8-16+5=-3$.  Wierzchołek: $(2,-3)$.'
+      explanation: '$p=\\frac{8}{4}=2$. $q=2(4)-16+5=-3$. Wierzchołek $(2,-3)$.'
     },
     {
       type: 'question', text: 'Parabola $y=-x^2+3x-4$ ma:',
-      answers: ['Dwa miejsca zerowe','Jedno miejsce zerowe','Brak miejsc zerowych','Nieskończenie wiele'], correct: 2,
-      explanation: '$\\Delta=9-16=-7<0$.  Brak miejsc zerowych. Parabola w dół ($a=-1$) z maximum $f(\\frac{3}{2})=-\\frac{7}{4}<0$, więc zawsze ujemna.'
+      answers: ['Dwa miejsca zerowe','Jedno miejsce zerowe','Brak miejsc zerowych','Nie wiadomo'], correct: 2,
+      explanation: '$\\Delta=9-16=-7<0$. Brak miejsc zerowych. $a<0$ i $\\Delta<0$: zawsze ujemna.'
     },
     {
-      type: 'question', text: 'Zapis $f(x)=3(x-1)(x+5)$ to postać:',
-      answers: ['Ogólna','Kanoniczna','Iloczynowa','Standardowa'], correct: 2,
-      explanation: 'Postać iloczynowa: $f(x)=a(x-x_1)(x-x_2)$, $a=3$, $x_1=1$, $x_2=-5$. Miejsca zerowe łatwo odczytać.'
+      type: 'question', text: 'Postać $f(x)=3(x-1)(x+5)$ to:',
+      answers: ['Ogólna','Kanoniczna','Iloczynowa','Mieszana'], correct: 2,
+      explanation: 'Postać iloczynowa: $f(x)=a(x-x_1)(x-x_2)$, $a=3$, $x_1=1$, $x_2=-5$.'
     },
     {
-      type: 'question', text: 'Dla jakiego $m$ równanie $x^2-4x+m=0$ ma JEDNo rozwiązanie?',
+      type: 'question', text: 'Dla jakiego $m$ równanie $x^2-4x+m=0$ ma JEDNO rozwiązanie?',
       answers: ['$m=4$','$m=2$','$m=-4$','$m=8$'], correct: 0,
-      explanation: '$\\Delta=16-4m=0 \\Rightarrow m=4$.  Jedno rozwiązanie $x_0=\\frac{4}{2}=2$ (wierzchołek na osi $OX$).'
+      explanation: '$\\Delta=16-4m=0 \\Rightarrow m=4$. $x_0=2$ (podwójny).'
     },
     {
-      type: 'question', text: 'Nierówność $x^2-4>0$ ma rozwiązanie:',
+      type: 'question', text: 'Nierówność $x^2-4>0$:',
       answers: ['$x\\in(-\\infty,-2)\\cup(2,+\\infty)$','$x\\in(-2,2)$','$x\\in[-2,2]$','$x\\in\\mathbb{R}$'], correct: 0,
-      explanation: '$x^2-4=(x-2)(x+2)$.  $a=1>0$, pierwiastki $x_1=-2,x_2=2$. Parabola w górę – dodatnia NA ZEWNĄTRZ: $x<-2$ lub $x>2$.'
+      explanation: '$x^2-4=(x-2)(x+2)$. $a>0$: dodatnia na zewnątrz pierw. $x<-2$ lub $x>2$.'
     },
     {
-      type: 'question', text: 'Suma i iloczyn pierwiastków $2x^2-6x+4=0$ (wzory Viète\'a):',
-      answers: ['$x_1+x_2=3$, $x_1 x_2=2$','$x_1+x_2=6$, $x_1 x_2=4$','$x_1+x_2=-3$, $x_1 x_2=2$','$x_1+x_2=3$, $x_1 x_2=-2$'], correct: 0,
-      explanation: '$a=2, b=-6, c=4$.  $x_1+x_2=-\\frac{-6}{2}=3$.  $x_1 x_2=\\frac{4}{2}=2$.  Sprawdzenie: pierwiastki to $x=1$ i $x=2$: $1+2=3$ ✓, $1\\cdot2=2$ ✓'
+      type: 'question', text: 'Viète: $2x^2-6x+4=0$. $x_1+x_2$ i $x_1 x_2$:',
+      answers: ['$3$ i $2$','$6$ i $4$','$-3$ i $2$','$3$ i $-2$'], correct: 0,
+      explanation: '$x_1+x_2=\\frac{6}{2}=3$. $x_1 x_2=\\frac{4}{2}=2$. Sprawdzenie: $x_1=1$, $x_2=2$.'
     },
     {
-      type: 'question', text: '(Matura) Postać kanoniczna $f(x) = x^2 + 6x + 5$:',
+      type: 'question', text: 'Postać kanoniczna $f(x)=x^2+6x+5$:',
       answers: ['$(x+3)^2-4$','$(x-3)^2+4$','$(x+3)^2+5$','$(x+6)^2-31$'], correct: 0,
-      explanation: '$p=-\\frac{6}{2}=-3$. $q=f(-3)=9-18+5=-4$.  Postać kanoniczna: $(x-(-3))^2-4=(x+3)^2-4$.  Sprawdzenie: $(x+3)^2-4=x^2+6x+9-4=x^2+6x+5$ ✓'
+      explanation: '$p=-3$, $q=9-18+5=-4$. Kanoniczna: $(x+3)^2-4$.'
     },
     {
-      type: 'question', text: '(Matura) Dla jakich $m$ równanie $x^2-(m+2)x+m+1=0$ ma dwa różne pierwiastki o różnych znakach?',
+      type: 'question', text: '(Matura) $x^2-(m+2)x+m+1=0$ ma pierw. o różnych znakach gdy:',
       answers: ['$m<-1$','$m>-1$','$m=-1$','$m\\in\\mathbb{R}$'], correct: 0,
-      explanation: 'Pierwiastki o różnych znakach $\\Leftrightarrow x_1 x_2 <0 \\Leftrightarrow \\frac{c}{a}<0 \\Leftrightarrow m+1<0 \\Leftrightarrow m<-1$. Gdy $x_1 x_2<0$, to $\\Delta>0$ automatycznie (bo jeden pierwiastek dodatni, drugi ujemny).'
+      explanation: '$x_1 x_2=\\frac{m+1}{1}=m+1<0 \\Rightarrow m<-1$. Wtedy $\\Delta>0$ automatycznie.'
+    },
+    {
+      type: 'question', text: '(Matura) Prostokąt o obwodzie 24. Maksymalne pole wynosi:',
+      answers: ['$36$','$24$','$48$','$12$'], correct: 0,
+      explanation: '$2a+2b=24$, $b=12-a$. $P=a(12-a)=-a^2+12a$. $p=6$, $q=36$. Max pole $=36$ (kwadrat $6\\times 6$).'
+    },
+    {
+      type: 'question', text: '(Matura) NW i NM $f(x)=x^2-2x+3$ na $[0,4]$:',
+      answers: ['NM$=2$, NW$=11$','NM$=2$, NW$=3$','NM$=3$, NW$=11$','NM$=0$, NW$=11$'], correct: 0,
+      explanation: '$p=1\\in[0,4]$, $q=1-2+3=2$. $f(0)=3$, $f(4)=16-8+3=11$. NM$=2$ (w $x=1$), NW$=11$ (w $x=4$).'
+    },
+    {
+      type: 'question', text: '(Matura) $f(x)=-2x^2+8x-6$. Zbiór wartości:',
+      answers: ['$(-\\infty,2]$','$[2,+\\infty)$','$(-\\infty,-6]$','$[-6,2]$'], correct: 0,
+      explanation: '$a=-2<0$: ramiona w dół, max w wierzchołku. $p=2$, $q=-8+16-6=2$. $Z_f=(-\\infty,2]$.'
+    },
+    {
+      type: 'question', text: '(Matura) $x_1^2+x_2^2$ jeśli $x^2-7x+10=0$:',
+      answers: ['$29$','$49$','$9$','$39$'], correct: 0,
+      explanation: '$S=7$, $P=10$. $x_1^2+x_2^2=S^2-2P=49-20=29$.'
+    },
+    {
+      type: 'question', text: '(Matura) $-x^2+4x-3\\geq 0$. Rozwiązanie:',
+      answers: ['$x\\in[1,3]$','$x\\in(-\\infty,1]\\cup[3,+\\infty)$','$x\\in(1,3)$','$x\\in\\mathbb{R}$'], correct: 0,
+      explanation: 'Mnożymy przez $-1$: $x^2-4x+3\\leq 0$. $\\Delta=4$, $x_1=1$, $x_2=3$. $a>0$: nieujemna na zewnątrz, więc $\\leq 0$ pomiędzy: $[1,3]$.'
+    },
+    {
+      type: 'question', text: '(Matura) Dwa dodatnie pierwiastki $x^2-6x+m=0$. Wartości $m$:',
+      answers: ['$0<m<9$','$m<9$','$m>0$','$m\\leq 9$'], correct: 0,
+      explanation: '$\\Delta=36-4m\\geq 0 \\Rightarrow m\\leq 9$. $S=6>0$ ✓. $P=m>0$. Razem: $0<m\\leq 9$. Ale dla DWÓCH RÓŻNYCH potrzeba $\\Delta>0$: $m<9$. Wynik: $m\\in(0,9)$.'
     }
   ]
 },
 /* ================================================ MODULE 5 */
 {
-  meta: { icon: 'fa-infinity', color: '#06b6d4', title: 'Ciągi', desc: 'Ciąg arytmetyczny i geometryczny – wzory ogólne, sumy, suma nieskończona, zadania maturalne.', badge: 5 },
+  meta: { icon: 'fa-infinity', color: '#06b6d4', title: 'Ciągi', desc: 'Ciąg arytmetyczny i geometryczny – wzory, sumy, suma nieskończona, ciąg rekurencyjny, zadania optymalizacyjne.', badge: 5 },
   steps: [
     {
       type: 'theory', title: 'Ciąg arytmetyczny – pełna teoria',
       items: [
-        { kind: 'rule', text: 'Ciąg arytmetyczny: różnica $r=a_{n+1}-a_n$ między kolejnymi wyrazami jest stała.' },
+        { kind: 'rule', text: 'Ciąg arytmetyczny: różnica $r=a_{n+1}-a_n$ jest stała.' },
         { kind: 'formulas', items: [
           'Wzór ogólny: $a_n = a_1 + (n-1)r$',
-          'Wzór na sumę: $S_n = \\dfrac{n(a_1+a_n)}{2} = \\dfrac{n(2a_1+(n-1)r)}{2}$',
-          'Własność: $a_n = \\dfrac{a_{n-1}+a_{n+1}}{2}$ – środkowy wyraz = średnia sąsiednich',
-          'Monotoniczność: $r>0$ – rosnący, $r<0$ – malejący, $r=0$ – stały'
+          'Suma $n$ wyrazów: $S_n = \\dfrac{n(a_1+a_n)}{2} = \\dfrac{n(2a_1+(n-1)r)}{2}$',
+          'Własność: $a_n = \\dfrac{a_{n-1}+a_{n+1}}{2}$ (średnia arytmetyczna sąsiednich)',
+          'Monotoniczność: $r>0$ rosnący, $r<0$ malejący, $r=0$ stały',
+          '$a_n = a_k + (n-k)r$ (ogólna forma przez dowolny wyraz)'
         ]},
-        { kind: 'example', label: 'Przykład obliczeniowy', text: '$a_1=3,\\;r=4$. $a_{10}=3+9\\cdot4=39$. $S_{10}=\\frac{10(3+39)}{2}=\\frac{10\\cdot42}{2}=210$.' },
-        { kind: 'example', label: 'Wyznaczanie z danych', text: 'Dane: $a_3=7$ i $a_7=19$. Różnica: $a_7-a_3=4r=12 \\Rightarrow r=3$. $a_1=a_3-2r=7-6=1$.' },
-        { kind: 'tip', text: 'Wzór $a_n=S_n-S_{n-1}$ (dla $n\\geq 2$) pozwala odtworzyć wyraz z sumy częściowej. $a_1=S_1$.' }
+        { kind: 'example', label: 'Obliczanie', text: '$a_1=3$, $r=4$. $a_{10}=3+9\\cdot 4=39$. $S_{10}=\\frac{10(3+39)}{2}=210$.' },
+        { kind: 'example', label: 'Z dwóch wyrazów', text: '$a_3=7$, $a_7=19$. $a_7-a_3=4r=12 \\Rightarrow r=3$. $a_1=7-2\\cdot 3=1$.' },
+        { kind: 'tip', text: '$a_n=S_n-S_{n-1}$ (dla $n\\geq 2$). $a_1=S_1$. Pozwala odtworzyć wyraz z sumy.' }
       ]
     },
     {
       type: 'theory', title: 'Ciąg geometryczny – pełna teoria',
       items: [
-        { kind: 'rule', text: 'Ciąg geometryczny: iloraz $q=\\frac{a_{n+1}}{a_n}$ między kolejnymi wyrazami jest stały.' },
+        { kind: 'rule', text: 'Ciąg geometryczny: iloraz $q=\\frac{a_{n+1}}{a_n}$ jest stały ($a_n\\neq 0$).' },
         { kind: 'formulas', items: [
           'Wzór ogólny: $a_n = a_1 \\cdot q^{n-1}$',
-          'Suma $n$ wyrazów: $S_n = a_1\\cdot\\dfrac{q^n-1}{q-1}\\quad(q\\neq 1)$',
-          'Suma $n$ wyrazów dla $q=1$: $S_n = n\\cdot a_1$',
-          'Suma nieskończona (gdy $|q|<1$): $S_\\infty = \\dfrac{a_1}{1-q}$',
-          'Własność: $a_n^2 = a_{n-1}\\cdot a_{n+1}$ – środkowy wyraz = pierwiastek z iloczynu sąsiednich'
+          'Suma $n$ wyrazów: $S_n = a_1\\cdot\\dfrac{q^n-1}{q-1}$ ($q\\neq 1$)',
+          'Suma nieskończona ($|q|<1$): $S_\\infty = \\dfrac{a_1}{1-q}$',
+          'Własność: $a_n^2 = a_{n-1}\\cdot a_{n+1}$ (średnia geometryczna)',
+          '$a_n = a_k \\cdot q^{n-k}$ (forma przez dowolny wyraz)'
         ]},
-        { kind: 'example', label: 'Przykład obliczeniowy', text: '$a_1=2,\\;q=3$. $a_5=2\\cdot3^4=162$. $S_4=2\\cdot\\frac{81-1}{2}=80$.' },
-        { kind: 'example', label: 'Suma nieskończona', text: '$a_1=4,\\;q=\\frac{1}{2}$. $|q|<1$. $S_\\infty=\\frac{4}{1-\\frac{1}{2}}=8$.' },
-        { kind: 'tip', text: '⚠️ Suma nieskończona ISTNIEJE tylko gdy $|q|<1$. Dla $|q|\\geq 1$ suma $\\to\\infty$.' }
+        { kind: 'example', label: 'Obliczanie', text: '$a_1=2$, $q=3$. $a_5=2\\cdot 3^4=162$. $S_5=2\\cdot\\frac{243-1}{2}=242$.' },
+        { kind: 'example', label: 'Suma nieskończona', text: '$a_1=4$, $q=\\frac{1}{2}$. $S_\\infty=\\frac{4}{1-\\frac{1}{2}}=8$.' },
+        { kind: 'tip', text: 'Suma nieskończona istnieje TYLKO gdy $|q|<1$. Dla $|q|\\geq 1$ szereg jest rozbieżny.' }
       ]
     },
     {
-      type: 'theory', title: 'Wyznaczanie elementów ciągu z układu warunków',
+      type: 'theory', title: 'Wyznaczanie elementów z warunków',
       items: [
-        { kind: 'rule', text: 'Gdy dane są dwa wyrazy lub suma, układamy układ równań i rozwiązujemy.' },
-        { kind: 'example', label: 'Ciąg arytmet. – znane dwa wyrazy', text: '$a_2=5,\\;a_6=17$. $a_6-a_2=4r=12 \\Rightarrow r=3$. $a_1=a_2-r=2$.' },
-        { kind: 'example', label: 'Ciąg geometryczny – znane dwa wyrazy', text: '$a_2=6,\\;a_5=162$. $\\frac{a_5}{a_2}=q^3=27 \\Rightarrow q=3$. $a_1=\\frac{a_2}{q}=2$.' },
+        { kind: 'rule', text: 'Dane dwa wyrazy (lub wyraz i suma) → układ równań → $a_1$ i $r$ (lub $q$).' },
         { kind: 'formulas', items: [
-          'Z sumy: jeśli $S_n=An^2+Bn$ to $r=2A$ i $a_1=A+B$',
-          'Wspólne elementy: $a_k$ arytm. i geom. jednocześnie → układ równań',
-          'Sprawdź czy ciąg geometryczny: $a_n^2=a_{n-1}\\cdot a_{n+1}$ dla wszystkich $n$'
+          'Arytm. z sumy: jeśli $S_n=An^2+Bn$ to $r=2A$, $a_1=A+B$',
+          'Geom. z dwóch wyrazów: $\\frac{a_m}{a_k}=q^{m-k}$',
+          'Trzy kolejne arytm.: $(a-r),\\;a,\\;(a+r)$ — suma to $3a$',
+          'Trzy kolejne geom.: $\\frac{a}{q},\\;a,\\;aq$ — iloczyn to $a^3$'
         ]},
-        { kind: 'tip', text: 'Podany wzór $S_n$ → wyznacz $a_n=S_n-S_{n-1}$ → sprawdź czy jest arytm. lub geom.' }
+        { kind: 'example', label: 'Trzy wyrazy', text: 'Trzy kolejne wyrazy arytm. mają sumę 21 i iloczyn 280. $3a=21$, $a=7$. $(7-r)\\cdot 7\\cdot(7+r)=280$, $7(49-r^2)=280$, $r^2=9$, $r=\\pm 3$.' },
+        { kind: 'tip', text: 'Zamiana $(a-r, a, a+r)$ upraszcza rachunki – suma nie zależy od $r$.' }
       ]
     },
     {
-      type: 'question', text: 'W ciągu arytmetycznym $a_1=5,\\;r=-2$. Wyraz $a_7$ wynosi:',
+      type: 'theory', title: 'Ciąg rekurencyjny',
+      items: [
+        { kind: 'rule', text: 'Ciąg zdefiniowany rekurencyjnie: $a_1$ zadane, $a_{n+1}=g(a_n)$ (np. $a_{n+1}=2a_n+1$).' },
+        { kind: 'formulas', items: [
+          'Aby znaleźć wzór ogólny: obliczamy kilka wyrazów → szukamy wzorca',
+          'Ciąg arytmetyczny: $a_{n+1}=a_n+r$ (rekurencja liniowa)',
+          'Ciąg geometryczny: $a_{n+1}=q\\cdot a_n$ (rekurencja multiplikatywna)',
+          'Fibonacci: $a_{n+2}=a_{n+1}+a_n$, $a_1=a_2=1$',
+          'Metoda: oblicz $a_1, a_2, a_3, a_4$ → zgadnij wzór → udowodnij indukcją'
+        ]},
+        { kind: 'example', label: 'Przykład', text: '$a_1=1$, $a_{n+1}=a_n+2n$. $a_2=1+2=3$, $a_3=3+4=7$, $a_4=7+6=13$. Wzór: $a_n=n^2-n+1$.' },
+        { kind: 'tip', text: 'Na maturze ciągi rekurencyjne pojawiają się głównie w kontekście obliczania kilku pierwszych wyrazów.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Ułamek okresowy jako suma geometryczna',
+      items: [
+        { kind: 'rule', text: 'Każdy ułamek okresowy można zapisać jako sumę nieskończonego ciągu geometrycznego.' },
+        { kind: 'formulas', items: [
+          '$0{,}\\overline{k} = \\frac{k}{10^d-1}$ gdzie $d$ = liczba cyfr okresu',
+          '$0{,}\\overline{3} = \\frac{3}{9} = \\frac{1}{3}$',
+          '$0{,}\\overline{12} = \\frac{12}{99} = \\frac{4}{33}$',
+          '$0{,}\\overline{142857} = \\frac{142857}{999999} = \\frac{1}{7}$'
+        ]},
+        { kind: 'example', label: 'Z sumą', text: '$0{,}\\overline{3} = 0{,}3 + 0{,}03 + 0{,}003 + \\ldots = \\frac{0{,}3}{1-0{,}1} = \\frac{0{,}3}{0{,}9} = \\frac{1}{3}$.' },
+        { kind: 'tip', text: 'Algorytm: $0{,}a\\overline{b}$: $\\frac{ab-a}{\\underbrace{9\\ldots9}_{d_b}\\underbrace{0\\ldots0}_{d_a}}$ (np. $0{,}1\\overline{6}=\\frac{16-1}{90}=\\frac{1}{6}$).' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Sumy specjalne i szeregi teleskopowe',
+      items: [
+        { kind: 'rule', text: 'Przydatne wzory na sumy:' },
+        { kind: 'formulas', items: [
+          '$\\sum_{k=1}^{n} k = \\dfrac{n(n+1)}{2}$',
+          '$\\sum_{k=1}^{n} k^2 = \\dfrac{n(n+1)(2n+1)}{6}$',
+          '$\\sum_{k=1}^{n} k^3 = \\left(\\dfrac{n(n+1)}{2}\\right)^2$',
+          'Suma teleskopowa: $\\sum(f(k)-f(k+1))=f(1)-f(n+1)$'
+        ]},
+        { kind: 'example', label: 'Teleskopowa', text: '$\\sum_{k=1}^{n}\\frac{1}{k(k+1)}=\\sum\\left(\\frac{1}{k}-\\frac{1}{k+1}\\right)=1-\\frac{1}{n+1}=\\frac{n}{n+1}$.' },
+        { kind: 'example', label: 'Suma kwadratów', text: '$1^2+2^2+\\ldots+10^2=\\frac{10\\cdot 11\\cdot 21}{6}=385$.' },
+        { kind: 'tip', text: 'Rozkład na ułamki proste ($\\frac{1}{k(k+1)}=\\frac{1}{k}-\\frac{1}{k+1}$) → sumy teleskopowe.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Zadania tekstowe z ciągami',
+      items: [
+        { kind: 'rule', text: 'Ciągi arytmetyczne/geometryczne modelują sytuacje ze stałym przyrostem lub stałym mnożnikiem.' },
+        { kind: 'formulas', items: [
+          'Stały wzrost (np. +500 zł/rok): ciąg arytmetyczny',
+          'Stały procent (np. +5% rocznie): ciąg geometryczny, $q=1{,}05$',
+          'Procent składany: $K_n=K_0\\cdot(1+p)^n$',
+          'Deprecjacja: $W_n=W_0\\cdot(1-p)^n$ ($q=1-p<1$)',
+          'Populacja: wzrost wykładniczy $P_n=P_0\\cdot q^n$'
+        ]},
+        { kind: 'example', label: 'Lokata', text: 'Wpłacasz 10 000 zł na 5% rocznie. Po 3 latach: $10000\\cdot1{,}05^3=11576{,}25$ zł.' },
+        { kind: 'example', label: 'Deprecjacja', text: 'Auto traci 15% wartości rocznie. Po 4 latach: $W_4=60000\\cdot0{,}85^4\\approx 31 327$ zł.' },
+        { kind: 'tip', text: 'Klucz: zidentyfikuj, czy przyrost jest STAŁY (arytm.) czy PROPORCJONALNY (geom.).' }
+      ]
+    },
+    {
+      type: 'question', text: 'Ciąg arytmetyczny: $a_1=5$, $r=-2$. Wyraz $a_7$:',
       answers: ['$-9$','$-7$','$17$','$7$'], correct: 1,
-      explanation: '$a_7=5+(7-1)\\cdot(-2)=5-12=-7$.  Sprawdzenie ciągu: $5,3,1,-1,-3,-5,-7$ ✓'
+      explanation: '$a_7=5+6\\cdot(-2)=5-12=-7$.'
     },
     {
-      type: 'question', text: 'Suma 10 wyrazów ciągu arytm.: $a_1=1,\\;a_{10}=19$:',
+      type: 'question', text: 'Suma 10 wyrazów: $a_1=1$, $a_{10}=19$:',
       answers: ['$190$','$100$','$90$','$200$'], correct: 1,
-      explanation: '$S_{10}=\\frac{10(1+19)}{2}=\\frac{200}{2}=100$.'
+      explanation: '$S_{10}=\\frac{10(1+19)}{2}=100$.'
     },
     {
-      type: 'question', text: 'Ciąg geometryczny: $a_1=4,\\;q=\\frac{1}{2}$. Suma nieskończona:',
+      type: 'question', text: '$a_1=4$, $q=\\frac{1}{2}$. Suma nieskończona:',
       answers: ['$2$','$4$','$8$','$\\infty$'], correct: 2,
-      explanation: '$|q|=\\frac{1}{2}<1$ – suma nieskończona istnieje. $S_\\infty=\\frac{4}{1-\\frac{1}{2}}=\\frac{4}{\\frac{1}{2}}=8$.'
+      explanation: '$S_\\infty=\\frac{4}{1-\\frac{1}{2}}=8$.'
     },
     {
-      type: 'question', text: 'Ciąg arytmetyczny: $a_2=5$, $a_5=14$. Wyraz $a_1=$',
+      type: 'question', text: '$a_2=5$, $a_5=14$ (arytm.). $a_1=$',
       answers: ['$2$','$3$','$8$','$1$'], correct: 0,
-      explanation: '$a_5-a_2=3r=9 \\Rightarrow r=3$. $a_1=a_2-r=5-3=2$. Sprawdzenie: $2,5,8,11,14$ – różnica $3$ ✓'
+      explanation: '$3r=a_5-a_2=9$, $r=3$. $a_1=5-3=2$.'
     },
     {
-      type: 'question', text: 'Trzy kolejne wyrazy ciągu geometrycznego to $3, x, 27$. Wartość $x$:',
+      type: 'question', text: 'Trzy kolejne geom.: $3, x, 27$. Wartość $x$:',
       answers: ['$9$','$15$','$-9$ lub $9$','$6$'], correct: 2,
-      explanation: 'Własność ciągu geometrycznego: $x^2=3\\cdot27=81 \\Rightarrow x=\\pm9$. Obie wartości są możliwe (ciąg może mieć wyrazy ujemne gdy $q<0$).'
+      explanation: '$x^2=3\\cdot 27=81$, $x=\\pm 9$. Obie wartości dopuszczalne.'
     },
     {
-      type: 'question', text: '(Matura) $S_n = 3n^2 - n$. Wyraz $a_5=$',
+      type: 'question', text: '$S_n=3n^2-n$. Wyraz $a_5=$',
       answers: ['$26$','$13$','$65$','$39$'], correct: 0,
-      explanation: '$a_5=S_5-S_4=(75-5)-(48-4)=70-44=26$.  Alternatywnie: $a_n=S_n-S_{n-1}=3n^2-n-3(n-1)^2+(n-1)=6n-4$. $a_5=30-4=26$.'
+      explanation: '$a_5=S_5-S_4=70-44=26$. (Lub $a_n=6n-4$, $a_5=26$.)'
     },
     {
-      type: 'question', text: '(Matura) Ile wyrazów ma ciąg arytmetyczny $3, 7, 11,\\ldots, 99$?',
+      type: 'question', text: 'Ile wyrazów: $3, 7, 11,\\ldots, 99$?',
       answers: ['$25$','$24$','$26$','$50$'], correct: 0,
-      explanation: '$a_1=3,\\;r=4,\\;a_n=99$.  $a_n=3+(n-1)\\cdot4=99 \\Rightarrow (n-1)\\cdot4=96 \\Rightarrow n-1=24 \\Rightarrow n=25$.'
+      explanation: '$a_n=3+(n-1)\\cdot 4=99$, $n-1=24$, $n=25$.'
     },
     {
-      type: 'question', text: '(Matura) W ciągu geometrycznym $a_1=1$ i $q=\\frac{2}{3}$. Dla jakiego $n$ wyraz $a_n=\\frac{4}{9}$?',
-      answers: ['$n=3$','$n=2$','$n=4$','$n=5$'], correct: 0,
-      explanation: '$a_n = 1\\cdot\\left(\\frac{2}{3}\\right)^{n-1}=\\frac{4}{9}=\\left(\\frac{2}{3}\\right)^2$.  Zatem $n-1=2 \\Rightarrow n=3$.'
+      type: 'question', text: '$\\sum_{k=1}^{100} k = $',
+      answers: ['$5050$','$5000$','$10100$','$10000$'], correct: 0,
+      explanation: '$\\frac{100\\cdot 101}{2}=5050$. (Słynna suma Gaussa.)'
+    },
+    {
+      type: 'question', text: '(Matura) Ułamek $0{,}\\overline{12}$ jako ułamek zwykły:',
+      answers: ['$\\frac{4}{33}$','$\\frac{12}{100}$','$\\frac{1}{8}$','$\\frac{4}{30}$'], correct: 0,
+      explanation: '$0{,}\\overline{12}=\\frac{12}{99}=\\frac{4}{33}$.'
+    },
+    {
+      type: 'question', text: '(Matura) $\\sum_{k=1}^{n}\\frac{1}{k(k+1)}$ dla $n=99$:',
+      answers: ['$\\frac{99}{100}$','$\\frac{1}{100}$','$\\frac{100}{99}$','$1$'], correct: 0,
+      explanation: 'Suma teleskopowa: $1-\\frac{1}{100}=\\frac{99}{100}$.'
+    },
+    {
+      type: 'question', text: '(Matura) 10 000 zł na lokacie 4% rocznie. Po 2 latach:',
+      answers: ['$10\\,816$ zł','$10\\,800$ zł','$10\\,400$ zł','$11\\,000$ zł'], correct: 0,
+      explanation: '$10000\\cdot 1{,}04^2 = 10000\\cdot 1{,}0816 = 10\\,816$ zł. Procent składany!'
+    },
+    {
+      type: 'question', text: '(Matura) Ciąg geometryczny: $a_1=1$, $q=\\frac{2}{3}$. $a_n=\\frac{4}{9}$ dla $n=$',
+      answers: ['$3$','$2$','$4$','$5$'], correct: 0,
+      explanation: '$\\left(\\frac{2}{3}\\right)^{n-1}=\\frac{4}{9}=\\left(\\frac{2}{3}\\right)^2$. $n-1=2$, $n=3$.'
+    },
+    {
+      type: 'question', text: '(Matura) $a_1=2$, $a_{n+1}=3a_n-1$. Wyraz $a_3=$',
+      answers: ['$14$','$8$','$5$','$11$'], correct: 0,
+      explanation: '$a_2=3\\cdot 2-1=5$. $a_3=3\\cdot 5-1=14$.'
+    },
+    {
+      type: 'question', text: '(Matura) Auto traci 20% wartości rocznie. Po ilu pełnych latach wartość spadnie poniżej połowy? Początkowa: 80 000 zł.',
+      answers: ['$4$','$3$','$5$','$2$'], correct: 0,
+      explanation: '$80000\\cdot 0{,}8^n<40000 \\Rightarrow 0{,}8^n<0{,}5$. $0{,}8^3=0{,}512>0{,}5$ (jeszcze nie). $0{,}8^4=0{,}4096<0{,}5$ ✓. Po 4 latach: $32\\,768<40\\,000$.'
     }
   ]
 },
 /* ================================================ MODULE 6 */
 {
-  meta: { icon: 'fa-circle', color: '#f97316', title: 'Trygonometria', desc: 'Sinus, cosinus, tangens, kąty na okręgu, tożsamości, twierdzenia sinusów i cosinusów, pole trójkąta.', badge: 6 },
+  meta: { icon: 'fa-circle', color: '#f97316', title: 'Trygonometria', desc: 'Funkcje trygonometryczne, tożsamości, wzory redukcyjne, tw. sinusów/cosinusów, równania trygonometryczne.', badge: 6 },
   steps: [
     {
       type: 'theory', title: 'Definicje i kąty szczególne',
       items: [
-        { kind: 'rule', text: 'Dla kąta ostrego $\\alpha$ w trójkącie prostokątnym (przy $\\alpha$, naprzeciwko $a$, przyległa $b$, przeciwprostokątna $c$):' },
+        { kind: 'rule', text: 'Trójkąt prostokątny z kątem ostrym $\\alpha$, bokiem naprzeciwko $a$, przyległym $b$, przeciwprostokątną $c$:' },
         { kind: 'formulas', items: [
-          '$\\sin\\alpha = \\dfrac{\\text{przeciwprostokątna naprzeciwko}}{\\text{przeciwprostokątna}} = \\dfrac{a}{c}$',
-          '$\\cos\\alpha = \\dfrac{\\text{przyległa}}{\\text{przeciwprostokątna}} = \\dfrac{b}{c}$',
-          '$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha} = \\dfrac{a}{b}$',
-          '$\\cot\\alpha = \\dfrac{\\cos\\alpha}{\\sin\\alpha} = \\dfrac{b}{a}$'
+          '$\\sin\\alpha = \\dfrac{a}{c}$ (naprzeciwko / przeciwprostokątna)',
+          '$\\cos\\alpha = \\dfrac{b}{c}$ (przyległa / przeciwprostokątna)',
+          '$\\tan\\alpha = \\dfrac{a}{b} = \\dfrac{\\sin\\alpha}{\\cos\\alpha}$',
+          '$\\cot\\alpha = \\dfrac{b}{a} = \\dfrac{\\cos\\alpha}{\\sin\\alpha}$'
         ]},
-        { kind: 'example', label: 'Tabela kątów szczególnych', text: '| $\\alpha$ | $0°$ | $30°$ | $45°$ | $60°$ | $90°$ |\n|---|---|---|---|---|---|\n|$\\sin$|$0$|$\\frac{1}{2}$|$\\frac{\\sqrt{2}}{2}$|$\\frac{\\sqrt{3}}{2}$|$1$|\n|$\\cos$|$1$|$\\frac{\\sqrt{3}}{2}$|$\\frac{\\sqrt{2}}{2}$|$\\frac{1}{2}$|$0$|\n|$\\tan$|$0$|$\\frac{\\sqrt{3}}{3}$|$1$|$\\sqrt{3}$|$-$|' },
-        { kind: 'tip', text: 'Mnemonic: "SOH CAH TOA" – Sin=Opp/Hyp, Cos=Adj/Hyp, Tan=Opp/Adj.' }
+        { kind: 'example', label: 'Kąty szczególne', text: '| $\\alpha$ | $30°$ | $45°$ | $60°$ |\n|---|---|---|---|\n|$\\sin$|$\\frac{1}{2}$|$\\frac{\\sqrt{2}}{2}$|$\\frac{\\sqrt{3}}{2}$|\n|$\\cos$|$\\frac{\\sqrt{3}}{2}$|$\\frac{\\sqrt{2}}{2}$|$\\frac{1}{2}$|\n|$\\tan$|$\\frac{\\sqrt{3}}{3}$|$1$|$\\sqrt{3}$|' },
+        { kind: 'tip', text: '$\\sin 0°=0$, $\\cos 0°=1$, $\\sin 90°=1$, $\\cos 90°=0$. Mnemonic: SOH CAH TOA.' }
       ]
     },
     {
       type: 'theory', title: 'Jedynka trygonometryczna i tożsamości',
       items: [
-        { kind: 'rule', text: 'Jedynka trygonometryczna – podstawowa tożsamość wynikająca z tw. Pitagorasa:' },
+        { kind: 'rule', text: 'Podstawowa tożsamość: $\\sin^2\\alpha+\\cos^2\\alpha=1$.' },
         { kind: 'formulas', items: [
-          '$\\sin^2\\alpha + \\cos^2\\alpha = 1$ ← jedynka trygonometryczna',
-          '$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha}\\quad(\\cos\\alpha\\neq 0)$',
-          '$1 + \\tan^2\\alpha = \\dfrac{1}{\\cos^2\\alpha}\\quad(\\cos\\alpha\\neq 0)$',
-          '$\\sin(90°-\\alpha) = \\cos\\alpha$ ← kąty dopełniające do $90°$',
-          '$\\cos(90°-\\alpha) = \\sin\\alpha$',
-          '$\\sin(180°-\\alpha) = \\sin\\alpha$ ← kąty suplementarne',
-          '$\\cos(180°-\\alpha) = -\\cos\\alpha$'
+          '$\\tan\\alpha=\\dfrac{\\sin\\alpha}{\\cos\\alpha}$ ($\\cos\\alpha\\neq 0$)',
+          '$1+\\tan^2\\alpha=\\dfrac{1}{\\cos^2\\alpha}$',
+          '$1+\\cot^2\\alpha=\\dfrac{1}{\\sin^2\\alpha}$',
+          '$\\tan\\alpha\\cdot\\cot\\alpha=1$',
+          'Kąty dopełniające: $\\sin(90°-\\alpha)=\\cos\\alpha$, $\\cos(90°-\\alpha)=\\sin\\alpha$'
         ]},
-        { kind: 'example', label: 'Zastosowanie', text: 'Jeśli $\\sin\\alpha=\\frac{3}{5}$ i $\\alpha$ ostry: $\\cos\\alpha=\\sqrt{1-\\frac{9}{25}}=\\frac{4}{5}$, $\\tan\\alpha=\\frac{3/5}{4/5}=\\frac{3}{4}$.' },
-        { kind: 'tip', text: 'Przy obliczaniu $\\cos\\alpha$ z $\\sin\\alpha$: jeśli $\\alpha$ ostry – bierz $+$; jeśli $\\alpha\\in(90°,180°)$ – bierz $-$.' }
+        { kind: 'example', label: 'Zastosowanie', text: '$\\sin\\alpha=\\frac{3}{5}$, $\\alpha$ ostry. $\\cos\\alpha=\\frac{4}{5}$, $\\tan\\alpha=\\frac{3}{4}$.' },
+        { kind: 'example', label: 'Oblicz $\\tan$', text: '$\\cos\\alpha=\\frac{5}{13}$, $\\alpha$ ostry. $\\sin\\alpha=\\frac{12}{13}$ (jedynka). $\\tan\\alpha=\\frac{12}{5}=2{,}4$.' },
+        { kind: 'tip', text: 'Kąt ostry → $\\sin$, $\\cos$, $\\tan$ wszystkie dodatnie.' }
       ]
     },
     {
-      type: 'theory', title: 'Kąty w II, III i IV ćwiartce',
+      type: 'theory', title: 'Ćwiartki i znaki funkcji trygonometrycznych',
       items: [
-        { kind: 'rule', text: 'Na osi liczbowej kąty $>90°$ – znaki funkcji trygonometrycznych:' },
+        { kind: 'rule', text: 'Dla kątów $0°$-$360°$: znaki zależą od ćwiartki.' },
         { kind: 'formulas', items: [
-          'I ćwiartka ($0°–90°$): $\\sin>0$, $\\cos>0$, $\\tan>0$',
-          'II ćwiartka ($90°–180°$): $\\sin>0$, $\\cos<0$, $\\tan<0$',
-          'III ćwiartka ($180°–270°$): $\\sin<0$, $\\cos<0$, $\\tan>0$',
-          'IV ćwiartka ($270°–360°$): $\\sin<0$, $\\cos>0$, $\\tan<0$',
-          'Zapamiętaj: All Students Take Calculus (ASTC) – I:wszystkie, II:sin, III:tan, IV:cos'
+          'I ($0°$-$90°$):  $\\sin +$, $\\cos +$, $\\tan +$',
+          'II ($90°$-$180°$): $\\sin +$, $\\cos -$, $\\tan -$',
+          'III ($180°$-$270°$): $\\sin -$, $\\cos -$, $\\tan +$',
+          'IV ($270°$-$360°$): $\\sin -$, $\\cos +$, $\\tan -$',
+          'ASTC: All, Sin, Tan, Cos – co jest dodatnie'
         ]},
-        { kind: 'example', label: 'Przykład', text: '$\\sin 150°=\\sin(180°-30°)=\\sin 30°=\\frac{1}{2}$. $\\cos 150°=-\\cos 30°=-\\frac{\\sqrt{3}}{2}$.' },
-        { kind: 'tip', text: 'Redukcja do ostrego: $\\sin(180°-\\alpha)=\\sin\\alpha$. $\\cos(360°-\\alpha)=\\cos\\alpha$ (pełny obieg).' }
+        { kind: 'example', label: 'Redukcja', text: '$\\sin 150°=\\sin(180°-30°)=\\sin 30°=\\frac{1}{2}$. $\\cos 150°=-\\cos 30°=-\\frac{\\sqrt{3}}{2}$.' },
+        { kind: 'example', label: 'III ćwiartka', text: '$\\sin 210°=\\sin(180°+30°)=-\\sin 30°=-\\frac{1}{2}$. $\\cos 210°=-\\cos 30°=-\\frac{\\sqrt{3}}{2}$.' },
+        { kind: 'tip', text: 'Redukcja do ostrego: $\\sin(180°\\pm\\alpha)$, $\\cos(180°\\pm\\alpha)$, $\\sin(360°-\\alpha)$, itp.' }
       ]
     },
     {
-      type: 'theory', title: 'Twierdzenie sinusów, cosinusów i pole trójkąta',
+      type: 'theory', title: 'Wzory redukcyjne – pełna tabela',
       items: [
-        { kind: 'rule', text: 'Trzy ważne wzory do trójkątów dowolnych:' },
+        { kind: 'rule', text: 'Wzory pozwalające sprowadzić dowolny kąt do kąta ostrego:' },
+        { kind: 'formulas', items: [
+          '$\\sin(180°-\\alpha)=\\sin\\alpha$, $\\cos(180°-\\alpha)=-\\cos\\alpha$',
+          '$\\sin(180°+\\alpha)=-\\sin\\alpha$, $\\cos(180°+\\alpha)=-\\cos\\alpha$',
+          '$\\sin(360°-\\alpha)=-\\sin\\alpha$, $\\cos(360°-\\alpha)=\\cos\\alpha$',
+          '$\\sin(90°-\\alpha)=\\cos\\alpha$, $\\cos(90°-\\alpha)=\\sin\\alpha$',
+          '$\\sin(90°+\\alpha)=\\cos\\alpha$, $\\cos(90°+\\alpha)=-\\sin\\alpha$',
+          '$\\tan(180°-\\alpha)=-\\tan\\alpha$, $\\tan(180°+\\alpha)=\\tan\\alpha$'
+        ]},
+        { kind: 'example', label: 'Oblicz', text: '$\\sin 300°=\\sin(360°-60°)=-\\sin 60°=-\\frac{\\sqrt{3}}{2}$.' },
+        { kind: 'example', label: 'Oblicz', text: '$\\cos 240°=\\cos(180°+60°)=-\\cos 60°=-\\frac{1}{2}$.' },
+        { kind: 'tip', text: 'Reguła: $90°\\pm\\alpha$ zmienia funkcję (sin↔cos). $180°\\pm\\alpha$ i $360°-\\alpha$ NIE zmieniają. Znak wg ćwiartki.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Twierdzenie sinusów i cosinusów',
+      items: [
+        { kind: 'rule', text: 'Dwa kluczowe twierdzenia dla trójkątów dowolnych:' },
         { kind: 'formulas', items: [
           'Tw. sinusów: $\\dfrac{a}{\\sin\\alpha}=\\dfrac{b}{\\sin\\beta}=\\dfrac{c}{\\sin\\gamma}=2R$',
-          'Tw. cosinusów: $c^2=a^2+b^2-2ab\\cos\\gamma$  ← uogólnienie Pitagorasa',
-          'Pole trójkąta z dwóch boków i kąta: $P=\\dfrac{1}{2}ab\\sin\\gamma$',
-          'Wzór Herona: $P=\\sqrt{s(s-a)(s-b)(s-c)}$, gdzie $s=\\frac{a+b+c}{2}$'
+          'Tw. cosinusów: $c^2=a^2+b^2-2ab\\cos\\gamma$',
+          'Specjalny przypadek ($\\gamma=90°$): $c^2=a^2+b^2$ (Pitagoras)',
+          '$R$ = promień okręgu opisanego na trójkącie'
         ]},
-        { kind: 'example', label: 'Tw. cosinusów – szukanie boku', text: 'Dane: $a=7,b=8,\\gamma=60°$. $c^2=49+64-2\\cdot7\\cdot8\\cdot\\frac{1}{2}=57$. $c=\\sqrt{57}$.' },
-        { kind: 'example', label: 'Pole', text: '$a=6,b=8,\\gamma=30°$. $P=\\frac{1}{2}\\cdot6\\cdot8\\cdot\\sin30°=24\\cdot\\frac{1}{2}=12$.' },
-        { kind: 'tip', text: 'Tw. cosinusów dla $\\gamma=90°$: $c^2=a^2+b^2$ – to jest twierdzenie Pitagorasa! Specjalny przypadek.' }
+        { kind: 'example', label: 'Tw. cosinusów', text: '$a=7$, $b=8$, $\\gamma=60°$. $c^2=49+64-112\\cdot\\frac{1}{2}=57$. $c=\\sqrt{57}$.' },
+        { kind: 'example', label: 'Tw. sinusów', text: '$a=5$, $\\alpha=30°$, $\\beta=45°$. $\\frac{5}{\\sin 30°}=\\frac{b}{\\sin 45°}$. $\\frac{5}{1/2}=\\frac{b}{\\sqrt{2}/2}$. $b=5\\sqrt{2}$.' },
+        { kind: 'tip', text: 'Tw. sinusów: znane bok+kąt naprzeciwko → szukamy innego boku/kąta. Tw. cosinusów: znane 2 boki + kąt między nimi.' }
       ]
     },
     {
-      type: 'question', text: '$\\sin^2 30° + \\cos^2 30°$ równa się:',
+      type: 'theory', title: 'Pole trójkąta – różne wzory',
+      items: [
+        { kind: 'rule', text: 'Wzory na pole trójkąta:' },
+        { kind: 'formulas', items: [
+          '$P=\\dfrac{1}{2}ah$ (podstawa × wysokość)',
+          '$P=\\dfrac{1}{2}ab\\sin\\gamma$ (z 2 boków i kąta)',
+          '$P=\\dfrac{abc}{4R}$ (z tw. sinusów)',
+          '$P=\\sqrt{s(s-a)(s-b)(s-c)}$ (Heron, $s=\\frac{a+b+c}{2}$)',
+          '$P=rs$ ($r$ = promień wpisanego, $s$ = półobwód)'
+        ]},
+        { kind: 'example', label: 'Z sinusa', text: '$a=6$, $b=8$, $\\gamma=30°$. $P=\\frac{1}{2}\\cdot 6\\cdot 8\\cdot\\frac{1}{2}=12$.' },
+        { kind: 'example', label: 'Heron', text: '$a=3$, $b=4$, $c=5$. $s=6$. $P=\\sqrt{6\\cdot 3\\cdot 2\\cdot 1}=\\sqrt{36}=6$.' },
+        { kind: 'tip', text: 'Trójkąt równoboczny o boku $a$: $P=\\frac{a^2\\sqrt{3}}{4}$, $h=\\frac{a\\sqrt{3}}{2}$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Wzory dodawania i podwajania kąta',
+      items: [
+        { kind: 'rule', text: 'Wzory na sumy i różnice kątów (rozszerzenie):' },
+        { kind: 'formulas', items: [
+          '$\\sin(\\alpha\\pm\\beta)=\\sin\\alpha\\cos\\beta\\pm\\cos\\alpha\\sin\\beta$',
+          '$\\cos(\\alpha\\pm\\beta)=\\cos\\alpha\\cos\\beta\\mp\\sin\\alpha\\sin\\beta$',
+          '$\\tan(\\alpha+\\beta)=\\dfrac{\\tan\\alpha+\\tan\\beta}{1-\\tan\\alpha\\tan\\beta}$',
+          '$\\sin 2\\alpha=2\\sin\\alpha\\cos\\alpha$',
+          '$\\cos 2\\alpha=\\cos^2\\alpha-\\sin^2\\alpha=2\\cos^2\\alpha-1=1-2\\sin^2\\alpha$'
+        ]},
+        { kind: 'example', label: '$\\sin 75°$', text: '$\\sin 75°=\\sin(45°+30°)=\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2}+\\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}=\\frac{\\sqrt{6}+\\sqrt{2}}{4}$.' },
+        { kind: 'example', label: '$\\cos 2\\alpha$', text: '$\\sin\\alpha=\\frac{3}{5}$. $\\cos 2\\alpha=1-2\\sin^2\\alpha=1-\\frac{18}{25}=\\frac{7}{25}$.' },
+        { kind: 'tip', text: 'Na maturze podstawowej wzory dodawania pojawiają się rzadko, ale warto znać $\\sin 2\\alpha$ i $\\cos 2\\alpha$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Równania trygonometryczne',
+      items: [
+        { kind: 'rule', text: 'Rozwiązywanie równań z $\\sin$, $\\cos$, $\\tan$ w zakresie $[0°,360°)$:' },
+        { kind: 'formulas', items: [
+          '$\\sin x = a$: $x=\\alpha$ lub $x=180°-\\alpha$, gdzie $\\sin\\alpha=a$',
+          '$\\cos x = a$: $x=\\alpha$ lub $x=360°-\\alpha$, gdzie $\\cos\\alpha=a$',
+          '$\\tan x = a$: $x=\\alpha$ lub $x=180°+\\alpha$, gdzie $\\tan\\alpha=a$',
+          'Warunek: $|a|\\leq 1$ dla $\\sin$ i $\\cos$; $\\tan$ przyjmuje dowolne wartości'
+        ]},
+        { kind: 'example', label: 'Przykład', text: '$\\sin x=\\frac{1}{2}$, $x\\in[0°,360°)$. $x=30°$ lub $x=150°$.' },
+        { kind: 'example', label: '$\\cos$', text: '$\\cos x=-\\frac{\\sqrt{2}}{2}$, $x\\in[0°,360°)$. $\\cos 45°=\\frac{\\sqrt{2}}{2}$, $\\cos$ ujemny w II i III. $x=135°$ lub $x=225°$.' },
+        { kind: 'tip', text: 'Narysuj okrąg jednostkowy, zaznacz wartość na osi — łatwo odczytasz oba rozwiązania.' }
+      ]
+    },
+    {
+      type: 'question', text: '$\\sin^2 30°+\\cos^2 30°=$',
       answers: ['$\\frac{1}{2}$','$\\frac{3}{4}$','$1$','$\\frac{5}{4}$'], correct: 2,
-      explanation: 'Jedynka trygonometryczna: $\\sin^2\\alpha+\\cos^2\\alpha=1$ dla KAŻDEGO kąta. Odpowiedź zawsze $1$, nawet bez liczenia.'
+      explanation: 'Jedynka trygonometryczna: $\\sin^2\\alpha+\\cos^2\\alpha=1$ dla każdego $\\alpha$.'
     },
     {
-      type: 'question', text: 'W trójkącie prostokątnym: hypotenusa $=10$, jedna przyprostokątna $=6$. $\\sin$ (kąta naprzeciwko tej przyprostokątnej) $=$',
-      answers: ['$\\frac{3}{5}$','$\\frac{4}{5}$','$\\frac{3}{4}$','$\\frac{6}{10}$'], correct: 0,
-      explanation: '$\\sin\\alpha=\\frac{\\text{naprzeciwko}}{\\text{hypotenusa}}=\\frac{6}{10}=\\frac{3}{5}$. Odpowiedzi A i D są równoważne, ale uproszczona to $\\frac{3}{5}$.'
+      type: 'question', text: 'Przeciwprostokątna $=10$, przyprostokątna $=6$. $\\sin$ kąta naprzeciwko niej:',
+      answers: ['$\\frac{3}{5}$','$\\frac{4}{5}$','$\\frac{3}{4}$','$\\frac{5}{6}$'], correct: 0,
+      explanation: '$\\sin\\alpha=\\frac{6}{10}=\\frac{3}{5}$.'
     },
     {
-      type: 'question', text: 'Pole trójkąta o bokach $a=6$, $b=8$ i kącie $\\gamma=30°$ między nimi:',
+      type: 'question', text: 'Pole trójkąta: $a=6$, $b=8$, $\\gamma=30°$:',
       answers: ['$24\\sqrt{3}$','$12$','$24$','$12\\sqrt{3}$'], correct: 1,
-      explanation: '$P=\\frac{1}{2}ab\\sin\\gamma=\\frac{1}{2}\\cdot6\\cdot8\\cdot\\sin30°=24\\cdot\\frac{1}{2}=12$.'
+      explanation: '$P=\\frac{1}{2}\\cdot 6\\cdot 8\\cdot\\sin 30°=24\\cdot\\frac{1}{2}=12$.'
     },
     {
-      type: 'question', text: '$\\tan\\alpha = \\frac{\\sqrt{3}}{3}$. Kąt $\\alpha$ (ostry) to:',
+      type: 'question', text: '$\\tan\\alpha=\\frac{\\sqrt{3}}{3}$, $\\alpha$ ostry. $\\alpha=$',
       answers: ['$30°$','$45°$','$60°$','$90°$'], correct: 0,
-      explanation: '$\\tan30°=\\frac{\\sin30°}{\\cos30°}=\\frac{1/2}{\\sqrt{3}/2}=\\frac{1}{\\sqrt{3}}=\\frac{\\sqrt{3}}{3}$.  ✓'
+      explanation: '$\\tan 30°=\\frac{1}{\\sqrt{3}}=\\frac{\\sqrt{3}}{3}$.'
     },
     {
-      type: 'question', text: 'Jeśli $\\sin 37°=p$, to $\\cos 53°$ równa się:',
-      answers: ['$p$','$1-p$','$\\sqrt{1-p^2}$','$-p$'], correct: 0,
-      explanation: '$37°+53°=90°$ – kąty dopełniające. $\\cos(90°-\\alpha)=\\sin\\alpha$. Zatem $\\cos53°=\\cos(90°-37°)=\\sin37°=p$.'
-    },
-    {
-      type: 'question', text: 'Wartość $\\cos150°$ to:',
+      type: 'question', text: '$\\cos 150° =$',
       answers: ['$\\frac{\\sqrt{3}}{2}$','$-\\frac{\\sqrt{3}}{2}$','$\\frac{1}{2}$','$-\\frac{1}{2}$'], correct: 1,
-      explanation: '$\\cos150°=\\cos(180°-30°)=-\\cos30°=-\\frac{\\sqrt{3}}{2}$. Kąt w II ćwiartce – cosinus ujemny.'
+      explanation: '$\\cos 150°=\\cos(180°-30°)=-\\cos 30°=-\\frac{\\sqrt{3}}{2}$.'
     },
     {
-      type: 'question', text: '(Matura) W trójkącie $a=5,b=7,c=8$. Cosinus kąta $\\gamma$ (naprzeciwko $c$):',
+      type: 'question', text: '$\\sin 37°=p$. Wtedy $\\cos 53°=$',
+      answers: ['$p$','$1-p$','$\\sqrt{1-p^2}$','$-p$'], correct: 0,
+      explanation: '$37°+53°=90°$. $\\cos 53°=\\cos(90°-37°)=\\sin 37°=p$.'
+    },
+    {
+      type: 'question', text: 'Tw. cosinusów: $a=5$, $b=7$, $c=8$. $\\cos\\gamma=$',
       answers: ['$\\frac{1}{7}$','$\\frac{11}{35}$','$\\frac{1}{2}$','$\\frac{11}{70}$'], correct: 0,
-      explanation: 'Tw. cosinusów: $c^2=a^2+b^2-2ab\\cos\\gamma$. $64=25+49-70\\cos\\gamma \\Rightarrow 70\\cos\\gamma=10 \\Rightarrow \\cos\\gamma=\\frac{1}{7}$.'
+      explanation: '$64=25+49-70\\cos\\gamma$. $70\\cos\\gamma=10$. $\\cos\\gamma=\\frac{1}{7}$.'
     },
     {
-      type: 'question', text: '(Matura) W równobocznym trójkącie o boku 6, pole wynosi:',
+      type: 'question', text: 'Trójkąt równoboczny o boku 6. Pole:',
       answers: ['$9\\sqrt{3}$','$18\\sqrt{3}$','$6\\sqrt{3}$','$12$'], correct: 0,
-      explanation: 'Trójkąt równoboczny – wszystkie kąty $60°$. $P=\\frac{1}{2}\\cdot6\\cdot6\\cdot\\sin60°=18\\cdot\\frac{\\sqrt{3}}{2}=9\\sqrt{3}$.  Alternatywnie: $P=\\frac{a^2\\sqrt{3}}{4}=\\frac{36\\sqrt{3}}{4}=9\\sqrt{3}$.'
+      explanation: '$P=\\frac{36\\sqrt{3}}{4}=9\\sqrt{3}$.'
+    },
+    {
+      type: 'question', text: '(Matura) $\\sin x=\\frac{\\sqrt{2}}{2}$, $x\\in[0°,360°)$. Ile rozwiązań?',
+      answers: ['$2$','$1$','$3$','$4$'], correct: 0,
+      explanation: '$x=45°$ (I ćwiartka) i $x=135°$ (II ćwiartka). Dwa rozwiązania.'
+    },
+    {
+      type: 'question', text: '(Matura) $\\sin\\alpha=\\frac{5}{13}$, $\\alpha\\in(90°,180°)$. $\\cos\\alpha=$',
+      answers: ['$-\\frac{12}{13}$','$\\frac{12}{13}$','$-\\frac{5}{13}$','$\\frac{8}{13}$'], correct: 0,
+      explanation: '$\\cos^2\\alpha=1-\\frac{25}{169}=\\frac{144}{169}$. $\\cos\\alpha=\\pm\\frac{12}{13}$. II ćwiartka: $\\cos<0$. $\\cos\\alpha=-\\frac{12}{13}$.'
+    },
+    {
+      type: 'question', text: '(Matura) $\\sin 2\\alpha$ jeśli $\\sin\\alpha=\\frac{3}{5}$, $\\alpha$ ostry:',
+      answers: ['$\\frac{24}{25}$','$\\frac{6}{5}$','$\\frac{12}{25}$','$\\frac{9}{25}$'], correct: 0,
+      explanation: '$\\cos\\alpha=\\frac{4}{5}$. $\\sin 2\\alpha=2\\cdot\\frac{3}{5}\\cdot\\frac{4}{5}=\\frac{24}{25}$.'
+    },
+    {
+      type: 'question', text: '(Matura) $\\sin 75°=$',
+      answers: ['$\\frac{\\sqrt{6}+\\sqrt{2}}{4}$','$\\frac{\\sqrt{6}-\\sqrt{2}}{4}$','$\\frac{\\sqrt{3}+1}{4}$','$\\frac{\\sqrt{2}+1}{2}$'], correct: 0,
+      explanation: '$\\sin 75°=\\sin(45°+30°)=\\frac{\\sqrt{2}}{2}\\cdot\\frac{\\sqrt{3}}{2}+\\frac{\\sqrt{2}}{2}\\cdot\\frac{1}{2}=\\frac{\\sqrt{6}+\\sqrt{2}}{4}$.'
+    },
+    {
+      type: 'question', text: '(Matura) Tw. sinusów: $a=5$, $\\alpha=30°$, $\\beta=45°$. Bok $b=$',
+      answers: ['$5\\sqrt{2}$','$5\\sqrt{3}$','$10$','$\\frac{5\\sqrt{2}}{2}$'], correct: 0,
+      explanation: '$\\frac{5}{\\sin 30°}=\\frac{b}{\\sin 45°}$. $\\frac{5}{1/2}=\\frac{b}{\\sqrt{2}/2}$. $b=5\\sqrt{2}$.'
     }
   ]
 },
 /* ================================================ MODULE 7 */
 {
-  meta: { icon: 'fa-shapes', color: '#6366f1', title: 'Planimetria', desc: 'Trójkąty, czworokąty, koła – wzory na pola i obwody, twierdzenie Pitagorasa, okrąg, podobieństwo.', badge: 7 },
+  meta: { icon: 'fa-shapes', color: '#6366f1', title: 'Planimetria', desc: 'Trójkąty, czworokąty, koła, kąty wpisane, podobieństwo, geometria analityczna, styczna do okręgu.', badge: 7 },
   steps: [
     {
       type: 'theory', title: 'Twierdzenie Pitagorasa i trójkąt prostokątny',
       items: [
-        { kind: 'rule', text: 'Twierdzenie Pitagorasa: w trójkącie prostokątnym $a^2+b^2=c^2$ ($c$ – hypotenusa).' },
+        { kind: 'rule', text: 'W trójkącie prostokątnym $a^2+b^2=c^2$ ($c$ – przeciwprostokątna).' },
         { kind: 'formulas', items: [
-          '$c = \\sqrt{a^2+b^2}$ (obliczanie hypotenusa)',
-          '$a = \\sqrt{c^2-b^2}$ (obliczanie przyprostokątnej)',
-          'Trójkąt jest prostokątny $\\Leftrightarrow a^2+b^2=c^2$ (największy bok = $c$)',
-          'Trójki pitagorejskie: $(3,4,5)$, $(5,12,13)$, $(8,15,17)$, $(7,24,25)$, $(6,8,10)$',
-          'Przekątna kwadratu o boku $a$: $d=a\\sqrt{2}$',
-          'Przekątna prostokąta $a\\times b$: $d=\\sqrt{a^2+b^2}$'
+          '$c=\\sqrt{a^2+b^2}$, $a=\\sqrt{c^2-b^2}$',
+          'Trójkąt prostokątny $\\Leftrightarrow a^2+b^2=c^2$ (największy bok = $c$)',
+          'Trójki pitagorejskie: $(3,4,5)$, $(5,12,13)$, $(8,15,17)$, $(7,24,25)$',
+          'Przekątna kwadratu: $d=a\\sqrt{2}$; prostokąta: $d=\\sqrt{a^2+b^2}$',
+          'Wysokość na przeciwprostokątną: $h=\\frac{ab}{c}$',
+          'Trójkąt 30-60-90: boki $a : a\\sqrt{3} : 2a$; 45-45-90: $a : a : a\\sqrt{2}$'
         ]},
-        { kind: 'example', label: 'Trójkąt prostokątny 3-4-5', text: '$a=3,b=4,c=5$. $3^2+4^2=9+16=25=5^2$ ✓. Pole $=\\frac{3\\cdot4}{2}=6$.' },
-        { kind: 'tip', text: '⚠️ Tw. Pitagorasa działa TYLKO dla trójkątów prostokątnych. Dla innych używaj tw. cosinusów.' }
+        { kind: 'example', label: '3-4-5', text: '$3^2+4^2=25=5^2$ ✓. Pole $=6$. Wysokość $h=\\frac{3\\cdot 4}{5}=2{,}4$.' },
+        { kind: 'tip', text: 'Tw. Pitagorasa → TYLKO trójkąt prostokątny. Dla dowolnych → tw. cosinusów.' }
       ]
     },
     {
-      type: 'theory', title: 'Pola i obwody podstawowych figur',
+      type: 'theory', title: 'Pola i obwody figur płaskich',
       items: [
-        { kind: 'rule', text: 'Wzory pól i obwodów – te musisz znać na pamięć:' },
+        { kind: 'rule', text: 'Podstawowe wzory:' },
         { kind: 'formulas', items: [
-          'Trójkąt: $P=\\frac{1}{2}ah$ ($h$ – wysokość do boku $a$)',
-          'Trójkąt równoboczny: $P=\\frac{a^2\\sqrt{3}}{4}$, $h=\\frac{a\\sqrt{3}}{2}$',
+          'Trójkąt: $P=\\frac{1}{2}ah$; równoboczny: $P=\\frac{a^2\\sqrt{3}}{4}$',
           'Prostokąt: $P=ab$, $O=2(a+b)$',
-          'Kwadrat: $P=a^2$, $O=4a$, $d=a\\sqrt{2}$',
-          'Romb: $P=\\frac{d_1 d_2}{2}$, $P=ah$',
+          'Kwadrat: $P=a^2$, $P=\\frac{d^2}{2}$',
+          'Romb: $P=\\frac{d_1 d_2}{2}=ah$',
           'Trapez: $P=\\frac{(a+b)h}{2}$',
-          'Równoległobok: $P=ah$'
+          'Równoległobok: $P=ah=ab\\sin\\alpha$',
+          'Deltoid: $P=\\frac{d_1 d_2}{2}$'
         ]},
-        { kind: 'example', label: 'Trapez prostokątny', text: 'Trapez o podstawach $a=10$, $b=6$ i wysokości $h=4$. $P=\\frac{(10+6)\\cdot4}{2}=32$.' },
-        { kind: 'tip', text: 'Romb: wszystkie boki równe. Kwadrat: romb z kątami prostymi. Prostokąt: równoległobok z kątami prostymi.' }
+        { kind: 'example', label: 'Trapez', text: 'Podstawy $10$ i $6$, $h=4$. $P=\\frac{16\\cdot 4}{2}=32$.' },
+        { kind: 'tip', text: 'Romb = równoległobok o równych bokach. Kwadrat = romb z kątami prostymi.' }
       ]
     },
     {
-      type: 'theory', title: 'Koło i okrąg – wzory',
+      type: 'theory', title: 'Koło i okrąg',
       items: [
         { kind: 'rule', text: 'Okrąg = linia, koło = wnętrze z brzegiem.' },
         { kind: 'formulas', items: [
-          'Pole koła: $P=\\pi r^2$',
-          'Obwód koła: $L=2\\pi r=\\pi d$',
-          'Wycinek koła: $P_w=\\frac{\\varphi}{360°}\\pi r^2$ (dla kąta $\\varphi$ w stopniach)',
-          'Łuk: $l=\\frac{\\varphi}{360°}\\cdot 2\\pi r$',
-          'Pierścień: $P=\\pi(R^2-r^2)=\\pi(R+r)(R-r)$',
-          'Cięciwa: $d=2r\\sin(\\varphi/2)$ ($\\varphi$ – kąt środkowy)'
+          'Pole koła: $P=\\pi r^2$; obwód: $L=2\\pi r$',
+          'Wycinek kołowy: $P_w=\\frac{\\alpha}{360°}\\pi r^2$',
+          'Łuk: $l=\\frac{\\alpha}{360°}\\cdot 2\\pi r$',
+          'Pierścień: $P=\\pi(R^2-r^2)$',
+          'Cięciwa: $d=2r\\sin(\\alpha/2)$ ($\\alpha$ kąt środkowy)',
+          'Odcinek kołowy: $P=\\frac{r^2}{2}(\\alpha_{\\text{rad}}-\\sin\\alpha)$'
         ]},
-        { kind: 'example', label: 'Wycinek', text: 'Kąt $120°$, $r=6$. $P_w=\\frac{120}{360}\\pi\\cdot36=12\\pi$.' },
-        { kind: 'tip', text: 'Kąt wpisany = połowa kąta środkowego opartego na tym samym łuku.' }
+        { kind: 'example', label: 'Wycinek', text: 'Kąt $120°$, $r=6$. $P_w=\\frac{120}{360}\\cdot\\pi\\cdot 36=12\\pi$.' },
+        { kind: 'tip', text: '$\\alpha$ w radianach: $\\pi\\text{ rad}=180°$. $1°=\\frac{\\pi}{180}\\text{ rad}$.' }
       ]
     },
     {
-      type: 'theory', title: 'Okrąg wpisany i opisany, podobieństwo',
+      type: 'theory', title: 'Kąty wpisane i środkowe',
       items: [
-        { kind: 'rule', text: 'Okrąg wpisany w trójkąt i opisany na trójkącie:' },
+        { kind: 'rule', text: 'Kąt wpisany oparty na łuku = połowa kąta środkowego opartego na tym samym łuku.' },
         { kind: 'formulas', items: [
-          'Promień okręgu opisanego: $R=\\dfrac{abc}{4P}$ (Wzór ogólny) lub z tw. sinusów: $R=\\dfrac{a}{2\\sin\\alpha}$',
-          'Promień okręgu wpisanego: $r=\\dfrac{P}{s}$, gdzie $s=\\dfrac{a+b+c}{2}$ (połówek obwodu)',
-          'Trójkąt prostokątny: $R=\\dfrac{c}{2}$ ($c$ – hypotenusa)',
-          'Podobieństwo figur: skala $k$ → pola w skali $k^2$, objętości $k^3$'
+          'Kąt wpisany = $\\frac{1}{2}$ kąta środkowego',
+          'Kąt wpisany oparty na średnicy = $90°$',
+          'Kąty wpisane oparte na tym samym łuku = RÓWNE',
+          'Czworokąt wpisany w okrąg: suma kątów przeciwległych = $180°$',
+          'Kąt między styczną a cięciwą = kąt wpisany oparty na tym samym łuku'
         ]},
-        { kind: 'example', label: 'Okrąg wpisany w 3-4-5', text: '$P=6$, $s=\\frac{3+4+5}{2}=6$. $r=\\frac{6}{6}=1$. Okrąg opisany: $R=\\frac{5}{2}=2{,}5$.' },
-        { kind: 'tip', text: 'Podobieństwo: trójkąty są podobne gdy mają takie same kąty (kąt-kąt-kąt) lub proporcjonalne boki.' }
+        { kind: 'example', label: 'Kąt na średnicy', text: 'Trójkąt wpisany w okrąg, gdzie jeden bok = średnica → kąt naprzeciwko = $90°$ (tw. Talesa).' },
+        { kind: 'tip', text: 'Tw. Talesa o kącie: „Kąt wpisany oparty na półokręgu jest prosty."' }
       ]
     },
     {
-      type: 'question', text: 'Pole trapezu o podstawach $a=10$, $b=6$ i wysokości $h=4$:',
+      type: 'theory', title: 'Okrąg wpisany i opisany, styczna',
+      items: [
+        { kind: 'rule', text: 'Promienie okręgów związanych z trójkątem:' },
+        { kind: 'formulas', items: [
+          'Okrąg opisany: $R=\\dfrac{abc}{4P}$ lub $R=\\dfrac{a}{2\\sin\\alpha}$',
+          'Okrąg wpisany: $r=\\dfrac{P}{s}$, $s=\\dfrac{a+b+c}{2}$',
+          'Trójkąt prostokątny: $R=\\dfrac{c}{2}$, $r=\\dfrac{a+b-c}{2}$',
+          'Styczna do okręgu $\\perp$ promień w punkcie styczności',
+          'Odcinki stycznych z jednego punktu: $|PA|=|PB|$'
+        ]},
+        { kind: 'example', label: 'Tr. 5-12-13', text: '$P=30$, $s=15$. $r=2$. $R=\\frac{13}{2}=6{,}5$.' },
+        { kind: 'tip', text: '$r=\\frac{a+b-c}{2}$ — szybki wzór TYLKO dla trójkąta prostokątnego.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Podobieństwo i przystawanie figur',
+      items: [
+        { kind: 'rule', text: 'Dwa trójkąty są podobne gdy mają równe kąty (lub proporcjonalne boki).' },
+        { kind: 'formulas', items: [
+          'Cechy podobieństwa: KKK (kąt-kąt-kąt), BBB (bok-bok-bok proporcjonalnie), BKB',
+          'Skala $k$: boki × $k$, pola × $k^2$, objętości × $k^3$',
+          'Cechy przystawania: BBB, BKB, KBK, BPP (prostokątne)',
+          'Twierdzenie o kącie wewnętrznym: dwusieczna dzieli naprzeciwległy bok proporcjonalnie do boków przyległych'
+        ]},
+        { kind: 'example', label: 'Skala', text: 'Trójkąty podobne w skali $1:3$. Stosunek pól: $1:9$. Stosunek obwodów: $1:3$.' },
+        { kind: 'tip', text: 'Tw. Talesa (o proporcjach): proste równoległe dzielą ramiona kąta proporcjonalnie.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Geometria analityczna na płaszczyźnie',
+      items: [
+        { kind: 'rule', text: 'Podstawowe wzory geometrii analitycznej:' },
+        { kind: 'formulas', items: [
+          'Odległość: $|AB|=\\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$',
+          'Środek odcinka: $S=\\left(\\frac{x_1+x_2}{2},\\frac{y_1+y_2}{2}\\right)$',
+          'Równanie prostej: $y=ax+b$ lub $Ax+By+C=0$',
+          'Odległość punktu od prostej: $d=\\frac{|Ax_0+By_0+C|}{\\sqrt{A^2+B^2}}$',
+          'Równanie okręgu: $(x-a)^2+(y-b)^2=r^2$, środek $(a,b)$, promień $r$'
+        ]},
+        { kind: 'example', label: 'Odległość', text: '$A(1,2)$, $B(4,6)$. $|AB|=\\sqrt{9+16}=5$.' },
+        { kind: 'example', label: 'Punkt od prostej', text: 'Punkt $(3,1)$, prosta $3x+4y-2=0$. $d=\\frac{|9+4-2|}{5}=\\frac{11}{5}=2{,}2$.' },
+        { kind: 'tip', text: 'Równanie okręgu: rozwinięte ma postać $x^2+y^2+Dx+Ey+F=0$. Środek $(-D/2, -E/2)$, $r=\\sqrt{D^2/4+E^2/4-F}$.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Trójkąty szczególne i wysokości',
+      items: [
+        { kind: 'rule', text: 'Trójkąty o szczególnych własnościach:' },
+        { kind: 'formulas', items: [
+          'Równoboczny: $h=\\frac{a\\sqrt{3}}{2}$, $P=\\frac{a^2\\sqrt{3}}{4}$, $R=\\frac{a\\sqrt{3}}{3}$, $r=\\frac{a\\sqrt{3}}{6}$',
+          'Równoramienny ($b=c$): $h_a=\\sqrt{b^2-\\frac{a^2}{4}}$',
+          'Prostokątny: $P=\\frac{ab}{2}$, $h_c=\\frac{ab}{c}$, mediana na przeciwprostokątną $=\\frac{c}{2}$',
+          'Suma kątów trójkąta: $\\alpha+\\beta+\\gamma=180°$',
+          'Kąt zewnętrzny = suma dwóch niesąsiednich kątów wewnętrznych',
+          'Nierówność trójkąta: $|a-b|<c<a+b$'
+        ]},
+        { kind: 'example', label: 'Równoramienny', text: 'Boki $5, 5, 6$. $h=\\sqrt{25-9}=4$. $P=\\frac{6\\cdot 4}{2}=12$.' },
+        { kind: 'tip', text: 'Mediana na przeciwprostokątną = $\\frac{c}{2}$ = promień okręgu opisanego. Środek przeciwprostokątnej = środek okręgu opisanego.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Pole trapezu: $a=10$, $b=6$, $h=4$:',
       answers: ['$32$','$40$','$24$','$64$'], correct: 0,
-      explanation: '$P=\\frac{(10+6)\\cdot4}{2}=\\frac{64}{2}=32$.'
+      explanation: '$P=\\frac{(10+6)\\cdot 4}{2}=32$.'
     },
     {
-      type: 'question', text: 'Przekątna kwadratu o polu $P=50$:',
+      type: 'question', text: 'Przekątna kwadratu o polu $50$:',
       answers: ['$5\\sqrt{2}$','$10$','$25$','$5$'], correct: 1,
-      explanation: '$P=a^2=50 \\Rightarrow a=5\\sqrt{2}$. Przekątna $d=a\\sqrt{2}=5\\sqrt{2}\\cdot\\sqrt{2}=10$.'
+      explanation: '$a^2=50$, $a=5\\sqrt{2}$. $d=a\\sqrt{2}=10$.'
     },
     {
-      type: 'question', text: 'Wycinek koła o $r=6$ i kącie środkowym $120°$. Pole:',
+      type: 'question', text: 'Wycinek koła: $r=6$, kąt $120°$. Pole:',
       answers: ['$12\\pi$','$24\\pi$','$4\\pi$','$6\\pi$'], correct: 0,
-      explanation: '$P_w=\\frac{120}{360}\\pi r^2=\\frac{1}{3}\\cdot\\pi\\cdot36=12\\pi$.'
+      explanation: '$P=\\frac{120}{360}\\cdot\\pi\\cdot 36=12\\pi$.'
     },
     {
-      type: 'question', text: 'W rombie o boku 13 dłuższa przekątna $=24$. Krótsza przekątna:',
+      type: 'question', text: 'Romb: bok $=13$, dłuższa przekątna $=24$. Krótsza:',
       answers: ['$10$','$5$','$7$','$12$'], correct: 0,
-      explanation: 'Przekątne rombu prostopadle się połowiną. Połowa krótszej: $\\sqrt{13^2-12^2}=\\sqrt{25}=5$. Krótsza przekątna $=10$.'
+      explanation: 'Połówki: $12$ i $x$. $x=\\sqrt{169-144}=5$. Krótsza $=10$.'
     },
     {
-      type: 'question', text: 'Trójkąt równoboczny o boku $a=6$. Pole:',
+      type: 'question', text: 'Trójkąt równoboczny, bok $6$. Pole:',
       answers: ['$9\\sqrt{3}$','$18$','$12\\sqrt{3}$','$6\\sqrt{3}$'], correct: 0,
-      explanation: '$P=\\frac{a^2\\sqrt{3}}{4}=\\frac{36\\sqrt{3}}{4}=9\\sqrt{3}$. Alternatywnie: $h=\\frac{6\\sqrt{3}}{2}=3\\sqrt{3}$, $P=\\frac{1}{2}\\cdot6\\cdot3\\sqrt{3}=9\\sqrt{3}$.'
+      explanation: '$P=\\frac{36\\sqrt{3}}{4}=9\\sqrt{3}$.'
     },
     {
-      type: 'question', text: 'Okrąg wpisany w trójkąt o bokach $5, 12, 13$ ma promień:',
+      type: 'question', text: 'Okrąg wpisany w tr. $5, 12, 13$. Promień $r$:',
       answers: ['$2$','$3$','$4$','$5$'], correct: 0,
-      explanation: 'Trójkąt prostokątny (5,12,13). $P=\\frac{5\\cdot12}{2}=30$. $s=\\frac{5+12+13}{2}=15$. $r=\\frac{P}{s}=\\frac{30}{15}=2$.'
+      explanation: '$P=30$, $s=15$. $r=\\frac{30}{15}=2$. Alternatywnie: $r=\\frac{5+12-13}{2}=2$.'
     },
     {
-      type: 'question', text: 'Dwa podobne trójkąty mają stosunek boków $1:3$. Stosunek ich pól:',
+      type: 'question', text: 'Podobne trójkąty w skali $1:3$. Stosunek pól:',
       answers: ['$1:9$','$1:3$','$1:6$','$3:1$'], correct: 0,
-      explanation: 'Przy podobieństwie w skali $k=3$: pola są w skali $k^2=9$. Stosunek pól: $1:9$.'
+      explanation: 'Pola skalują się kwadratowo: $k^2=9$. Stosunek $1:9$.'
     },
     {
-      type: 'question', text: '(Matura) Koło o promieniu $r$ jest wpisane w kwadrat. Stosunek pola koła do pola kwadratu:',
+      type: 'question', text: '(Matura) Koło wpisane w kwadrat. $\\frac{P_{\\text{koła}}}{P_{\\text{kwadratu}}}=$',
       answers: ['$\\frac{\\pi}{4}$','$\\frac{\\pi}{2}$','$\\frac{1}{\\pi}$','$\\pi$'], correct: 0,
-      explanation: 'Kwadrat wpisany o boku $a=2r$ (koło wpisane). Pole koła: $\\pi r^2$. Pole kwadratu: $(2r)^2=4r^2$. Stosunek: $\\frac{\\pi r^2}{4r^2}=\\frac{\\pi}{4}$.'
+      explanation: 'Kwadrat boku $2r$. $\\frac{\\pi r^2}{4r^2}=\\frac{\\pi}{4}$.'
+    },
+    {
+      type: 'question', text: '(Matura) $A(1,2)$, $B(4,6)$. Długość $|AB|=$',
+      answers: ['$5$','$7$','$\\sqrt{13}$','$25$'], correct: 0,
+      explanation: '$|AB|=\\sqrt{9+16}=\\sqrt{25}=5$.'
+    },
+    {
+      type: 'question', text: '(Matura) Środek odcinka $A(-2,3)$, $B(6,7)$:',
+      answers: ['$(2,5)$','$(4,5)$','$(4,10)$','$(2,2)$'], correct: 0,
+      explanation: '$S=\\left(\\frac{-2+6}{2},\\frac{3+7}{2}\\right)=(2,5)$.'
+    },
+    {
+      type: 'question', text: '(Matura) Odległość $(3,1)$ od prostej $3x+4y-2=0$:',
+      answers: ['$\\frac{11}{5}$','$\\frac{7}{5}$','$3$','$\\frac{13}{5}$'], correct: 0,
+      explanation: '$d=\\frac{|9+4-2|}{\\sqrt{9+16}}=\\frac{11}{5}=2{,}2$.'
+    },
+    {
+      type: 'question', text: '(Matura) Kąt wpisany oparty na średnicy okręgu jest równy:',
+      answers: ['$90°$','$180°$','$45°$','$60°$'], correct: 0,
+      explanation: 'Tw. Talesa: kąt wpisany oparty na półokręgu (średnicy) = $90°$.'
+    },
+    {
+      type: 'question', text: '(Matura) Równoległobok: boki $5$ i $8$, kąt ostry $30°$. Pole:',
+      answers: ['$20$','$40$','$20\\sqrt{3}$','$10$'], correct: 0,
+      explanation: '$P=ab\\sin\\alpha=5\\cdot 8\\cdot\\sin 30°=40\\cdot\\frac{1}{2}=20$.'
+    },
+    {
+      type: 'question', text: '(Matura) Nierówność trójkąta: boki $3, 7, x$ ($x$ całkowite). Ile wartości $x$?',
+      answers: ['$9$','$7$','$5$','$11$'], correct: 0,
+      explanation: 'Nierówność trójkąta: $|7-3|<x<7+3$, tj. $4<x<10$. Całkowite: $x\\in\\{5,6,7,8,9\\}$ — 5 wartości.'
     }
   ]
 },
 /* ================================================ MODULE 8 */
 {
-  meta: { icon: 'fa-cube', color: '#db2777', title: 'Stereometria', desc: 'Graniastosłupy, ostrosłupy, walec, stożek, kula – objętości, pola powierzchni, przekroje, diagonale.', badge: 8 },
+  meta: { icon: 'fa-cube', color: '#db2777', title: 'Stereometria', desc: 'Graniastosłupy, ostrosłupy, walec, stożek, kula – objętości, pola powierzchni, przekroje, bryły złożone.', badge: 8 },
   steps: [
     {
-      type: 'theory', title: 'Graniastosłupy i sześciany',
+      type: 'theory', title: 'Graniastosłupy i prostopadłościany',
       items: [
-        { kind: 'rule', text: 'Graniastosłup ma dwie równoległe i przystające podstawy oraz boki boczne (prostokąty jeśli prosty).' },
+        { kind: 'rule', text: 'Graniastosłup prosty: dwie równoległe, przystające podstawy + prostokątne ściany boczne.' },
         { kind: 'formulas', items: [
-          'Graniastosłup prosty: $V=P_p\\cdot H$ (pole podstawy × wysokość)',
-          'Pole powierzchni całkowitej: $P_c = 2P_p + P_b$ (gdzie $P_b$ = pole boczne = obwód podstawy × wysokość)',
-          'Sześcian (krawędź $a$): $V=a^3$, $P_c=6a^2$',
-          'Przekątna sześcianu: $d=a\\sqrt{3}$',
-          'Przekątna ściany sześcianu: $d_s=a\\sqrt{2}$',
-          'Graniastosłup prostokątny ($a,b,h$): $V=abh$, $P_c=2(ab+ah+bh)$',
-          'Przekątna przestrzenna prostokąta: $d=\\sqrt{a^2+b^2+h^2}$'
+          '$V=P_p\\cdot H$ (pole podstawy × wysokość)',
+          '$P_c=2P_p+P_b$, $P_b=O_p\\cdot H$ (obwód podstawy × wys.)',
+          'Sześcian ($a$): $V=a^3$, $P_c=6a^2$, przekątna ściany $=a\\sqrt{2}$, przestrzenna $=a\\sqrt{3}$',
+          'Prostopadłościan ($a\\times b\\times h$): $V=abh$, $P_c=2(ab+ah+bh)$, $d=\\sqrt{a^2+b^2+h^2}$',
+          'Graniastosłup prawidłowy $n$-kątny: podstawa = wielokąt foremny'
         ]},
-        { kind: 'example', label: 'Graniastosłup trójkątny prawidłowy', text: 'Podstawa: trójkąt równoboczny o boku $a=4$. $P_p=\\frac{16\\sqrt{3}}{4}=4\\sqrt{3}$. $V=4\\sqrt{3}\\cdot H$.' },
-        { kind: 'tip', text: 'Przekątna przestrzenna sześcianu $>$ przekątna ściany $>$ krawędź. Proporcja $1:\\sqrt{2}:\\sqrt{3}$.' }
+        { kind: 'example', label: 'Sześcian', text: '$a=5$. $V=125$, $P_c=150$. Przekątna $=5\\sqrt{3}\\approx 8{,}66$.' },
+        { kind: 'example', label: 'Prostopodłościan 3×4×12', text: '$V=144$. Przekątna $=\\sqrt{9+16+144}=\\sqrt{169}=13$.' },
+        { kind: 'tip', text: 'Przekątne: $a\\sqrt{2}$ (ściana kwadratu) < $a\\sqrt{3}$ (przestrzenna sześcianu).' }
       ]
     },
     {
-      type: 'theory', title: 'Ostrosłupy – objętość, apotema, pole',
+      type: 'theory', title: 'Ostrosłupy',
       items: [
-        { kind: 'rule', text: 'Ostrosłup ma jedną podstawę i wszystkie boczne ściany (trójkąty) zbiegają się w wierzchołku.' },
+        { kind: 'rule', text: 'Ostrosłup: jedna podstawa, ściany boczne = trójkąty zbiegające się w wierzchołku.' },
         { kind: 'formulas', items: [
-          'Objętość: $V=\\frac{1}{3}P_p\\cdot H$',
-          'Apotema (wysokość ściany bocznej prawidłowego): $l=\\sqrt{H^2+r^2}$ ($r$ – apotema podstawy)',
-          'Pole boczne prawidłowego: $P_b=\\frac{1}{2}\\cdot O_p\\cdot l$ ($O_p$ – obwód podstawy)',
-          'Ostrosłup 4-kątny prawidłowy: apotema podstawy $=\\frac{a}{2}$',
-          'Ostrosłup 3-kątny prawidłowy: apotema podstawy $=\\frac{a}{2\\sqrt{3}}=\\frac{a\\sqrt{3}}{6}$'
+          '$V=\\frac{1}{3}P_p\\cdot H$',
+          'Apotema (wys. ściany bocznej prawidłowego): $l=\\sqrt{H^2+r^2}$ ($r$ – apotema podstawy)',
+          'Pole boczne prawidłowego: $P_b=\\frac{1}{2}\\cdot O_p\\cdot l$',
+          'Ostrosłup 4-kątny prawidłowy: apotema podst. $=\\frac{a}{2}$',
+          'Ostrosłup 3-kątny prawidłowy: apotema podst. $=\\frac{a\\sqrt{3}}{6}$',
+          'Czworościan foremny ($a$): $V=\\frac{a^3\\sqrt{2}}{12}$, $H=a\\sqrt{\\frac{2}{3}}$'
         ]},
-        { kind: 'example', label: 'Ostrosłup 4-kątny prawidłowy', text: '$a=6, H=4$. $V=\\frac{1}{3}\\cdot36\\cdot4=48$. Apotema $l=\\sqrt{16+9}=5$. $P_b=\\frac{1}{2}\\cdot24\\cdot5=60$.' },
-        { kind: 'tip', text: 'Apotema ostrosłupa to WYSOKOŚĆ ściany bocznej (nie krawędź boczna!). Liczymy ją z tw. Pitagorasa.' }
+        { kind: 'example', label: 'Ostrosłup 4-kątny', text: '$a=6$, $H=4$. $V=\\frac{36\\cdot 4}{3}=48$. Apotema $l=\\sqrt{16+9}=5$. $P_b=\\frac{24\\cdot 5}{2}=60$.' },
+        { kind: 'tip', text: 'Stosunek: $V_{\\text{ostrosłupa}} = \\frac{1}{3}V_{\\text{graniastosłupa}}$ (ta sama podstawa i wysokość).' }
       ]
     },
     {
-      type: 'theory', title: 'Bryły obrotowe – walec, stożek, kula',
+      type: 'theory', title: 'Walec',
       items: [
-        { kind: 'rule', text: 'Bryły obrotowe powstają przez obrót figury płaskiej wokół osi.' },
+        { kind: 'rule', text: 'Walec = obrót prostokąta wokół jednego boku.' },
         { kind: 'formulas', items: [
-          'Walec: $V=\\pi r^2 h$',
-          'Walec: $P_b=2\\pi rh$ (powierzchnia boczna), $P_c=2\\pi r(r+h)$',
-          'Stożek: $V=\\frac{1}{3}\\pi r^2 h$',
-          'Stożek: tworząca $l=\\sqrt{r^2+h^2}$, $P_b=\\pi rl$, $P_c=\\pi r(r+l)$',
-          'Kula: $V=\\frac{4}{3}\\pi r^3$',
-          'Kula: $P=4\\pi r^2$'
+          '$V=\\pi r^2 h$',
+          'Pole boczne: $P_b=2\\pi r h$ (rozwinięcie = prostokąt $2\\pi r \\times h$)',
+          'Pole całkowite: $P_c=2\\pi r(r+h)$',
+          'Przekrój osiowy: prostokąt $2r\\times h$',
+          'Walec wpisany w kulę: $r_w^2+\\frac{h^2}{4}=R^2$ ($R$ promień kuli)'
         ]},
-        { kind: 'example', label: 'Walec', text: '$r=3, h=10$. $V=9\\pi\\cdot10=90\\pi$. $P_c=2\\pi\\cdot3(3+10)=78\\pi$.' },
-        { kind: 'example', label: 'Stożek', text: '$r=4, h=3$. $l=\\sqrt{16+9}=5$. $V=\\frac{16\\pi\\cdot3}{3}=16\\pi$. $P_c=\\pi\\cdot4\\cdot(4+5)=36\\pi$.' },
-        { kind: 'tip', text: 'Stosunek: $V_{stożka} : V_{walca} = 1:3$ (ta sama podstawa i wysokość). Zapamiętaj!' }
+        { kind: 'example', label: 'Walec', text: '$r=3$, $h=10$. $V=90\\pi$. $P_b=60\\pi$. $P_c=2\\pi\\cdot 3\\cdot 13=78\\pi$.' },
+        { kind: 'tip', text: 'Przekrój osiowy walca to prostokąt — jego przekątna to $\\sqrt{(2r)^2+h^2}$.' }
       ]
     },
     {
-      type: 'theory', title: 'Przekroje, diagonale, zadania złożone',
+      type: 'theory', title: 'Stożek',
       items: [
-        { kind: 'rule', text: 'Większość zadań stereometrycznych sprowadza się do 2D przez narysowanie PRZEKROJU.' },
+        { kind: 'rule', text: 'Stożek = obrót trójkąta prostokątnego wokół jednej przyprostokątnej.' },
         { kind: 'formulas', items: [
-          'Przekrój osiowy walca: prostokąt $2r\\times h$',
-          'Przekrój osiowy stożka: trójkąt równoramienny o podstawie $2r$ i ramionach $l$',
-          'Przekrój osiowy kuli: koło o r',
-          'Kąt nachylenia krawędzi bocznej stożka: $\\tan\\alpha=\\frac{h}{r}$',
-          'Kula opisana na sześcianie: $R=\\frac{a\\sqrt{3}}{2}$',
-          'Sfera wpisana w sześcian: $r=\\frac{a}{2}$'
+          '$V=\\frac{1}{3}\\pi r^2 h$',
+          'Tworząca: $l=\\sqrt{r^2+h^2}$',
+          'Pole boczne: $P_b=\\pi r l$',
+          'Pole całkowite: $P_c=\\pi r(r+l)$',
+          'Przekrój osiowy: trójkąt równoramienny ($2r$, $l$, $l$)',
+          'Kąt nachylenia tworzącej: $\\sin\\alpha=\\frac{r}{l}=\\frac{r}{\\sqrt{r^2+h^2}}$'
         ]},
-        { kind: 'example', label: 'Kąt przekątnej sześcianu z podstawą', text: 'Sześcian $a$. Przekątna podstawy $d_s=a\\sqrt{2}$. Przekątna przestrzenna $d=a\\sqrt{3}$. $\\cos\\alpha=\\frac{d_s}{d}=\\frac{\\sqrt{2}}{\\sqrt{3}}$, $\\alpha\\approx35°$.' },
-        { kind: 'tip', text: 'Narysuj ZAWSZE przekrój trójkąta zawierającego poszukiwane elementy. 3D → 2D = klucz do sukcesu.' }
+        { kind: 'example', label: 'Stożek', text: '$r=4$, $h=3$. $l=5$. $V=16\\pi$. $P_b=20\\pi$. $P_c=36\\pi$.' },
+        { kind: 'example', label: 'Stożek ścięty', text: 'Stożek ścięty ($R$, $r$, $h$): $V=\\frac{\\pi h}{3}(R^2+Rr+r^2)$.' },
+        { kind: 'tip', text: '$V_{\\text{stożka}}=\\frac{1}{3}V_{\\text{walca}}$ (ta sama podstawa i wysokość).' }
       ]
     },
     {
-      type: 'question', text: 'Objętość stożka o $r=6$, $h=4$:',
+      type: 'theory', title: 'Kula',
+      items: [
+        { kind: 'rule', text: 'Kula = obrót półokręgu wokół średnicy.' },
+        { kind: 'formulas', items: [
+          '$V=\\frac{4}{3}\\pi r^3$',
+          'Pole powierzchni: $P=4\\pi r^2$',
+          'Przekrój: koło o promieniu $\\leq r$; przekrój wielki = koło o promieniu $r$',
+          'Odległość przekroju od środka $d$ → promień przekroju $r_p=\\sqrt{r^2-d^2}$',
+          'Kula opisana na sześcianie $a$: $R=\\frac{a\\sqrt{3}}{2}$',
+          'Kula wpisana w sześcian $a$: $r=\\frac{a}{2}$'
+        ]},
+        { kind: 'example', label: 'Kula r=6', text: '$V=\\frac{4}{3}\\pi\\cdot 216=288\\pi$. $P=4\\pi\\cdot 36=144\\pi$.' },
+        { kind: 'example', label: 'Przekrój', text: 'Kula $r=5$, przekrój w odległości $3$: $r_p=\\sqrt{25-9}=4$. Pole przekroju $=16\\pi$.' },
+        { kind: 'tip', text: 'Półkula: $V=\\frac{2}{3}\\pi r^3$, $P_c=3\\pi r^2$ (podstawa + połowa sfery).' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Przekroje i kąty w bryle',
+      items: [
+        { kind: 'rule', text: 'Kąty i odległości w stereometrii liczymy przez PRZEKROJE (sprowadzenie do 2D).' },
+        { kind: 'formulas', items: [
+          'Kąt krawędzi bocznej z podstawą: $\\tan\\alpha=\\frac{H}{d}$ ($d$ odległość rzutu)',
+          'Kąt ściany bocznej z podstawą: $\\tan\\beta=\\frac{H}{r}$ ($r$ apotema)',
+          'Kąt dwuścienny: kąt między dwiema płaszczyznami (mierzymy w przekroju ⊥ do krawędzi)',
+          'Przekrój osiowy: przechodzi przez oś symetrii bryły',
+          'Odległość punktu od płaszczyzny: prostopadły rzut'
+        ]},
+        { kind: 'example', label: 'Sześcian', text: 'Kąt przekątnej sześcianu z podstawą: $\\tan\\alpha=\\frac{a}{a\\sqrt{2}}=\\frac{1}{\\sqrt{2}}$, $\\alpha\\approx 35{,}3°$.' },
+        { kind: 'tip', text: 'Rysunek przekroju = klucz do zadań stereometrycznych. 3D → 2D!' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Bryły wpisane i opisane',
+      items: [
+        { kind: 'rule', text: 'Kula wpisana w bryłę dotyka KAŻDEJ ściany; opisana przechodzi przez KAŻDY wierzchołek.' },
+        { kind: 'formulas', items: [
+          'Kula opisana na sześcianie $a$: $R=\\frac{a\\sqrt{3}}{2}$',
+          'Kula wpisana w sześcian $a$: $r=\\frac{a}{2}$',
+          'Walec wpisany w kulę $R$: max objętość $\\frac{4\\pi R^3}{3\\sqrt{3}}$ gdy $h=\\frac{2R}{\\sqrt{3}}$',
+          'Stożek wpisany w kulę: krawędź boczna przechodzi przez punkt na sferze',
+          'Kula wpisana w ostrosłup: $r=\\frac{3V}{P_c}$ (analogia do trójkąta: $r=P/s$)'
+        ]},
+        { kind: 'example', label: 'Sfera i sześcian', text: '$a=4$. Kula opisana: $R=2\\sqrt{3}$. Kula wpisana: $r=2$. Stosunek objętości: $\\frac{R^3}{r^3}=3\\sqrt{3}$.' },
+        { kind: 'tip', text: 'Szukaj przekroju osiowego — rzut kuli na przekrój to okrąg wpisany/opisany.' }
+      ]
+    },
+    {
+      type: 'question', text: 'Objętość stożka: $r=6$, $h=4$:',
       answers: ['$48\\pi$','$144\\pi$','$72\\pi$','$36\\pi$'], correct: 0,
-      explanation: '$V=\\frac{1}{3}\\pi r^2 h=\\frac{1}{3}\\pi\\cdot36\\cdot4=48\\pi$.'
+      explanation: '$V=\\frac{1}{3}\\pi\\cdot 36\\cdot 4=48\\pi$.'
     },
     {
-      type: 'question', text: 'Kula o $r=3$. Pole powierzchni:',
+      type: 'question', text: 'Kula $r=3$. Pole powierzchni:',
       answers: ['$9\\pi$','$36\\pi$','$12\\pi$','$27\\pi$'], correct: 1,
-      explanation: '$P=4\\pi r^2=4\\pi\\cdot9=36\\pi$.'
+      explanation: '$P=4\\pi\\cdot 9=36\\pi$.'
     },
     {
-      type: 'question', text: 'Przekątna przestrzenna sześcianu o krawędzi $a=4$:',
+      type: 'question', text: 'Przekątna sześcianu $a=4$:',
       answers: ['$4\\sqrt{2}$','$4\\sqrt{3}$','$8$','$4$'], correct: 1,
-      explanation: 'Przekątna sześcianu: $d=a\\sqrt{3}=4\\sqrt{3}$. (Przekątna ściany to $a\\sqrt{2}$, a przestrzenna to $a\\sqrt{3}$.)'
+      explanation: '$d=a\\sqrt{3}=4\\sqrt{3}$.'
     },
     {
-      type: 'question', text: 'Graniastosłup prostokątny $a=3$, $b=4$, $h=12$. Przekątna przestrzenna:',
+      type: 'question', text: 'Prostopadłościan $3\\times 4\\times 12$. Przekątna:',
       answers: ['$13$','$5$','$\\sqrt{153}$','$12$'], correct: 0,
-      explanation: '$d=\\sqrt{a^2+b^2+h^2}=\\sqrt{9+16+144}=\\sqrt{169}=13$. Korzystamy z trójki pitagorejskiej $(5,12,13)$.'
+      explanation: '$d=\\sqrt{9+16+144}=\\sqrt{169}=13$.'
     },
     {
-      type: 'question', text: 'Stożek i walec mają tę samą podstawę i wysokość. Stosunek ich objętości:',
+      type: 'question', text: '$V_{\\text{stożka}} : V_{\\text{walca}}$ (ta sama podstawa i $h$):',
       answers: ['$1:3$','$3:1$','$1:2$','$2:1$'], correct: 0,
-      explanation: '$V_{stożka}=\\frac{1}{3}\\pi r^2h$, $V_{walca}=\\pi r^2h$. Stosunek: $\\frac{1}{3}:1 = 1:3$.'
+      explanation: '$\\frac{\\frac{1}{3}\\pi r^2 h}{\\pi r^2 h}=\\frac{1}{3}$. Stosunek $1:3$.'
     },
     {
-      type: 'question', text: 'Ostrosłup 4-kątny prawidłowy o podstawie $a=6$ i wysokości $H=4$. Objętość:',
+      type: 'question', text: 'Ostrosłup 4-kątny prawidłowy: $a=6$, $H=4$. $V=$',
       answers: ['$48$','$72$','$36$','$96$'], correct: 0,
-      explanation: '$V=\\frac{1}{3}P_p\\cdot H=\\frac{1}{3}\\cdot36\\cdot4=48$.  Pole podstawy kwadratu $=6^2=36$.'
+      explanation: '$V=\\frac{36\\cdot 4}{3}=48$.'
     },
     {
-      type: 'question', text: '(Matura) Walec ma $r=4$ i $h=6$. Stosunek objętości kuli o promieniu $4$ do objętości walca:',
+      type: 'question', text: 'Tworząca stożka: $r=4$, $h=3$. $l=$',
+      answers: ['$5$','$7$','$\\sqrt{7}$','$4$'], correct: 0,
+      explanation: '$l=\\sqrt{16+9}=5$.'
+    },
+    {
+      type: 'question', text: '(Matura) Kula $r=5$, przekrój w odl. $3$ od środka. Pole przekroju:',
+      answers: ['$16\\pi$','$25\\pi$','$9\\pi$','$12\\pi$'], correct: 0,
+      explanation: '$r_p=\\sqrt{25-9}=4$. Pole $=\\pi\\cdot 16=16\\pi$.'
+    },
+    {
+      type: 'question', text: '(Matura) Walec: $r=4$, $h=6$. $\\frac{V_{\\text{kuli }r=4}}{V_{\\text{walca}}}=$',
       answers: ['$\\frac{8}{9}$','$\\frac{4}{3}$','$\\frac{2}{3}$','$\\frac{16}{9}$'], correct: 0,
-      explanation: '$V_{kuli}=\\frac{4}{3}\\pi\\cdot64=\\frac{256\\pi}{3}$. $V_{walca}=\\pi\\cdot16\\cdot6=96\\pi$. Stosunek: $\\frac{256\\pi/3}{96\\pi}=\\frac{256}{288}=\\frac{8}{9}$.'
+      explanation: '$V_k=\\frac{256\\pi}{3}$, $V_w=96\\pi$. $\\frac{256/3}{96}=\\frac{256}{288}=\\frac{8}{9}$.'
+    },
+    {
+      type: 'question', text: '(Matura) Kula wpisana w sześcian $a=6$. Promień kuli:',
+      answers: ['$3$','$3\\sqrt{3}$','$6$','$3\\sqrt{2}$'], correct: 0,
+      explanation: 'Kula wpisana: $r=\\frac{a}{2}=3$.'
+    },
+    {
+      type: 'question', text: '(Matura) Pole boczne stożka: $r=3$, $l=5$:',
+      answers: ['$15\\pi$','$24\\pi$','$8\\pi$','$25\\pi$'], correct: 0,
+      explanation: '$P_b=\\pi r l=\\pi\\cdot 3\\cdot 5=15\\pi$.'
+    },
+    {
+      type: 'question', text: '(Matura) Czworościan foremny $a=4$. Objętość:',
+      answers: ['$\\frac{32\\sqrt{2}}{3}$','$\\frac{64}{3}$','$32$','$\\frac{16\\sqrt{2}}{3}$'], correct: 3,
+      explanation: '$V=\\frac{a^3\\sqrt{2}}{12}=\\frac{64\\sqrt{2}}{12}=\\frac{16\\sqrt{2}}{3}$.'
+    },
+    {
+      type: 'question', text: '(Matura) Graniastosłup prawidłowy 6-kątny: $a=4$, $H=10$. $V=$',
+      answers: ['$240\\sqrt{3}$','$160\\sqrt{3}$','$480$','$120\\sqrt{3}$'], correct: 0,
+      explanation: 'Pole sześciokąta foremnego: $P_p=\\frac{3\\sqrt{3}}{2}a^2=\\frac{3\\sqrt{3}}{2}\\cdot 16=24\\sqrt{3}$. $V=24\\sqrt{3}\\cdot 10=240\\sqrt{3}$.'
     }
   ]
 },
 /* ================================================ MODULE 9 */
 {
-  meta: { icon: 'fa-chart-bar', color: '#14b8a6', title: 'Statystyka i Prawdopodobieństwo', desc: 'Kombinatoryka, klasyczne prawdopodobieństwo, statystyki opisowe – średnia, mediana, wariancja, odch. standardowe.', badge: 9 },
+  meta: { icon: 'fa-chart-bar', color: '#14b8a6', title: 'Statystyka i Prawdopodobieństwo', desc: 'Kombinatoryka, prawdopodobieństwo klasyczne i warunkowe, schemat Bernoulliego, statystyki opisowe, kwartyle.', badge: 9 },
   steps: [
     {
       type: 'theory', title: 'Kombinatoryka – zliczanie',
@@ -1313,117 +2114,178 @@ const COURSE = [
         { kind: 'formulas', items: [
           'Permutacja (ustawianie wszystkich $n$): $P_n = n!$',
           'Permutacja z powtórzeniami: $\\frac{n!}{n_1!\\cdot n_2!\\cdots}$',
-          'Kombinacja bez porządku (wybór $k$ z $n$): $\\binom{n}{k}=\\frac{n!}{k!(n-k)!}$',
-          'Wariacja z powtórzeniami: $n^k$ (kolejność ważna, możliwe powtórzenia)',
-          'Wariacja bez powtórzeń: $\\frac{n!}{(n-k)!}$ (kolejność ważna, bez powtórzeń)',
-          'ZASADA MNOŻENIA: czynność $A$ na $m$ sposobów, $B$ na $n$ → łącznie $m\\cdot n$ sposobów',
-          'ZASADA DODAWANIA: $A$ lub $B$ (rozłączne) → $m+n$ sposobów'
+          'Kombinacja (wybór $k$ z $n$, bez kolejności): $\\binom{n}{k}=\\frac{n!}{k!(n-k)!}$',
+          'Wariacja z powtórzeniami: $n^k$',
+          'Wariacja bez powtórzeń: $\\frac{n!}{(n-k)!}$',
+          'ZASADA MNOŻENIA: $A$ na $m$ sposobów, $B$ na $n$ → łącznie $m\\cdot n$',
+          'ZASADA DODAWANIA: $A$ lub $B$ (rozłączne) → $m+n$'
         ]},
-        { kind: 'example', label: 'Komisja', text: 'Na ile sposobów wybrać 3-os. komisję z 8 osób? Kolejność nie ma znaczenia. $\\binom{8}{3}=\\frac{8!}{3!5!}=56$.' },
-        { kind: 'example', label: 'Permutacja', text: 'Na ile sposobów ustawić 5 osób w rzędzie? $5!=120$.' },
-        { kind: 'tip', text: 'Kluczowe pytanie: czy KOLEJNOŚĆ MA ZNACZENIE? Tak → permutacja/wariacja. Nie → kombinacja.' }
+        { kind: 'example', label: 'Komisja', text: 'Wybrać 3-os. komisję z 8 osób? $\\binom{8}{3}=\\frac{8!}{3!5!}=56$.' },
+        { kind: 'example', label: 'Permutacja', text: 'Ustawić 5 osób w rzędzie? $5!=120$.' },
+        { kind: 'tip', text: 'Kolejność ważna? Tak → permutacja/wariacja. Nie → kombinacja.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Dwumian Newtona i własności $\\binom{n}{k}$',
+      items: [
+        { kind: 'rule', text: 'Dwumian Newtona pozwala rozwijać $(a+b)^n$ i korzystać z własności symbolu Newtona.' },
+        { kind: 'formulas', items: [
+          '$(a+b)^n=\\sum_{k=0}^{n}\\binom{n}{k}a^{n-k}b^k$',
+          'Trójkąt Pascala: $\\binom{n}{k}=\\binom{n-1}{k-1}+\\binom{n-1}{k}$',
+          'Symetria: $\\binom{n}{k}=\\binom{n}{n-k}$',
+          '$\\binom{n}{0}=\\binom{n}{n}=1$',
+          'Suma wiersza: $\\sum_{k=0}^n\\binom{n}{k}=2^n$ (bo $(1+1)^n$)',
+          'Poszczególne wyrazy $(a+b)^n$: wyraz z $a^{n-k}b^k$ ma współczynnik $\\binom{n}{k}$'
+        ]},
+        { kind: 'example', label: '$(x+2)^4$', text: '$=x^4+4\\cdot 2x^3+6\\cdot 4x^2+4\\cdot 8x+16=x^4+8x^3+24x^2+32x+16$.' },
+        { kind: 'tip', text: 'Aby znaleźć konkretny wyraz: $k$-ty wyraz rozwinięcia to $\\binom{n}{k}a^{n-k}b^k$ (numeracja od 0).' }
       ]
     },
     {
       type: 'theory', title: 'Prawdopodobieństwo klasyczne',
       items: [
-        { kind: 'rule', text: 'Prawdopodobieństwo klasyczne: doświadczenie równie możliwych wyników.' },
+        { kind: 'rule', text: 'Prawdopodobieństwo klasyczne: doświadczenie o skończonej, równie możliwej przestrzeni zdarzeń.' },
         { kind: 'formulas', items: [
-          '$P(A)=\\dfrac{|A|}{|\\Omega|}$ – liczba sprzyjających / liczba wszystkich',
-          '$0\\leq P(A)\\leq 1$',
-          '$P(A)+P(\\bar{A})=1$, czyli $P(\\bar{A})=1-P(A)$',
+          '$P(A)=\\dfrac{|A|}{|\\Omega|}$',
+          '$0\\leq P(A)\\leq 1$, $P(\\Omega)=1$, $P(\\varnothing)=0$',
+          '$P(\\bar{A})=1-P(A)$',
           '$P(A\\cup B)=P(A)+P(B)-P(A\\cap B)$',
-          'Dla zdarzeń rozłącznych: $P(A\\cup B)=P(A)+P(B)$',
-          'Dla zdarzeń niezależnych: $P(A\\cap B)=P(A)\\cdot P(B)$',
-          'P. warunkowe: $P(A|B)=\\dfrac{P(A\\cap B)}{P(B)}$'
+          'Zdarzenia rozłączne: $P(A\\cup B)=P(A)+P(B)$',
+          'Zdarzenia niezależne: $P(A\\cap B)=P(A)\\cdot P(B)$'
         ]},
-        { kind: 'example', label: 'Kostka', text: 'Rzut kostką 6-ścienną. $P(>4)=P(\\{5,6\\})=\\frac{2}{6}=\\frac{1}{3}$.' },
-        { kind: 'example', label: 'Komplement', text: 'Rzucamy 3 razy monetą. $P$(przynajmniej 1 orzeł)$=1-P$(żadnego orła)$=1-\\left(\\frac{1}{2}\\right)^3=1-\\frac{1}{8}=\\frac{7}{8}$.' },
-        { kind: 'tip', text: 'Trick: "przynajmniej 1" często łatwiej liczyć przez komplement $1-P(\\text{żaden})$.' }
+        { kind: 'example', label: 'Kostka', text: '$P(>4)=P(\\{5,6\\})=\\frac{2}{6}=\\frac{1}{3}$.' },
+        { kind: 'example', label: 'Komplement', text: '3 rzuty monetą. $P(\\geq 1\\text{ orzeł})=1-P(0\\text{ orłów})=1-\\frac{1}{8}=\\frac{7}{8}$.' },
+        { kind: 'tip', text: '"Przynajmniej 1" → liczymy komplement: $1-P(\\text{żaden})$.' }
       ]
     },
     {
-      type: 'theory', title: 'Statystyki opisowe – miary tendencji centralnej',
+      type: 'theory', title: 'Prawdopodobieństwo warunkowe i drzewo zdarzeń',
       items: [
-        { kind: 'rule', text: 'Trzy główne miary centralne opisujące "środek" rozkładu:' },
+        { kind: 'rule', text: 'Prawdopodobieństwo warunkowe $P(A|B)$ to szansa na $A$, gdy wiemy, że zaszło $B$.' },
         { kind: 'formulas', items: [
-          'Średnia arytmetyczna: $\\bar{x}=\\dfrac{x_1+x_2+\\ldots+x_n}{n}$',
-          'Mediana: środkowy wyraz POSORTOWANEGO zbioru (lub średnia dwóch środkowych dla parzystego $n$)',
-          'Dominanta (moda): wartość pojawiająca się NAJCZĘŚCIEJ',
-          'Średnia ważona: $\\bar{x}_w=\\dfrac{\\sum w_i x_i}{\\sum w_i}$'
+          '$P(A|B)=\\dfrac{P(A\\cap B)}{P(B)}$',
+          'Reguła mnożenia: $P(A\\cap B)=P(B)\\cdot P(A|B)$',
+          'Prawdopodobieństwo całkowite: $P(A)=\\sum_i P(B_i)\\cdot P(A|B_i)$ (pełny układ zdarzeń $B_i$)',
+          'Wzór Bayesa: $P(B_j|A)=\\dfrac{P(B_j)\\cdot P(A|B_j)}{\\sum_i P(B_i)\\cdot P(A|B_i)}$',
+          'Drzewo zdarzeń: mnożymy wzdłuż gałęzi, dodajemy „liście" prowadzące do tego samego wyniku'
         ]},
-        { kind: 'example', label: 'Obliczenia', text: 'Dane: $\\{1,3,5,5,7,9\\}$. $\\bar{x}=\\frac{1+3+5+5+7+9}{6}=\\frac{30}{6}=5$. Mediana $=\\frac{5+5}{2}=5$. Dominanta $=5$.' },
-        { kind: 'tip', text: 'Mediana jest odporna na wartości skrajne ("outliers"). Przy asymetrycznych rozkładach mediana lepiej opisuje centrum niż średnia.' }
+        { kind: 'example', label: 'Urna', text: 'Urna: 4B, 6C. Losujemy 2 bez zwracania. $P(\\text{obie B})=\\frac{4}{10}\\cdot\\frac{3}{9}=\\frac{2}{15}$.' },
+        { kind: 'example', label: 'P. całkowite', text: 'Szuflada I: 3 białe, 2 czerwone. Szuflada II: 1 biała, 4 czerwone. Losujemy szufladę ($\\frac{1}{2}$), potem kulę. $P(\\text{biała})=\\frac{1}{2}\\cdot\\frac{3}{5}+\\frac{1}{2}\\cdot\\frac{1}{5}=\\frac{2}{5}$.' },
+        { kind: 'tip', text: 'Drzewo zdarzeń = pewna metoda. Rysuj gałęzie, wpisuj prawdopodobieństwa, mnóż i dodaj.' }
       ]
     },
     {
-      type: 'theory', title: 'Miary rozproszenia – wariancja i odch. stand.',
+      type: 'theory', title: 'Schemat Bernoulliego',
       items: [
-        { kind: 'rule', text: 'Miary rozproszenia mówią jak bardzo dane są "rozrzucone" wokół średniej.' },
+        { kind: 'rule', text: 'Schemat Bernoulliego: $n$ niezależnych prób, w każdej $P(\\text{sukces})=p$.' },
         { kind: 'formulas', items: [
-          'Wariancja: $\\sigma^2=\\dfrac{1}{n}\\sum_{i=1}^n(x_i-\\bar{x})^2$',
+          '$P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}$',
+          '$k$ – liczba sukcesów, $q=1-p$ – prawdop. porażki',
+          'Wartość oczekiwana: $E(X)=np$',
+          'Wariancja: $D^2(X)=npq$',
+          'Odch. stand.: $\\sigma(X)=\\sqrt{npq}$'
+        ]},
+        { kind: 'example', label: '5 rzutów monetą', text: '$P(\\text{dokł. 3 orły})=\\binom{5}{3}\\left(\\frac{1}{2}\\right)^5=10\\cdot\\frac{1}{32}=\\frac{5}{16}$.' },
+        { kind: 'example', label: 'Strzał', text: 'P. trafienia = 0,6. 4 strzały. $P(\\geq 3)=P(3)+P(4)=\\binom{4}{3}(0{,}6)^3(0{,}4)+\\binom{4}{4}(0{,}6)^4=4\\cdot 0{,}0864+0{,}1296=0{,}4752$.' },
+        { kind: 'tip', text: '"Co najmniej $k$" w schemacie Bernoulliego: sumuj od $k$ do $n$ lub licz komplement.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Statystyki opisowe – średnia, mediana, dominanta',
+      items: [
+        { kind: 'rule', text: 'Miary tendencji centralnej opisują "środek" rozkładu danych.' },
+        { kind: 'formulas', items: [
+          'Średnia arytmetyczna: $\\bar{x}=\\dfrac{\\sum x_i}{n}$',
+          'Średnia ważona: $\\bar{x}_w=\\dfrac{\\sum w_i x_i}{\\sum w_i}$',
+          'Mediana: środkowy wyraz posortowanego ciągu (lub średnia dwóch środkowych)',
+          'Dominanta (moda): wartość najczęstsza'
+        ]},
+        { kind: 'example', label: 'Obliczenia', text: '$\\{1,3,5,5,7,9\\}$. $\\bar{x}=5$. Mediana $=\\frac{5+5}{2}=5$. Dominanta $=5$.' },
+        { kind: 'tip', text: 'Mediana jest odporna na wartości skrajne (outliers). Przy asymetrycznych danych → mediana lepiej opisuje centrum.' }
+      ]
+    },
+    {
+      type: 'theory', title: 'Wariancja, odchylenie standardowe, kwartyle',
+      items: [
+        { kind: 'rule', text: 'Miary rozproszenia mówią jak bardzo dane są rozrzucone wokół średniej.' },
+        { kind: 'formulas', items: [
+          'Wariancja: $\\sigma^2=\\dfrac{1}{n}\\sum(x_i-\\bar{x})^2$',
           'Odchylenie standardowe: $\\sigma=\\sqrt{\\sigma^2}$',
           'Rozstęp: $R=x_{\\max}-x_{\\min}$',
-          'Jeśli $\\sigma=0$: wszystkie wartości JEDNAKOWE',
-          'Im większe $\\sigma$, tym większe rozproszenie'
+          'Kwartyl dolny $Q_1$: mediana dolnej połowy danych',
+          'Kwartyl górny $Q_3$: mediana górnej połowy danych',
+          'Rozstęp międzykwartylowy: $IQR=Q_3-Q_1$',
+          'Jeśli $\\sigma=0$: wszystkie wartości jednakowe'
         ]},
-        { kind: 'example', label: 'Wariancja krok po kroku', text: 'Dane: $\\{2,4,6\\}$. $\\bar{x}=4$. Odchylenia: $2-4=-2,\\ 4-4=0,\\ 6-4=2$. Kwadraty: $4,0,4$. $\\sigma^2=\\frac{4+0+4}{3}=\\frac{8}{3}\\approx2{,}67$. $\\sigma=\\sqrt{\\frac{8}{3}}\\approx1{,}63$.' },
-        { kind: 'tip', text: 'Na maturze często dają dane w tabeli z częstościami. Pamiętaj: $\\sigma^2=\\frac{\\sum n_i(x_i-\\bar{x})^2}{\\sum n_i}$.' }
-      ]
-    },
-    {
-      type: 'theory', title: 'Losowanie bez zwracania i schemat Bernoulliego',
-      items: [
-        { kind: 'rule', text: 'Losowanie BEZ ZWRACANIA: kolejne zdarzenia są ZALEŻNE (skład populacji się zmienia).' },
-        { kind: 'formulas', items: [
-          'Reguła mnożenia (zależne): $P(A_1\\cap A_2)=P(A_1)\\cdot P(A_2|A_1)$',
-          'Ze zwracaniem (niezależne): $P(A_1\\cap A_2)=P(A_1)\\cdot P(A_2)$',
-          'Schemat Bernoulliego ($n$ prób, $p$ – prawdop. sukcesu): $P(X=k)=\\binom{n}{k}p^k(1-p)^{n-k}$'
-        ]},
-        { kind: 'example', label: 'Urna', text: 'Urna: 4 białe, 6 czerwonych. Losujemy 2 bez zwracania. $P$(obie białe)$=\\frac{4}{10}\\cdot\\frac{3}{9}=\\frac{12}{90}=\\frac{2}{15}\\approx0{,}133$.' },
-        { kind: 'example', label: 'Bernoulliego', text: 'Rzucamy monetą 5 razy. $P$(dokładnie 3 orły)$=\\binom{5}{3}\\left(\\frac{1}{2}\\right)^5=10\\cdot\\frac{1}{32}=\\frac{5}{16}$.' },
-        { kind: 'tip', text: '"Z zwracaniem" → niezależne zdarzenia → mnożymy same $P(A)$. "Bez zwracania" → zależne → używamy $P(A|B)$.' }
+        { kind: 'example', label: 'Krok po kroku', text: '$\\{2,4,6\\}$. $\\bar{x}=4$. $\\sigma^2=\\frac{4+0+4}{3}=\\frac{8}{3}$. $\\sigma\\approx 1{,}63$.' },
+        { kind: 'example', label: 'Kwartyle', text: '$\\{1,3,5,7,9,11\\}$. $Q_1=\\text{Me}(\\{1,3,5\\})=3$. $Q_3=\\text{Me}(\\{7,9,11\\})=9$. $IQR=6$.' },
+        { kind: 'tip', text: 'Na maturze: dane w tabeli z częstościami → $\\sigma^2=\\frac{\\sum n_i(x_i-\\bar{x})^2}{\\sum n_i}$.' }
       ]
     },
     {
       type: 'question', text: 'Na ile sposobów ustawić 5 osób w rzędzie?',
       answers: ['$25$','$120$','$10$','$60$'], correct: 1,
-      explanation: '$P_5=5!=5\\cdot4\\cdot3\\cdot2\\cdot1=120$. Permutacja wszystkich $n$ elementów $=n!$.'
+      explanation: '$5!=120$.'
     },
     {
-      type: 'question', text: '$P$(wyrzucenie liczby pierwszej przy rzucie kostką):',
+      type: 'question', text: '$P$(liczba pierwsza przy rzucie kostką):',
       answers: ['$\\frac{1}{2}$','$\\frac{1}{3}$','$\\frac{2}{3}$','$\\frac{1}{6}$'], correct: 0,
-      explanation: 'Liczby pierwsze w $\\{1,2,3,4,5,6\\}$: $\\{2,3,5\\}$ – 3 elementy. $P=\\frac{3}{6}=\\frac{1}{2}$.'
+      explanation: 'Pierwsze w $\\{1,\\ldots,6\\}$: $\\{2,3,5\\}$ → $P=\\frac{3}{6}=\\frac{1}{2}$.'
     },
     {
       type: 'question', text: 'Mediana zbioru $\\{3,1,9,7,5\\}$:',
       answers: ['$5$','$3$','$7$','$4{,}4$'], correct: 0,
-      explanation: 'Sortujemy rosnąco: $\\{1,3,5,7,9\\}$. 5 elementów (nieparzyste) – środkowy (3-ci) to $\\mathbf{5}$.'
+      explanation: 'Sortujemy: $\\{1,3,5,7,9\\}$. Środkowy (3.) $=5$.'
     },
     {
       type: 'question', text: 'Wariancja zbioru $\\{2,4,6\\}$:',
       answers: ['$\\frac{8}{3}$','$4$','$2$','$\\frac{4}{3}$'], correct: 0,
-      explanation: '$\\bar{x}=4$. $\\sigma^2=\\frac{(2-4)^2+(4-4)^2+(6-4)^2}{3}=\\frac{4+0+4}{3}=\\frac{8}{3}$.'
+      explanation: '$\\bar{x}=4$. $\\sigma^2=\\frac{4+0+4}{3}=\\frac{8}{3}$.'
     },
     {
-      type: 'question', text: 'Na ile sposobów wybrać 2-osobową delegację z 6 osób?',
+      type: 'question', text: '$\\binom{6}{2}=$',
       answers: ['$15$','$30$','$12$','$36$'], correct: 0,
-      explanation: '$\\binom{6}{2}=\\frac{6!}{2!\\cdot4!}=\\frac{6\\cdot5}{2}=15$. Kolejność wyboru nie ma znaczenia → kombinacja.'
+      explanation: '$\\binom{6}{2}=\\frac{6\\cdot 5}{2}=15$.'
     },
     {
-      type: 'question', text: '(Matura) Losujemy 2 karty bez zwracania z 52. $P$(obie króle):',
+      type: 'question', text: '(Matura) 2 karty z 52 bez zwracania. $P$(oba króle):',
       answers: ['$\\frac{1}{221}$','$\\frac{1}{169}$','$\\frac{4}{52}$','$\\frac{1}{13}$'], correct: 0,
-      explanation: '$P=\\frac{4}{52}\\cdot\\frac{3}{51}=\\frac{12}{2652}=\\frac{1}{221}$. Losowanie bez zwracania – zdarzenia zależne.'
+      explanation: '$P=\\frac{4}{52}\\cdot\\frac{3}{51}=\\frac{12}{2652}=\\frac{1}{221}$.'
     },
     {
-      type: 'question', text: 'Rzucamy monetą 4 razy. $P$(przynajmniej 1 orzeł):',
+      type: 'question', text: '4 rzuty monetą. $P$(przynajmniej 1 orzeł):',
       answers: ['$\\frac{15}{16}$','$\\frac{1}{2}$','$\\frac{3}{4}$','$\\frac{1}{16}$'], correct: 0,
-      explanation: 'Komplement: "$0$ orłów" to $\\left(\\frac{1}{2}\\right)^4=\\frac{1}{16}$. Zatem $P(\\geq1)=1-\\frac{1}{16}=\\frac{15}{16}$.'
+      explanation: '$P=1-\\left(\\frac{1}{2}\\right)^4=1-\\frac{1}{16}=\\frac{15}{16}$.'
     },
     {
-      type: 'question', text: 'Odchylenie standardowe zbioru $\\{4,4,4,4\\}$ wynosi:',
+      type: 'question', text: 'Odchylenie standardowe $\\{4,4,4,4\\}$:',
       answers: ['$0$','$4$','$2$','$1$'], correct: 0,
-      explanation: 'Wszystkie wartości są jednakowe ($=4$), więc $\\bar{x}=4$ i każde $(x_i-\\bar{x})^2=0$. Stąd $\\sigma^2=0$ i $\\sigma=0$.'
+      explanation: 'Wszystkie wartości = 4, więc $\\sigma=0$.'
+    },
+    {
+      type: 'question', text: '(Matura) Ile wyrazów ma rozwinięcie $(a+b)^7$?',
+      answers: ['$8$','$7$','$14$','$128$'], correct: 0,
+      explanation: '$(a+b)^n$ ma $n+1$ wyrazów, więc $(a+b)^7$ ma $8$.'
+    },
+    {
+      type: 'question', text: '(Matura) Permutacja z powtórzeniami liter w MAMA:',
+      answers: ['$6$','$12$','$24$','$4$'], correct: 0,
+      explanation: '4 litery: M×2, A×2. $\\frac{4!}{2!\\cdot 2!}=\\frac{24}{4}=6$.'
+    },
+    {
+      type: 'question', text: '(Matura) $P$(dokł. 2 orły w 5 rzutach monetą):',
+      answers: ['$\\frac{5}{16}$','$\\frac{10}{32}$','$\\frac{1}{4}$','$\\frac{3}{8}$'], correct: 0,
+      explanation: '$P=\\binom{5}{2}\\left(\\frac{1}{2}\\right)^5=\\frac{10}{32}=\\frac{5}{16}$.'
+    },
+    {
+      type: 'question', text: '(Matura) $Q_1$ zbioru $\\{2,4,6,8,10,12,14,16\\}$:',
+      answers: ['$5$','$4$','$6$','$3$'], correct: 0,
+      explanation: 'Dolna połowa: $\\{2,4,6,8\\}$. $Q_1=\\frac{4+6}{2}=5$.'
+    },
+    {
+      type: 'question', text: '(Matura) Urna: 5 białych, 3 czerwone. Losujemy 2 bez zwracania. $P$(różne kolory):',
+      answers: ['$\\frac{15}{28}$','$\\frac{5}{8}$','$\\frac{3}{8}$','$\\frac{1}{2}$'], correct: 0,
+      explanation: '$P=\\frac{\\binom{5}{1}\\binom{3}{1}}{\\binom{8}{2}}=\\frac{15}{28}$. Lub: $P(BC)+P(CB)=\\frac{5}{8}\\cdot\\frac{3}{7}+\\frac{3}{8}\\cdot\\frac{5}{7}=\\frac{30}{56}=\\frac{15}{28}$.'
     }
   ]
 }
