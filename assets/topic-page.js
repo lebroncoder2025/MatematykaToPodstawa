@@ -122,7 +122,7 @@
     }
     const podstawowe = orderPodstawowy.map(topicLink).join("");
     const rozszerzone = orderRozszerzony.map(topicLink).join("");
-    return `<div class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Podstawa</div>${podstawowe}<div class="px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-widest text-rose-400 border-t border-slate-100 mt-1">Rozszerzenie</div>${rozszerzone}`;
+    return `<div class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Podstawa</div>${podstawowe}<div data-level="rozszerzony" class="px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-widest text-rose-400 border-t border-slate-100 mt-1">Rozszerzenie</div><div data-level="rozszerzony">${rozszerzone}</div>`;
   }
 
   /* ─── SVG Diagrams ─── */
@@ -718,8 +718,8 @@
               </a>`;
             }).join("")}
           </div>
-          <p class="text-xs font-semibold uppercase tracking-wider text-rose-400 mb-2">Rozszerzenie</p>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+          <p class="text-xs font-semibold uppercase tracking-wider text-rose-400 mb-2" data-level="rozszerzony">Rozszerzenie</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3" data-level="rozszerzony">
             ${orderRozszerzony.map(k => {
               const t = window.MATURA_TOPICS[k];
               if (!t) return "";
@@ -825,6 +825,12 @@
 
     // Render math
     renderMath(document.body);
+
+    // Re-apply level filter after dynamic render (switcher may have run before nav existed)
+    if (window.maturaLevel) {
+      window.maturaLevel.apply();
+      if (window.maturaLevel.reinit) window.maturaLevel.reinit();
+    }
   }
 
   /* Expose */

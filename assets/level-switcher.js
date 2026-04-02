@@ -28,7 +28,9 @@
     try { localStorage.setItem(STORAGE_KEY, lvl); } catch (e) {}
     applyLevel(lvl);
     updateToggleUI(lvl);
+    // Dispatch on both window and document for compatibility
     window.dispatchEvent(new CustomEvent('matura-level-change', { detail: { level: lvl } }));
+    document.dispatchEvent(new CustomEvent('matura-level-change', { detail: { level: lvl } }));
   }
 
   function applyLevel(lvl) {
@@ -49,8 +51,9 @@
 
   /* ── Toggle injected into navbar ── */
   function createToggle() {
+    if (document.getElementById('levelSwitcherWrap')) return true; // already injected
     var nav = document.querySelector('nav');
-    if (!nav) return;
+    if (!nav) return false;
 
     // Build the toggle: a pill-shaped switch
     var wrap = document.createElement('div');
@@ -83,14 +86,14 @@
         var logoWrap = logoLink.closest('.flex.items-center') || logoLink.parentNode;
         logoWrap.style.flexShrink = '0';
         var desktopWrap = document.createElement('div');
-        desktopWrap.className = 'hidden md:flex items-center';
+        desktopWrap.className = 'flex items-center';
         desktopWrap.style.marginLeft = '12px';
         desktopWrap.appendChild(wrap);
         logoWrap.after(desktopWrap);
       }
     }
 
-    // Mobile: add toggle to mobile nav
+    // Mobile: add toggle to mobile nav if it exists
     var mobileNav = document.getElementById('mobileNav');
     if (mobileNav) {
       var mWrap = document.createElement('div');
@@ -112,6 +115,7 @@
       var firstChild = mobileNav.querySelector('.flex.items-center.justify-between');
       if (firstChild) { firstChild.after(mWrap); } else { mobileNav.prepend(mWrap); }
     }
+    return true;
   }
 
   function updateToggleUI(lvl) {
@@ -153,7 +157,8 @@
     get: getLevel,
     set: setLevel,
     apply: function () { applyLevel(getLevel()); },
-    LEVELS: LEVELS
+    LEVELS: LEVELS,
+    reinit: init  // allow topic-page.js to re-trigger after rendering nav
   };
 
   // Initialize on DOM ready
@@ -163,11 +168,29 @@
     init();
   }
 
+  var toggleInjected = false;
+
   function init() {
     var lvl = getLevel();
-    createToggle();
+    if (!toggleInjected) {
+      toggleInjected = createToggle();
+    }
     updateToggleUI(lvl);
     applyLevel(lvl);
+
+    // If nav wasn't found (e.g. topic-page.js hasn't rendered yet), retry
+    if (!toggleInjected) {
+      var retries = 0;
+      var retryTimer = setInterval(function () {
+        retries++;
+        if (document.querySelector('nav') && !toggleInjected) {
+          toggleInjected = createToggle();
+          updateToggleUI(getLevel());
+          applyLevel(getLevel());
+        }
+        if (toggleInjected || retries > 20) clearInterval(retryTimer);
+      }, 200);
+    }
   }
 
   // Apply immediately for elements already in DOM

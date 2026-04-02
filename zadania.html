@@ -961,7 +961,7 @@ function buildGrid() {
     var bookClass = isBookmarked(t.id) ? ' active-book' : '';
     var bookIcon = isBookmarked(t.id) ? 'fa-solid' : 'fa-regular';
     var bookLabel = isBookmarked(t.id) ? 'W ulubionych' : 'Dodaj do ulubionych';
-    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+normalizeText(t.title)+'" data-search="'+searchPayload.replace(/"/g,'&quot;')+'" data-diff="'+t.diff+'" data-level="'+(t.level||'P')+'" data-solved="'+(isSolved(t.id)?'1':'0')+'" data-bookmarked="'+(isBookmarked(t.id)?'1':'0')+'" data-hasnote="'+(loadTaskNote(t.id)?'1':'0')+'">' +
+    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+normalizeText(t.title)+'" data-search="'+searchPayload.replace(/"/g,'&quot;')+'" data-diff="'+t.diff+'" data-level="'+(t.level==='R'?'rozszerzony':'podstawowy')+'" data-solved="'+(isSolved(t.id)?'1':'0')+'" data-bookmarked="'+(isBookmarked(t.id)?'1':'0')+'" data-hasnote="'+(loadTaskNote(t.id)?'1':'0')+'">' +
       '<button class="toggle-btn" onclick="toggleCard(this)">'+
         '<div class="flex items-start gap-3 flex-1 text-left">'+
           '<div class="flex-shrink-0 w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 font-black text-sm mt-0.5">'+t.id+'</div>'+
@@ -1073,7 +1073,7 @@ function applyFilters(q) {
     var unsolvedMatch = !onlyUnsolved || card.dataset.solved !== '1';
     var noteMatch = !onlyWithNote || card.dataset.hasnote === '1';
     var diffMatch = !diffFilter || card.dataset.diff === String(diffFilter);
-    var levelMatch = lvl === 'rozszerzony' || card.dataset.level !== 'R';
+    var levelMatch = lvl === 'rozszerzony' || card.dataset.level !== 'rozszerzony';
     var show = catMatch && searchMatch && bookMatch && unsolvedMatch && noteMatch && diffMatch && levelMatch;
     card.classList.toggle('hidden-task', !show);
     if (show) visible++;
