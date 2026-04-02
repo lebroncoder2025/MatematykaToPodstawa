@@ -628,6 +628,11 @@
               <span class="hidden sm:inline">Arkusze</span>
             </a>
 
+            <a href="../fiszki.html" class="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-slate-100 transition text-sm font-semibold text-slate-700">
+              <i class="fa-solid fa-layer-group text-sm text-indigo-500"></i>
+              <span class="hidden sm:inline">Fiszki</span>
+            </a>
+
             <a href="../quiz.html" class="flex items-center gap-1 px-3 py-2 rounded-lg hover:bg-slate-100 transition text-sm font-semibold text-slate-700">
               <i class="fa-solid fa-brain text-sm"></i>
               <span class="hidden sm:inline">Quiz</span>

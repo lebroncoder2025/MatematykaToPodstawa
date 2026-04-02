@@ -958,6 +958,27 @@ window.MATURA_TOPICS = {
         { math: "Odpowiedź: po 5 pełnych latach", comment: "Sprawdzenie: 0,85⁴ ≈ 0,522 > 0,5; 0,85⁵ ≈ 0,444 < 0,5. Rzeczywiście po 5 latach samochód jest wart mniej niż połowę ceny." }
       ],
       answer: "Po $5$ pełnych latach"
+    },
+    {
+      level: "łatwe",
+      q: "Oblicz sumę nieskończonego ciągu geometrycznego: $a_1 = 9$, $q = \\frac{1}{3}$.",
+      hint: "Wzór na sumę nieskończoną: $S = \\frac{a_1}{1-q}$ (stosujemy tylko dla $|q| < 1$).",
+      steps: [
+        { math: "$|q| = \\frac{1}{3} < 1$ — szereg zbieżny ✓", comment: "Warunek zbieżności: |q| < 1. Gdyby |q| ≥ 1, ciąg nie miałby sumy." },
+        { math: "$S = \\frac{a_1}{1 - q} = \\frac{9}{1 - \\frac{1}{3}} = \\frac{9}{\\frac{2}{3}} = 9 \\cdot \\frac{3}{2} = \\frac{27}{2}$", comment: "Podstawiamy do wzoru: 9 ÷ (2/3) = 9 × 3/2 = 27/2 = 13,5." }
+      ],
+      answer: "$S = \\frac{27}{2} = 13{,}5$"
+    },
+    {
+      level: "średnie",
+      q: "Ciąg arytmetyczny: $a_1 = 2$, $a_5 = 14$. Oblicz sumę $S_{10}$.",
+      hint: "Znajdź różnicę $r$ ze wzoru na 5. wyraz, potem użyj $S_n = \\frac{n(a_1 + a_n)}{2}$.",
+      steps: [
+        { math: "$a_5 = a_1 + 4r \\implies 14 = 2 + 4r \\implies r = 3$", comment: "Z ogólnego wzoru $a_n = a_1 + (n-1)r$ dla $n=5$." },
+        { math: "$a_{10} = a_1 + 9r = 2 + 9 \\cdot 3 = 29$", comment: "Wyliczamy 10. wyraz potrzebny do wzoru na sumę." },
+        { math: "$S_{10} = \\frac{10 \\cdot (a_1 + a_{10})}{2} = \\frac{10 \\cdot (2 + 29)}{2} = \\frac{310}{2} = 155$", comment: "Wzór Gaussa na sumę ciągu arytmetycznego: n razy średnia pierwszego i ostatniego wyrazu." }
+      ],
+      answer: "$S_{10} = 155$"
     }
   ]
 },
@@ -1146,6 +1167,27 @@ window.MATURA_TOPICS = {
         { math: "$= \\frac{\\sqrt{6}}{4} + \\frac{\\sqrt{2}}{4} = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$", comment: "Mnożymy: √2·√3 = √6, √2·1 = √2. Sprowadzamy do wspólnego mianownika 4. Wynik ≈ 0,966 – bliski 1, co ma sens, bo 75° jest bliskie 90°." }
       ],
       answer: "$\\sin 75° = \\frac{\\sqrt{6} + \\sqrt{2}}{4}$"
+    },
+    {
+      level: "średnie",
+      q: "Oblicz pole trójkąta o bokach $a = 6$, $b = 8$ i kącie $C = 30°$ między nimi.",
+      hint: "Bezpośredni wzór: $P = \\frac{1}{2}ab\\sin C$.",
+      steps: [
+        { math: "$P = \\frac{1}{2} \\cdot 6 \\cdot 8 \\cdot \\sin 30°$", comment: "Stosujemy wzór na pole trójkąta — potrzebujemy dwóch boków i kąta między nimi." },
+        { math: "$P = \\frac{1}{2} \\cdot 48 \\cdot \\frac{1}{2} = 12$", comment: "sin 30° = 1/2. Obliczamy: 1/2 × 48 × 1/2 = 12. Zauważ, że gdyby C = 90°, byłoby P = 24 — kąt prosty daje maksimalne pole przy tych samych bokach." }
+      ],
+      answer: "$P = 12$"
+    },
+    {
+      level: "trudne",
+      q: "Rozwiąż równanie $\\sin x = \\frac{\\sqrt{3}}{2}$ dla $x \\in [0°, 360°]$.",
+      hint: "Pierwsza wartość: $x_1 = 60°$ (wartość szczególna). Drugą znajdź ze wzoru $x_2 = 180° - x_1$.",
+      steps: [
+        { math: "$x_1 = 60°$", comment: "Z tablicy wartości szczególnych: sin 60° = √3/2." },
+        { math: "$x_2 = 180° - 60° = 120°$", comment: "Wzór redukcyjny: sin(180°−α) = sin α. Sinus jest dodatni w I i II ćwiartce." },
+        { math: "Dla $x \\in (180°, 360°)$: $\\sin x \\leq 0$, więc brak dalszych rozwiązań.", comment: "W III i IV ćwiartce (kąty 180°–360°) sinus jest niedodatni, a szukamy wartości √3/2 > 0." }
+      ],
+      answer: "$x \\in \\{60°, 120°\\}$"
     }
   ]
 },
@@ -1332,6 +1374,26 @@ window.MATURA_TOPICS = {
         { math: "$P = \\frac{(12 + 4) \\cdot 4\\sqrt{3}}{2} = \\frac{16 \\cdot 4\\sqrt{3}}{2} = 32\\sqrt{3}$", comment: "Stosujemy wzór na pole trapezu. 16 · 4√3 / 2 = 32√3 ≈ 55,4." }
       ],
       answer: "$l = 8$, $P = 32\\sqrt{3}$"
+    },
+    {
+      level: "łatwe",
+      q: "Okrąg ma promień $r = 5$. Oblicz jego pole i obwód.",
+      hint: "Pola: $P = \\pi r^2$; Obwód: $C = 2\\pi r$.",
+      steps: [
+        { math: "$P = \\pi r^2 = \\pi \\cdot 25 = 25\\pi \\approx 78{,}5$", comment: "Pole koła." },
+        { math: "$C = 2\\pi r = 10\\pi \\approx 31{,}4$", comment: "Długość okręgu (obwód koła)." }
+      ],
+      answer: "$P = 25\\pi$, $C = 10\\pi$"
+    },
+    {
+      level: "średnie",
+      q: "Prostokąt ma wymiary $6\\times 8$. Oblicz długość przekątnej i promień okręgu opisanego.",
+      hint: "Przekątna: Pitagoras. Okrąg opisany na prostokącie ma promień $R = \\frac{d}{2}$.",
+      steps: [
+        { math: "$d = \\sqrt{6^2 + 8^2} = \\sqrt{36 + 64} = \\sqrt{100} = 10$", comment: "Przekątna prostokąta z twierdzenia Pitagorasa. Trójkąt 6-8-10 (= 2 × 3-4-5)." },
+        { math: "$R = \\frac{d}{2} = 5$", comment: "Na prostokącie można zawsze opisać okrąg; jego środek to punkt przecięcia przekątnych, a promień to połowa przekątnej." }
+      ],
+      answer: "$d = 10$, $R = 5$"
     }
   ]
 },
@@ -1503,6 +1565,25 @@ window.MATURA_TOPICS = {
         { math: "$y = -x + 7$", comment: "Symetralna odcinka AB. Każdy punkt na tej prostej jest jednakowo odległy od A i B. Sprawdzenie: |SA| = √(4+1) = √5, |SB| = √(4+4) = √8... a, nie – |SA| = √((4-2)²+(3-1)²) = √8, |SB| = √((4-6)²+(3-5)²) = √8 ✓." }
       ],
       answer: "$y = -x + 7$"
+    },
+    {
+      level: "łatwe",
+      q: "Czy punkt $P(3, -1)$ leży na prostej $2x - y - 7 = 0$?",
+      hint: "Podstaw współrzędne punktu do równania prostej.",
+      steps: [
+        { math: "$2 \\cdot 3 - (-1) - 7 = 6 + 1 - 7 = 0$ ✓", comment: "Lewa strona równa zero — punkt spełnia równanie prostej." }
+      ],
+      answer: "Tak, $P$ leży na prostej"
+    },
+    {
+      level: "średnie",
+      q: "Znajdź równanie okręgu o środku $S(2, -3)$ i promieniu $r = 5$.",
+      hint: "Równanie okręgu: $(x - x_S)^2 + (y - y_S)^2 = r^2$.",
+      steps: [
+        { math: "$(x - 2)^2 + (y - (-3))^2 = 5^2$", comment: "Podstawiamy: środek $(2, -3)$, promień $5$." },
+        { math: "$(x - 2)^2 + (y + 3)^2 = 25$", comment: "Upraszczamy. Ten okrąg przechodzi przez wszystkie punkty odległe o 5 od $S(2,-3)$." }
+      ],
+      answer: "$(x-2)^2 + (y+3)^2 = 25$"
     }
   ]
 },
@@ -1992,6 +2073,39 @@ window.MATURA_TOPICS["granice"] = {
         { math: "$\\lim = \\frac{1 + 0}{2} = \\frac{1}{2}$", comment: "Granica wynosi $\\frac{1}{2}$." }
       ],
       answer: "$\\frac{1}{2}$"
+    },
+    {
+      level: "łatwe",
+      q: "Oblicz $\\displaystyle\\lim_{x\\to 0} \\frac{\\sin 5x}{x}$.",
+      hint: "Wzór: $\\lim_{x\\to 0}\\frac{\\sin(ax)}{x} = a$.",
+      steps: [
+        { math: "$\\frac{\\sin 5x}{x} = 5 \\cdot \\frac{\\sin 5x}{5x}$", comment: "Mnożymy i dzielimy przez 5, aby uzyskać klasyczną granicę $\\frac{\\sin t}{t}$ dla $t = 5x$." },
+        { math: "$\\lim_{x\\to 0} \\frac{\\sin 5x}{5x} = 1$", comment: "Klasyczna granica trygonometryczna: $\\lim_{t\\to 0}\\frac{\\sin t}{t} = 1$." },
+        { math: "$\\lim_{x\\to 0} \\frac{\\sin 5x}{x} = 5 \\cdot 1 = 5$", comment: "Wynik: 5." }
+      ],
+      answer: "$5$"
+    },
+    {
+      level: "średnie",
+      q: "Oblicz $\\displaystyle\\lim_{x\\to 1} \\frac{x^3 - 1}{x - 1}$.",
+      hint: "Forma $\\frac{0}{0}$. Rozłóż $x^3 - 1 = (x-1)(x^2+x+1)$.",
+      steps: [
+        { math: "$x^3 - 1 = (x-1)(x^2 + x + 1)$", comment: "Wzór na różnicę sześcianów: $a^3 - b^3 = (a-b)(a^2+ab+b^2)$." },
+        { math: "$\\frac{x^3-1}{x-1} = x^2 + x + 1 \\quad (x \\neq 1)$", comment: "Skracamy czynnik $(x-1)$. Możemy to zrobić, bo granica to zachowanie w POBLIŻU punktu, nie w samym punkcie." },
+        { math: "$\\lim_{x\\to 1}(x^2+x+1) = 1 + 1 + 1 = 3$", comment: "Teraz podstawiamy bezpośrednio $x = 1$." }
+      ],
+      answer: "$3$"
+    },
+    {
+      level: "trudne",
+      q: "Zbadaj ciągłość funkcji $f(x) = \\begin{cases} \\dfrac{\\sin x}{x} & x \\neq 0 \\\\ 1 & x = 0 \\end{cases}$ w punkcie $x=0$.",
+      hint: "Ciągłość wymaga: $\\lim_{x\\to 0}f(x) = f(0)$.",
+      steps: [
+        { math: "$\\lim_{x\\to 0} \\frac{\\sin x}{x} = 1$", comment: "To fundamentalna granica trygonometryczna." },
+        { math: "$f(0) = 1$", comment: "Wartość funkcji zadana bezpośrednio w definicji." },
+        { math: "$\\lim_{x\\to 0} f(x) = 1 = f(0)$ ✓", comment: "Warunek ciągłości spełniony: granica = wartość funkcji. Funkcja $f$ jest ciągła w $x = 0$." }
+      ],
+      answer: "$f$ jest ciągła w $x = 0$"
     }
   ]
 };
@@ -2129,6 +2243,38 @@ window.MATURA_TOPICS["pochodne"] = {
         { math: "$V(2) = 2 \\cdot 8^2 = 128$ cm³", comment: "Sprawdzamy, że $V''(2) < 0$ (maksimum) — lub: $V(0)=0$, $V(6)=0$, $V(2)=128 > 0$." }
       ],
       answer: "Wycięcie $x = 2$ cm, $V_{\\max} = 128$ cm³"
+    },
+    {
+      level: "łatwe",
+      q: "Oblicz pochodną $f(x) = e^{2x}$.",
+      hint: "Złożenie: $(e^{u})' = e^u \\cdot u'$.",
+      steps: [
+        { math: "$f'(x) = e^{2x} \\cdot (2x)' = e^{2x} \\cdot 2 = 2e^{2x}$", comment: "Reguła łańcuchowa dla złożenia $e^{u(x)}$: pochodna zewnętrzna $e^u$ razy pochodna wewnętrzna $u' = 2$." }
+      ],
+      answer: "$f'(x) = 2e^{2x}$"
+    },
+    {
+      level: "średnie",
+      q: "Oblicz pochodną $f(x) = x^2 \\ln x$ (dla $x > 0$).",
+      hint: "Reguła Leibniza (iloczynu): $(uv)' = u'v + uv'$.",
+      steps: [
+        { math: "$f'(x) = (x^2)' \\cdot \\ln x + x^2 \\cdot (\\ln x)'$", comment: "Stosujemy regułę iloczynu: $u = x^2$, $v = \\ln x$." },
+        { math: "$= 2x \\cdot \\ln x + x^2 \\cdot \\frac{1}{x}$", comment: "$(x^2)' = 2x$, $(\\ln x)' = \\frac{1}{x}$." },
+        { math: "$= 2x \\ln x + x$", comment: "Upraszczamy: $x^2 \\cdot \\frac{1}{x} = x$." }
+      ],
+      answer: "$f'(x) = 2x\\ln x + x$"
+    },
+    {
+      level: "trudne",
+      q: "(Matura) Funkcja $f(x) = x^2 e^{-x}$ jest określona na $\\mathbb{R}$. Znajdź jej maksimum lokalne.",
+      hint: "Oblicz $f'(x)$, rozwiąż $f'(x) = 0$, sprawdź zmianę znaku pochodnej.",
+      steps: [
+        { math: "$f'(x) = 2x \\cdot e^{-x} + x^2 \\cdot (-e^{-x}) = e^{-x}(2x - x^2) = xe^{-x}(2 - x)$", comment: "Reguła iloczynu dla $x^2$ i $e^{-x}$. Wyciągamy $e^{-x} > 0$ przed nawias." },
+        { math: "$f'(x) = 0 \\iff x = 0 \\text{ lub } x = 2$", comment: "Punkty krytyczne: $e^{-x} > 0$ zawsze, więc $x(2-x) = 0$." },
+        { math: "$f'(x) > 0$ dla $x \\in (0, 2)$ (funkcja rośnie), $f'(x) < 0$ dla $x > 2$ (maleje)", comment: "Sprawdzamy znak $f'$. Przy $x = 2$ zmiana $+ \\to -$ → maksimum lokalne." },
+        { math: "$f(2) = 4e^{-2} = \\frac{4}{e^2}$", comment: "Wartość maksimum. Zapamiętaj: zawsze podaj WHERE (x=2) i WHAT (wartość)." }
+      ],
+      answer: "Maks. lok. w $x = 2$, $f(2) = \\frac{4}{e^2}$"
     }
   ]
 };
@@ -2230,6 +2376,39 @@ window.MATURA_TOPICS["wielomiany"] = {
         { math: "$W(x) = 2(x-2)\\left(x-\\frac{1}{2}\\right)(x+3) = (x-2)(2x-1)(x+3)$", comment: "Rozkład pełny." }
       ],
       answer: "$W(x) = (x-2)(2x-1)(x+3)$"
+    },
+    {
+      level: "łatwe",
+      q: "Wyznacz resztę z dzielenia $W(x) = x^4 - 2x^2 + 3$ przez $(x - 2)$.",
+      hint: "Twierdzenie Bezout: reszta $= W(2)$.",
+      steps: [
+        { math: "$W(2) = 2^4 - 2 \\cdot 2^2 + 3 = 16 - 8 + 3 = 11$", comment: "Podstawiamy $x = 2$ do wielomianu. Twierdzenie Bezout pozwala uniknąć długiego dzielenia." }
+      ],
+      answer: "Reszta $= 11$"
+    },
+    {
+      level: "średnie",
+      q: "Znajdź $a$ i $b$, jeśli $W(x) = x^3 + ax + b$ ma pierwiastki $x = 1$ i $x = -2$.",
+      hint: "$W(1) = 0$ i $W(-2) = 0$ dają układ dwóch równań.",
+      steps: [
+        { math: "$W(1) = 1 + a + b = 0 \\implies a + b = -1$", comment: "Pierwsze równanie z warunku $W(1) = 0$." },
+        { math: "$W(-2) = -8 + (-2)a + b = 0 \\implies -2a + b = 8$", comment: "Drugie równanie z warunku $W(-2) = 0$." },
+        { math: "Odejmujemy równania: $3a = -9 \\implies a = -3$", comment: "Eliminacja $b$ przez odjęcie." },
+        { math: "$b = -1 - a = -1 + 3 = 2$", comment: "Z pierwszego równania." }
+      ],
+      answer: "$a = -3,\\ b = 2$"
+    },
+    {
+      level: "trudne",
+      q: "Wielomian $W(x) = x^4 - 5x^2 + 4$. Wyznacz wszystkie pierwiastki rzeczywiste.",
+      hint: "Podstawienie $t = x^2$ zamienia go w trójmian kwadratowy.",
+      steps: [
+        { math: "$t = x^2$: $t^2 - 5t + 4 = 0$", comment: "Klasyczne podstawienie dla trójmianu wzajemnego lub biquadratic." },
+        { math: "$\\Delta = 25 - 16 = 9,\\quad t_1 = \\frac{5+3}{2} = 4,\\quad t_2 = \\frac{5-3}{2} = 1$", comment: "Dwa pierwiastki dla $t$." },
+        { math: "$x^2 = 4 \\implies x = \\pm 2$ oraz $x^2 = 1 \\implies x = \\pm 1$", comment: "Wracamy do zmiennej $x$. Łącznie 4 pierwiastki rzeczywiste." },
+        { math: "$W(x) = (x-2)(x+2)(x-1)(x+1) = (x^2-4)(x^2-1)$", comment: "Rozkład pełny na $\\mathbb{R}$." }
+      ],
+      answer: "$x \\in \\{-2, -1, 1, 2\\}$"
     }
   ]
 };
@@ -2323,6 +2502,31 @@ window.MATURA_TOPICS["dowodzenie"] = {
         { math: "$q^2$ jest parzyste $\\implies q$ jest parzyste — SPRZECZNOŚĆ z $\\gcd(p,q)=1$", comment: "Oba parzyste, ale założyliśmy, że ułamek nieskracalny. Sprzeczność! □" }
       ],
       answer: "$\\sqrt{2} \\notin \\mathbb{Q}$. □"
+    },
+    {
+      level: "średnie",
+      q: "Udowodnij przez indukcję: $1^2 + 2^2 + \\ldots + n^2 = \\frac{n(n+1)(2n+1)}{6}$.",
+      hint: "Baza $n=1$: sprawdź. Krok: dodaj $(k+1)^2$ do założenia indukcyjnego i uprość.",
+      steps: [
+        { math: "Baza ($n=1$): Lewa $= 1^2 = 1$, Prawa $= \\frac{1 \\cdot 2 \\cdot 3}{6} = 1$ ✓", comment: "Twierdzenie prawdziwe dla $n=1$." },
+        { math: "Założenie: $\\sum_{i=1}^k i^2 = \\frac{k(k+1)(2k+1)}{6}$", comment: "Hipoteza indukcyjna — zakładamy prawdziwość dla pewnego $k \\geq 1$." },
+        { math: "$\\sum_{i=1}^{k+1} i^2 = \\frac{k(k+1)(2k+1)}{6} + (k+1)^2 = \\frac{k(k+1)(2k+1) + 6(k+1)^2}{6}$", comment: "Dodajemy $(k+1)^2$ i sprowadzamy do wspólnego mianownika." },
+        { math: "$= \\frac{(k+1)\\bigl[k(2k+1) + 6(k+1)\\bigr]}{6} = \\frac{(k+1)(2k^2+7k+6)}{6}$", comment: "Wyciągamy $(k+1)$ przed nawias." },
+        { math: "$= \\frac{(k+1)(k+2)(2k+3)}{6}$", comment: "Rozkładamy $2k^2+7k+6 = (k+2)(2k+3)$. To dokładnie wzór dla $n=k+1$: $\\frac{(k+1)((k+1)+1)(2(k+1)+1)}{6}$. □" }
+      ],
+      answer: "Dowód przez indukcję zakończony. □"
+    },
+    {
+      level: "trudne",
+      q: "Udowodnij, że dla każdej liczby całkowitej $n$ wyrażenie $n^2 + n$ jest parzyste.",
+      hint: "Rozłóż $n^2 + n = n(n+1)$ i rozpatrz dwa przypadki: $n$ parzyste / nieparzyste.",
+      steps: [
+        { math: "$n^2 + n = n(n+1)$", comment: "Rozkład na czynniki — iloczyn liczby i jej następnika." },
+        { math: "Przypadek 1 — $n$ parzyste: $n = 2k$, więc $n(n+1) = 2k(2k+1)$ — parzyste ✓", comment: "Wielokrotność 2." },
+        { math: "Przypadek 2 — $n$ nieparzyste: $n+1$ parzyste, $n+1 = 2k$, więc $n(n+1) = n \\cdot 2k$ — parzyste ✓", comment: "Dwóch kolejnych: zawsze jedno jest parzyste." },
+        { math: "W każdym przypadku $n(n+1)$ jest wielokrotnością 2. □", comment: "Dowód przez wyczerpanie przypadków (proof by exhaustion)." }
+      ],
+      answer: "$n^2 + n$ jest parzyste dla każdego $n \\in \\mathbb{Z}$. □"
     }
   ]
 };
@@ -2430,6 +2634,41 @@ window.MATURA_TOPICS["wektory"] = {
         { math: "$S = \\frac{1}{2}|-27| = \\frac{27}{2} = 13{,}5$", comment: "Pole trójkąta." }
       ],
       answer: "$S = \\frac{27}{2} = 13{,}5$"
+    },
+    {
+      level: "łatwe",
+      q: "Wektory $\\vec{u} = [k, 4]$ i $\\vec{v} = [3, 6]$ są równoległe. Znajdź $k$.",
+      hint: "Wektory równoległe: $\\frac{u_1}{v_1} = \\frac{u_2}{v_2}$ (lub wyznacznik = 0).",
+      steps: [
+        { math: "$\\frac{k}{3} = \\frac{4}{6} = \\frac{2}{3}$", comment: "Warunek równoległości: proporcjonalność współrzędnych." },
+        { math: "$k = 3 \\cdot \\frac{2}{3} = 2$", comment: "Wynik." }
+      ],
+      answer: "$k = 2$"
+    },
+    {
+      level: "średnie",
+      q: "Dane punkty $A(1,0)$, $B(5,0)$, $C(3,4)$. Oblicz $\\cos(\\angle BAC)$.",
+      hint: "Kąt $\\angle BAC$ leży między wektorami $\\vec{AB}$ i $\\vec{AC}$.",
+      steps: [
+        { math: "$\\vec{AB} = [4, 0],\\quad \\vec{AC} = [2, 4]$", comment: "Obliczamy wektory z wierzchołka $A$." },
+        { math: "$\\vec{AB} \\cdot \\vec{AC} = 4 \\cdot 2 + 0 \\cdot 4 = 8$", comment: "Iloczyn skalarny." },
+        { math: "$|\\vec{AB}| = 4,\\quad |\\vec{AC}| = \\sqrt{4 + 16} = \\sqrt{20} = 2\\sqrt{5}$", comment: "Długości wektorów." },
+        { math: "$\\cos(\\angle BAC) = \\frac{8}{4 \\cdot 2\\sqrt{5}} = \\frac{8}{8\\sqrt{5}} = \\frac{1}{\\sqrt{5}} = \\frac{\\sqrt{5}}{5}$", comment: "Skracamy i racjonalizujemy mianownik." }
+      ],
+      answer: "$\\cos(\\angle BAC) = \\frac{\\sqrt{5}}{5}$"
+    },
+    {
+      level: "trudne",
+      q: "Wyraź $\\vec{w} = [7, 1]$ jako kombinację liniową $\\vec{u} = [2, 1]$ i $\\vec{v} = [1, -1]$.",
+      hint: "Rozwiąż układ: $\\alpha[2,1] + \\beta[1,-1] = [7,1]$ względem $\\alpha, \\beta$.",
+      steps: [
+        { math: "$2\\alpha + \\beta = 7 \\quad \\text{(I)}$", comment: "Pierwsza współrzędna." },
+        { math: "$\\alpha - \\beta = 1 \\quad \\text{(II)}$", comment: "Druga współrzędna." },
+        { math: "I + II: $3\\alpha = 8 \\implies \\alpha = \\frac{8}{3}$", comment: "Dodajemy oba równania." },
+        { math: "$\\beta = \\alpha - 1 = \\frac{8}{3} - 1 = \\frac{5}{3}$", comment: "Z równania (II)." },
+        { math: "$\\vec{w} = \\frac{8}{3}\\vec{u} + \\frac{5}{3}\\vec{v}$", comment: "Kombinacja liniowa istnieje — wektory $\\vec{u}, \\vec{v}$ są bazą $\\mathbb{R}^2$." }
+      ],
+      answer: "$\\vec{w} = \\frac{8}{3}\\vec{u} + \\frac{5}{3}\\vec{v}$"
     }
   ]
 };

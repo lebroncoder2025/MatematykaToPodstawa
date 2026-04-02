@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiszki Maturalne – Matematyka to Podstawa</title>
+  <meta name="description" content="Ucz się wzorów matematycznych za pomocą fiszek. Spaced repetition, KaTeX, 120+ kart dla matury podstawowej i rozszerzonej.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/level-switcher.js"></script>
+  <script src="assets/dark-mode.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]})"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Card flip */
+    .card-scene { perspective: 1200px; }
+    .card-body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.55s cubic-bezier(.4,0,.2,1);
+    }
+    .card-body.flipped { transform: rotateY(180deg); }
+    .card-face {
+      position: absolute;
+      inset: 0;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    .card-front {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #3b82f6 100%);
+      color: white;
+    }
+    .card-back {
+      background: linear-gradient(135deg, #064e3b 0%, #065f46 60%, #047857 100%);
+      color: white;
+      transform: rotateY(180deg);
+    }
+    .card-back.extra-dark {
+      background: linear-gradient(135deg, #581c87 0%, #7c3aed 60%, #8b5cf6 100%);
+    }
+
+    /* Progress bar */
+    .progress-fill { transition: width 0.4s ease; }
+
+    /* Topic pill active */
+    .topic-pill.active {
+      background: #2563eb;
+      color: white;
+    }
+    .dark .topic-pill.active {
+      background: #3b82f6;
+    }
+    .topic-pill { cursor: pointer; }
+
+    /* Keyboard hint */
+    kbd {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 4px;
+      border: 1px solid currentColor;
+      font-size: 0.75rem;
+      opacity: 0.7;
+    }
+
+    /* Flip click area */
+    .card-scene { cursor: pointer; user-select: none; }
+
+    /* Animate in new card */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px) scale(0.97); }
+      to   { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .card-animate { animation: slideIn 0.25s ease; }
+
+    /* Stats table */
+    .stat-row:nth-child(even) { background: rgba(59,130,246,.04); }
+
+    /* Dark adjustments */
+    .dark .topic-pill { background: #1e293b; color: #cbd5e1; border-color: #334155; }
+    .dark .topic-pill:hover { background: #334155; }
+    .dark .glass-card { background: rgba(30,41,59,.85); }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<!-- NAV -->
+<nav class="sticky top-0 z-50 glass-nav shadow-sm border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex items-center">
+        <a href="index.html" class="flex items-center space-x-2">
+          <i class="fas fa-calculator text-blue-600 text-2xl"></i>
+          <span class="text-xl font-bold text-gray-800">Matematyka to <span class="text-blue-600">Podstawa</span></span>
+        </a>
+      </div>
+      <div class="hidden md:flex items-center space-x-6">
+        <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Strona Główna</a>
+        <a href="kurs.html" class="text-gray-600 hover:text-blue-600 transition font-semibold"><i class="fa-solid fa-graduation-cap mr-1 text-purple-500"></i>Kurs</a>
+        <a href="zadania.html" class="text-gray-600 hover:text-blue-600 transition font-semibold"><i class="fa-solid fa-pen-to-square mr-1 text-emerald-500"></i>Zadania</a>
+        <a href="wzory.html" class="text-gray-600 hover:text-blue-600 transition font-semibold"><i class="fa-solid fa-square-root-variable mr-1 text-cyan-500"></i>Wzory</a>
+        <a href="quiz.html" class="text-gray-600 hover:text-blue-600 transition">Quiz</a>
+        <a href="fiszki.html" class="text-blue-600 font-semibold"><i class="fa-solid fa-layer-group mr-1"></i>Fiszki</a>
+        <a href="postep.html" class="text-gray-600 hover:text-blue-600 transition">Postęp</a>
+      </div>
+      <div class="md:hidden flex items-center" id="hamburger" style="cursor:pointer">
+        <i class="fas fa-bars text-gray-700 text-xl"></i>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav-overlay" id="mobileOverlay"></div>
+<div class="mobile-nav" id="mobileNav">
+  <div class="flex items-center justify-between mb-6">
+    <span class="text-lg font-bold text-gray-800"><i class="fas fa-calculator text-blue-600 mr-2"></i>Matematyka to Podstawa</span>
+    <button id="closeMobileNav" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+  </div>
+  <a href="index.html">Strona Główna</a>
+  <a href="kurs.html"><i class="fa-solid fa-graduation-cap text-purple-500 mr-2 w-5 text-center"></i>Kurs</a>
+  <a href="zadania.html"><i class="fa-solid fa-pen-to-square text-emerald-500 mr-2 w-5 text-center"></i>Zadania</a>
+  <a href="wzory.html"><i class="fa-solid fa-square-root-variable text-cyan-500 mr-2 w-5 text-center"></i>Wzory</a>
+  <a href="quiz.html">Quiz diagnostyczny</a>
+  <a href="fiszki.html" class="text-blue-600 font-semibold"><i class="fa-solid fa-layer-group text-blue-500 mr-2 w-5 text-center"></i>Fiszki</a>
+  <a href="postep.html">Postęp</a>
+</div>
+
+<!-- HERO HEADER -->
+<div class="bg-gradient-to-r from-blue-900 via-blue-700 to-indigo-600 text-white py-10 px-4">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="inline-flex items-center gap-2 bg-white/10 rounded-full px-4 py-1 text-sm mb-4">
+      <i class="fas fa-layer-group"></i>
+      <span>127 fiszek · 15 tematów</span>
+    </div>
+    <h1 class="text-3xl md:text-4xl font-extrabold mb-3">Fiszki Maturalne</h1>
+    <p class="text-blue-100 max-w-xl mx-auto text-sm md:text-base">Kliknij kartę aby obrócić. <kbd>Spacja</kbd> = obróć &nbsp;|&nbsp; <kbd>→</kbd> = wiem &nbsp;|&nbsp; <kbd>←</kbd> = powtórzę</p>
+  </div>
+</div>
+
+<div class="max-w-4xl mx-auto px-4 py-8">
+
+  <!-- FILTER ROW -->
+  <div class="mb-6">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="text-sm font-semibold text-gray-500 uppercase tracking-wide">Poziom:</span>
+      <button id="btnP" onclick="setLevel('podstawowy')" class="text-sm font-semibold px-4 py-1.5 rounded-full border border-blue-600 bg-blue-600 text-white transition">Podstawowy</button>
+      <button id="btnR" onclick="setLevel('rozszerzony')" class="text-sm font-semibold px-4 py-1.5 rounded-full border border-gray-300 text-gray-600 transition hover:bg-gray-100">Rozszerzony</button>
+      <button id="btnAll" onclick="setLevel('all')" class="text-sm font-semibold px-4 py-1.5 rounded-full border border-gray-300 text-gray-600 transition hover:bg-gray-100">Wszystkie</button>
+    </div>
+    <div id="topicPills" class="flex flex-wrap gap-2"></div>
+  </div>
+
+  <!-- STATS ROW -->
+  <div class="flex flex-wrap gap-4 mb-6 text-sm">
+    <div class="flex items-center gap-2 bg-white rounded-xl px-4 py-2 shadow-sm border border-gray-100">
+      <i class="fas fa-stack-overflow text-blue-500"></i>
+      <span>Pozostało: <strong id="statRemaining">—</strong></span>
+    </div>
+    <div class="flex items-center gap-2 bg-white rounded-xl px-4 py-2 shadow-sm border border-gray-100">
+      <i class="fas fa-check-circle text-green-500"></i>
+      <span>Umiem: <strong id="statKnown">—</strong></span>
+    </div>
+    <div class="flex items-center gap-2 bg-white rounded-xl px-4 py-2 shadow-sm border border-gray-100">
+      <i class="fas fa-redo text-orange-500"></i>
+      <span>Powtórzę: <strong id="statReview">—</strong></span>
+    </div>
+    <button onclick="resetSession()" class="ml-auto flex items-center gap-1 text-xs text-gray-400 hover:text-red-500 transition">
+      <i class="fas fa-rotate-right"></i> Reset sesji
+    </button>
+    <button onclick="shuffleDeck()" class="flex items-center gap-1 text-xs text-gray-400 hover:text-blue-500 transition">
+      <i class="fas fa-shuffle"></i> Tasuj
+    </button>
+  </div>
+
+  <!-- PROGRESS BAR -->
+  <div class="h-2 bg-gray-200 rounded-full mb-6 overflow-hidden">
+    <div id="progressBar" class="progress-fill h-2 bg-gradient-to-r from-blue-500 to-green-500 rounded-full" style="width:0%"></div>
+  </div>
+
+  <!-- CARD AREA -->
+  <div id="cardArea">
+    <!-- Card -->
+    <div class="card-scene" id="cardScene" style="height:320px" onclick="flipCard()">
+      <div class="card-body" id="cardBody">
+        <div class="card-face card-front" id="cardFront">
+          <div class="text-xs font-bold tracking-widest uppercase opacity-60 mb-4" id="cardTopic">Temat</div>
+          <div class="text-center text-2xl font-bold leading-relaxed" id="cardFrontText"></div>
+          <div class="mt-6 text-xs opacity-50">Kliknij aby zobaczyć odpowiedź</div>
+        </div>
+        <div class="card-face card-back" id="cardBack">
+          <div class="text-xs font-bold tracking-widest uppercase opacity-60 mb-4" id="cardBackLabel">Wzór / odpowiedź</div>
+          <div class="text-center text-2xl font-bold leading-relaxed" id="cardBackText"></div>
+          <div class="mt-4 text-sm opacity-75 text-center max-w-xs" id="cardExplanation"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div id="actionBtns" class="hidden mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+      <button onclick="markCard('review')" class="flex items-center justify-center gap-2 bg-orange-100 hover:bg-orange-200 text-orange-700 font-semibold px-8 py-3 rounded-xl transition text-sm">
+        <i class="fas fa-redo"></i> Powtórzę &nbsp;<kbd class="text-orange-500">←</kbd>
+      </button>
+      <button onclick="markCard('known')" class="flex items-center justify-center gap-2 bg-green-100 hover:bg-green-200 text-green-700 font-semibold px-8 py-3 rounded-xl transition text-sm">
+        <i class="fas fa-check"></i> Wiem! &nbsp;<kbd class="text-green-500">→</kbd>
+      </button>
+    </div>
+
+    <!-- COMPLETED STATE -->
+    <div id="completedState" class="hidden text-center py-12">
+      <div class="text-6xl mb-4">🎉</div>
+      <h2 class="text-2xl font-bold mb-2">Brawo! Przebyłeś/aś cały zestaw.</h2>
+      <p class="text-gray-500 mb-6" id="completedMsg"></p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <button onclick="reviewOnly()" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-xl transition">
+          <i class="fas fa-redo mr-2"></i>Tylko do powtórki (<span id="reviewCount">0</span>)
+        </button>
+        <button onclick="resetSession()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition">
+          <i class="fas fa-layer-group mr-2"></i>Zacznij od nowa
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOPIC STATS TABLE -->
+  <div class="mt-12">
+    <h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+      <i class="fas fa-chart-bar text-blue-500"></i>
+      Statystyki tematów
+    </h3>
+    <div id="topicStatsTable" class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      <!-- populated by JS -->
+    </div>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════════
+//  FLASHCARD DATA  (127 cards)
+// ═══════════════════════════════════════════════
+var CARDS = [
+  // ── LICZBY RZECZYWISTE ──
+  { id:'lr1', topic:'Liczby rzeczywiste', level:'podstawowy',
+    front:'Jakie jest działanie $a^m \\cdot a^n$?',
+    back:'$a^m \\cdot a^n = a^{m+n}$',
+    hint:'Mnożenie potęg o tej samej podstawie — dodajemy wykładniki.' },
+  { id:'lr2', topic:'Liczby rzeczywiste', level:'podstawowy',
+    front:'Jakie jest działanie $(a^m)^n$?',
+    back:'$(a^m)^n = a^{m \\cdot n}$',
+    hint:'Potęgowanie potęgi — mnożymy wykładniki.' },
+  { id:'lr3', topic:'Liczby rzeczywiste', level:'podstawowy',
+    front:'Czym jest $a^{-n}$?',
+    back:'$a^{-n} = \\dfrac{1}{a^n}$',
+    hint:'Ujemny wykładnik = odwrotność potęgi z wykładnikiem dodatnim.' },
+  { id:'lr4', topic:'Liczby rzeczywiste', level:'podstawowy',
+    front:'Warunek istnienia $\\sqrt[n]{a}$ (pierwiastek n-tego stopnia)?',
+    back:'Dla $n$ parzystego: $a \\geq 0$; dla $n$ nieparzystego: $a \\in \\mathbb{R}$',
+    hint:'Pierwiastek parzystego stopnia z liczby ujemnej nie istnieje w $\\mathbb{R}$.' },
+  { id:'lr5', topic:'Liczby rzeczywiste', level:'podstawowy',
+    front:'$\\log_a b = c$ oznacza…?',
+    back:'$\\log_a b = c \\Leftrightarrow a^c = b$',
+    hint:'Logarytm to wykładnik: "do jakiej potęgi podnieść $a$, by dostać $b$?"' },
+  { id:'lr6', topic:'Liczby rzeczywiste', level:'podstawowy',
+    front:'$\\log_a (xy) = ?$',
+    back:'$\\log_a (xy) = \\log_a x + \\log_a y$',
+    hint:'Logarytm iloczynu = suma logarytmów (dla $x, y > 0$).' },
+  { id:'lr7', topic:'Liczby rzeczywiste', level:'podstawowy',
+    front:'$\\log_a x^k = ?$',
+    back:'$\\log_a x^k = k \\log_a x$',
+    hint:'Wykładnik wychodzi przed logarytm.' },
+  { id:'lr8', topic:'Liczby rzeczywiste', level:'podstawowy',
+    front:'Wzór zmiany podstawy logarytmu?',
+    back:'$\\log_a b = \\dfrac{\\log_c b}{\\log_c a}$',
+    hint:'Dowolna inna podstawa $c > 0$, $c \\neq 1$ (najczęściej $\\ln$ lub $\\log_{10}$).' },
+  { id:'lr9', topic:'Liczby rzeczywiste', level:'podstawowy',
+    front:'Czym jest wartość bezwzględna $|x|$?',
+    back:'$|x| = \\begin{cases} x & x \\geq 0 \\\\ -x & x < 0 \\end{cases}$',
+    hint:'Odległość od zera na osi liczbowej. Zawsze $\\geq 0$.' },
+
+  // ── WYRAŻENIA ALGEBRAICZNE ──
+  { id:'wa1', topic:'Wyrażenia algebraiczne', level:'podstawowy',
+    front:'$(a+b)^2 = ?$',
+    back:'$(a+b)^2 = a^2 + 2ab + b^2$',
+    hint:'Pełny kwadrat sumy — trzeba pamiętać $2ab$!' },
+  { id:'wa2', topic:'Wyrażenia algebraiczne', level:'podstawowy',
+    front:'$(a-b)^2 = ?$',
+    back:'$(a-b)^2 = a^2 - 2ab + b^2$',
+    hint:'Pełny kwadrat różnicy.' },
+  { id:'wa3', topic:'Wyrażenia algebraiczne', level:'podstawowy',
+    front:'$(a+b)(a-b) = ?$',
+    back:'$(a+b)(a-b) = a^2 - b^2$',
+    hint:'Różnica kwadratów — wzór skróconego mnożenia.' },
+  { id:'wa4', topic:'Wyrażenia algebraiczne', level:'podstawowy',
+    front:'$(a+b)^3 = ?$',
+    back:'$(a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3$',
+    hint:'Sześcian sumy: współczynniki 1 3 3 1 (trójkąt Pascala).' },
+  { id:'wa5', topic:'Wyrażenia algebraiczne', level:'podstawowy',
+    front:'$a^3 + b^3 = ?$ (suma sześcianów)',
+    back:'$a^3 + b^3 = (a+b)(a^2 - ab + b^2)$',
+    hint:'Suma sześcianów faktoryzuje się przez $(a+b)$ i trójmian.' },
+  { id:'wa6', topic:'Wyrażenia algebraiczne', level:'podstawowy',
+    front:'$a^3 - b^3 = ?$ (różnica sześcianów)',
+    back:'$a^3 - b^3 = (a-b)(a^2 + ab + b^2)$',
+    hint:'Jak suma sześcianów, ale znaki zmienione odpowiednio.' },
+  { id:'wa7', topic:'Wyrażenia algebraiczne', level:'podstawowy',
+    front:'Jak podzielić $\\dfrac{a}{b} \\div \\dfrac{c}{d}$?',
+    back:'$\\dfrac{a}{b} \\div \\dfrac{c}{d} = \\dfrac{a}{b} \\cdot \\dfrac{d}{c} = \\dfrac{ad}{bc}$',
+    hint:'Dzielenie przez ułamek = mnożenie przez odwrotność.' },
+
+  // ── RÓWNANIA ──
+  { id:'rn1', topic:'Równania', level:'podstawowy',
+    front:'Wzór na rozwiązania $ax^2 + bx + c = 0$?',
+    back:'$x_{1,2} = \\dfrac{-b \\pm \\sqrt{\\Delta}}{2a}$, gdzie $\\Delta = b^2 - 4ac$',
+    hint:'Delta < 0: brak rozw.; $\\Delta = 0$: jedno; $\\Delta > 0$: dwa.' },
+  { id:'rn2', topic:'Równania', level:'podstawowy',
+    front:'Wzory Viète\'a: co wiemy o $x_1 + x_2$ i $x_1 x_2$?',
+    back:'$x_1 + x_2 = -\\dfrac{b}{a}, \\quad x_1 x_2 = \\dfrac{c}{a}$',
+    hint:'Wynikają bezpośrednio z definicji pierwiastków.' },
+  { id:'rn3', topic:'Równania', level:'podstawowy',
+    front:'$|ax + b| = c$ ($c > 0$): ile rozwiązań?',
+    back:'Dwa: $ax + b = c$ lub $ax + b = -c$',
+    hint:'Wartość bezwzględna rozbija na dwa przypadki.' },
+  { id:'rn4', topic:'Równania', level:'podstawowy',
+    front:'Jak rozwiązać $|x| < a$ ($a > 0$)?',
+    back:'$-a < x < a$',
+    hint:'Nierówność z wartością bezwzględną daje przedział.' },
+  { id:'rn5', topic:'Równania', level:'podstawowy',
+    front:'Jak rozwiązać $|x| > a$ ($a > 0$)?',
+    back:'$x < -a$ lub $x > a$',
+    hint:'Dwa oddzielne przedziały, unia.' },
+  { id:'rn6', topic:'Równania', level:'podstawowy',
+    front:'Warunek istnienia $\\log_a x$?',
+    back:'$x > 0$, $a > 0$, $a \\neq 1$',
+    hint:'Dziedzina logarytmu to liczby ściśle dodatnie.' },
+
+  // ── FUNKCJE ──
+  { id:'fun1', topic:'Funkcje', level:'podstawowy',
+    front:'Jakie jest maksimum/minimum $f(x) = a(x-p)^2 + q$?',
+    back:'Wierzchołek w $(p, q)$. Min gdy $a>0$, maks gdy $a<0$.',
+    hint:'Postać kanoniczna paraboli. $q$ to wartość ekstremalna.' },
+  { id:'fun2', topic:'Funkcje', level:'podstawowy',
+    front:'Kiedy funkcja liniowa $f(x) = ax + b$ jest rosnąca?',
+    back:'Gdy $a > 0$',
+    hint:'Współczynnik kierunkowy $a$ decyduje o monotoniczności.' },
+  { id:'fun3', topic:'Funkcje', level:'podstawowy',
+    front:'Dziedzina $f(x) = \\dfrac{1}{x}$?',
+    back:'$\\mathbb{R} \\setminus \\{0\\}$ czyli $x \\neq 0$',
+    hint:'Mianownik nie może być zerem.' },
+  { id:'fun4', topic:'Funkcje', level:'podstawowy',
+    front:'Dziedzina $f(x) = \\sqrt{g(x)}$?',
+    back:'$g(x) \\geq 0$',
+    hint:'Wyrażenie pod pierwiastkiem musi być nieujemne.' },
+  { id:'fun5', topic:'Funkcje', level:'podstawowy',
+    front:'Czym jest przesunięcie $f(x - a)$?',
+    back:'Przesunięcie wykresu $f$ o $a$ jednostek w prawo (gdy $a > 0$).',
+    hint:'Uwaga: $f(x - a)$ → prawo; $f(x + a)$ → lewo (nieintuicyjne!).' },
+  { id:'fun6', topic:'Funkcje', level:'podstawowy',
+    front:'Kiedy wykres funkcji jest symetryczny względem osi $Oy$?',
+    back:'Gdy $f(-x) = f(x)$ (funkcja parzysta)',
+    hint:'Przykłady: $x^2$, $|x|$, $\\cos x$.' },
+  { id:'fun7', topic:'Funkcje', level:'podstawowy',
+    front:'Wzór na złożenie $f \\circ g$?',
+    back:'$(f \\circ g)(x) = f(g(x))$',
+    hint:'Najpierw $g$, potem $f$ — kolejność ma znaczenie!' },
+  { id:'fun8', topic:'Funkcje', level:'podstawowy',
+    front:'Jak wyznaczyć funkcję odwrotną $f^{-1}$?',
+    back:'Zamieniamy $x \\leftrightarrow y$ i wyznaczamy $y$.',
+    hint:'$f^{-1}$ istnieje wtedy i tylko wtedy, gdy $f$ jest różnowartościowa.' },
+
+  // ── CIĄGI ──
+  { id:'ci1', topic:'Ciągi', level:'podstawowy',
+    front:'Ogólny wzór ciągu arytmetycznego?',
+    back:'$a_n = a_1 + (n-1)r$',
+    hint:'$r$ — różnica ciągu. $n$-ty wyraz to wyjście od $a_1$ o $(n-1)$ kroków.' },
+  { id:'ci2', topic:'Ciągi', level:'podstawowy',
+    front:'Suma $n$ wyrazów ciągu arytmetycznego?',
+    back:'$S_n = \\dfrac{n(a_1 + a_n)}{2} = \\dfrac{n(2a_1 + (n-1)r)}{2}$',
+    hint:'„Suma skrajnych pomnożona przez liczbę par".' },
+  { id:'ci3', topic:'Ciągi', level:'podstawowy',
+    front:'Ogólny wzór ciągu geometrycznego?',
+    back:'$a_n = a_1 \\cdot q^{n-1}$',
+    hint:'$q$ — iloraz ciągu. Każdy wyraz $= $ poprzedni $\\times q$.' },
+  { id:'ci4', topic:'Ciągi', level:'podstawowy',
+    front:'Suma $n$ wyrazów ciągu geometrycznego ($q \\neq 1$)?',
+    back:'$S_n = a_1 \\cdot \\dfrac{q^n - 1}{q - 1}$',
+    hint:'Dla $q = 1$: $S_n = n \\cdot a_1$.' },
+  { id:'ci5', topic:'Ciągi', level:'podstawowy',
+    front:'Suma nieskończonego ciągu geometrycznego ($|q| < 1$)?',
+    back:'$S = \\dfrac{a_1}{1 - q}$',
+    hint:'Tylko, gdy $|q| < 1$ (ciąg zbiega do 0).' },
+  { id:'ci6', topic:'Ciągi', level:'podstawowy',
+    front:'Warunek, aby trzy liczby $a, b, c$ tworzyły ciąg arytmetyczny?',
+    back:'$b - a = c - b$, czyli $2b = a + c$',
+    hint:'Środkowy wyraz = średnia arytmetyczna skrajnych.' },
+  { id:'ci7', topic:'Ciągi', level:'podstawowy',
+    front:'Warunek, aby $a, b, c > 0$ tworzyły ciąg geometryczny?',
+    back:'$\\dfrac{b}{a} = \\dfrac{c}{b}$, czyli $b^2 = ac$',
+    hint:'Środkowy wyraz = średnia geometryczna skrajnych.' },
+
+  // ── TRYGONOMETRIA ──
+  { id:'tr1', topic:'Trygonometria', level:'podstawowy',
+    front:'Podstawowa tożsamość trygonometryczna?',
+    back:'$\\sin^2\\alpha + \\cos^2\\alpha = 1$',
+    hint:'Wynika z twierdzenia Pitagorasa dla okręgu jednostkowego.' },
+  { id:'tr2', topic:'Trygonometria', level:'podstawowy',
+    front:'$\\tan\\alpha = ?$',
+    back:'$\\tan\\alpha = \\dfrac{\\sin\\alpha}{\\cos\\alpha}$ (dla $\\cos\\alpha \\neq 0$)',
+    hint:'Tangens to stosunek sinus do cosinus.' },
+  { id:'tr3', topic:'Trygonometria', level:'podstawowy',
+    front:'Wartości $\\sin 30°$, $\\sin 45°$, $\\sin 60°$?',
+    back:'$\\sin 30° = \\tfrac{1}{2}$, $\\sin 45° = \\tfrac{\\sqrt{2}}{2}$, $\\sin 60° = \\tfrac{\\sqrt{3}}{2}$',
+    hint:'Mnemotechnika: $\\tfrac{\\sqrt{1}}{2}, \\tfrac{\\sqrt{2}}{2}, \\tfrac{\\sqrt{3}}{2}$.' },
+  { id:'tr4', topic:'Trygonometria', level:'podstawowy',
+    front:'Wzory redukcyjne: $\\sin(180° - \\alpha)$ i $\\cos(180° - \\alpha)$?',
+    back:'$\\sin(180°-\\alpha) = \\sin\\alpha$, &nbsp; $\\cos(180°-\\alpha) = -\\cos\\alpha$',
+    hint:'Kąt suplement: sinus niezmieniony, cosinus zmienia znak.' },
+  { id:'tr5', topic:'Trygonometria', level:'podstawowy',
+    front:'Twierdzenie sinusów?',
+    back:'$\\dfrac{a}{\\sin A} = \\dfrac{b}{\\sin B} = \\dfrac{c}{\\sin C} = 2R$',
+    hint:'$R$ = promień okręgu opisanego. Łączy boki z kątami naprzeciwległymi.' },
+  { id:'tr6', topic:'Trygonometria', level:'podstawowy',
+    front:'Twierdzenie cosinusów?',
+    back:'$c^2 = a^2 + b^2 - 2ab\\cos C$',
+    hint:'Uogólnienie tw. Pitagorasa (dla $C = 90°$ redukuje się do Pitagorasa).' },
+  { id:'tr7', topic:'Trygonometria', level:'podstawowy',
+    front:'Pole trójkąta ze wzoru $P = \\frac{1}{2}ab\\sin C$?',
+    back:'Pole = połowa iloczynu dwóch boków przez sinus kąta między nimi.',
+    hint:'Używamy, gdy znamy dwa boki i zawarty między nimi kąt.' },
+
+  // ── PLANIMETRIA ──
+  { id:'pl1', topic:'Planimetria', level:'podstawowy',
+    front:'Twierdzenie Pitagorasa?',
+    back:'$c^2 = a^2 + b^2$ (gdzie $c$ — przeciwprostokątna)',
+    hint:'Suma kwadratów przyprostokątnych = kwadrat przeciwprostokątnej.' },
+  { id:'pl2', topic:'Planimetria', level:'podstawowy',
+    front:'Wzór na pole koła o promieniu $r$?',
+    back:'$P = \\pi r^2$',
+    hint:'Obwód koła: $O = 2\\pi r$.' },
+  { id:'pl3', topic:'Planimetria', level:'podstawowy',
+    front:'Wzór na pole trapezu?',
+    back:'$P = \\dfrac{(a + b) \\cdot h}{2}$',
+    hint:'$a$, $b$ — podstawy; $h$ — wysokość trapezu.' },
+  { id:'pl4', topic:'Planimetria', level:'podstawowy',
+    front:'Promień okręgu opisanego na trójkącie prostokątnym?',
+    back:'$R = \\dfrac{c}{2}$ (połowa przeciwprostokątnej)',
+    hint:'Środek okręgu opisanego leży na środku przeciwprostokątnej.' },
+  { id:'pl5', topic:'Planimetria', level:'podstawowy',
+    front:'Suma kątów wewnętrznych trójkąta?',
+    back:'$\\alpha + \\beta + \\gamma = 180°$',
+    hint:'Dotyczy każdego trójkąta na płaszczyźnie euklidesowej.' },
+  { id:'pl6', topic:'Planimetria', level:'podstawowy',
+    front:'Pole rombu przez przekątne?',
+    back:'$P = \\dfrac{d_1 \\cdot d_2}{2}$',
+    hint:'Przekątne rombu są prostopadłe i połowicko dzielą prostokąt.' },
+  { id:'pl7', topic:'Planimetria', level:'podstawowy',
+    front:'Kąt wpisany i kąt środkowy oparte na tym samym łuku?',
+    back:'Kąt środkowy $= 2 \\times$ kąt wpisany',
+    hint:'Np. kąt wpisany w półokrąg $= 90°$, bo kąt środkowy (na pełnicu) $= 180°$.' },
+
+  // ── GEOMETRIA ANALITYCZNA ──
+  { id:'ga1', topic:'Geometria analityczna', level:'podstawowy',
+    front:'Odległość między punktami $(x_1, y_1)$ i $(x_2, y_2)$?',
+    back:'$d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}$',
+    hint:'Wzór Pitagorasa na płaszczyźnie.' },
+  { id:'ga2', topic:'Geometria analityczna', level:'podstawowy',
+    front:'Środek odcinka między $(x_1,y_1)$ i $(x_2,y_2)$?',
+    back:'$S = \\left(\\dfrac{x_1+x_2}{2},\\ \\dfrac{y_1+y_2}{2}\\right)$',
+    hint:'Średnia arytmetyczna współrzędnych.' },
+  { id:'ga3', topic:'Geometria analityczna', level:'podstawowy',
+    front:'Równanie prostej o nachyleniu $a$ przez $(x_0, y_0)$?',
+    back:'$y - y_0 = a(x - x_0)$',
+    hint:'Postać kierunkowa — podstawiamy nachylenie i punkt.' },
+  { id:'ga4', topic:'Geometria analityczna', level:'podstawowy',
+    front:'Warunek równoległości prostych $y = a_1 x + b_1$ i $y = a_2 x + b_2$?',
+    back:'$a_1 = a_2$ (i $b_1 \\neq b_2$)',
+    hint:'Te same nachylenia, różne wyrazy wolne.' },
+  { id:'ga5', topic:'Geometria analityczna', level:'podstawowy',
+    front:'Warunek prostopadłości dwóch prostych?',
+    back:'$a_1 \\cdot a_2 = -1$',
+    hint:'Iloczyn nachyleń prostopadłych prostych $= -1$.' },
+  { id:'ga6', topic:'Geometria analityczna', level:'podstawowy',
+    front:'Równanie okręgu o środku $(p, q)$ i promieniu $r$?',
+    back:'$(x - p)^2 + (y - q)^2 = r^2$',
+    hint:'Wszystkie punkty w odległości $r$ od środka $(p, q)$.' },
+  { id:'ga7', topic:'Geometria analityczna', level:'podstawowy',
+    front:'Odległość punktu $(x_0, y_0)$ od prostej $Ax + By + C = 0$?',
+    back:'$d = \\dfrac{|Ax_0 + By_0 + C|}{\\sqrt{A^2 + B^2}}$',
+    hint:'Wzór na odległość od prostej w postaci ogólnej.' },
+
+  // ── STEREOMETRIA ──
+  { id:'st1', topic:'Stereometria', level:'podstawowy',
+    front:'Objętość graniastosłupa prostego?',
+    back:'$V = P_p \\cdot h$, gdzie $P_p$ — pole podstawy, $h$ — wysokość.',
+    hint:'Dotyczy każdego graniastosłupa prostego (w tym sześcianu, walca).' },
+  { id:'st2', topic:'Stereometria', level:'podstawowy',
+    front:'Objętość walca?',
+    back:'$V = \\pi r^2 h$',
+    hint:'Pole podstawy (koło) $= \\pi r^2$. Mnożymy przez wysokość.' },
+  { id:'st3', topic:'Stereometria', level:'podstawowy',
+    front:'Objętość stożka?',
+    back:'$V = \\dfrac{1}{3} \\pi r^2 h$',
+    hint:'$\\frac{1}{3}$ objętości walca o tym samym $r$ i $h$.' },
+  { id:'st4', topic:'Stereometria', level:'podstawowy',
+    front:'Objętość kuli?',
+    back:'$V = \\dfrac{4}{3} \\pi r^3$',
+    hint:'Pole powierzchni kuli: $P = 4\\pi r^2$.' },
+  { id:'st5', topic:'Stereometria', level:'podstawowy',
+    front:'Przekątna sześcianu o boku $a$?',
+    back:'$d = a\\sqrt{3}$',
+    hint:'$d^2 = a^2 + a^2 + a^2 = 3a^2 \\Rightarrow d = a\\sqrt{3}$.' },
+  { id:'st6', topic:'Stereometria', level:'podstawowy',
+    front:'Objętość ostrosłupa (piramidy)?',
+    back:'$V = \\dfrac{1}{3} P_p \\cdot h$',
+    hint:'$\\frac{1}{3}$ objętości graniastosłupa o tej samej podstawie i wysokości.' },
+
+  // ── PRAWDOPODOBIEŃSTWO ──
+  { id:'pr1', topic:'Prawdopodobieństwo', level:'podstawowy',
+    front:'Klasyczna definicja prawdopodobieństwa?',
+    back:'$P(A) = \\dfrac{|A|}{|\\Omega|}$ (liczba sprzyjających / liczba wszystkich wyników)',
+    hint:'Stosujemy, gdy wyniki są równie prawdopodobne.' },
+  { id:'pr2', topic:'Prawdopodobieństwo', level:'podstawowy',
+    front:'$P(A \\cup B) = ?$',
+    back:'$P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$',
+    hint:'Wzór włączeń i wyłączeń. Dla zdarzeń wykluczających: $P(A \\cup B) = P(A) + P(B)$.' },
+  { id:'pr3', topic:'Prawdopodobieństwo', level:'podstawowy',
+    front:'Zdarzenie dopełniające $\\overline{A}$?',
+    back:'$P(\\overline{A}) = 1 - P(A)$',
+    hint:'Używamy, gdy łatwiej policzyć „szansę na NIE A".' },
+  { id:'pr4', topic:'Prawdopodobieństwo', level:'podstawowy',
+    front:'Wzór na kombinacje $\\binom{n}{k}$?',
+    back:'$\\binom{n}{k} = \\dfrac{n!}{k!(n-k)!}$',
+    hint:'Liczba sposobów wyboru $k$ elementów z $n$ (bez kolejności).' },
+  { id:'pr5', topic:'Prawdopodobieństwo', level:'podstawowy',
+    front:'Wzór na permutacje $n$ elementów?',
+    back:'$P_n = n! = 1 \\cdot 2 \\cdot 3 \\cdots n$',
+    hint:'Liczba różnych ustawień $n$ różnych przedmiotów w rzędzie.' },
+  { id:'pr6', topic:'Prawdopodobieństwo', level:'podstawowy',
+    front:'Prawdopodobieństwo warunkowe $P(A|B)$?',
+    back:'$P(A|B) = \\dfrac{P(A \\cap B)}{P(B)}$ (dla $P(B) > 0$)',
+    hint:'„Szansa na $A$, wiedząc że $B$ zaszło."' },
+
+  // ════════════ ROZSZERZONY ════════════
+  // ── GRANICE ──
+  { id:'gr1', topic:'Granice', level:'rozszerzony',
+    front:'$\\lim_{x \\to 0} \\dfrac{\\sin x}{x} = ?$',
+    back:'$1$',
+    hint:'Graniczne twierdzenie — jeden z fundamentów rachunku różniczkowego.' },
+  { id:'gr2', topic:'Granice', level:'rozszerzony',
+    front:'$\\lim_{n \\to \\infty} \\left(1 + \\dfrac{1}{n}\\right)^n = ?$',
+    back:'$e \\approx 2{,}718\\ldots$',
+    hint:'Definicja stałej Eulera.' },
+  { id:'gr3', topic:'Granice', level:'rozszerzony',
+    front:'$\\lim_{x \\to 0} \\dfrac{e^x - 1}{x} = ?$',
+    back:'$1$',
+    hint:'Wynika z rozwinięcia $e^x = 1 + x + \\ldots$ lub granicy $\\frac{\\sin x}{x}$ i wzoru de Moivre\'a.' },
+  { id:'gr4', topic:'Granice', level:'rozszerzony',
+    front:'Co oznacza $f(x) = O(g(x))$ przy $x \\to \\infty$?',
+    back:'Istnieje $C > 0$: $|f(x)| \\leq C|g(x)|$ dla dużych $x$.',
+    hint:'„$f$ jest co najwyżej rzędu $g$" — notacja Landaua (O wielkie).' },
+  { id:'gr5', topic:'Granice', level:'rozszerzony',
+    front:'Reguła de l\'Hôpitala. Zastosowanie?',
+    back:'Jeśli $\\lim \\frac{f}{g}$ ma postać $\\frac{0}{0}$ lub $\\frac{\\infty}{\\infty}$, to $\\lim \\frac{f}{g} = \\lim \\frac{f\'}{g\'}$.',
+    hint:'Można stosować wielokrotnie. Wymaga różniczkowalności.' },
+  { id:'gr6', topic:'Granice', level:'rozszerzony',
+    front:'$\\lim_{x \\to \\infty} \\dfrac{x^n}{a^x}$ dla $a > 1$?',
+    back:'$0$ — wykładnicze pokonuje każdą potęgę.',
+    hint:'$a^x$ rośnie szybciej niż $x^n$ dla każdego $n \\in \\mathbb{N}$.' },
+
+  // ── POCHODNE ──
+  { id:'po1', topic:'Pochodne', level:'rozszerzony',
+    front:'Definicja pochodnej $f\'(x_0)$?',
+    back:'$f\'(x_0) = \\lim_{h \\to 0} \\dfrac{f(x_0+h) - f(x_0)}{h}$',
+    hint:'Granica ilorazu różnicowego — chwilowe tempo zmian.' },
+  { id:'po2', topic:'Pochodne', level:'rozszerzony',
+    front:'$(x^n)\' = ?$',
+    back:'$n x^{n-1}$',
+    hint:'Reguła „zdejmowania wykładnika": mnożymy przez $n$, zmniejszamy wykładnik o 1.' },
+  { id:'po3', topic:'Pochodne', level:'rozszerzony',
+    front:'$(e^x)\' = ?$',
+    back:'$e^x$',
+    hint:'Funkcja $e^x$ jest (jedyną) funkcją będącą własną pochodną.' },
+  { id:'po4', topic:'Pochodne', level:'rozszerzony',
+    front:'$(\\ln x)\' = ?$',
+    back:'$\\dfrac{1}{x}$ (dla $x > 0$)',
+    hint:'Pochodna logarytmu naturalnego.' },
+  { id:'po5', topic:'Pochodne', level:'rozszerzony',
+    front:'Reguła iloczynu $(f \\cdot g)\' = ?$',
+    back:'$f\'g + fg\'$',
+    hint:'„Pochodna pierwszego × drugi + pierwszy × pochodna drugiego".' },
+  { id:'po6', topic:'Pochodne', level:'rozszerzony',
+    front:'Reguła ilorazu $\\left(\\dfrac{f}{g}\\right)\' = ?$',
+    back:'$\\dfrac{f\'g - fg\'}{g^2}$',
+    hint:'Licz: (kreska na górze × dół − góra × kreska na dole) / dół².' },
+  { id:'po7', topic:'Pochodne', level:'rozszerzony',
+    front:'Reguła łańcuchowa $(f(g(x)))\' = ?$',
+    back:'$f\'(g(x)) \\cdot g\'(x)$',
+    hint:'Pochodna złożenia: zewnętrzna (w punkcie wewnętrznym) × pochodna wewnętrznej.' },
+  { id:'po8', topic:'Pochodne', level:'rozszerzony',
+    front:'Warunek konieczny ekstremum lokalnego?',
+    back:'$f\'(x_0) = 0$ (lub $f\'(x_0)$ nie istnieje)',
+    hint:'Konieczny, nie wystarczający! Można sprawdzić przez zmianę znaku $f\'$.' },
+  { id:'po9', topic:'Pochodne', level:'rozszerzony',
+    front:'Równanie stycznej do $f$ w punkcie $(x_0, f(x_0))$?',
+    back:'$y = f\'(x_0)(x - x_0) + f(x_0)$',
+    hint:'Styczna to prosta o nachyleniu $f\'(x_0)$ przez punkt na wykresie.' },
+
+  // ── WIELOMIANY ──
+  { id:'wi1', topic:'Wielomiany', level:'rozszerzony',
+    front:'Twierdzenie Bézouta?',
+    back:'$r$ jest pierwiastkiem $W(x)$ $\\Leftrightarrow$ $(x - r) \\mid W(x)$.',
+    hint:'Reszta z dzielenia $W$ przez $(x - r)$ wynosi $W(r)$.' },
+  { id:'wi2', topic:'Wielomiany', level:'rozszerzony',
+    front:'Schemat Hornera: jak obliczyć $W(x_0)$?',
+    back:'Piszemy współczynniki; każdy krok: $\\text{nowy} = \\text{prev} \\times x_0 + \\text{coeff}$.',
+    hint:'Efektywny algorytm — $n$ mnożeń zamiast $O(n^2)$.' },
+  { id:'wi3', topic:'Wielomiany', level:'rozszerzony',
+    front:'Krotność pierwiastka a dotykanie osi?',
+    back:'Krotność parzysta → dotyka osi $x$; nieparzysta → przecina oś $x$.',
+    hint:'Np. $(x-2)^2$ dotyka w $x=2$; $(x-2)^3$ przecina.' },
+  { id:'wi4', topic:'Wielomiany', level:'rozszerzony',
+    front:'Wzory Viète\'a dla $ax^3 + bx^2 + cx + d = 0$ z pierwiastkami $x_1, x_2, x_3$?',
+    back:'$x_1+x_2+x_3 = -b/a$; $x_1x_2+x_1x_3+x_2x_3 = c/a$; $x_1x_2x_3 = -d/a$',
+    hint:'Uogólnienie wzorów Viète\'a na wielomian stopnia 3.' },
+  { id:'wi5', topic:'Wielomiany', level:'rozszerzony',
+    front:'Zasadnicze twierdzenie algebry (ZTA)?',
+    back:'Każdy wielomian stopnia $n \\geq 1$ nad $\\mathbb{C}$ ma dokładnie $n$ pierwiastków (z krotnościami).',
+    hint:'W $\\mathbb{R}$ może mieć mniej; ZTA gwarantuje pierwiastki zespolone.' },
+
+  // ── WEKTORY ──
+  { id:'we1', topic:'Wektory', level:'rozszerzony',
+    front:'Długość wektora $\\vec{v} = [a, b, c]$?',
+    back:'$|\\vec{v}| = \\sqrt{a^2 + b^2 + c^2}$',
+    hint:'Wzór Pitagorasa w 3D.' },
+  { id:'we2', topic:'Wektory', level:'rozszerzony',
+    front:'Iloczyn skalarny $\\vec{u} \\cdot \\vec{v}$?',
+    back:'$\\vec{u} \\cdot \\vec{v} = u_1v_1 + u_2v_2 + u_3v_3 = |\\vec{u}||\\vec{v}|\\cos\\theta$',
+    hint:'Zbiega do 0 dla wektorów prostopadłych.' },
+  { id:'we3', topic:'Wektory', level:'rozszerzony',
+    front:'Warunek prostopadłości wektorów?',
+    back:'$\\vec{u} \\cdot \\vec{v} = 0$',
+    hint:'Iloczyn skalarny wektorów prostopadłych zawsze równa się 0.' },
+  { id:'we4', topic:'Wektory', level:'rozszerzony',
+    front:'Kiedy wektory $\\vec{u}$ i $\\vec{v}$ są równoległe?',
+    back:'$\\vec{u} = k\\vec{v}$ dla pewnego $k \\in \\mathbb{R}$ (liniowo zależne)',
+    hint:'Lub: $\\frac{u_1}{v_1} = \\frac{u_2}{v_2} = \\frac{u_3}{v_3}$.' },
+  { id:'we5', topic:'Wektory', level:'rozszerzony',
+    front:'Cos kąta między wektorami ze wzoru?',
+    back:'$\\cos\\theta = \\dfrac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}||\\vec{v|}}$',
+    hint:'Stosujemy do obliczania kąta między wektorami, ramionami kąta.' },
+
+  // ── DOWODZENIE ──
+  { id:'do1', topic:'Dowodzenie', level:'rozszerzony',
+    front:'Struktura dowodu przez indukcję matematyczną?',
+    back:'1. Baza: P(1) prawdziwe. 2. Krok: P(k) ⟹ P(k+1). Wniosek: P(n) dla wszystkich n≥1.',
+    hint:'Dwa etapy: baza i krok indukcyjny.' },
+  { id:'do2', topic:'Dowodzenie', level:'rozszerzony',
+    front:'Dowód przez zaprzeczenie?',
+    back:'Zakładamy $\\neg P$ i wyprowadzamy sprzeczność → $P$ prawdziwe.',
+    hint:'Metoda nie wprost. Używana gdy bezpośredni dowód jest trudny.' },
+  { id:'do3', topic:'Dowodzenie', level:'rozszerzony',
+    front:'Kontrapozycja twierdzenia $P \\Rightarrow Q$?',
+    back:'$\\neg Q \\Rightarrow \\neg P$ (logicznie równoważne $P \\Rightarrow Q$)',
+    hint:'Dowód kontrapozycji zastępuje dowód oryginalny.' },
+  { id:'do4', topic:'Dowodzenie', level:'rozszerzony',
+    front:'Kiedy obalamy twierdzenie „$\\forall x: P(x)$"?',
+    back:'Podajemy jeden kontrprzykład: wartość $x_0$, dla której $P(x_0)$ jest fałszywe.',
+    hint:'Do obalenia wystarczy jeden przykład. Do udowodnienia trzeba wszystkie.' },
+  { id:'do5', topic:'Dowodzenie', level:'rozszerzony',
+    front:'Zaprzeczenie $\\exists x: P(x)$?',
+    back:'$\\forall x: \\neg P(x)$',
+    hint:'Negacja kw. szczegółowego = kw. ogólny z negacją formuły.' }
+];
+
+// ═══════════════════════════════════════════════
+//  STATE
+// ═══════════════════════════════════════════════
+var currentLevel = 'podstawowy';
+var currentTopic = 'all';
+var deck = [];
+var deckIdx = 0;
+var sessionKnown = {};
+var sessionReview = {};
+var isFlipped = false;
+
+// Load from localStorage
+function loadState() {
+  try {
+    var sk = localStorage.getItem('fiszki_known');
+    var sr = localStorage.getItem('fiszki_review');
+    if (sk) sessionKnown = JSON.parse(sk);
+    if (sr) sessionReview = JSON.parse(sr);
+  } catch(e) {}
+}
+function saveState() {
+  try {
+    localStorage.setItem('fiszki_known', JSON.stringify(sessionKnown));
+    localStorage.setItem('fiszki_review', JSON.stringify(sessionReview));
+  } catch(e) {}
+}
+
+// ─── FILTER + BUILD DECK ───
+function buildDeck() {
+  var filtered = CARDS.filter(function(c) {
+    var levelOk = currentLevel === 'all' || c.level === currentLevel;
+    var topicOk = currentTopic === 'all' || c.topic === currentTopic;
+    return levelOk && topicOk;
+  });
+  // Sort: not-seen first, then review, then known
+  filtered.sort(function(a, b) {
+    var ra = sessionKnown[a.id] ? 2 : (sessionReview[a.id] ? 1 : 0);
+    var rb = sessionKnown[b.id] ? 2 : (sessionReview[b.id] ? 1 : 0);
+    return ra - rb;
+  });
+  deck = filtered;
+  deckIdx = 0;
+}
+
+function shuffleDeck() {
+  for (var i = deck.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = deck[i]; deck[i] = deck[j]; deck[j] = tmp;
+  }
+  deckIdx = 0;
+  showCard();
+}
+
+// ─── TOPICS ───
+function getTopics() {
+  var set = {};
+  CARDS.forEach(function(c) {
+    if (currentLevel === 'all' || c.level === currentLevel) set[c.topic] = true;
+  });
+  return Object.keys(set).sort();
+}
+
+function renderTopicPills() {
+  var topics = getTopics();
+  var container = document.getElementById('topicPills');
+  container.innerHTML = '';
+
+  var allPill = document.createElement('button');
+  allPill.className = 'topic-pill text-sm font-medium px-3 py-1.5 rounded-full border border-gray-300 transition hover:bg-blue-50 ' + (currentTopic === 'all' ? 'active' : '');
+  allPill.textContent = 'Wszystkie (' + CARDS.filter(function(c){ return currentLevel==='all'||c.level===currentLevel; }).length + ')';
+  allPill.onclick = function() { currentTopic = 'all'; buildDeck(); showCard(); renderTopicPills(); };
+  container.appendChild(allPill);
+
+  topics.forEach(function(t) {
+    var count = CARDS.filter(function(c){ return c.topic===t && (currentLevel==='all'||c.level===currentLevel); }).length;
+    var pill = document.createElement('button');
+    pill.className = 'topic-pill text-sm font-medium px-3 py-1.5 rounded-full border border-gray-300 transition hover:bg-blue-50 ' + (currentTopic === t ? 'active' : '');
+    pill.textContent = t + ' (' + count + ')';
+    pill.onclick = (function(topic){ return function() { currentTopic = topic; buildDeck(); showCard(); renderTopicPills(); }; })(t);
+    container.appendChild(pill);
+  });
+}
+
+// ─── LEVEL SWITCH ───
+function setLevel(lv) {
+  currentLevel = lv;
+  currentTopic = 'all';
+  buildDeck();
+  showCard();
+  renderTopicPills();
+  ['btnP','btnR','btnAll'].forEach(function(id){ document.getElementById(id).className = 'text-sm font-semibold px-4 py-1.5 rounded-full border border-gray-300 text-gray-600 transition hover:bg-gray-100'; });
+  var map = { podstawowy: 'btnP', rozszerzony: 'btnR', all: 'btnAll' };
+  document.getElementById(map[lv]).className = 'text-sm font-semibold px-4 py-1.5 rounded-full border border-blue-600 bg-blue-600 text-white transition';
+}
+
+// ─── CARD DISPLAY ───
+function showCard() {
+  var completed = document.getElementById('completedState');
+  var cardArea = document.getElementById('cardScene');
+  var actionBtns = document.getElementById('actionBtns');
+
+  if (deckIdx >= deck.length) {
+    // Show completed state
+    cardArea.style.display = 'none';
+    actionBtns.classList.add('hidden');
+    completed.classList.remove('hidden');
+    document.getElementById('completedMsg').textContent =
+      'Poprawnych: ' + Object.keys(sessionKnown).length + '  •  Do powtórki: ' + Object.keys(sessionReview).length;
+    document.getElementById('reviewCount').textContent = Object.keys(sessionReview).length;
+    updateStats();
+    return;
+  }
+
+  completed.classList.add('hidden');
+  cardArea.style.display = '';
+  actionBtns.classList.add('hidden');
+
+  var card = deck[deckIdx];
+  isFlipped = false;
+  document.getElementById('cardBody').classList.remove('flipped');
+  document.getElementById('cardBack').classList.remove('extra-dark');
+  if (card.level === 'rozszerzony') document.getElementById('cardBack').classList.add('extra-dark');
+
+  // Set content
+  document.getElementById('cardTopic').textContent = card.topic + ' · ' + (card.level === 'rozszerzony' ? 'rozszerzony' : 'podstawowy');
+  document.getElementById('cardFrontText').innerHTML = card.front;
+  document.getElementById('cardBackText').innerHTML = card.back;
+  document.getElementById('cardExplanation').innerHTML = card.hint || '';
+
+  // Trigger animate
+  var scene = document.getElementById('cardScene');
+  scene.classList.remove('card-animate');
+  void scene.offsetWidth;
+  scene.classList.add('card-animate');
+
+  // Re-render math
+  if (window.renderMathInElement) {
+    renderMathInElement(document.getElementById('cardFront'), {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});
+    renderMathInElement(document.getElementById('cardBack'), {delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});
+  }
+
+  updateProgress();
+  updateStats();
+}
+
+function flipCard() {
+  if (deckIdx >= deck.length) return;
+  isFlipped = !isFlipped;
+  document.getElementById('cardBody').classList.toggle('flipped', isFlipped);
+  document.getElementById('actionBtns').classList.toggle('hidden', !isFlipped);
+}
+
+function markCard(status) {
+  if (deckIdx >= deck.length) return;
+  var card = deck[deckIdx];
+  if (status === 'known') {
+    sessionKnown[card.id] = true;
+    delete sessionReview[card.id];
+  } else {
+    sessionReview[card.id] = true;
+    delete sessionKnown[card.id];
+  }
+  saveState();
+  deckIdx++;
+  isFlipped = false;
+  showCard();
+}
+
+function resetSession() {
+  buildDeck();
+  showCard();
+}
+
+function reviewOnly() {
+  deck = deck.filter(function(c){ return sessionReview[c.id]; });
+  deckIdx = 0;
+  document.getElementById('completedState').classList.add('hidden');
+  document.getElementById('cardScene').style.display = '';
+  showCard();
+}
+
+function updateProgress() {
+  var total = deck.length;
+  var done = deckIdx;
+  var pct = total > 0 ? Math.round((done / total) * 100) : 0;
+  document.getElementById('progressBar').style.width = pct + '%';
+}
+
+function updateStats() {
+  var allFiltered = CARDS.filter(function(c){ return currentLevel==='all'||c.level===currentLevel; }).filter(function(c){ return currentTopic==='all'||c.topic===currentTopic; });
+  var known = allFiltered.filter(function(c){ return sessionKnown[c.id]; }).length;
+  var review = allFiltered.filter(function(c){ return sessionReview[c.id]; }).length;
+  var remaining = Math.max(0, deck.length - deckIdx);
+  document.getElementById('statRemaining').textContent = remaining;
+  document.getElementById('statKnown').textContent = known;
+  document.getElementById('statReview').textContent = review;
+
+  // topic stats
+  renderTopicStats();
+}
+
+function renderTopicStats() {
+  var allTopics = {};
+  CARDS.forEach(function(c){ allTopics[c.topic] = allTopics[c.topic] || { total:0, known:0, review:0 }; allTopics[c.topic].total++; if(sessionKnown[c.id]) allTopics[c.topic].known++; if(sessionReview[c.id]) allTopics[c.topic].review++; });
+  var container = document.getElementById('topicStatsTable');
+  var html = '<table class="w-full text-sm"><thead><tr class="border-b border-gray-100"><th class="text-left p-3 text-gray-500 font-semibold">Temat</th><th class="text-center p-3 text-gray-500 font-semibold">Łącznie</th><th class="text-center p-3 text-green-600 font-semibold">Umiem</th><th class="text-center p-3 text-orange-500 font-semibold">Powtórzę</th><th class="text-left p-3 text-gray-500 font-semibold">Postęp</th></tr></thead><tbody>';
+  Object.keys(allTopics).sort().forEach(function(t) {
+    var s = allTopics[t];
+    var pct = Math.round((s.known / s.total) * 100);
+    html += '<tr class="stat-row border-b border-gray-50"><td class="p-3 font-medium">' + t + '</td><td class="text-center p-3">' + s.total + '</td><td class="text-center p-3 text-green-600 font-semibold">' + s.known + '</td><td class="text-center p-3 text-orange-500 font-semibold">' + s.review + '</td><td class="p-3"><div class="flex items-center gap-2"><div class="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden"><div class="h-2 bg-green-400 rounded-full" style="width:' + pct + '%"></div></div><span class="text-xs text-gray-400 w-8">' + pct + '%</span></div></td></tr>';
+  });
+  html += '</tbody></table>';
+  container.innerHTML = html;
+}
+
+// ─── KEYBOARD ───
+document.addEventListener('keydown', function(e) {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); flipCard(); }
+  else if (e.key === 'ArrowRight' && isFlipped) markCard('known');
+  else if (e.key === 'ArrowLeft' && isFlipped) markCard('review');
+});
+
+// ─── MOBILE NAV ───
+document.getElementById('hamburger').onclick = function() {
+  document.getElementById('mobileNav').classList.add('open');
+  document.getElementById('mobileOverlay').classList.add('open');
+};
+document.getElementById('closeMobileNav').onclick = function() {
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('mobileOverlay').classList.remove('open');
+};
+document.getElementById('mobileOverlay').onclick = function() {
+  document.getElementById('mobileNav').classList.remove('open');
+  document.getElementById('mobileOverlay').classList.remove('open');
+};
+
+// ─── INIT ───
+loadState();
+buildDeck();
+renderTopicPills();
+showCard();
+</script>
+</body>
+</html>
