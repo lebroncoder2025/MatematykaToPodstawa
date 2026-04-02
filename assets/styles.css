@@ -275,6 +275,35 @@ body {
   transition: transform var(--transition-fast);
 }
 
+/* ---------- Responsive nav helpers ---------- */
+.nav-brand-text { white-space: nowrap; }
+.nav-links-row { min-width: 0; }
+.nav-links-row a,
+.nav-links-row button { white-space: nowrap; }
+.nav-links-fill {
+  flex: 1 1 auto;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1280px) {
+  .nav-brand-text { font-size: .95rem !important; }
+  .nav-links-row a,
+  .nav-links-row button {
+    font-size: .82rem !important;
+  }
+  .nav-desktop-action { display: none !important; }
+}
+
+@media (max-width: 1100px) {
+  .nav-links-row {
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 2px;
+  }
+  .nav-links-row::-webkit-scrollbar { display: none; }
+}
+
 /* ---------- Cards ---------- */
 .card {
   background: var(--card);

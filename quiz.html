@@ -119,6 +119,8 @@
         </button>
       </div>
 
+      <div id="startNotice" class="hidden mb-6 rounded-2xl border border-rose-200 bg-rose-50 px-5 py-4 text-sm font-medium text-rose-700"></div>
+
       <div class="text-center">
         <button id="startBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-8 py-3.5 rounded-xl transition shadow-lg shadow-blue-200 text-lg inline-flex items-center gap-2">
           <i class="fa-solid fa-play"></i> Rozpocznij quiz
@@ -211,12 +213,23 @@
   <script>
     // ── Generate dynamic question pool on each page load ──
     // quiz-generator.js must be loaded first (via script tag above)
-    const pool = (function() {
-      if (!window.quizGen) { console.warn('quiz-generator.js not loaded'); return []; }
+    const quizSource = (function() {
+      if (!window.quizGen) {
+        console.warn('quiz-generator.js not loaded');
+        return { pool: [], topicLevelMap: {} };
+      }
       var podstawowe = window.quizGen.generate('podstawowy', null, 2000);
       var rozszerzone = window.quizGen.generate('rozszerzony', null, 1500);
-      return podstawowe.concat(rozszerzone);
+      var topicLevelMap = {};
+      podstawowe.forEach(function(q) { topicLevelMap[q.topic] = 'podstawowy'; });
+      rozszerzone.forEach(function(q) { topicLevelMap[q.topic] = 'rozszerzony'; });
+      return {
+        pool: podstawowe.concat(rozszerzone),
+        topicLevelMap: topicLevelMap
+      };
     })();
+    const pool = quizSource.pool;
+    const topicLevelMap = quizSource.topicLevelMap;
 
     let test = [];
     let index = 0;
@@ -240,6 +253,9 @@
       filterBox.innerHTML = '';
       var fp = getFilteredPool();
       var visibleTopics = [...new Set(fp.map(q => q.topic))];
+      if (selectedTopic !== null && visibleTopics.indexOf(selectedTopic) === -1) {
+        selectedTopic = null;
+      }
       // "Wszystkie" button
       const allBtn = document.createElement('button');
       allBtn.className = `px-3 py-1.5 rounded-full text-xs font-bold border transition ${selectedTopic === null ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-400 hover:text-blue-600'}`;
@@ -259,7 +275,7 @@
       document.getElementById('statTCount').textContent = selectedTopic ? '1' : visibleTopics.length;
     }
     renderFilterBtns();
-    document.addEventListener('matura-level-change', function(){ renderFilterBtns(); });
+    document.addEventListener('matura-level-change', function(){ clearStartNotice(); renderFilterBtns(); });
 
     // "Słabe tematy" quick-start — pokazuje si gdy jest historia quizów
     (function() {
@@ -284,7 +300,16 @@
           var lbl = document.getElementById('weakTopicLabel');
           if (lbl) lbl.textContent = worst + ' (' + worstPct + '% poprawnych)';
           var btn = document.getElementById('weakTopicBtn');
-          if (btn) btn.onclick = function() { selectedTopic = worst; renderFilterBtns(); beginQuiz(); };
+          if (btn) btn.onclick = function() {
+            var targetLevel = topicLevelMap[worst];
+            if (targetLevel && window.maturaLevel && window.maturaLevel.get() !== targetLevel) {
+              window.maturaLevel.set(targetLevel);
+            }
+            selectedTopic = worst;
+            clearStartNotice();
+            renderFilterBtns();
+            beginQuiz();
+          };
         }
       } catch(e) {}
     })();
@@ -292,6 +317,7 @@
     const startCard = document.getElementById('startCard');
     const quizCard = document.getElementById('quizCard');
     const resultCard = document.getElementById('resultCard');
+    const startNotice = document.getElementById('startNotice');
     const timerBar = document.getElementById('timerBar');
     const progressText = document.getElementById('progressText');
     const topicTag = document.getElementById('topicTag');
@@ -321,6 +347,24 @@
       }
     }
 
+    function showStartNotice(message, tone) {
+      if (!startNotice) return;
+      startNotice.className = 'mb-6 rounded-2xl border px-5 py-4 text-sm font-medium';
+      if (tone === 'warn') {
+        startNotice.classList.add('border-amber-200', 'bg-amber-50', 'text-amber-800');
+      } else {
+        startNotice.classList.add('border-rose-200', 'bg-rose-50', 'text-rose-700');
+      }
+      startNotice.textContent = message;
+      startNotice.classList.remove('hidden');
+    }
+
+    function clearStartNotice() {
+      if (!startNotice) return;
+      startNotice.textContent = '';
+      startNotice.classList.add('hidden');
+    }
+
     function saveQuizResult(sc, total) {
       const pct = Math.round((sc / total) * 100);
       // Cumulative stats
@@ -347,8 +391,14 @@
     }
 
     function beginQuiz() {
+      clearStartNotice();
       // Generate fresh questions on each quiz start for maximum variety
       var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy';
+      var desiredLevel = selectedTopic ? topicLevelMap[selectedTopic] : null;
+      if (desiredLevel && desiredLevel !== lvl && window.maturaLevel) {
+        window.maturaLevel.set(desiredLevel);
+        lvl = desiredLevel;
+      }
       var freshPool;
       if (window.quizGen) {
         freshPool = lvl === 'rozszerzony'
@@ -358,8 +408,34 @@
         var fp = getFilteredPool();
         freshPool = selectedTopic ? fp.filter(q => q.topic === selectedTopic) : fp;
       }
+      if (!freshPool.length && selectedTopic) {
+        selectedTopic = null;
+        renderFilterBtns();
+        if (window.quizGen) {
+          freshPool = lvl === 'rozszerzony'
+            ? window.quizGen.generate('rozszerzony', null, 200)
+            : window.quizGen.generate('podstawowy', null, 200);
+        } else {
+          freshPool = getFilteredPool();
+        }
+        showStartNotice('Dla tego działu nie było pytań w aktualnym poziomie, więc wróciłem do quizu z całego zakresu.', 'warn');
+      }
+      if (!freshPool.length) {
+        startCard.classList.remove('hidden');
+        resultCard.classList.add('hidden');
+        quizCard.classList.add('hidden');
+        showStartNotice('Nie udało się przygotować pytań. Spróbuj ponownie za chwilę.', 'error');
+        return;
+      }
       const n = Math.min(15, freshPool.length);
       test = shuffle(freshPool).slice(0, n);
+      if (!test.length) {
+        startCard.classList.remove('hidden');
+        resultCard.classList.add('hidden');
+        quizCard.classList.add('hidden');
+        showStartNotice('Nie udało się uruchomić quizu dla wybranego zestawu pytań.', 'error');
+        return;
+      }
       index = 0;
       score = 0;
       answered = false;
@@ -373,6 +449,12 @@
     }
 
     function showQuestion() {
+      if (!test.length || !test[index]) {
+        quizCard.classList.add('hidden');
+        startCard.classList.remove('hidden');
+        showStartNotice('Brakuje pytań dla tego uruchomienia quizu. Wybierz dział jeszcze raz i spróbuj ponownie.', 'error');
+        return;
+      }
       answered = false;
       nextBtn.classList.add('hidden');
       feedbackBox.classList.add('hidden');

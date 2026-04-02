@@ -607,7 +607,7 @@
             <span class="sm:hidden"><i class="fa-solid fa-home"></i></span>
           </a>
 
-          <div class="flex items-center gap-2">
+          <div class="nav-links-row flex items-center gap-2">
             <!-- Topic Switcher -->
             <div class="topic-switcher">
               <button id="switcherBtn" class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-slate-100 transition text-sm font-semibold text-slate-700">

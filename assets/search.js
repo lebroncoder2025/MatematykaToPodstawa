@@ -106,6 +106,7 @@
       '.dark .qs-badge{background:#374151;color:#9ca3af}' +
       '#qs-footer{padding:10px 18px;border-top:1px solid #e5e7eb;font-size:12px;color:#9ca3af;text-align:center}' +
       '.dark #qs-footer{border-color:#374151}' +
+      '@media (max-width:1279px){.qs-nav-trigger{padding:8px 10px}.qs-nav-trigger span,.qs-nav-trigger kbd{display:none!important}}' +
       '.qs-empty{text-align:center;padding:32px;color:#9ca3af;font-size:14px}';
     document.head.appendChild(style);
   }
@@ -183,13 +184,13 @@
 
   // ── Inject search button in desktop nav ──
   function injectButton() {
-    var nav = document.querySelector("nav .flex.items-center.gap-4, nav .flex.items-center.gap-3");
+    var nav = document.querySelector("nav .nav-search-anchor");
     if (!nav) return;
     var btn = document.createElement("button");
-    btn.className = "flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors";
-    btn.innerHTML = '<i class="fa-solid fa-magnifying-glass text-xs"></i><span class="hidden sm:inline">Szukaj</span><kbd class="ml-1 text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded">Ctrl+K</kbd>';
+    btn.className = "qs-nav-trigger flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-sm hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors";
+    btn.innerHTML = '<i class="fa-solid fa-magnifying-glass text-xs"></i><span class="hidden xl:inline">Szukaj</span><kbd class="hidden 2xl:inline-flex ml-1 text-[10px] bg-gray-200 dark:bg-gray-600 px-1.5 py-0.5 rounded">Ctrl+K</kbd>';
     btn.addEventListener("click", open);
-    nav.insertBefore(btn, nav.firstChild);
+    nav.appendChild(btn);
   }
 
   if (document.readyState === "loading") {
