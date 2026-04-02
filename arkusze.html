@@ -1360,11 +1360,15 @@
     document.getElementById('examsDoneCount').textContent = _doneExams.size;
     // Level-switcher integration
     function applyLevelFilter() {
-      var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'oba';
+      var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy';
       document.querySelectorAll('.exam-type-card').forEach(function(card) {
-        if (lvl === 'oba') { card.style.display = ''; return; }
         var cl = card.dataset.level || 'podstawowy';
-        card.style.display = (cl === lvl) ? '' : 'none';
+        // rozszerzony mode: show everything; podstawowy mode: hide rozszerzony cards
+        if (lvl === 'rozszerzony' || cl !== 'rozszerzony') {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
       });
     }
     document.addEventListener('matura-level-change', applyLevelFilter);
@@ -1472,5 +1476,8 @@
       });
     }
   </script>
+  <script src="assets/search.js"></script>
+  <script src="assets/study-timer.js"></script>
+  <script src="assets/scroll-top.js"></script>
 </body>
 </html>

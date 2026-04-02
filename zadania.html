@@ -1064,7 +1064,7 @@ function applyFilters(q) {
   q = normalizeText((q !== undefined ? q : document.getElementById('searchBox').value).trim());
   var mode = document.getElementById('sortMode').value;
   var visible = 0;
-  var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'oba';
+  var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy';
   var cards = Array.from(document.querySelectorAll('.task-card'));
   cards.forEach(function(card) {
     var catMatch = currentFilter === 'all' || card.dataset.cat === currentFilter;
@@ -1073,7 +1073,7 @@ function applyFilters(q) {
     var unsolvedMatch = !onlyUnsolved || card.dataset.solved !== '1';
     var noteMatch = !onlyWithNote || card.dataset.hasnote === '1';
     var diffMatch = !diffFilter || card.dataset.diff === String(diffFilter);
-    var levelMatch = lvl === 'oba' || lvl === 'rozszerzony' || card.dataset.level !== 'R';
+    var levelMatch = lvl === 'rozszerzony' || card.dataset.level !== 'R';
     var show = catMatch && searchMatch && bookMatch && unsolvedMatch && noteMatch && diffMatch && levelMatch;
     card.classList.toggle('hidden-task', !show);
     if (show) visible++;
@@ -1244,5 +1244,8 @@ document.addEventListener('DOMContentLoaded', function(){
       });
     }
   </script>
+  <script src="assets/search.js"></script>
+  <script src="assets/study-timer.js"></script>
+  <script src="assets/scroll-top.js"></script>
 </body>
 </html>

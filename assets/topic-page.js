@@ -13,13 +13,23 @@
     pink:   { badge:"bg-pink-100 text-pink-700",   accent:"text-pink-700",   btn:"text-pink-700",   bg:"bg-pink-50",   border:"border-pink-200" },
     orange: { badge:"bg-orange-100 text-orange-700", accent:"text-orange-700", btn:"text-orange-700", bg:"bg-orange-50", border:"border-orange-200" },
     cyan:   { badge:"bg-cyan-100 text-cyan-700",   accent:"text-cyan-700",   btn:"text-cyan-700",   bg:"bg-cyan-50",   border:"border-cyan-200" },
-    teal:   { badge:"bg-teal-100 text-teal-700",   accent:"text-teal-700",   btn:"text-teal-700",   bg:"bg-teal-50",   border:"border-teal-200" }
+    teal:   { badge:"bg-teal-100 text-teal-700",   accent:"text-teal-700",   btn:"text-teal-700",   bg:"bg-teal-50",   border:"border-teal-200" },
+    rose:   { badge:"bg-rose-100 text-rose-700",   accent:"text-rose-700",   btn:"text-rose-700",   bg:"bg-rose-50",   border:"border-rose-200" },
+    violet: { badge:"bg-violet-100 text-violet-700", accent:"text-violet-700", btn:"text-violet-700", bg:"bg-violet-50", border:"border-violet-200" },
+    fuchsia:{ badge:"bg-fuchsia-100 text-fuchsia-700",accent:"text-fuchsia-700",btn:"text-fuchsia-700",bg:"bg-fuchsia-50",border:"border-fuchsia-200" },
+    amber:  { badge:"bg-amber-100 text-amber-700",  accent:"text-amber-700",  btn:"text-amber-700",  bg:"bg-amber-50",  border:"border-amber-200" },
+    emerald:{ badge:"bg-emerald-100 text-emerald-700",accent:"text-emerald-700",btn:"text-emerald-700",bg:"bg-emerald-50",border:"border-emerald-200" },
+    sky:    { badge:"bg-sky-100 text-sky-700",     accent:"text-sky-700",     btn:"text-sky-700",    bg:"bg-sky-50",    border:"border-sky-200" }
   };
 
-  const order = [
+  const orderPodstawowy = [
     "liczby-rzeczywiste","wyrazenia-algebraiczne","rownania","funkcje","ciagi",
     "trygonometria","planimetria","geometria-analityczna","stereometria","prawdopodobienstwo"
   ];
+  const orderRozszerzony = [
+    "granice","pochodne","liczby-zespolone","wielomiany","dowodzenie","wektory"
+  ];
+  const order = orderPodstawowy.concat(orderRozszerzony);
 
   /* ─── Math ─── */
   function renderMath(root) {
@@ -100,7 +110,7 @@
   /* ─── Topic switcher HTML ─── */
   function buildTopicSwitcher(currentKey) {
     const topics = window.MATURA_TOPICS;
-    const items = order.map(key => {
+    function topicLink(key) {
       const t = topics[key];
       if (!t) return "";
       const isCurrent = key === currentKey;
@@ -109,8 +119,10 @@
         <span>${t.title}</span>
         ${isCurrent ? '<i class="fa-solid fa-circle text-blue-500 text-xs ml-auto"></i>' : ""}
       </a>`;
-    }).join("");
-    return items;
+    }
+    const podstawowe = orderPodstawowy.map(topicLink).join("");
+    const rozszerzone = orderRozszerzony.map(topicLink).join("");
+    return `<div class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Podstawa</div>${podstawowe}<div class="px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-widest text-rose-400 border-t border-slate-100 mt-1">Rozszerzenie</div>${rozszerzone}`;
   }
 
   /* ─── SVG Diagrams ─── */
@@ -633,6 +645,7 @@
         <div class="max-w-7xl mx-auto px-4 py-10 md:py-14">
           <div class="flex flex-wrap items-center gap-3 mb-3">
             <span class="topic-chip ${tone.badge}"><i class="fa-solid ${topic.icon}"></i> Dział maturalny</span>
+            ${topic.level === "rozszerzony" ? '<span class="topic-chip bg-rose-100 text-rose-700 font-bold"><i class="fa-solid fa-fire mr-1"></i>Rozszerzenie</span>' : ''}
             <span class="topic-chip bg-slate-100 text-slate-500">${idx + 1} / ${order.length}</span>
           </div>
           <h1 class="text-3xl md:text-5xl font-black mt-2 mb-4">${topic.title}</h1>
@@ -692,13 +705,27 @@
         <!-- All topics grid -->
         <section class="reveal">
           <h3 class="text-lg font-bold text-slate-700 mb-4"><i class="fa-solid fa-th-large mr-2"></i>Wszystkie działy</h3>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-            ${order.map(k => {
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Podstawa</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mb-4">
+            ${orderPodstawowy.map(k => {
               const t = window.MATURA_TOPICS[k];
               if (!t) return "";
               const c = colorMap[t.color] || colorMap.blue;
               const cur = k === topicKey;
               return `<a href="${k}.html" class="flex flex-col items-center gap-2 p-3 rounded-xl border ${cur ? c.border + " " + c.bg + " font-bold" : "border-slate-200 hover:border-blue-300 hover:bg-blue-50"} transition text-center text-xs text-slate-700">
+                <i class="fa-solid ${t.icon} text-lg ${c.accent}"></i>
+                <span>${t.title}</span>
+              </a>`;
+            }).join("")}
+          </div>
+          <p class="text-xs font-semibold uppercase tracking-wider text-rose-400 mb-2">Rozszerzenie</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+            ${orderRozszerzony.map(k => {
+              const t = window.MATURA_TOPICS[k];
+              if (!t) return "";
+              const c = colorMap[t.color] || colorMap.blue;
+              const cur = k === topicKey;
+              return `<a href="${k}.html" class="flex flex-col items-center gap-2 p-3 rounded-xl border ${cur ? c.border + " " + c.bg + " font-bold" : "border-rose-100 hover:border-rose-300 hover:bg-rose-50"} transition text-center text-xs text-slate-700">
                 <i class="fa-solid ${t.icon} text-lg ${c.accent}"></i>
                 <span>${t.title}</span>
               </a>`;

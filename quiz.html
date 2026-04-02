@@ -257,8 +257,7 @@
 
     // Level-aware pool filter
     function getFilteredPool() {
-      var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'oba';
-      if (lvl === 'oba') return pool;
+      var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy';
       if (lvl === 'podstawowy') return pool.filter(function(q){ return !q.level || q.level === 'podstawowy'; });
       return pool; // rozszerzony = show all (extended includes basic)
     }
@@ -657,5 +656,8 @@
       });
     }
   </script>
+  <script src="assets/search.js"></script>
+  <script src="assets/study-timer.js"></script>
+  <script src="assets/scroll-top.js"></script>
 </body>
 </html>

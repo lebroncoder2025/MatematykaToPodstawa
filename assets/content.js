@@ -1,4 +1,4 @@
-/* ===== Matematyka to Podstawa – Kompendium wiedzy =====
+﻿/* ===== Matematyka to Podstawa – Kompendium wiedzy =====
    Każdy backslash LaTeX-a jest podwójnie ucieczkowiony (\\)
    aby JavaScript poprawnie przekazał je do KaTeX.
    ================================================== */
@@ -1926,7 +1926,7 @@ window.MATURA_TOPICS["granice"] = {
   ],
   mistakes: [
     "Symbol $\\frac{\\infty}{\\infty}$ NIE oznacza 1 — to symbol nieoznaczony, trzeba przekształcać!",
-    "Nie wolno „skracać" nieskończoności: $\\infty - \\infty \\neq 0$.",
+    "Nie wolno 'skracać' nieskończoności: $\\infty - \\infty \\neq 0$.",
     "Granica ciągu geometrycznego $q^n$ NIE istnieje dla $q \\leq -1$ (oscylacja).",
     "$\\lim \\frac{n^2 + 3n}{2n^2 + 1} \\neq \\frac{\\infty}{\\infty}$ — dzielimy przez $n^2$ i dostajemy $\\frac{1}{2}$.",
     "Przy pierwiastku $n$-tego stopnia: $\\sqrt[n]{n} \\to 1$, ale $\\sqrt[n]{n!} \\to \\infty$."
@@ -2392,12 +2392,12 @@ window.MATURA_TOPICS["dowodzenie"] = {
   mistakes: [
     "Indukcja: sam krok bazowy NIE wystarcza! Trzeba KONIECZNIE i bazę, i krok indukcyjny.",
     "Krok indukcyjny: dowodzimy $P(k) \\implies P(k+1)$, a NIE tylko $P(k+1)$. Trzeba UŻYĆ założenia indukcyjnego!",
-    "Dowód nie wprost: musisz dojść do JAWNEJ sprzeczności (np. $0 > 0$), nie tylko do „dziwnego" wyniku.",
-    "Kontrapozycja: $\\neg q \\implies \\neg p$, a NIE $\\neg p \\implies \\neg q$ (to byłoby „odwrotne")."
+    "Dowód nie wprost: musisz dojść do JAWNEJ sprzeczności (np. $0 > 0$), nie tylko do 'dziwnego' wyniku.",
+    "Kontrapozycja: $\\neg q \\implies \\neg p$, a NIE $\\neg p \\implies \\neg q$ (to byłoby 'odwrotne')."
   ],
   strategy: [
     "Teza o $\\forall n \\in \\mathbb{N}$: → indukcja matematyczna",
-    "Teza „pewna liczba jest niewymierna / nieskończona": → dowód nie wprost",
+    "Teza 'pewna liczba jest niewymierna / nieskończona': → dowód nie wprost",
     "Teza $p \\implies q$ trudna bezpośrednio: → kontrapozycja",
     "Nierówność do udowodnienia: → sprowadź do $(\\text{coś})^2 \\geq 0$"
   ],

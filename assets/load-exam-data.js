@@ -1,6 +1,6 @@
 /**
  * Script to dynamically load exam data from JSON files
- * Replaces hardcoded EXAMS array with data from arkusze/*/tasks.json
+ * Replaces hardcoded EXAMS array with data from arkusze/{dir}/tasks.json
  */
 
 // Map of exam directories to metadata
