@@ -4,7 +4,7 @@
 // Strona działa w pełni offline po pierwszym odwiedzeniu.
 // ================================================================
 
-var CACHE = 'mtp-v9';
+var CACHE = 'mtp-v10';
 
 var LOCAL_ASSETS = [
   '/',
@@ -28,7 +28,6 @@ var LOCAL_ASSETS = [
   '/dzialy/wyrazenia-algebraiczne.html',
   '/dzialy/granice.html',
   '/dzialy/pochodne.html',
-  '/dzialy/liczby-zespolone.html',
   '/dzialy/wielomiany.html',
   '/dzialy/dowodzenie.html',
   '/dzialy/wektory.html',

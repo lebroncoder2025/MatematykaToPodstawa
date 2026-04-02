@@ -27,7 +27,7 @@
     "trygonometria","planimetria","geometria-analityczna","stereometria","prawdopodobienstwo"
   ];
   const orderRozszerzony = [
-    "granice","pochodne","liczby-zespolone","wielomiany","dowodzenie","wektory"
+    "granice","pochodne","wielomiany","dowodzenie","wektory"
   ];
   const order = orderPodstawowy.concat(orderRozszerzony);
 

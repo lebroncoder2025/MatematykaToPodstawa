@@ -99,13 +99,16 @@ function loadExamData() {
     });
     
     if (loadedExams.length > 0) {
-      // Replace EXAMS with loaded data
-      window.EXAMS = loadedExams;
+      // Preserve rozszerzony exams from hardcoded array
+      var rozszExams = (window.EXAMS || []).filter(function(e) { return e.examType === 'rozszerzony'; });
+      window.EXAMS = loadedExams.concat(rozszExams);
       
       // Re-render if renderExams function exists
       if (typeof renderExams === 'function') {
         renderExams();
       }
+      // Re-apply level filter after re-render
+      document.dispatchEvent(new CustomEvent('matura-level-change', { detail: { level: (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy' } }));
     }
   });
 }

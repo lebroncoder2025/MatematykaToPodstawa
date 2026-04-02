@@ -136,6 +136,10 @@
     }
     updateToggleUI(lvl);
     applyLevel(lvl);
+    // Dispatch event after all DOMContentLoaded handlers finish so page-specific listeners are ready
+    setTimeout(function() {
+      document.dispatchEvent(new CustomEvent('matura-level-change', { detail: { level: lvl } }));
+    }, 0);
 
     // If nav wasn't found (e.g. topic-page.js hasn't rendered yet), retry
     if (!toggleInjected) {
@@ -152,6 +156,4 @@
     }
   }
 
-  // Apply immediately for elements already in DOM
-  applyLevel(getLevel());
 })();

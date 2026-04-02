@@ -5,7 +5,7 @@
   <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zadania z Rozwiązaniami – Matematyka to Podstawa</title>
-  <meta name="description" content="50+ w pełni rozwiązanych zadań maturalnych krok po kroku — poziom podstawowy i rozszerzony. Granice, pochodne, liczby zespolone, wektory i więcej."/>
+  <meta name="description" content="50+ w pełni rozwiązanych zadań maturalnych krok po kroku — poziom podstawowy i rozszerzony. Granice, pochodne, wielomiany, wektory i więcej."/>
   <link rel="canonical" href="https://matematykatopodstawa.pl/zadania.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Zadania maturalne z rozwiązaniami krok po kroku"/>
@@ -778,43 +778,6 @@ const TASKS = [
   ],
   answer:'max lok. $f(1) = 1$, min lok. $f(2) = 0$'
 },
-/* ── LICZBY ZESPOLONE (cat 12) ── */
-{
-  id:42, cat:12, diff:1, level:'R',
-  title:'Działania na liczbach zespolonych',
-  content:'Oblicz $(5+3i) - (2-i) + (1+4i)$.',
-  hint:'Dodaj/odejmij osobno części rzeczywiste i urojone.',
-  steps:[
-    {col:0, text:'Re: $5 - 2 + 1 = 4$. Im: $3 - (-1) + 4 = 8$.'},
-    {col:1, text:'Wynik: $4 + 8i$.'},
-    {col:2, text:'Bezpośrednie działania na częściach.'},
-  ],
-  answer:'$4 + 8i$'
-},
-{
-  id:43, cat:12, diff:2, level:'R',
-  title:'Dzielenie przez liczbę zespoloną',
-  content:'Oblicz $\\dfrac{3+i}{1+2i}$.',
-  hint:'Mnóż przez sprzężenie mianownika.',
-  steps:[
-    {col:0, text:'$\\frac{(3+i)(1-2i)}{(1+2i)(1-2i)} = \\frac{3-6i+i-2i^2}{1+4} = \\frac{3-5i+2}{5} = \\frac{5-5i}{5}$'},
-    {col:1, text:'$= 1 - i$'},
-    {col:2, text:'Pamiętaj: $i^2 = -1$.'},
-  ],
-  answer:'$1 - i$'
-},
-{
-  id:44, cat:12, diff:3, level:'R',
-  title:'Pierwiastki zespolone równania kwadratowego',
-  content:'Znajdź pierwiastki $z^2 + 4z + 13 = 0$ w $\\mathbb{C}$.',
-  hint:'$\\Delta = 16 - 52 = -36 < 0$.',
-  steps:[
-    {col:0, text:'$\\Delta = 16 - 52 = -36$. $\\sqrt{\\Delta} = 6i$.'},
-    {col:1, text:'$z = \\frac{-4 \\pm 6i}{2} = -2 \\pm 3i$'},
-    {col:2, text:'Dwa sprzężone pierwiastki zespolone.'},
-  ],
-  answer:'$z = -2 + 3i$ lub $z = -2 - 3i$'
-},
 /* ── WIELOMIANY (cat 13) ── */
 {
   id:45, cat:13, diff:1, level:'R',
@@ -912,7 +875,7 @@ var onlyBookmarked = false;
 var onlyUnsolved = false;
 var onlyWithNote = false;
 var diffFilter = 0;  // 0 = all, 1/2/3 = only that difficulty
-var catNames = ['Liczby','Algebra','Równania','Funkcje','Fk. Kwadr.','Ciągi','Trygonom.','Planimetria','Stereometria','Statystyka','Granice','Pochodne','Zespolone','Wielomiany','Dowodzenie','Wektory'];
+var catNames = ['Liczby','Algebra','Równania','Funkcje','Fk. Kwadr.','Ciągi','Trygonom.','Planimetria','Stereometria','Statystyka','Granice','Pochodne','—','Wielomiany','Dowodzenie','Wektory'];
 var catColors = ['cat-0','cat-1','cat-2','cat-3','cat-4','cat-5','cat-6','cat-7','cat-8','cat-9','cat-0','cat-1','cat-2','cat-3','cat-4','cat-5'];
 var diffColors = [null,'#10b981','#f59e0b','#ef4444'];
 var diffLabels = [null,'Łatwe','Średnie','Trudne'];

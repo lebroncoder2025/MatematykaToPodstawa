@@ -5,7 +5,7 @@
   <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wzory Maturalne – Ściągawka (Podstawa + Rozszerzenie) | Matematyka to Podstawa</title>
-  <meta name="description" content="Kompletny zbiór wzorów na maturę z matematyki — poziom podstawowy i rozszerzony. Algebra, pochodne, granice, liczby zespolone, wektory. Wersja do druku."/>
+  <meta name="description" content="Kompletny zbiór wzorów na maturę z matematyki — poziom podstawowy i rozszerzony. Algebra, pochodne, granice, wielomiany, wektory. Wersja do druku."/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
@@ -145,7 +145,6 @@
         <button class="filter-chip" data-section="kombina" onclick="filterSection(this)" data-level="podstawowy">Kombinatoryka</button>
         <button class="filter-chip" data-section="granice" onclick="filterSection(this)" data-level="rozszerzony">🔴 Granice</button>
         <button class="filter-chip" data-section="pochodne" onclick="filterSection(this)" data-level="rozszerzony">🔴 Pochodne</button>
-        <button class="filter-chip" data-section="zespolone" onclick="filterSection(this)" data-level="rozszerzony">🔴 Zespolone</button>
         <button class="filter-chip" data-section="wektory" onclick="filterSection(this)" data-level="rozszerzony">🔴 Wektory</button>
         <button class="filter-chip" data-section="ulubione" onclick="filterSection(this)" id="ulubioneChip" style="display:none"><i class="fa-solid fa-star text-yellow-500 mr-1"></i>Ulubione (<span id="ulubioneCount">0</span>)</button>
       </div>
@@ -507,32 +506,6 @@
       <div class="formula-card" data-label="złożenie" data-math="(f(g(x)))'=f'(g(x))*g'(x)"><p class="formula-label">Złożenie (łańcuch)</p><div class="formula-math">$(f(g(x)))' = f'(g(x))\cdot g'(x)$</div><button class="copy-btn" onclick="copyFormula(this,'(f∘g)\'=f\'(g)·g\'')"><i class="fa-regular fa-copy"></i></button></div>
       <div class="formula-card" data-label="styczna" data-math="y=f'(x₀)(x-x₀)+f(x₀)"><p class="formula-label">Styczna do wykresu</p><div class="formula-math">$y = f'(x_0)(x-x_0)+f(x_0)$</div><button class="copy-btn" onclick="copyFormula(this,'y=f\'(x₀)(x-x₀)+f(x₀)')"><i class="fa-regular fa-copy"></i></button></div>
       <div class="formula-card" data-label="monotoniczność" data-math="f'>0 rosnąca, f'<0 malejąca"><p class="formula-label">Monotoniczność</p><div class="formula-math">$f'>0\Rightarrow f\!\uparrow,\quad f'<0\Rightarrow f\!\downarrow$</div><button class="copy-btn" onclick="copyFormula(this,'f\'>0→rośnie, f\'<0→maleje')"><i class="fa-regular fa-copy"></i></button></div>
-    </div>
-  </div>
-</div>
-
-<!-- ═══════ SECTION: LICZBY ZESPOLONE ═══════ -->
-<div class="section-card" id="sec-zespolone" data-level="rozszerzony">
-  <div class="section-header" onclick="toggleSection('zespolone')">
-    <div class="flex items-center gap-3">
-      <div class="w-10 h-10 bg-fuchsia-100 rounded-xl flex items-center justify-center text-lg text-fuchsia-600 font-black"><i class="fa-solid fa-atom"></i></div>
-      <div>
-        <h2 class="font-black text-gray-900 text-lg">Liczby zespolone <span class="text-xs font-bold text-rose-500 ml-1">ROZSZERZENIE</span></h2>
-        <p class="text-gray-400 text-xs">Postać algebraiczna · Moduł · Argument · Postać trygonometryczna</p>
-      </div>
-    </div>
-    <i class="fa-solid fa-chevron-down text-fuchsia-500 text-sm chevron-zespolone transition-transform"></i>
-  </div>
-  <div class="section-body" id="body-zespolone">
-    <div class="formula-grid">
-      <div class="formula-card" data-label="postać algebraiczna" data-math="z=a+bi"><p class="formula-label">Postać algebraiczna</p><div class="formula-math">$z = a + bi,\quad i^2=-1$</div><button class="copy-btn" onclick="copyFormula(this,'z=a+bi')"><i class="fa-regular fa-copy"></i></button></div>
-      <div class="formula-card" data-label="sprzężenie" data-math="z̄=a-bi"><p class="formula-label">Sprzężenie</p><div class="formula-math">$\bar{z} = a - bi$</div><button class="copy-btn" onclick="copyFormula(this,'z̄=a-bi')"><i class="fa-regular fa-copy"></i></button></div>
-      <div class="formula-card" data-label="moduł" data-math="|z|=√(a²+b²)"><p class="formula-label">Moduł</p><div class="formula-math">$|z| = \sqrt{a^2+b^2}$</div><button class="copy-btn" onclick="copyFormula(this,'|z|=√(a²+b²)')"><i class="fa-regular fa-copy"></i></button></div>
-      <div class="formula-card" data-label="z*z̄=|z|²" data-math="z·z̄=|z|²"><p class="formula-label">Iloczyn ze sprzężeniem</p><div class="formula-math">$z\cdot\bar{z} = a^2+b^2 = |z|^2$</div><button class="copy-btn" onclick="copyFormula(this,'z·z̄=|z|²')"><i class="fa-regular fa-copy"></i></button></div>
-      <div class="formula-card" data-label="postać trygonometryczna" data-math="z=r(cosφ+isinφ)"><p class="formula-label">Postać trygonometryczna</p><div class="formula-math">$z = r(\cos\varphi + i\sin\varphi)$</div><button class="copy-btn" onclick="copyFormula(this,'z=r(cosφ+isinφ)')"><i class="fa-regular fa-copy"></i></button></div>
-      <div class="formula-card" data-label="wzór de moivre'a" data-math="z^n=r^n(cos nφ+i sin nφ)"><p class="formula-label">Wzór de Moivre'a</p><div class="formula-math">$z^n = r^n(\cos n\varphi + i\sin n\varphi)$</div><button class="copy-btn" onclick="copyFormula(this,'z^n=r^n(cos nφ+isin nφ)')"><i class="fa-regular fa-copy"></i></button></div>
-      <div class="formula-card" data-label="cykliczność potęg i" data-math="i¹=i, i²=-1, i³=-i, i⁴=1"><p class="formula-label">Potęgi $i$</p><div class="formula-math">$i^1\!=\!i,\ i^2\!=\!-1,\ i^3\!=\!-i,\ i^4\!=\!1$</div><button class="copy-btn" onclick="copyFormula(this,'i¹=i,i²=-1,i³=-i,i⁴=1')"><i class="fa-regular fa-copy"></i></button></div>
-      <div class="formula-card" data-label="delta ujemna" data-math="z=(-b±i√|Δ|)/(2a)"><p class="formula-label">Pierwiastki ($\Delta<0$)</p><div class="formula-math">$z = \dfrac{-b\pm i\sqrt{|\Delta|}}{2a}$</div><button class="copy-btn" onclick="copyFormula(this,'z=(-b±i√|Δ|)/(2a)')"><i class="fa-regular fa-copy"></i></button></div>
     </div>
   </div>
 </div>

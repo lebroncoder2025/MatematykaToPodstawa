@@ -1284,12 +1284,21 @@
     }
   }
 
+  var currentTypeFilter = 'all';
+
   function filterType(type, btn) {
+    currentTypeFilter = type;
     document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
     btn.classList.add('active');
+    applyAllExamFilters();
+  }
+
+  function applyAllExamFilters() {
+    var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy';
     document.querySelectorAll('.exam-type-card').forEach(function(card) {
-      var show = type === 'all' || card.dataset.type === type || (type === 'done' && card.classList.contains('is-done'));
-      card.style.display = show ? '' : 'none';
+      var typeMatch = currentTypeFilter === 'all' || card.dataset.type === currentTypeFilter || (currentTypeFilter === 'done' && card.classList.contains('is-done'));
+      var levelMatch = (card.dataset.level || 'podstawowy') === lvl;
+      card.style.display = (typeMatch && levelMatch) ? '' : 'none';
     });
   }
 
@@ -1358,21 +1367,9 @@
   document.addEventListener('DOMContentLoaded', function() {
     renderExams();
     document.getElementById('examsDoneCount').textContent = _doneExams.size;
-    // Level-switcher integration
-    function applyLevelFilter() {
-      var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy';
-      document.querySelectorAll('.exam-type-card').forEach(function(card) {
-        var cl = card.dataset.level || 'podstawowy';
-        // exclusive mode: show only cards matching current level
-        if (cl === lvl) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    }
-    document.addEventListener('matura-level-change', applyLevelFilter);
-    setTimeout(applyLevelFilter, 100);
+    // Level-switcher integration — use combined filter
+    document.addEventListener('matura-level-change', applyAllExamFilters);
+    setTimeout(applyAllExamFilters, 100);
   });
   </script>
 
