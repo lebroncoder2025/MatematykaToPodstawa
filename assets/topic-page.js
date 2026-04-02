@@ -122,7 +122,7 @@
     }
     const podstawowe = orderPodstawowy.map(topicLink).join("");
     const rozszerzone = orderRozszerzony.map(topicLink).join("");
-    return `<div class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Podstawa</div>${podstawowe}<div data-level="rozszerzony" class="px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-widest text-rose-400 border-t border-slate-100 mt-1">Rozszerzenie</div><div data-level="rozszerzony">${rozszerzone}</div>`;
+    return `<div data-level="podstawowy" class="px-3 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">Podstawa</div><div data-level="podstawowy">${podstawowe}</div><div data-level="rozszerzony" class="px-3 pt-3 pb-1 text-[10px] font-bold uppercase tracking-widest text-rose-400 border-t border-slate-100 mt-1">Rozszerzenie</div><div data-level="rozszerzony">${rozszerzone}</div>`;
   }
 
   /* ─── SVG Diagrams ─── */
@@ -705,8 +705,8 @@
         <!-- All topics grid -->
         <section class="reveal">
           <h3 class="text-lg font-bold text-slate-700 mb-4"><i class="fa-solid fa-th-large mr-2"></i>Wszystkie działy</h3>
-          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Podstawa</p>
-          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mb-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2" data-level="podstawowy">Podstawa</p>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mb-4" data-level="podstawowy">
             ${orderPodstawowy.map(k => {
               const t = window.MATURA_TOPICS[k];
               if (!t) return "";

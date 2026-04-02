@@ -167,7 +167,7 @@
             <div class="mt-10 animate-fade-in-up delay-3" id="maturaCountdownWrap">
               <div class="flex flex-col sm:flex-row justify-center gap-6 sm:gap-10">
                 <!-- Podstawowa -->
-                <div class="text-center">
+                <div class="text-center" data-level="podstawowy">
                   <p class="text-blue-200/80 text-[11px] font-bold mb-3 uppercase tracking-widest">&#9203; Matura podstawowa 2026 za:</p>
                   <div class="inline-flex items-center gap-3 sm:gap-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-6 sm:px-10 py-4">
                     <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-days">--</span><p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">dni</p></div>
@@ -401,7 +401,7 @@
             <h2 class="text-3xl md:text-4xl font-black text-gray-900 mb-4">Interaktywne działy tematyczne</h2>
             <p class="text-gray-500 max-w-2xl mx-auto text-base md:text-lg">Wybierz temat i opanuj go do perfekcji. Każdy dział zawiera teorię, wzory, strategie i zadania z pełnymi rozwiązaniami. Użyj przełącznika poziomu w nawigacji, aby filtrować treści.</p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 md:gap-6">
+        <div data-level="podstawowy" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-5 md:gap-6">
             <!-- 1. Liczby Rzeczywiste -->
             <a href="dzialy/liczby-rzeczywiste.html" class="topic-grid-card group bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-400 reveal" onclick="saveScroll()">
                 <div class="w-12 h-12 md:w-14 md:h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-5 group-hover:bg-blue-600 transition-colors duration-300">

@@ -259,7 +259,7 @@
     function getFilteredPool() {
       var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy';
       if (lvl === 'podstawowy') return pool.filter(function(q){ return !q.level || q.level === 'podstawowy'; });
-      return pool; // rozszerzony = show all (extended includes basic)
+      return pool.filter(function(q){ return q.level === 'rozszerzony'; });
     }
 
     // Build topic filter buttons

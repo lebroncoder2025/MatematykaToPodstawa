@@ -134,15 +134,15 @@
       </div>
       <div class="flex gap-2 flex-wrap">
         <button class="filter-chip active" data-section="all" onclick="filterSection(this)">Wszystkie</button>
-        <button class="filter-chip" data-section="algebra" onclick="filterSection(this)">Algebra</button>
-        <button class="filter-chip" data-section="rownania" onclick="filterSection(this)">Równania</button>
-        <button class="filter-chip" data-section="funkcje" onclick="filterSection(this)">Funkcje</button>
-        <button class="filter-chip" data-section="tryg" onclick="filterSection(this)">Trygonometria</button>
-        <button class="filter-chip" data-section="ciagi" onclick="filterSection(this)">Ciągi</button>
-        <button class="filter-chip" data-section="geo2d" onclick="filterSection(this)">Planimetria</button>
-        <button class="filter-chip" data-section="geo3d" onclick="filterSection(this)">Stereometria</button>
-        <button class="filter-chip" data-section="analityczna" onclick="filterSection(this)">Analityczna</button>
-        <button class="filter-chip" data-section="kombina" onclick="filterSection(this)">Kombinatoryka</button>
+        <button class="filter-chip" data-section="algebra" onclick="filterSection(this)" data-level="podstawowy">Algebra</button>
+        <button class="filter-chip" data-section="rownania" onclick="filterSection(this)" data-level="podstawowy">Równania</button>
+        <button class="filter-chip" data-section="funkcje" onclick="filterSection(this)" data-level="podstawowy">Funkcje</button>
+        <button class="filter-chip" data-section="tryg" onclick="filterSection(this)" data-level="podstawowy">Trygonometria</button>
+        <button class="filter-chip" data-section="ciagi" onclick="filterSection(this)" data-level="podstawowy">Ciągi</button>
+        <button class="filter-chip" data-section="geo2d" onclick="filterSection(this)" data-level="podstawowy">Planimetria</button>
+        <button class="filter-chip" data-section="geo3d" onclick="filterSection(this)" data-level="podstawowy">Stereometria</button>
+        <button class="filter-chip" data-section="analityczna" onclick="filterSection(this)" data-level="podstawowy">Analityczna</button>
+        <button class="filter-chip" data-section="kombina" onclick="filterSection(this)" data-level="podstawowy">Kombinatoryka</button>
         <button class="filter-chip" data-section="granice" onclick="filterSection(this)" data-level="rozszerzony">🔴 Granice</button>
         <button class="filter-chip" data-section="pochodne" onclick="filterSection(this)" data-level="rozszerzony">🔴 Pochodne</button>
         <button class="filter-chip" data-section="zespolone" onclick="filterSection(this)" data-level="rozszerzony">🔴 Zespolone</button>
@@ -157,7 +157,7 @@
 <main class="max-w-7xl mx-auto px-4 py-10">
 
 <!-- ═══════ SECTION: ALGEBRA ═══════ -->
-<div class="section-card" id="sec-algebra">
+<div class="section-card" id="sec-algebra" data-level="podstawowy">
   <div class="section-header open" onclick="toggleSection('algebra')">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 sb0 rounded-xl flex items-center justify-center text-lg s0 font-black">A</div>
@@ -224,7 +224,7 @@
 </div>
 
 <!-- ═══════ SECTION: RÓWNANIA ═══════ -->
-<div class="section-card" id="sec-rownania">
+<div class="section-card" id="sec-rownania" data-level="podstawowy">
   <div class="section-header open" onclick="toggleSection('rownania')">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 sb2 rounded-xl flex items-center justify-center text-lg s2 font-black">=</div>
@@ -246,7 +246,7 @@
 </div>
 
 <!-- ═══════ SECTION: FUNKCJE ═══════ -->
-<div class="section-card" id="sec-funkcje">
+<div class="section-card" id="sec-funkcje" data-level="podstawowy">
   <div class="section-header open" onclick="toggleSection('funkcje')">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 sb3 rounded-xl flex items-center justify-center text-lg s3 font-black">f</div>
@@ -274,7 +274,7 @@
 </div>
 
 <!-- ═══════ SECTION: TRYGONOMETRIA ═══════ -->
-<div class="section-card" id="sec-tryg">
+<div class="section-card" id="sec-tryg" data-level="podstawowy">
   <div class="section-header open" onclick="toggleSection('tryg')">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 sb6 rounded-xl flex items-center justify-center text-lg s6 font-black">∠</div>
@@ -312,7 +312,7 @@
 </div>
 
 <!-- ═══════ SECTION: CIĄGI ═══════ -->
-<div class="section-card" id="sec-ciagi">
+<div class="section-card" id="sec-ciagi" data-level="podstawowy">
   <div class="section-header open" onclick="toggleSection('ciagi')">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 sb5 rounded-xl flex items-center justify-center text-lg s5 font-black">∑</div>
@@ -339,7 +339,7 @@
 </div>
 
 <!-- ═══════ SECTION: PLANIMETRIA ═══════ -->
-<div class="section-card" id="sec-geo2d">
+<div class="section-card" id="sec-geo2d" data-level="podstawowy">
   <div class="section-header open" onclick="toggleSection('geo2d')">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 sb7 rounded-xl flex items-center justify-center text-lg s7 font-black">△</div>
@@ -370,7 +370,7 @@
 </div>
 
 <!-- ═══════ SECTION: STEREOMETRIA ═══════ -->
-<div class="section-card" id="sec-geo3d">
+<div class="section-card" id="sec-geo3d" data-level="podstawowy">
   <div class="section-header open" onclick="toggleSection('geo3d')">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 sb8 rounded-xl flex items-center justify-center text-lg s8 font-black">▲</div>
@@ -396,7 +396,7 @@
 </div>
 
 <!-- ═══════ SECTION: GEOMETRIA ANALITYCZNA ═══════ -->
-<div class="section-card" id="sec-analityczna">
+<div class="section-card" id="sec-analityczna" data-level="podstawowy">
   <div class="section-header open" onclick="toggleSection('analityczna')">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 sb1 rounded-xl flex items-center justify-center text-lg s1 font-black">xy</div>
@@ -419,7 +419,7 @@
 </div>
 
 <!-- ═══════ SECTION: KOMBINATORYKA ═══════ -->
-<div class="section-card" id="sec-kombina">
+<div class="section-card" id="sec-kombina" data-level="podstawowy">
   <div class="section-header open" onclick="toggleSection('kombina')">
     <div class="flex items-center gap-3">
       <div class="w-10 h-10 sb9 rounded-xl flex items-center justify-center text-lg s9 font-black">C</div>

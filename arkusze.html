@@ -1363,8 +1363,8 @@
       var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy';
       document.querySelectorAll('.exam-type-card').forEach(function(card) {
         var cl = card.dataset.level || 'podstawowy';
-        // rozszerzony mode: show everything; podstawowy mode: hide rozszerzony cards
-        if (lvl === 'rozszerzony' || cl !== 'rozszerzony') {
+        // exclusive mode: show only cards matching current level
+        if (cl === lvl) {
           card.style.display = '';
         } else {
           card.style.display = 'none';
