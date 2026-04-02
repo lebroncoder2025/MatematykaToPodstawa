@@ -1863,3 +1863,687 @@ window.MATURA_TOPICS = {
 }
 
 }; // end MATURA_TOPICS
+
+/* ═══════════════════════════════════════════════════════════════
+   ROZSZERZENIE — dodatkowe działy (Matura rozszerzona, Formuła 2023)
+   ═══════════════════════════════════════════════════════════════ */
+
+window.MATURA_TOPICS["granice"] = {
+  title: "Granice ciągów",
+  color: "rose",
+  icon: "fa-infinity",
+  level: "rozszerzony",
+  intro: "Granice ciągów to fundament analizy matematycznej. Na maturze rozszerzonej wymagane jest obliczanie granic ciągów, rozpoznawanie symboli nieoznaczonych i stosowanie podstawowych twierdzeń o granicach.",
+  examFocus: ["Granica ciągu — definicja i obliczanie", "Symbole nieoznaczone", "Twierdzenie o trzech ciągach", "Granice ważne", "Ciągi zbieżne i rozbieżne"],
+  theory: [
+    {
+      title: "Definicja granicy ciągu",
+      text: "Ciąg $(a_n)$ ma granicę $g$ (jest zbieżny do $g$), jeśli dla każdego $\\varepsilon > 0$ istnieje taki numer $N$, że dla wszystkich $n > N$ zachodzi $|a_n - g| < \\varepsilon$. Zapisujemy: $\\lim_{n\\to\\infty} a_n = g$.",
+      formulas: [
+        { latex: "\\lim_{n\\to\\infty} a_n = g \\iff \\forall_{\\varepsilon>0}\\ \\exists_{N\\in\\mathbb{N}}\\ \\forall_{n>N}\\ |a_n - g| < \\varepsilon", meaning: "Definicja Cauchy'ego granicy ciągu" },
+        { latex: "\\lim_{n\\to\\infty} \\frac{1}{n^k} = 0 \\quad (k > 0)", meaning: "Potęgi $n$ w mianowniku dają granicę 0" },
+        { latex: "\\lim_{n\\to\\infty} q^n = 0 \\quad (|q| < 1)", meaning: "Ciąg geometryczny z $|q|<1$ jest zbieżny do 0" },
+        { latex: "\\lim_{n\\to\\infty} \\sqrt[n]{n} = 1", meaning: "Jedna z granic ważnych" }
+      ]
+    },
+    {
+      title: "Arytmetyka granic",
+      text: "Jeśli $\\lim a_n = a$ i $\\lim b_n = b$, to możemy obliczać granice sum, iloczynów i ilorazów.",
+      formulas: [
+        { latex: "\\lim (a_n \\pm b_n) = a \\pm b", meaning: "Granica sumy/różnicy" },
+        { latex: "\\lim (a_n \\cdot b_n) = a \\cdot b", meaning: "Granica iloczynu" },
+        { latex: "\\lim \\frac{a_n}{b_n} = \\frac{a}{b} \\quad (b \\neq 0)", meaning: "Granica ilorazu (mianownik niezerowy)" },
+        { latex: "\\lim (c \\cdot a_n) = c \\cdot a", meaning: "Stała wychodzi przed granicę" }
+      ]
+    },
+    {
+      title: "Symbole nieoznaczone",
+      text: "Pojawiają się, gdy bezpośrednie zastosowanie arytmetyki granic daje wyrażenie nieokreślone. Trzeba je przekształcić.",
+      formulas: [
+        { latex: "\\frac{\\infty}{\\infty}", meaning: "Dzielimy licznik i mianownik przez najwyższą potęgę $n$" },
+        { latex: "\\infty - \\infty", meaning: "Mnożymy przez sprzężenie lub rozkładamy na czynniki" },
+        { latex: "0 \\cdot \\infty", meaning: "Przekształcamy do postaci $\\frac{0}{0}$ lub $\\frac{\\infty}{\\infty}$" },
+        { latex: "1^\\infty", meaning: "Korzystamy z $\\lim\\left(1+\\frac{1}{n}\\right)^n = e$" }
+      ]
+    },
+    {
+      title: "Twierdzenie o trzech ciągach (o dwóch policjantach)",
+      text: "Jeśli $a_n \\leq c_n \\leq b_n$ i $\\lim a_n = \\lim b_n = g$, to $\\lim c_n = g$.",
+      formulas: [
+        { latex: "a_n \\leq c_n \\leq b_n,\\quad \\lim a_n = \\lim b_n = g \\implies \\lim c_n = g", meaning: "Twierdzenie o trzech ciągach" }
+      ]
+    },
+    {
+      title: "Granice ważne",
+      text: "Kilka granic, które warto znać na pamięć:",
+      formulas: [
+        { latex: "\\lim_{n\\to\\infty} \\left(1 + \\frac{1}{n}\\right)^n = e", meaning: "Definicja liczby Eulera" },
+        { latex: "\\lim_{n\\to\\infty} \\frac{n!}{n^n} = 0", meaning: "Silnia rośnie wolniej niż $n^n$" },
+        { latex: "\\lim_{n\\to\\infty} \\frac{a^n}{n!} = 0 \\quad (a > 0)", meaning: "Wykładnicza rośnie wolniej niż silnia" },
+        { latex: "\\lim_{n\\to\\infty} \\sqrt[n]{a} = 1 \\quad (a > 0)", meaning: "Pierwiastek $n$-tego stopnia z ustalonej liczby" }
+      ]
+    }
+  ],
+  mistakes: [
+    "Symbol $\\frac{\\infty}{\\infty}$ NIE oznacza 1 — to symbol nieoznaczony, trzeba przekształcać!",
+    "Nie wolno „skracać" nieskończoności: $\\infty - \\infty \\neq 0$.",
+    "Granica ciągu geometrycznego $q^n$ NIE istnieje dla $q \\leq -1$ (oscylacja).",
+    "$\\lim \\frac{n^2 + 3n}{2n^2 + 1} \\neq \\frac{\\infty}{\\infty}$ — dzielimy przez $n^2$ i dostajemy $\\frac{1}{2}$.",
+    "Przy pierwiastku $n$-tego stopnia: $\\sqrt[n]{n} \\to 1$, ale $\\sqrt[n]{n!} \\to \\infty$."
+  ],
+  strategy: [
+    "Zawsze najpierw spróbuj podstawić — jeśli dostaniesz symbol nieoznaczony, przekształcaj",
+    "Przy $\\frac{\\infty}{\\infty}$ z wielomianami: dziel przez najwyższą potęgę $n$",
+    "Przy $\\infty - \\infty$ z pierwiastkami: mnóż przez sprzężenie $\\frac{\\sqrt{\\cdot} + \\sqrt{\\cdot}}{\\sqrt{\\cdot} + \\sqrt{\\cdot}}$",
+    "Przy formie $1^\\infty$: sprowadź do $\\left(1 + \\frac{1}{n}\\right)^n \\to e$"
+  ],
+  tasks: [
+    {
+      level: "łatwe",
+      q: "Oblicz $\\displaystyle\\lim_{n\\to\\infty} \\frac{3n^2 + n}{5n^2 - 2}$.",
+      hint: "Podziel licznik i mianownik przez $n^2$.",
+      steps: [
+        { math: "$\\frac{3n^2 + n}{5n^2 - 2} = \\frac{3 + \\frac{1}{n}}{5 - \\frac{2}{n^2}}$", comment: "Dzielimy każdy wyraz przez $n^2$." },
+        { math: "$\\lim_{n\\to\\infty} \\frac{3 + \\frac{1}{n}}{5 - \\frac{2}{n^2}} = \\frac{3 + 0}{5 - 0} = \\frac{3}{5}$", comment: "Wyrazy $\\frac{1}{n}$ i $\\frac{2}{n^2}$ dążą do 0." }
+      ],
+      answer: "$\\frac{3}{5}$"
+    },
+    {
+      level: "łatwe",
+      q: "Oblicz $\\displaystyle\\lim_{n\\to\\infty} \\frac{2^n + 3^n}{3^n + 4^n}$.",
+      hint: "Podziel przez najszybciej rosnący składnik — $4^n$.",
+      steps: [
+        { math: "$\\frac{2^n + 3^n}{3^n + 4^n} = \\frac{\\left(\\frac{2}{4}\\right)^n + \\left(\\frac{3}{4}\\right)^n}{\\left(\\frac{3}{4}\\right)^n + 1}$", comment: "Dzielimy wszystko przez $4^n$." },
+        { math: "$\\left(\\frac{1}{2}\\right)^n \\to 0,\\ \\left(\\frac{3}{4}\\right)^n \\to 0$", comment: "Oba ułamki mają $|q| < 1$, więc dążą do 0." },
+        { math: "$\\lim = \\frac{0 + 0}{0 + 1} = 0$", comment: "Granica wynosi 0." }
+      ],
+      answer: "$0$"
+    },
+    {
+      level: "średnie",
+      q: "Oblicz $\\displaystyle\\lim_{n\\to\\infty} \\left(\\sqrt{n^2 + 4n} - n\\right)$.",
+      hint: "Symbol $\\infty - \\infty$. Mnóż przez sprzężenie.",
+      steps: [
+        { math: "$\\sqrt{n^2+4n} - n = \\frac{(\\sqrt{n^2+4n} - n)(\\sqrt{n^2+4n} + n)}{\\sqrt{n^2+4n} + n}$", comment: "Mnożymy przez sprzężenie." },
+        { math: "$= \\frac{n^2+4n - n^2}{\\sqrt{n^2+4n} + n} = \\frac{4n}{\\sqrt{n^2+4n} + n}$", comment: "Różnica kwadratów eliminuje $\\infty - \\infty$." },
+        { math: "$= \\frac{4n}{n\\left(\\sqrt{1+\\frac{4}{n}} + 1\\right)} = \\frac{4}{\\sqrt{1+\\frac{4}{n}} + 1}$", comment: "Wyciągamy $n$ z mianownika." },
+        { math: "$\\lim = \\frac{4}{1 + 1} = 2$", comment: "Dla $n\\to\\infty$: $\\frac{4}{n} \\to 0$, więc $\\sqrt{1+0} = 1$." }
+      ],
+      answer: "$2$"
+    },
+    {
+      level: "średnie",
+      q: "Oblicz $\\displaystyle\\lim_{n\\to\\infty} \\left(1 + \\frac{3}{n}\\right)^n$.",
+      hint: "Forma $1^\\infty$. Sprowadź do definicji $e$.",
+      steps: [
+        { math: "$\\left(1 + \\frac{3}{n}\\right)^n = \\left[\\left(1 + \\frac{1}{n/3}\\right)^{n/3}\\right]^3$", comment: "Podstawiamy $m = n/3$. Gdy $n\\to\\infty$, to $m\\to\\infty$." },
+        { math: "$\\lim_{m\\to\\infty} \\left(1 + \\frac{1}{m}\\right)^m = e$", comment: "To definicja liczby $e$." },
+        { math: "$\\lim = e^3$", comment: "Wynik: $e^3$." }
+      ],
+      answer: "$e^3$"
+    },
+    {
+      level: "trudne",
+      q: "Oblicz $\\displaystyle\\lim_{n\\to\\infty} \\frac{1 + 2 + 3 + \\ldots + n}{n^2}$.",
+      hint: "Suma $1 + 2 + \\ldots + n = \\frac{n(n+1)}{2}$.",
+      steps: [
+        { math: "$\\frac{1 + 2 + \\ldots + n}{n^2} = \\frac{\\frac{n(n+1)}{2}}{n^2} = \\frac{n+1}{2n}$", comment: "Stosujemy wzór Gaussa na sumę." },
+        { math: "$\\frac{n+1}{2n} = \\frac{1 + \\frac{1}{n}}{2}$", comment: "Dzielimy przez $n$." },
+        { math: "$\\lim = \\frac{1 + 0}{2} = \\frac{1}{2}$", comment: "Granica wynosi $\\frac{1}{2}$." }
+      ],
+      answer: "$\\frac{1}{2}$"
+    }
+  ]
+};
+
+window.MATURA_TOPICS["pochodne"] = {
+  title: "Pochodna funkcji",
+  color: "violet",
+  icon: "fa-chart-area",
+  level: "rozszerzony",
+  intro: "Pochodna to jedno z najważniejszych narzędzi matematyki — mierzy szybkość zmian funkcji. Na maturze rozszerzonej wymagane jest różniczkowanie funkcji, wyznaczanie ekstrema i monotoniczności, styczne do wykresów oraz rozwiązywanie zadań optymalizacyjnych.",
+  examFocus: ["Pochodna — definicja i interpretacja", "Reguły różniczkowania", "Monotoniczność i ekstrema", "Styczna do wykresu", "Zadania optymalizacyjne"],
+  theory: [
+    {
+      title: "Definicja pochodnej",
+      text: "Pochodna funkcji $f$ w punkcie $x_0$ to granica ilorazu różnicowego. Geometrycznie: nachylenie stycznej do wykresu.",
+      formulas: [
+        { latex: "f'(x_0) = \\lim_{h\\to 0} \\frac{f(x_0 + h) - f(x_0)}{h}", meaning: "Definicja pochodnej" },
+        { latex: "f'(x_0) = \\lim_{x\\to x_0} \\frac{f(x) - f(x_0)}{x - x_0}", meaning: "Równoważna postać" },
+        { latex: "y = f'(x_0)(x - x_0) + f(x_0)", meaning: "Równanie stycznej w punkcie $(x_0, f(x_0))$" }
+      ]
+    },
+    {
+      title: "Pochodne funkcji elementarnych",
+      text: "Wzory, które trzeba znać na pamięć:",
+      formulas: [
+        { latex: "(c)' = 0", meaning: "Stała" },
+        { latex: "(x^n)' = nx^{n-1}", meaning: "Potęga ($n \\in \\mathbb{R}$)" },
+        { latex: "(\\sqrt{x})' = \\frac{1}{2\\sqrt{x}}", meaning: "Pierwiastek" },
+        { latex: "(\\sin x)' = \\cos x", meaning: "Sinus" },
+        { latex: "(\\cos x)' = -\\sin x", meaning: "Cosinus" },
+        { latex: "(\\tan x)' = \\frac{1}{\\cos^2 x}", meaning: "Tangens" },
+        { latex: "(e^x)' = e^x", meaning: "Funkcja wykładnicza" },
+        { latex: "(a^x)' = a^x \\ln a", meaning: "Wykładnicza o podstawie $a$" },
+        { latex: "(\\ln x)' = \\frac{1}{x}", meaning: "Logarytm naturalny" },
+        { latex: "(\\log_a x)' = \\frac{1}{x\\ln a}", meaning: "Logarytm o podstawie $a$" }
+      ]
+    },
+    {
+      title: "Reguły różniczkowania",
+      text: "Operacje na pochodnych:",
+      formulas: [
+        { latex: "(f \\pm g)' = f' \\pm g'", meaning: "Suma/różnica" },
+        { latex: "(c \\cdot f)' = c \\cdot f'", meaning: "Stała × funkcja" },
+        { latex: "(f \\cdot g)' = f'g + fg'", meaning: "Reguła Leibniza (iloczyn)" },
+        { latex: "\\left(\\frac{f}{g}\\right)' = \\frac{f'g - fg'}{g^2}", meaning: "Iloraz" },
+        { latex: "(f(g(x)))' = f'(g(x)) \\cdot g'(x)", meaning: "Reguła łańcuchowa (złożenie)" }
+      ]
+    },
+    {
+      title: "Monotoniczność i ekstrema",
+      text: "Pochodna pozwala badać, gdzie funkcja rośnie, maleje i ma ekstrema.",
+      formulas: [
+        { latex: "f'(x) > 0 \\implies f \\text{ rosnąca}", meaning: "Dodatnia pochodna → wzrost" },
+        { latex: "f'(x) < 0 \\implies f \\text{ malejąca}", meaning: "Ujemna pochodna → spadek" },
+        { latex: "f'(x_0) = 0 \\text{ i zmiana znaku} \\implies \\text{ekstremum}", meaning: "Warunek konieczny i wystarczający" },
+        { latex: "f'(x_0) = 0,\\ f''(x_0) > 0 \\implies \\min", meaning: "WDS z drugiej pochodnej: minimum" },
+        { latex: "f'(x_0) = 0,\\ f''(x_0) < 0 \\implies \\max", meaning: "WDS z drugiej pochodnej: maksimum" }
+      ]
+    },
+    {
+      title: "Zastosowania pochodnej — optymalizacja",
+      text: "Zadania maturalne o poszukiwaniu największej/najmniejszej wartości.",
+      formulas: [
+        { latex: "f_{\\max/\\min} \\text{ szukamy w: } f'(x) = 0 \\text{ i na końcach przedziału}", meaning: "Wartość największa/najmniejsza na odcinku" },
+        { latex: "V'(x) = 0 \\implies \\text{optymalne wymiary}", meaning: "Typowe zadanie: maks. objętość / min. koszt" }
+      ]
+    }
+  ],
+  mistakes: [
+    "$(fg)' \\neq f' \\cdot g'$ — pochodna iloczynu to reguła Leibniza, nie iloczyn pochodnych!",
+    "$f'(x_0) = 0$ NIE gwarantuje ekstremum — trzeba sprawdzić zmianę znaku (np. $f(x) = x^3$ w $x=0$).",
+    "Reguła łańcuchowa: przy $(\\sin(3x))'$ wynik to $3\\cos(3x)$, nie $\\cos(3x)$!",
+    "Pochodna $\\frac{1}{x}$: stosuj $x^{-1}$, wynik to $-x^{-2} = -\\frac{1}{x^2}$.",
+    "Styczna w punkcie $x_0$: pamiętaj o formule $y - f(x_0) = f'(x_0)(x - x_0)$."
+  ],
+  strategy: [
+    "Zawsze uprość funkcję PRZED różniczkowaniem (rozkład, skrócenie)",
+    "Badanie monotoniczności: $f' = 0$ → punkt podejrzany, sprawdź znaki w otoczeniu",
+    "Optymalizacja: zapisz funkcję celu od jednej zmiennej, pochodna = 0 → kandydat",
+    "Styczna: oblicz $f(x_0)$ i $f'(x_0)$, podstaw do wzoru stycznej"
+  ],
+  tasks: [
+    {
+      level: "łatwe",
+      q: "Oblicz pochodną $f(x) = 3x^4 - 2x^2 + 5x - 1$.",
+      hint: "Stosuj regułę $(x^n)' = nx^{n-1}$ wyraz po wyrazie.",
+      steps: [
+        { math: "$f'(x) = 3 \\cdot 4x^3 - 2 \\cdot 2x + 5 \\cdot 1 - 0$", comment: "Pochodna wielomianu: pochodna każdego wyrazu osobno." },
+        { math: "$f'(x) = 12x^3 - 4x + 5$", comment: "Gotowe." }
+      ],
+      answer: "$f'(x) = 12x^3 - 4x + 5$"
+    },
+    {
+      level: "łatwe",
+      q: "Oblicz pochodną $f(x) = \\sin(2x)$.",
+      hint: "Złożenie — reguła łańcuchowa.",
+      steps: [
+        { math: "$f'(x) = \\cos(2x) \\cdot (2x)' = 2\\cos(2x)$", comment: "$(\\sin u)' = \\cos u \\cdot u'$, gdzie $u = 2x$, $u' = 2$." }
+      ],
+      answer: "$f'(x) = 2\\cos(2x)$"
+    },
+    {
+      level: "średnie",
+      q: "Wyznacz równanie stycznej do $f(x) = x^3 - 3x$ w punkcie $x_0 = 1$.",
+      hint: "Styczna: $y = f'(x_0)(x - x_0) + f(x_0)$.",
+      steps: [
+        { math: "$f(1) = 1 - 3 = -2$", comment: "Punkt styczności: $(1, -2)$." },
+        { math: "$f'(x) = 3x^2 - 3 \\implies f'(1) = 3 - 3 = 0$", comment: "Nachylenie stycznej = 0 → styczna jest pozioma." },
+        { math: "$y = 0 \\cdot (x - 1) + (-2) = -2$", comment: "Równanie stycznej: $y = -2$." }
+      ],
+      answer: "$y = -2$"
+    },
+    {
+      level: "średnie",
+      q: "Zbadaj monotoniczność i ekstrema $f(x) = x^3 - 3x + 2$.",
+      hint: "$f' = 0$ daje punkty krytyczne. Sprawdź znaki pochodnej w przedziałach.",
+      steps: [
+        { math: "$f'(x) = 3x^2 - 3 = 3(x-1)(x+1)$", comment: "Rozkład na czynniki." },
+        { math: "$f'(x) = 0 \\iff x = -1 \\text{ lub } x = 1$", comment: "Dwa punkty krytyczne." },
+        { math: "$f'(x) > 0$ dla $x \\in (-\\infty, -1) \\cup (1, +\\infty)$", comment: "$f$ rośnie na tych przedziałach." },
+        { math: "$f'(x) < 0$ dla $x \\in (-1, 1)$", comment: "$f$ maleje na $(-1, 1)$." },
+        { math: "$f(-1) = -1 + 3 + 2 = 4$ — maks. lok., $f(1) = 1 - 3 + 2 = 0$ — min. lok.", comment: "Zmiana znaku $f'$ z $+$ na $-$ w $x=-1$ → maksimum. Z $-$ na $+$ w $x=1$ → minimum." }
+      ],
+      answer: "max. lok. $f(-1) = 4$, min. lok. $f(1) = 0$"
+    },
+    {
+      level: "trudne",
+      q: "(Matura) Z blachy kwadratowej o boku 12 cm wycinamy kwadraty w rogach i zaginamy, tworząc pudełko. Jakie wycięcie daje max. objętość?",
+      hint: "Bok wycięcia $= x$. Objętość $V(x) = x(12-2x)^2$. Szukaj $V'(x)=0$.",
+      steps: [
+        { math: "$V(x) = x(12 - 2x)^2,\\quad x \\in (0, 6)$", comment: "Wymiary pudełka: $(12-2x) \\times (12-2x) \\times x$." },
+        { math: "$V(x) = x(144 - 48x + 4x^2) = 4x^3 - 48x^2 + 144x$", comment: "Rozwijamy." },
+        { math: "$V'(x) = 12x^2 - 96x + 144 = 12(x^2 - 8x + 12) = 12(x-2)(x-6)$", comment: "Pochodna i rozkład." },
+        { math: "$V'(x) = 0 \\iff x = 2 \\text{ lub } x = 6$", comment: "$x = 6$ odpada (poza dziedziną). Zostaje $x = 2$." },
+        { math: "$V(2) = 2 \\cdot 8^2 = 128$ cm³", comment: "Sprawdzamy, że $V''(2) < 0$ (maksimum) — lub: $V(0)=0$, $V(6)=0$, $V(2)=128 > 0$." }
+      ],
+      answer: "Wycięcie $x = 2$ cm, $V_{\\max} = 128$ cm³"
+    }
+  ]
+};
+
+window.MATURA_TOPICS["liczby-zespolone"] = {
+  title: "Liczby zespolone",
+  color: "fuchsia",
+  icon: "fa-atom",
+  level: "rozszerzony",
+  intro: "Liczby zespolone rozszerzają zbiór liczb rzeczywistych o jednostkę urojoną $i = \\sqrt{-1}$. Na maturze rozszerzonej wymagane są działania na liczbach zespolonych, postać trygonometryczna, moduł, argument i interpretacja geometryczna.",
+  examFocus: ["Postać algebraiczna i działania", "Moduł i argument", "Postać trygonometryczna", "Sprzężenie", "Interpretacja geometryczna"],
+  theory: [
+    {
+      title: "Postać algebraiczna",
+      text: "Liczba zespolona $z = a + bi$, gdzie $a, b \\in \\mathbb{R}$, $i^2 = -1$. $a$ to część rzeczywista ($\\text{Re}\\,z$), $b$ to część urojona ($\\text{Im}\\,z$).",
+      formulas: [
+        { latex: "z = a + bi,\\quad i^2 = -1", meaning: "Postać algebraiczna" },
+        { latex: "\\bar{z} = a - bi", meaning: "Sprzężenie" },
+        { latex: "z \\cdot \\bar{z} = a^2 + b^2 = |z|^2", meaning: "Iloczyn z. i sprzężenia = kwadrat modułu" },
+        { latex: "i^0 = 1,\\quad i^1 = i,\\quad i^2 = -1,\\quad i^3 = -i,\\quad i^4 = 1", meaning: "Cykliczność potęg $i$ (okres 4)" }
+      ]
+    },
+    {
+      title: "Moduł i argument",
+      text: "Moduł to odległość od początku w płaszczyźnie Gaussa, argument to kąt z osią Re+.",
+      formulas: [
+        { latex: "|z| = \\sqrt{a^2 + b^2}", meaning: "Moduł (wartość bezwzględna)" },
+        { latex: "\\arg z = \\arctan\\frac{b}{a}", meaning: "Argument główny (uwzględniając ćwiartkę!)" },
+        { latex: "z = |z|(\\cos\\varphi + i\\sin\\varphi)", meaning: "Postać trygonometryczna" }
+      ]
+    },
+    {
+      title: "Działania w postaci trygonometrycznej",
+      text: "Mnożenie: moduły mnożymy, argumenty dodajemy. Dzielenie odwrotnie.",
+      formulas: [
+        { latex: "z_1 \\cdot z_2 = r_1 r_2 [\\cos(\\varphi_1+\\varphi_2) + i\\sin(\\varphi_1+\\varphi_2)]", meaning: "Mnożenie" },
+        { latex: "\\frac{z_1}{z_2} = \\frac{r_1}{r_2} [\\cos(\\varphi_1-\\varphi_2) + i\\sin(\\varphi_1-\\varphi_2)]", meaning: "Dzielenie" },
+        { latex: "z^n = r^n(\\cos n\\varphi + i\\sin n\\varphi)", meaning: "Wzór de Moivre'a (potęgowanie)" }
+      ]
+    },
+    {
+      title: "Równania w $\\mathbb{C}$",
+      text: "Każdy wielomian stopnia $n$ ma dokładnie $n$ pierwiastków zespolonych (z krotnościami).",
+      formulas: [
+        { latex: "z^2 + 1 = 0 \\implies z = \\pm i", meaning: "Równanie bez rozwiązań w $\\mathbb{R}$" },
+        { latex: "az^2 + bz + c = 0,\\quad \\Delta < 0 \\implies z = \\frac{-b \\pm i\\sqrt{|\\Delta|}}{2a}", meaning: "Wzory na pierwiastki zespolone kwadratowego" },
+        { latex: "\\text{Pierwiastki zespolone występują w parach sprzężonych}", meaning: "Dla wielomianów o współczynnikach rzeczywistych" }
+      ]
+    }
+  ],
+  mistakes: [
+    "$i^2 = -1$, NIE $i^2 = 1$! Pamiętaj cykliczność: $i^1=i$, $i^2=-1$, $i^3=-i$, $i^4=1$.",
+    "Przy dzieleniu przez $z = a+bi$ mnóż przez sprzężenie obu stron: $\\frac{w}{z} = \\frac{w\\bar{z}}{|z|^2}$.",
+    "Argument: $\\arctan(b/a)$ daje kąt w I lub IV ćwiartce — dodaj $\\pi$ dla II i III ćwiartki!",
+    "$|z_1 + z_2| \\leq |z_1| + |z_2|$ — nierówność trójkąta, równość gdy argumenty równe.",
+    "Pierwiastki kwadratowe z ujemnej $\\Delta$: $\\sqrt{-5} = i\\sqrt{5}$, NIE $-\\sqrt{5}$."
+  ],
+  strategy: [
+    "Działania algebraiczne: traktuj $i$ jak zmienną, na końcu zamień $i^2$ na $-1$",
+    "Dzielenie: mnóż przez sprzężenie mianownika",
+    "Moduł: zastosuj wzór pitagorejski",
+    "Interpretacja geometryczna: $z = a+bi$ → punkt $(a,b)$ na płaszczyźnie"
+  ],
+  tasks: [
+    {
+      level: "łatwe",
+      q: "Oblicz $(3 + 2i)(1 - 4i)$.",
+      hint: "Mnóż jak dwumiany, pamiętaj $i^2 = -1$.",
+      steps: [
+        { math: "$(3+2i)(1-4i) = 3 - 12i + 2i - 8i^2$", comment: "Każdy z każdym." },
+        { math: "$= 3 - 10i - 8(-1) = 3 - 10i + 8 = 11 - 10i$", comment: "$i^2 = -1$." }
+      ],
+      answer: "$11 - 10i$"
+    },
+    {
+      level: "łatwe",
+      q: "Oblicz moduł $z = 3 - 4i$.",
+      hint: "$|z| = \\sqrt{a^2 + b^2}$.",
+      steps: [
+        { math: "$|z| = \\sqrt{3^2 + (-4)^2} = \\sqrt{9 + 16} = \\sqrt{25} = 5$", comment: "Trójka pitagorejska 3-4-5." }
+      ],
+      answer: "$|z| = 5$"
+    },
+    {
+      level: "średnie",
+      q: "Oblicz $\\dfrac{2 + i}{1 - 3i}$.",
+      hint: "Mnóż przez sprzężenie mianownika.",
+      steps: [
+        { math: "$\\frac{2+i}{1-3i} \\cdot \\frac{1+3i}{1+3i} = \\frac{(2+i)(1+3i)}{1^2 + 3^2}$", comment: "Sprzężenie: $\\overline{1-3i} = 1+3i$." },
+        { math: "$= \\frac{2 + 6i + i + 3i^2}{10} = \\frac{2 + 7i - 3}{10} = \\frac{-1 + 7i}{10}$", comment: "Licznik: $2+7i+3i^2 = 2+7i-3 = -1+7i$. Mianownik: $1+9=10$." },
+        { math: "$= -\\frac{1}{10} + \\frac{7}{10}i$", comment: "Postać $a+bi$." }
+      ],
+      answer: "$-\\frac{1}{10} + \\frac{7}{10}i$"
+    },
+    {
+      level: "średnie",
+      q: "Znajdź pierwiastki $z^2 + 2z + 5 = 0$.",
+      hint: "$\\Delta = 4 - 20 = -16 < 0$. Stosuj wzory zespolone.",
+      steps: [
+        { math: "$\\Delta = 4 - 20 = -16$", comment: "Delta ujemna → brak rozwiązań w $\\mathbb{R}$." },
+        { math: "$\\sqrt{\\Delta} = \\sqrt{-16} = 4i$", comment: "Pierwiastek z ujemnej delty." },
+        { math: "$z = \\frac{-2 \\pm 4i}{2} = -1 \\pm 2i$", comment: "Dwa sprzężone pierwiastki." }
+      ],
+      answer: "$z = -1 + 2i$ lub $z = -1 - 2i$"
+    },
+    {
+      level: "trudne",
+      q: "(Matura) Oblicz $i^{2023}$.",
+      hint: "Cykliczność potęg $i$ z okresem 4. $2023 \\div 4 = ?$",
+      steps: [
+        { math: "$2023 = 4 \\cdot 505 + 3$", comment: "Reszta z dzielenia 2023 przez 4 wynosi 3." },
+        { math: "$i^{2023} = i^{4\\cdot 505 + 3} = (i^4)^{505} \\cdot i^3 = 1^{505} \\cdot i^3 = i^3 = -i$", comment: "$i^4=1$, $i^3=-i$." }
+      ],
+      answer: "$i^{2023} = -i$"
+    }
+  ]
+};
+
+window.MATURA_TOPICS["wielomiany"] = {
+  title: "Wielomiany",
+  color: "amber",
+  icon: "fa-wave-square",
+  level: "rozszerzony",
+  intro: "Na poziomie rozszerzonym wielomiany wymagają umiejętności dzielenia, stosowania twierdzenia Bezout, schematu Hornera i rozkładu na czynniki.",
+  examFocus: ["Dzielenie wielomianów", "Twierdzenie Bezout", "Schemat Hornera", "Pierwiastki wymierne", "Rozkład na czynniki"],
+  theory: [
+    {
+      title: "Dzielenie wielomianów",
+      text: "Wielomian $W(x)$ dzielony przez $D(x)$ daje iloraz $Q(x)$ i resztę $R(x)$: $W(x) = D(x) \\cdot Q(x) + R(x)$, gdzie $\\deg R < \\deg D$.",
+      formulas: [
+        { latex: "W(x) = D(x) \\cdot Q(x) + R(x)", meaning: "Dzielenie z resztą" },
+        { latex: "\\deg R < \\deg D", meaning: "Stopień reszty mniejszy od dzielnika" }
+      ]
+    },
+    {
+      title: "Twierdzenie Bezout",
+      text: "Reszta z dzielenia $W(x)$ przez $(x-a)$ wynosi $W(a)$. Konsekwencja: $(x-a) | W(x) \\iff W(a) = 0$.",
+      formulas: [
+        { latex: "W(x) = (x-a) \\cdot Q(x) + W(a)", meaning: "Twierdzenie Bezout" },
+        { latex: "W(a) = 0 \\iff (x-a) \\text{ jest dzielnikiem } W(x)", meaning: "Warunek podzielności" }
+      ]
+    },
+    {
+      title: "Schemat Hornera",
+      text: "Algorytm szybkiego obliczania wartości wielomianu $W(a)$ i jednoczesnego dzielenia przez $(x-a)$.",
+      formulas: [
+        { latex: "W(x) = a_n x^n + a_{n-1}x^{n-1} + \\ldots + a_0", meaning: "Wielomian stopnia $n$" },
+        { latex: "b_n = a_n,\\quad b_k = b_{k+1} \\cdot a + a_k", meaning: "Schemat: iteracja od końca" },
+        { latex: "W(a) = b_0 = \\text{ostatni współczynnik}", meaning: "Wartość wielomianu" }
+      ]
+    },
+    {
+      title: "Twierdzenie o pierwiastkach wymiernych",
+      text: "Jeśli $W(x) = a_n x^n + \\ldots + a_0$ ma współczynniki całkowite i $\\frac{p}{q}$ jest pierwiastkiem wymiernym (ułamek nieskracalny), to $p | a_0$ i $q | a_n$.",
+      formulas: [
+        { latex: "\\frac{p}{q} \\text{ jest pierwiastkiem} \\implies p | a_0 \\text{ i } q | a_n", meaning: "Twierdzenie o pierwiastkach wymiernych" }
+      ]
+    },
+    {
+      title: "Rozkład na czynniki",
+      text: "Wielomian stopnia $n$ nad $\\mathbb{R}$ rozkłada się na czynniki liniowe i/lub trójmiany kwadratowe z $\\Delta < 0$.",
+      formulas: [
+        { latex: "W(x) = a_n(x-r_1)(x-r_2)\\cdots(x-r_n)", meaning: "Rozkład nad $\\mathbb{C}$ (tw. zasadnicze algebry)" },
+        { latex: "W(x) = a_n(x-r_1)\\cdots(x-r_k) \\cdot Q_1(x) \\cdots Q_m(x)", meaning: "Rozkład nad $\\mathbb{R}$: czynniki liniowe + nierozkładalne trójmiany" }
+      ]
+    }
+  ],
+  mistakes: [
+    "Dzielenie przez $(x-a)$, NIE $(x+a)$ — przy $W(-2)=0$ czynnikiem jest $(x+2)$, nie $(x-2)$!",
+    "Schemat Hornera: pamiętaj o **zerowych** współczynnikach — jeśli brakuje wyrazu $x^k$, wstaw 0.",
+    "Twierdzenie o pierw. wymiernych daje KANDYDATÓW — nie gwarantuje, że dany ułamek jest pierwiastkiem.",
+    "Wielomian stopnia 3 ma co najmniej JEDEN pierwiastek rzeczywisty (może mieć 1 lub 3)."
+  ],
+  strategy: [
+    "Szukasz pierwiastków: zacznij od tw. o pierw. wymiernych, sprawdzaj ±1, ±2, ... schemat Hornera",
+    "Po znalezieniu jednego pierwiastka: podziel przez $(x-r)$ → masz wielomian o stopień niższy",
+    "Wielomian st. 3: jeden pierwiastek wymierny → dzielisz → trójmian kwadratowy → $\\Delta$",
+    "Wartości: schemat Hornera jest szybszy niż podstawienie (mniej mnożeń)"
+  ],
+  tasks: [
+    {
+      level: "łatwe",
+      q: "Oblicz $W(2)$ dla $W(x) = x^3 - 3x^2 + 5x - 6$ (schemat Hornera).",
+      hint: "Współczynniki: $1, -3, 5, -6$, dzielnik $a = 2$.",
+      steps: [
+        { math: "$b_3 = 1$", comment: "Start: najwyższy współczynnik." },
+        { math: "$b_2 = 1 \\cdot 2 + (-3) = -1$", comment: "Krok 1." },
+        { math: "$b_1 = (-1) \\cdot 2 + 5 = 3$", comment: "Krok 2." },
+        { math: "$b_0 = 3 \\cdot 2 + (-6) = 0$", comment: "Krok 3. $W(2) = 0$, więc $(x-2)$ jest dzielnikiem!" }
+      ],
+      answer: "$W(2) = 0$"
+    },
+    {
+      level: "średnie",
+      q: "Rozłóż na czynniki: $W(x) = x^3 - 3x^2 + 5x - 6$ (wiemy, że $W(2)=0$).",
+      hint: "Podziel przez $(x-2)$ — schemat Hornera daje iloraz.",
+      steps: [
+        { math: "$W(x) = (x-2)(x^2 - x + 3)$", comment: "Z Hornera: iloraz $x^2 - x + 3$." },
+        { math: "$\\Delta = 1 - 12 = -11 < 0$", comment: "Trójmian $x^2-x+3$ nie ma pierwiastków rzeczywistych." },
+        { math: "Rozkład w $\\mathbb{R}$: $(x-2)(x^2 - x + 3)$", comment: "Nierozkładalny trójmian — koniec rozkładu." }
+      ],
+      answer: "$W(x) = (x-2)(x^2 - x + 3)$"
+    },
+    {
+      level: "trudne",
+      q: "Rozłóż: $W(x) = 2x^3 + x^2 - 13x + 6$.",
+      hint: "Tw. o pierw. wymiernych: kandydaci $\\frac{p}{q}$ z $p|6$, $q|2$.",
+      steps: [
+        { math: "Kandydaci: $\\pm 1, \\pm 2, \\pm 3, \\pm 6, \\pm \\frac{1}{2}, \\pm \\frac{3}{2}$", comment: "$p | 6$: $\\{1,2,3,6\\}$. $q | 2$: $\\{1,2\\}$." },
+        { math: "$W(2) = 16 + 4 - 26 + 6 = 0$ ✓", comment: "$x = 2$ jest pierwiastkiem." },
+        { math: "Horner: $2x^3+x^2-13x+6 = (x-2)(2x^2 + 5x - 3)$", comment: "Iloraz: $2x^2 + 5x - 3$." },
+        { math: "$2x^2 + 5x - 3 = 0 \\implies x = \\frac{-5 \\pm 7}{4}$, $x = \\frac{1}{2}$ lub $x = -3$", comment: "$\\Delta = 25+24 = 49$." },
+        { math: "$W(x) = 2(x-2)\\left(x-\\frac{1}{2}\\right)(x+3) = (x-2)(2x-1)(x+3)$", comment: "Rozkład pełny." }
+      ],
+      answer: "$W(x) = (x-2)(2x-1)(x+3)$"
+    }
+  ]
+};
+
+window.MATURA_TOPICS["dowodzenie"] = {
+  title: "Dowodzenie matematyczne",
+  color: "emerald",
+  icon: "fa-check-double",
+  level: "rozszerzony",
+  intro: "Na maturze rozszerzonej regularnie pojawiają się zadania, w których trzeba coś UDOWODNIĆ — nie tylko obliczyć. Kluczowe metody: indukcja matematyczna, dowód nie wprost i dowód przez kontrapozycję.",
+  examFocus: ["Indukcja matematyczna", "Dowód nie wprost", "Dowód przez kontrapozycję", "Dowód bezpośredni", "Podzielność i nierówności"],
+  theory: [
+    {
+      title: "Indukcja matematyczna",
+      text: "Metoda dowodzenia twierdzeń o liczbach naturalnych. Dwa kroki: baza i krok indukcyjny.",
+      formulas: [
+        { latex: "\\text{1. Baza: sprawdź } P(1) \\text{ (lub } P(0)\\text{)}", meaning: "Krok bazowy" },
+        { latex: "\\text{2. Załóż } P(k) \\text{ (założenie indukcyjne)} \\implies \\text{Pokaż } P(k+1)", meaning: "Krok indukcyjny" },
+        { latex: "P(1) \\land [P(k) \\implies P(k+1)] \\implies \\forall_{n \\geq 1}\\ P(n)", meaning: "Zasada indukcji" }
+      ]
+    },
+    {
+      title: "Dowód nie wprost (sprzeczność)",
+      text: "Zakładamy NEGACJĘ tezy i dochodzimy do sprzeczności.",
+      formulas: [
+        { latex: "\\text{Chcemy: } T. \\quad \\text{Zakładamy: } \\neg T \\implies \\text{sprzeczność} \\implies T \\text{ prawdziwe}", meaning: "Schemat dowodu nie wprost" }
+      ]
+    },
+    {
+      title: "Dowód przez kontrapozycję",
+      text: "Zamiast $p \\implies q$ dowodzimy $\\neg q \\implies \\neg p$ (logicznie równoważne).",
+      formulas: [
+        { latex: "p \\implies q \\equiv \\neg q \\implies \\neg p", meaning: "Prawo kontrapozycji" }
+      ]
+    },
+    {
+      title: "Dowód bezpośredni",
+      text: "Wychodzimy z założeń i przez ciąg przekształceń dochodzimy do tezy. Używamy tożsamości algebraicznych, nierówności, definicji.",
+      formulas: [
+        { latex: "a^2 + b^2 \\geq 2ab", meaning: "Z nierówności $(a-b)^2 \\geq 0$" },
+        { latex: "n(n+1) \\text{ jest parzyste}", meaning: "Iloczyn dwóch kolejnych liczb naturalnych" },
+        { latex: "3|n \\iff 3|(a+b+c) \\text{ (cyfry)}", meaning: "Cecha podzielności przez 3" }
+      ]
+    }
+  ],
+  mistakes: [
+    "Indukcja: sam krok bazowy NIE wystarcza! Trzeba KONIECZNIE i bazę, i krok indukcyjny.",
+    "Krok indukcyjny: dowodzimy $P(k) \\implies P(k+1)$, a NIE tylko $P(k+1)$. Trzeba UŻYĆ założenia indukcyjnego!",
+    "Dowód nie wprost: musisz dojść do JAWNEJ sprzeczności (np. $0 > 0$), nie tylko do „dziwnego" wyniku.",
+    "Kontrapozycja: $\\neg q \\implies \\neg p$, a NIE $\\neg p \\implies \\neg q$ (to byłoby „odwrotne")."
+  ],
+  strategy: [
+    "Teza o $\\forall n \\in \\mathbb{N}$: → indukcja matematyczna",
+    "Teza „pewna liczba jest niewymierna / nieskończona": → dowód nie wprost",
+    "Teza $p \\implies q$ trudna bezpośrednio: → kontrapozycja",
+    "Nierówność do udowodnienia: → sprowadź do $(\\text{coś})^2 \\geq 0$"
+  ],
+  tasks: [
+    {
+      level: "łatwe",
+      q: "Udowodnij przez indukcję: $1 + 2 + 3 + \\ldots + n = \\frac{n(n+1)}{2}$.",
+      hint: "Baza: $n=1$. Krok: załóż dla $k$, pokaż dla $k+1$.",
+      steps: [
+        { math: "Baza ($n=1$): Lewa = 1, Prawa = $\\frac{1 \\cdot 2}{2} = 1$ ✓", comment: "Twierdzenie prawdziwe dla $n=1$." },
+        { math: "Założenie: $1+2+\\ldots+k = \\frac{k(k+1)}{2}$", comment: "Zakładamy prawdziwość dla pewnego $k$." },
+        { math: "$1+2+\\ldots+k+(k+1) = \\frac{k(k+1)}{2} + (k+1) = \\frac{k(k+1) + 2(k+1)}{2} = \\frac{(k+1)(k+2)}{2}$", comment: "Dodajemy $(k+1)$ do obu stron i upraszczamy." },
+        { math: "To jest dokładnie formuła dla $n = k+1$: $\\frac{(k+1)((k+1)+1)}{2}$ ✓", comment: "Krok indukcyjny udowodniony. QED." }
+      ],
+      answer: "Dowód indukcyjny zakończony. □"
+    },
+    {
+      level: "średnie",
+      q: "Udowodnij: $n^3 - n$ jest podzielne przez 6 dla każdego $n \\in \\mathbb{N}$.",
+      hint: "Rozłóż: $n^3 - n = n(n-1)(n+1)$ — iloczyn trzech kolejnych!",
+      steps: [
+        { math: "$n^3 - n = n(n^2 - 1) = (n-1) \\cdot n \\cdot (n+1)$", comment: "Trzy kolejne liczby naturalne." },
+        { math: "Wśród 3 kolejnych jest co najmniej jeden wielokrotność 2 i co najmniej jeden wielokrotność 3", comment: "Zasada szufladkowa." },
+        { math: "Więc $(n-1)n(n+1)$ jest podzielne przez $2$ i przez $3$, a więc przez $\\text{NWW}(2,3) = 6$", comment: "QED. Dowód bezpośredni." }
+      ],
+      answer: "Dowód bezpośredni. □"
+    },
+    {
+      level: "trudne",
+      q: "(Matura) Udowodnij, że $\\sqrt{2}$ jest liczbą niewymierną.",
+      hint: "Dowód nie wprost: załóż, że $\\sqrt{2} = \\frac{p}{q}$ (nieskracalny ułamek).",
+      steps: [
+        { math: "Załóżmy, że $\\sqrt{2} = \\frac{p}{q}$, gdzie $\\gcd(p,q)=1$", comment: "Założenie: $\\sqrt{2}$ jest wymierna." },
+        { math: "$2 = \\frac{p^2}{q^2} \\implies p^2 = 2q^2$", comment: "Podnosimy do kwadratu." },
+        { math: "$p^2$ jest parzyste $\\implies p$ jest parzyste, więc $p = 2k$", comment: "Jeśli $p^2$ parzyste, to $p$ parzyste." },
+        { math: "$(2k)^2 = 2q^2 \\implies 4k^2 = 2q^2 \\implies q^2 = 2k^2$", comment: "Podstawiamy $p=2k$." },
+        { math: "$q^2$ jest parzyste $\\implies q$ jest parzyste — SPRZECZNOŚĆ z $\\gcd(p,q)=1$", comment: "Oba parzyste, ale założyliśmy, że ułamek nieskracalny. Sprzeczność! □" }
+      ],
+      answer: "$\\sqrt{2} \\notin \\mathbb{Q}$. □"
+    }
+  ]
+};
+
+window.MATURA_TOPICS["wektory"] = {
+  title: "Wektory",
+  color: "sky",
+  icon: "fa-arrows-up-down-left-right",
+  level: "rozszerzony",
+  intro: "Wektory to narzędzie łączące algebrę i geometrię. Na maturze rozszerzonej wymagane są operacje wektorowe, iloczyn skalarny, prostopadłość i równoległość wektorów oraz zastosowania geometryczne.",
+  examFocus: ["Wektor jako para współrzędnych", "Dodawanie i skalowanie", "Iloczyn skalarny", "Prostopadłość i równoległość", "Kąt między wektorami"],
+  theory: [
+    {
+      title: "Wektor — definicja i współrzędne",
+      text: "Wektor $\\vec{AB}$ z punktu $A(x_1,y_1)$ do $B(x_2,y_2)$: $\\vec{AB} = [x_2-x_1,\\ y_2-y_1]$.",
+      formulas: [
+        { latex: "\\vec{AB} = [x_2-x_1,\\, y_2-y_1]", meaning: "Wektor o początku $A$ i końcu $B$" },
+        { latex: "|\\vec{v}| = \\sqrt{v_1^2 + v_2^2}", meaning: "Długość (moduł) wektora" },
+        { latex: "\\vec{v} = [0,0] \\iff \\vec{v} = \\vec{0}", meaning: "Wektor zerowy" }
+      ]
+    },
+    {
+      title: "Operacje na wektorach",
+      text: "Dodawanie, odejmowanie, mnożenie przez skalar — współrzędnowa algebra.",
+      formulas: [
+        { latex: "\\vec{u} + \\vec{v} = [u_1+v_1,\\, u_2+v_2]", meaning: "Suma wektorów" },
+        { latex: "\\vec{u} - \\vec{v} = [u_1-v_1,\\, u_2-v_2]", meaning: "Różnica" },
+        { latex: "k\\vec{v} = [kv_1,\\, kv_2]", meaning: "Mnożenie przez skalar" },
+        { latex: "\\vec{u} \\parallel \\vec{v} \\iff \\vec{u} = k\\vec{v} \\text{ (dla pewnego } k \\neq 0\\text{)}", meaning: "Wektory równoległe (kolinearne)" }
+      ]
+    },
+    {
+      title: "Iloczyn skalarny",
+      text: "Iloczyn skalarny dwóch wektorów — kluczowe narzędzie do kątów i prostopadłości.",
+      formulas: [
+        { latex: "\\vec{u} \\cdot \\vec{v} = u_1 v_1 + u_2 v_2", meaning: "Iloczyn skalarny — wzór współrzędnowy" },
+        { latex: "\\vec{u} \\cdot \\vec{v} = |\\vec{u}| \\cdot |\\vec{v}| \\cdot \\cos\\alpha", meaning: "Iloczyn skalarny — wzór z kątem" },
+        { latex: "\\vec{u} \\perp \\vec{v} \\iff \\vec{u} \\cdot \\vec{v} = 0", meaning: "Warunek prostopadłości" },
+        { latex: "\\cos\\alpha = \\frac{\\vec{u} \\cdot \\vec{v}}{|\\vec{u}| \\cdot |\\vec{v}|}", meaning: "Kąt między wektorami" }
+      ]
+    },
+    {
+      title: "Zastosowania geometryczne",
+      text: "Wektory w zadaniach planimetrycznych:",
+      formulas: [
+        { latex: "\\text{Środek } M = \\frac{\\vec{OA} + \\vec{OB}}{2}", meaning: "Środek odcinka" },
+        { latex: "\\text{Punkt dzielący odcinek w stosunku } k:l", meaning: "$P = \\frac{l \\cdot A + k \\cdot B}{k+l}$" },
+        { latex: "S_{\\triangle} = \\frac{1}{2}|u_1 v_2 - u_2 v_1|", meaning: "Pole trójkąta z wektorów ($\\frac{1}{2}$ wartości bezwzględnej wyznacznika)" }
+      ]
+    }
+  ],
+  mistakes: [
+    "$\\vec{AB} = B - A$, NIE $A - B$! Kierunek ma znaczenie.",
+    "Iloczyn skalarny to LICZBA (skalar), nie wektor!",
+    "$\\vec{u} \\cdot \\vec{v} = 0$ NIE zawsze oznacza, że jeden z wektorów jest zerowy — mogą być prostopadłe.",
+    "Kąt $\\alpha = \\arccos(\\ldots)$ — wynik zawsze w $[0°, 180°]$.",
+    "Wektory równoległe: sprawdzaj $\\frac{u_1}{v_1} = \\frac{u_2}{v_2}$ (uwaga na dzielenie przez 0)."
+  ],
+  strategy: [
+    "Prostopadłość: natychmiast sprawdzaj iloczyn skalarny = 0",
+    "Kolinearność: sprawdzaj wyznacznik $u_1 v_2 - u_2 v_1 = 0$",
+    "Kąt między wektorami: wzór z cosinusem",
+    "Pole trójkąta: $\\frac{1}{2}|\\det[\\vec{u}, \\vec{v}]|$"
+  ],
+  tasks: [
+    {
+      level: "łatwe",
+      q: "Dane: $A(1,3)$, $B(4,7)$. Oblicz $\\vec{AB}$ i $|\\vec{AB}|$.",
+      hint: "$\\vec{AB} = B - A$.",
+      steps: [
+        { math: "$\\vec{AB} = [4-1,\\, 7-3] = [3, 4]$", comment: "Odejmujemy współrzędne." },
+        { math: "$|\\vec{AB}| = \\sqrt{9 + 16} = 5$", comment: "Trójka pitagorejska 3-4-5." }
+      ],
+      answer: "$\\vec{AB} = [3, 4]$, $|\\vec{AB}| = 5$"
+    },
+    {
+      level: "średnie",
+      q: "Sprawdź, czy $\\vec{u} = [2, -3]$ i $\\vec{v} = [6, 4]$ są prostopadłe.",
+      hint: "Iloczyn skalarny = 0?",
+      steps: [
+        { math: "$\\vec{u} \\cdot \\vec{v} = 2 \\cdot 6 + (-3) \\cdot 4 = 12 - 12 = 0$", comment: "Iloczyn skalarny wynosi 0." },
+        { math: "$\\vec{u} \\perp \\vec{v}$ ✓", comment: "Tak, wektory są prostopadłe." }
+      ],
+      answer: "Tak, $\\vec{u} \\perp \\vec{v}$"
+    },
+    {
+      level: "średnie",
+      q: "Oblicz kąt między $\\vec{u} = [1, \\sqrt{3}]$ i $\\vec{v} = [\\sqrt{3}, 1]$.",
+      hint: "$\\cos\\alpha = \\frac{\\vec{u}\\cdot\\vec{v}}{|\\vec{u}||\\vec{v}|}$.",
+      steps: [
+        { math: "$\\vec{u} \\cdot \\vec{v} = \\sqrt{3} + \\sqrt{3} = 2\\sqrt{3}$", comment: "Iloczyn skalarny." },
+        { math: "$|\\vec{u}| = \\sqrt{1+3} = 2,\\quad |\\vec{v}| = \\sqrt{3+1} = 2$", comment: "Długości wektorów." },
+        { math: "$\\cos\\alpha = \\frac{2\\sqrt{3}}{2\\cdot 2} = \\frac{\\sqrt{3}}{2}$", comment: "Cosinus kąta." },
+        { math: "$\\alpha = 30°$", comment: "$\\cos 30° = \\frac{\\sqrt{3}}{2}$." }
+      ],
+      answer: "$\\alpha = 30°$"
+    },
+    {
+      level: "trudne",
+      q: "Oblicz pole trójkąta $A(1,2)$, $B(4,6)$, $C(7,1)$ z wektorów.",
+      hint: "$S = \\frac{1}{2}|u_1 v_2 - u_2 v_1|$ dla $\\vec{AB}$ i $\\vec{AC}$.",
+      steps: [
+        { math: "$\\vec{AB} = [3, 4],\\quad \\vec{AC} = [6, -1]$", comment: "Wektory z $A$." },
+        { math: "$\\det = 3 \\cdot (-1) - 4 \\cdot 6 = -3 - 24 = -27$", comment: "Wyznacznik." },
+        { math: "$S = \\frac{1}{2}|-27| = \\frac{27}{2} = 13{,}5$", comment: "Pole trójkąta." }
+      ],
+      answer: "$S = \\frac{27}{2} = 13{,}5$"
+    }
+  ]
+};

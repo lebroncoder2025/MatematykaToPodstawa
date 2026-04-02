@@ -5,7 +5,7 @@
   <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zadania z Rozwiązaniami – Matematyka to Podstawa</title>
-  <meta name="description" content="30+ w pełni rozwiązanych zadań maturalnych krok po kroku. Liczby, algebra, funkcje, trygonometria, geometria i więcej. Pełne rozwiązania z komentarzem."/>
+  <meta name="description" content="50+ w pełni rozwiązanych zadań maturalnych krok po kroku — poziom podstawowy i rozszerzony. Granice, pochodne, liczby zespolone, wektory i więcej."/>
   <link rel="canonical" href="https://matematykatopodstawa.pl/zadania.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Zadania maturalne z rozwiązaniami krok po kroku"/>
@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"/>
   <link rel="stylesheet" href="assets/styles.css"/>
+  <script src="assets/level-switcher.js"></script>
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
@@ -153,7 +154,7 @@
         </p>
         <div class="flex flex-wrap gap-3">
           <div class="bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-center">
-            <p class="text-2xl font-black text-cyan-300">30+</p>
+            <p class="text-2xl font-black text-cyan-300">50+</p>
             <p class="text-xs text-slate-400 mt-0.5">rozwiązanych zadań</p>
           </div>
           <div class="bg-white/10 border border-white/15 rounded-xl px-4 py-3 text-center">
@@ -700,6 +701,207 @@ const TASKS = [
   ],
   answer:'$\\bar{x} = \\frac{49}{6} \\approx 8{,}17$, $\\;$ mediana $= 7{,}5$, $\\;\\sigma \\approx 3{,}34$'
 },
+/* ═══════════════════════════════════════════════
+   ROZSZERZENIE — cat 10–15
+   ═══════════════════════════════════════════════ */
+/* ── GRANICE (cat 10) ── */
+{
+  id:36, cat:10, diff:1, level:'R',
+  title:'Granica ułamkowa — wielomiany',
+  content:'Oblicz $\\displaystyle\\lim_{n\\to\\infty} \\frac{7n^2 - n + 3}{2n^2 + 5}$.',
+  hint:'Podziel licznik i mianownik przez $n^2$.',
+  steps:[
+    {col:0, text:'$\\frac{7n^2-n+3}{2n^2+5} = \\frac{7-\\frac{1}{n}+\\frac{3}{n^2}}{2+\\frac{5}{n^2}}$'},
+    {col:1, text:'Dla $n\\to\\infty$: $\\frac{1}{n}\\to 0$, $\\frac{3}{n^2}\\to 0$, $\\frac{5}{n^2}\\to 0$'},
+    {col:2, text:'$\\lim = \\frac{7-0+0}{2+0} = \\frac{7}{2}$'},
+  ],
+  answer:'$\\frac{7}{2}$'
+},
+{
+  id:37, cat:10, diff:2, level:'R',
+  title:'Symbol $\\infty - \\infty$',
+  content:'Oblicz $\\displaystyle\\lim_{n\\to\\infty}\\left(\\sqrt{n^2+6n} - n\\right)$.',
+  hint:'Mnóż przez sprzężenie.',
+  steps:[
+    {col:0, text:'$\\sqrt{n^2+6n}-n = \\frac{n^2+6n-n^2}{\\sqrt{n^2+6n}+n} = \\frac{6n}{\\sqrt{n^2+6n}+n}$'},
+    {col:1, text:'$= \\frac{6n}{n(\\sqrt{1+\\frac{6}{n}}+1)} = \\frac{6}{\\sqrt{1+\\frac{6}{n}}+1}$'},
+    {col:2, text:'$\\lim = \\frac{6}{1+1} = 3$'},
+  ],
+  answer:'$3$'
+},
+{
+  id:38, cat:10, diff:3, level:'R',
+  title:'Forma $1^\\infty$ — definicja $e$',
+  content:'Oblicz $\\displaystyle\\lim_{n\\to\\infty}\\left(1+\\frac{5}{n}\\right)^n$.',
+  hint:'Sprowadź do $(1+\\frac{1}{m})^m \\to e$.',
+  steps:[
+    {col:0, text:'Niech $m = n/5$, wtedy $n = 5m$ i $\\left(1+\\frac{1}{m}\\right)^{5m}$'},
+    {col:1, text:'$= \\left[\\left(1+\\frac{1}{m}\\right)^m\\right]^5 \\to e^5$'},
+    {col:2, text:'Wynik: $e^5$'},
+  ],
+  answer:'$e^5$'
+},
+/* ── POCHODNE (cat 11) ── */
+{
+  id:39, cat:11, diff:1, level:'R',
+  title:'Pochodna wielomianu',
+  content:'Oblicz pochodną $f(x) = 5x^3 - 2x^2 + 7x - 4$.',
+  hint:'$(x^n)\' = nx^{n-1}$, wyraz po wyrazie.',
+  steps:[
+    {col:0, text:'$f\'(x) = 5\\cdot3x^2 - 2\\cdot2x + 7\\cdot1 - 0$'},
+    {col:1, text:'$f\'(x) = 15x^2 - 4x + 7$'},
+    {col:2, text:'Gotowe.'},
+  ],
+  answer:'$f\'(x) = 15x^2 - 4x + 7$'
+},
+{
+  id:40, cat:11, diff:2, level:'R',
+  title:'Styczna do wykresu',
+  content:'Wyznacz równanie stycznej do $f(x) = x^2 + 3x$ w punkcie $x_0 = 1$.',
+  hint:'$y = f\'(x_0)(x-x_0) + f(x_0)$.',
+  steps:[
+    {col:0, text:'$f(1) = 1+3 = 4$. $f\'(x) = 2x+3$, $f\'(1) = 5$.'},
+    {col:1, text:'$y = 5(x-1) + 4 = 5x - 5 + 4 = 5x - 1$'},
+    {col:2, text:'Styczna: $y = 5x - 1$.'},
+  ],
+  answer:'$y = 5x - 1$'
+},
+{
+  id:41, cat:11, diff:3, level:'R',
+  title:'Ekstrema i monotoniczność',
+  content:'Zbadaj monotoniczność i ekstrema $f(x) = 2x^3 - 9x^2 + 12x - 4$.',
+  hint:'$f\'(x) = 0$ daje punkty krytyczne.',
+  steps:[
+    {col:0, text:'$f\'(x) = 6x^2 - 18x + 12 = 6(x^2-3x+2) = 6(x-1)(x-2)$'},
+    {col:1, text:'$f\' > 0$ na $(-\\infty,1)\\cup(2,+\\infty)$ (rośnie), $f\' < 0$ na $(1,2)$ (maleje).'},
+    {col:2, text:'max lok. $f(1) = 2-9+12-4 = 1$; min lok. $f(2) = 16-36+24-4 = 0$.'},
+  ],
+  answer:'max lok. $f(1) = 1$, min lok. $f(2) = 0$'
+},
+/* ── LICZBY ZESPOLONE (cat 12) ── */
+{
+  id:42, cat:12, diff:1, level:'R',
+  title:'Działania na liczbach zespolonych',
+  content:'Oblicz $(5+3i) - (2-i) + (1+4i)$.',
+  hint:'Dodaj/odejmij osobno części rzeczywiste i urojone.',
+  steps:[
+    {col:0, text:'Re: $5 - 2 + 1 = 4$. Im: $3 - (-1) + 4 = 8$.'},
+    {col:1, text:'Wynik: $4 + 8i$.'},
+    {col:2, text:'Bezpośrednie działania na częściach.'},
+  ],
+  answer:'$4 + 8i$'
+},
+{
+  id:43, cat:12, diff:2, level:'R',
+  title:'Dzielenie przez liczbę zespoloną',
+  content:'Oblicz $\\dfrac{3+i}{1+2i}$.',
+  hint:'Mnóż przez sprzężenie mianownika.',
+  steps:[
+    {col:0, text:'$\\frac{(3+i)(1-2i)}{(1+2i)(1-2i)} = \\frac{3-6i+i-2i^2}{1+4} = \\frac{3-5i+2}{5} = \\frac{5-5i}{5}$'},
+    {col:1, text:'$= 1 - i$'},
+    {col:2, text:'Pamiętaj: $i^2 = -1$.'},
+  ],
+  answer:'$1 - i$'
+},
+{
+  id:44, cat:12, diff:3, level:'R',
+  title:'Pierwiastki zespolone równania kwadratowego',
+  content:'Znajdź pierwiastki $z^2 + 4z + 13 = 0$ w $\\mathbb{C}$.',
+  hint:'$\\Delta = 16 - 52 = -36 < 0$.',
+  steps:[
+    {col:0, text:'$\\Delta = 16 - 52 = -36$. $\\sqrt{\\Delta} = 6i$.'},
+    {col:1, text:'$z = \\frac{-4 \\pm 6i}{2} = -2 \\pm 3i$'},
+    {col:2, text:'Dwa sprzężone pierwiastki zespolone.'},
+  ],
+  answer:'$z = -2 + 3i$ lub $z = -2 - 3i$'
+},
+/* ── WIELOMIANY (cat 13) ── */
+{
+  id:45, cat:13, diff:1, level:'R',
+  title:'Tw. Bezout — reszta z dzielenia',
+  content:'Oblicz resztę z dzielenia $W(x) = x^4 - 3x^2 + 2$ przez $(x-1)$.',
+  hint:'Tw. Bezout: reszta $= W(1)$.',
+  steps:[
+    {col:0, text:'$W(1) = 1 - 3 + 2 = 0$'},
+    {col:1, text:'Reszta wynosi 0 → $(x-1)$ jest dzielnikiem $W(x)$.'},
+    {col:2, text:'Tw. Bezout: reszta z dzielenia $W(x)$ przez $(x-a)$ to $W(a)$.'},
+  ],
+  answer:'$0$'
+},
+{
+  id:46, cat:13, diff:2, level:'R',
+  title:'Schemat Hornera — rozkład',
+  content:'Rozłóż na czynniki: $W(x) = x^3 - 6x^2 + 11x - 6$.',
+  hint:'Sprawdź $W(1)$, $W(2)$, $W(3)$.',
+  steps:[
+    {col:0, text:'$W(1)=1-6+11-6=0$ → $(x-1)$ jest czynnikiem.'},
+    {col:1, text:'Horner: $x^3-6x^2+11x-6 = (x-1)(x^2-5x+6)$.'},
+    {col:2, text:'$x^2-5x+6 = (x-2)(x-3)$. Wynik: $(x-1)(x-2)(x-3)$.'},
+  ],
+  answer:'$(x-1)(x-2)(x-3)$'
+},
+/* ── DOWODZENIE (cat 14) ── */
+{
+  id:47, cat:14, diff:2, level:'R',
+  title:'Indukcja — nierówność',
+  content:'Udowodnij przez indukcję: $2^n > n$ dla $n \\geq 1$.',
+  hint:'Baza: $n=1$, $2^1 = 2 > 1$. Krok: załóż $2^k > k$.',
+  steps:[
+    {col:0, text:'Baza: $n=1$: $2^1 = 2 > 1$ ✓'},
+    {col:1, text:'Zał. ind.: $2^k > k$. Wtedy $2^{k+1} = 2\\cdot 2^k > 2k \\geq k+1$ (bo $k\\geq1$).'},
+    {col:2, text:'$2^{k+1} > k+1$ ✓ — krok indukcyjny udowodniony. □'},
+  ],
+  answer:'Dowód indukcyjny zakończony. □'
+},
+{
+  id:48, cat:14, diff:3, level:'R',
+  title:'Dowód nie wprost — $\\sqrt{3}$ niewymierny',
+  content:'Udowodnij, że $\\sqrt{3}$ jest liczbą niewymierną.',
+  hint:'Załóż $\\sqrt{3} = p/q$ (nieskrac.) i dojdź do sprzeczności.',
+  steps:[
+    {col:0, text:'Załóżmy: $\\sqrt{3} = \\frac{p}{q}$, $\\gcd(p,q)=1$. Wtedy $3q^2 = p^2$, więc $3|p^2 \\Rightarrow 3|p$.'},
+    {col:1, text:'$p = 3k \\Rightarrow 3q^2 = 9k^2 \\Rightarrow q^2 = 3k^2 \\Rightarrow 3|q$.'},
+    {col:2, text:'$3|p$ i $3|q$ — sprzeczność z $\\gcd(p,q)=1$. □'},
+  ],
+  answer:'$\\sqrt{3} \\notin \\mathbb{Q}$. □'
+},
+/* ── WEKTORY (cat 15) ── */
+{
+  id:49, cat:15, diff:1, level:'R',
+  title:'Wektor i długość',
+  content:'$A(2,5)$, $B(6,8)$. Oblicz $\\vec{AB}$ i $|\\vec{AB}|$.',
+  hint:'$\\vec{AB} = B - A$.',
+  steps:[
+    {col:0, text:'$\\vec{AB} = [6-2, 8-5] = [4, 3]$'},
+    {col:1, text:'$|\\vec{AB}| = \\sqrt{16+9} = \\sqrt{25} = 5$'},
+    {col:2, text:'Trójka pitagorejska 3-4-5.'},
+  ],
+  answer:'$\\vec{AB} = [4,3]$, $|\\vec{AB}| = 5$'
+},
+{
+  id:50, cat:15, diff:2, level:'R',
+  title:'Kąt między wektorami',
+  content:'Oblicz kąt między $\\vec{u}=[1,1]$ i $\\vec{v}=[0,1]$.',
+  hint:'$\\cos\\alpha = \\frac{\\vec{u}\\cdot\\vec{v}}{|\\vec{u}||\\vec{v}|}$.',
+  steps:[
+    {col:0, text:'$\\vec{u}\\cdot\\vec{v} = 0+1 = 1$. $|\\vec{u}| = \\sqrt{2}$, $|\\vec{v}| = 1$.'},
+    {col:1, text:'$\\cos\\alpha = \\frac{1}{\\sqrt{2}} = \\frac{\\sqrt{2}}{2}$'},
+    {col:2, text:'$\\alpha = 45°$.'},
+  ],
+  answer:'$\\alpha = 45°$'
+},
+{
+  id:51, cat:15, diff:3, level:'R',
+  title:'Pole trójkąta z wektorów',
+  content:'Oblicz pole trójkąta $A(0,0)$, $B(5,2)$, $C(1,4)$ metodą wektorową.',
+  hint:'$S = \\frac{1}{2}|u_1v_2 - u_2v_1|$.',
+  steps:[
+    {col:0, text:'$\\vec{AB} = [5,2]$, $\\vec{AC} = [1,4]$.'},
+    {col:1, text:'$\\det = 5\\cdot4 - 2\\cdot1 = 20-2 = 18$'},
+    {col:2, text:'$S = \\frac{1}{2}|18| = 9$'},
+  ],
+  answer:'$S = 9$'
+},
 ];
 
 /* ================================================================
@@ -710,8 +912,8 @@ var onlyBookmarked = false;
 var onlyUnsolved = false;
 var onlyWithNote = false;
 var diffFilter = 0;  // 0 = all, 1/2/3 = only that difficulty
-var catNames = ['Liczby','Algebra','Równania','Funkcje','Fk. Kwadr.','Ciągi','Trygonom.','Planimetria','Stereometria','Statystyka'];
-var catColors = ['cat-0','cat-1','cat-2','cat-3','cat-4','cat-5','cat-6','cat-7','cat-8','cat-9'];
+var catNames = ['Liczby','Algebra','Równania','Funkcje','Fk. Kwadr.','Ciągi','Trygonom.','Planimetria','Stereometria','Statystyka','Granice','Pochodne','Zespolone','Wielomiany','Dowodzenie','Wektory'];
+var catColors = ['cat-0','cat-1','cat-2','cat-3','cat-4','cat-5','cat-6','cat-7','cat-8','cat-9','cat-0','cat-1','cat-2','cat-3','cat-4','cat-5'];
 var diffColors = [null,'#10b981','#f59e0b','#ef4444'];
 var diffLabels = [null,'Łatwe','Średnie','Trudne'];
 var solvedIds = loadSet('zadaniaSolvedIds');
@@ -759,13 +961,14 @@ function buildGrid() {
     var bookClass = isBookmarked(t.id) ? ' active-book' : '';
     var bookIcon = isBookmarked(t.id) ? 'fa-solid' : 'fa-regular';
     var bookLabel = isBookmarked(t.id) ? 'W ulubionych' : 'Dodaj do ulubionych';
-    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+normalizeText(t.title)+'" data-search="'+searchPayload.replace(/"/g,'&quot;')+'" data-diff="'+t.diff+'" data-solved="'+(isSolved(t.id)?'1':'0')+'" data-bookmarked="'+(isBookmarked(t.id)?'1':'0')+'" data-hasnote="'+(loadTaskNote(t.id)?'1':'0')+'">' +
+    return '<div class="task-card" data-cat="'+t.cat+'" data-id="'+t.id+'" data-title="'+normalizeText(t.title)+'" data-search="'+searchPayload.replace(/"/g,'&quot;')+'" data-diff="'+t.diff+'" data-level="'+(t.level||'P')+'" data-solved="'+(isSolved(t.id)?'1':'0')+'" data-bookmarked="'+(isBookmarked(t.id)?'1':'0')+'" data-hasnote="'+(loadTaskNote(t.id)?'1':'0')+'">' +
       '<button class="toggle-btn" onclick="toggleCard(this)">'+
         '<div class="flex items-start gap-3 flex-1 text-left">'+
           '<div class="flex-shrink-0 w-8 h-8 bg-blue-50 rounded-lg flex items-center justify-center text-blue-600 font-black text-sm mt-0.5">'+t.id+'</div>'+
           '<div class="flex-1 min-w-0">'+
             '<div class="flex flex-wrap items-center gap-2 mb-1">'+
               '<span class="tag '+catColors[t.cat]+'">'+catNames[t.cat]+'</span>'+
+              (t.level==='R'?'<span class="text-xs font-bold text-rose-500 bg-rose-50 px-1.5 py-0.5 rounded-full">ROZSZ.</span>':'')+
               '<span class="text-xs font-bold" style="color:'+diffColors[t.diff]+'">'+diffLabels[t.diff]+'</span>'+
               '<span class="flex gap-0.5">'+starsHtml+'</span>'+
             '</div>'+
@@ -861,6 +1064,7 @@ function applyFilters(q) {
   q = normalizeText((q !== undefined ? q : document.getElementById('searchBox').value).trim());
   var mode = document.getElementById('sortMode').value;
   var visible = 0;
+  var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'oba';
   var cards = Array.from(document.querySelectorAll('.task-card'));
   cards.forEach(function(card) {
     var catMatch = currentFilter === 'all' || card.dataset.cat === currentFilter;
@@ -869,7 +1073,8 @@ function applyFilters(q) {
     var unsolvedMatch = !onlyUnsolved || card.dataset.solved !== '1';
     var noteMatch = !onlyWithNote || card.dataset.hasnote === '1';
     var diffMatch = !diffFilter || card.dataset.diff === String(diffFilter);
-    var show = catMatch && searchMatch && bookMatch && unsolvedMatch && noteMatch && diffMatch;
+    var levelMatch = lvl === 'oba' || lvl === 'rozszerzony' || card.dataset.level !== 'R';
+    var show = catMatch && searchMatch && bookMatch && unsolvedMatch && noteMatch && diffMatch && levelMatch;
     card.classList.toggle('hidden-task', !show);
     if (show) visible++;
   });
@@ -1017,6 +1222,7 @@ function toggleMobileNav(){
 document.addEventListener('DOMContentLoaded', function(){
   buildGrid();
   applyFilters('');
+  document.addEventListener('matura-level-change', function(){ applyFilters(''); });
   document.addEventListener('keydown', function(e){
     if(e.key === '/' && document.activeElement !== document.getElementById('searchBox')){
       e.preventDefault();

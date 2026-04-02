@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quiz diagnostyczny - Matematyka to Podstawa</title>
-  <meta name="description" content="Quiz diagnostyczny z matematyki na maturę podstawową. 15 losowych pytań z 10 działów z feedbackiem i raportem końcowym.">
+  <title>Quiz diagnostyczny (Podstawa + Rozszerzenie) - Matematyka to Podstawa</title>
+  <meta name="description" content="Quiz diagnostyczny z matematyki na maturę — podstawowy i rozszerzony. Losowe pytania z 16 działów z feedbackiem i raportem końcowym.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/level-switcher.js"></script>
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
@@ -228,7 +229,22 @@
       { topic: 'Stereometria', q: 'Objętość sześcianu o krawędzi 5:', options: ['25','75','125','150'], correct: 2, explain: '$V=a^3=125$.' },
       { topic: 'Stereometria', q: 'Objętość ostrosłupa o $P_p=9$ i $h=6$:', options: ['54','27','18','9'], correct: 2, explain: '$V=\\frac{1}{3}P_p h=\\frac{1}{3}\\cdot9\\cdot6=18$.' },
       { topic: 'Prawdopodobieństwo', q: 'Rzut kostką: prawdopodobieństwo liczby parzystej to:', options: ['$\\frac{1}{3}$','$\\frac{1}{2}$','$\\frac{2}{3}$','$\\frac{1}{6}$'], correct: 1, explain: 'Parzyste to 2, 4, 6: 3 wyniki z 6.' },
-      { topic: 'Prawdopodobieństwo', q: "Jeśli $P(A)=0{,}2$, to $P(A')=$", options: ['0,2','0,8','1,2','0'], correct: 1, explain: "$P(A')=1-P(A)=0{,}8$." }
+      { topic: 'Prawdopodobieństwo', q: "Jeśli $P(A)=0{,}2$, to $P(A')=$", options: ['0,2','0,8','1,2','0'], correct: 1, explain: "$P(A')=1-P(A)=0{,}8$." },
+      // ═══════ ROZSZERZENIE ═══════
+      { topic: 'Granice', level: 'rozszerzony', q: 'Oblicz $\\displaystyle\\lim_{n\\to\\infty} \\frac{5n^2+n}{2n^2-3}$', options: ['$0$','$\\frac{5}{2}$','$\\infty$','$1$'], correct: 1, explain: 'Dzielimy przez $n^2$: $\\frac{5+\\frac{1}{n}}{2-\\frac{3}{n^2}} \\to \\frac{5}{2}$.' },
+      { topic: 'Granice', level: 'rozszerzony', q: '$\\displaystyle\\lim_{n\\to\\infty}\\left(1+\\frac{2}{n}\\right)^n =$', options: ['$1$','$e$','$e^2$','$2e$'], correct: 2, explain: 'Podstawiamy $m=n/2$: $\\left(\\left(1+\\frac{1}{m}\\right)^m\\right)^2 \\to e^2$.' },
+      { topic: 'Granice', level: 'rozszerzony', q: 'Granica $\\displaystyle\\lim_{n\\to\\infty} \\sqrt[n]{n}$ jest równa:', options: ['$0$','$1$','$e$','$\\infty$'], correct: 1, explain: 'To granica ważna: $\\sqrt[n]{n}\\to 1$.' },
+      { topic: 'Pochodne', level: 'rozszerzony', q: 'Pochodna $f(x)=x^3-6x+1$ to:', options: ['$3x^2-6$','$3x^2+1$','$x^2-6$','$3x^3-6x$'], correct: 0, explain: '$(x^3)\'=3x^2$, $(-6x)\'=-6$, $(1)\'=0$.' },
+      { topic: 'Pochodne', level: 'rozszerzony', q: 'Pochodna $f(x)=\\sin(3x)$ to:', options: ['$\\cos(3x)$','$3\\cos(3x)$','$-3\\cos(3x)$','$3\\sin(3x)$'], correct: 1, explain: 'Reguła łańcuchowa: $(\\sin u)\'=\\cos u \\cdot u\'$, $u=3x$, $u\'=3$.' },
+      { topic: 'Pochodne', level: 'rozszerzony', q: 'W którym punkcie $f(x)=x^2-4x$ ma minimum lokalne?', options: ['$x=0$','$x=2$','$x=4$','$x=-2$'], correct: 1, explain: '$f\'(x)=2x-4=0 \\Rightarrow x=2$. $f\'\'(2)=2>0$ → minimum.' },
+      { topic: 'Liczby zespolone', level: 'rozszerzony', q: 'Moduł $z=3+4i$ wynosi:', options: ['$5$','$7$','$25$','$\\sqrt{7}$'], correct: 0, explain: '$|z|=\\sqrt{9+16}=\\sqrt{25}=5$.' },
+      { topic: 'Liczby zespolone', level: 'rozszerzony', q: 'Wartość $i^{100}$ to:', options: ['$1$','$i$','$-1$','$-i$'], correct: 0, explain: '$100=4\\cdot25$, więc $i^{100}=(i^4)^{25}=1^{25}=1$.' },
+      { topic: 'Liczby zespolone', level: 'rozszerzony', q: 'Oblicz $(2+i)(2-i)$:', options: ['$5$','$4-i^2$','$3$','$4+1$'], correct: 0, explain: '$(a+bi)(a-bi)=a^2+b^2=4+1=5$.' },
+      { topic: 'Wielomiany', level: 'rozszerzony', q: 'Reszta z dzielenia $W(x)=x^3-2x+1$ przez $(x-1)$ to:', options: ['$0$','$1$','$-1$','$2$'], correct: 0, explain: 'Tw. Bezout: reszta $= W(1)=1-2+1=0$. Dzielnik!' },
+      { topic: 'Wielomiany', level: 'rozszerzony', q: 'Wielomian $x^3+x$ ma w $\\mathbb{R}$:', options: ['1 pierw.','2 pierw.','3 pierw.','0 pierw.'], correct: 0, explain: '$x^3+x=x(x^2+1)=0 \\Rightarrow x=0$ (bo $x^2+1>0$).' },
+      { topic: 'Wektory', level: 'rozszerzony', q: 'Iloczyn skalarny $\\vec{u}=[3,4]$ i $\\vec{v}=[2,-1]$:', options: ['$2$','$-2$','$11$','$10$'], correct: 0, explain: '$3\\cdot2+4\\cdot(-1)=6-4=2$.' },
+      { topic: 'Wektory', level: 'rozszerzony', q: 'Wektory $[2,6]$ i $[-3,1]$ są prostopadłe?', options: ['Tak','Nie','Brak danych','Są równoległe'], correct: 0, explain: '$2\\cdot(-3)+6\\cdot1=-6+6=0$ → prostopadłe.' },
+      { topic: 'Dowodzenie', level: 'rozszerzony', q: 'W indukcji matematycznej krok indukcyjny polega na:', options: ['Sprawdzeniu $P(1)$','Założeniu $P(k)$ i pokazaniu $P(k+1)$','Udowodnieniu $P(n)$ wprost','Zaprzeczeniu tezy'], correct: 1, explain: 'Krok indukcyjny: $P(k)\\Rightarrow P(k+1)$.' }
     ];
 
     let test = [];
@@ -239,18 +255,28 @@
     const topicStat = {};
     let selectedTopic = null; // null = all topics
 
+    // Level-aware pool filter
+    function getFilteredPool() {
+      var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'oba';
+      if (lvl === 'oba') return pool;
+      if (lvl === 'podstawowy') return pool.filter(function(q){ return !q.level || q.level === 'podstawowy'; });
+      return pool; // rozszerzony = show all (extended includes basic)
+    }
+
     // Build topic filter buttons
     const allTopics = [...new Set(pool.map(q => q.topic))];
     const filterBox = document.getElementById('topicFilterBox');
     function renderFilterBtns() {
       filterBox.innerHTML = '';
+      var fp = getFilteredPool();
+      var visibleTopics = [...new Set(fp.map(q => q.topic))];
       // "Wszystkie" button
       const allBtn = document.createElement('button');
       allBtn.className = `px-3 py-1.5 rounded-full text-xs font-bold border transition ${selectedTopic === null ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-400 hover:text-blue-600'}`;
       allBtn.textContent = 'Wszystkie działy';
       allBtn.onclick = () => { selectedTopic = null; renderFilterBtns(); };
       filterBox.appendChild(allBtn);
-      allTopics.forEach(topic => {
+      visibleTopics.forEach(topic => {
         const btn = document.createElement('button');
         btn.className = `px-3 py-1.5 rounded-full text-xs font-bold border transition ${selectedTopic === topic ? 'bg-blue-600 text-white border-blue-600' : 'bg-white text-gray-600 border-gray-200 hover:border-blue-400 hover:text-blue-600'}`;
         btn.textContent = topic;
@@ -258,11 +284,12 @@
         filterBox.appendChild(btn);
       });
       // Update stat counters
-      const src = selectedTopic ? pool.filter(q => q.topic === selectedTopic) : pool;
+      const src = selectedTopic ? fp.filter(q => q.topic === selectedTopic) : fp;
       document.getElementById('statQCount').textContent = Math.min(15, src.length);
-      document.getElementById('statTCount').textContent = selectedTopic ? '1' : allTopics.length;
+      document.getElementById('statTCount').textContent = selectedTopic ? '1' : visibleTopics.length;
     }
     renderFilterBtns();
+    document.addEventListener('matura-level-change', function(){ renderFilterBtns(); });
 
     // "Słabe tematy" quick-start — pokazuje si gdy jest historia quizów
     (function() {
@@ -350,7 +377,8 @@
     }
 
     function beginQuiz() {
-      const src = selectedTopic ? pool.filter(q => q.topic === selectedTopic) : pool;
+      const fp = getFilteredPool();
+      const src = selectedTopic ? fp.filter(q => q.topic === selectedTopic) : fp;
       const n = Math.min(15, src.length);
       test = shuffle(src).slice(0, n);
       index = 0;

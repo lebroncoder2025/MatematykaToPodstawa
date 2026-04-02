@@ -4,7 +4,7 @@
 // Strona działa w pełni offline po pierwszym odwiedzeniu.
 // ================================================================
 
-var CACHE = 'mtp-v4';
+var CACHE = 'mtp-v5';
 
 var LOCAL_ASSETS = [
   '/',
@@ -26,6 +26,12 @@ var LOCAL_ASSETS = [
   '/dzialy/stereometria.html',
   '/dzialy/trygonometria.html',
   '/dzialy/wyrazenia-algebraiczne.html',
+  '/dzialy/granice.html',
+  '/dzialy/pochodne.html',
+  '/dzialy/liczby-zespolone.html',
+  '/dzialy/wielomiany.html',
+  '/dzialy/dowodzenie.html',
+  '/dzialy/wektory.html',
   '/assets/styles.css',
   '/assets/dark-mode.js',
   '/assets/notepad.js',
@@ -35,6 +41,7 @@ var LOCAL_ASSETS = [
   '/assets/content.js',
   '/assets/topic-page.js',
   '/assets/load-exam-data.js',
+  '/assets/level-switcher.js',
   '/manifest.json'
 ];
 

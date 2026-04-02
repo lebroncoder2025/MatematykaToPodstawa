@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
   <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/level-switcher.js"></script>
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
   <script src="assets/fontsize.js"></script>
@@ -39,6 +40,7 @@
     .type-diagnostyczny { background:#fce7f3; color:#9d174d; }
     .type-probny { background:#e0e7ff; color:#3730a3; }
     .type-pokazowy { background:#ccfbf1; color:#065f46; }
+    .type-rozszerzony { background:#ffe4e6; color:#9f1239; }
     .task-solution-card { background:linear-gradient(135deg,#f8fafc 0%,#f0f9ff 100%); border:1px solid #e0e7ff; border-radius:1rem; padding:1.5rem; margin-bottom:1rem; }
     .step-number { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:50%; background:#3b82f6; color:#fff; font-weight:700; font-size:0.75rem; flex-shrink:0; }
     .exam-hero { background:linear-gradient(135deg,#0f172a 0%,#164e63 40%,#0891b2 100%); position:relative; overflow:hidden; }
@@ -140,7 +142,7 @@
         <span class="text-cyan-300">z rozwiązaniami</span>
       </h1>
       <p class="text-base md:text-lg text-cyan-100 max-w-3xl mx-auto leading-relaxed">
-        18 arkuszy CKE: sesje główne (2015&ndash;2025), diagnostyczne, próbne i pokazowe. Każdy z pełnymi rozwiązaniami WSZYSTKICH zadań krok po kroku.
+        21 arkuszy CKE: sesje główne (2015&ndash;2025), diagnostyczne, próbne, pokazowe + <strong class="text-rose-300">3 arkusze poziomu rozszerzonego</strong>. Każdy z pełnymi rozwiązaniami krok po kroku.
       </p>
     </div>
   </header>
@@ -148,9 +150,9 @@
   <!-- Stats -->
   <section class="py-8 bg-white border-b">
     <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div class="reveal"><p class="text-2xl md:text-3xl font-black text-cyan-600">18</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Arkuszy</p></div>
-      <div class="reveal delay-1"><p class="text-2xl md:text-3xl font-black text-cyan-600">36</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Plików PDF</p></div>
-      <div class="reveal delay-2"><p class="text-2xl md:text-3xl font-black text-cyan-600">550+</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Rozwiązań zadań</p></div>
+      <div class="reveal"><p class="text-2xl md:text-3xl font-black text-cyan-600">21</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Arkuszy</p></div>
+      <div class="reveal delay-1"><p class="text-2xl md:text-3xl font-black text-cyan-600">42</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Plików PDF</p></div>
+      <div class="reveal delay-2"><p class="text-2xl md:text-3xl font-black text-cyan-600">595+</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Rozwiązań zadań</p></div>
       <div class="reveal delay-3"><p class="text-2xl md:text-3xl font-black text-cyan-600">100%</p><p class="text-gray-500 uppercase tracking-wider text-xs font-semibold mt-1">Lokalne pliki</p></div>
     </div>
   </section>
@@ -191,18 +193,20 @@
       <span class="type-badge type-diagnostyczny"><i class="fa-solid fa-stethoscope text-[10px]"></i> Diagnostyczny</span>
       <span class="type-badge type-probny"><i class="fa-solid fa-flask text-[10px]"></i> Próbny</span>
       <span class="type-badge type-pokazowy"><i class="fa-solid fa-eye text-[10px]"></i> Pokazowy</span>
+      <span class="type-badge type-rozszerzony"><i class="fa-solid fa-fire text-[10px]"></i> Rozszerzony</span>
     </div>
 
     <!-- Filter tabs -->
     <div class="flex flex-wrap gap-2 mb-4 reveal">
-      <button class="tab-btn active px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('all', this)">Wszystkie (18)</button>
+      <button class="tab-btn active px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('all', this)">Wszystkie (21)</button>
       <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('sesja', this)">Sesje główne (11)</button>
       <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('diagnostyczny', this)">Diagnostyczne (4)</button>
       <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('probny', this)">Próbne (2)</button>
       <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('pokazowy', this)">Pokazowe (1)</button>
+      <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('rozszerzony', this)">Rozszerzone (3)</button>
     </div>
     <div class="flex items-center gap-3 mb-8 reveal">
-      <span class="exams-done-badge" id="examsDoneBadge"><i class="fa-solid fa-check-circle"></i> Ukończone: <span id="examsDoneCount">0</span> / 18</span>
+      <span class="exams-done-badge" id="examsDoneBadge"><i class="fa-solid fa-check-circle"></i> Ukończone: <span id="examsDoneCount">0</span> / 21</span>
       <button class="tab-btn px-4 py-2 rounded-full text-sm font-bold" onclick="filterType('done', this)" id="filterDoneBtn">Tylko ukończone</button>
     </div>
 
@@ -218,7 +222,7 @@
     </div>
     <div class="max-w-4xl mx-auto text-center relative z-10 reveal">
       <h2 class="text-2xl md:text-3xl font-black mb-4">Chcesz więcej ćwiczeń?</h2>
-      <p class="text-gray-400 mb-8 max-w-xl mx-auto">Sprawdź nasze 10 działów tematycznych z teorią i zadaniami lub rozwiąż quiz diagnostyczny.</p>
+      <p class="text-gray-400 mb-8 max-w-xl mx-auto">Sprawdź nasze 16 działów tematycznych (podstawa + rozszerzenie) z teorią i zadaniami lub rozwiąż quiz diagnostyczny.</p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <a href="index.html#dzialy" class="bg-blue-600 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition inline-flex items-center justify-center gap-2"><i class="fa-solid fa-book"></i> Działy tematyczne</a>
         <a href="quiz.html" class="bg-white/10 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-white/20 transition border border-white/20 inline-flex items-center justify-center gap-2"><i class="fa-solid fa-brain"></i> Quiz diagnostyczny</a>
@@ -1022,6 +1026,79 @@
       { num: 33, text: "Trójkąt — tw. cosinusów lub sinusów", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Narzędzie:", math: "$c^2=a^2+b^2-2ab\\cos\\gamma$" }] },
       { num: 34, text: "Ciąg — wyznacz $n$, $r$, $q$ z warunków", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Układ równań: podstaw dane, rozwiąż" }] }
     ]
+  },
+
+  /* ════════════════════════════════════════════════
+     MATURA ROZSZERZONA — Formuła 2023
+     ════════════════════════════════════════════════ */
+  {
+    year: 2025, title: "Matura Maj 2025 – Poziom Rozszerzony", date: "Maj 2025",
+    formula: "2023", examType: "rozszerzony",
+    pdfPath: "arkusze/2025_rozsz/arkusz.pdf", zasadyPath: "arkusze/2025_rozsz/zasady.pdf",
+    taskCount: 15, closedCount: 5, openCount: 10,
+    tasks: [
+      { num: 1, text: "Granica ciągu — wielomian/wielomian", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Dziel przez najwyższą potęgę $n$" }] },
+      { num: 2, text: "Pochodna funkcji — oblicz $f'(x)$", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Reguły:", math: "$(x^n)' = nx^{n-1}$, reguła łańcuchowa" }] },
+      { num: 3, text: "Liczba zespolona — moduł i argument", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzory:", math: "$|z| = \\sqrt{a^2+b^2}$, $\\arg z$" }] },
+      { num: 4, text: "Wielomian — reszta z dzielenia (tw. Bezout)", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Reszta z dzielenia $W(x)$ przez $(x-a)$ to $W(a)$" }] },
+      { num: 5, text: "Wektor — iloczyn skalarny i prostopadłość", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\vec{u}\\cdot\\vec{v} = u_1v_1+u_2v_2$" }] },
+      { num: 6, text: "Badanie monotoniczności i ekstrema", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "$f'(x)=0$ → punkty krytyczne → tabela znaków" }] },
+      { num: 7, text: "Równanie stycznej do wykresu funkcji", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$y = f'(x_0)(x-x_0) + f(x_0)$" }] },
+      { num: 8, text: "Działania na liczbach zespolonych", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Mnożenie, dzielenie przez sprzężenie" }] },
+      { num: 9, text: "Rozkład wielomianu na czynniki (Horner)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Tw. o pierw. wymiernych → Horner → $\\Delta$" }] },
+      { num: 10, text: "Dowód przez indukcję matematyczną", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Schemat:", math: "1. Baza $P(1)$ 2. Krok $P(k)\\Rightarrow P(k+1)$" }] },
+      { num: 11, text: "Granica ciągu — forma $1^\\infty$", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Kluczowe:", math: "$\\lim(1+\\frac{a}{n})^n = e^a$" }] },
+      { num: 12, text: "Zadanie optymalizacyjne z pochodną", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Funkcja celu → $f'(x)=0$ → sprawdź max/min" }] },
+      { num: 13, text: "Kąt między wektorami", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\cos\\alpha = \\frac{\\vec{u}\\cdot\\vec{v}}{|\\vec{u}||\\vec{v}|}$" }] },
+      { num: 14, text: "Równanie wielomianowe — wszystkie pierwiastki", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Horner + $\\Delta$ + $\\mathbb{C}$" }] },
+      { num: 15, text: "Dowód nierówności (nie wprost lub bezp.)", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "$(a-b)^2 \\geq 0$ lub sprzeczność" }] }
+    ]
+  },
+  {
+    year: 2024, title: "Matura Maj 2024 – Poziom Rozszerzony", date: "Maj 2024",
+    formula: "2023", examType: "rozszerzony",
+    pdfPath: "arkusze/2024_rozsz/arkusz.pdf", zasadyPath: "arkusze/2024_rozsz/zasady.pdf",
+    taskCount: 15, closedCount: 5, openCount: 10,
+    tasks: [
+      { num: 1, text: "Granica ciągu — symbol $\\frac{\\infty}{\\infty}$", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Dziel przez najwyższą potęgę $n$" }] },
+      { num: 2, text: "Pochodna — reguła iloczynu", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$(fg)' = f'g + fg'$" }] },
+      { num: 3, text: "Potęga liczby zespolonej $i^n$", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Cykl:", math: "$i^1=i, i^2=-1, i^3=-i, i^4=1$" }] },
+      { num: 4, text: "Wielomian — tw. o pierwiastkach wymiernych", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "TW:", math: "$p|a_0$ i $q|a_n$" }] },
+      { num: 5, text: "Wektor — długość i współrzędne", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$|\\vec{v}| = \\sqrt{v_1^2+v_2^2}$" }] },
+      { num: 6, text: "Ekstremum i monotoniczność wielomianu st. 3", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "$f'(x) = 0$ → znaki → ekstrema" }] },
+      { num: 7, text: "Styczna do paraboli", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Styczna:", math: "$y = f'(x_0)(x-x_0)+f(x_0)$" }] },
+      { num: 8, text: "Dzielenie liczb zespolonych", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Sprzężenie mianownika: $\\frac{z}{w}=\\frac{z\\bar{w}}{|w|^2}$" }] },
+      { num: 9, text: "Schemat Hornera — rozkład i pierwiastki", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Kandydaci → Horner → trójmian → $\\Delta$" }] },
+      { num: 10, text: "Indukcja — suma ciągu", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Schemat:", math: "Baza + krok indukcyjny" }] },
+      { num: 11, text: "Granica — mnożenie przez sprzężenie", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "$\\sqrt{\\cdot}-\\sqrt{\\cdot}$: mnóż przez sprzężenie" }] },
+      { num: 12, text: "Optymalizacja — max. pole/objętość", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Jedna zmienna → $f'=0$ → sprawdź" }] },
+      { num: 13, text: "Pole trójkąta z wektorów", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$S=\\frac{1}{2}|u_1v_2-u_2v_1|$" }] },
+      { num: 14, text: "Równanie $z^2 + pz + q = 0$ w $\\mathbb{C}$", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "$\\Delta < 0 \\Rightarrow z = \\frac{-p \\pm i\\sqrt{|\\Delta|}}{2}$" }] },
+      { num: 15, text: "Dowód podzielności — ciąg liczbowy", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Rozkład na czynniki / indukcja" }] }
+    ]
+  },
+  {
+    year: 2023, title: "Matura Maj 2023 – Poziom Rozszerzony", date: "Maj 2023",
+    formula: "2023", examType: "rozszerzony",
+    pdfPath: "arkusze/2023_rozsz/arkusz.pdf", zasadyPath: "arkusze/2023_rozsz/zasady.pdf",
+    taskCount: 15, closedCount: 5, openCount: 10,
+    tasks: [
+      { num: 1, text: "Granica ciągu — porównaj rzędy wzrostu", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Dziel przez dominujący wyraz" }] },
+      { num: 2, text: "Pochodna — złożenie funkcji", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Reguła:", math: "$(f(g(x)))' = f'(g(x))\\cdot g'(x)$" }] },
+      { num: 3, text: "Moduł liczby zespolonej", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$|z| = \\sqrt{a^2+b^2}$" }] },
+      { num: 4, text: "Reszta z dzielenia wielomianu", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "TW Bezout:", math: "Reszta $= W(a)$" }] },
+      { num: 5, text: "Wektory — kolinearność", type: "zamknięte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Warunek:", math: "$u_1v_2 - u_2v_1 = 0$" }] },
+      { num: 6, text: "Monotoniczność — pochodna wielomianu", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "$f'(x) = 0$ → przedziały → znaki" }] },
+      { num: 7, text: "Styczna do krzywej w punkcie", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$y-f(x_0) = f'(x_0)(x-x_0)$" }] },
+      { num: 8, text: "Iloczyn i iloraz w $\\mathbb{C}$", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Mnożenie:", math: "$(a+bi)(c+di) = (ac-bd)+(ad+bc)i$" }] },
+      { num: 9, text: "Wielomian — rozkład na czynniki", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Sprawdź kandydatów → Horner → trójmian" }] },
+      { num: 10, text: "Indukcja — nierówność z potęgami", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Baza + krok:", math: "Załóż $P(k)$, pokaż $P(k+1)$" }] },
+      { num: 11, text: "Granica z definicją $e$", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Kluczowe:", math: "$\\lim(1+1/n)^n = e$" }] },
+      { num: 12, text: "Zadanie optymalizacyjne", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Plan:", math: "Funkcja jednej zmiennej → $f'=0$" }] },
+      { num: 13, text: "Kąt między wektorami", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Wzór:", math: "$\\cos\\alpha = \\frac{\\vec{u}\\cdot\\vec{v}}{|\\vec{u}||\\vec{v}|}$" }] },
+      { num: 14, text: "Pierwiastki zespolone wielomianu st. 3", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "1 pierw. rzecz. (Horner) → $\\Delta<0$ → $\\mathbb{C}$" }] },
+      { num: 15, text: "Dowód — podzielność wyrażenia", type: "otwarte", answer: "Sprawdź w arkuszu CKE", solution: [{ step: "Metoda:", math: "Rozkład lub indukcja" }] }
+    ]
   }
 
   ];
@@ -1039,11 +1116,12 @@
       sesja: { cls: 'type-sesja', icon: 'fa-graduation-cap', label: 'Sesja główna' },
       diagnostyczny: { cls: 'type-diagnostyczny', icon: 'fa-stethoscope', label: 'Diagnostyczny' },
       probny: { cls: 'type-probny', icon: 'fa-flask', label: 'Próbny' },
-      pokazowy: { cls: 'type-pokazowy', icon: 'fa-eye', label: 'Pokazowy' }
+      pokazowy: { cls: 'type-pokazowy', icon: 'fa-eye', label: 'Pokazowy' },
+      rozszerzony: { cls: 'type-rozszerzony', icon: 'fa-fire', label: 'Rozszerzony' }
     };
     var t = typeMap[exam.examType] || typeMap.sesja;
 
-    return '<div class="exam-card p-6 md:p-8 reveal exam-type-card' + (isDoneExam(uid) ? ' is-done' : '') + '" data-type="' + exam.examType + '" data-uid="' + uid + '">' +
+    return '<div class="exam-card p-6 md:p-8 reveal exam-type-card' + (isDoneExam(uid) ? ' is-done' : '') + '" data-type="' + exam.examType + '" data-uid="' + uid + '" data-level="' + (exam.examType === 'rozszerzony' ? 'rozszerzony' : 'podstawowy') + '">' +
       '<div class="flex flex-wrap items-start justify-between gap-4 mb-5">' +
         '<div>' +
           '<div class="flex flex-wrap items-center gap-2 mb-2">' +
@@ -1057,7 +1135,7 @@
       '</div>' +
       '<div class="flex flex-wrap items-center gap-4 mb-5 text-sm text-gray-500">' +
         '<span><i class="fa-solid fa-list-check mr-1 text-cyan-500"></i> ' + exam.taskCount + ' zadań (' + exam.closedCount + ' zamkn. + ' + exam.openCount + ' otw.)</span>' +
-        '<span><i class="fa-solid fa-graduation-cap mr-1 text-purple-500"></i> Poziom podstawowy</span>' +
+        '<span><i class="fa-solid fa-graduation-cap mr-1 text-purple-500"></i> ' + (exam.examType === 'rozszerzony' ? 'Poziom rozszerzony' : 'Poziom podstawowy') + '</span>' +
         '<span><i class="fa-solid fa-pen-fancy mr-1 text-amber-500"></i> ' + exam.tasks.length + ' rozwiązań</span>' +
       '</div>' +
       '<div class="flex flex-wrap gap-2 mb-2">' +
@@ -1280,6 +1358,17 @@
   document.addEventListener('DOMContentLoaded', function() {
     renderExams();
     document.getElementById('examsDoneCount').textContent = _doneExams.size;
+    // Level-switcher integration
+    function applyLevelFilter() {
+      var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'oba';
+      document.querySelectorAll('.exam-type-card').forEach(function(card) {
+        if (lvl === 'oba') { card.style.display = ''; return; }
+        var cl = card.dataset.level || 'podstawowy';
+        card.style.display = (cl === lvl) ? '' : 'none';
+      });
+    }
+    document.addEventListener('matura-level-change', applyLevelFilter);
+    setTimeout(applyLevelFilter, 100);
   });
   </script>
 
