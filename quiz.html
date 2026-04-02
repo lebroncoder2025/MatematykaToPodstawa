@@ -5,7 +5,7 @@
   <link rel="manifest" href="/manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiz diagnostyczny (Podstawa + Rozszerzenie) - Matematyka to Podstawa</title>
-  <meta name="description" content="Quiz diagnostyczny z matematyki na maturę — podstawowy i rozszerzony. Losowe pytania z 16 działów z feedbackiem i raportem końcowym.">
+  <meta name="description" content="Quiz diagnostyczny z matematyki na maturę — ponad 3000 proceduralnie generowanych pytań z podstawy i rozszerzenia. Feedback po każdym pytaniu, raport końcowy z rekomendacjami.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
@@ -75,7 +75,7 @@
           <i class="fa-solid fa-brain text-blue-600 text-3xl"></i>
         </div>
         <h1 class="text-2xl md:text-3xl font-black mb-3">Quiz diagnostyczny</h1>
-        <p class="text-gray-500 max-w-xl mx-auto">Sprawdź swoją gotowość maturalną. Quiz losuje 15 pytań z 10 działów, daje feedback po każdej odpowiedzi i generuje raport z rekomendacjami.</p>
+        <p class="text-gray-500 max-w-xl mx-auto">Sprawdź swoją gotowość maturalną. Quiz generuje unikalne pytania z ponad 3000 szablonów — za każdym razem dostajesz inne zadania z 15 działów. Po odpowiedzi zobaczysz wyjaśnienie, a na końcu — raport z rekomendacjami.</p>
       </div>
 
       <div class="grid sm:grid-cols-3 gap-4 mb-8">
@@ -207,42 +207,16 @@
     </section>
   </main>
 
+  <script src="assets/quiz-generator.js"></script>
   <script>
-    const pool = [
-      { topic: 'Liczby rzeczywiste', q: 'Oblicz: $\\log_2 64$', options: ['4','5','6','8'], correct: 2, explain: '$2^6=64$, więc $\\log_2 64=6$.' },
-      { topic: 'Liczby rzeczywiste', q: 'Oblicz: $\\sqrt{72}$', options: ['$6\\sqrt{2}$','$8\\sqrt{2}$','$4\\sqrt{3}$','$12$'], correct: 0, explain: '$72=36\\cdot2$, więc $\\sqrt{72}=6\\sqrt{2}$.' },
-      { topic: 'Liczby rzeczywiste', q: 'Wartość $|3-10|$ to:', options: ['-7','7','13','0'], correct: 1, explain: 'Wartość bezwzględna to odległość od zera, więc wynik jest dodatni: 7.' },
-      { topic: 'Wyrażenia algebraiczne', q: 'Rozłóż: $x^2-49$', options: ['$(x-7)^2$','$(x-7)(x+7)$','$x(x-49)$','$(x+7)^2$'], correct: 1, explain: 'To różnica kwadratów: $a^2-b^2=(a-b)(a+b)$.' },
-      { topic: 'Wyrażenia algebraiczne', q: 'Uprość: $\\frac{x^2-9}{x-3}$ dla $x\\neq3$', options: ['$x-3$','$x+3$','$x^2-3$','$1$'], correct: 1, explain: '$x^2-9=(x-3)(x+3)$, skracamy przez $x-3$.' },
-      { topic: 'Równania', q: 'Ile rozwiązań ma równanie $x^2+1=0$ w zbiorze liczb rzeczywistych?', options: ['0','1','2','nieskończenie wiele'], correct: 0, explain: '$x^2\\ge0$, więc $x^2+1>0$ dla każdego $x\\in\\mathbb{R}$.' },
-      { topic: 'Równania', q: 'Rozwiąż: $(x-2)(x+5)=0$', options: ['$x=2$','$x=-5$','$x\\in\\{2,-5\\}$','$x=10$'], correct: 2, explain: 'Iloczyn jest zerem, gdy przynajmniej jeden czynnik jest zerem.' },
-      { topic: 'Funkcje', q: 'Miejsce zerowe funkcji $f(x)=4x-12$ to:', options: ['2','3','4','-3'], correct: 1, explain: '$4x-12=0\\Rightarrow x=3$.' },
-      { topic: 'Funkcje', q: 'Funkcja $f(x)=-x+7$ jest:', options: ['rosnąca','malejąca','stała','okresowa'], correct: 1, explain: 'Współczynnik kierunkowy $a=-1<0$, więc funkcja malejąca.' },
-      { topic: 'Ciągi', q: 'W ciągu arytmetycznym $a_1=2$, $r=3$. Wyraz $a_4$ wynosi:', options: ['8','9','10','11'], correct: 3, explain: '$a_4=2+(4-1)\\cdot3=11$.' },
-      { topic: 'Ciągi', q: 'Ciąg 3, 6, 12, 24 jest:', options: ['arytmetyczny','geometryczny o q=2','geometryczny o q=3','niemonotoniczny'], correct: 1, explain: 'Iloraz kolejnych wyrazów jest stały i równy 2.' },
-      { topic: 'Trygonometria', q: 'Wartość $\\cos 60^\\circ$ to:', options: ['$0$','$\\frac{1}{2}$','$\\frac{\\sqrt{2}}{2}$','$1$'], correct: 1, explain: 'To wartość szczególna: $\\cos 60^\\circ = \\frac{1}{2}$.' },
-      { topic: 'Trygonometria', q: 'Oblicz: $\\sin^2\\alpha+\\cos^2\\alpha$', options: ['$0$','$1$','$2$','zależy od kąta'], correct: 1, explain: 'Jedynka trygonometryczna obowiązuje dla każdego kąta, dla którego wyrażenie ma sens.' },
-      { topic: 'Planimetria', q: 'Pole koła o promieniu 4 wynosi:', options: ['$8\\pi$','$16\\pi$','$32\\pi$','$4\\pi$'], correct: 1, explain: '$P=\\pi r^2=16\\pi$.' },
-      { topic: 'Planimetria', q: 'Suma kątów w trójkącie:', options: ['$90^\\circ$','$180^\\circ$','$270^\\circ$','$360^\\circ$'], correct: 1, explain: 'W każdym trójkącie suma miar kątów wewnętrznych to $180^\\circ$.' },
-      { topic: 'Geometria analityczna', q: 'Odległość punktów $(0,0)$ i $(6,8)$ to:', options: ['10','12','14','8'], correct: 0, explain: '$\\sqrt{6^2+8^2}=\\sqrt{36+64}=10$.' },
-      { topic: 'Geometria analityczna', q: 'Środek odcinka A(2,4), B(6,10) to:', options: ['(4,7)','(8,14)','(2,6)','(3,5)'], correct: 0, explain: 'Średnie współrzędne: $\\left(\\frac{2+6}{2},\\frac{4+10}{2}\\right)=(4,7)$.' },
-      { topic: 'Stereometria', q: 'Objętość sześcianu o krawędzi 5:', options: ['25','75','125','150'], correct: 2, explain: '$V=a^3=125$.' },
-      { topic: 'Stereometria', q: 'Objętość ostrosłupa o $P_p=9$ i $h=6$:', options: ['54','27','18','9'], correct: 2, explain: '$V=\\frac{1}{3}P_p h=\\frac{1}{3}\\cdot9\\cdot6=18$.' },
-      { topic: 'Prawdopodobieństwo', q: 'Rzut kostką: prawdopodobieństwo liczby parzystej to:', options: ['$\\frac{1}{3}$','$\\frac{1}{2}$','$\\frac{2}{3}$','$\\frac{1}{6}$'], correct: 1, explain: 'Parzyste to 2, 4, 6: 3 wyniki z 6.' },
-      { topic: 'Prawdopodobieństwo', q: "Jeśli $P(A)=0{,}2$, to $P(A')=$", options: ['0,2','0,8','1,2','0'], correct: 1, explain: "$P(A')=1-P(A)=0{,}8$." },
-      // ═══════ ROZSZERZENIE ═══════
-      { topic: 'Granice', level: 'rozszerzony', q: 'Oblicz $\\displaystyle\\lim_{n\\to\\infty} \\frac{5n^2+n}{2n^2-3}$', options: ['$0$','$\\frac{5}{2}$','$\\infty$','$1$'], correct: 1, explain: 'Dzielimy przez $n^2$: $\\frac{5+\\frac{1}{n}}{2-\\frac{3}{n^2}} \\to \\frac{5}{2}$.' },
-      { topic: 'Granice', level: 'rozszerzony', q: '$\\displaystyle\\lim_{n\\to\\infty}\\left(1+\\frac{2}{n}\\right)^n =$', options: ['$1$','$e$','$e^2$','$2e$'], correct: 2, explain: 'Podstawiamy $m=n/2$: $\\left(\\left(1+\\frac{1}{m}\\right)^m\\right)^2 \\to e^2$.' },
-      { topic: 'Granice', level: 'rozszerzony', q: 'Granica $\\displaystyle\\lim_{n\\to\\infty} \\sqrt[n]{n}$ jest równa:', options: ['$0$','$1$','$e$','$\\infty$'], correct: 1, explain: 'To granica ważna: $\\sqrt[n]{n}\\to 1$.' },
-      { topic: 'Pochodne', level: 'rozszerzony', q: 'Pochodna $f(x)=x^3-6x+1$ to:', options: ['$3x^2-6$','$3x^2+1$','$x^2-6$','$3x^3-6x$'], correct: 0, explain: '$(x^3)\'=3x^2$, $(-6x)\'=-6$, $(1)\'=0$.' },
-      { topic: 'Pochodne', level: 'rozszerzony', q: 'Pochodna $f(x)=\\sin(3x)$ to:', options: ['$\\cos(3x)$','$3\\cos(3x)$','$-3\\cos(3x)$','$3\\sin(3x)$'], correct: 1, explain: 'Reguła łańcuchowa: $(\\sin u)\'=\\cos u \\cdot u\'$, $u=3x$, $u\'=3$.' },
-      { topic: 'Pochodne', level: 'rozszerzony', q: 'W którym punkcie $f(x)=x^2-4x$ ma minimum lokalne?', options: ['$x=0$','$x=2$','$x=4$','$x=-2$'], correct: 1, explain: '$f\'(x)=2x-4=0 \\Rightarrow x=2$. $f\'\'(2)=2>0$ → minimum.' },
-      { topic: 'Wielomiany', level: 'rozszerzony', q: 'Reszta z dzielenia $W(x)=x^3-2x+1$ przez $(x-1)$ to:', options: ['$0$','$1$','$-1$','$2$'], correct: 0, explain: 'Tw. Bezout: reszta $= W(1)=1-2+1=0$. Dzielnik!' },
-      { topic: 'Wielomiany', level: 'rozszerzony', q: 'Wielomian $x^3+x$ ma w $\\mathbb{R}$:', options: ['1 pierw.','2 pierw.','3 pierw.','0 pierw.'], correct: 0, explain: '$x^3+x=x(x^2+1)=0 \\Rightarrow x=0$ (bo $x^2+1>0$).' },
-      { topic: 'Wektory', level: 'rozszerzony', q: 'Iloczyn skalarny $\\vec{u}=[3,4]$ i $\\vec{v}=[2,-1]$:', options: ['$2$','$-2$','$11$','$10$'], correct: 0, explain: '$3\\cdot2+4\\cdot(-1)=6-4=2$.' },
-      { topic: 'Wektory', level: 'rozszerzony', q: 'Wektory $[2,6]$ i $[-3,1]$ są prostopadłe?', options: ['Tak','Nie','Brak danych','Są równoległe'], correct: 0, explain: '$2\\cdot(-3)+6\\cdot1=-6+6=0$ → prostopadłe.' },
-      { topic: 'Dowodzenie', level: 'rozszerzony', q: 'W indukcji matematycznej krok indukcyjny polega na:', options: ['Sprawdzeniu $P(1)$','Założeniu $P(k)$ i pokazaniu $P(k+1)$','Udowodnieniu $P(n)$ wprost','Zaprzeczeniu tezy'], correct: 1, explain: 'Krok indukcyjny: $P(k)\\Rightarrow P(k+1)$.' }
-    ];
+    // ── Generate dynamic question pool on each page load ──
+    // quiz-generator.js must be loaded first (via script tag above)
+    const pool = (function() {
+      if (!window.quizGen) { console.warn('quiz-generator.js not loaded'); return []; }
+      var podstawowe = window.quizGen.generate('podstawowy', null, 2000);
+      var rozszerzone = window.quizGen.generate('rozszerzony', null, 1500);
+      return podstawowe.concat(rozszerzone);
+    })();
 
     let test = [];
     let index = 0;
@@ -260,7 +234,7 @@
     }
 
     // Build topic filter buttons
-    const allTopics = [...new Set(pool.map(q => q.topic))];
+    const allTopics = [...new Set(pool.map(q => q.topic))].sort();
     const filterBox = document.getElementById('topicFilterBox');
     function renderFilterBtns() {
       filterBox.innerHTML = '';
@@ -281,7 +255,7 @@
       });
       // Update stat counters
       const src = selectedTopic ? fp.filter(q => q.topic === selectedTopic) : fp;
-      document.getElementById('statQCount').textContent = Math.min(15, src.length);
+      document.getElementById('statQCount').textContent = '15';
       document.getElementById('statTCount').textContent = selectedTopic ? '1' : visibleTopics.length;
     }
     renderFilterBtns();
@@ -373,10 +347,19 @@
     }
 
     function beginQuiz() {
-      const fp = getFilteredPool();
-      const src = selectedTopic ? fp.filter(q => q.topic === selectedTopic) : fp;
-      const n = Math.min(15, src.length);
-      test = shuffle(src).slice(0, n);
+      // Generate fresh questions on each quiz start for maximum variety
+      var lvl = (window.maturaLevel && window.maturaLevel.get()) || 'podstawowy';
+      var freshPool;
+      if (window.quizGen) {
+        freshPool = lvl === 'rozszerzony'
+          ? window.quizGen.generate('rozszerzony', selectedTopic, 200)
+          : window.quizGen.generate('podstawowy', selectedTopic, 200);
+      } else {
+        var fp = getFilteredPool();
+        freshPool = selectedTopic ? fp.filter(q => q.topic === selectedTopic) : fp;
+      }
+      const n = Math.min(15, freshPool.length);
+      test = shuffle(freshPool).slice(0, n);
       index = 0;
       score = 0;
       answered = false;
