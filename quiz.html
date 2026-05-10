@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Quiz diagnostyczny (Podstawa + Rozszerzenie) - Matematyka to Podstawa</title>
   <meta name="description" content="Quiz diagnostyczny z matematyki na maturę — ponad 3000 proceduralnie generowanych pytań z podstawy i rozszerzenia. Feedback po każdym pytaniu, raport końcowy z rekomendacjami.">
@@ -714,7 +714,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').catch(function(){});
+        navigator.serviceWorker.register('./sw.js').catch(function(){});
       });
     }
   </script>

@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8" />
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arkusze maturalne CKE - Matematyka to Podstawa</title>
   <meta name="description" content="Kompletne archiwum arkuszy maturalnych CKE z matematyki: sesje główne, diagnostyczne, próbne i pokazowe 2015-2025.">
@@ -1471,7 +1471,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').catch(function(){});
+        navigator.serviceWorker.register('./sw.js').catch(function(){});
       });
     }
   </script>

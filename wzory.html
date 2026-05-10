@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8"/>
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wzory Maturalne – Ściągawka (Podstawa + Rozszerzenie) | Matematyka to Podstawa</title>
   <meta name="description" content="Kompletny zbiór wzorów na maturę z matematyki — poziom podstawowy i rozszerzony. Algebra, pochodne, granice, wielomiany, wektory. Wersja do druku."/>
@@ -550,7 +550,7 @@
       <a href="arkusze.html" class="hover:text-blue-600 transition">Arkusze CKE</a>
       <a href="quiz.html" class="hover:text-blue-600 transition">Quiz</a>
     </div>
-    <p class="text-gray-400">&copy; 2026 Edukacja Matematyczna</p>
+    <p class="text-gray-400">&copy; 2025 Edukacja Matematyczna</p>
   </div>
 </footer>
 
@@ -800,7 +800,7 @@ document.addEventListener('DOMContentLoaded', function() {
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').catch(function(){});
+        navigator.serviceWorker.register('./sw.js').catch(function(){});
       });
     }
   </script>

@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pl">
 <head>
   <meta charset="UTF-8"/>
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>404 – Strona nie istnieje | Matematyka to Podstawa</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded',function(){
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').catch(function(){});
+        navigator.serviceWorker.register('./sw.js').catch(function(){});
       });
     }
   </script>

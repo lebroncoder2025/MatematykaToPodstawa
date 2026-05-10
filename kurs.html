@@ -2,7 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8"/>
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Kurs Maturalny – Matematyka to Podstawa</title>
   <meta name="description" content="Interaktywny kurs matematyki maturalnej – teoria, ćwiczenia, brudnopis cyfrowy, weryfikacja odpowiedzi. 10 działów, 100+ zadań."/>
@@ -3159,7 +3159,7 @@ function deleteStepNoteKey(key) {
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/sw.js').catch(function(){});
+        navigator.serviceWorker.register('./sw.js').catch(function(){});
       });
     }
   </script>
