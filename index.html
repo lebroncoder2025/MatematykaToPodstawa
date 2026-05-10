@@ -143,7 +143,7 @@
                 <span class="text-blue-300">Twojego sukcesu</span>
             </h1>
             <p class="text-lg md:text-xl mb-6 text-blue-100 max-w-3xl mx-auto animate-fade-in-up delay-1 leading-relaxed">
-                Kompleksowe kompendium wiedzy matematycznej — <strong>poziom podstawowy i rozszerzony</strong>. <strong>16 działów</strong>, ponad <strong>200 zadań</strong> z komentowanymi rozwiązaniami krok po kroku, <strong>arkusze CKE</strong> z obu poziomów oraz interaktywne quizy diagnostyczne.
+                Kompleksowe kompendium wiedzy matematycznej — <strong>poziom podstawowy i rozszerzony</strong>. <strong>16 działów</strong>, ponad <strong>100 zadań</strong> z komentowanymi rozwiązaniami krok po kroku, <strong>arkusze CKE</strong> z obu poziomów oraz tysiące pytań w interaktywnych quizach.
             </p>
             <p class="text-base mb-10 text-blue-200/80 max-w-2xl mx-auto animate-fade-in-up delay-1 leading-relaxed italic">
                 „Matematyka jest królową nauk, a arytmetyka królową matematyki." — Carl Friedrich Gauss
@@ -164,12 +164,12 @@
                 <i class="fa-solid fa-mobile-screen-button"></i> Zainstaluj aplikację na telefonie
               </button>
             </div>
-            <!-- Odliczanie do matury 2026 -->
+            <!-- Odliczanie do matury 2027 -->
             <div class="mt-10 animate-fade-in-up delay-3" id="maturaCountdownWrap">
               <div class="flex flex-col sm:flex-row justify-center gap-6 sm:gap-10">
                 <!-- Podstawowa -->
                 <div class="text-center" data-level="podstawowy">
-                  <p class="text-blue-200/80 text-[11px] font-bold mb-3 uppercase tracking-widest">&#9203; Matura podstawowa 2026 za:</p>
+                  <p class="text-blue-200/80 text-[11px] font-bold mb-3 uppercase tracking-widest">&#9203; Matura podstawowa 2027 za:</p>
                   <div class="inline-flex items-center gap-3 sm:gap-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-6 sm:px-10 py-4">
                     <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-days">--</span><p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">dni</p></div>
                     <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
@@ -182,7 +182,7 @@
                 </div>
                 <!-- Rozszerzona -->
                 <div class="text-center" data-level="rozszerzony">
-                  <p class="text-pink-200/80 text-[11px] font-bold mb-3 uppercase tracking-widest">&#128640; Matura rozszerzona 2026 za:</p>
+                  <p class="text-pink-200/80 text-[11px] font-bold mb-3 uppercase tracking-widest">&#128640; Matura rozszerzona 2027 za:</p>
                   <div class="inline-flex items-center gap-3 sm:gap-6 bg-pink-500/10 backdrop-blur-sm border border-pink-300/20 rounded-2xl px-6 sm:px-10 py-4">
                     <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-r-days">--</span><p class="text-pink-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">dni</p></div>
                     <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
@@ -259,7 +259,7 @@
                 <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Działów tematycznych</p>
             </div>
             <div class="reveal delay-1">
-                <p class="text-3xl md:text-4xl font-black text-blue-600">35+</p>
+                <p class="text-3xl md:text-4xl font-black text-blue-600">50+</p>
                 <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Rozwiązanych zadań</p>
             </div>
             <div class="reveal delay-2">
@@ -372,7 +372,7 @@
                         <i class="fa-solid fa-pen-to-square text-emerald-400 text-xl"></i>
                     </div>
                     <h3 class="font-bold text-white mb-2">Zadania z Rozwiązaniami</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-3">35+ w pełni rozwiązanych zadań krok po kroku ze wskazówkami i objaśnieniami.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-3">50+ w pełni rozwiązanych zadań krok po kroku ze wskazówkami i objaśnieniami.</p>
                     <span class="text-emerald-400 text-sm font-bold flex items-center gap-1">Rozwiązuj <i class="fa-solid fa-arrow-right text-xs"></i></span>
                 </a>
                 <a href="arkusze.html" class="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all reveal delay-2">
@@ -663,21 +663,31 @@
     }, { threshold: 0.08 });
     revealEls.forEach(el => observer.observe(el));
 
-    /* ─── Matura 2026 Countdown ─── */
+    /* ─── Matura 2027 Countdown ─── */
     (function() {
-      var targetP = new Date('2026-05-05T09:00:00'); // podstawowa
-      var targetR = new Date('2026-05-06T09:00:00'); // rozszerzona (dzień po podstawowej)
+      var targetP = new Date('2027-05-05T09:00:00'); // podstawowa (przybliżona data 2027)
+      var targetR = new Date('2027-05-06T09:00:00'); // rozszerzona (przybliżona data 2027)
+      var now = new Date();
+
+      var w = document.getElementById('maturaCountdownWrap');
+      if (!w) return;
+
+      // Jeśli obie matury 2027 minęły — pokaż wiadomość
+      if (targetP <= now && targetR <= now) {
+        w.innerHTML = '<p class="text-xl font-black text-yellow-300 text-center">🎉 Trzymamy kciuki za wyniki matury 2027!</p>';
+        return;
+      }
+
       function updCD(target, prefix) {
         var diff = target - new Date();
-        if (prefix === '' ) {
-          var w = document.getElementById('maturaCountdownWrap');
-          if (!w) return;
-          if (diff <= 0) {
-            w.innerHTML = '<p class="text-xl font-black text-yellow-300">🎉 Powodzenia na maturze 2026!</p>';
-            return;
-          }
+        if (diff <= 0) {
+          // Ta matura już się odbyła — pokaż gratulacje w jej bloku
+          ['days','hours','minutes','seconds'].forEach(function(u) {
+            var el = document.getElementById('cd' + prefix + '-' + u);
+            if (el) el.textContent = '00';
+          });
+          return;
         }
-        if (diff <= 0) return;
         var d = Math.floor(diff / 86400000),
             h = Math.floor((diff % 86400000) / 3600000),
             m = Math.floor((diff % 3600000) / 60000),
@@ -709,7 +719,7 @@
         { t: 'Funkcje', q: 'Dziedzina $f(x)=\\sqrt{x-4}$:', o: ['$x \\geq 4$','$x > 4$','$x \\leq 4$','$x \\in \\mathbb{R}$'], c: 0, e: 'Podpierwiastkowe musi być $\\geq 0$: $x-4\\geq0\\Rightarrow x\\geq4$.' },
         { t: 'Ciągi', q: 'W ciągu arytmetycznym $a_1=2$, $r=3$. Wyraz $a_4$:', o: ['8','9','10','11'], c: 3, e: '$a_4=2+(4-1)\\cdot3=11$.' },
         { t: 'Ciągi', q: 'Ciąg 3, 6, 12, 24 jest:', o: ['arytmetyczny','geometryczny q=2','geometryczny q=3','niemonotoniczny'], c: 1, e: 'Iloraz kolejnych wyrazów wynosi 2.' },
-        { t: 'Ciągi', q: 'Suma 5 wyrazów ciągu arytm. $a_1=1$, $r=2$:', o: ['10','15','25','20'], c: 3, e: '$S_5=\\frac{5}{2}(2\\cdot1+4\\cdot2)=\\frac{5}{2}\\cdot10=25$. Hmm, $S_5=25$.' },
+        { t: 'Ciągi', q: 'Suma 5 wyrazów ciągu arytm. $a_1=1$, $r=2$:', o: ['10','15','25','20'], c: 2, e: '$S_5=\\frac{5}{2}(2\\cdot1+(5-1)\\cdot2)=\\frac{5}{2}\\cdot10=25$.' },
         { t: 'Trygonometria', q: 'Wartość $\\cos 60°$:', o: ['$0$','$\\frac{1}{2}$','$\\frac{\\sqrt{2}}{2}$','$1$'], c: 1, e: 'To wartość szczególna: $\\cos60°=\\frac{1}{2}$.' },
         { t: 'Trygonometria', q: '$\\sin^2\\alpha+\\cos^2\\alpha=$', o: ['$0$','$1$','$2$','zależy od kąta'], c: 1, e: 'Jedynka trygonometryczna — zawsze równa 1.' },
         { t: 'Trygonometria', q: '$\\sin 30°=$', o: ['$\\frac{1}{2}$','$\\frac{\\sqrt{3}}{2}$','$\\frac{\\sqrt{2}}{2}$','$1$'], c: 0, e: 'Kąt 30°: $\\sin30°=\\frac{1}{2}$.' },

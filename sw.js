@@ -4,7 +4,7 @@
 // Strona działa w pełni offline po pierwszym odwiedzeniu.
 // ================================================================
 
-var CACHE = 'mtp-v12';
+var CACHE = 'mtp-v13';
 
 var LOCAL_ASSETS = [
   '/',
