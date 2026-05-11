@@ -1199,6 +1199,7 @@
     var html = EXAMS.slice(0, 4).map(function(e, i) { return renderExamCard(e, i); }).join('');
     container.innerHTML = html;
     initReveal();
+    applyAllExamFilters();
     // Render remaining cards in idle batches
     var BATCH = 3;
     var offset = 4;
@@ -1210,6 +1211,7 @@
       while (tmp.firstChild) frag.appendChild(tmp.firstChild);
       container.appendChild(frag);
       initReveal();
+      applyAllExamFilters();
       var next = start + BATCH;
       if (next < EXAMS.length) {
         (window.requestIdleCallback || function(cb){ setTimeout(cb, 80); })(function() { renderBatch(next); });
