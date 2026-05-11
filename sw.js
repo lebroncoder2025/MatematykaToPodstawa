@@ -4,7 +4,7 @@
 // Strona działa w pełni offline po pierwszym odwiedzeniu.
 // ================================================================
 
-var CACHE = 'mtp-v14';
+var CACHE = 'mtp-v15';
 
 // Dynamically derive base path so the SW works both on GitHub Pages
 // (hosted at /MatematykaToPodstawa/) and on a custom domain root (/).
