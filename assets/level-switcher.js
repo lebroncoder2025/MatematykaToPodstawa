@@ -13,6 +13,10 @@
 
   var STORAGE_KEY = 'matura-level';
   var LEVELS = ['podstawowy', 'rozszerzony'];
+  var levelSwitcherBar = null;
+  var levelSwitcherNav = null;
+  var levelSwitcherResizeObserver = null;
+  var resizeBound = false;
 
   function getLevel() {
     try {
@@ -55,7 +59,7 @@
     s.textContent =
       '#levelSwitcherBar{position:fixed;top:auto;bottom:0;left:0;right:0;z-index:9990;display:flex;justify-content:center;padding:8px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-top:1px solid #e2e8f0;box-shadow:0 -2px 10px rgba(0,0,0,.06);transition:opacity .3s}' +
       '.dark #levelSwitcherBar{background:rgba(30,30,46,.92);border-color:#374151}' +
-      '@media(min-width:768px){#levelSwitcherBar{top:0;bottom:auto;position:sticky;border-top:none;border-bottom:1px solid #e2e8f0;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:6px}}' +
+      '@media(min-width:768px){#levelSwitcherBar{top:var(--level-switcher-top, 0px);bottom:auto;position:sticky;border-top:none;border-bottom:1px solid #e2e8f0;box-shadow:0 2px 10px rgba(0,0,0,.06);padding:6px}}' +
       '#levelSwitcherWrap{display:inline-flex;align-items:center;gap:3px;padding:3px;border-radius:12px;background:#f1f5f9;border:1.5px solid #e2e8f0}' +
       '.dark #levelSwitcherWrap{background:#1e293b;border-color:#374151}' +
       '.lvl-btn{padding:6px 18px;border-radius:9px;font-size:13px;font-weight:700;border:none;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:6px;white-space:nowrap;line-height:1.2;background:transparent;color:#64748b}' +
@@ -66,6 +70,15 @@
   }
 
   /* ── Toggle bar below/above nav ── */
+  function updateToggleOffset() {
+    if (!levelSwitcherBar || !levelSwitcherNav) return;
+    if (window.matchMedia && window.matchMedia('(min-width: 768px)').matches) {
+      levelSwitcherBar.style.setProperty('--level-switcher-top', levelSwitcherNav.offsetHeight + 'px');
+    } else {
+      levelSwitcherBar.style.removeProperty('--level-switcher-top');
+    }
+  }
+
   function createToggle() {
     if (document.getElementById('levelSwitcherBar')) return true;
     var nav = document.querySelector('nav');
@@ -100,6 +113,18 @@
     bar.appendChild(wrap);
     // Insert right after the nav
     nav.parentNode.insertBefore(bar, nav.nextSibling);
+    levelSwitcherBar = bar;
+    levelSwitcherNav = nav;
+    updateToggleOffset();
+
+    if (!resizeBound) {
+      resizeBound = true;
+      window.addEventListener('resize', updateToggleOffset);
+    }
+    if (!levelSwitcherResizeObserver && typeof ResizeObserver !== 'undefined') {
+      levelSwitcherResizeObserver = new ResizeObserver(updateToggleOffset);
+      levelSwitcherResizeObserver.observe(nav);
+    }
     return true;
   }
 
@@ -134,6 +159,7 @@
     if (!toggleInjected) {
       toggleInjected = createToggle();
     }
+    updateToggleOffset();
     updateToggleUI(lvl);
     applyLevel(lvl);
     // Dispatch event after all DOMContentLoaded handlers finish so page-specific listeners are ready
