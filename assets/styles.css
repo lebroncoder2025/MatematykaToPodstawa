@@ -294,7 +294,7 @@ body {
   .nav-desktop-action { display: none !important; }
 }
 
-@media (min-width: 1101px) and (max-width: 1360px) {
+@media (min-width: 768px) {
   nav > div > .flex.justify-between.h-16 {
     height: auto;
     flex-wrap: wrap;
@@ -307,7 +307,8 @@ body {
     flex: 1 1 100%;
     width: 100%;
     order: 3;
-    justify-content: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     padding-top: .25rem;
     padding-bottom: .1rem;
   }
