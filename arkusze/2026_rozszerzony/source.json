@@ -1,0 +1,22 @@
+{
+  "code": "MMAP-R0-100-A-2605",
+  "source": "https://egzaminy.gov.pl/cke/materialy-egzaminacyjne/egzamin-maturalny?exam_session=2026-maj&formula=F2023&subject=Matematyka",
+  "verified": "2026-10-09",
+  "documents": [
+    {
+      "kind": "arkusz",
+      "url": "https://egzaminy.gov.pl/pliki/6035/883178c7bb5a26661d34aeb25bd067e40d00feea1256e973bb52c20ff50ba10e",
+      "sha256": "dec5f06020c35dcdabab5747942bedfc49cf7307b27f0ad105faa93741d03964"
+    },
+    {
+      "kind": "karta",
+      "url": "https://egzaminy.gov.pl/pliki/6036/df8fad18035885ae822c1d6988d13a4ee64d5133fc9455d80894c4fc4e7ed88d",
+      "sha256": "47fbeff2f5b67f38c2b36e3be143244eaae18add7278ad8eb6d98ad4785c7f90"
+    },
+    {
+      "kind": "zasady",
+      "url": "https://egzaminy.gov.pl/pliki/6037/76a0d29c72c4a27cda0497b41abfe43269b150340f8f617abf23b5b8ff8ae8f5",
+      "sha256": "d7c014240af16885dbdd1711d923aff24951b2f514b7c5659e0b6f16508878bd"
+    }
+  ]
+}

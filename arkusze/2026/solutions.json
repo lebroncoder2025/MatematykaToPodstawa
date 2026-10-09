@@ -1,0 +1,962 @@
+{
+  "id": "2026",
+  "year": 2026,
+  "session": "Maj 2026",
+  "level": "podstawowy",
+  "formula": "2023",
+  "version": "A",
+  "duration": 180,
+  "maxPoints": 50,
+  "verified": "2026-10-09",
+  "pdf": "arkusze/2026/arkusz.pdf",
+  "key": "arkusze/2026/zasady.pdf",
+  "tasks": [
+    {
+      "number": "1",
+      "title": "Pierwiastki i potęga ujemna",
+      "summary": "Oblicz $\\sqrt{25/8}\\cdot\\sqrt2+2^{-1}$.",
+      "answer": "C: $3$",
+      "steps": [
+        "Połącz pierwiastki: $\\sqrt{25/8}\\cdot\\sqrt2=\\sqrt{25/4}=5/2$.",
+        "Ujemny wykładnik oznacza odwrotność: $2^{-1}=1/2$.",
+        "Dodaj: $5/2+1/2=3$."
+      ],
+      "hint": "Najpierw wykonaj mnożenie pierwiastków.",
+      "trap": "Nie traktuj ujemnego wykładnika jako ujemnej liczby.",
+      "diagram": null,
+      "page": 4,
+      "keyPage": 2,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-1.png",
+          "width": 931,
+          "height": 236
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "2",
+      "title": "Odsetki składane",
+      "summary": "Lokata: 10 000 zł, dwa lata, 6% rocznie. Oblicz same odsetki, bez podatku.",
+      "answer": "B: $1236\\text{ zł}$",
+      "steps": [
+        "Po pierwszym roku kapitał wynosi $10000\\cdot1{,}06=10600$ zł.",
+        "Po drugim roku: $10600\\cdot1{,}06=11236$ zł.",
+        "Odsetki to przyrost kapitału: $11236-10000=1236$ zł."
+      ],
+      "hint": "W drugim roku oprocentowaniu podlega także wcześniejszy zysk.",
+      "trap": "Wynik 11 236 zł jest kapitałem końcowym, a nie kwotą odsetek.",
+      "diagram": null,
+      "page": 4,
+      "keyPage": 3,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-2.png",
+          "width": 931,
+          "height": 354
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "3",
+      "title": "Pierwiastek pierwiastka",
+      "summary": "Zapisz $\\sqrt{5\\sqrt5}$ jako potęgę liczby $5$.",
+      "answer": "C: $5^{3/4}$",
+      "steps": [
+        "Zamień wewnętrzny pierwiastek na potęgę: $5\\sqrt5=5^1\\cdot5^{1/2}=5^{3/2}$.",
+        "Pierwiastek z całości mnoży wykładnik przez $1/2$: $(5^{3/2})^{1/2}=5^{3/4}$."
+      ],
+      "hint": "Pierwiastek kwadratowy odpowiada wykładnikowi 1/2.",
+      "trap": "Pierwiastek obejmuje cały iloczyn.",
+      "diagram": null,
+      "page": 5,
+      "keyPage": 3,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-3.png",
+          "width": 931,
+          "height": 241
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "4",
+      "title": "Różnica logarytmów",
+      "summary": "Oblicz $\\log_8 4-\\log_8 32$.",
+      "answer": "B: $-1$",
+      "steps": [
+        "Różnicę zapisz jako logarytm ilorazu: $\\log_8(4/32)=\\log_8(1/8)$.",
+        "Ponieważ $8^{-1}=1/8$, otrzymujemy $-1$."
+      ],
+      "hint": "Oba logarytmy mają tę samą podstawę.",
+      "trap": "Różnica logarytmów nie jest logarytmem różnicy.",
+      "diagram": null,
+      "page": 5,
+      "keyPage": 4,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-4.png",
+          "width": 931,
+          "height": 205
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "5",
+      "title": "Podzielność i liczba cyfr",
+      "summary": "Oceń podzielność $4^{12}5^{24}$ przez $20$ oraz to, czy liczba ma 25 cyfr.",
+      "answer": "PP",
+      "steps": [
+        "$4^{12}5^{24}=2^{24}5^{24}=10^{24}$.",
+        "$10^{24}=20\\cdot(5\\cdot10^{22})$, więc jest podzielne przez $20$.",
+        "Liczba $10^{24}$ ma jedynkę i 24 zera, czyli 25 cyfr."
+      ],
+      "hint": "Sprowadź oba czynniki do tej samej potęgi.",
+      "trap": "Liczba zer jest o jeden mniejsza od liczby cyfr.",
+      "diagram": null,
+      "page": 6,
+      "keyPage": 4,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-5.png",
+          "width": 931,
+          "height": 263
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "6",
+      "title": "Kwadrat sumy",
+      "summary": "Oblicz $x^2+10x+25$ dla $x=\\sqrt2-5$.",
+      "answer": "A: $2$",
+      "steps": [
+        "Rozpoznaj wzór: $x^2+10x+25=(x+5)^2$.",
+        "Po podstawieniu $x+5=\\sqrt2$, a więc $(x+5)^2=2$."
+      ],
+      "hint": "Unikniesz długiego rozwijania kwadratów.",
+      "trap": "W kwadracie sumy występuje składnik 2ab.",
+      "diagram": null,
+      "page": 6,
+      "keyPage": 5,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-6.png",
+          "width": 931,
+          "height": 213
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "7",
+      "title": "Dowód podzielności",
+      "summary": "Uzasadnij podzielność $7n^2+21n$ przez $14$ dla każdego $n\\in\\mathbb Z$.",
+      "answer": "$14\\mid(7n^2+21n)$",
+      "steps": [
+        "Wyłącz wspólny czynnik: $7n^2+21n=7n(n+3)$.",
+        "Liczby $n$ i $n+3$ mają różną parzystość, bo różnią się liczbą nieparzystą. Ich iloczyn jest więc parzysty.",
+        "Istnieje $k\\in\\mathbb Z$ taki, że $n(n+3)=2k$. Stąd $7n(n+3)=14k$, co kończy dowód."
+      ],
+      "hint": "Potrzebujesz czynnika 7 i czynnika 2.",
+      "trap": "Sprawdzenie kilku wartości n nie dowodzi tezy dla wszystkich liczb całkowitych.",
+      "diagram": null,
+      "page": 7,
+      "keyPage": 6,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-7.png",
+          "width": 931,
+          "height": 86
+        }
+      ],
+      "points": 2,
+      "scoring": "2 pkt: pełny dowód podzielności przez 7 i 2 (lub pełne rozpatrzenie obu parzystości). 1 pkt: uzasadnienie tylko jednej z tych podzielności lub jednego z przypadków parzystości. Sprawdzenie przykładów nie daje punktów."
+    },
+    {
+      "number": "8",
+      "title": "Suma rozwiązań",
+      "summary": "Równanie $3(x+3)(x-m)(2x+4)=0$ ma sumę rozwiązań równą zero. Wyznacz $m$.",
+      "answer": "C: $m=5$",
+      "steps": [
+        "Z zerowania czynników otrzymujesz $x=-3$, $x=m$ oraz $x=-2$.",
+        "Gdy $m$ jest różne od $-3$ i $-2$, suma wynosi $m-5$. Warunek $m-5=0$ daje $m=5$.",
+        "Przypadki powtórzonego pierwiastka $m=-3$ lub $m=-2$ dają zbiór $\\{-3,-2\\}$ o sumie $-5$, więc odpadają."
+      ],
+      "hint": "Iloczyn jest zerem, gdy co najmniej jeden czynnik jest zerem.",
+      "trap": "Rozwiązania równania tworzą zbiór; powtórzonego pierwiastka nie licz drugi raz.",
+      "diagram": null,
+      "page": 8,
+      "keyPage": 8,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-8.png",
+          "width": 931,
+          "height": 400
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "9",
+      "title": "Równanie wymierne",
+      "summary": "Rozwiąż $(x+2)/(3x-1)=2/5$.",
+      "answer": "D: $x=12$",
+      "steps": [
+        "Najpierw dziedzina: $3x-1\\ne0$, czyli $x\\ne1/3$.",
+        "Pomnóż obie strony przez $5(3x-1)$: $5x+10=6x-2$.",
+        "Otrzymujesz $x=12$. Ta liczba należy do dziedziny."
+      ],
+      "hint": "Usuwając mianowniki, pamiętaj o ich niezerowości.",
+      "trap": "Liczba zerująca mianownik nigdy nie jest rozwiązaniem.",
+      "diagram": null,
+      "page": 8,
+      "keyPage": 8,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-9.png",
+          "width": 931,
+          "height": 336
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "10",
+      "title": "Nierówność kwadratowa",
+      "summary": "Rozwiąż $3x^2+4x\\ge6x+8$.",
+      "answer": "$x\\in(-\\infty,-4/3]\\cup[2,+\\infty)$",
+      "steps": [
+        "Przenieś wszystko na lewą stronę: $3x^2-2x-8\\ge0$.",
+        "Rozłóż: $(3x+4)(x-2)\\ge0$. Miejsca zerowe to $-4/3$ i $2$.",
+        "Współczynnik przy $x^2$ jest dodatni, więc trójmian jest nieujemny poza przedziałem między pierwiastkami. Oba końce włączamy."
+      ],
+      "hint": "Szkic paraboli ułatwi wybór przedziałów.",
+      "trap": "Nie dziel nierówności przez wyrażenie o nieznanym znaku.",
+      "diagram": "inequality",
+      "page": 9,
+      "keyPage": 9,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-10.png",
+          "width": 931,
+          "height": 172
+        }
+      ],
+      "points": 2,
+      "scoring": "2 pkt: poprawna metoda i pełny zbiór rozwiązań z właściwymi końcami. 1 pkt: oba poprawne pierwiastki trójmianu."
+    },
+    {
+      "number": "11",
+      "title": "Bilety i koszty",
+      "summary": "Sprzedano 200 biletów: normalne po 35 zł, ulgowe po 25 zł. Po odjęciu 25% kosztów pozostało 4665 zł. Ile było ulgowych?",
+      "answer": "$78$",
+      "steps": [
+        "Wpływy przed odjęciem kosztów wynoszą $4665/0{,}75=6220$ zł.",
+        "Niech $u$ oznacza liczbę ulgowych. Wtedy $35(200-u)+25u=6220$.",
+        "$7000-10u=6220$, zatem $u=78$. Sprawdzenie: 122 normalne i 78 ulgowych dają 6220 zł."
+      ],
+      "hint": "Kwota 4665 zł jest 75% wszystkich wpływów.",
+      "trap": "Nie zwiększaj 4665 zł po prostu o 25%.",
+      "diagram": null,
+      "page": 10,
+      "keyPage": 13,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-11.png",
+          "width": 931,
+          "height": 449
+        }
+      ],
+      "points": 2,
+      "scoring": "2 pkt: poprawny model i wynik 78 biletów ulgowych. 1 pkt: poprawne równanie lub układ pozwalający wyznaczyć liczbę biletów."
+    },
+    {
+      "number": "12.1",
+      "title": "Odczyt wykresu",
+      "summary": "Dla $f(x)=x+2$ na $[-4,2]$ i $f(x)=-x+5$ na $(2,5)$ znajdź $f(x)=3$ i maksimum na $[2,3]$.",
+      "answer": "$x=1$; maksimum $4$",
+      "steps": [
+        "Na pierwszej części $x+2=3$ daje $x=1$, które leży w jej dziedzinie.",
+        "Na drugiej części $-x+5=3$ daje $x=2$, ale $2\\notin(2,5)$, więc to nie jest dodatkowe rozwiązanie.",
+        "W punkcie $x=2$ obowiązuje pierwszy wzór i $f(2)=4$. Dla $x>2$ do $3$ wartości są mniejsze niż 3. Maksimum to 4."
+      ],
+      "hint": "Sprawdź, do którego odcinka należy każdy koniec.",
+      "trap": "Nie zastępuj wartości f(2) wartością z drugiego, otwartego odcinka.",
+      "diagram": "piecewise",
+      "page": 12,
+      "keyPage": 15,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-12.png",
+          "width": 931,
+          "height": 716
+        },
+        {
+          "path": "arkusze/2026/zadania/zadanie-12.1.png",
+          "width": 931,
+          "height": 260
+        }
+      ],
+      "points": 2,
+      "scoring": "2 pkt: dwa poprawne uzupełnienia. 1 pkt: jedno poprawne uzupełnienie."
+    },
+    {
+      "number": "12.2",
+      "title": "Wartości i argumenty",
+      "summary": "Dla $f(x)=x+2$ na $[-4,2]$ i $f(x)=-x+5$ na $(2,5)$ wyznacz zbiór wartości i argumenty spełniające $f(x)>1$.",
+      "answer": "$[-2,4]$; $(-1,4)$",
+      "steps": [
+        "Pierwszy odcinek osiąga wszystkie wartości od $-2$ do $4$, włącznie. Drugi przyjmuje wartości w $(0,3)$, już zawarte w tym zakresie.",
+        "Na pierwszej części: $x+2>1$ i $x\\in[-4,2]$, czyli $x\\in(-1,2]$.",
+        "Na drugiej części: $-x+5>1$ i $x\\in(2,5)$, czyli $x\\in(2,4)$. Suma zbiorów to $(-1,4)$."
+      ],
+      "hint": "Przecięcie z dziedziną wykonaj osobno dla każdej części.",
+      "trap": "Przy nierówności ostrej końce, w których f(x)=1, nie należą do wyniku.",
+      "diagram": "piecewise",
+      "page": 13,
+      "keyPage": 16,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-12.png",
+          "width": 931,
+          "height": 716
+        },
+        {
+          "path": "arkusze/2026/zadania/zadanie-12.2.png",
+          "width": 931,
+          "height": 316
+        }
+      ],
+      "points": 2,
+      "scoring": "2 pkt: oba poprawne przedziały. 1 pkt: jeden poprawny przedział. Końce muszą być jednoznacznie otwarte lub domknięte."
+    },
+    {
+      "number": "13.1",
+      "title": "Znaki współczynników",
+      "summary": "Prosta na wykresie przechodzi przez $(-2,0)$ i $(0,-3)$. Oceń, czy $a>0$ i $b>0$ we wzorze $ax+b$.",
+      "answer": "FF",
+      "steps": [
+        "Wykres opada, gdy argument rośnie, więc $a<0$.",
+        "Przecięcie osi pionowej to $(0,-3)$, zatem $b=-3<0$. Oba zdania są fałszywe."
+      ],
+      "hint": "Współczynnik b odczytujesz z osi Oy.",
+      "trap": "Znak a opisuje kierunek zmian, a znak b wysokość przecięcia osi.",
+      "diagram": "line",
+      "page": 14,
+      "keyPage": 17,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-13.png",
+          "width": 931,
+          "height": 688
+        },
+        {
+          "path": "arkusze/2026/zadania/zadanie-13.1.png",
+          "width": 931,
+          "height": 263
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "13.2",
+      "title": "Tangens kąta nachylenia",
+      "summary": "Prosta przechodzi przez $(-2,0)$ i $(0,-3)$. Oblicz tangens jej kąta nachylenia do osi $Ox$.",
+      "answer": "A: $-3/2$",
+      "steps": [
+        "Współczynnik kierunkowy to $a=(-3-0)/(0-(-2))=-3/2$.",
+        "Dla kąta nachylenia prostej $\\tan\\alpha=a$, zatem $\\tan\\alpha=-3/2$. Kąt jest rozwarty."
+      ],
+      "hint": "Tangens kąta nachylenia jest współczynnikiem kierunkowym.",
+      "trap": "Nie zamieniaj kąta nachylenia na ostry kąt między prostymi.",
+      "diagram": "line",
+      "page": 15,
+      "keyPage": 17,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-13.png",
+          "width": 931,
+          "height": 688
+        },
+        {
+          "path": "arkusze/2026/zadania/zadanie-13.2.png",
+          "width": 931,
+          "height": 226
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "14",
+      "title": "Przesunięcie paraboli",
+      "summary": "Wierzchołek $f$ to $(3,-2)$. Dla $g(x)=f(x+1)$ wiadomo, że $g(0)=0$. Wyznacz postać ogólną $f$.",
+      "answer": "$f(x)=\\frac12x^2-3x+\\frac52$",
+      "steps": [
+        "Wierzchołek daje postać kanoniczną $f(x)=a(x-3)^2-2$.",
+        "$g(0)=f(1)=0$, więc $a(1-3)^2-2=0$, czyli $a=1/2$.",
+        "Rozwiń $\\frac12(x-3)^2-2=\\frac12x^2-3x+\\frac52$."
+      ],
+      "hint": "Zapisz najpierw postać kanoniczną.",
+      "trap": "Przesunięcie f(x+1) przenosi wykres o jedną jednostkę w lewo.",
+      "diagram": "quadratic",
+      "page": 16,
+      "keyPage": 18,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-14.png",
+          "width": 931,
+          "height": 244
+        }
+      ],
+      "points": 4,
+      "scoring": "4 pkt: poprawna metoda i postać ogólna funkcji. 3 pkt: spełnienie kryterium za 2 pkt oraz wyznaczenie przynajmniej jednego współczynnika postaci ogólnej. 2 pkt: postać kanoniczna z miejscem zerowym 1 lub równoważny etap opisany w kluczu. 1 pkt: postać kanoniczna albo poprawne miejsce zerowe 1 (klucz podaje również inne drogi)."
+    },
+    {
+      "number": "15",
+      "title": "Wyrazy ciągu geometrycznego",
+      "summary": "$a_n=3n+5$, a ciąg $(a_1,a_9,a_k)$ jest geometryczny. Oblicz $k$.",
+      "answer": "$k=41$",
+      "steps": [
+        "$a_1=8$ oraz $a_9=32$, zatem iloraz trzech wskazanych wyrazów wynosi $32/8=4$.",
+        "$a_k=32\\cdot4=128$. Z równania $3k+5=128$ otrzymujesz $k=41$."
+      ],
+      "hint": "Rozpatrujesz trzy wskazane wyrazy, a nie geometryczność całego ciągu.",
+      "trap": "Indeks wyrazu nie jest jego wartością.",
+      "diagram": null,
+      "page": 18,
+      "keyPage": 24,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-15.png",
+          "width": 931,
+          "height": 179
+        }
+      ],
+      "points": 3,
+      "scoring": "3 pkt: poprawna metoda i k=41. 2 pkt: trzy wartości 8,32,128 lub równanie wyznaczające k. 1 pkt: wartości a₁=8 i a₉=32 lub poprawna zależność geometryczna."
+    },
+    {
+      "number": "16",
+      "title": "Ciąg arytmetyczny",
+      "summary": "$a_1=1$ oraz $a_5=17$. Oblicz $a_9$.",
+      "answer": "B: $33$",
+      "steps": [
+        "$a_5=a_1+4r$, więc $17=1+4r$ i $r=4$.",
+        "$a_9=1+8\\cdot4=33$."
+      ],
+      "hint": "Między pierwszym i piątym wyrazem są cztery przyrosty.",
+      "trap": "We wzorze a_n jest n−1, a nie n.",
+      "diagram": null,
+      "page": 19,
+      "keyPage": 25,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-16.png",
+          "width": 931,
+          "height": 299
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "17",
+      "title": "Iloczyny w ciągu",
+      "summary": "W ciągu geometrycznym $a_3a_6=18$. Oblicz $a_2a_7$.",
+      "answer": "$18$",
+      "steps": [
+        "$a_3a_6=(a_1q^2)(a_1q^5)=a_1^2q^7$.",
+        "$a_2a_7=(a_1q)(a_1q^6)=a_1^2q^7$. Oba iloczyny są równe, więc szukany ma wartość 18."
+      ],
+      "hint": "Sumy indeksów obu par są takie same.",
+      "trap": "Nie próbuj osobno wyznaczać a_1 i q; nie są potrzebne.",
+      "diagram": null,
+      "page": 19,
+      "keyPage": 26,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-17.png",
+          "width": 931,
+          "height": 270
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "18",
+      "title": "Sinus w trójkącie",
+      "summary": "Trójkąt jest prostokątny w $B$, $BC=2$, $AC=2\\sqrt{10}$. Oblicz sinus kąta przy $C$.",
+      "answer": "C: $3/\\sqrt{10}$",
+      "steps": [
+        "Z Pitagorasa: $AB^2=(2\\sqrt{10})^2-2^2=40-4=36$, zatem $AB=6$.",
+        "Bok naprzeciw kąta przy $C$ to $AB$. Stąd $\\sin\\gamma=AB/AC=6/(2\\sqrt{10})=3/\\sqrt{10}$."
+      ],
+      "hint": "Zaznacz bok naprzeciw szukanego kąta.",
+      "trap": "BC jest przyprostokątną przyległą do tego kąta, a nie przeciwległą.",
+      "diagram": "rightTriangle",
+      "page": 20,
+      "keyPage": 26,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-18.png",
+          "width": 931,
+          "height": 624
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "19",
+      "title": "Kąt środkowy i wpisany",
+      "summary": "$A,B,C,D$ leżą na okręgu o środku $O$. Kąt $CDA$ ma $50^\\circ$, a $COB$ ma $30^\\circ$. Punkt $B$ leży na krótszym łuku $AC$. Oblicz ostry kąt $BOA$.",
+      "answer": "C: $70^\\circ$",
+      "steps": [
+        "Kąt środkowy oparty na tym samym łuku co $50^\\circ$ ma $100^\\circ$.",
+        "Punkt $B$ dzieli ten łuk: $\\angle BOA=100^\\circ-30^\\circ=70^\\circ$."
+      ],
+      "hint": "Kąt środkowy ma dwa razy większą miarę od wpisanego opartego na tym samym łuku.",
+      "trap": "Sprawdź, na którym łuku leży B.",
+      "diagram": "circleAngles",
+      "page": 21,
+      "keyPage": 27,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-19.png",
+          "width": 931,
+          "height": 892
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "20",
+      "title": "Podobieństwo trójkątów",
+      "summary": "Proste $AD$ i $CB$ są równoległe. Odcinki $AC$ i $DB$ przecinają się w $O$. $OA=12$, $OB=6$, $OC=8$. Oblicz $OD$.",
+      "answer": "B: $9$",
+      "steps": [
+        "Trójkąty $AOD$ i $COB$ są podobne: mają równe kąty wierzchołkowe i kąty przy prostych równoległych.",
+        "Odpowiadają sobie $OA\\leftrightarrow OC$ oraz $OD\\leftrightarrow OB$. Zatem $OD/6=12/8$.",
+        "$OD=9$."
+      ],
+      "hint": "Najpierw ustal odpowiadające sobie wierzchołki.",
+      "trap": "Nie zestawiaj w proporcji boków, które sobie nie odpowiadają.",
+      "diagram": "similarity",
+      "page": 22,
+      "keyPage": 27,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-20.png",
+          "width": 931,
+          "height": 862
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "21",
+      "title": "Dwusieczna i pola",
+      "summary": "W trójkącie $KLM$ mamy $MK=a$, $ML=b$, a dwusieczna $MN$ przecina bok $KL$ w $N$. Uzasadnij stosunek pól $P_{KNM}/P_{NLM}=a/b$.",
+      "answer": "$P_{KNM}/P_{NLM}=a/b$",
+      "steps": [
+        "Niech $\\alpha=\\angle KMN=\\angle NML$. Równość wynika z definicji dwusiecznej.",
+        "Wzory na pola: $P_{KNM}=\\frac12a\\cdot MN\\cdot\\sin\\alpha$ oraz $P_{NLM}=\\frac12b\\cdot MN\\cdot\\sin\\alpha$.",
+        "Po podzieleniu wspólny dodatni czynnik $\\frac12MN\\sin\\alpha$ się skraca. Pozostaje $a/b$."
+      ],
+      "hint": "Użyj wzoru na pole z dwóch boków i kąta między nimi.",
+      "trap": "Jeśli korzystasz z wysokości, musisz uzasadnić ich równość.",
+      "diagram": "bisector",
+      "page": 23,
+      "keyPage": 28,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-21.png",
+          "width": 931,
+          "height": 483
+        }
+      ],
+      "points": 2,
+      "scoring": "2 pkt: pełne rozumowanie dowodzące stosunku pól. 1 pkt: poprawny zapis obu pól przez wspólny odcinek i sinus połowy kąta albo inny etap wskazany przez CKE."
+    },
+    {
+      "number": "22",
+      "title": "Trójkąt równoboczny i okrąg",
+      "summary": "Promień okręgu opisanego na trójkącie równobocznym to $9\\sqrt3$. Oblicz bok.",
+      "answer": "$27$",
+      "steps": [
+        "Dla trójkąta równobocznego $R=a/\\sqrt3$.",
+        "$a=R\\sqrt3=9\\sqrt3\\cdot\\sqrt3=27$."
+      ],
+      "hint": "Nie myl promienia okręgu wpisanego z opisanym.",
+      "trap": "R jest dwa razy większe od promienia okręgu wpisanego.",
+      "diagram": null,
+      "page": 24,
+      "keyPage": 30,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-22.png",
+          "width": 931,
+          "height": 238
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "23",
+      "title": "Przekształcanie wyrażenia trygonometrycznego",
+      "summary": "Kąt jest ostry i $(3\\sin\\alpha+4\\cos\\alpha)/(4\\cos\\alpha)=6$. Oblicz $\\tan\\alpha$.",
+      "answer": "D: $20/3$",
+      "steps": [
+        "Dla ostrego kąta $\\cos\\alpha>0$, więc można pomnożyć przez mianownik.",
+        "$3\\sin\\alpha+4\\cos\\alpha=24\\cos\\alpha$, zatem $3\\sin\\alpha=20\\cos\\alpha$.",
+        "Po podzieleniu przez $3\\cos\\alpha$ otrzymujesz $\\tan\\alpha=20/3$."
+      ],
+      "hint": "Oddziel składniki z sinusem i cosinusem.",
+      "trap": "Zachowaj kolejność sin/cos w tangensie.",
+      "diagram": null,
+      "page": 24,
+      "keyPage": 31,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-23.png",
+          "width": 931,
+          "height": 304
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "24.1",
+      "title": "Pole w układzie współrzędnych",
+      "summary": "$A=(0,-3)$, $B=(2,1)$, $C=(0,2)$. Oblicz pole trójkąta.",
+      "answer": "B: $5$",
+      "steps": [
+        "Podstawa $AC$ leży na osi $Oy$ i ma długość $2-(-3)=5$.",
+        "Odległość $B$ od osi $Oy$ wynosi $2$, więc $P=\\frac12\\cdot5\\cdot2=5$."
+      ],
+      "hint": "Wybierz pionowy bok jako podstawę.",
+      "trap": "Wysokość jest odległością od prostej zawierającej podstawę.",
+      "diagram": "coordinateTriangle",
+      "page": 25,
+      "keyPage": 31,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-24.png",
+          "width": 931,
+          "height": 118
+        },
+        {
+          "path": "arkusze/2026/zadania/zadanie-24.1.png",
+          "width": 931,
+          "height": 205
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "24.2",
+      "title": "Środek okręgu opisanego",
+      "summary": "$A=(0,-3)$, $B=(2,1)$, $C=(0,2)$ tworzą trójkąt prostokątny. Wyznacz środek okręgu opisanego.",
+      "answer": "D: $(0,-1/2)$",
+      "steps": [
+        "$\\overrightarrow{BA}=(-2,-4)$ i $\\overrightarrow{BC}=(-2,1)$ mają iloczyn skalarny $4-4=0$. Kąt prosty leży w $B$.",
+        "Przeciwprostokątną jest $AC$. Środek okręgu opisanego to jej środek: $S=((0+0)/2,(-3+2)/2)=(0,-1/2)$."
+      ],
+      "hint": "W trójkącie prostokątnym przeciwprostokątna jest średnicą okręgu opisanego.",
+      "trap": "Nie wybieraj środka dowolnego boku.",
+      "diagram": "coordinateTriangle",
+      "page": 25,
+      "keyPage": 32,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-24.png",
+          "width": 931,
+          "height": 118
+        },
+        {
+          "path": "arkusze/2026/zadania/zadanie-24.2.png",
+          "width": 931,
+          "height": 226
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "25",
+      "title": "Równanie okręgu",
+      "summary": "Okrąg ma środek $(1,-3)$ i promień $5$. Oceń przynależność $(4,-7)$ oraz równanie $(x-1)^2+(y+3)^2=5$.",
+      "answer": "PF",
+      "steps": [
+        "Dla punktu: $(4-1)^2+(-7+3)^2=9+16=25=5^2$, więc punkt leży na okręgu.",
+        "Prawa strona równania okręgu to kwadrat promienia. Poprawne równanie ma prawą stronę $25$, więc drugie zdanie jest fałszywe."
+      ],
+      "hint": "W równaniu występuje r².",
+      "trap": "Nie zastępuj kwadratu promienia samym promieniem.",
+      "diagram": null,
+      "page": 26,
+      "keyPage": 32,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-25.png",
+          "width": 931,
+          "height": 357
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "26",
+      "title": "Proste równoległe",
+      "summary": "Prosta jest równoległa do $y=-x/3+2$ i przechodzi przez $(2,-2)$. Znajdź przecięcie osi $Oy$.",
+      "answer": "D: $(0,-4/3)$",
+      "steps": [
+        "Równoległa prosta ma ten sam współczynnik: $y=-x/3+b$.",
+        "$-2=-2/3+b$, więc $b=-4/3$. Przecięcie osi $Oy$ ma współrzędne $(0,-4/3)$."
+      ],
+      "hint": "Równoległość zachowuje współczynnik kierunkowy.",
+      "trap": "Wyraz wolny wyznacz z punktu należącego do nowej prostej.",
+      "diagram": null,
+      "page": 26,
+      "keyPage": 33,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-26.png",
+          "width": 931,
+          "height": 337
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "27",
+      "title": "Objętość ostrosłupa",
+      "summary": "Ostrosłup prawidłowy czworokątny: przekątna podstawy $8\\sqrt3$, kąt krawędzi bocznej z podstawą $30^\\circ$. Oblicz objętość.",
+      "answer": "$V=128$",
+      "steps": [
+        "Rzut krawędzi bocznej na podstawę to połowa przekątnej: $OA=4\\sqrt3$.",
+        "$\\tan30^\\circ=H/(4\\sqrt3)$, więc $H=4$.",
+        "Pole kwadratu o przekątnej $d$ wynosi $d^2/2=96$. Stąd $V=\\frac13\\cdot96\\cdot4=128$."
+      ],
+      "hint": "Rozpatrz przekrój przez wysokość i przekątną podstawy.",
+      "trap": "Nie utożsamiaj wysokości bryły z krawędzią boczną.",
+      "diagram": "pyramid",
+      "page": 27,
+      "keyPage": 33,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-27.png",
+          "width": 931,
+          "height": 180
+        }
+      ],
+      "points": 2,
+      "scoring": "2 pkt: poprawna metoda i objętość 128. 1 pkt: wysokość H=4 albo poprawnie wyznaczone pole podstawy 96."
+    },
+    {
+      "number": "28",
+      "title": "Stosunek objętości",
+      "summary": "Walec i stożek mają wspólną wysokość. Promień stożka jest dwukrotnością promienia walca. Oblicz stosunek objętości.",
+      "answer": "D: $4/3$",
+      "steps": [
+        "Oznacz promień walca przez $r$, wtedy promień stożka to $2r$.",
+        "$V_s/V_w=\\frac{\\frac13\\pi(2r)^2h}{\\pi r^2h}=4/3$."
+      ],
+      "hint": "Promień występuje we wzorze w kwadracie.",
+      "trap": "Dwukrotnie większy promień daje czterokrotnie większe pole podstawy.",
+      "diagram": null,
+      "page": 28,
+      "keyPage": 34,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-28.png",
+          "width": 931,
+          "height": 311
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "29",
+      "title": "Reguła mnożenia",
+      "summary": "Policz trzycyfrowe nieparzyste liczby używające wyłącznie cyfr od 0 do 6. Cyfry mogą się powtarzać.",
+      "answer": "A: $6\\cdot7\\cdot3=126$",
+      "steps": [
+        "Cyfra setek: $1,2,3,4,5,6$ — sześć możliwości.",
+        "Cyfra dziesiątek: dowolna z siedmiu cyfr.",
+        "Cyfra jedności: $1,3,5$ — trzy możliwości. Razem $6\\cdot7\\cdot3=126$."
+      ],
+      "hint": "Nieparzystość zależy wyłącznie od ostatniej cyfry.",
+      "trap": "Zero na początku nie tworzy liczby trzycyfrowej.",
+      "diagram": null,
+      "page": 28,
+      "keyPage": 35,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-29.png",
+          "width": 931,
+          "height": 237
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "30",
+      "title": "Prawdopodobieństwo w tabeli",
+      "summary": "Dziesiątki losowane z $\\{1,3,5,7,9\\}$, jedności z $\\{0,2,4,6,8\\}$. Oblicz prawdopodobieństwo podzielności liczby przez 6.",
+      "answer": "$9/25$",
+      "steps": [
+        "Wszystkie $5\\cdot5=25$ par są jednakowo prawdopodobne.",
+        "Każda liczba jest parzysta. Pozostaje sprawdzić podzielność przez 3, czyli sumę cyfr.",
+        "Sprzyjające liczby: $12,18,30,36,54,72,78,90,96$ — dziewięć. Zatem $P=9/25$."
+      ],
+      "hint": "Tabela wszystkich par zapobiega pomijaniu liczb.",
+      "trap": "Mianownik to wszystkie możliwe wyniki losowania, nie wszystkie liczby dwucyfrowe.",
+      "diagram": "probabilityTable",
+      "page": 29,
+      "keyPage": 35,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-30.png",
+          "width": 931,
+          "height": 305
+        }
+      ],
+      "points": 2,
+      "scoring": "2 pkt: poprawna metoda i prawdopodobieństwo 9/25. 1 pkt: pełne poprawne określenie wszystkich wyników lub wyników sprzyjających (klucz dopuszcza również wskazane etapy drzewa)."
+    },
+    {
+      "number": "31",
+      "title": "Średnia i mediana",
+      "summary": "Z diagramów w arkuszu porównaj średnie i mediany dwóch klas.",
+      "answer": "PP",
+      "steps": [
+        "Liczności ocen 1–6: klasa A — $(1,6,3,3,6,1)$; klasa B — $(1,3,6,6,3,1)$. Każda klasa liczy 20 uczniów.",
+        "Oba rozkłady są symetryczne względem $3{,}5$, a suma ocen w obu wynosi $70$. Średnia: $70/20=3{,}5$.",
+        "W obu klasach 10. uporządkowana ocena to 3, a 11. to 4. Mediana: $(3+4)/2=3{,}5$."
+      ],
+      "hint": "Przy parzystej liczbie obserwacji mediana jest średnią dwóch środkowych wartości.",
+      "trap": "Nie licz zwykłej średniej z etykiet słupków bez ich liczności.",
+      "diagram": "statistics",
+      "page": 30,
+      "keyPage": 37,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-31.png",
+          "width": 931,
+          "height": 942
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "32",
+      "title": "Łączenie średnich",
+      "summary": "Trzy liczby mają średnią 2, a cztery kolejne średnią 5,5. Oblicz średnią wszystkich siedmiu.",
+      "answer": "C: $4$",
+      "steps": [
+        "Suma pierwszych trzech liczb wynosi $3\\cdot2=6$.",
+        "Suma pozostałych czterech wynosi $4\\cdot5{,}5=22$.",
+        "Łączna średnia: $(6+22)/7=4$."
+      ],
+      "hint": "Najpierw zamień średnie na sumy.",
+      "trap": "Średnia dwóch średnich działa tylko przy grupach tej samej liczności.",
+      "diagram": null,
+      "page": 31,
+      "keyPage": 37,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-32.png",
+          "width": 931,
+          "height": 299
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "33.1",
+      "title": "Chwila powrotu na ziemię",
+      "summary": "$h(t)=-4{,}9t^2+14{,}7t$. Wyznacz dodatnią chwilę pierwszego powrotu do wysokości zero.",
+      "answer": "D: $3\\text{ s}$",
+      "steps": [
+        "$h(t)=4{,}9t(3-t)$. Miejsca zerowe to $t=0$ i $t=3$.",
+        "$t=0$ jest chwilą wyrzutu. Powrót na ziemię następuje przy $t=3$ s."
+      ],
+      "hint": "Szukasz drugiego miejsca zerowego, po wyrzucie.",
+      "trap": "Wierzchołek paraboli oznacza maksymalną wysokość, a nie powrót na ziemię.",
+      "diagram": "ball",
+      "page": 32,
+      "keyPage": 38,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-33.png",
+          "width": 931,
+          "height": 329
+        },
+        {
+          "path": "arkusze/2026/zadania/zadanie-33.1.png",
+          "width": 931,
+          "height": 202
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    },
+    {
+      "number": "33.2",
+      "title": "Chwila największej wysokości",
+      "summary": "$h(t)=-4{,}9t^2+14{,}7t$ dla $t\\in[0,3]$. Znajdź chwilę osiągnięcia maksymalnej wysokości.",
+      "answer": "A: $1{,}5\\text{ s}$",
+      "steps": [
+        "Parabola jest skierowana ramionami w dół, bo współczynnik $-4{,}9$ jest ujemny.",
+        "Wierzchołek leży w połowie między zerami 0 i 3: $t=1{,}5$ s. Również $-b/(2a)=-14{,}7/(-9{,}8)=1{,}5$."
+      ],
+      "hint": "Wykorzystaj symetrię paraboli.",
+      "trap": "Pamiętaj o dziedzinie czasu: od 0 do 3 sekund.",
+      "diagram": "ball",
+      "page": 33,
+      "keyPage": 38,
+      "originals": [
+        {
+          "path": "arkusze/2026/zadania/zadanie-33.png",
+          "width": 931,
+          "height": 329
+        },
+        {
+          "path": "arkusze/2026/zadania/zadanie-33.2.png",
+          "width": 931,
+          "height": 202
+        }
+      ],
+      "points": 1,
+      "scoring": "Pełna poprawna odpowiedź — 1 pkt; brak poprawnej pełnej odpowiedzi — 0 pkt."
+    }
+  ]
+}

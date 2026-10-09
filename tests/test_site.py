@@ -151,9 +151,9 @@ try:
         passed('2400 pytań quizu: cztery różne odpowiedzi i poprawne wzory KaTeX')
 
         page.goto(BASE+'arkusze.html', wait_until='networkidle')
-        expect(page.locator('#examCount')).to_have_text('18 dokumentów')
+        expect(page.locator('#examCount')).to_have_text('19 dokumentów')
         page.locator('#examLevel').select_option('rozszerzony')
-        expect(page.locator('#examCount')).to_have_text('3 dokumentów')
+        expect(page.locator('#examCount')).to_have_text('4 dokumentów')
         page.locator('[data-exam]').first.click()
         expect(page.locator('#examSession')).to_be_visible()
         page.locator('#examNote').fill('Powtórzyć zadania dotyczące dziedziny.')
@@ -163,7 +163,7 @@ try:
         for path in pdf_paths:
             response=page.request.get(BASE+path)
             assert response.ok and response.body().startswith(b'%PDF'),path
-        passed('21 oryginalnych arkuszy i 21 kluczy PDF, filtry i sesja pracy')
+        passed('23 oryginalne arkusze i 23 klucze PDF, filtry i sesja pracy')
 
         page.goto(BASE+'korepetycje.html', wait_until='networkidle')
         expect(page.locator('#tutorEmpty')).to_be_visible()

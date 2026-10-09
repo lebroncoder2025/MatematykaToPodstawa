@@ -4,7 +4,7 @@
 // Zasoby lokalne dostępne offline; zasoby CDN po zapisaniu w cache.
 // ================================================================
 
-var CACHE = 'mtp-v17';
+var CACHE = 'mtp-v18';
 
 // Dynamically derive base path so the SW works both on GitHub Pages
 // (hosted at /MatematykaToPodstawa/) and on a custom domain root (/).
@@ -21,6 +21,12 @@ var LOCAL_ASSETS = [
   BASE + '/postep.html',
   BASE + '/fiszki.html',
   BASE + '/arkusze.html',
+  BASE + '/egzamin.html',
+  BASE + '/arkusze/2026/solutions.json',
+  BASE + '/arkusze/2026_rozszerzony/solutions.json',
+  BASE + '/assets/exam-study.js',
+  BASE + '/assets/exam-study.css',
+  BASE + '/assets/exam-diagrams.js',
   BASE + '/404.html',
   BASE + '/dzialy/ciagi.html',
   BASE + '/dzialy/funkcje.html',
@@ -113,10 +119,18 @@ self.addEventListener('fetch', function (e) {
   }
 
   // Lokalne zasoby: pokaż cache i bezpiecznie odśwież go w tle.
+  // HTML is static; exam/task query parameters are interpreted in the browser.
+  // Cache one canonical document so a newly selected task also opens offline.
+  var cacheKey = e.request;
+  if (url.pathname.endsWith('.html')) {
+    var canonical = new URL(url.href);
+    canonical.search = '';
+    cacheKey = canonical.href;
+  }
   e.respondWith(
-    caches.match(e.request).then(function (cached) {
+    caches.match(cacheKey).then(function (cached) {
       var fresh = fetch(e.request).then(function (resp) {
-        if (resp.ok) e.waitUntil(caches.open(CACHE).then(function (c) { return c.put(e.request, resp.clone()); }));
+        if (resp.ok) e.waitUntil(caches.open(CACHE).then(function (c) { return c.put(cacheKey, resp.clone()); }));
         return resp;
       });
       if (cached) {

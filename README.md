@@ -11,7 +11,12 @@ Nie wymaga serwera aplikacyjnego ani procesu budowania.
   z rozwiązaniami, notatkami i zakładkami. Osobno kompendium ma 142 przykłady.
 - `korepetycje.html`: uczniowie, spotkania, notatki, zadania domowe, osobne karty
   ucznia i klucze prowadzącego, tablica i stoper. Kopie danych eksportowane do JSON.
-- `arkusze.html`: oryginalne PDF-y CKE i zasady oceniania, filtry, stoper, notatki.
+- `arkusze.html`: 23 oryginalne PDF-y CKE i zasady oceniania, filtry, stoper, notatki.
+- `egzamin.html`: maj 2026, podstawa (37 zadań i podpunktów) oraz rozszerzenie
+  (13 zadań i podpunktów), po 50 punktów. Własne objaśnienia, oryginalne wyciągi
+  z arkusza, diagramy SVG, brudnopis wektorowy, samoocena, import/eksport.
+  Odnośniki prowadzą do właściwych stron oficjalnego klucza CKE.
+  Pochodzenie i sumy SHA-256 dokumentów: `arkusze/2026*/source.json`.
 
 ## Uruchomienie i testy
 
@@ -29,6 +34,8 @@ pip install -r tests/requirements.txt
 python -m playwright install chromium
 python tests/test_site.py
 python tests/test_site.py https://lebroncoder2025.github.io/MatematykaToPodstawa/
+python tests/test_exams.py
+python tests/test_exams.py https://lebroncoder2025.github.io/MatematykaToPodstawa/
 ```
 
 Lokalny serwer testowy odtwarza ścieżkę `/MatematykaToPodstawa/`. Testy sprawdzają

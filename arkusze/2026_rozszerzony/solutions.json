@@ -1,0 +1,364 @@
+{
+  "id": "2026_rozszerzony",
+  "year": 2026,
+  "session": "Maj 2026",
+  "level": "rozszerzony",
+  "formula": "2023",
+  "version": "A",
+  "duration": 180,
+  "maxPoints": 50,
+  "verified": "2026-10-09",
+  "pdf": "arkusze/2026_rozszerzony/arkusz.pdf",
+  "key": "arkusze/2026_rozszerzony/zasady.pdf",
+  "tasks": [
+    {
+      "number": "1",
+      "title": "Granica z symbolem Newtona",
+      "summary": "Oblicz granicę ilorazu $\\binom{n+2}{n-1}$ i $\\frac12n^3-4n+7$.",
+      "answer": "$1/3$",
+      "steps": [
+        "Z symetrii symbolu Newtona $\\binom{n+2}{n-1}=\\binom{n+2}{3}=n(n+1)(n+2)/6$.",
+        "Podziel licznik i mianownik przez $n^3$: $\\frac{(1+1/n)(1+2/n)/6}{1/2-4/n^2+7/n^3}$.",
+        "W granicy składniki z odwrotnościami n znikają. Wynik to $(1/6)/(1/2)=1/3$."
+      ],
+      "hint": "Zamień symbol Newtona na wielomian.",
+      "trap": "Mianownik ma współczynnik 1/2 przy n³ — nie pomijaj go.",
+      "diagram": null,
+      "page": 4,
+      "keyPage": 2,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-1.png",
+          "width": 931,
+          "height": 241
+        }
+      ],
+      "points": 2,
+      "scoring": "2 pkt: poprawne przekształcenie i granica 1/3. 1 pkt: poprawne rozwinięcie symbolu Newtona."
+    },
+    {
+      "number": "2",
+      "title": "Permutacje i podzielność",
+      "summary": "Permutacja liczb 1–8 ma mieć iloczyn każdych trzech kolejnych wyrazów podzielny przez 3. Oblicz prawdopodobieństwo.",
+      "answer": "$1/28$",
+      "steps": [
+        "Liczby podzielne przez 3 to tylko 3 i 6. Wszystkich permutacji jest $8!$.",
+        "Pierwsza trójka pozycji i ostatnia trójka pozycji są rozłączne: każda musi zawierać jedną z liczb 3,6. Pozycje 4 i 5 nie mogą więc zawierać żadnej z nich.",
+        "Aby trójki pozycji $(3,4,5)$ i $(4,5,6)$ też spełniały warunek, liczby 3 i 6 muszą zajmować dokładnie pozycje 3 i 6. Takie ustawienie spełnia warunek dla każdej trójki.",
+        "Dwie kolejności liczb 3,6 i $6!$ ustawień pozostałych dają $2\\cdot6!$. Prawdopodobieństwo: $2\\cdot6!/8!=1/28$."
+      ],
+      "hint": "Porównaj najpierw pierwszą i ostatnią trójkę pozycji.",
+      "trap": "Samo wskazanie dogodnego ustawienia nie wystarczy; trzeba wykazać, że inne ustawienia nie działają.",
+      "diagram": "permutations",
+      "page": 5,
+      "keyPage": 3,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-2.png",
+          "width": 931,
+          "height": 267
+        }
+      ],
+      "points": 3,
+      "scoring": "3 pkt: poprawna metoda i 1/28. 2 pkt: poprawne liczby wszystkich permutacji i permutacji sprzyjających. 1 pkt: liczba wszystkich permutacji albo konieczne pozycje 3 i 6 dla wielokrotności 3, albo liczba wyników sprzyjających."
+    },
+    {
+      "number": "3",
+      "title": "Dowód nierówności",
+      "summary": "Dla $x,y>0$ uzasadnij $1/x+1/y\\le x/y^2+y/x^2$.",
+      "answer": "Nierówność prawdziwa; równość dla $x=y$.",
+      "steps": [
+        "Ponieważ $x^2y^2>0$, można pomnożyć nierówność przez tę liczbę bez zmiany znaku: $xy^2+x^2y\\le x^3+y^3$.",
+        "Różnica stron: $x^3+y^3-xy^2-x^2y=(x+y)(x-y)^2$.",
+        "$x+y>0$, a $(x-y)^2\\ge0$, więc różnica jest nieujemna. To dowodzi nierówności dla wszystkich dopuszczalnych x i y."
+      ],
+      "hint": "Szukaj iloczynu z kwadratem różnicy.",
+      "trap": "Przed mnożeniem nierówności określ znak mnożnika.",
+      "diagram": null,
+      "page": 6,
+      "keyPage": 4,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-3.png",
+          "width": 931,
+          "height": 197
+        }
+      ],
+      "points": 3,
+      "scoring": "3 pkt: pełny dowód z uzasadnieniem nieujemności. 2 pkt: doprowadzenie do odpowiedniego kwadratu lub iloczynu bez pełnego uzasadnienia. 1 pkt: poprawna nierówność wielomianowa równoważna wyjściowej (lub inne wskazane w kluczu przekształcenie)."
+    },
+    {
+      "number": "4",
+      "title": "Dowód geometryczny na siatce",
+      "summary": "Kwadrat $ABCD$ ma bok $a$. $K$ i $L$ są środkami $AB$ i $BC$. Punkt $M$ leży na $BC$, a $KM\\perp DK$. Odcinek $AL$ przecina $DK$ w $P$ i $DM$ w $Q$. Uzasadnij $PQ=a\\sqrt5/5$.",
+      "answer": "$PQ=a\\sqrt5/5$",
+      "steps": [
+        "Przyjmij $A=(0,0)$, $B=(a,0)$, $C=(a,a)$, $D=(0,a)$, $K=(a/2,0)$ i $L=(a,a/2)$, gdzie $a>0$.",
+        "Prosta $DK$ ma równanie $y=a-2x$. Prostopadła $KM$ ma nachylenie $1/2$, więc $y=(x-a/2)/2$ i $M=(a,a/4)$.",
+        "$AL$: $y=x/2$. Punkt przecięcia z $DK$ to $P=(2a/5,a/5)$. Prosta $DM$ ma wzór $y=a-3x/4$, więc $Q=(4a/5,2a/5)$.",
+        "$PQ=\\sqrt{(2a/5)^2+(a/5)^2}=a\\sqrt5/5$."
+      ],
+      "hint": "Układ współrzędnych zamienia konstrukcję na równania prostych.",
+      "trap": "Prostopadłość KM i DK trzeba wykorzystać przy wyznaczaniu M.",
+      "diagram": "square",
+      "page": 8,
+      "keyPage": 8,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-4.png",
+          "width": 931,
+          "height": 617
+        }
+      ],
+      "points": 3,
+      "scoring": "3 pkt: pełny dowód. Przy metodzie współrzędnych 2 pkt: poprawny punkt Q; 1 pkt: poprawny punkt P. Przy metodach geometrycznych kryteria obejmują uzasadnienie odpowiedniej prostopadłości lub równoległości oraz wskazane w kluczu długości. Pełne warianty w kluczu."
+    },
+    {
+      "number": "5",
+      "title": "Wartość bezwzględna",
+      "summary": "Rozwiąż $|2x-6|-|x^2-9|<0$.",
+      "answer": "$(-\\infty,-5)\\cup(-1,3)\\cup(3,+\\infty)$",
+      "steps": [
+        "Wyłącz wspólny moduł: $2|x-3|-|x-3||x+3|=|x-3|(2-|x+3|)$.",
+        "Dla $x=3$ lewa strona jest zerem, więc nie spełnia ostrej nierówności. Dla $x\\ne3$ czynnik $|x-3|$ jest dodatni.",
+        "Pozostaje $|x+3|>2$, czyli $x<-5$ lub $x>-1$. Z drugiego przedziału usuń $x=3$."
+      ],
+      "hint": "Skorzystaj z |ab|=|a||b|.",
+      "trap": "Dzielenie przez |x−3| wymaga osobnego sprawdzenia x=3.",
+      "diagram": "absolute",
+      "page": 10,
+      "keyPage": 15,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-5.png",
+          "width": 931,
+          "height": 180
+        }
+      ],
+      "points": 4,
+      "scoring": "4 pkt: poprawna metoda i kompletny zbiór rozwiązań. W metodzie z wyłączeniem wspólnego modułu 3 pkt: rozwiązanie |x+3|>2. Niższe etapy i metoda przedziałowa są szczegółowo opisane w kluczu. Konieczne jest wyłączenie x=3."
+    },
+    {
+      "number": "6",
+      "title": "Dwa rodzaje ciągów",
+      "summary": "Ciąg arytmetyczny zaczyna się od 1 i kończy na −2025. Wyrazy drugi, trzeci i szósty tworzą ciąg geometryczny. Oblicz sumę.",
+      "answer": "$S=-1\\,026\\,168$",
+      "steps": [
+        "Niech $r$ oznacza różnicę. Wyrazy to $1+r$, $1+2r$, $1+5r$. Geometryczność daje $(1+2r)^2=(1+r)(1+5r)$.",
+        "Po rozwinięciu: $r(r+2)=0$. Wartość $r=0$ oznacza ciąg stały i nie pozwala osiągnąć −2025. Zatem $r=-2$.",
+        "$-2025=1+(n-1)(-2)$, więc $n=1014>6$.",
+        "$S_n=\\frac{1+(-2025)}2\\cdot1014=-1012\\cdot1014=-1\\,026\\,168$."
+      ],
+      "hint": "Wykorzystaj kwadrat środkowego wyrazu geometrycznego.",
+      "trap": "Kandydat r=0 wymaga odrzucenia na podstawie ostatniego wyrazu.",
+      "diagram": null,
+      "page": 12,
+      "keyPage": 21,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-6.png",
+          "width": 931,
+          "height": 244
+        }
+      ],
+      "points": 4,
+      "scoring": "4 pkt: poprawna metoda i suma −1 026 168. 3 pkt: liczba wyrazów n=1014. 2 pkt: wyznaczenie dopuszczalnej różnicy r=−2 lub rozwiązanie równania r(r+2)=0 (klucz dopuszcza też metodę z ilorazem). 1 pkt: właściwa zależność między trzema wyrazami."
+    },
+    {
+      "number": "7",
+      "title": "Równanie trygonometryczne",
+      "summary": "Rozwiąż $\\sin(6x)-2\\sin(2x)=0$ w liczbach rzeczywistych.",
+      "answer": "$x=\\frac{k\\pi}{2}$ lub $x=\\pm\\frac\\pi{12}+\\frac{k\\pi}{2}$, $k\\in\\mathbb Z$",
+      "steps": [
+        "Zapisz równanie jako $\\sin(6x)-\\sin(2x)-\\sin(2x)=0$. Wzór na różnicę sinusów daje $\\sin(2x)(2\\cos(4x)-1)=0$.",
+        "Pierwszy przypadek: $\\sin(2x)=0$, więc $x=k\\pi/2$.",
+        "Drugi przypadek: $\\cos(4x)=1/2$, więc $4x=\\pm\\pi/3+2k\\pi$, czyli $x=\\pm\\pi/12+k\\pi/2$.",
+        "Połącz wszystkie serie, z $k\\in\\mathbb Z$."
+      ],
+      "hint": "Zamień różnicę dwóch sinusów na iloczyn.",
+      "trap": "Nie dziel przez sin(2x), bo utracisz całą serię rozwiązań.",
+      "diagram": null,
+      "page": 14,
+      "keyPage": 24,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-7.png",
+          "width": 931,
+          "height": 157
+        }
+      ],
+      "points": 4,
+      "scoring": "4 pkt: poprawne przekształcenia i wszystkie serie rozwiązań. 3 pkt: poprawna alternatywa równań i rozwiązanie jednego z nich. 2 pkt: poprawna alternatywa równań. 1 pkt: poprawne zastosowanie odpowiedniej tożsamości trygonometrycznej."
+    },
+    {
+      "number": "8",
+      "title": "Kąt między ścianami ostrosłupa",
+      "summary": "W ostrosłupie prawidłowym trójkątnym obwód okręgu opisanego na podstawie wynosi $6\\sqrt2\\pi$, a $\\cos\\angle BSC=5/9$. Wyznacz bok podstawy i cosinus kąta między ścianami SAC i SBC.",
+      "answer": "$a=3\\sqrt6$, $\\cos\\beta=5/14$",
+      "steps": [
+        "$2\\pi R=6\\sqrt2\\pi$ daje $R=3\\sqrt2$. Dla podstawy równobocznej $a=R\\sqrt3=3\\sqrt6$.",
+        "Niech $b$ będzie krawędzią boczną. W ścianie $SBC$ twierdzenie cosinusów daje $a^2=2b^2(1-5/9)$, stąd $b^2=243/4$.",
+        "Opuść z A i B prostopadłe na wspólną krawędź SC. Ich spodki pokrywają się w punkcie T, ponieważ ściany SAC i SBC są przystające. $ST=b\\cdot5/9=5\\sqrt3/2$.",
+        "$AT^2=BT^2=b^2-ST^2=42$. Kąt $ATB$ jest kątem liniowym kąta dwuściennego: oba ramiona są prostopadłe do SC.",
+        "W trójkącie ATB: $\\cos\\beta=(42+42-54)/(2\\cdot42)=5/14$. Jest to cosinus ostrego kąta między płaszczyznami."
+      ],
+      "hint": "Kąt dwuścienny wyznaczają odcinki prostopadłe do wspólnej krawędzi.",
+      "trap": "Nie zastępuj kąta między ścianami kątem między krawędziami.",
+      "diagram": "dihedral",
+      "page": 16,
+      "keyPage": 28,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-8.png",
+          "width": 931,
+          "height": 265
+        }
+      ],
+      "points": 4,
+      "scoring": "4 pkt: bok 3√6 i cosinus 5/14 z poprawnym rozumowaniem. 3 pkt: poprawna długość AT=√42 (lub równoważny etap podany w kluczu). 2 pkt: poprawny kwadrat krawędzi bocznej 243/4 (lub inne wskazane zależności). 1 pkt: bok podstawy lub właściwie zastosowane twierdzenie cosinusów."
+    },
+    {
+      "number": "9",
+      "title": "Okrąg z podziałem odcinka",
+      "summary": "$A=(1,-1)$, $B=(4,0)$, $CA=CB$, ramię leży na $x+2y-4=0$. Punkt $M\\in AC$ spełnia $AM:MC=1:4$. Wyznacz okrąg o środku M przechodzący przez C.",
+      "answer": "$(x-6/5)^2+(y+3/5)^2=16/5$",
+      "steps": [
+        "$A$ nie leży na podanej prostej, a $B$ leży. Podana prosta zawiera zatem ramię BC, więc $x_C+2y_C=4$.",
+        "Warunek równych odległości od A i B daje $(x_C-1)^2+(y_C+1)^2=(x_C-4)^2+y_C^2$, czyli $3x_C+y_C=7$.",
+        "Rozwiązanie układu: $C=(2,1)$. Punkt M leży w jednej piątej drogi od A do C: $M=A+(C-A)/5=(6/5,-3/5)$.",
+        "$MC^2=(2-6/5)^2+(1+3/5)^2=16/5$. Zapisz równanie okręgu ze środkiem M i tą prawą stroną."
+      ],
+      "hint": "Punkt równo odległy od A i B leży na symetralnej AB.",
+      "trap": "Podział 1:4 oznacza jedną piątą całego odcinka, nie jedną czwartą.",
+      "diagram": "analyticCircle",
+      "page": 18,
+      "keyPage": 34,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-9.png",
+          "width": 931,
+          "height": 274
+        }
+      ],
+      "points": 5,
+      "scoring": "5 pkt: poprawna metoda i równanie okręgu. 4 pkt: poprawne C i M albo poprawne C i długość MC. 3 pkt: poprawnie wyznaczone C. 2 pkt: równanie z jedną niewiadomą dla współrzędnej C albo symetralna z zależnością na M. 1 pkt: symetralna AB, zapis C na podanej prostej albo poprawna zależność współrzędnych M."
+    },
+    {
+      "number": "10",
+      "title": "Parametr i dwa miejsca zerowe",
+      "summary": "Dla $m\\ne0$ wyznacz parametry, dla których $m^2x^2-2mx-m+1$ ma dwa różne zera w $(-2,2)$.",
+      "answer": "$m\\in(1,+\\infty)$",
+      "steps": [
+        "Ramiona są w górę, bo $m^2>0$. Wyróżnik $\\Delta=4m^3$ ma być dodatni, więc $m>0$.",
+        "Wierzchołek ma pierwszą współrzędną $p=1/m$. Warunek $-2<p<2$ przy $m>0$ daje $m>1/2$.",
+        "Aby oba zera były wewnątrz, wymagamy też $f(-2)>0$ i $f(2)>0$. $f(-2)=4m^2+3m+1>0$ dla każdego m (wyróżnik −7).",
+        "$f(2)=4m^2-5m+1=(4m-1)(m-1)>0$, więc $m<1/4$ lub $m>1$.",
+        "Część wspólna warunków to $m>1$. Dodatni trójmian na końcach, ujemny w wierzchołku i wierzchołek w przedziale zapewniają dwa różne zera wewnątrz."
+      ],
+      "hint": "Sprawdź wyróżnik, położenie wierzchołka oraz wartości na obu krańcach.",
+      "trap": "Samo Δ>0 nie określa położenia miejsc zerowych.",
+      "diagram": "parameter",
+      "page": 20,
+      "keyPage": 39,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-10.png",
+          "width": 931,
+          "height": 239
+        }
+      ],
+      "points": 5,
+      "scoring": "5 pkt: poprawna metoda i m>1. W metodzie położenia paraboli 1 pkt: wszystkie pięć warunków lub rozwiązanie jednego z nich; 2,3,4 pkt: rozwiązanie odpowiednio trzech, czterech, pięciu warunków. Konieczne są wszystkie warunki i ich część wspólna. Klucz zawiera także metodę z jawnymi pierwiastkami."
+    },
+    {
+      "number": "11",
+      "title": "Czworokąt i dwa okręgi",
+      "summary": "Czworokąt ABCD ma okrąg wpisany i opisany; $AB=9$, $AD=10$, $\\angle BAD=60^\\circ$. Oblicz BC, CD i pole.",
+      "answer": "$BC=5$, $CD=6$, $P=30\\sqrt3$",
+      "steps": [
+        "Okrąg wpisany daje równość sum przeciwległych boków: $9+CD=10+BC$. Oznacz $BC=u>0$, wtedy $CD=u+1$.",
+        "Twierdzenie cosinusów w ABD: $BD^2=9^2+10^2-2\\cdot9\\cdot10\\cos60^\\circ=91$.",
+        "Okrąg opisany oznacza sumę przeciwległych kątów równą $180^\\circ$, zatem $\\angle BCD=120^\\circ$.",
+        "W BCD: $91=u^2+(u+1)^2-2u(u+1)\\cos120^\\circ=3u^2+3u+1$. Stąd $(u-5)(u+6)=0$, a dodatni kandydat to $u=5$.",
+        "Pole jest sumą pól ABD i BCD: $\\frac12\\cdot9\\cdot10\\sin60^\\circ+\\frac12\\cdot5\\cdot6\\sin120^\\circ=30\\sqrt3$."
+      ],
+      "hint": "Każdy z dwóch okręgów daje inną własność czworokąta.",
+      "trap": "Nie zamieniaj równości sum przeciwległych boków na równość ich iloczynów.",
+      "diagram": "bicentric",
+      "page": 24,
+      "keyPage": 47,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-11.png",
+          "width": 931,
+          "height": 554
+        }
+      ],
+      "points": 6,
+      "scoring": "6 pkt: boki 5 i 6 oraz pole 30√3 z poprawną metodą. 5 pkt: oba boki. 4 pkt: poprawne równanie pozwalające obliczyć boki. 1–3 pkt: realizacja wskazanych w CKE etapów — zależności boków, obliczenia BD i wyznaczenia kąta 120° — z dodatkowymi warunkami dla 3 pkt."
+    },
+    {
+      "number": "12.1",
+      "title": "Pole kwietnika — wyprowadzenie",
+      "summary": "Kwietnik jest trójkątem równoramiennym o podstawie x z okręgiem wpisanym o promieniu 2. Uzasadnij $P(x)=2x^3/(x^2-16)$.",
+      "answer": "$P(x)=\\frac{2x^3}{x^2-16}$",
+      "steps": [
+        "Oznacz wysokość przez h, ramię przez b. Połowa obwodu to $b+x/2$, zatem $P=2(b+x/2)=2b+x$. Jednocześnie $P=xh/2$.",
+        "Z równości pól: $b=x(h-2)/4$. Z Pitagorasa: $b^2=h^2+x^2/4$.",
+        "Podstaw b i pomnóż przez 16: $x^2(h-2)^2=16h^2+4x^2$. Po uproszczeniu $h[(x^2-16)h-4x^2]=0$.",
+        "Ponieważ $h>0$, otrzymujemy $h=4x^2/(x^2-16)$. Dodatnia wysokość wymaga $x>4$.",
+        "$P=xh/2=2x^3/(x^2-16)$. Z projektu dodatkowo $x\\le10$, więc dziedzina to $(4,10]$."
+      ],
+      "hint": "Połącz wzór P=rs ze wzorem na pole z podstawy i wysokości.",
+      "trap": "Średnica fontanny wynosi 4, więc promień wynosi 2.",
+      "diagram": "garden",
+      "page": 28,
+      "keyPage": 49,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-12.png",
+          "width": 931,
+          "height": 640
+        },
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-12.1.png",
+          "width": 931,
+          "height": 198
+        }
+      ],
+      "points": 3,
+      "scoring": "3 pkt: pełne wyprowadzenie wzoru. 2 pkt: związki prowadzące do wyznaczenia wysokości w zależności od x albo równoważne etapy z klucza. 1 pkt: poprawny związek między wysokością, podstawą i ramieniem (lub inna wskazana zależność)."
+    },
+    {
+      "number": "12.2",
+      "title": "Najmniejsze pole kwietnika",
+      "summary": "Zminimalizuj $P(x)=2x^3/(x^2-16)$ na $(4,10]$. Podaj podstawę i pole.",
+      "answer": "$x=4\\sqrt3\\text{ m}$, $P_{\\min}=12\\sqrt3\\text{ m}^2$",
+      "steps": [
+        "Pochodna ilorazu: $P\\prime(x)=\\frac{6x^2(x^2-16)-4x^4}{(x^2-16)^2}=\\frac{2x^2(x^2-48)}{(x^2-16)^2}$.",
+        "W dziedzinie jedyne zero pochodnej to $x=4\\sqrt3$. Pozostałe kandydaty 0 i −4√3 nie należą do dziedziny.",
+        "Na $(4,4\\sqrt3)$ pochodna jest ujemna, a na $(4\\sqrt3,10]$ dodatnia. Funkcja najpierw maleje, potem rośnie, więc w punkcie zmiany osiąga minimum globalne w tej dziedzinie.",
+        "$P(4\\sqrt3)=2(4\\sqrt3)^3/(48-16)=12\\sqrt3$. Podstawa ma $4\\sqrt3$ m."
+      ],
+      "hint": "Znak pochodnej jest znakiem x²−48 w rozpatrywanym przedziale.",
+      "trap": "Samo obliczenie zera pochodnej nie jest uzasadnieniem minimum.",
+      "diagram": "optimization",
+      "page": 30,
+      "keyPage": 55,
+      "originals": [
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-12.png",
+          "width": 931,
+          "height": 640
+        },
+        {
+          "path": "arkusze/2026_rozszerzony/zadania/zadanie-12.2.png",
+          "width": 931,
+          "height": 297
+        }
+      ],
+      "points": 4,
+      "scoring": "4 pkt: uzasadnione minimum i poprawne pole. 3 pkt: uzasadnione minimum przy x=4√3. 2 pkt: poprawne zero pochodnej w dziedzinie. 1 pkt: poprawna pochodna. Bez uzasadnienia minimum można uzyskać najwyżej 2 pkt."
+    }
+  ]
+}

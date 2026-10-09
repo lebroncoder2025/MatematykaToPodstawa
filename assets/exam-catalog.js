@@ -1,5 +1,7 @@
 /* Original exam documents; no reconstructed task statements. */
 window.ExamCatalog = [
+  {year:2026,title:"Matura Maj 2026 – Poziom Podstawowy",date:"Maj 2026",formula:"2023",examType:"sesja",pdfPath:"arkusze/2026/arkusz.pdf",zasadyPath:"arkusze/2026/zasady.pdf",solutions:"2026",sourcePath:"arkusze/2026/source.json"},
+  {year:2026,title:"Matura Maj 2026 – Poziom Rozszerzony",date:"Maj 2026",formula:"2023",examType:"rozszerzony",pdfPath:"arkusze/2026_rozszerzony/arkusz.pdf",zasadyPath:"arkusze/2026_rozszerzony/zasady.pdf",solutions:"2026_rozszerzony",sourcePath:"arkusze/2026_rozszerzony/source.json"},
   {
     "year": 2025,
     "title": "Matura Maj 2025 – Poziom Podstawowy",
