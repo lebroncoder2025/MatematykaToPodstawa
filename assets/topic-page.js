@@ -601,10 +601,9 @@
       <!-- Nav -->
       <nav class="sticky top-0 z-50 glass-nav border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          <a href="../index.html" class="flex items-center gap-2 font-semibold text-slate-700 hover:text-blue-700 transition" onclick="saveIndexReturn()">
-            <i class="fa-solid fa-arrow-left text-sm"></i>
-            <span class="hidden sm:inline">Strona główna</span>
-            <span class="sm:hidden"><i class="fa-solid fa-home"></i></span>
+          <a href="../index.html" class="flex items-center gap-2 font-semibold text-slate-700 hover:text-blue-700 transition" onclick="saveIndexReturn()" aria-label="Matematyka to Podstawa — strona główna">
+            <i class="fas fa-calculator text-blue-600 text-2xl" aria-hidden="true"></i>
+            <span class="nav-brand-text hidden sm:inline text-xl font-bold text-gray-800">Matematyka to <span class="text-blue-600">Podstawa</span></span>
           </a>
 
           <div class="nav-links-row flex items-center gap-2">

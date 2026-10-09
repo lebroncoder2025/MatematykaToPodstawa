@@ -4,7 +4,7 @@
 // Zasoby lokalne dostępne offline; zasoby CDN po zapisaniu w cache.
 // ================================================================
 
-var CACHE = 'mtp-v19';
+var CACHE = 'mtp-v20';
 
 // Dynamically derive base path so the SW works both on GitHub Pages
 // (hosted at /MatematykaToPodstawa/) and on a custom domain root (/).
