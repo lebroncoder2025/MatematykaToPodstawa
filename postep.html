@@ -44,7 +44,8 @@
     </a>
     <div class="flex items-center gap-1 sm:gap-2 flex-wrap justify-end">
       <a href="index.html" class="nav-link text-xs sm:text-sm px-2 sm:px-3 py-1.5 rounded-lg font-semibold text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Główna</a>
-      <a href="kurs.html" class="nav-link text-xs sm:text-sm px-2 sm:px-3 py-1.5 rounded-lg font-semibold text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Kurs</a>
+      <a href="korepetycje.html" class="text-gray-600 hover:text-blue-600 transition text-sm font-semibold">Korepetycje</a>
+                    <a href="kurs.html" class="nav-link text-xs sm:text-sm px-2 sm:px-3 py-1.5 rounded-lg font-semibold text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Kurs</a>
       <a href="zadania.html" class="nav-link text-xs sm:text-sm px-2 sm:px-3 py-1.5 rounded-lg font-semibold text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Zadania</a>
       <a href="wzory.html" class="nav-link text-xs sm:text-sm px-2 sm:px-3 py-1.5 rounded-lg font-semibold text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Wzory</a>
       <a href="arkusze.html" class="nav-link text-xs sm:text-sm px-2 sm:px-3 py-1.5 rounded-lg font-semibold text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition">Arkusze CKE</a>
@@ -228,20 +229,11 @@
   © 2025 MatematykaToPodstawa · Dane przechowywane lokalnie · Bezpłatna platforma edukacyjna
 </footer>
 
+<script src="assets/course-data.js"></script>
+<script src="assets/tasks-data.js"></script>
 <script>
 /* ===== MODULE NAMES (must match kurs.html) ===== */
-var MODULES = [
-  { title: 'Liczby rzeczywiste',          icon: 'fa-hashtag',    color: '#3b82f6', total: 8 },
-  { title: 'Wyrażenia algebraiczne',       icon: 'fa-x',          color: '#ec4899', total: 8 },
-  { title: 'Równania i nierówności',       icon: 'fa-equals',     color: '#10b981', total: 8 },
-  { title: 'Funkcje',                      icon: 'fa-chart-line',  color: '#f59e0b', total: 8 },
-  { title: 'Funkcja kwadratowa',           icon: 'fa-bezier-curve',color: '#8b5cf6', total: 8 },
-  { title: 'Ciągi',                        icon: 'fa-infinity',   color: '#06b6d4', total: 8 },
-  { title: 'Trygonometria',               icon: 'fa-circle',     color: '#f97316', total: 8 },
-  { title: 'Planimetria',                  icon: 'fa-shapes',     color: '#6366f1', total: 8 },
-  { title: 'Stereometria',                icon: 'fa-cube',       color: '#db2777', total: 8 },
-  { title: 'Statystyka i Prawdop.',        icon: 'fa-chart-bar',  color: '#14b8a6', total: 8 }
-];
+var MODULES = window.MathCourse.map(function(m){ return {title:m.meta.title,icon:m.meta.icon,color:m.meta.color,total:m.steps.length}; });
 
 /* ===== LOAD STATE ===== */
 function loadState() {
@@ -260,16 +252,16 @@ var modProgress = s.modProgress || {};
 function renderStatCards() {
   var totalSteps = MODULES.reduce(function(a,m){ return a + m.total; }, 0);
   var doneSteps = Object.keys(modProgress).reduce(function(a,k){
-    return a + ((modProgress[k] && modProgress[k].done) ? modProgress[k].done : 0);
+    return a + (MODULES[k] ? Math.min(MODULES[k].total, Math.max(0, Number((modProgress[k] || {}).done) || 0)) : 0);
   }, 0);
   var doneModules = Object.keys(modProgress).filter(function(k){
-    return modProgress[k] && modProgress[k].done >= MODULES[k] && MODULES[k] ? modProgress[k].done >= MODULES[parseInt(k)].total : false;
+    return MODULES[k] && modProgress[k] && modProgress[k].done >= MODULES[k].total;
   }).length;
   var pct = totalSteps > 0 ? Math.round((doneSteps/totalSteps)*100) : 0;
 
   var cards = [
     { label: 'Łączne XP', value: xp.toLocaleString(), icon: 'fa-bolt', bg: 'from-amber-500 to-orange-500', glow: true },
-    { label: 'Seria dni', value: streak + ' 🔥', icon: 'fa-fire', bg: 'from-red-500 to-pink-500', glow: false },
+    { label: 'Seria odpowiedzi', value: streak + ' 🔥', icon: 'fa-fire', bg: 'from-red-500 to-pink-500', glow: false },
     { label: 'Ukończono kroków', value: doneSteps + ' / ' + totalSteps, icon: 'fa-check-circle', bg: 'from-emerald-500 to-teal-500', glow: false },
     { label: 'Postęp kursu', value: pct + '%', icon: 'fa-chart-pie', bg: 'from-blue-500 to-cyan-500', glow: false }
   ];
@@ -291,18 +283,18 @@ function renderStatCards() {
 function renderAchievements() {
   var totalSteps = MODULES.reduce(function(a,m){ return a + m.total; }, 0);
   var doneSteps = Object.keys(modProgress).reduce(function(a,k){
-    return a + ((modProgress[k] && modProgress[k].done) ? modProgress[k].done : 0);
+    return a + (MODULES[k] ? Math.min(MODULES[k].total, Math.max(0, Number((modProgress[k] || {}).done) || 0)) : 0);
   }, 0);
 
   var achievements = [
     { label: 'Pierwsza lekcja',  icon: 'fa-star',       color: '#f59e0b', earned: doneSteps >= 1 },
     { label: '10 kroków',        icon: 'fa-award',      color: '#3b82f6', earned: doneSteps >= 10 },
     { label: '50 kroków',        icon: 'fa-trophy',     color: '#8b5cf6', earned: doneSteps >= 50 },
-    { label: 'Wszystko niebon.', icon: 'fa-crown',      color: '#f97316', earned: doneSteps >= totalSteps },
+    { label: 'Cały kurs', icon: 'fa-crown',      color: '#f97316', earned: doneSteps >= totalSteps },
     { label: '100 XP',           icon: 'fa-bolt',       color: '#f59e0b', earned: xp >= 100 },
     { label: '500 XP',           icon: 'fa-fire',       color: '#ef4444', earned: xp >= 500 },
-    { label: 'Seria 3 dni',      icon: 'fa-calendar',   color: '#10b981', earned: streak >= 3 },
-    { label: 'Seria 7 dni',      icon: 'fa-calendar-week', color: '#14b8a6', earned: streak >= 7 }
+    { label: '3 poprawne z rzędu',      icon: 'fa-calendar',   color: '#10b981', earned: streak >= 3 },
+    { label: '7 poprawnych z rzędu',      icon: 'fa-calendar-week', color: '#14b8a6', earned: streak >= 7 }
   ];
 
   document.getElementById('achievementList').innerHTML = achievements.map(function(a){
@@ -638,7 +630,7 @@ function renderActivityHeatmap() {
 
 /* ===== ZADANIA STATS ===== */
 function renderTaskStats() {
-  var TOTAL_TASKS = 140;
+  var TOTAL_TASKS = window.MathTasks.length;
   var solved = 0, bookmarked = 0, noted = 0;
   try {
     var s = localStorage.getItem('zadaniaSolvedIds');

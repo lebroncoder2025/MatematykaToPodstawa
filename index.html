@@ -5,11 +5,14 @@
     <link rel="manifest" href="manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matematyka to Podstawa - Kompendium Maturalne (Podstawa + Rozszerzenie)</title>
-    <meta name="description" content="Kompletne kompendium matematyczne na maturę podstawową i rozszerzoną. 16 działów, 100+ zadań z rozwiązaniami, arkusze CKE, quizy diagnostyczne.">
+    <meta name="description" content="Kompendium matematyczne na maturę podstawową i rozszerzoną. 15 działów, 100+ zadań z rozwiązaniami, arkusze CKE, quizy diagnostyczne.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
     <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/academy.css">
+    <script defer src="assets/course-data.js"></script>
+    <script defer src="assets/tasks-data.js"></script>
   <script src="assets/level-switcher.js"></script>
   <script src="assets/dark-mode.js"></script>
   <script src="assets/notepad.js"></script>
@@ -58,6 +61,7 @@
                     <a href="index.html" class="text-blue-600 font-semibold">Strona Główna</a>
                     <a href="#dzialy" class="text-gray-600 hover:text-blue-600 transition">Działy</a>
                     <a href="arkusze.html" class="text-gray-600 hover:text-blue-600 transition">Arkusze CKE</a>
+                    <a href="korepetycje.html" class="text-gray-600 hover:text-blue-600 transition text-sm font-semibold">Korepetycje</a>
                     <a href="kurs.html" class="text-gray-600 hover:text-blue-600 transition font-semibold"><i class="fa-solid fa-graduation-cap mr-1 text-purple-500"></i>Kurs</a>
                     <a href="zadania.html" class="text-gray-600 hover:text-blue-600 transition font-semibold"><i class="fa-solid fa-pen-to-square mr-1 text-emerald-500"></i>Zadania</a>
                     <a href="wzory.html" class="text-gray-600 hover:text-blue-600 transition font-semibold"><i class="fa-solid fa-square-root-variable mr-1 text-cyan-500"></i>Wzory</a>
@@ -86,7 +90,8 @@
         <a href="index.html">Strona Główna</a>
         <a href="#dzialy" class="mobile-nav-link">Działy</a>
         <a href="arkusze.html"><i class="fa-solid fa-file-lines text-emerald-500 mr-2 w-5 text-center"></i>Arkusze CKE</a>
-        <a href="kurs.html"><i class="fa-solid fa-graduation-cap text-purple-500 mr-2 w-5 text-center"></i>Kurs interaktywny</a>
+        <a href="korepetycje.html" class="text-gray-600 hover:text-blue-600 transition text-sm font-semibold">Korepetycje</a>
+                    <a href="kurs.html"><i class="fa-solid fa-graduation-cap text-purple-500 mr-2 w-5 text-center"></i>Kurs interaktywny</a>
         <a href="zadania.html"><i class="fa-solid fa-pen-to-square text-emerald-500 mr-2 w-5 text-center"></i>Zadania z rozwiązaniami</a>
         <a href="wzory.html"><i class="fa-solid fa-square-root-variable text-cyan-500 mr-2 w-5 text-center"></i>Wzory – ściągawka</a>
         <a href="quiz.html">Quiz diagnostyczny</a>
@@ -143,7 +148,7 @@
                 <span class="text-blue-300">Twojego sukcesu</span>
             </h1>
             <p class="text-lg md:text-xl mb-6 text-blue-100 max-w-3xl mx-auto animate-fade-in-up delay-1 leading-relaxed">
-                Kompleksowe kompendium wiedzy matematycznej — <strong>poziom podstawowy i rozszerzony</strong>. <strong>16 działów</strong>, ponad <strong>100 zadań</strong> z komentowanymi rozwiązaniami krok po kroku, <strong>arkusze CKE</strong> z obu poziomów oraz tysiące pytań w interaktywnych quizach.
+                Kompleksowe kompendium wiedzy matematycznej — <strong>poziom podstawowy i rozszerzony</strong>. <strong>15 działów</strong>, ponad <strong>100 zadań</strong> z komentowanymi rozwiązaniami krok po kroku, <strong>arkusze CKE</strong> z obu poziomów oraz tysiące pytań w interaktywnych quizach.
             </p>
             <p class="text-base mb-10 text-blue-200/80 max-w-2xl mx-auto animate-fade-in-up delay-1 leading-relaxed italic">
                 „Matematyka jest królową nauk, a arytmetyka królową matematyki." — Carl Friedrich Gauss
@@ -164,40 +169,21 @@
                 <i class="fa-solid fa-mobile-screen-button"></i> Zainstaluj aplikację na telefonie
               </button>
             </div>
-            <!-- Odliczanie do matury 2027 -->
-            <div class="mt-10 animate-fade-in-up delay-3" id="maturaCountdownWrap">
-              <div class="flex flex-col sm:flex-row justify-center gap-6 sm:gap-10">
-                <!-- Podstawowa -->
-                <div class="text-center" data-level="podstawowy">
-                  <p class="text-blue-200/80 text-[11px] font-bold mb-3 uppercase tracking-widest">&#9203; Matura podstawowa 2027 za:</p>
-                  <div class="inline-flex items-center gap-3 sm:gap-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl px-6 sm:px-10 py-4">
-                    <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-days">--</span><p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">dni</p></div>
-                    <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
-                    <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-hours">--</span><p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">godz.</p></div>
-                    <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
-                    <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-minutes">--</span><p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">min.</p></div>
-                    <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
-                    <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-seconds">--</span><p class="text-blue-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">sek.</p></div>
-                  </div>
-                </div>
-                <!-- Rozszerzona -->
-                <div class="text-center" data-level="rozszerzony">
-                  <p class="text-pink-200/80 text-[11px] font-bold mb-3 uppercase tracking-widest">&#128640; Matura rozszerzona 2027 za:</p>
-                  <div class="inline-flex items-center gap-3 sm:gap-6 bg-pink-500/10 backdrop-blur-sm border border-pink-300/20 rounded-2xl px-6 sm:px-10 py-4">
-                    <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-r-days">--</span><p class="text-pink-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">dni</p></div>
-                    <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
-                    <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-r-hours">--</span><p class="text-pink-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">godz.</p></div>
-                    <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
-                    <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-r-minutes">--</span><p class="text-pink-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">min.</p></div>
-                    <span class="text-white/25 font-black text-3xl leading-none pb-4">:</span>
-                    <div class="text-center"><span class="block text-3xl sm:text-5xl font-black text-white tabular-nums leading-none" id="cd-r-seconds">--</span><p class="text-pink-200/70 text-[10px] font-bold uppercase tracking-widest mt-1">sek.</p></div>
-                  </div>
-                </div>
-              </div>
+            <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm text-blue-100">
+              <span class="bg-white/10 border border-white/20 rounded-full px-4 py-2">✎ Własne odpowiedzi i podpowiedzi</span>
+              <span class="bg-white/10 border border-white/20 rounded-full px-4 py-2">↺ Powtórki błędów</span>
+              <a href="korepetycje.html" class="bg-white/10 border border-white/20 rounded-full px-4 py-2 hover:bg-white/20">↗ Pracownia korepetytora</a>
             </div>
         </div>
     </header>
 
+    <section class="academy" style="max-width:1152px;margin:0 auto;padding:42px 20px 12px">
+      <div class="row spread" style="margin-bottom:20px"><div><p class="eyebrow">Dwie ścieżki. Jeden cel.</p><h2>Matematyka, którą potrafisz zastosować.</h2></div></div>
+      <div class="grid">
+        <article class="panel"><span class="tag">DLA UCZNIA</span><h3 style="font-size:23px;margin-top:18px">Od „nie rozumiem” do „umiem”.</h3><p class="muted">Przerabiaj teorię, wpisuj własne wyniki i sprawdzaj tok rozumowania. Wróć do błędów w powtórce i zobacz, jak działa przesuwanie paraboli.</p><a class="action primary" href="kurs.html#practiceLab">Otwórz interaktywny kurs →</a></article>
+        <article class="panel" style="background:#edf7f4"><span class="tag" style="background:white">DLA KOREPETYTORA</span><h3 style="font-size:23px;margin-top:18px">Więcej czasu na wyjaśnianie.</h3><p class="muted">Prowadź karty uczniów, ustalaj cele spotkań i przydzielaj zadania. Tablica, notatki oraz karty pracy pomogą uporządkować każdą lekcję.</p><a class="action" href="korepetycje.html">Wejdź do pracowni →</a></article>
+      </div>
+    </section>
     <!-- About Mathematics Section -->
     <section class="py-14 md:py-20 bg-gradient-to-b from-slate-50 to-white border-b">
         <div class="max-w-7xl mx-auto px-4">
@@ -255,20 +241,20 @@
     <section class="py-10 md:py-14 bg-white border-b">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center mb-8">
             <div class="reveal">
-                <p class="text-3xl md:text-4xl font-black text-blue-600">16</p>
+                <p class="text-3xl md:text-4xl font-black text-blue-600">15</p>
                 <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Działów tematycznych</p>
             </div>
             <div class="reveal delay-1">
-                <p class="text-3xl md:text-4xl font-black text-blue-600">50+</p>
-                <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Rozwiązanych zadań</p>
+                <p class="text-3xl md:text-4xl font-black text-blue-600">140</p>
+                <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Pytań w kursie</p>
             </div>
             <div class="reveal delay-2">
-                <p class="text-3xl md:text-4xl font-black text-blue-600">18</p>
+                <p class="text-3xl md:text-4xl font-black text-blue-600">21</p>
                 <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Arkuszy CKE</p>
             </div>
             <div class="reveal delay-3">
-                <p class="text-3xl md:text-4xl font-black text-blue-600">100%</p>
-                <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Zgodności z CKE</p>
+                <p class="text-3xl md:text-4xl font-black text-blue-600">80</p>
+                <p class="text-gray-500 uppercase tracking-wider text-xs md:text-sm font-semibold mt-1">Ćwiczeń otwartych</p>
             </div>
         </div>
         <!-- Visit counter -->
@@ -372,7 +358,7 @@
                         <i class="fa-solid fa-pen-to-square text-emerald-400 text-xl"></i>
                     </div>
                     <h3 class="font-bold text-white mb-2">Zadania z Rozwiązaniami</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed mb-3">50+ w pełni rozwiązanych zadań krok po kroku ze wskazówkami i objaśnieniami.</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-3">48 rozwiązanych zadań krok po kroku ze wskazówkami i objaśnieniami.</p>
                     <span class="text-emerald-400 text-sm font-bold flex items-center gap-1">Rozwiązuj <i class="fa-solid fa-arrow-right text-xs"></i></span>
                 </a>
                 <a href="arkusze.html" class="group bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-purple-500/50 transition-all reveal delay-2">
@@ -511,7 +497,7 @@
                     <i class="fa-solid fa-book-open-reader"></i> TYLKO ROZSZERZENIE
                 </span>
                 <h3 class="text-2xl md:text-3xl font-black text-gray-900 mb-2">Działy rozszerzenia</h3>
-                <p class="text-gray-500 max-w-xl mx-auto text-sm">Dodatkowe tematy wymagane na maturze z matematyki na poziomie rozszerzonym (Formuła 2023).</p>
+                <p class="text-gray-500 max-w-xl mx-auto text-sm">Zagadnienia trudniejsze i materiały dodatkowe. Zakres egzaminu sprawdzaj w oficjalnym informatorze CKE.</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
 
@@ -662,47 +648,6 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.08 });
     revealEls.forEach(el => observer.observe(el));
-
-    /* ─── Matura 2027 Countdown ─── */
-    (function() {
-      var targetP = new Date('2027-05-05T09:00:00'); // podstawowa (przybliżona data 2027)
-      var targetR = new Date('2027-05-06T09:00:00'); // rozszerzona (przybliżona data 2027)
-      var now = new Date();
-
-      var w = document.getElementById('maturaCountdownWrap');
-      if (!w) return;
-
-      // Jeśli obie matury 2027 minęły — pokaż wiadomość
-      if (targetP <= now && targetR <= now) {
-        w.innerHTML = '<p class="text-xl font-black text-yellow-300 text-center">🎉 Trzymamy kciuki za wyniki matury 2027!</p>';
-        return;
-      }
-
-      function updCD(target, prefix) {
-        var diff = target - new Date();
-        if (diff <= 0) {
-          // Ta matura już się odbyła — pokaż gratulacje w jej bloku
-          ['days','hours','minutes','seconds'].forEach(function(u) {
-            var el = document.getElementById('cd' + prefix + '-' + u);
-            if (el) el.textContent = '00';
-          });
-          return;
-        }
-        var d = Math.floor(diff / 86400000),
-            h = Math.floor((diff % 86400000) / 3600000),
-            m = Math.floor((diff % 3600000) / 60000),
-            s = Math.floor((diff % 60000) / 1000);
-        function p(n) { return String(n).padStart(2, '0'); }
-        var el;
-        if ((el = document.getElementById('cd' + prefix + '-days'))) el.textContent = p(d);
-        if ((el = document.getElementById('cd' + prefix + '-hours'))) el.textContent = p(h);
-        if ((el = document.getElementById('cd' + prefix + '-minutes'))) el.textContent = p(m);
-        if ((el = document.getElementById('cd' + prefix + '-seconds'))) el.textContent = p(s);
-      }
-      function upd() { updCD(targetP, ''); updCD(targetR, '-r'); }
-      upd();
-      setInterval(upd, 1000);
-    })();
 
     /* ─── Zadanie dnia ─── */
     (function() {
@@ -921,9 +866,9 @@
       var bestPct = (qh && qh.length) ? Math.max.apply(null, qh.map(function(h){ return h.percent || 0; })) : null;
       var solvedCount = si ? si.length : 0;
       var items = [
-        { icon:'fa-graduation-cap', col:'text-purple-600', bg:'bg-purple-50', label:'Kurs', val: doneSteps ? doneSteps + '/80 krok\u00f3w' : '&mdash;', href:'kurs.html' },
+        { icon:'fa-graduation-cap', col:'text-purple-600', bg:'bg-purple-50', label:'Kurs', val: doneSteps ? doneSteps + '/' + window.MathCourse.reduce(function(n,m){return n+m.steps.length;},0) + ' krok\u00f3w' : '&mdash;', href:'kurs.html' },
         { icon:'fa-brain', col:'text-emerald-600', bg:'bg-emerald-50', label:'Quiz &ndash; najlepszy', val: bestPct !== null ? bestPct + '%' : '&mdash;', href:'quiz.html' },
-        { icon:'fa-pen-to-square', col:'text-blue-600', bg:'bg-blue-50', label:'Zadania', val: solvedCount ? solvedCount + '/140' : '&mdash;', href:'zadania.html' }
+        { icon:'fa-pen-to-square', col:'text-blue-600', bg:'bg-blue-50', label:'Zadania', val: solvedCount ? solvedCount + '/' + window.MathTasks.length : '&mdash;', href:'zadania.html' }
       ];
       if (!doneSteps && bestPct === null && !solvedCount) return;
       grid.innerHTML = items.map(function(it) {

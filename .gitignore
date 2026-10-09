@@ -3,3 +3,6 @@ backup_1.zip
 .DS_Store
 Thumbs.db
 desktop.ini
+tests/artifacts/
+__pycache__/
+.venv/

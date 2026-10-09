@@ -31,7 +31,7 @@ window.MATURA_TOPICS = {
     },
     {
       title: "Potęgi i ich własności",
-      text: "Potęga to skrócony zapis wielokrotnego mnożenia. Dla $a \\neq 0$ mamy $a^0 = 1$. Potęga o wykładniku ujemnym oznacza odwrotność: $a^{-n} = \\frac{1}{a^n}$. Potęga o wykładniku wymiernym łączy potęgowanie z pierwiastkowaniem: $a^{\\frac{m}{n}} = \\sqrt[n]{a^m}$.",
+      text: "Potęga to skrócony zapis wielokrotnego mnożenia. Dla $a \\neq 0$ mamy $a^0 = 1$. Potęga o wykładniku ujemnym oznacza odwrotność: $a^{-n} = \\frac{1}{a^n}$. Dla $a>0$, $m\\in\\mathbb{Z}$ i $n\\in\\mathbb{N}$, $n\\geq1$, potęga o wykładniku wymiernym łączy potęgowanie z pierwiastkowaniem: $a^{\\frac{m}{n}} = \\sqrt[n]{a^m}$.",
       formulas: [
         { latex: "a^m \\cdot a^n = a^{m+n}", meaning: "Mnożenie potęg o tej samej podstawie" },
         { latex: "\\frac{a^m}{a^n} = a^{m-n}", meaning: "Dzielenie potęg o tej samej podstawie" },
@@ -44,12 +44,12 @@ window.MATURA_TOPICS = {
     },
     {
       title: "Pierwiastki",
-      text: "Pierwiastek $n$-tego stopnia z liczby $a$ to taka nieujemna liczba $b$, że $b^n = a$. Wyciąganie czynnika spod pierwiastka polega na rozkładzie liczby podpierwiastkowej na czynniki: $\\sqrt{50} = \\sqrt{25 \\cdot 2} = 5\\sqrt{2}$. Usuwanie niewymierności z mianownika: mnożymy licznik i mianownik przez odpowiedni wyrażenie.",
+      text: "Dla parzystego $n\\geq2$ i $a\\geq0$ pierwiastek $n$-tego stopnia to nieujemna liczba $b$ spełniająca $b^n=a$. Dla nieparzystego $n\\geq3$ dopuszczamy dowolne rzeczywiste $a$; pierwiastek ma znak liczby $a$, np. $\\sqrt[3]{-8}=-2$. Poniższe reguły iloczynu stosujemy dla $a,b\\geq0$, a ilorazu dla $a\\geq0$, $b>0$. Wyciąganie czynnika spod pierwiastka polega na rozkładzie liczby podpierwiastkowej na czynniki: $\\sqrt{50} = \\sqrt{25 \\cdot 2} = 5\\sqrt{2}$. Usuwanie niewymierności z mianownika: mnożymy licznik i mianownik przez odpowiednie wyrażenie.",
       formulas: [
         { latex: "\\sqrt[n]{a \\cdot b} = \\sqrt[n]{a} \\cdot \\sqrt[n]{b}", meaning: "Pierwiastek z iloczynu" },
         { latex: "\\sqrt[n]{\\frac{a}{b}} = \\frac{\\sqrt[n]{a}}{\\sqrt[n]{b}}", meaning: "Pierwiastek z ilorazu" },
         { latex: "\\sqrt[n]{a^m} = a^{\\frac{m}{n}}", meaning: "Związek pierwiastka z potęgą" },
-        { latex: "\\frac{a}{\\sqrt{b}} = \\frac{a\\sqrt{b}}{b}", meaning: "Usuwanie niewymierności z mianownika" }
+        { latex: "\\frac{a}{\\sqrt{b}} = \\frac{a\\sqrt{b}}{b}", meaning: "Usuwanie niewymierności z mianownika (b > 0)" }
       ]
     },
     {
@@ -1125,7 +1125,7 @@ window.MATURA_TOPICS = {
     },
     {
       level: "średnie",
-      q: "Uprość wyrażenie $\\frac{\\sin^2 \\alpha}{1 - \\cos \\alpha}$ dla $\\alpha \\neq 0°$.",
+      q: "Uprość wyrażenie $\\frac{\\sin^2 \\alpha}{1 - \\cos \\alpha}$ dla $\\cos\\alpha\\neq1$.",
       hint: "Użyj $\\sin^2 \\alpha = 1 - \\cos^2 \\alpha = (1-\\cos\\alpha)(1+\\cos\\alpha)$.",
       steps: [
         { math: "$\\frac{\\sin^2 \\alpha}{1 - \\cos \\alpha} = \\frac{1 - \\cos^2 \\alpha}{1 - \\cos \\alpha} = \\frac{(1 - \\cos\\alpha)(1 + \\cos\\alpha)}{1 - \\cos\\alpha}$", comment: "Kluczowy krok: zamieniamy sin²α na 1 − cos²α (z jedynki tryg.), a potem rozkładamy licznik na iloczyn ze wzoru skróconego mnożenia a² − b² = (a−b)(a+b)." },
@@ -1229,7 +1229,7 @@ window.MATURA_TOPICS = {
     },
     {
       title: "Czworokąty",
-      text: "Prostokąt: kąty $90°$, przekątne równe i dzielą się na połowy. Kwadrat: prostokąt o równych bokach. Równoległobok: naprzeciwległe boki równe i równoległe. Romb: równoległobok o równych bokach. Trapez: dokładnie jedna para boków równoległych.",
+      text: "Prostokąt: kąty $90°$, przekątne równe i dzielą się na połowy. Kwadrat: prostokąt o równych bokach. Równoległobok: naprzeciwległe boki równe i równoległe. Romb: równoległobok o równych bokach. Trapez: przyjmujemy definicję czworokąta z co najmniej jedną parą boków równoległych. Trapez równoramienny w zadaniach ma równe ramiona i równe kąty przy każdej podstawie.",
       formulas: [
         { latex: "P_{\\text{prostokąt}} = a \\cdot b", meaning: "Pole prostokąta" },
         { latex: "P_{\\text{romb}} = \\frac{d_1 \\cdot d_2}{2}", meaning: "Pole rombu (z przekątnych)" },
@@ -1365,7 +1365,7 @@ window.MATURA_TOPICS = {
     },
     {
       level: "trudne",
-      q: "W trapez $ABCD$ ($AB \\parallel CD$) wpisano okrąg. $AB = 12$, $CD = 4$. Oblicz ramię trapezu i pole trapezu.",
+      q: "W trapez równoramienny $ABCD$ ($AB \\parallel CD$) wpisano okrąg. $AB = 12$, $CD = 4$. Oblicz ramię trapezu i pole trapezu.",
       hint: "W trapez z wpisanym okręgiem: suma podstaw = suma ramion. Trapez jest równoramienny.",
       steps: [
         { math: "Suma podstaw $= AB + CD = 12 + 4 = 16 =$ suma ramion", comment: "Warunek wpisania okręgu w czworokąt: sumy przeciwległych boków muszą być równe. Stąd AB + CD = BC + AD = 16." },
@@ -1753,9 +1753,9 @@ window.MATURA_TOPICS = {
         { math: "Połowa przekątnej podstawy: $\\frac{a\\sqrt{2}}{2} = \\frac{10\\sqrt{2}}{2} = 5\\sqrt{2}$", comment: "Odległość od środka kwadratu (spodek wysokości) do wierzchołka (spodek krawędzi bocznej) = połowa przekątnej kwadratu o boku 10." },
         { math: "$H = \\sqrt{b^2 - (5\\sqrt{2})^2} = \\sqrt{169 - 50} = \\sqrt{119}$", comment: "Z tw. Pitagorasa w trójkącie: krawędź boczna → przeciwprostokątna, H i połowa przekątnej → przyprostokątne." },
         { math: "$\\cos \\alpha = \\frac{5\\sqrt{2}}{13}$, gdzie $\\alpha$ to kąt między krawędzią boczną a podstawą", comment: "Kąt nachylenia krawędzi bocznej do podstawy to kąt w trójkącie prostokątnym pomiędzy krawędzią boczną (b = 13) a rzutem na podstawę (5√2). Cosinus = przyprostokątna / przeciwprostokątna." },
-        { math: "$\\alpha = \\arccos\\frac{5\\sqrt{2}}{13} \\approx 57{,}1°$", comment: "Obliczamy kąt kalkulatorem: 5√2/13 ≈ 7,07/13 ≈ 0,544, arccos(0,544) ≈ 57,1°. Krawędź boczna nachylona pod kątem ok. 57° do poziomu." }
+        { math: "$\\alpha = \\arccos\\frac{5\\sqrt{2}}{13} \\approx 57{,}0°$", comment: "Obliczamy kąt kalkulatorem: 5√2/13 ≈ 7,07/13 ≈ 0,544, arccos(0,544) ≈ 57,1°. Krawędź boczna nachylona pod kątem ok. 57° do poziomu." }
       ],
-      answer: "$\\alpha = \\arccos\\frac{5\\sqrt{2}}{13} \\approx 57{,}1°$"
+      answer: "$\\alpha = \\arccos\\frac{5\\sqrt{2}}{13} \\approx 57{,}0°$"
     },
     {
       level: "trudne",
@@ -1920,7 +1920,7 @@ window.MATURA_TOPICS = {
     },
     {
       level: "trudne",
-      q: "Prawdopodobieństwo trafienia do celu wynosi $0{,}6$. Strzelec oddaje 3 strzały. Jakie jest prawd. trafienia co najmniej raz?",
+      q: "Prawdopodobieństwo trafienia do celu wynosi $0{,}6$. Strzelec oddaje 3 niezależne strzały. Jakie jest prawd. trafienia co najmniej raz?",
       hint: "Zdarzenie przeciwne: \"ani razu nie trafi\". $P(\\geq 1) = 1 - P(0)$.",
       steps: [
         { math: "$P(0 \\text{ trafień}) = (1 - 0{,}6)^3 = 0{,}4^3 = 0{,}064$", comment: "Zdarzenie przeciwne do «co najmniej 1 trafienie» to «0 trafień». Prawdopodobieństwo pudła = 0,4. Trzy pudła z rzędu: 0,4³ (niezależne strzały)." },

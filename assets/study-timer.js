@@ -20,7 +20,8 @@
 
   // ── UI ──
   var widget, display, modeLabel, statsEl, btnStart, btnReset, btnSkip;
-  var collapsed = localStorage.getItem("timer-collapsed") === "1";
+  var collapsed = true;
+  try { collapsed = localStorage.getItem("timer-collapsed") !== "0"; } catch (_) {}
 
   function create() {
     widget = document.createElement("div");

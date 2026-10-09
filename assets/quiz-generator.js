@@ -48,17 +48,13 @@
   }
   /* Build a question object with 4 answer options where one is correct */
   function makeQ(topic, q, correctVal, distractors, explain, level) {
-    var opts = [correctVal].concat(distractors.slice(0, 3));
-    // deduplicate options – if duplicates exist, nudge distractors
-    var seen = {};
-    for (var i = 0; i < opts.length; i++) {
-      var key = String(opts[i]);
-      if (seen[key]) {
-        // nudge: add small offset
-        opts[i] = opts[i] + (i % 2 === 0 ? '+1' : '-1');
-      }
-      seen[key] = true;
-    }
+    var opts = [correctVal];
+    distractors.forEach(function(option) {
+      if (!opts.some(function(existing) { return window.quizEquivalent ? window.quizEquivalent(existing, option) : existing === option; })) opts.push(option);
+    });
+    // Reject ambiguous variants instead of inventing an answer outside TeX.
+    if (opts.length < 4) return null;
+    opts = opts.slice(0, 4);
     var shuffled = shuffle([0, 1, 2, 3]);
     var newOpts = shuffled.map(function (idx) { return opts[idx]; });
     var correctIdx = shuffled.indexOf(0);
@@ -2193,7 +2189,7 @@
     var gens = level === 'rozszerzony' ? rozszerzonyGens : podstawowyGens;
     var results = [];
     var attempts = 0;
-    var maxAttempts = count * 10;
+    var maxAttempts = Math.min(250000, count * (topic ? 250 : 30));
     var seen = {};
 
     while (results.length < count && attempts < maxAttempts) {
