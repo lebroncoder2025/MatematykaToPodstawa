@@ -9,8 +9,7 @@ Nie wymaga serwera aplikacyjnego ani procesu budowania.
   liczb dziesiętnych i ułamków oraz powtórka błędów. Wykres przesuwanej paraboli.
 - `zadania.html`: 48 zadań autorskich, zapisanych w `assets/tasks-data.js`,
   z rozwiązaniami, notatkami i zakładkami. Osobno kompendium ma 142 przykłady.
-- `korepetycje.html`: uczniowie, spotkania, notatki, zadania domowe, osobne karty
-  ucznia i klucze prowadzącego, tablica i stoper. Kopie danych eksportowane do JSON.
+- `index.html`: wybór poziomu, wyszukiwanie działów, podsumowanie postępu i ścieżka nauki.
 - `arkusze.html`: 23 oryginalne PDF-y CKE i zasady oceniania, filtry, stoper, notatki.
 - `egzamin.html`: maj 2026, podstawa (37 zadań i podpunktów) oraz rozszerzenie
   (13 zadań i podpunktów), po 50 punktów. Własne objaśnienia, oryginalne wyciągi
@@ -39,8 +38,8 @@ python tests/test_exams.py https://lebroncoder2025.github.io/MatematykaToPodstaw
 ```
 
 Lokalny serwer testowy odtwarza ścieżkę `/MatematykaToPodstawa/`. Testy sprawdzają
-80 zadań, ułamki, postęp, punktację, 2400 losowych pytań quizu, panel korepetycji,
-import/eksport, bezpieczeństwo wyświetlania tekstu, widok mobilny i działanie offline.
+80 zadań, ułamki, postęp, punktację, 2400 losowych pytań quizu, stronę startową,
+wybór poziomu, wyszukiwanie tematów, widok mobilny i działanie offline.
 Zrzuty i pliki testowe trafiają do ignorowanego katalogu `tests/artifacts/`.
 Konfiguracja `.github/workflows/validate.yml` uruchamia ten sam zestaw przy zmianach.
 Jej publikacja wymaga uprawnienia `workflow` połączenia z GitHubem; jeśli plik
@@ -63,11 +62,11 @@ Rozwiązania oraz warunki dziedzinowe trzeba nadal kontrolować podczas dodawani
 
 ## Zapis danych
 
-Postęp i dane korepetycji przechowywane są lokalnie w przeglądarce, bez kont
-uczniów i automatycznej synchronizacji między urządzeniami. Panel korepetycji
-ma eksport i walidowany import kopii. Karty pracy są plikami HTML; opcja PDF
-korzysta z drukowania w przeglądarce. Renderowanie wzorów w pobranej karcie
-wymaga dostępu do CDN KaTeX, jeśli te zasoby nie są już zapisane.
+Postęp i notatki przechowywane są lokalnie w przeglądarce, bez kont
+uczniów i automatycznej synchronizacji między urządzeniami. W `postep.html`
+można eksportować i importować kopie danych. Rozwiązania CKE mają też własny
+eksport notatek i wyników. Panel korepetytora został wycofany; jego dawny adres
+przekierowuje do kursu. Stare lokalne dane nie są automatycznie usuwane.
 
 Service worker przechowuje zasoby aplikacji. Dokumenty PDF pobierane są osobno;
 aby korzystać z nich offline, trzeba je wcześniej otworzyć lub pobrać.

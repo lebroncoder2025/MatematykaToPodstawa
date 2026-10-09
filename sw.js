@@ -4,7 +4,7 @@
 // Zasoby lokalne dostępne offline; zasoby CDN po zapisaniu w cache.
 // ================================================================
 
-var CACHE = 'mtp-v18';
+var CACHE = 'mtp-v19';
 
 // Dynamically derive base path so the SW works both on GitHub Pages
 // (hosted at /MatematykaToPodstawa/) and on a custom domain root (/).
@@ -65,8 +65,9 @@ var LOCAL_ASSETS = [
   BASE + '/assets/exam-catalog.js',
   BASE + '/assets/exam-library.js',
   BASE + '/assets/practice.js',
-  BASE + '/assets/tutoring.js',
   BASE + '/assets/academy.css',
+  BASE + '/assets/home.css',
+  BASE + '/assets/home.js',
   BASE + '/manifest.json'
 ];
 
